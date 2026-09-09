@@ -59,3 +59,7 @@ en deux vagues, et la condition "questionnaire seul" du papier obtient 82 pour c
 Le pipeline tourne integralement en local sur modeles ouverts, tant que les licences des
 enquetes n'ont pas ete lues. Les paliers gratuits des API s'entrainent sur les donnees
 envoyees.
+
+## Licence
+
+Code sous licence MIT, textes sous CC BY 4.0 (voir LICENSE). Les microdonnees d enquete ne sont jamais versionnees.
