@@ -33,3 +33,26 @@ l'identique.
 
 `.venv/bin/python analyses/test_moteur_relance_arret.py` verifie les deux mecanismes
 ci dessus avec un faux moteur, sans aucun appel de modele et sans llama-server.
+
+## R6, l'oracle des camps sur les modeles distants
+
+`r6_oracle_distant.py` rejoue l'invite de R1 contre l'API compatible OpenAI d'OpenRouter.
+Un seul mode de lecture, celui de R1 : temperature 0, un appel par cellule, `max_tokens`
+150, `R1.parser` importe, aucune relance, aucune sequence d'arret a la main
+(`resultats/r6-preenregistrement-v2.md`). Les deux formats d'invite viennent de
+`R1.systeme`, `R1.utilisateur` et `R5.bloc_exemples`, jamais recopies. Securites : plafond
+dur en USD (`--plafond`), feu vert `data/traces/GO-R6` sans lequel aucun appel payant ne
+part, fichier d'arret `data/traces/STOP`, reprise sur trace existante, `--essai N` qui
+mesure le cout reel par cellule avant d'engager la campagne, et un reglage de raisonnement
+au minimum inscrit dans chaque ligne de trace.
+
+`r6_voie_chat.py` est la verification locale de l'etage 0, a zero euro : sur le meme fichier
+de poids que R1, 40 cellules tirees d'avance sont jouees par `/completion` avec le gabarit
+rendu a la main comme en R1, et par `/v1/chat/completions` avec le client de R6. Seuil
+preenregistre : 38 distributions identiques sur 40. Resultat du 9 septembre 2026 : 40 sur
+40, distance de variation totale nulle (`resultats/r6-voie-chat.md`).
+
+`.venv/bin/python analyses/test_r6_client.py` verifie le client hors ligne, avec un faux
+serveur HTTP local : les deux formats d'invite, la lecture de R1, le plafond, le fichier
+d'arret, la reprise, le feu vert, le raisonnement et le resume d'essai. Aucun reseau,
+aucune cle lue, aucun octet ecrit dans `data/`.
