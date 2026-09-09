@@ -1,0 +1,7 @@
+famille,condition,adversaire,regime_adversaire,quantite,difference_c3f_moins_adversaire,ic_bas,ic_haut,p_bootstrap,signe_attendu,conforme,p_holm,p_bh,decidable
+F3 tertiaire,C3F,E1 famille retiree (argmax),esperance,exactitude,-0.134360,-0.155754,-0.112356,0.000250,C3F plus bas,True,0.001500,0.000250,True
+F3 tertiaire,C3F,E2 famille retiree (tirage),tirage,exactitude,-0.064144,-0.085345,-0.040797,0.000250,C3F plus bas,True,0.001500,0.000250,True
+F3 tertiaire,C3F,PMM k=10 famille retiree,tirage,exactitude,-0.098429,-0.123276,-0.073843,0.000250,C3F plus bas,True,0.001500,0.000250,True
+F3 tertiaire,C3F,"IM m=10 mode, famille retiree",esperance,exactitude,-0.110965,-0.129310,-0.091667,0.000250,C3F plus bas,True,0.001500,0.000250,True
+F3 tertiaire,C3F,B2 famille retiree (argmax),esperance,exactitude,-0.124966,-0.147989,-0.102011,0.000250,C3F plus bas,True,0.001500,0.000250,True
+F3 tertiaire,C3F,B2 famille retiree (tirage),tirage,exactitude,-0.043367,-0.065237,-0.020977,0.000250,C3F plus bas,True,0.001500,0.000250,True

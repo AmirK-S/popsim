@@ -1,0 +1,73 @@
+condition_llm,personnes,segmentation,methode,exactitude,exactitude_permutee,chute,chute_relative,camps_exploitables,taille_camp_max
+C3F gpt-oss-20b,150,S_fin,C3F gpt-oss-20b,,,,,0,8
+C3F gpt-oss-20b,150,S_fin,E1 famille retiree (argmax),,,,,0,8
+C3F gpt-oss-20b,150,S_fin,E2 famille retiree (tirage),,,,,0,8
+C3F gpt-oss-20b,150,S_fin,PMM k=10 famille retiree,,,,,0,8
+C3F gpt-oss-20b,150,S_fin,"IM m=10 mode, famille retiree",,,,,0,8
+C3F gpt-oss-20b,150,S_fin,B2 famille retiree (argmax),,,,,0,8
+C3F gpt-oss-20b,150,S_fin,B2 famille retiree (tirage),,,,,0,8
+C3F gpt-oss-20b,150,S_fin,humains vague 2,,,,,0,8
+C3F gpt-oss-20b,150,S_ideo,C3F gpt-oss-20b,0.532759,0.510283,0.022475,0.042187,6,45
+C3F gpt-oss-20b,150,S_ideo,E1 famille retiree (argmax),0.668966,0.593241,0.075724,0.113196,6,45
+C3F gpt-oss-20b,150,S_ideo,E2 famille retiree (tirage),0.601034,0.544489,0.056546,0.094081,6,45
+C3F gpt-oss-20b,150,S_ideo,PMM k=10 famille retiree,0.630230,0.553109,0.077121,0.122369,6,45
+C3F gpt-oss-20b,150,S_ideo,"IM m=10 mode, famille retiree",0.651839,0.579219,0.072620,0.111408,6,45
+C3F gpt-oss-20b,150,S_ideo,B2 famille retiree (argmax),0.659655,0.618028,0.041627,0.063104,6,45
+C3F gpt-oss-20b,150,S_ideo,B2 famille retiree (tirage),0.579540,0.550440,0.029100,0.050212,6,45
+C3F gpt-oss-20b,150,S_ideo,humains vague 2,0.776092,0.554209,0.221883,0.285898,6,45
+C3F gpt-oss-20b,150,S_camp,C3F gpt-oss-20b,0.532759,0.507881,0.024878,0.046696,3,63
+C3F gpt-oss-20b,150,S_camp,E1 famille retiree (argmax),0.668966,0.587273,0.081693,0.122118,3,63
+C3F gpt-oss-20b,150,S_camp,E2 famille retiree (tirage),0.601034,0.540591,0.060443,0.100565,3,63
+C3F gpt-oss-20b,150,S_camp,PMM k=10 famille retiree,0.630230,0.547415,0.082815,0.131404,3,63
+C3F gpt-oss-20b,150,S_camp,"IM m=10 mode, famille retiree",0.651839,0.573302,0.078537,0.120486,3,63
+C3F gpt-oss-20b,150,S_camp,B2 famille retiree (argmax),0.659655,0.612528,0.047127,0.071442,3,63
+C3F gpt-oss-20b,150,S_camp,B2 famille retiree (tirage),0.579540,0.549315,0.030225,0.052154,3,63
+C3F gpt-oss-20b,150,S_camp,humains vague 2,0.776092,0.545303,0.230789,0.297373,3,63
+C3 gpt-oss-20b,95,S_fin,C3 gpt-oss-20b,,,,,0,6
+C3 gpt-oss-20b,95,S_fin,E1 famille retiree (argmax),,,,,0,6
+C3 gpt-oss-20b,95,S_fin,E2 famille retiree (tirage),,,,,0,6
+C3 gpt-oss-20b,95,S_fin,PMM k=10 famille retiree,,,,,0,6
+C3 gpt-oss-20b,95,S_fin,"IM m=10 mode, famille retiree",,,,,0,6
+C3 gpt-oss-20b,95,S_fin,B2 famille retiree (argmax),,,,,0,6
+C3 gpt-oss-20b,95,S_fin,B2 famille retiree (tirage),,,,,0,6
+C3 gpt-oss-20b,95,S_fin,humains vague 2,,,,,0,6
+C3 gpt-oss-20b,95,S_ideo,C3 gpt-oss-20b,0.599819,0.526770,0.073049,0.121785,4,28
+C3 gpt-oss-20b,95,S_ideo,E1 famille retiree (argmax),0.674592,0.606664,0.067927,0.100694,4,28
+C3 gpt-oss-20b,95,S_ideo,E2 famille retiree (tirage),0.609256,0.553888,0.055368,0.090877,4,28
+C3 gpt-oss-20b,95,S_ideo,PMM k=10 famille retiree,0.642105,0.565153,0.076952,0.119843,4,28
+C3 gpt-oss-20b,95,S_ideo,"IM m=10 mode, famille retiree",0.657169,0.590969,0.066200,0.100735,4,28
+C3 gpt-oss-20b,95,S_ideo,B2 famille retiree (argmax),0.667695,0.626226,0.041469,0.062108,4,28
+C3 gpt-oss-20b,95,S_ideo,B2 famille retiree (tirage),0.589474,0.562823,0.026651,0.045211,4,28
+C3 gpt-oss-20b,95,S_ideo,humains vague 2,0.779129,0.570738,0.208391,0.267467,4,28
+C3 gpt-oss-20b,95,S_camp,C3 gpt-oss-20b,0.599819,0.522393,0.077426,0.129082,3,41
+C3 gpt-oss-20b,95,S_camp,E1 famille retiree (argmax),0.674592,0.597972,0.076620,0.113579,3,41
+C3 gpt-oss-20b,95,S_camp,E2 famille retiree (tirage),0.609256,0.546977,0.062279,0.102221,3,41
+C3 gpt-oss-20b,95,S_camp,PMM k=10 famille retiree,0.642105,0.557136,0.084969,0.132329,3,41
+C3 gpt-oss-20b,95,S_camp,"IM m=10 mode, famille retiree",0.657169,0.583110,0.074059,0.112694,3,41
+C3 gpt-oss-20b,95,S_camp,B2 famille retiree (argmax),0.667695,0.621015,0.046680,0.069912,3,41
+C3 gpt-oss-20b,95,S_camp,B2 famille retiree (tirage),0.589474,0.558939,0.030534,0.051800,3,41
+C3 gpt-oss-20b,95,S_camp,humains vague 2,0.779129,0.558498,0.220631,0.283176,3,41
+C3F Qwen3-4B,60,S_fin,C3F Qwen3-4B,,,,,0,4
+C3F Qwen3-4B,60,S_fin,E1 famille retiree (argmax),,,,,0,4
+C3F Qwen3-4B,60,S_fin,E2 famille retiree (tirage),,,,,0,4
+C3F Qwen3-4B,60,S_fin,PMM k=10 famille retiree,,,,,0,4
+C3F Qwen3-4B,60,S_fin,"IM m=10 mode, famille retiree",,,,,0,4
+C3F Qwen3-4B,60,S_fin,B2 famille retiree (argmax),,,,,0,4
+C3F Qwen3-4B,60,S_fin,B2 famille retiree (tirage),,,,,0,4
+C3F Qwen3-4B,60,S_fin,humains vague 2,,,,,0,4
+C3F Qwen3-4B,60,S_ideo,C3F Qwen3-4B,0.557184,0.532849,0.024335,0.043675,2,18
+C3F Qwen3-4B,60,S_ideo,E1 famille retiree (argmax),0.691667,0.620491,0.071175,0.102904,2,18
+C3F Qwen3-4B,60,S_ideo,E2 famille retiree (tirage),0.621552,0.562917,0.058635,0.094337,2,18
+C3F Qwen3-4B,60,S_ideo,PMM k=10 famille retiree,0.655460,0.583013,0.072447,0.110528,2,18
+C3F Qwen3-4B,60,S_ideo,"IM m=10 mode, famille retiree",0.668103,0.601865,0.066239,0.099144,2,18
+C3F Qwen3-4B,60,S_ideo,B2 famille retiree (argmax),0.682184,0.639754,0.042430,0.062197,2,18
+C3F Qwen3-4B,60,S_ideo,B2 famille retiree (tirage),0.600862,0.576167,0.024695,0.041100,2,18
+C3F Qwen3-4B,60,S_ideo,humains vague 2,0.777299,0.592378,0.184921,0.237902,2,18
+C3F Qwen3-4B,60,S_camp,C3F Qwen3-4B,0.557184,0.527977,0.029207,0.052419,3,26
+C3F Qwen3-4B,60,S_camp,E1 famille retiree (argmax),0.691667,0.610197,0.081470,0.117788,3,26
+C3F Qwen3-4B,60,S_camp,E2 famille retiree (tirage),0.621552,0.556957,0.064595,0.103925,3,26
+C3F Qwen3-4B,60,S_camp,PMM k=10 famille retiree,0.655460,0.574282,0.081178,0.123849,3,26
+C3F Qwen3-4B,60,S_camp,"IM m=10 mode, famille retiree",0.668103,0.593917,0.074187,0.111041,3,26
+C3F Qwen3-4B,60,S_camp,B2 famille retiree (argmax),0.682184,0.634638,0.047546,0.069697,3,26
+C3F Qwen3-4B,60,S_camp,B2 famille retiree (tirage),0.600862,0.574351,0.026511,0.044122,3,26
+C3F Qwen3-4B,60,S_camp,humains vague 2,0.777299,0.573967,0.203332,0.261588,3,26

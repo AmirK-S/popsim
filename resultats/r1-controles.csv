@@ -1,0 +1,13 @@
+critere,portee,valeur,seuil,verdict,detail
+1. taux de rejet de parse apres relance,oss20,0.0,"> 0,25 : modele ecarte",passe,0 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,oss20,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 0 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,oss20,0.3053691275167785,"> 0,90 des items : le modele ignore le camp",passe,91 items identiques sur 298
+1. taux de rejet de parse apres relance,q30,0.0011185682326621924,"> 0,25 : modele ecarte",passe,1 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q30,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 1 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q30,0.10437710437710437,"> 0,90 des items : le modele ignore le camp",passe,31 items identiques sur 297
+1. taux de rejet de parse apres relance,q4,0.0,"> 0,25 : modele ecarte",passe,0 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q4,0.8461538461538461,"> 0,05 des cellules relancees","chute, cellules retirees","11 recopies sur 13 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q4,0.19661016949152543,"> 0,90 des items : le modele ignore le camp",passe,58 items identiques sur 295
+"4. plancher humain, facteur w2 sur w1",humains,1.008930474222693,"hors de [0,85 ; 1,15] : echelle non calibree",passe,"sur 149 items apparies, ecart signe"
+5. effectifs des camps contre a30-gss-par-camp.csv,humains,1052.0,effectif maximal par camp egal a 417 / 303 / 332,passe,"obtenus {'gauche': 417, 'centre': 303, 'droite': 332}, attendus {'gauche': 417, 'centre': 303, 'droite': 332}"
+6. estimateur par substitution contre estimateur sans biais (a30),humains,0.0029102901150838685,"informatif : l'ecart relatif moyen doit rester sous 0,01",passe,"ecart relatif moyen sur 447 couples (item, camp)"

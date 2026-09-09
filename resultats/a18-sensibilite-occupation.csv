@@ -1,0 +1,5 @@
+condition,mesure,inter_seuil_1,inter_seuil_0,intra_seuil_1,intra_seuil_0
+C2,entropie,132.3032,82.7793,619.1812,671.9322
+C2,gini_simpson,45.5184,45.5184,258.8688,258.8688
+C3,entropie,33.4087,-9.9142,745.4371,791.3389
+C3,gini_simpson,4.2603,4.2603,311.1204,311.1204

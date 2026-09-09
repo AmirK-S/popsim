@@ -1,0 +1,10 @@
+controle,valeur,reference,detail
+items de famille,58.0,58.0,"six familles de a2_baselines_gss, memes items que R2"
+cases de S_ideo,7.0,,"S_ideo : sept niveaux d'ideologie (a44). S_gra : genre x race x age, SANS ideologie (a45 objection 2)"
+cases de S_gra,38.0,,"S_ideo : sept niveaux d'ideologie (a44). S_gra : genre x race x age, SANS ideologie (a45 objection 2)"
+lecture de la trace C2 coherente,1.0,1.0,part de cellules non vides sur les 58 items apres relecture de la trace par le chemin de r3_evaluer
+lecture de la trace C3 coherente,1.0,1.0,part de cellules non vides sur les 58 items apres relecture de la trace par le chemin de r3_evaluer
+"cellules rares stables, PLACEBO",106.0,78.0,R2 annonce 31 cellules sur 60 personnes et ~78 sur 150 ; en dessous de 40 les contrastes de rarete sont declares sous puissants
+"cellules rares stables, REFERENCE",106.0,78.0,R2 annonce 31 cellules sur 60 personnes et ~78 sur 150 ; en dessous de 40 les contrastes de rarete sont declares sous puissants
+correction pour tests multiples,0.0,11.0,"Holm par famille, F1 (5 tests), F2 (5 tests), F3 (1 test), exactement comme la page de plan section 6 ; le reste est descriptif et publie sans correction"
+tirages du bootstrap apparie,200.0,2000.0,30 tirages et 20 permutations pour la chute ; 50 permutations pour l'estimation ponctuelle

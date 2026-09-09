@@ -1,0 +1,3 @@
+quantite,n_personnes,rho_spearman,ic_bas,ic_haut
+rho entre aller retour d'une moitie d'items et monotone autre moitie,3874,0.07370848054745681,0.05177844471686371,0.09748472417001168
+rho entre aller retour d'une moitie d'items et changement autre moitie,3874,0.1484761410037957,0.12697542476824653,0.16850407230247272

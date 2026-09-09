@@ -1,0 +1,4 @@
+domaine,n_items,taux_moyen,taux_min,taux_max,entropie_moyenne
+attitudes,10,0.3839,0.326,0.4883,2.0453
+heuristiques_biais,58,0.4072,0.062,0.6398,1.5964
+prix,40,0.1611,0.1448,0.1861,0.9856

@@ -1,0 +1,4 @@
+perimetre,mesure,moyenne_langage,moyenne_statistique,difference,p_permutation,n_langage,n_statistique
+1052,correlation par personne,0.343669,0.151503,0.192166,0.110744,6,5
+150,correlation par personne,0.311334,0.137422,0.173912,0.070096,8,5
+1052,rappel sensibles moins temoins,-0.020515,0.031224,-0.051739,0.047248,6,5

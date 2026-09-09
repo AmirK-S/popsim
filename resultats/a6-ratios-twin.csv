@@ -1,0 +1,37 @@
+condition,mesure,ratio_inter,inter_ic_bas,inter_ic_haut,ratio_intra,intra_ic_bas,intra_ic_haut,produit,ratio_dispersion_globale
+humains vague 4,entropie,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),entropie,1.0043,0.9381,1.0811,1.0090,1.0059,1.0123,1.0133,1.0090
+Demographics Only - GPT4.1-mini,entropie,1.5695,1.4138,1.7953,0.5016,0.4972,0.5058,0.7873,0.5111
+JSON Persona (Predicted Output) - GPT4.1-mini,entropie,2.4347,2.1983,2.7660,0.4545,0.4505,0.4590,1.1064,0.4721
+JSON Persona - GPT4.1,entropie,3.7333,3.3863,4.1984,0.6323,0.6277,0.6373,2.3607,0.6599
+Persona Summary - GPT4.1-mini,entropie,2.2980,2.0563,2.5883,0.5849,0.5807,0.5892,1.3440,0.6001
+Persona Summary - JSON Persona - GPT4.1-mini,entropie,1.8258,1.6481,2.0454,0.5813,0.5740,0.5889,1.0613,0.5923
+Text Persona (Default Temperature) - GPT4.1-mini,entropie,3.2330,2.9437,3.6027,0.6224,0.6185,0.6269,2.0122,0.6456
+Text Persona (Reasoning) - GPT4.1-mini,entropie,3.0195,2.7482,3.3762,0.6576,0.6540,0.6618,1.9857,0.6786
+Text Persona (Repeating Questions) - GPT4.1-mini,entropie,3.4986,3.1593,3.9180,0.6325,0.6282,0.6369,2.2128,0.6580
+Text Persona - GPT4.1-mini,entropie,3.6550,3.3066,4.1154,0.5578,0.5532,0.5628,2.0386,0.5853
+Text Persona - Gemini-Flash2.5,entropie,3.0145,2.7483,3.3510,0.7499,0.7449,0.7548,2.2607,0.7701
+humains vague 4,gini_simpson,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),gini_simpson,1.0329,0.9589,1.1225,1.0052,1.0020,1.0083,1.0383,1.0054
+Demographics Only - GPT4.1-mini,gini_simpson,2.0626,1.8178,2.3699,0.5481,0.5425,0.5530,1.1305,0.5586
+JSON Persona (Predicted Output) - GPT4.1-mini,gini_simpson,2.9466,2.6286,3.3543,0.4977,0.4934,0.5022,1.4665,0.5147
+JSON Persona - GPT4.1,gini_simpson,4.2106,3.7475,4.7530,0.6858,0.6815,0.6904,2.8877,0.7103
+Persona Summary - GPT4.1-mini,gini_simpson,2.7301,2.4288,3.1344,0.6338,0.6293,0.6386,1.7304,0.6483
+Persona Summary - JSON Persona - GPT4.1-mini,gini_simpson,1.8356,1.6362,2.0740,0.5861,0.5774,0.5950,1.0759,0.5948
+Text Persona (Default Temperature) - GPT4.1-mini,gini_simpson,3.3154,2.9619,3.7401,0.6514,0.6476,0.6558,2.1596,0.6698
+Text Persona (Reasoning) - GPT4.1-mini,gini_simpson,3.4869,3.1269,3.9257,0.7095,0.7058,0.7134,2.4738,0.7287
+Text Persona (Repeating Questions) - GPT4.1-mini,gini_simpson,3.7991,3.4112,4.3190,0.6749,0.6711,0.6793,2.5640,0.6965
+Text Persona - GPT4.1-mini,gini_simpson,3.9066,3.4927,4.4126,0.5932,0.5885,0.5980,2.3173,0.6161
+Text Persona - Gemini-Flash2.5,gini_simpson,3.1151,2.8033,3.5303,0.7649,0.7597,0.7695,2.3828,0.7812
+humains vague 4,variance_ordinale,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),variance_ordinale,1.0220,0.8911,1.1753,1.0339,1.0141,1.0545,1.0567,1.0338
+Demographics Only - GPT4.1-mini,variance_ordinale,0.2813,0.2425,0.3280,0.0651,0.0631,0.0673,0.0183,0.0684
+JSON Persona (Predicted Output) - GPT4.1-mini,variance_ordinale,0.8671,0.7488,1.0018,0.0622,0.0598,0.0645,0.0539,0.0746
+JSON Persona - GPT4.1,variance_ordinale,1.0709,0.9302,1.2408,0.0935,0.0904,0.0967,0.1001,0.1086
+Persona Summary - GPT4.1-mini,variance_ordinale,0.7636,0.6546,0.8865,0.1057,0.1016,0.1098,0.0807,0.1159
+Persona Summary - JSON Persona - GPT4.1-mini,variance_ordinale,0.8302,0.7048,0.9642,0.1348,0.1296,0.1397,0.1119,0.1456
+Text Persona (Default Temperature) - GPT4.1-mini,variance_ordinale,1.6793,1.4537,1.9313,0.1241,0.1200,0.1278,0.2084,0.1482
+Text Persona (Reasoning) - GPT4.1-mini,variance_ordinale,1.2413,1.0769,1.4404,0.1277,0.1244,0.1315,0.1585,0.1449
+Text Persona (Repeating Questions) - GPT4.1-mini,variance_ordinale,1.5366,1.3342,1.7699,0.1100,0.1066,0.1133,0.1690,0.1321
+Text Persona - GPT4.1-mini,variance_ordinale,1.7440,1.5101,2.0052,0.1065,0.1027,0.1103,0.1857,0.1319
+Text Persona - Gemini-Flash2.5,variance_ordinale,2.9145,2.5155,3.3608,0.2146,0.2053,0.2248,0.6253,0.2564

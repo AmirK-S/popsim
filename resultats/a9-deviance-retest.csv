@@ -1,0 +1,5 @@
+domaine,n_items,taux_vagues1_3,taux_vague4,r_retest,ic95_bas,ic95_haut,fiabilite_interne,r_retest_desattenue
+attitudes,10,0.5587,0.5448,0.6741,0.6473,0.6981,0.5359,1.2578
+heuristiques_biais,58,0.5121,0.5025,0.5082,0.4737,0.5418,0.4091,1.2423
+prix,40,0.447,0.4568,0.7552,0.7336,0.7758,0.6872,1.099
+TOUS,108,0.4829,0.4828,0.7376,0.7176,0.7581,0.6685,1.1034

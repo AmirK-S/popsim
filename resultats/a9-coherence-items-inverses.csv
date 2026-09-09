@@ -1,0 +1,27 @@
+configuration,keyage,n_paires,r_absolu_humain,r_absolu_agent,exces_moyen
+gemini_flash25_texte,sens inverses,16,0.2505,0.9163,0.6658
+gemini_flash25_texte,meme sens,29,0.4923,0.9093,0.4169
+gpt41_json,sens inverses,16,0.2505,0.49,0.2395
+gpt41_json,meme sens,29,0.4923,0.8878,0.3955
+gpt41_json_predout,sens inverses,16,0.2505,0.8111,0.5606
+gpt41_json_predout,meme sens,29,0.4923,0.8919,0.3996
+gpt41mini_defaut,sens inverses,16,0.2505,0.5632,0.3127
+gpt41mini_defaut,meme sens,29,0.4923,0.8402,0.3479
+gpt41mini_demo_seules,sens inverses,16,0.2505,0.2297,-0.0209
+gpt41mini_demo_seules,meme sens,29,0.4923,0.7186,0.2263
+gpt41mini_finetune500,sens inverses,16,0.2505,0.8981,0.6475
+gpt41mini_finetune500,meme sens,29,0.4923,0.9391,0.4468
+gpt41mini_json,sens inverses,16,0.2505,0.5871,0.3365
+gpt41mini_json,meme sens,29,0.4923,0.856,0.3637
+gpt41mini_json_predout,sens inverses,16,0.2505,0.1801,-0.0705
+gpt41mini_json_predout,meme sens,29,0.4923,0.8846,0.3923
+gpt41mini_resume,sens inverses,16,0.2505,0.2356,-0.015
+gpt41mini_resume,meme sens,29,0.4923,0.6616,0.1693
+gpt41mini_resume_json,sens inverses,16,0.2505,0.0457,-0.2048
+gpt41mini_resume_json,meme sens,29,0.4923,0.6984,0.2061
+gpt41mini_texte_raisonnement,sens inverses,16,0.2505,0.6256,0.375
+gpt41mini_texte_raisonnement,meme sens,29,0.4923,0.8273,0.335
+gpt41mini_texte_repetition,sens inverses,16,0.2505,0.658,0.4074
+gpt41mini_texte_repetition,meme sens,29,0.4923,0.8606,0.3683
+gpt41mini_texte_temp_defaut,sens inverses,16,0.2505,0.5646,0.3141
+gpt41mini_texte_temp_defaut,meme sens,29,0.4923,0.8241,0.3318

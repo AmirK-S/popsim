@@ -1,0 +1,9 @@
+condition,version,dispersion_totale_bits,ratio_total,entropie_individuelle_moyenne_bits,tau,exactitude_esperee
+humains vague 1,ponctuelle,187.3610,1.0000,0.0000,,
+humains vague 2,ponctuelle,187.1359,0.9988,0.0000,,
+C2,1 argmax,122.6050,0.6544,0.0000,,
+C2,2 tirage esperance,125.2474,0.6685,0.1165,1.0,
+C2,3 borne en temperature,187.3610,1.0000,1.0071,6.2886,
+C3,1 argmax,126.1993,0.6736,0.0000,,
+C3,2 tirage esperance,129.8076,0.6928,0.1396,1.0,
+C3,3 borne en temperature,187.3610,1.0000,1.0027,6.2733,

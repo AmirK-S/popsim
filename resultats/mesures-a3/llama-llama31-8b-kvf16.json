@@ -1,0 +1,57 @@
+{
+  "moteur": "llama.cpp",
+  "modele": "data/modeles/gguf/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+  "chargement_s": 1.5415189266204834,
+  "cache_kv": "f16",
+  "slots_paralleles": 8,
+  "contexte_par_slot": 8192,
+  "tokens_persona": 2921,
+  "t1": {
+    "brut": {
+      "A": 0.15940157598714363,
+      "B": 0.15658705797159148,
+      "C": 0.2297730514817872,
+      "D": 0.34873865926926884,
+      "E": 0.0742126586667549
+    },
+    "normalisee": {
+      "A": 0.16454984647830007,
+      "B": 0.1616444266008525,
+      "C": 0.23719414385983284,
+      "D": 0.36000204193987834,
+      "E": 0.07660954112113624
+    },
+    "manquantes": [],
+    "masse_totale": 0.9687130033765461,
+    "entropie_bits": 2.160307152959077,
+    "methode": "top-k renvoye par llama-server (n_probs=40)"
+  },
+  "t3_t4": {
+    "tokens_prompt": 2985,
+    "prefill_t_par_s": 302.1416744942542,
+    "decodage_t_par_s": 15.585535690201766
+  },
+  "t5": {
+    "tokens_persona": 2921,
+    "froid_ms": 10263.064,
+    "chaud_ms": 362.40999999999997,
+    "sans_cache_ms": 10229.0455,
+    "tokens_reevalues": 63.0,
+    "gain": 28.22506415385889
+  },
+  "t7": {
+    "duree_totale_s": 28.626139541971497,
+    "premier_appel_ms": 10336.825167061761,
+    "mediane_ms": 371.16141605656594,
+    "min_ms": 356.70174995902926,
+    "max_ms": 395.2132910490036,
+    "memoire_debut_mo": 13064.21875,
+    "memoire_fin_mo": 13064.21875,
+    "entropie_moyenne_bits": 2.189390922886497,
+    "appels_par_heure": 9699.284042636993
+  },
+  "duree_du_banc_s": 133.96664381027222,
+  "appels_par_heure_sequentiel": 9699.284042636993,
+  "appels_par_heure_avec_lots": 9699.284042636993,
+  "heures_pour_45000_appels": 4.639517700707074
+}

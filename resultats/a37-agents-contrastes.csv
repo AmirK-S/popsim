@@ -1,0 +1,4 @@
+perimetre,avec_etiquette,sans_etiquette,pente_avec,pente_sans,ecart,ic_bas,ic_haut,p,pente_diff_avec,pente_diff_sans,ecart_diff,ecart_diff_ic_bas,ecart_diff_ic_haut,p_diff,items_gauche_unanime_avec,items_gauche_unanime_sans,items_perdus_log_avec,items_perdus_log_sans,p_holm,p_diff_holm
+150 personnes,C2,C3,-2.732885,-1.887043,-0.845842,-1.847055,0.832456,0.487000,-0.423437,-0.281056,-0.142381,-0.256114,-0.026239,0.018000,31,8,33,8,0.487000,0.018000
+150 personnes,agents v8,agents demographiques (v6),-6.268202,-1.057382,-5.210820,-6.419236,-1.538663,0.005000,-0.846917,-0.151377,-0.695540,-0.811648,-0.538790,0.000500,20,10,26,12,0.010000,0.001499
+1052 personnes,agents v8,agents demographiques (v6),-12.413928,-1.688570,-10.725358,-11.216687,-6.049547,0.000500,-0.819390,-0.189201,-0.630189,-0.674782,-0.582269,0.000500,12,6,16,6,0.001499,0.001499

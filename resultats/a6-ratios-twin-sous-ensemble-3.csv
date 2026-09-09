@@ -1,0 +1,10 @@
+condition,mesure,ratio_inter,inter_ic_bas,inter_ic_haut,ratio_intra,intra_ic_bas,intra_ic_haut,produit,ratio_dispersion_globale
+humains vague 4,entropie,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),entropie,0.9732,0.8860,1.0709,1.0085,1.0048,1.0126,0.9814,1.0081
+LLM Finetuning (500 training samples) - GPT4.1-mini,entropie,1.0520,0.8146,1.3337,0.5520,0.5402,0.5643,0.5807,0.5567
+humains vague 4,gini_simpson,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),gini_simpson,0.9842,0.8977,1.0829,1.0046,1.0011,1.0083,0.9887,1.0044
+LLM Finetuning (500 training samples) - GPT4.1-mini,gini_simpson,0.9891,0.6600,1.3775,0.6002,0.5866,0.6142,0.5937,0.6031
+humains vague 4,variance_ordinale,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),variance_ordinale,0.9647,0.8113,1.1560,1.0240,1.0039,1.0452,0.9878,1.0230
+LLM Finetuning (500 training samples) - GPT4.1-mini,variance_ordinale,0.3035,0.2085,0.4073,0.1428,0.1292,0.1584,0.0433,0.1454

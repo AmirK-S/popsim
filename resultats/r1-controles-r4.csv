@@ -1,0 +1,16 @@
+critere,portee,valeur,seuil,verdict,detail
+1. taux de rejet de parse apres relance,q4,0.0,"> 0,25 : modele ecarte",passe,0 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q4,0.8461538461538461,"> 0,05 des cellules relancees","chute, cellules retirees","11 recopies sur 13 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q4,0.19661016949152543,"> 0,90 des items : le modele ignore le camp",passe,58 items identiques sur 295
+1. taux de rejet de parse apres relance,q4base,0.0,"> 0,25 : modele ecarte",passe,0 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q4base,1.0,"> 0,05 des cellules relancees","chute, cellules retirees","24 recopies sur 24 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q4base,0.32752613240418116,"> 0,90 des items : le modele ignore le camp",passe,94 items identiques sur 287
+1. taux de rejet de parse apres relance,q4hyb,0.024608501118568233,"> 0,25 : modele ecarte",passe,22 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q4hyb,1.0,"> 0,05 des cellules relancees","chute, cellules retirees","6 recopies sur 6 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q4hyb,0.47183098591549294,"> 0,90 des items : le modele ignore le camp",passe,134 items identiques sur 284
+1. taux de rejet de parse apres relance,q4nogab,0.0011185682326621924,"> 0,25 : modele ecarte",passe,1 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,q4nogab,1.0,"> 0,05 des cellules relancees","chute, cellules retirees","15 recopies sur 15 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,q4nogab,0.13058419243986255,"> 0,90 des items : le modele ignore le camp",passe,38 items identiques sur 291
+"4. plancher humain, facteur w2 sur w1",humains,1.008930474222693,"hors de [0,85 ; 1,15] : echelle non calibree",passe,"sur 149 items apparies, ecart signe"
+5. effectifs des camps contre a30-gss-par-camp.csv,humains,1052.0,effectif maximal par camp egal a 417 / 303 / 332,passe,"obtenus {'gauche': 417, 'centre': 303, 'droite': 332}, attendus {'gauche': 417, 'centre': 303, 'droite': 332}"
+6. estimateur par substitution contre estimateur sans biais (a30),humains,0.002908430388374231,"informatif : l'ecart relatif moyen doit rester sous 0,01",passe,"ecart relatif moyen sur 447 couples (item, camp)"

@@ -1,0 +1,22 @@
+quantite,moyenne_llm,moyenne_statistique,difference,p_permutation_methodes,n_llm,n_stat
+"K1 distance, M1 mode, perimetre 150",0.047440,-0.128929,0.176370,0.045848,8,5
+"K1 distance, M1 mode, perimetre 1052",0.017955,-0.141264,0.159219,0.054247,6,5
+"K2 dispersion, M1 mode, perimetre 150",0.060653,0.039759,0.020894,0.835208,8,5
+"K2 dispersion, M1 mode, perimetre 1052",0.084226,-0.042198,0.126424,0.240588,6,5
+"K1 distance, M2 mode plus conception, perimetre 150",-0.012974,-0.125460,0.112485,0.177741,8,5
+"K1 distance, M2 mode plus conception, perimetre 1052",-0.032064,-0.063601,0.031537,0.750762,6,5
+"K2 dispersion, M2 mode plus conception, perimetre 150",-0.092577,0.044881,-0.137458,0.153842,8,5
+"K2 dispersion, M2 mode plus conception, perimetre 1052",-0.103737,0.064291,-0.168028,0.071696,6,5
+"K1 distance, M3 toutes sources, perimetre 150",0.019834,-0.051117,0.070951,0.390030,8,5
+"K1 distance, M3 toutes sources, perimetre 1052",-0.005973,-0.007024,0.001051,0.988501,6,5
+"K2 dispersion, M3 toutes sources, perimetre 150",-0.121819,0.024477,-0.146296,0.139493,8,5
+"K2 dispersion, M3 toutes sources, perimetre 1052",-0.140729,0.058300,-0.199029,0.034348,6,5
+"K3 comportement moins attitude, perimetre 150",-0.035722,0.014884,-0.050606,0.193740,8,5
+"K3 contraste sur les comportements seuls, perimetre 150",0.023341,0.015114,0.008227,0.765012,8,5
+"K3 contraste sur les attitudes seules, perimetre 150",0.059063,0.000230,0.058833,0.000850,8,5
+"K4 droite moins gauche, perimetre 150",-0.104284,0.075429,-0.179713,0.132343,8,5
+"K4 ecart de desirabilite du bloc de droite, perimetre 150",-0.031376,0.116790,-0.148166,0.155342,8,5
+"K4 ecart de desirabilite du bloc de gauche, perimetre 150",0.072908,0.041361,0.031546,0.370381,8,5
+"K4 droite moins gauche, perimetre 1052",-0.135361,0.086793,-0.222153,0.109295,6,5
+"K4 facteur d'amplification de l'ecart entre camps, perimetre 150",1.470049,0.660012,0.810036,0.133943,8,5
+"K4 facteur d'amplification de l'ecart entre camps, perimetre 1052",1.573410,0.632333,0.941077,0.109395,6,5

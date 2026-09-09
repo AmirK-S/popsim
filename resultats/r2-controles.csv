@@ -1,0 +1,7 @@
+controle,valeur,reference,detail
+methodes du regime severe importables,6.000000,6.000000,les six sont importables de a35_familles et a33_commun
+ce qui n'est PAS importable dans le regime severe,6.000000,6.000000,"les six conditions de Stanford gardent les items cousins dans leur invite (a8 errata E1) ; elles ne peuvent pas etre replacees en regime severe sans relancer leur pipeline, et ne sont donc ni testees ni affichees comme adversaires"
+cases du segment ideologie x genre x age,98.000000,98.000000,"plancher de bruit de cellule de a34, importe"
+trace r2-C3F-qwen30.jsonl,0.000000,1.000000,absente ou sans personne complete
+trace r2-C3-qwen30.jsonl,0.000000,1.000000,absente ou sans personne complete
+correction pour tests multiples,78.000000,78.000000,"Holm et Benjamini Hochberg appliques famille par famille sur la definition de rarete du perimetre, qui est la definition declaree ; la definition sur population est publiee sans correction, comme sensibilite"

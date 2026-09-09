@@ -1,0 +1,21 @@
+cle_modele,marqueur,n_sorties,n_sorties_de_relance,sorties_touchees,part_des_sorties,dont_relances,part_des_relances
+q4,separateur d'exemple ----,907,13,0,0.0,0,0.0
+q4,annonce d'une question nouvelle,907,13,0,0.0,0,0.0
+q4,en tete d'exemple recopie,907,13,0,0.0,0,0.0
+q4,auto correction en cours de reponse,907,13,0,0.0,0,0.0
+q4,balise de reponse mathematique,907,13,0,0.0,0,0.0
+q4nogab,separateur d'exemple ----,910,16,0,0.0,0,0.0
+q4nogab,annonce d'une question nouvelle,910,16,1,0.001098901098901099,0,0.0
+q4nogab,en tete d'exemple recopie,910,16,0,0.0,0,0.0
+q4nogab,auto correction en cours de reponse,910,16,0,0.0,0,0.0
+q4nogab,balise de reponse mathematique,910,16,0,0.0,0,0.0
+q4base,separateur d'exemple ----,918,24,0,0.0,0,0.0
+q4base,annonce d'une question nouvelle,918,24,0,0.0,0,0.0
+q4base,en tete d'exemple recopie,918,24,0,0.0,0,0.0
+q4base,auto correction en cours de reponse,918,24,0,0.0,0,0.0
+q4base,balise de reponse mathematique,918,24,0,0.0,0,0.0
+q4hyb,separateur d'exemple ----,922,28,18,0.019522776572668113,18,0.6428571428571429
+q4hyb,annonce d'une question nouvelle,922,28,16,0.01735357917570499,16,0.5714285714285714
+q4hyb,en tete d'exemple recopie,922,28,0,0.0,0,0.0
+q4hyb,auto correction en cours de reponse,922,28,18,0.019522776572668113,12,0.42857142857142855
+q4hyb,balise de reponse mathematique,922,28,1,0.0010845986984815619,1,0.03571428571428571

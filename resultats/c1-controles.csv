@@ -1,0 +1,18 @@
+controle,attendu,obtenu,passe
+C1 observations 2020-2024,71976,71976,True
+C1 userid distincts 2020-2024,9751,9751,True
+"C1 doublons (date, userid) 2020-2024",0,0,True
+C1 observations 2025,10559,10559,True
+C1 userid distincts 2025,2159,2159,True
+"C1 doublons (date, userid) 2025",0,0,True
+C1 observations 2017-2019,47681,47681,True
+C1 userid distincts 2017-2019,7379,7379,True
+"C1 doublons (date, userid) 2017-2019",0,0,True
+C5 signe deja porte par Q25v2part2,1.0 / 1.0,1.0000 / 1.0000,True
+C5 signe deja porte par Q26v2part2,1.0 / 1.0,1.0000 / 1.0000,True
+C5 signe deja porte par Q31v2part2,1.0 / 1.0,1.0000 / 1.0000,True
+C5 signe deja porte par Q8v2part2,1.0 / 1.0,1.0000 / 1.0000,True
+C5 signe deja porte par Q23v2part2,1.0 / 1.0,1.0000 / 1.0000,True
+"C6 permutation identique a a44, n=200, 9 groupes",identique,identique,True
+"C6 permutation identique a a44, n=5000, 300 groupes",identique,identique,True
+"C6 permutation identique a a44, n=60000, 3000 groupes",identique,identique,True

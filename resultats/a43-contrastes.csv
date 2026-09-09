@@ -1,0 +1,91 @@
+famille,perimetre,condition,statistique,ic_bas,ic_haut,p,p_holm,p_bh
+F1 correlation apres retrait du segment differe de zero,150,agents composite,0.367547,0.336319,0.397033,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,agents entretien (v3),0.309011,0.277421,0.337255,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,agents enquete,0.285467,0.250492,0.318482,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,agents demographiques (v6),0.111095,0.085084,0.135090,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,agents v7,0.107251,0.073626,0.141079,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,agents v8,0.070186,0.030043,0.107643,0.001000,0.015000,0.001034
+F1 correlation apres retrait du segment differe de zero,150,C2,0.054857,0.028637,0.079524,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,C3,0.174231,0.147034,0.200614,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,PMM k=5,0.303296,0.272424,0.331625,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,PMM k=10,0.298352,0.267749,0.326581,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,IM m=10 mode des m,0.308163,0.279768,0.336410,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,B0 mode,0.024098,-0.010079,0.057517,0.172000,0.172000,0.172000
+F1 correlation apres retrait du segment differe de zero,150,B1 argmax,0.117647,0.090080,0.143714,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,B2 argmax,0.246658,0.214959,0.277804,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,B3 foret,0.092094,0.062551,0.120751,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,150,humains vague 2,0.616076,0.582330,0.648042,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents composite,0.367875,0.356765,0.379057,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents entretien (v3),0.314302,0.303481,0.325737,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents enquete,0.289836,0.277450,0.302962,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents demographiques (v6),0.104584,0.094052,0.115740,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents v7,0.086057,0.072961,0.099306,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,agents v8,0.065209,0.051427,0.078800,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,PMM k=5,0.310334,0.299035,0.321097,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,PMM k=10,0.309872,0.298509,0.321034,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,IM m=10 mode des m,0.320274,0.309030,0.331033,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,B0 mode,0.022243,0.009987,0.034262,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,B1 argmax,0.120520,0.109732,0.131258,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,B2 argmax,0.248152,0.236180,0.260309,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,B3 foret,0.107526,0.097701,0.118350,0.000500,0.015000,0.000536
+F1 correlation apres retrait du segment differe de zero,1052,humains vague 2,0.633486,0.622653,0.644933,0.000500,0.015000,0.000536
+F2 bat la moyenne d'item leave-one-out,150,agents composite,0.094281,0.067049,0.121636,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,agents entretien (v3),0.058282,0.029495,0.087753,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,agents enquete,0.008388,-0.023873,0.040351,0.614000,1.000000,0.657857
+F2 bat la moyenne d'item leave-one-out,150,agents demographiques (v6),-0.096216,-0.116948,-0.074076,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,agents v7,-0.112881,-0.141050,-0.084979,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,agents v8,-0.118309,-0.151712,-0.080195,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,C2,-0.213001,-0.240982,-0.182938,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,C3,-0.145563,-0.169942,-0.118751,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,PMM k=5,0.032733,0.003379,0.061874,0.033000,0.198000,0.039600
+F2 bat la moyenne d'item leave-one-out,150,PMM k=10,0.029155,-0.000668,0.057564,0.058000,0.290000,0.066923
+F2 bat la moyenne d'item leave-one-out,150,IM m=10 mode des m,0.063952,0.037119,0.091405,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,B0 mode,-0.065490,-0.077044,-0.053840,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,B1 argmax,0.000594,-0.022445,0.025256,0.959000,1.000000,0.959000
+F2 bat la moyenne d'item leave-one-out,150,B2 argmax,0.063932,0.039857,0.088820,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,150,B3 foret,0.016530,-0.002665,0.036997,0.079000,0.316000,0.087778
+F2 bat la moyenne d'item leave-one-out,150,humains vague 2,0.279895,0.249715,0.309361,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,agents composite,0.092888,0.082515,0.104010,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,agents entretien (v3),0.062815,0.051619,0.074278,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,agents enquete,0.013727,0.001990,0.025412,0.017000,0.119000,0.021250
+F2 bat la moyenne d'item leave-one-out,1052,agents demographiques (v6),-0.109754,-0.119500,-0.099836,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,agents v7,-0.128372,-0.138605,-0.117915,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,agents v8,-0.118911,-0.132460,-0.104930,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,PMM k=5,0.033971,0.022562,0.045306,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,PMM k=10,0.035541,0.024610,0.046885,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,IM m=10 mode des m,0.064873,0.054457,0.075640,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,B0 mode,-0.071325,-0.075359,-0.067146,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,B1 argmax,-0.001196,-0.011405,0.008537,0.808000,1.000000,0.835862
+F2 bat la moyenne d'item leave-one-out,1052,B2 argmax,0.065742,0.056359,0.074975,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,B3 foret,0.020066,0.012011,0.027942,0.000500,0.015000,0.000652
+F2 bat la moyenne d'item leave-one-out,1052,humains vague 2,0.285592,0.273711,0.297037,0.000500,0.015000,0.000652
+F3 bat la moyenne de segment leave-one-out,150,agents composite,0.027174,0.006665,0.048587,0.012000,0.084000,0.015000
+F3 bat la moyenne de segment leave-one-out,150,agents entretien (v3),-0.008825,-0.029497,0.013417,0.426000,1.000000,0.456429
+F3 bat la moyenne de segment leave-one-out,150,agents enquete,-0.058720,-0.086186,-0.033090,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,agents demographiques (v6),-0.163323,-0.184556,-0.142358,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,agents v7,-0.179988,-0.208715,-0.152609,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,agents v8,-0.185416,-0.209314,-0.160408,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,C2,-0.280109,-0.304659,-0.254288,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,C3,-0.212671,-0.238411,-0.185774,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,PMM k=5,-0.034375,-0.056885,-0.010687,0.003000,0.024000,0.003913
+F3 bat la moyenne de segment leave-one-out,150,PMM k=10,-0.037952,-0.061335,-0.014675,0.002000,0.018000,0.002727
+F3 bat la moyenne de segment leave-one-out,150,IM m=10 mode des m,-0.003156,-0.023928,0.017745,0.753000,1.000000,0.753000
+F3 bat la moyenne de segment leave-one-out,150,B0 mode,-0.132598,-0.156827,-0.109092,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,B1 argmax,-0.066513,-0.083011,-0.050592,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,B2 argmax,-0.003175,-0.021194,0.016254,0.729000,1.000000,0.753000
+F3 bat la moyenne de segment leave-one-out,150,B3 foret,-0.050577,-0.065483,-0.035913,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,150,humains vague 2,0.212787,0.185886,0.239417,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,agents composite,0.023383,0.015390,0.031722,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,agents entretien (v3),-0.006689,-0.014866,0.001604,0.115000,0.690000,0.138000
+F3 bat la moyenne de segment leave-one-out,1052,agents enquete,-0.055777,-0.065022,-0.046198,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,agents demographiques (v6),-0.179258,-0.188654,-0.169708,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,agents v7,-0.197876,-0.208464,-0.187590,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,agents v8,-0.188415,-0.197757,-0.179023,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,PMM k=5,-0.035533,-0.044454,-0.026982,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,PMM k=10,-0.033963,-0.042563,-0.025569,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,IM m=10 mode des m,-0.004631,-0.012809,0.003548,0.264000,1.000000,0.304615
+F3 bat la moyenne de segment leave-one-out,1052,B0 mode,-0.140829,-0.150101,-0.131755,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,B1 argmax,-0.070700,-0.077023,-0.064193,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,B2 argmax,-0.003762,-0.010468,0.003028,0.291000,1.000000,0.323333
+F3 bat la moyenne de segment leave-one-out,1052,B3 foret,-0.049438,-0.054965,-0.043901,0.000500,0.015000,0.000714
+F3 bat la moyenne de segment leave-one-out,1052,humains vague 2,0.216088,0.206527,0.225635,0.000500,0.015000,0.000714

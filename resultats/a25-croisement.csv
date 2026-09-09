@@ -1,0 +1,150 @@
+item,variables_gss,classe_norc,groupe_litterature,n_modalites,type,pole_desirable,pole_defini,niveau,source_du_pole
+natspac/y,NATSPAC NATSPACY,mixte,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natenvir/y,NATENVIR NATENVIY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natheal/y,NATHEAL NATHEALY,mixte,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natcity/y,NATCITY NATCITYY,mixte,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natdrug/y,NATDRUG NATDRUGY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+nateduc/y,NATEDUC NATEDUCY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natrace/y,NATRACE NATRACEY,sensible,sensible litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natarms/y,NATARMS NATARMSY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+nataid/y,NATAID NATAIDY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natfare/y,NATFARE NATFAREY,mixte,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natroad,NATROAD,sensible,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natsoc,NATSOC,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natmass,NATMASS,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natpark,NATPARK,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natchld,NATCHLD,sensible,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natsci,NATSCI,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+natenrgy,NATENRGY,temoin,temoin litterature,3,ordinal,too little,True,[HYPOTHESE],regle uniforme sur les items de depense : 'too little' est le pole genereux ; NORC ne donne pas la direction item par item
+uswary,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+prayer,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+courts,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+discaffw,,non teste,sensible litterature,4,ordinal,,False,[HYPOTHESE],idem
+discaffm,,non teste,sensible litterature,4,ordinal,,False,[HYPOTHESE],idem
+fehire,,non teste,temoin litterature,5,ordinal,,False,[HYPOTHESE],"pole contesté, non retenu"
+fechld,FECHLD,temoin,temoin litterature,4,ordinal,strongly agree,True,[PROBABLE],"l'enonce est formule a l'endroit, approuver est le pole egalitaire"
+fepresch,FEPRESCH,investiguer,temoin litterature,4,ordinal,strongly disagree,True,[PROBABLE],"idem, desapprouver est le pole egalitaire"
+fefam,FEFAM,investiguer,temoin litterature,4,ordinal,strongly disagree,True,[PROBABLE],l'egalitarisme de role est la norme declaree ; NORC note des reponses plus extremes sur le web pour les items de femmes au travail
+fepol,,non teste,temoin litterature,2,nominal,disagree,True,[PROBABLE],desapprouver est le pole egalitaire
+mobile16,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+incom16,INCOM16,temoin,sensible litterature,5,ordinal,far above average,True,[HYPOTHESE],"meme raisonnement, revenu de la famille a 16 ans"
+dwelown16,,non teste,temoin litterature,3,nominal,,False,[HYPOTHESE],pole non defini
+divorced,DIVORCE,temoin,temoin litterature,2,nominal,no,True,[HYPOTHESE],le divorce est un fait faiblement stigmatise
+posslq/y,POSSLQ POSSLQY,temoin,temoin litterature,4,nominal,,False,[HYPOTHESE],pole non defini
+wrkstat,WRKSTAT,temoin,temoin litterature,8,nominal,,False,[HYPOTHESE],pole non defini
+evwork,EVWORK,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+wrkgovt1,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+wrkgovt2,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+partfull,,non teste,temoin litterature,3,nominal,,False,[HYPOTHESE],pole non defini
+wksub1,,non teste,temoin litterature,3,nominal,,False,[HYPOTHESE],pole non defini
+wksup1,,non teste,temoin litterature,3,nominal,,False,[HYPOTHESE],pole non defini
+conarmy,CONARMY,investiguer,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],meme echelle et meme pole que les trois items de confiance ou NORC donne la direction ; CONARMY est en zone grise
+conbus,CONBUS,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+conclerg,CONCLERG,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+coneduc,CONEDUC,sensible,temoin litterature,3,ordinal,a great deal,True,[CONFIRME],NORC : CONEDUC passe de 'a great deal' en face a face a 'only some' / 'hardly any' sur le web
+confed,CONFED,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+confinan,CONFINAN,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+conjudge,CONJUDGE,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+conlabor,CONLABOR,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+conlegis,CONLEGIS,sensible,temoin litterature,3,ordinal,a great deal,True,[CONFIRME],NORC : idem CONLEGIS
+conmedic,CONMEDIC,sensible,temoin litterature,3,ordinal,a great deal,True,[CONFIRME],NORC : idem CONMEDIC
+conpress,CONPRESS,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+consci,CONSCI,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+contv,CONTV,temoin,temoin litterature,3,ordinal,a great deal,True,[HYPOTHESE],"meme echelle, meme pole, temoin"
+joblose,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+jobfind,JOBFIND,temoin,temoin litterature,4,nominal,,False,[HYPOTHESE],pole non defini
+happy,HAPPY,temoin,temoin litterature,3,ordinal,very happy,True,[PROBABLE],"Pew 2015 (corpus 04-15) : les items de satisfaction portent les plus gros ecarts de mode, 14 a 18 points, toujours dans le sens du pole positif"
+hapmar,,non teste,temoin litterature,4,nominal,very happy,True,[PROBABLE],"idem, item non teste par NORC"
+satjob,SATJOB,temoin,temoin litterature,5,nominal,very satisfied,True,[PROBABLE],idem
+spdeg*,,non teste,temoin litterature,6,nominal,,False,[HYPOTHESE],pole non defini
+spjew,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+spfund,,non teste,temoin litterature,4,nominal,,False,[HYPOTHESE],pole non defini
+unemp,UNEMP,temoin,temoin litterature,2,nominal,no,True,[HYPOTHESE],le chomage passe est un fait stigmatise
+union1,,non teste,temoin litterature,4,nominal,,False,[HYPOTHESE],pole non defini
+spkath/y,SPKATH,temoin,temoin litterature,2,nominal,allowed,True,[PROBABLE],Tourangeau et Yan 2007 : les items de tolerance sont sur declares du cote tolerant
+colath,COLATH,temoin,temoin litterature,2,nominal,allowed,True,[PROBABLE],idem
+spkrac/y,SPKRAC,sensible,sensible litterature,2,nominal,,False,[CONFIRME],"aucun pole : deux normes s'opposent, la norme de liberte d'expression et la norme antiraciste. NORC classe l'item sensible sans donner de direction"
+colrac,COLRAC,temoin,sensible litterature,2,nominal,,False,[CONFIRME],meme raison que spkrac/y
+librac/y,,non teste,sensible litterature,2,nominal,,False,[CONFIRME],meme raison que spkrac/y
+spkcom/y,,non teste,temoin litterature,2,nominal,"yes, allowed to speak",True,[PROBABLE],idem
+colcom/y,,non teste,temoin litterature,2,nominal,not fired,True,[PROBABLE],idem
+libcom/y,LIBCOM,temoin,temoin litterature,2,nominal,not remove,True,[PROBABLE],idem
+spkhomo/y,,non teste,sensible litterature,2,nominal,"yes, allowed to speak",True,[PROBABLE],idem
+colhomo,,non teste,sensible litterature,2,nominal,allowed,True,[PROBABLE],idem
+libhomo/y,,non teste,sensible litterature,2,nominal,not remove,True,[PROBABLE],idem
+cappun,CAPPUN,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+polhitok/y,POLHITOK,temoin,temoin litterature,2,nominal,no,True,[HYPOTHESE],meme raisonnement que polabuse/y
+polabuse/y,POLABUSE,sensible,temoin litterature,2,nominal,no,True,[HYPOTHESE],approuver un coup porte a un citoyen qui a insulte un policier est le pole stigmatise ; NORC classe l'item sensible sans donner de direction
+polattak/y,POLATTAK,sensible,temoin litterature,2,nominal,,False,[HYPOTHESE],"aucun pole : le citoyen attaque le policier, approuver est ici une reponse socialement acceptable"
+grass,,non teste,sensible litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+gunlaw,GUNLAW,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+owngun,OWNGUN,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+hunt1,,non teste,temoin litterature,4,nominal,,False,[HYPOTHESE],pole non defini
+class,,non teste,temoin litterature,4,ordinal,,False,[HYPOTHESE],"auto classement social, pole non defini"
+satfin,SATFIN,temoin,temoin litterature,3,ordinal,satisfied,True,[PROBABLE],idem
+finalter,FINALTER,temoin,temoin litterature,3,ordinal,better,True,[HYPOTHESE],pole positif
+finrela,FINRELA,temoin,sensible litterature,5,ordinal,far above average,True,[PROBABLE],Tourangeau et Yan 2007 : le revenu declare est sur declare vers le haut
+racdif1,RACDIF1 RACDIF1Y,temoin,sensible litterature,2,nominal,yes,True,[PROBABLE],Berinsky 1999 (corpus 04-19) : l'opinion raciale liberale est sur declaree ; attribuer l'ecart a la discrimination est le pole liberal
+racdif2,RACDIF2,temoin,sensible litterature,2,nominal,no,True,[PROBABLE],meme source ; attribuer l'ecart a une capacite innee est le pole stigmatise
+racdif3,RACDIF3,temoin,sensible litterature,2,nominal,yes,True,[HYPOTHESE],"meme famille, direction moins nette : l'explication par l'education est consideree comme structurelle"
+racdif4,RACDIF4,temoin,sensible litterature,2,nominal,no,True,[HYPOTHESE],meme famille : l'explication par le manque de volonte est le pole stigmatise
+wlthwhts,,non teste,sensible litterature,7,ordinal,,False,[HYPOTHESE],idem
+wlthblks,,non teste,sensible litterature,7,ordinal,,False,[HYPOTHESE],"perception de richesse, pas de pole normatif clair"
+wlthhsps,,non teste,sensible litterature,7,ordinal,,False,[HYPOTHESE],idem
+racwork,RACWORK,temoin,sensible litterature,7,nominal,,False,[HYPOTHESE],"composition raciale du lieu de travail, factuel"
+letin1a,LETIN1A,temoin,sensible litterature,5,ordinal,increased a lot,True,[PROBABLE],"Bursztyn, Egorov et Fiorin 2020 (corpus 04-27) : l'opinion xenophobe est cachee quand elle est percue comme minoritaire, donc le pole pro immigration est le pole declare en exces"
+getahead,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+aged,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+parsol,PARSOL,temoin,temoin litterature,5,ordinal,much better,True,[HYPOTHESE],pole positif
+kidssol,,non teste,temoin litterature,6,nominal,,False,[HYPOTHESE],pole non defini
+spanking,SPANKING,temoin,temoin litterature,4,ordinal,strongly disagree,True,[PROBABLE],la punition corporelle est devenue un fait stigmatise ; desapprouver est le pole presentable
+divlaw,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+sexeduc,SEXEDUC,temoin,sensible litterature,2,nominal,favor,True,[HYPOTHESE],"l'education sexuelle a l'ecole est majoritairement approuvee, le pole approbateur est le pole presentable"
+pillok,PILLOK,investiguer,sensible litterature,4,ordinal,,False,[HYPOTHESE],"contraception pour les 14 a 16 ans : pole normatif contesté, aucun pole retenu"
+xmarsex,XMARSEX,sensible,sensible litterature,4,ordinal,always wrong,True,[PROBABLE],Tourangeau et Yan 2007 (corpus 04-03) : les items de conduite sexuelle sont sur declares du cote de la norme ; 'always wrong' est le pole normatif
+homosex,HOMOSEX,temoin,sensible litterature,4,ordinal,not wrong at all,True,[PROBABLE],"Coffman, Coffman et Ericson 2017 (corpus 04-21) : l'hostilite envers les gays est sous declaree en question directe, donc 'not wrong at all' est le pole declare en exces"
+marhomo,MARHOMO,temoin,sensible litterature,5,ordinal,strongly agree,True,[PROBABLE],"meme source ; reserve : Lax, Phillips et Stollwerk 2016 (04-22) ne trouvent aucun ecart de mode sur le mariage entre personnes de meme sexe"
+discaff,DISCAFF,temoin,sensible litterature,3,ordinal,,False,[HYPOTHESE],"perception de discrimination inverse, pole contesté"
+abdefect,ABDEFECT,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+abnomore,ABNOMORE,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+abhlth,ABHLTH,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+abpoor,ABPOOR,investiguer,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+abrape,ABRAPE,investiguer,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+absingle,ABSINGLE,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+abany,ABANY,investiguer,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+letdie1,LETDIE1,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+suicide1,SUICIDE1,investiguer,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+suicide2,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+suicide3,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+suicide4,SUICIDE4,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+pornlaw,PORNLAW,temoin,sensible litterature,3,ordinal,there should be laws against the distribution of pornography whatever the age,True,[HYPOTHESE],la pornographie est stigmatisee ; le pole restrictif est le pole presentable
+fair,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+helpful,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+trust,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+tax,,non teste,temoin litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+vote16,VOTE16,sensible,sensible litterature,3,nominal,voted,True,[PROBABLE],"Ansolabehere et Hersh 2012 (corpus 04-20) : 15,8 points d'ecart au registre, 52 pour cent des non votants declarent avoir vote. Contradiction assumee : NORC mesure un vote declare plus eleve sur le web, donc sans enqueteur"
+pres16,PRES16,temoin,sensible litterature,4,nominal,,False,[CONFIRME],"aucun pole : Enns, Lagodny et Schuldt 2017 (corpus 04-30) et AAPOR 2020 (04-31) ecartent l'electeur qui se cache comme explication"
+if16who,IF16WHO,investiguer,sensible litterature,3,nominal,,False,[HYPOTHESE],"choix de candidat, pas de pole desirable"
+news,NEWS,investiguer,temoin litterature,5,ordinal,every day,True,[PROBABLE],la consommation d'information est sur declaree ; l'ordre va de 'every day' a 'never'
+jew,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+relig16*,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+jew16*,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+attend,ATTEND,sensible,sensible litterature,9,ordinal,more than once a week,True,[CONFIRME],NORC : ATTEND chute nettement sur le web ; Presser et Stinson 1998 (corpus 04-13) : un tiers de pratique hebdomadaire en moins sans enqueteur
+pray,PRAY,investiguer,sensible litterature,6,ordinal,several times a day,True,[CONFIRME],"NORC : PRAY chute sur le web ; modalites listees de 'plusieurs fois par jour' a 'jamais', donc la desirabilite decroit dans l'ordre"
+postlife,,non teste,sensible litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+bible,,non teste,sensible litterature,3,ordinal,,False,[HYPOTHESE],pole non defini
+reborn,REBORN,investiguer,sensible litterature,3,nominal,yes,True,[CONFIRME],NORC : REBORN chute sur le web
+savesoul,SAVESOUL,investiguer,sensible litterature,2,nominal,yes,True,[CONFIRME],NORC : SAVESOUL chute sur le web
+granborn,,non teste,temoin litterature,5,ordinal,,False,[HYPOTHESE],pole non defini
+uscitzn*,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+fucitzn,,non teste,temoin litterature,5,nominal,,False,[HYPOTHESE],pole non defini
+mnthsusa,,non teste,temoin litterature,6,nominal,,False,[HYPOTHESE],pole non defini
+income,,non teste,sensible litterature,12,ordinal,$25000 or more,True,[PROBABLE],Tourangeau et Yan 2007 : le revenu est un item sensible classique. Item non teste par NORC
+othlang,OTHLANG,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+health,HEALTH,temoin,temoin litterature,4,ordinal,excellent,True,[PROBABLE],idem
+compuse*,COMPUSE,temoin,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+webmob,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+xmovie,,non teste,sensible litterature,2,nominal,no,True,[PROBABLE],Tourangeau et Yan 2007 : conduite sexuelle sous declaree ; 'non' est le pole presentable. Item non teste par NORC
+usewww*,,non teste,temoin litterature,2,nominal,,False,[HYPOTHESE],pole non defini
+life,LIFE,temoin,temoin litterature,3,ordinal,exciting,True,[PROBABLE],idem
+richwork,RICHWORK,temoin,temoin litterature,2,nominal,continue to work,True,[HYPOTHESE],la norme de travail est le pole presentable

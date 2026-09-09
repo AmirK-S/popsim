@@ -1,0 +1,6 @@
+test,gauche,centre,droite,ecart,ic_bas,ic_haut,p,p_holm
+"S1 patrons distincts, droite moins gauche",238.880000,266.770000,269.025000,30.145000,26.538625,33.961000,0.000999,0.004995
+S2 part de variance de la premiere composante (droite moins gauche),0.113465,0.087360,0.101385,-0.012080,-0.013002,-0.011107,0.000999,0.004995
+S3 nombre de sous groupes retenu (droite moins gauche),2.000000,2.000000,2.000000,0.000000,0.000000,0.000000,1.000000,1.000000
+S4 correlation economique / social (droite moins gauche),0.446999,0.134496,0.310987,-0.136012,-0.262903,-0.003288,0.001998,0.004995
+"S1 bis patrons distincts sur Twin, droite moins gauche",507.880000,514.880000,512.680000,4.800000,2.404875,7.250250,0.000999,0.004995

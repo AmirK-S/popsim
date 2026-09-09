@@ -1,0 +1,25 @@
+condition,mesure,ratio_inter,inter_ic_bas,inter_ic_haut,ratio_intra,intra_ic_bas,intra_ic_haut,produit,ratio_dispersion_globale
+humains vague 1,entropie,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vague 2,entropie,1.0034,0.9706,1.0372,1.0043,1.0001,1.0087,1.0077,1.0043
+agents composite,entropie,1.7529,1.6795,1.8316,0.8846,0.8799,0.8891,1.5506,0.9041
+agents entretien (v3),entropie,2.1559,2.0386,2.2845,0.8517,0.8459,0.8573,1.8362,0.8811
+agents enquete,entropie,1.8241,1.7383,1.9126,0.8219,0.8160,0.8274,1.4992,0.8444
+agents persona (v7),entropie,0.4372,0.3626,0.5133,0.6666,0.6527,0.6800,0.2914,0.6614
+agents demographiques (v6),entropie,0.8548,0.7715,0.9432,0.6373,0.6293,0.6451,0.5448,0.6422
+agents demographiques (v8),entropie,5.9072,5.4951,6.3790,0.6839,0.6761,0.6912,4.0398,0.8014
+humains vague 1,gini_simpson,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vague 2,gini_simpson,1.0106,0.9774,1.0431,1.0030,0.9992,1.0069,1.0136,1.0032
+agents composite,gini_simpson,1.7918,1.7220,1.8694,0.8962,0.8911,0.9009,1.6057,0.9171
+agents entretien (v3),gini_simpson,2.2116,2.0835,2.3440,0.8500,0.8437,0.8562,1.8800,0.8819
+agents enquete,gini_simpson,1.8907,1.8048,1.9780,0.8463,0.8396,0.8525,1.6000,0.8707
+agents persona (v7),gini_simpson,0.3388,0.2853,0.3958,0.6569,0.6427,0.6707,0.2225,0.6494
+agents demographiques (v6),gini_simpson,0.7954,0.7122,0.8881,0.6430,0.6344,0.6518,0.5115,0.6466
+agents demographiques (v8),gini_simpson,5.9284,5.5216,6.4109,0.7098,0.7009,0.7179,4.2081,0.8320
+humains vague 1,variance_ordinale,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vague 2,variance_ordinale,1.0137,0.9703,1.0566,0.9894,0.9795,0.9997,1.0030,0.9904
+agents composite,variance_ordinale,2.0553,1.9398,2.1799,0.8605,0.8483,0.8734,1.7686,0.9071
+agents entretien (v3),variance_ordinale,2.7461,2.5407,2.9762,0.8899,0.8754,0.9045,2.4438,0.9623
+agents enquete,variance_ordinale,2.1494,2.0151,2.2879,0.8274,0.8138,0.8407,1.7785,0.8789
+agents persona (v7),variance_ordinale,0.2220,0.1729,0.2814,0.5520,0.5291,0.5750,0.1225,0.5391
+agents demographiques (v6),variance_ordinale,0.4989,0.4316,0.5692,0.5024,0.4911,0.5140,0.2506,0.5022
+agents demographiques (v8),variance_ordinale,5.9157,5.4277,6.5601,0.7495,0.7266,0.7716,4.4337,0.9508

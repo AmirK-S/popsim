@@ -1,0 +1,49 @@
+condition,axe,silhouette,ic_bas,ic_haut
+humains vague 1,gender,0.0097,0.0072,0.0127
+humains vague 1,race,0.0059,-0.0015,0.0134
+humains vague 1,political_ideology,-0.0202,-0.0240,-0.0166
+humains vague 1,age,-0.0212,-0.0290,-0.0150
+humains vague 1,education,-0.0074,-0.0132,-0.0032
+humains vague 1,profil croise,-0.0255,-0.0351,-0.0184
+humains vague 2,gender,0.0098,0.0073,0.0129
+humains vague 2,race,0.0066,-0.0012,0.0140
+humains vague 2,political_ideology,-0.0213,-0.0258,-0.0173
+humains vague 2,age,-0.0201,-0.0285,-0.0133
+humains vague 2,education,-0.0084,-0.0142,-0.0038
+humains vague 2,profil croise,-0.0264,-0.0362,-0.0193
+agents composite,gender,0.0143,0.0091,0.0206
+agents composite,race,0.0040,-0.0060,0.0132
+agents composite,political_ideology,-0.0325,-0.0384,-0.0270
+agents composite,age,-0.0378,-0.0525,-0.0265
+agents composite,education,-0.0124,-0.0220,-0.0057
+agents composite,profil croise,-0.0442,-0.0581,-0.0328
+agents entretien (v3),gender,0.0163,0.0103,0.0245
+agents entretien (v3),race,-0.0159,-0.0252,-0.0075
+agents entretien (v3),political_ideology,-0.0442,-0.0518,-0.0368
+agents entretien (v3),age,-0.0482,-0.0634,-0.0360
+agents entretien (v3),education,-0.0147,-0.0265,-0.0068
+agents entretien (v3),profil croise,-0.0517,-0.0641,-0.0412
+agents enquete,gender,0.0115,0.0057,0.0187
+agents enquete,race,-0.0118,-0.0233,-0.0000
+agents enquete,political_ideology,-0.0409,-0.0486,-0.0339
+agents enquete,age,-0.0563,-0.0699,-0.0443
+agents enquete,education,-0.0176,-0.0327,-0.0079
+agents enquete,profil croise,-0.0583,-0.0757,-0.0448
+agents persona (v7),gender,0.0171,0.0122,0.0233
+agents persona (v7),race,-0.0224,-0.0432,-0.0012
+agents persona (v7),political_ideology,-0.0355,-0.0479,-0.0262
+agents persona (v7),age,-0.0388,-0.0542,-0.0273
+agents persona (v7),education,-0.0209,-0.0481,-0.0065
+agents persona (v7),profil croise,-0.0787,-0.1060,-0.0587
+agents demographiques (v6),gender,0.0239,0.0183,0.0311
+agents demographiques (v6),race,-0.0321,-0.0427,-0.0198
+agents demographiques (v6),political_ideology,-0.0624,-0.0746,-0.0513
+agents demographiques (v6),age,-0.0806,-0.0928,-0.0687
+agents demographiques (v6),education,-0.0011,-0.0112,0.0068
+agents demographiques (v6),profil croise,-0.0906,-0.1135,-0.0726
+agents demographiques (v8),gender,0.0140,0.0056,0.0263
+agents demographiques (v8),race,-0.0141,-0.0317,0.0005
+agents demographiques (v8),political_ideology,0.0785,0.0625,0.0945
+agents demographiques (v8),age,-0.0281,-0.0457,-0.0131
+agents demographiques (v8),education,-0.0556,-0.1073,-0.0186
+agents demographiques (v8),profil croise,-0.0320,-0.0528,-0.0174

@@ -1,0 +1,41 @@
+condition,axe_transport,bloc,lambda_retenu,ratio_inter_calibration_avant,ratio_inter_calibration_apres
+agents composite,political_ideology,0,0.7,2.1382,0.9271
+agents composite,political_ideology,1,0.7,2.0837,0.9049
+agents composite,political_ideology,2,0.7,2.1267,0.9225
+agents composite,political_ideology,3,0.7,2.1266,0.9242
+agents composite,political_ideology,4,0.7,2.1777,0.9449
+agents composite,profil croise,0,0.8,1.8852,1.1358
+agents composite,profil croise,1,0.8,1.8811,1.1303
+agents composite,profil croise,2,0.8,1.8910,1.1397
+agents composite,profil croise,3,0.7,1.9036,0.8521
+agents composite,profil croise,4,0.8,1.9142,1.1519
+agents enquete,political_ideology,0,0.7,2.5377,1.1033
+agents enquete,political_ideology,1,0.7,2.4035,1.0447
+agents enquete,political_ideology,2,0.7,2.5078,1.0931
+agents enquete,political_ideology,3,0.7,2.4916,1.0815
+agents enquete,political_ideology,4,0.7,2.6817,1.1667
+agents enquete,profil croise,0,0.7,2.0767,0.9294
+agents enquete,profil croise,1,0.7,1.9987,0.8918
+agents enquete,profil croise,2,0.7,2.0275,0.9073
+agents enquete,profil croise,3,0.7,2.0539,0.9166
+agents enquete,profil croise,4,0.7,2.1592,0.9591
+agents entretien (v3),political_ideology,0,0.6,2.7967,0.8541
+agents entretien (v3),political_ideology,1,0.6,2.7038,0.8270
+agents entretien (v3),political_ideology,2,0.6,2.8601,0.8752
+agents entretien (v3),political_ideology,3,0.7,2.6780,1.1672
+agents entretien (v3),political_ideology,4,0.6,2.8947,0.8817
+agents entretien (v3),profil croise,0,0.7,2.4443,1.0880
+agents entretien (v3),profil croise,1,0.7,2.4162,1.0822
+agents entretien (v3),profil croise,2,0.7,2.4686,1.1008
+agents entretien (v3),profil croise,3,0.7,2.3642,1.0521
+agents entretien (v3),profil croise,4,0.7,2.5014,1.1149
+agents demographiques (v8),political_ideology,0,0.4,8.2036,1.0778
+agents demographiques (v8),political_ideology,1,0.4,8.0580,1.0484
+agents demographiques (v8),political_ideology,2,0.4,8.6224,1.1262
+agents demographiques (v8),political_ideology,3,0.4,7.8467,1.0236
+agents demographiques (v8),political_ideology,4,0.4,8.9512,1.1691
+agents demographiques (v8),profil croise,0,0.4,6.1147,1.0386
+agents demographiques (v8),profil croise,1,0.4,6.2441,1.0699
+agents demographiques (v8),profil croise,2,0.4,6.3662,1.0847
+agents demographiques (v8),profil croise,3,0.4,6.0388,1.0317
+agents demographiques (v8),profil croise,4,0.4,6.5574,1.1189

@@ -1,0 +1,7 @@
+condition_a,condition_b,personnes_communes,quantite,difference_a_moins_b,ic_bas,ic_haut,p_bootstrap,cellules_rares_stables
+C3F gpt-oss-20b,C3 gpt-oss-20b,95,exactitude,-0.055898,-0.071325,-0.041561,0.000250,
+C3F gpt-oss-20b,C3 gpt-oss-20b,95,rappel des raretes stables,-0.239437,-0.354849,-0.125000,0.000250,71.000000
+C3F gpt-oss-20b,C3F Qwen3-4B,60,exactitude,-0.009195,-0.027019,0.008908,0.317000,
+C3F gpt-oss-20b,C3F Qwen3-4B,60,rappel des raretes stables,-0.096774,-0.269318,0.037037,0.247000,31.000000
+C3 gpt-oss-20b,C3F Qwen3-4B,60,exactitude,0.039943,0.015517,0.064080,0.000500,
+C3 gpt-oss-20b,C3F Qwen3-4B,60,rappel des raretes stables,0.161290,-0.090909,0.343750,0.258000,31.000000

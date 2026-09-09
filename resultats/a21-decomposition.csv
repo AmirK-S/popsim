@@ -1,0 +1,61 @@
+population,n,condition,mesure,ratio_inter,p_sup,ratio_intra,ratio_total
+150 d'origine,150,humains vague 1,entropie,1.0000,0.0000,1.0000,1.0000
+150 d'origine,150,humains vague 1,gini_simpson,1.0000,0.0000,1.0000,1.0000
+150 d'origine,150,humains vague 2,entropie,1.0457,0.7370,0.9975,0.9986
+150 d'origine,150,humains vague 2,gini_simpson,0.9831,0.3820,0.9989,0.9986
+150 d'origine,150,C2,entropie,4.7689,1.0000,0.5563,0.6533
+150 d'origine,150,C2,gini_simpson,4.3289,1.0000,0.5680,0.6612
+150 d'origine,150,agents composite,entropie,1.6469,1.0000,0.8719,0.8897
+150 d'origine,150,agents composite,gini_simpson,1.6065,1.0000,0.8892,0.9069
+150 d'origine,150,agents entretien (v3),entropie,2.0762,1.0000,0.8312,0.8599
+150 d'origine,150,agents entretien (v3),gini_simpson,1.9517,1.0000,0.8341,0.8618
+150 d'origine,150,agents enquete,entropie,1.7421,1.0000,0.8305,0.8515
+150 d'origine,150,agents enquete,gini_simpson,1.7161,1.0000,0.8531,0.8745
+150 d'origine,150,agents demographiques (v6),entropie,0.8906,0.2740,0.6200,0.6262
+150 d'origine,150,agents demographiques (v6),gini_simpson,0.8153,0.1460,0.6263,0.6309
+150 d'origine,150,agents v7,entropie,0.4727,0.0080,0.6358,0.6320
+150 d'origine,150,agents v7,gini_simpson,0.3468,0.0000,0.6275,0.6206
+150 d'origine,150,agents v8,entropie,5.4807,1.0000,0.6742,0.7848
+150 d'origine,150,agents v8,gini_simpson,5.1940,1.0000,0.6892,0.8008
+150 d'origine,150,C2 distribution,entropie,4.5792,1.0000,0.5754,0.6675
+150 d'origine,150,C2 distribution,gini_simpson,4.1993,1.0000,0.5843,0.6738
+150 d'extension,150,humains vague 1,entropie,1.0000,0.0000,1.0000,1.0000
+150 d'extension,150,humains vague 1,gini_simpson,1.0000,0.0000,1.0000,1.0000
+150 d'extension,150,humains vague 2,entropie,0.9387,0.2000,1.0059,1.0043
+150 d'extension,150,humains vague 2,gini_simpson,0.9840,0.4070,1.0036,1.0031
+150 d'extension,150,C2,entropie,4.6903,1.0000,0.5797,0.6776
+150 d'extension,150,C2,gini_simpson,4.8128,1.0000,0.5916,0.6901
+150 d'extension,150,agents composite,entropie,1.8658,1.0000,0.8723,0.8960
+150 d'extension,150,agents composite,gini_simpson,1.9359,1.0000,0.8854,0.9099
+150 d'extension,150,agents entretien (v3),entropie,2.3431,1.0000,0.8286,0.8647
+150 d'extension,150,agents entretien (v3),gini_simpson,2.4793,1.0000,0.8289,0.8674
+150 d'extension,150,agents enquete,entropie,1.9022,1.0000,0.8351,0.8605
+150 d'extension,150,agents enquete,gini_simpson,2.0342,1.0000,0.8542,0.8817
+150 d'extension,150,agents demographiques (v6),entropie,0.6249,0.0060,0.6444,0.6439
+150 d'extension,150,agents demographiques (v6),gini_simpson,0.6433,0.0140,0.6477,0.6476
+150 d'extension,150,agents v7,entropie,0.5039,0.0050,0.6430,0.6397
+150 d'extension,150,agents v7,gini_simpson,0.4678,0.0000,0.6310,0.6272
+150 d'extension,150,agents v8,entropie,6.0356,1.0000,0.6745,0.8022
+150 d'extension,150,agents v8,gini_simpson,6.4122,1.0000,0.6917,0.8251
+150 d'extension,150,C2 distribution,entropie,4.5274,1.0000,0.6002,0.6938
+150 d'extension,150,C2 distribution,gini_simpson,4.7146,1.0000,0.6089,0.7046
+300 union,300,humains vague 1,entropie,1.0000,0.0000,1.0000,1.0000
+300 union,300,humains vague 1,gini_simpson,1.0000,0.0000,1.0000,1.0000
+300 union,300,humains vague 2,entropie,1.0191,0.6730,1.0012,1.0016
+300 union,300,humains vague 2,gini_simpson,1.0038,0.5500,1.0008,1.0009
+300 union,300,C2,entropie,4.7971,1.0000,0.5668,0.6648
+300 union,300,C2,gini_simpson,4.5336,1.0000,0.5796,0.6749
+300 union,300,agents composite,entropie,1.8023,1.0000,0.8712,0.8928
+300 union,300,agents composite,gini_simpson,1.8104,1.0000,0.8855,0.9078
+300 union,300,agents entretien (v3),entropie,2.2518,1.0000,0.8304,0.8633
+300 union,300,agents entretien (v3),gini_simpson,2.2369,1.0000,0.8309,0.8648
+300 union,300,agents enquete,entropie,1.8469,1.0000,0.8331,0.8565
+300 union,300,agents enquete,gini_simpson,1.8906,1.0000,0.8531,0.8780
+300 union,300,agents demographiques (v6),entropie,0.7770,0.0130,0.6340,0.6374
+300 union,300,agents demographiques (v6),gini_simpson,0.7153,0.0020,0.6374,0.6393
+300 union,300,agents v7,entropie,0.4340,0.0000,0.6437,0.6389
+300 union,300,agents v7,gini_simpson,0.3405,0.0000,0.6308,0.6238
+300 union,300,agents v8,entropie,5.8225,1.0000,0.6735,0.7927
+300 union,300,agents v8,gini_simpson,5.7632,1.0000,0.6904,0.8126
+300 union,300,C2 distribution,entropie,4.6442,1.0000,0.5867,0.6806
+300 union,300,C2 distribution,gini_simpson,4.4148,1.0000,0.5942,0.6862

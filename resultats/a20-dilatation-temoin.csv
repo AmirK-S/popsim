@@ -1,0 +1,17 @@
+condition,axe,mu_median,mesure,ratio_inter_avant,ratio_inter_apres,ratio_intra_avant,ratio_intra_apres,ratio_total_avant,ratio_total_apres,exactitude_apres,delta_exactitude,delta_ic_bas,delta_ic_haut,n_change,n_reparation,n_casse
+agents composite,political_ideology,0.8,entropie,2.1309,1.1482,0.8336,1.0278,0.8933,1.0334,0.6533,-0.0307,-0.0324,-0.0290,11198,2149,6954
+agents composite,political_ideology,0.8,gini_simpson,2.1543,1.3291,0.8432,1.0203,0.9087,1.0357,0.6533,-0.0307,-0.0324,-0.0290,11198,2149,6954
+agents composite,profil croise,0.8,entropie,1.9528,0.9939,0.8352,1.0280,0.8933,1.0262,0.6543,-0.0297,-0.0315,-0.0280,10560,1956,6612
+agents composite,profil croise,0.8,gini_simpson,1.9933,1.2161,0.8466,1.0180,0.9087,1.0288,0.6543,-0.0297,-0.0315,-0.0280,10560,1956,6612
+agents enquete,political_ideology,0.8,entropie,2.5245,1.3575,0.7778,0.9899,0.8583,1.0068,0.6259,-0.0251,-0.0266,-0.0236,11732,2692,6629
+agents enquete,political_ideology,0.8,gini_simpson,2.5156,1.5567,0.7922,0.9834,0.8783,1.0120,0.6259,-0.0251,-0.0266,-0.0236,11732,2692,6629
+agents enquete,profil croise,0.8,entropie,2.1242,1.0838,0.7888,0.9944,0.8583,0.9991,0.6270,-0.0240,-0.0257,-0.0224,10897,2464,6227
+agents enquete,profil croise,0.8,gini_simpson,2.1714,1.3322,0.8042,0.9858,0.8783,1.0045,0.6270,-0.0240,-0.0257,-0.0224,10897,2464,6227
+agents entretien (v3),political_ideology,0.8,entropie,2.7881,1.4585,0.7720,1.0102,0.8649,1.0308,0.6194,-0.0371,-0.0391,-0.0353,13353,2588,8410
+agents entretien (v3),political_ideology,0.8,gini_simpson,2.8215,1.6903,0.7642,0.9891,0.8669,1.0241,0.6194,-0.0371,-0.0391,-0.0353,13353,2588,8410
+agents entretien (v3),profil croise,0.8,entropie,2.5293,1.2922,0.7736,1.0076,0.8649,1.0224,0.6211,-0.0354,-0.0374,-0.0334,12630,2442,7997
+agents entretien (v3),profil croise,0.8,gini_simpson,2.6149,1.5622,0.7668,0.9841,0.8669,1.0154,0.6211,-0.0354,-0.0374,-0.0334,12630,2442,7997
+agents demographiques (v8),political_ideology,0.6,entropie,8.3786,2.3009,0.4364,0.9821,0.8022,1.0428,0.4888,-0.0704,-0.0737,-0.0669,30989,6536,17567
+agents demographiques (v8),political_ideology,0.6,gini_simpson,8.1184,2.6805,0.4424,0.9945,0.8256,1.0787,0.4888,-0.0704,-0.0737,-0.0669,30989,6536,17567
+agents demographiques (v8),profil croise,0.6,entropie,6.6375,2.0018,0.4821,0.9813,0.8022,1.0343,0.4962,-0.0630,-0.0663,-0.0597,28215,6011,15886
+agents demographiques (v8),profil croise,0.6,gini_simpson,6.5305,2.3380,0.4989,0.9958,0.8256,1.0685,0.4962,-0.0630,-0.0663,-0.0597,28215,6011,15886

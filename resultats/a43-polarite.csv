@@ -1,0 +1,6 @@
+var_personne,var_item,var_residu,var_interaction,var_transitoire,part_personne,part_item,part_residu,part_interaction,part_transitoire,rapport_interaction_personne,borne_superieure,n_cellules,orientation,estimee_sur,decomposee_sur,n_items_retournes
+0.002486,0.026449,0.084814,0.067276,0.035075,0.018938,0.201462,,0.512435,0.267166,27.058972,False,74692,"aucune, ordre du fichier",,les 1 052,0
+0.007856,0.026770,0.078199,0.060218,0.035963,0.060060,0.204654,,0.460358,0.274928,7.664971,False,37346,alignee sur la moyenne des autres items,moitie A,moitie B,19
+0.002568,0.026449,0.083487,0.065506,0.035963,0.019684,0.202695,,0.502016,0.275606,25.504203,False,37346,"aucune, ordre du fichier",,moitie B,0
+0.007628,0.026496,0.080904,0.063809,0.034188,0.057734,0.200542,,0.482959,0.258765,8.365283,False,37346,alignee sur la moyenne des autres items,moitie B,moitie A,19
+0.002404,0.026464,0.086127,0.069033,0.034188,0.018203,0.200347,,0.522622,0.258828,28.710572,False,37346,"aucune, ordre du fichier",,moitie A,0

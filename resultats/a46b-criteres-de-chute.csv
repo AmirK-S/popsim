@@ -1,0 +1,11 @@
+critere,cle_modele,modele,valeur,seuil,declenche
+1. plus de 25 % de rejets apres relance,q4,Qwen3-4B,1/40 = 2.5 %,25 %,False
+1. plus de 25 % de rejets apres relance,oss20,gpt-oss-20b,0/40 = 0.0 %,25 %,False
+1. plus de 25 % de rejets apres relance,q30,Qwen3-30B-A3B,0/40 = 0.0 %,25 %,False
+2. une valeur constante dans plus de 75 % des cellules,q4,Qwen3-4B,valeur modale 60 dans 5/32 = 15.6 % ; 18 valeurs distinctes sur 32,75 %,False
+2. une valeur constante dans plus de 75 % des cellules,oss20,gpt-oss-20b,valeur modale 0 dans 16/32 = 50.0 % ; 3 valeurs distinctes sur 32,75 %,False
+2. une valeur constante dans plus de 75 % des cellules,q30,Qwen3-30B-A3B,valeur modale 15 dans 10/32 = 31.2 % ; 10 valeurs distinctes sur 32,75 %,False
+3. taux de base identique a la valeur du camp sur plus de 75 % des groupes,q4,Qwen3-4B,0/7 groupes,75 %,False
+3. taux de base identique a la valeur du camp sur plus de 75 % des groupes,oss20,gpt-oss-20b,1/8 groupes,75 %,False
+3. taux de base identique a la valeur du camp sur plus de 75 % des groupes,q30,Qwen3-30B-A3B,0/8 groupes,75 %,False
+4. la realite du GSS ne se recalcule pas sur les effectifs de camp de r1,,,ideologie/gauche n=417; ideologie/centre n=303; ideologie/droite n=332; ideologie/ensemble n=1052; parti/gauche n=496; parti/centre n=164; parti/droite n=367; parti/ensemble n=1052,417/303/332 et 496/164/367,False

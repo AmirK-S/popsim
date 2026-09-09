@@ -1,0 +1,39 @@
+controle,objet,valeur,seuil,passe
+part de cellules hors nomenclature,humains vague 1,0.0,0.005,True
+part de cellules hors nomenclature,agents v8,0.000702,0.005,True
+cellules perdues par l'intersection des masques,agents v8,0.00171,0.005,True
+part de cellules hors nomenclature,agents demographiques (v6),0.00044,0.005,True
+cellules perdues par l'intersection des masques,agents demographiques (v6),0.002443,0.005,True
+part de cellules hors nomenclature,agents composite,0.000427,0.005,True
+cellules perdues par l'intersection des masques,agents composite,0.000427,0.005,True
+part de cellules hors nomenclature,C2,0.0,0.005,True
+cellules perdues par l'intersection des masques,C2,0.0,0.005,True
+part de cellules hors nomenclature,C3,0.0,0.005,True
+cellules perdues par l'intersection des masques,C3,0.0,0.005,True
+part de cellules hors nomenclature,PMM k=10,0.0,0.005,True
+cellules perdues par l'intersection des masques,PMM k=10,0.0,0.005,True
+part de cellules hors nomenclature,E2 regression contexte tirage,0.0,0.005,True
+cellules perdues par l'intersection des masques,E2 regression contexte tirage,0.0,0.005,True
+part de cellules hors nomenclature,IM m=10 mode des m,0.0,0.005,True
+cellules perdues par l'intersection des masques,IM m=10 mode des m,0.0,0.005,True
+part de cellules hors nomenclature,humains vague 2,0.0,0.005,True
+cellules perdues par l'intersection des masques,humains vague 2,0.0,0.005,True
+"taux de repli du generateur nul, S_ideo",humains vague 1,0.0,0.0,True
+le flux a taux 0 egale la population humaine,toutes sources,0.0,0,True
+"controle negatif, humains melanges a eux memes",cinq taux,0.0,0,True
+biais du bootstrap avec remise sur la statistique B,1 000 tirages,0.005608,"publie, non bloquant",True
+"validite de la mise a l'echelle du sous echantillonnage, A",K = 60 populations nulles independantes,0.9347,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle du sous echantillonnage, B",K = 60 populations nulles independantes,1.0527,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle du sous echantillonnage, C",K = 60 populations nulles independantes,0.8924,"entre 0,7 et 1,4",True
+"reproduction de a44, tableau 3, deficit de patrons",agents v8,0.00113,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",agents v8,1e-05,0.005,True
+"reproduction de a44, tableau 3, deficit de patrons",agents demographiques (v6),0.00206,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",agents demographiques (v6),1e-05,0.005,True
+"reproduction de a44, tableau 3, deficit de patrons",agents composite,9e-05,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",agents composite,0.00011,0.005,True
+"reproduction de a44, tableau 3, deficit de patrons",C2,0.00053,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",C2,0.00044,0.005,True
+"reproduction de a44, tableau 3, deficit de patrons",C3,0.00023,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",C3,0.00014,0.005,True
+"reproduction de a44, tableau 3, deficit de patrons",PMM k=10,0.00037,0.005,True
+"reproduction de a44, tableau 4, exces de correlation",PMM k=10,1e-05,0.005,True

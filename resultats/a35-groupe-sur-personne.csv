@@ -1,0 +1,45 @@
+perimetre,methode,rapport_groupe_sur_personne
+1052,humains vague 2,0.561188
+1052,agents composite,1.621902
+1052,agents entretien (v3),3.651130
+1052,agents enquete,1.901756
+1052,agents demographiques (v6),1.091128
+1052,agents v7,2.870811
+1052,agents v8,7.369400
+1052,E1 regression contexte argmax,1.117093
+1052,B2 argmax,1.116778
+1052,IM m=10 mode des m,1.099934
+1052,B3 foret,8.178912
+1052,B1 argmax,5.280655
+1052,B0 mode,
+1052,E2 regression contexte tirage,1.491801
+1052,PMM k=5,1.253390
+1052,PMM k=10,1.249190
+1052,hot deck k=5 tirage,2.845566
+1052,hot deck k=10 tirage,4.322474
+1052,B2 tirage,4.329396
+1052,B1 tirage,
+1052,B0 tirage,
+150,humains vague 2,0.397702
+150,agents composite,0.750984
+150,agents entretien (v3),2.374618
+150,agents enquete,1.477295
+150,agents demographiques (v6),0.874935
+150,agents v7,1.104575
+150,agents v8,13.065373
+150,C2,4.446269
+150,C3,0.436247
+150,E1 regression contexte argmax,0.887041
+150,B2 argmax,1.071039
+150,IM m=10 mode des m,0.919379
+150,B3 foret,
+150,B1 argmax,15.023134
+150,B0 mode,
+150,E2 regression contexte tirage,1.768455
+150,PMM k=5,0.776628
+150,PMM k=10,1.128225
+150,hot deck k=5 tirage,2.687208
+150,hot deck k=10 tirage,2.166158
+150,B2 tirage,2.191709
+150,B1 tirage,
+150,B0 tirage,

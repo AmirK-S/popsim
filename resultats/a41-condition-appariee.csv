@@ -1,0 +1,61 @@
+condition,reference,decalage_applique,exactitude_condition,exactitude_reference,difference,ic_bas,ic_haut,avantage_survit,est_le_decalage_de_a8,decalage_de_bascule_point_estime,decalage_de_bascule_borne_basse
+agents composite,E1 famille retiree (argmax),0.000000,0.677527,0.664891,0.012686,0.007080,0.017980,True,False,0.012686,0.007080
+agents composite,E1 famille retiree (argmax),0.010000,0.667527,0.664891,0.002686,-0.002920,0.007980,False,False,0.012686,0.007080
+agents composite,E1 famille retiree (argmax),0.020000,0.657527,0.664891,-0.007314,-0.012920,-0.002020,False,False,0.012686,0.007080
+agents composite,E1 famille retiree (argmax),0.039280,0.638247,0.664891,-0.026594,-0.032200,-0.021300,False,True,0.012686,0.007080
+agents composite,E1 famille retiree (argmax),0.050000,0.627527,0.664891,-0.037314,-0.042920,-0.032020,False,False,0.012686,0.007080
+agents composite,B2 famille retiree (argmax),0.000000,0.677527,0.662105,0.015427,0.009882,0.020897,True,False,0.015427,0.009882
+agents composite,B2 famille retiree (argmax),0.010000,0.667527,0.662105,0.005427,-0.000118,0.010897,False,False,0.015427,0.009882
+agents composite,B2 famille retiree (argmax),0.020000,0.657527,0.662105,-0.004573,-0.010118,0.000897,False,False,0.015427,0.009882
+agents composite,B2 famille retiree (argmax),0.039280,0.638247,0.662105,-0.023853,-0.029398,-0.018383,False,True,0.015427,0.009882
+agents composite,B2 famille retiree (argmax),0.050000,0.627527,0.662105,-0.034573,-0.040118,-0.029103,False,False,0.015427,0.009882
+agents composite,"IM m=10 mode, famille retiree",0.000000,0.677527,0.650108,0.027417,0.021877,0.032779,True,False,0.027417,0.021877
+agents composite,"IM m=10 mode, famille retiree",0.010000,0.667527,0.650108,0.017417,0.011877,0.022779,True,False,0.027417,0.021877
+agents composite,"IM m=10 mode, famille retiree",0.020000,0.657527,0.650108,0.007417,0.001877,0.012779,True,False,0.027417,0.021877
+agents composite,"IM m=10 mode, famille retiree",0.039280,0.638247,0.650108,-0.011863,-0.017403,-0.006501,False,True,0.027417,0.021877
+agents composite,"IM m=10 mode, famille retiree",0.050000,0.627527,0.650108,-0.022583,-0.028123,-0.017221,False,False,0.027417,0.021877
+agents composite,PMM k=10 famille retiree,0.000000,0.677527,0.627950,0.049614,0.043939,0.054904,True,False,0.049614,0.043939
+agents composite,PMM k=10 famille retiree,0.010000,0.667527,0.627950,0.039614,0.033939,0.044904,True,False,0.049614,0.043939
+agents composite,PMM k=10 famille retiree,0.020000,0.657527,0.627950,0.029614,0.023939,0.034904,True,False,0.049614,0.043939
+agents composite,PMM k=10 famille retiree,0.039280,0.638247,0.627950,0.010334,0.004659,0.015624,True,True,0.049614,0.043939
+agents composite,PMM k=10 famille retiree,0.050000,0.627527,0.627950,-0.000386,-0.006061,0.004904,False,False,0.049614,0.043939
+agents enquete,E1 famille retiree (argmax),0.000000,0.671103,0.664891,0.006219,0.000737,0.011801,True,False,0.006219,0.000737
+agents enquete,E1 famille retiree (argmax),0.010000,0.661103,0.664891,-0.003781,-0.009263,0.001801,False,False,0.006219,0.000737
+agents enquete,E1 famille retiree (argmax),0.020000,0.651103,0.664891,-0.013781,-0.019263,-0.008199,False,False,0.006219,0.000737
+agents enquete,E1 famille retiree (argmax),0.039280,0.631823,0.664891,-0.033061,-0.038543,-0.027479,False,True,0.006219,0.000737
+agents enquete,E1 famille retiree (argmax),0.050000,0.621103,0.664891,-0.043781,-0.049263,-0.038199,False,False,0.006219,0.000737
+agents enquete,B2 famille retiree (argmax),0.000000,0.671103,0.662105,0.008960,0.002851,0.014865,True,False,0.008960,0.002851
+agents enquete,B2 famille retiree (argmax),0.010000,0.661103,0.662105,-0.001040,-0.007149,0.004865,False,False,0.008960,0.002851
+agents enquete,B2 famille retiree (argmax),0.020000,0.651103,0.662105,-0.011040,-0.017149,-0.005135,False,False,0.008960,0.002851
+agents enquete,B2 famille retiree (argmax),0.039280,0.631823,0.662105,-0.030320,-0.036429,-0.024415,False,True,0.008960,0.002851
+agents enquete,B2 famille retiree (argmax),0.050000,0.621103,0.662105,-0.041040,-0.047149,-0.035135,False,False,0.008960,0.002851
+agents enquete,"IM m=10 mode, famille retiree",0.000000,0.671103,0.650108,0.020949,0.015471,0.026436,True,False,0.020949,0.015471
+agents enquete,"IM m=10 mode, famille retiree",0.010000,0.661103,0.650108,0.010949,0.005471,0.016436,True,False,0.020949,0.015471
+agents enquete,"IM m=10 mode, famille retiree",0.020000,0.651103,0.650108,0.000949,-0.004529,0.006436,False,False,0.020949,0.015471
+agents enquete,"IM m=10 mode, famille retiree",0.039280,0.631823,0.650108,-0.018330,-0.023809,-0.012844,False,True,0.020949,0.015471
+agents enquete,"IM m=10 mode, famille retiree",0.050000,0.621103,0.650108,-0.029051,-0.034529,-0.023564,False,False,0.020949,0.015471
+agents enquete,PMM k=10 famille retiree,0.000000,0.671103,0.627950,0.043147,0.037646,0.049102,True,False,0.043147,0.037646
+agents enquete,PMM k=10 famille retiree,0.010000,0.661103,0.627950,0.033147,0.027646,0.039102,True,False,0.043147,0.037646
+agents enquete,PMM k=10 famille retiree,0.020000,0.651103,0.627950,0.023147,0.017646,0.029102,True,False,0.043147,0.037646
+agents enquete,PMM k=10 famille retiree,0.039280,0.631823,0.627950,0.003867,-0.001634,0.009822,False,True,0.043147,0.037646
+agents enquete,PMM k=10 famille retiree,0.050000,0.621103,0.627950,-0.006853,-0.012354,-0.000898,False,False,0.043147,0.037646
+agents entretien (v3),E1 famille retiree (argmax),0.000000,0.633572,0.664891,-0.031174,-0.036860,-0.025452,False,False,-0.031174,-0.036860
+agents entretien (v3),E1 famille retiree (argmax),0.010000,0.623572,0.664891,-0.041174,-0.046860,-0.035452,False,False,-0.031174,-0.036860
+agents entretien (v3),E1 famille retiree (argmax),0.020000,0.613572,0.664891,-0.051174,-0.056860,-0.045452,False,False,-0.031174,-0.036860
+agents entretien (v3),E1 famille retiree (argmax),0.039280,0.594292,0.664891,-0.070454,-0.076140,-0.064731,False,True,-0.031174,-0.036860
+agents entretien (v3),E1 famille retiree (argmax),0.050000,0.583572,0.664891,-0.081174,-0.086860,-0.075452,False,False,-0.031174,-0.036860
+agents entretien (v3),B2 famille retiree (argmax),0.000000,0.633572,0.662105,-0.028433,-0.034319,-0.022435,False,False,-0.028433,-0.034319
+agents entretien (v3),B2 famille retiree (argmax),0.010000,0.623572,0.662105,-0.038433,-0.044319,-0.032435,False,False,-0.028433,-0.034319
+agents entretien (v3),B2 famille retiree (argmax),0.020000,0.613572,0.662105,-0.048433,-0.054319,-0.042435,False,False,-0.028433,-0.034319
+agents entretien (v3),B2 famille retiree (argmax),0.039280,0.594292,0.662105,-0.067713,-0.073599,-0.061715,False,True,-0.028433,-0.034319
+agents entretien (v3),B2 famille retiree (argmax),0.050000,0.583572,0.662105,-0.078433,-0.084319,-0.072435,False,False,-0.028433,-0.034319
+agents entretien (v3),"IM m=10 mode, famille retiree",0.000000,0.633572,0.650108,-0.016444,-0.021929,-0.010963,False,False,-0.016444,-0.021929
+agents entretien (v3),"IM m=10 mode, famille retiree",0.010000,0.623572,0.650108,-0.026444,-0.031929,-0.020963,False,False,-0.016444,-0.021929
+agents entretien (v3),"IM m=10 mode, famille retiree",0.020000,0.613572,0.650108,-0.036444,-0.041929,-0.030963,False,False,-0.016444,-0.021929
+agents entretien (v3),"IM m=10 mode, famille retiree",0.039280,0.594292,0.650108,-0.055723,-0.061209,-0.050243,False,True,-0.016444,-0.021929
+agents entretien (v3),"IM m=10 mode, famille retiree",0.050000,0.583572,0.650108,-0.066444,-0.071929,-0.060963,False,False,-0.016444,-0.021929
+agents entretien (v3),PMM k=10 famille retiree,0.000000,0.633572,0.627950,0.005754,-0.000050,0.011342,False,False,0.005754,-0.000050
+agents entretien (v3),PMM k=10 famille retiree,0.010000,0.623572,0.627950,-0.004246,-0.010050,0.001342,False,False,0.005754,-0.000050
+agents entretien (v3),PMM k=10 famille retiree,0.020000,0.613572,0.627950,-0.014246,-0.020050,-0.008658,False,False,0.005754,-0.000050
+agents entretien (v3),PMM k=10 famille retiree,0.039280,0.594292,0.627950,-0.033526,-0.039329,-0.027938,False,True,0.005754,-0.000050
+agents entretien (v3),PMM k=10 famille retiree,0.050000,0.583572,0.627950,-0.044246,-0.050050,-0.038658,False,False,0.005754,-0.000050

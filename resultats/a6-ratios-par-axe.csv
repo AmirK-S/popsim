@@ -1,0 +1,659 @@
+jeu,condition,axe,mesure,ratio_inter,ratio_intra
+econ_games_main,humains vague 1,gender,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,gender,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,gender,variance_ordinale,1.0000,1.0000
+econ_games_main,humains vague 1,race,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,race,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,race,variance_ordinale,1.0000,1.0000
+econ_games_main,humains vague 1,political_ideology,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,political_ideology,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,political_ideology,variance_ordinale,1.0000,1.0000
+econ_games_main,humains vague 1,age,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,age,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,age,variance_ordinale,1.0000,1.0000
+econ_games_main,humains vague 1,education,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,education,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,profil croise,entropie,1.0000,1.0000
+econ_games_main,humains vague 1,profil croise,gini_simpson,1.0000,1.0000
+econ_games_main,humains vague 1,profil croise,variance_ordinale,1.0000,1.0000
+econ_games_main,humains vague 2,gender,entropie,0.9590,1.0082
+econ_games_main,humains vague 2,gender,gini_simpson,1.2056,1.0106
+econ_games_main,humains vague 2,gender,variance_ordinale,2.2999,1.0738
+econ_games_main,humains vague 2,race,entropie,1.9097,1.0047
+econ_games_main,humains vague 2,race,gini_simpson,1.7263,1.0078
+econ_games_main,humains vague 2,race,variance_ordinale,1.5585,1.0733
+econ_games_main,humains vague 2,political_ideology,entropie,1.8437,1.0051
+econ_games_main,humains vague 2,political_ideology,gini_simpson,1.6842,1.0088
+econ_games_main,humains vague 2,political_ideology,variance_ordinale,6.7165,1.0702
+econ_games_main,humains vague 2,age,entropie,1.0611,1.0080
+econ_games_main,humains vague 2,age,gini_simpson,1.0975,1.0107
+econ_games_main,humains vague 2,age,variance_ordinale,0.3868,1.0783
+econ_games_main,humains vague 2,education,entropie,2.0005,1.0065
+econ_games_main,humains vague 2,education,gini_simpson,1.7572,1.0092
+econ_games_main,humains vague 2,profil croise,entropie,1.7163,1.0016
+econ_games_main,humains vague 2,profil croise,gini_simpson,1.1131,1.0087
+econ_games_main,humains vague 2,profil croise,variance_ordinale,0.9779,1.0754
+econ_games_main,agents composite,gender,entropie,0.9885,0.7079
+econ_games_main,agents composite,gender,gini_simpson,1.2699,0.6762
+econ_games_main,agents composite,gender,variance_ordinale,1.2498,0.2821
+econ_games_main,agents composite,race,entropie,0.1685,0.7107
+econ_games_main,agents composite,race,gini_simpson,-0.0240,0.6807
+econ_games_main,agents composite,race,variance_ordinale,0.1192,0.2843
+econ_games_main,agents composite,political_ideology,entropie,6.6130,0.6879
+econ_games_main,agents composite,political_ideology,gini_simpson,5.5964,0.6630
+econ_games_main,agents composite,political_ideology,variance_ordinale,20.6630,0.2647
+econ_games_main,agents composite,age,entropie,0.7514,0.7081
+econ_games_main,agents composite,age,gini_simpson,0.5527,0.6778
+econ_games_main,agents composite,age,variance_ordinale,0.0564,0.2844
+econ_games_main,agents composite,education,entropie,5.4373,0.7019
+econ_games_main,agents composite,education,gini_simpson,2.7194,0.6735
+econ_games_main,agents composite,profil croise,entropie,3.8523,0.6818
+econ_games_main,agents composite,profil croise,gini_simpson,1.8943,0.6648
+econ_games_main,agents composite,profil croise,variance_ordinale,1.4908,0.2668
+econ_games_main,agents enquete,gender,entropie,1.0176,0.7812
+econ_games_main,agents enquete,gender,gini_simpson,1.3892,0.7606
+econ_games_main,agents enquete,gender,variance_ordinale,1.1224,0.3828
+econ_games_main,agents enquete,race,entropie,0.5904,0.7827
+econ_games_main,agents enquete,race,gini_simpson,0.3182,0.7639
+econ_games_main,agents enquete,race,variance_ordinale,0.1894,0.3847
+econ_games_main,agents enquete,political_ideology,entropie,16.2770,0.7285
+econ_games_main,agents enquete,political_ideology,gini_simpson,14.5220,0.7214
+econ_games_main,agents enquete,political_ideology,variance_ordinale,45.3718,0.3421
+econ_games_main,agents enquete,age,entropie,0.3415,0.7827
+econ_games_main,agents enquete,age,gini_simpson,0.8366,0.7615
+econ_games_main,agents enquete,age,variance_ordinale,0.4854,0.3831
+econ_games_main,agents enquete,education,entropie,4.3221,0.7767
+econ_games_main,agents enquete,education,gini_simpson,3.2293,0.7570
+econ_games_main,agents enquete,profil croise,entropie,7.0413,0.7330
+econ_games_main,agents enquete,profil croise,gini_simpson,3.7751,0.7310
+econ_games_main,agents enquete,profil croise,variance_ordinale,2.8377,0.3501
+econ_games_main,agents entretien (v6),gender,entropie,0.3760,0.7296
+econ_games_main,agents entretien (v6),gender,gini_simpson,0.6659,0.6937
+econ_games_main,agents entretien (v6),gender,variance_ordinale,0.3288,0.3189
+econ_games_main,agents entretien (v6),race,entropie,0.3733,0.7296
+econ_games_main,agents entretien (v6),race,gini_simpson,0.0770,0.6962
+econ_games_main,agents entretien (v6),race,variance_ordinale,0.1768,0.3194
+econ_games_main,agents entretien (v6),political_ideology,entropie,4.7517,0.7139
+econ_games_main,agents entretien (v6),political_ideology,gini_simpson,4.9152,0.6808
+econ_games_main,agents entretien (v6),political_ideology,variance_ordinale,14.6957,0.3052
+econ_games_main,agents entretien (v6),age,entropie,0.6257,0.7285
+econ_games_main,agents entretien (v6),age,gini_simpson,0.5292,0.6941
+econ_games_main,agents entretien (v6),age,variance_ordinale,0.1947,0.3192
+econ_games_main,agents entretien (v6),education,entropie,8.6811,0.7172
+econ_games_main,agents entretien (v6),education,gini_simpson,4.9812,0.6849
+econ_games_main,agents entretien (v6),profil croise,entropie,2.2844,0.7135
+econ_games_main,agents entretien (v6),profil croise,gini_simpson,1.5638,0.6840
+econ_games_main,agents entretien (v6),profil croise,variance_ordinale,1.0775,0.3080
+econ_games_main,agents persona (v4),gender,entropie,0.5280,0.7354
+econ_games_main,agents persona (v4),gender,gini_simpson,0.7544,0.7204
+econ_games_main,agents persona (v4),gender,variance_ordinale,0.6377,0.3408
+econ_games_main,agents persona (v4),race,entropie,0.0138,0.7373
+econ_games_main,agents persona (v4),race,gini_simpson,0.2209,0.7228
+econ_games_main,agents persona (v4),race,variance_ordinale,0.1735,0.3420
+econ_games_main,agents persona (v4),political_ideology,entropie,0.9158,0.7340
+econ_games_main,agents persona (v4),political_ideology,gini_simpson,0.8375,0.7200
+econ_games_main,agents persona (v4),political_ideology,variance_ordinale,0.1317,0.3414
+econ_games_main,agents persona (v4),age,entropie,0.5783,0.7357
+econ_games_main,agents persona (v4),age,gini_simpson,0.9200,0.7203
+econ_games_main,agents persona (v4),age,variance_ordinale,0.3049,0.3414
+econ_games_main,agents persona (v4),education,entropie,1.4641,0.7337
+econ_games_main,agents persona (v4),education,gini_simpson,0.7025,0.7206
+econ_games_main,agents persona (v4),profil croise,entropie,0.3837,0.7333
+econ_games_main,agents persona (v4),profil croise,gini_simpson,0.4291,0.7229
+econ_games_main,agents persona (v4),profil croise,variance_ordinale,0.1385,0.3436
+econ_games_main,agents demographiques fig.2 (v3),gender,entropie,0.1943,0.5517
+econ_games_main,agents demographiques fig.2 (v3),gender,gini_simpson,0.1691,0.5602
+econ_games_main,agents demographiques fig.2 (v3),gender,variance_ordinale,0.3581,0.1635
+econ_games_main,agents demographiques fig.2 (v3),race,entropie,0.5473,0.5503
+econ_games_main,agents demographiques fig.2 (v3),race,gini_simpson,0.3825,0.5603
+econ_games_main,agents demographiques fig.2 (v3),race,variance_ordinale,0.1710,0.1637
+econ_games_main,agents demographiques fig.2 (v3),political_ideology,entropie,-0.0622,0.5511
+econ_games_main,agents demographiques fig.2 (v3),political_ideology,gini_simpson,0.2600,0.5600
+econ_games_main,agents demographiques fig.2 (v3),political_ideology,variance_ordinale,0.5575,0.1633
+econ_games_main,agents demographiques fig.2 (v3),age,entropie,1.7808,0.5449
+econ_games_main,agents demographiques fig.2 (v3),age,gini_simpson,1.6921,0.5555
+econ_games_main,agents demographiques fig.2 (v3),age,variance_ordinale,0.2986,0.1632
+econ_games_main,agents demographiques fig.2 (v3),education,entropie,15.0836,0.5300
+econ_games_main,agents demographiques fig.2 (v3),education,gini_simpson,8.7751,0.5428
+econ_games_main,agents demographiques fig.2 (v3),profil croise,entropie,0.5543,0.5464
+econ_games_main,agents demographiques fig.2 (v3),profil croise,gini_simpson,0.3489,0.5612
+econ_games_main,agents demographiques fig.2 (v3),profil croise,variance_ordinale,0.1954,0.1632
+econ_games_main,agents demographiques fig.3 (v8),gender,entropie,1.1324,0.8169
+econ_games_main,agents demographiques fig.3 (v8),gender,gini_simpson,0.9708,0.7983
+econ_games_main,agents demographiques fig.3 (v8),gender,variance_ordinale,1.9231,0.3844
+econ_games_main,agents demographiques fig.3 (v8),race,entropie,2.0609,0.8132
+econ_games_main,agents demographiques fig.3 (v8),race,gini_simpson,1.2659,0.7966
+econ_games_main,agents demographiques fig.3 (v8),race,variance_ordinale,0.7743,0.3849
+econ_games_main,agents demographiques fig.3 (v8),political_ideology,entropie,119.5925,0.4116
+econ_games_main,agents demographiques fig.3 (v8),political_ideology,gini_simpson,125.0915,0.4344
+econ_games_main,agents demographiques fig.3 (v8),political_ideology,variance_ordinale,296.4340,0.1122
+econ_games_main,agents demographiques fig.3 (v8),age,entropie,2.9172,0.8104
+econ_games_main,agents demographiques fig.3 (v8),age,gini_simpson,3.1186,0.7909
+econ_games_main,agents demographiques fig.3 (v8),age,variance_ordinale,1.9199,0.3807
+econ_games_main,agents demographiques fig.3 (v8),education,entropie,1.5203,0.8166
+econ_games_main,agents demographiques fig.3 (v8),education,gini_simpson,1.2253,0.7976
+econ_games_main,agents demographiques fig.3 (v8),profil croise,entropie,42.8302,0.5030
+econ_games_main,agents demographiques fig.3 (v8),profil croise,gini_simpson,26.3854,0.5362
+econ_games_main,agents demographiques fig.3 (v8),profil croise,variance_ordinale,16.3922,0.1667
+bigfive_main,humains vague 1,gender,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,gender,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,gender,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 1,race,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,race,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,race,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 1,political_ideology,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,political_ideology,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,political_ideology,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 1,age,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,age,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,age,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 1,education,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,education,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,education,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 1,profil croise,entropie,1.0000,1.0000
+bigfive_main,humains vague 1,profil croise,gini_simpson,1.0000,1.0000
+bigfive_main,humains vague 1,profil croise,variance_ordinale,1.0000,1.0000
+bigfive_main,humains vague 2,gender,entropie,1.4407,0.9981
+bigfive_main,humains vague 2,gender,gini_simpson,1.4720,0.9984
+bigfive_main,humains vague 2,gender,variance_ordinale,1.2242,0.9807
+bigfive_main,humains vague 2,race,entropie,0.5897,0.9997
+bigfive_main,humains vague 2,race,gini_simpson,0.5029,1.0000
+bigfive_main,humains vague 2,race,variance_ordinale,0.7692,0.9833
+bigfive_main,humains vague 2,political_ideology,entropie,0.7880,1.0002
+bigfive_main,humains vague 2,political_ideology,gini_simpson,0.8200,1.0000
+bigfive_main,humains vague 2,political_ideology,variance_ordinale,0.8146,0.9848
+bigfive_main,humains vague 2,age,entropie,1.0282,0.9981
+bigfive_main,humains vague 2,age,gini_simpson,1.0559,0.9981
+bigfive_main,humains vague 2,age,variance_ordinale,0.9215,0.9865
+bigfive_main,humains vague 2,education,entropie,1.0671,0.9982
+bigfive_main,humains vague 2,education,gini_simpson,1.0345,0.9987
+bigfive_main,humains vague 2,education,variance_ordinale,1.2074,0.9787
+bigfive_main,humains vague 2,profil croise,entropie,0.8144,0.9993
+bigfive_main,humains vague 2,profil croise,gini_simpson,0.9578,0.9988
+bigfive_main,humains vague 2,profil croise,variance_ordinale,0.9384,0.9828
+bigfive_main,agents composite,gender,entropie,2.9503,0.9423
+bigfive_main,agents composite,gender,gini_simpson,4.2056,0.9495
+bigfive_main,agents composite,gender,variance_ordinale,4.5176,1.0756
+bigfive_main,agents composite,race,entropie,1.8048,0.9446
+bigfive_main,agents composite,race,gini_simpson,1.5951,0.9535
+bigfive_main,agents composite,race,variance_ordinale,1.0451,1.1015
+bigfive_main,agents composite,political_ideology,entropie,2.0891,0.9368
+bigfive_main,agents composite,political_ideology,gini_simpson,2.6308,0.9434
+bigfive_main,agents composite,political_ideology,variance_ordinale,2.9209,1.0675
+bigfive_main,agents composite,age,entropie,1.2389,0.9403
+bigfive_main,agents composite,age,gini_simpson,1.3953,0.9476
+bigfive_main,agents composite,age,variance_ordinale,1.4657,1.0780
+bigfive_main,agents composite,education,entropie,3.6878,0.9300
+bigfive_main,agents composite,education,gini_simpson,4.3864,0.9392
+bigfive_main,agents composite,education,variance_ordinale,5.3306,1.0385
+bigfive_main,agents composite,profil croise,entropie,3.0879,0.9288
+bigfive_main,agents composite,profil croise,gini_simpson,4.1803,0.9353
+bigfive_main,agents composite,profil croise,variance_ordinale,3.3195,1.0454
+bigfive_main,agents enquete,gender,entropie,0.6739,0.9207
+bigfive_main,agents enquete,gender,gini_simpson,0.5913,0.9423
+bigfive_main,agents enquete,gender,variance_ordinale,0.5934,0.6358
+bigfive_main,agents enquete,race,entropie,0.9367,0.9202
+bigfive_main,agents enquete,race,gini_simpson,1.1735,0.9414
+bigfive_main,agents enquete,race,variance_ordinale,0.5870,0.6353
+bigfive_main,agents enquete,political_ideology,entropie,2.3174,0.9090
+bigfive_main,agents enquete,political_ideology,gini_simpson,2.7261,0.9300
+bigfive_main,agents enquete,political_ideology,variance_ordinale,1.6105,0.6169
+bigfive_main,agents enquete,age,entropie,0.5870,0.9264
+bigfive_main,agents enquete,age,gini_simpson,0.5053,0.9483
+bigfive_main,agents enquete,age,variance_ordinale,0.3872,0.6517
+bigfive_main,agents enquete,education,entropie,2.3277,0.9117
+bigfive_main,agents enquete,education,gini_simpson,2.2439,0.9358
+bigfive_main,agents enquete,education,variance_ordinale,2.2199,0.6116
+bigfive_main,agents enquete,profil croise,entropie,2.4626,0.9070
+bigfive_main,agents enquete,profil croise,gini_simpson,2.9898,0.9295
+bigfive_main,agents enquete,profil croise,variance_ordinale,1.2337,0.6197
+bigfive_main,agents entretien (v5),gender,entropie,3.0743,0.9413
+bigfive_main,agents entretien (v5),gender,gini_simpson,3.9831,0.9476
+bigfive_main,agents entretien (v5),gender,variance_ordinale,5.0615,1.1144
+bigfive_main,agents entretien (v5),race,entropie,0.9401,0.9454
+bigfive_main,agents entretien (v5),race,gini_simpson,0.8801,0.9525
+bigfive_main,agents entretien (v5),race,variance_ordinale,0.7915,1.1455
+bigfive_main,agents entretien (v5),political_ideology,entropie,1.7865,0.9381
+bigfive_main,agents entretien (v5),political_ideology,gini_simpson,1.9542,0.9454
+bigfive_main,agents entretien (v5),political_ideology,variance_ordinale,2.6702,1.1151
+bigfive_main,agents entretien (v5),age,entropie,1.0917,0.9424
+bigfive_main,agents entretien (v5),age,gini_simpson,1.3368,0.9464
+bigfive_main,agents entretien (v5),age,variance_ordinale,1.4186,1.1265
+bigfive_main,agents entretien (v5),education,entropie,3.6566,0.9295
+bigfive_main,agents entretien (v5),education,gini_simpson,4.6757,0.9360
+bigfive_main,agents entretien (v5),education,variance_ordinale,5.2280,1.0833
+bigfive_main,agents entretien (v5),profil croise,entropie,3.3107,0.9262
+bigfive_main,agents entretien (v5),profil croise,gini_simpson,3.6025,0.9363
+bigfive_main,agents entretien (v5),profil croise,variance_ordinale,3.4137,1.0874
+bigfive_main,agents persona (v4),gender,entropie,2.1462,0.8926
+bigfive_main,agents persona (v4),gender,gini_simpson,2.5940,0.9099
+bigfive_main,agents persona (v4),gender,variance_ordinale,0.8951,0.7925
+bigfive_main,agents persona (v4),race,entropie,0.3615,0.8962
+bigfive_main,agents persona (v4),race,gini_simpson,0.4419,0.9134
+bigfive_main,agents persona (v4),race,variance_ordinale,0.4461,0.7947
+bigfive_main,agents persona (v4),political_ideology,entropie,0.5132,0.8976
+bigfive_main,agents persona (v4),political_ideology,gini_simpson,0.5077,0.9149
+bigfive_main,agents persona (v4),political_ideology,variance_ordinale,0.6156,0.7961
+bigfive_main,agents persona (v4),age,entropie,0.5759,0.9008
+bigfive_main,agents persona (v4),age,gini_simpson,0.5602,0.9179
+bigfive_main,agents persona (v4),age,variance_ordinale,0.2966,0.8253
+bigfive_main,agents persona (v4),education,entropie,1.1519,0.8931
+bigfive_main,agents persona (v4),education,gini_simpson,1.0628,0.9116
+bigfive_main,agents persona (v4),education,variance_ordinale,0.7284,0.7938
+bigfive_main,agents persona (v4),profil croise,entropie,1.4666,0.8892
+bigfive_main,agents persona (v4),profil croise,gini_simpson,1.8007,0.9071
+bigfive_main,agents persona (v4),profil croise,variance_ordinale,0.7128,0.7950
+bigfive_main,agents demographiques fig.2 (v3),gender,entropie,2.0620,0.6839
+bigfive_main,agents demographiques fig.2 (v3),gender,gini_simpson,1.6900,0.7669
+bigfive_main,agents demographiques fig.2 (v3),gender,variance_ordinale,0.2691,0.1676
+bigfive_main,agents demographiques fig.2 (v3),race,entropie,1.9042,0.6839
+bigfive_main,agents demographiques fig.2 (v3),race,gini_simpson,2.1612,0.7660
+bigfive_main,agents demographiques fig.2 (v3),race,variance_ordinale,0.3987,0.1671
+bigfive_main,agents demographiques fig.2 (v3),political_ideology,entropie,0.3039,0.6880
+bigfive_main,agents demographiques fig.2 (v3),political_ideology,gini_simpson,0.3556,0.7708
+bigfive_main,agents demographiques fig.2 (v3),political_ideology,variance_ordinale,0.0851,0.1699
+bigfive_main,agents demographiques fig.2 (v3),age,entropie,0.7614,0.6836
+bigfive_main,agents demographiques fig.2 (v3),age,gini_simpson,1.1027,0.7633
+bigfive_main,agents demographiques fig.2 (v3),age,variance_ordinale,0.0953,0.1731
+bigfive_main,agents demographiques fig.2 (v3),education,entropie,12.1878,0.6207
+bigfive_main,agents demographiques fig.2 (v3),education,gini_simpson,13.0732,0.7151
+bigfive_main,agents demographiques fig.2 (v3),education,variance_ordinale,2.5987,0.1327
+bigfive_main,agents demographiques fig.2 (v3),profil croise,entropie,1.4136,0.6771
+bigfive_main,agents demographiques fig.2 (v3),profil croise,gini_simpson,1.6966,0.7628
+bigfive_main,agents demographiques fig.2 (v3),profil croise,variance_ordinale,0.2382,0.1666
+bigfive_main,agents demographiques fig.3 (v8),gender,entropie,3.7159,0.7809
+bigfive_main,agents demographiques fig.3 (v8),gender,gini_simpson,2.8808,0.8429
+bigfive_main,agents demographiques fig.3 (v8),gender,variance_ordinale,0.9968,0.3959
+bigfive_main,agents demographiques fig.3 (v8),race,entropie,3.4406,0.7809
+bigfive_main,agents demographiques fig.3 (v8),race,gini_simpson,3.2439,0.8416
+bigfive_main,agents demographiques fig.3 (v8),race,variance_ordinale,1.7321,0.3933
+bigfive_main,agents demographiques fig.3 (v8),political_ideology,entropie,36.6162,0.5033
+bigfive_main,agents demographiques fig.3 (v8),political_ideology,gini_simpson,38.3026,0.6027
+bigfive_main,agents demographiques fig.3 (v8),political_ideology,variance_ordinale,15.8699,0.1078
+bigfive_main,agents demographiques fig.3 (v8),age,entropie,2.5390,0.7532
+bigfive_main,agents demographiques fig.3 (v8),age,gini_simpson,2.7240,0.8175
+bigfive_main,agents demographiques fig.3 (v8),age,variance_ordinale,0.7160,0.3799
+bigfive_main,agents demographiques fig.3 (v8),education,entropie,0.8999,0.7852
+bigfive_main,agents demographiques fig.3 (v8),education,gini_simpson,1.1763,0.8443
+bigfive_main,agents demographiques fig.3 (v8),education,variance_ordinale,0.1224,0.4044
+bigfive_main,agents demographiques fig.3 (v8),profil croise,entropie,31.1608,0.5566
+bigfive_main,agents demographiques fig.3 (v8),profil croise,gini_simpson,31.1957,0.6669
+bigfive_main,agents demographiques fig.3 (v8),profil croise,variance_ordinale,10.3984,0.1529
+twin2k500,humains vague 4,genre,entropie,1.0000,1.0000
+twin2k500,humains vague 4,genre,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,genre,variance_ordinale,1.0000,1.0000
+twin2k500,humains vague 4,ethnicite,entropie,1.0000,1.0000
+twin2k500,humains vague 4,ethnicite,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,ethnicite,variance_ordinale,1.0000,1.0000
+twin2k500,humains vague 4,ideologie politique,entropie,1.0000,1.0000
+twin2k500,humains vague 4,ideologie politique,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,ideologie politique,variance_ordinale,1.0000,1.0000
+twin2k500,humains vague 4,age,entropie,1.0000,1.0000
+twin2k500,humains vague 4,age,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,age,variance_ordinale,1.0000,1.0000
+twin2k500,humains vague 4,education,entropie,1.0000,1.0000
+twin2k500,humains vague 4,education,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,education,variance_ordinale,1.0000,1.0000
+twin2k500,humains vague 4,profil croise,entropie,1.0000,1.0000
+twin2k500,humains vague 4,profil croise,gini_simpson,1.0000,1.0000
+twin2k500,humains vague 4,profil croise,variance_ordinale,1.0000,1.0000
+twin2k500,humains vagues 1-3 (retest),genre,entropie,0.8755,1.0094
+twin2k500,humains vagues 1-3 (retest),genre,gini_simpson,0.9092,1.0056
+twin2k500,humains vagues 1-3 (retest),genre,variance_ordinale,0.7514,1.0357
+twin2k500,humains vagues 1-3 (retest),ethnicite,entropie,1.0581,1.0088
+twin2k500,humains vagues 1-3 (retest),ethnicite,gini_simpson,1.1126,1.0050
+twin2k500,humains vagues 1-3 (retest),ethnicite,variance_ordinale,1.0773,1.0334
+twin2k500,humains vagues 1-3 (retest),ideologie politique,entropie,0.9505,1.0101
+twin2k500,humains vagues 1-3 (retest),ideologie politique,gini_simpson,0.9481,1.0062
+twin2k500,humains vagues 1-3 (retest),ideologie politique,variance_ordinale,1.0096,1.0344
+twin2k500,humains vagues 1-3 (retest),age,entropie,0.9959,1.0091
+twin2k500,humains vagues 1-3 (retest),age,gini_simpson,1.0572,1.0053
+twin2k500,humains vagues 1-3 (retest),age,variance_ordinale,0.9485,1.0340
+twin2k500,humains vagues 1-3 (retest),education,entropie,1.4092,1.0084
+twin2k500,humains vagues 1-3 (retest),education,gini_simpson,1.2782,1.0049
+twin2k500,humains vagues 1-3 (retest),education,variance_ordinale,1.3770,1.0325
+twin2k500,humains vagues 1-3 (retest),profil croise,entropie,1.0325,1.0084
+twin2k500,humains vagues 1-3 (retest),profil croise,gini_simpson,1.0783,1.0040
+twin2k500,humains vagues 1-3 (retest),profil croise,variance_ordinale,1.0371,1.0336
+twin2k500,Demographics Only - GPT4.1-mini,genre,entropie,0.1478,0.5124
+twin2k500,Demographics Only - GPT4.1-mini,genre,gini_simpson,0.1953,0.5595
+twin2k500,Demographics Only - GPT4.1-mini,genre,variance_ordinale,0.0231,0.0688
+twin2k500,Demographics Only - GPT4.1-mini,ethnicite,entropie,0.7049,0.5102
+twin2k500,Demographics Only - GPT4.1-mini,ethnicite,gini_simpson,0.8095,0.5577
+twin2k500,Demographics Only - GPT4.1-mini,ethnicite,variance_ordinale,0.1091,0.0681
+twin2k500,Demographics Only - GPT4.1-mini,ideologie politique,entropie,1.8637,0.4852
+twin2k500,Demographics Only - GPT4.1-mini,ideologie politique,gini_simpson,2.4343,0.5317
+twin2k500,Demographics Only - GPT4.1-mini,ideologie politique,variance_ordinale,0.4267,0.0582
+twin2k500,Demographics Only - GPT4.1-mini,age,entropie,2.1636,0.5055
+twin2k500,Demographics Only - GPT4.1-mini,age,gini_simpson,3.7244,0.5503
+twin2k500,Demographics Only - GPT4.1-mini,age,variance_ordinale,0.1195,0.0683
+twin2k500,Demographics Only - GPT4.1-mini,education,entropie,1.4493,0.5095
+twin2k500,Demographics Only - GPT4.1-mini,education,gini_simpson,1.2699,0.5573
+twin2k500,Demographics Only - GPT4.1-mini,education,variance_ordinale,0.0206,0.0687
+twin2k500,Demographics Only - GPT4.1-mini,profil croise,entropie,1.6139,0.4862
+twin2k500,Demographics Only - GPT4.1-mini,profil croise,gini_simpson,2.1128,0.5314
+twin2k500,Demographics Only - GPT4.1-mini,profil croise,variance_ordinale,0.3094,0.0581
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,genre,entropie,0.4176,0.4727
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,genre,gini_simpson,0.3922,0.5150
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,genre,variance_ordinale,0.1039,0.0744
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ethnicite,entropie,0.8481,0.4706
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ethnicite,gini_simpson,0.8429,0.5136
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ethnicite,variance_ordinale,0.2210,0.0734
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ideologie politique,entropie,3.2927,0.4184
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ideologie politique,gini_simpson,4.0677,0.4638
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,ideologie politique,variance_ordinale,1.3747,0.0375
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,age,entropie,0.4700,0.4720
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,age,gini_simpson,0.8020,0.5139
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,age,variance_ordinale,0.2127,0.0741
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,education,entropie,1.2938,0.4706
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,education,gini_simpson,1.2846,0.5134
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,education,variance_ordinale,0.0999,0.0745
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,profil croise,entropie,2.6773,0.4208
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,profil croise,gini_simpson,3.3160,0.4657
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,profil croise,variance_ordinale,0.9408,0.0376
+twin2k500,JSON Persona - GPT4.1,genre,entropie,0.5184,0.6607
+twin2k500,JSON Persona - GPT4.1,genre,gini_simpson,0.5373,0.7107
+twin2k500,JSON Persona - GPT4.1,genre,variance_ordinale,0.1014,0.1087
+twin2k500,JSON Persona - GPT4.1,ethnicite,entropie,1.1756,0.6580
+twin2k500,JSON Persona - GPT4.1,ethnicite,gini_simpson,1.2128,0.7086
+twin2k500,JSON Persona - GPT4.1,ethnicite,variance_ordinale,0.1930,0.1079
+twin2k500,JSON Persona - GPT4.1,ideologie politique,entropie,5.1510,0.5747
+twin2k500,JSON Persona - GPT4.1,ideologie politique,gini_simpson,6.0575,0.6337
+twin2k500,JSON Persona - GPT4.1,ideologie politique,variance_ordinale,1.7383,0.0621
+twin2k500,JSON Persona - GPT4.1,age,entropie,1.0811,0.6586
+twin2k500,JSON Persona - GPT4.1,age,gini_simpson,1.3868,0.7085
+twin2k500,JSON Persona - GPT4.1,age,variance_ordinale,0.2672,0.1080
+twin2k500,JSON Persona - GPT4.1,education,entropie,2.6624,0.6568
+twin2k500,JSON Persona - GPT4.1,education,gini_simpson,2.2076,0.7078
+twin2k500,JSON Persona - GPT4.1,education,variance_ordinale,0.1606,0.1084
+twin2k500,JSON Persona - GPT4.1,profil croise,entropie,3.9592,0.5828
+twin2k500,JSON Persona - GPT4.1,profil croise,gini_simpson,4.4666,0.6444
+twin2k500,JSON Persona - GPT4.1,profil croise,variance_ordinale,1.1519,0.0640
+twin2k500,Persona Summary - GPT4.1-mini,genre,entropie,0.9278,0.5990
+twin2k500,Persona Summary - GPT4.1-mini,genre,gini_simpson,1.0795,0.6472
+twin2k500,Persona Summary - GPT4.1-mini,genre,variance_ordinale,0.2488,0.1149
+twin2k500,Persona Summary - GPT4.1-mini,ethnicite,entropie,0.5379,0.6002
+twin2k500,Persona Summary - GPT4.1-mini,ethnicite,gini_simpson,0.5091,0.6488
+twin2k500,Persona Summary - GPT4.1-mini,ethnicite,variance_ordinale,0.1574,0.1156
+twin2k500,Persona Summary - GPT4.1-mini,ideologie politique,entropie,2.8915,0.5564
+twin2k500,Persona Summary - GPT4.1-mini,ideologie politique,gini_simpson,3.5003,0.6075
+twin2k500,Persona Summary - GPT4.1-mini,ideologie politique,variance_ordinale,1.1595,0.0861
+twin2k500,Persona Summary - GPT4.1-mini,age,entropie,0.5595,0.6001
+twin2k500,Persona Summary - GPT4.1-mini,age,gini_simpson,0.6888,0.6482
+twin2k500,Persona Summary - GPT4.1-mini,age,variance_ordinale,0.1624,0.1157
+twin2k500,Persona Summary - GPT4.1-mini,education,entropie,2.1793,0.5974
+twin2k500,Persona Summary - GPT4.1-mini,education,gini_simpson,2.4275,0.6454
+twin2k500,Persona Summary - GPT4.1-mini,education,variance_ordinale,0.1213,0.1159
+twin2k500,Persona Summary - GPT4.1-mini,profil croise,entropie,2.5815,0.5546
+twin2k500,Persona Summary - GPT4.1-mini,profil croise,gini_simpson,3.1249,0.6050
+twin2k500,Persona Summary - GPT4.1-mini,profil croise,variance_ordinale,0.8405,0.0849
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,genre,entropie,0.5694,0.5934
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,genre,gini_simpson,0.5313,0.5949
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,genre,variance_ordinale,0.2035,0.1451
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ethnicite,entropie,0.4005,0.5933
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ethnicite,gini_simpson,0.3581,0.5956
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ethnicite,variance_ordinale,0.1696,0.1454
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ideologie politique,entropie,2.4506,0.5573
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ideologie politique,gini_simpson,2.5023,0.5675
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,ideologie politique,variance_ordinale,1.2947,0.1128
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,age,entropie,0.3188,0.5937
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,age,gini_simpson,0.4235,0.5952
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,age,variance_ordinale,0.2160,0.1453
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,education,entropie,1.2793,0.5914
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,education,gini_simpson,1.0986,0.5939
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,education,variance_ordinale,0.0960,0.1458
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,profil croise,entropie,2.0054,0.5575
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,profil croise,gini_simpson,2.0632,0.5691
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,profil croise,variance_ordinale,0.9038,0.1132
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,genre,entropie,0.4830,0.6465
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,genre,gini_simpson,0.4956,0.6703
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,genre,variance_ordinale,0.1711,0.1480
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ethnicite,entropie,0.9091,0.6445
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ethnicite,gini_simpson,0.6823,0.6698
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ethnicite,variance_ordinale,0.3413,0.1465
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ideologie politique,entropie,4.4272,0.5738
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ideologie politique,gini_simpson,4.7112,0.6120
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,ideologie politique,variance_ordinale,2.6837,0.0758
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,age,entropie,0.4199,0.6464
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,age,gini_simpson,0.5311,0.6703
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,age,variance_ordinale,0.4060,0.1472
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,education,entropie,2.3102,0.6429
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,education,gini_simpson,1.7557,0.6680
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,education,variance_ordinale,0.2383,0.1478
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,profil croise,entropie,3.5453,0.5783
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,profil croise,gini_simpson,3.6910,0.6169
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,profil croise,variance_ordinale,1.8272,0.0765
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,genre,entropie,0.2460,0.6803
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,genre,gini_simpson,0.2747,0.7299
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,genre,variance_ordinale,0.0840,0.1454
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ethnicite,entropie,0.7153,0.6784
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ethnicite,gini_simpson,0.5833,0.7293
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ethnicite,variance_ordinale,0.2104,0.1444
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ideologie politique,entropie,4.1680,0.6122
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ideologie politique,gini_simpson,4.9691,0.6679
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,ideologie politique,variance_ordinale,2.0140,0.0916
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,age,entropie,0.3844,0.6796
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,age,gini_simpson,0.4065,0.7296
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,age,variance_ordinale,0.2587,0.1445
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,education,entropie,1.8767,0.6765
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,education,gini_simpson,2.1228,0.7264
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,education,variance_ordinale,0.1181,0.1451
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,profil croise,entropie,3.3596,0.6169
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,profil croise,gini_simpson,3.9304,0.6726
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,profil croise,variance_ordinale,1.3566,0.0931
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,genre,entropie,0.5318,0.6586
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,genre,gini_simpson,0.6585,0.6966
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,genre,variance_ordinale,0.1780,0.1317
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ethnicite,entropie,1.2510,0.6556
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ethnicite,gini_simpson,1.1007,0.6952
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ethnicite,variance_ordinale,0.3194,0.1305
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ideologie politique,entropie,4.7132,0.5809
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ideologie politique,gini_simpson,5.2775,0.6309
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,ideologie politique,variance_ordinale,2.4610,0.0656
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,age,entropie,0.4972,0.6586
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,age,gini_simpson,0.5706,0.6969
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,age,variance_ordinale,0.3129,0.1314
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,education,entropie,2.6696,0.6547
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,education,gini_simpson,2.1213,0.6942
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,education,variance_ordinale,0.1991,0.1318
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,profil croise,entropie,3.8366,0.5843
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,profil croise,gini_simpson,4.2476,0.6344
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,profil croise,variance_ordinale,1.6700,0.0664
+twin2k500,Text Persona - GPT4.1-mini,genre,entropie,0.7245,0.5850
+twin2k500,Text Persona - GPT4.1-mini,genre,gini_simpson,0.7641,0.6158
+twin2k500,Text Persona - GPT4.1-mini,genre,variance_ordinale,0.1851,0.1315
+twin2k500,Text Persona - GPT4.1-mini,ethnicite,entropie,0.9734,0.5837
+twin2k500,Text Persona - GPT4.1-mini,ethnicite,gini_simpson,0.7382,0.6157
+twin2k500,Text Persona - GPT4.1-mini,ethnicite,variance_ordinale,0.3501,0.1300
+twin2k500,Text Persona - GPT4.1-mini,ideologie politique,entropie,4.9787,0.5017
+twin2k500,Text Persona - GPT4.1-mini,ideologie politique,gini_simpson,5.5408,0.5456
+twin2k500,Text Persona - GPT4.1-mini,ideologie politique,variance_ordinale,2.7968,0.0557
+twin2k500,Text Persona - GPT4.1-mini,age,entropie,0.5137,0.5855
+twin2k500,Text Persona - GPT4.1-mini,age,gini_simpson,0.6265,0.6161
+twin2k500,Text Persona - GPT4.1-mini,age,variance_ordinale,0.3724,0.1310
+twin2k500,Text Persona - GPT4.1-mini,education,entropie,3.2732,0.5810
+twin2k500,Text Persona - GPT4.1-mini,education,gini_simpson,2.6407,0.6128
+twin2k500,Text Persona - GPT4.1-mini,education,variance_ordinale,0.2652,0.1313
+twin2k500,Text Persona - GPT4.1-mini,profil croise,entropie,3.9585,0.5072
+twin2k500,Text Persona - GPT4.1-mini,profil croise,gini_simpson,4.2875,0.5519
+twin2k500,Text Persona - GPT4.1-mini,profil croise,variance_ordinale,1.8929,0.0565
+twin2k500,Text Persona - Gemini-Flash2.5,genre,entropie,0.4874,0.7716
+twin2k500,Text Persona - Gemini-Flash2.5,genre,gini_simpson,0.5578,0.7818
+twin2k500,Text Persona - Gemini-Flash2.5,genre,variance_ordinale,0.2218,0.2566
+twin2k500,Text Persona - Gemini-Flash2.5,ethnicite,entropie,0.4671,0.7714
+twin2k500,Text Persona - Gemini-Flash2.5,ethnicite,gini_simpson,0.3465,0.7826
+twin2k500,Text Persona - Gemini-Flash2.5,ethnicite,variance_ordinale,0.4232,0.2550
+twin2k500,Text Persona - Gemini-Flash2.5,ideologie politique,entropie,4.1594,0.7062
+twin2k500,Text Persona - Gemini-Flash2.5,ideologie politique,gini_simpson,4.4681,0.7285
+twin2k500,Text Persona - Gemini-Flash2.5,ideologie politique,variance_ordinale,4.7143,0.1291
+twin2k500,Text Persona - Gemini-Flash2.5,age,entropie,0.5270,0.7713
+twin2k500,Text Persona - Gemini-Flash2.5,age,gini_simpson,0.6061,0.7817
+twin2k500,Text Persona - Gemini-Flash2.5,age,variance_ordinale,0.5761,0.2552
+twin2k500,Text Persona - Gemini-Flash2.5,education,entropie,1.2715,0.7695
+twin2k500,Text Persona - Gemini-Flash2.5,education,gini_simpson,0.8043,0.7811
+twin2k500,Text Persona - Gemini-Flash2.5,education,variance_ordinale,0.2206,0.2566
+twin2k500,Text Persona - Gemini-Flash2.5,profil croise,entropie,3.3802,0.7078
+twin2k500,Text Persona - Gemini-Flash2.5,profil croise,gini_simpson,3.5434,0.7328
+twin2k500,Text Persona - Gemini-Flash2.5,profil croise,variance_ordinale,3.2143,0.1299
+twin2k500 sous ensemble 2050 sujets,humains vague 4,genre,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,genre,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,genre,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ethnicite,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ethnicite,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ethnicite,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ideologie politique,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ideologie politique,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,ideologie politique,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,age,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,age,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,age,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,education,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,education,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,education,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,profil croise,entropie,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,profil croise,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vague 4,profil croise,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),genre,entropie,0.8962,1.0094
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),genre,gini_simpson,0.9342,1.0055
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),genre,variance_ordinale,0.7979,1.0349
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ethnicite,entropie,1.0493,1.0088
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ethnicite,gini_simpson,1.0870,1.0050
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ethnicite,variance_ordinale,1.0629,1.0329
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ideologie politique,entropie,0.9497,1.0101
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ideologie politique,gini_simpson,0.9514,1.0061
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),ideologie politique,variance_ordinale,1.0278,1.0336
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),age,entropie,0.9981,1.0091
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),age,gini_simpson,1.0454,1.0053
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),age,variance_ordinale,0.9880,1.0334
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),education,entropie,1.4479,1.0083
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),education,gini_simpson,1.2923,1.0048
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),education,variance_ordinale,1.2522,1.0318
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),profil croise,entropie,1.0403,1.0084
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),profil croise,gini_simpson,1.0801,1.0040
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),profil croise,variance_ordinale,1.0485,1.0330
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,genre,entropie,0.7461,0.6029
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,genre,gini_simpson,0.8901,0.6652
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,genre,variance_ordinale,0.1347,0.0929
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ethnicite,entropie,1.0475,0.6015
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ethnicite,gini_simpson,0.8831,0.6650
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ethnicite,variance_ordinale,0.1997,0.0922
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ideologie politique,entropie,5.3476,0.5132
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ideologie politique,gini_simpson,6.3912,0.5843
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,ideologie politique,variance_ordinale,2.0708,0.0376
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,age,entropie,0.8295,0.6025
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,age,gini_simpson,0.8450,0.6654
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,age,variance_ordinale,0.2952,0.0925
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,education,entropie,2.7321,0.5999
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,education,gini_simpson,2.2492,0.6632
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,education,variance_ordinale,0.1201,0.0930
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,profil croise,entropie,4.0800,0.5246
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,profil croise,gini_simpson,4.5550,0.5983
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,profil croise,variance_ordinale,1.3960,0.0389
+twin2k500 sous ensemble 1000 sujets,humains vague 4,genre,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,genre,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,genre,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ethnicite,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ethnicite,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ethnicite,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ideologie politique,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ideologie politique,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,ideologie politique,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,age,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,age,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,age,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,education,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,education,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,education,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,profil croise,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,profil croise,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vague 4,profil croise,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),genre,entropie,0.9094,1.0122
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),genre,gini_simpson,0.9252,1.0078
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),genre,variance_ordinale,0.6392,1.0511
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ethnicite,entropie,1.6474,1.0101
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ethnicite,gini_simpson,1.5649,1.0062
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ethnicite,variance_ordinale,1.6340,1.0436
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ideologie politique,entropie,0.9901,1.0122
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ideologie politique,gini_simpson,1.0132,1.0075
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),ideologie politique,variance_ordinale,1.0540,1.0478
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),age,entropie,0.7134,1.0129
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),age,gini_simpson,0.8530,1.0081
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),age,variance_ordinale,0.9914,1.0485
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),education,entropie,1.0410,1.0116
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),education,gini_simpson,0.9678,1.0076
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),education,variance_ordinale,1.8436,1.0459
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),profil croise,entropie,1.1495,1.0092
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),profil croise,gini_simpson,1.1778,1.0049
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),profil croise,variance_ordinale,1.1322,1.0448
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,genre,entropie,0.2564,0.6237
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,genre,gini_simpson,0.1381,0.6837
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,genre,variance_ordinale,0.0285,0.1415
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ethnicite,entropie,0.7037,0.6221
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ethnicite,gini_simpson,0.6909,0.6823
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ethnicite,variance_ordinale,0.1416,0.1406
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ideologie politique,entropie,3.8106,0.5661
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ideologie politique,gini_simpson,4.6078,0.6325
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,ideologie politique,variance_ordinale,1.7412,0.0995
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,age,entropie,0.3534,0.6230
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,age,gini_simpson,0.2278,0.6835
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,age,variance_ordinale,0.0685,0.1409
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,education,entropie,1.2979,0.6204
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,education,gini_simpson,1.0743,0.6813
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,education,variance_ordinale,0.0541,0.1408
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,profil croise,entropie,2.9635,0.5751
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,profil croise,gini_simpson,3.4456,0.6379
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,profil croise,variance_ordinale,1.1023,0.1026
+twin2k500 sous ensemble 1558 sujets,humains vague 4,genre,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,genre,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,genre,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ethnicite,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ethnicite,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ethnicite,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ideologie politique,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ideologie politique,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,ideologie politique,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,age,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,age,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,age,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,education,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,education,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,education,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,profil croise,entropie,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,profil croise,gini_simpson,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vague 4,profil croise,variance_ordinale,1.0000,1.0000
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),genre,entropie,0.8694,1.0086
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),genre,gini_simpson,0.8505,1.0048
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),genre,variance_ordinale,0.7035,1.0261
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ethnicite,entropie,0.9670,1.0084
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ethnicite,gini_simpson,1.0011,1.0045
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ethnicite,variance_ordinale,1.0701,1.0232
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ideologie politique,entropie,0.9091,1.0100
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ideologie politique,gini_simpson,0.9035,1.0059
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),ideologie politique,variance_ordinale,0.9647,1.0247
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),age,entropie,1.0307,1.0081
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),age,gini_simpson,1.1718,1.0041
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),age,variance_ordinale,1.0425,1.0231
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),education,entropie,1.9161,1.0068
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),education,gini_simpson,1.4873,1.0036
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),education,variance_ordinale,1.1720,1.0222
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),profil croise,entropie,0.9748,1.0090
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),profil croise,gini_simpson,0.9903,1.0045
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),profil croise,variance_ordinale,0.9646,1.0246
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,genre,entropie,0.5946,0.5572
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,genre,gini_simpson,0.7213,0.6029
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,genre,variance_ordinale,0.1107,0.1458
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ethnicite,entropie,0.2790,0.5579
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ethnicite,gini_simpson,0.1423,0.6046
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ethnicite,variance_ordinale,0.0567,0.1462
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ideologie politique,entropie,1.3485,0.5413
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ideologie politique,gini_simpson,1.3435,0.5924
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,ideologie politique,variance_ordinale,0.4524,0.1365
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,age,entropie,0.1543,0.5583
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,age,gini_simpson,0.0865,0.6045
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,age,variance_ordinale,0.1361,0.1455
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,education,entropie,3.2097,0.5528
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,education,gini_simpson,1.9896,0.6008
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,education,variance_ordinale,0.3640,0.1441
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,profil croise,entropie,1.0228,0.5442
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,profil croise,gini_simpson,0.9529,0.5960
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,profil croise,variance_ordinale,0.2973,0.1383

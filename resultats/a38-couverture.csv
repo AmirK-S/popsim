@@ -1,0 +1,25 @@
+score,classe_norc,items,avec_ampleur,sans_ampleur,mediane_ampleur,min_ampleur,max_ampleur
+M1 ampleur de mode stricte,sensible,12,4,8,7.900000,0.360000,13.800000
+M1 ampleur de mode stricte,investiguer,13,1,12,3.300000,3.300000,3.300000
+M1 ampleur de mode stricte,temoin,65,12,53,3.650000,1.000000,14.000000
+M1 ampleur de mode stricte,mixte,4,4,0,7.615000,1.020000,10.950000
+M1 ampleur de mode stricte,non teste,55,0,55,,,
+M1 ampleur de mode stricte,tous,149,21,128,4.800000,0.360000,14.000000
+M2 mode plus conception,sensible,12,4,8,7.900000,0.360000,13.800000
+M2 mode plus conception,investiguer,13,1,12,3.300000,3.300000,3.300000
+M2 mode plus conception,temoin,65,12,53,3.650000,1.000000,14.000000
+M2 mode plus conception,mixte,4,4,0,7.615000,1.020000,10.950000
+M2 mode plus conception,non teste,55,17,38,26.000000,11.600000,63.960000
+M2 mode plus conception,tous,149,38,111,11.275000,0.360000,63.960000
+M3 toutes sources,sensible,12,4,8,7.900000,0.360000,13.800000
+M3 toutes sources,investiguer,13,1,12,3.300000,3.300000,3.300000
+M3 toutes sources,temoin,65,13,52,4.000000,1.000000,86.000000
+M3 toutes sources,mixte,4,4,0,7.615000,1.020000,10.950000
+M3 toutes sources,non teste,55,17,38,26.000000,11.600000,63.960000
+M3 toutes sources,tous,149,39,110,11.600000,0.360000,86.000000
+M1 ampleur de mode stricte,[comportement],42,4,38,3.300000,1.000000,10.000000
+M1 ampleur de mode stricte,[attitude],95,16,79,5.165000,0.360000,14.000000
+M1 ampleur de mode stricte,[auto evaluation],12,1,11,5.000000,5.000000,5.000000
+M3 toutes sources,[comportement],42,6,36,6.650000,1.000000,38.700000
+M3 toutes sources,[attitude],95,31,64,13.800000,0.360000,86.000000
+M3 toutes sources,[auto evaluation],12,2,10,8.425000,5.000000,11.850000

@@ -1,0 +1,64 @@
+jeu,condition,mesure,ratio_inter_items_ordinaux,ratio_intra_items_ordinaux,n_items_ordinaux
+twin2k500,humains vague 4,entropie,1.0000,1.0000,40
+twin2k500,humains vague 4,gini_simpson,1.0000,1.0000,40
+twin2k500,humains vague 4,variance_ordinale,1.0000,1.0000,40
+twin2k500,humains vagues 1-3 (retest),entropie,1.0066,1.0160,40
+twin2k500,humains vagues 1-3 (retest),gini_simpson,1.0224,1.0115,40
+twin2k500,humains vagues 1-3 (retest),variance_ordinale,1.0220,1.0339,40
+twin2k500,Demographics Only - GPT4.1-mini,entropie,1.3036,0.3884,40
+twin2k500,Demographics Only - GPT4.1-mini,gini_simpson,1.7716,0.4324,40
+twin2k500,Demographics Only - GPT4.1-mini,variance_ordinale,0.2813,0.0651,40
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,entropie,2.4065,0.3280,40
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,gini_simpson,2.8599,0.3389,40
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,variance_ordinale,0.8671,0.0622,40
+twin2k500,JSON Persona - GPT4.1,entropie,2.9066,0.4354,40
+twin2k500,JSON Persona - GPT4.1,gini_simpson,3.6674,0.4728,40
+twin2k500,JSON Persona - GPT4.1,variance_ordinale,1.0709,0.0935,40
+twin2k500,Persona Summary - GPT4.1-mini,entropie,2.0470,0.4763,40
+twin2k500,Persona Summary - GPT4.1-mini,gini_simpson,2.2783,0.4908,40
+twin2k500,Persona Summary - GPT4.1-mini,variance_ordinale,0.7636,0.1057,40
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,entropie,1.8794,0.5355,40
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,gini_simpson,2.0360,0.5178,40
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,variance_ordinale,0.8302,0.1348,40
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,entropie,3.2664,0.5570,40
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,gini_simpson,3.5911,0.5765,40
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,variance_ordinale,1.6793,0.1241,40
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,entropie,3.1502,0.5341,40
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,gini_simpson,3.7511,0.5569,40
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,variance_ordinale,1.2413,0.1277,40
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,entropie,3.2979,0.5216,40
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,gini_simpson,3.7065,0.5469,40
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,variance_ordinale,1.5366,0.1100,40
+twin2k500,Text Persona - GPT4.1-mini,entropie,3.6457,0.4697,40
+twin2k500,Text Persona - GPT4.1-mini,gini_simpson,4.1443,0.4913,40
+twin2k500,Text Persona - GPT4.1-mini,variance_ordinale,1.7440,0.1065,40
+twin2k500,Text Persona - Gemini-Flash2.5,entropie,3.5798,0.5963,40
+twin2k500,Text Persona - Gemini-Flash2.5,gini_simpson,3.8997,0.5990,40
+twin2k500,Text Persona - Gemini-Flash2.5,variance_ordinale,2.9145,0.2146,40
+twin2k500 sous ensemble 2050 sujets,humains vague 4,entropie,1.0000,1.0000,40
+twin2k500 sous ensemble 2050 sujets,humains vague 4,gini_simpson,1.0000,1.0000,40
+twin2k500 sous ensemble 2050 sujets,humains vague 4,variance_ordinale,1.0000,1.0000,40
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),entropie,1.0056,1.0160,40
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),gini_simpson,1.0230,1.0113,40
+twin2k500 sous ensemble 2050 sujets,humains vagues 1-3 (retest),variance_ordinale,1.0315,1.0333,40
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,entropie,3.2394,0.3746,40
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,gini_simpson,3.8826,0.4083,40
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,variance_ordinale,1.2779,0.0749,40
+twin2k500 sous ensemble 1000 sujets,humains vague 4,entropie,1.0000,1.0000,40
+twin2k500 sous ensemble 1000 sujets,humains vague 4,gini_simpson,1.0000,1.0000,40
+twin2k500 sous ensemble 1000 sujets,humains vague 4,variance_ordinale,1.0000,1.0000,40
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),entropie,1.0906,1.0216,40
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),gini_simpson,1.1141,1.0154,40
+twin2k500 sous ensemble 1000 sujets,humains vagues 1-3 (retest),variance_ordinale,1.1259,1.0470,40
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,entropie,2.5978,0.4418,40
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,gini_simpson,3.1310,0.4702,40
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,variance_ordinale,1.0454,0.1279,40
+twin2k500 sous ensemble 1558 sujets,humains vague 4,entropie,1.0000,1.0000,40
+twin2k500 sous ensemble 1558 sujets,humains vague 4,gini_simpson,1.0000,1.0000,40
+twin2k500 sous ensemble 1558 sujets,humains vague 4,variance_ordinale,1.0000,1.0000,40
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),entropie,0.9608,1.0134,40
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),gini_simpson,0.9824,1.0088,40
+twin2k500 sous ensemble 1558 sujets,humains vagues 1-3 (retest),variance_ordinale,0.9647,1.0240,40
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,entropie,0.7207,0.3408,40
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,gini_simpson,0.5242,0.3429,40
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,variance_ordinale,0.3035,0.1428,40

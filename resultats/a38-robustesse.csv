@@ -1,0 +1,157 @@
+perimetre,condition,controle,hypothese,rho_spearman,ic_items_bas,ic_items_haut,n_items,p_permutation
+1052,B0 mode,"conception seule, MR141",K1 distance,0.068670,-0.482504,0.615614,17,0.783322
+1052,B0 mode,"conception seule, MR141",K2 dispersion,,,,17,
+1052,B0 mode,M1 attitudes seules,K1 distance,-0.073529,-0.573804,0.448089,16,0.782922
+1052,B0 mode,M1 attitudes seules,K2 dispersion,0.053688,-0.481427,0.579076,16,0.838716
+1052,B0 mode,M1 sans les items de depense,K1 distance,,,,5,
+1052,B0 mode,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,B0 tirage,"conception seule, MR141",K1 distance,-0.027010,-0.522870,0.550227,17,0.916008
+1052,B0 tirage,"conception seule, MR141",K2 dispersion,-0.080882,-0.591644,0.436571,17,0.760124
+1052,B0 tirage,M1 attitudes seules,K1 distance,-0.010332,-0.464237,0.512059,16,0.972403
+1052,B0 tirage,M1 attitudes seules,K2 dispersion,-0.088235,-0.568222,0.445673,16,0.751125
+1052,B0 tirage,M1 sans les items de depense,K1 distance,,,,5,
+1052,B0 tirage,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,B1 argmax,"conception seule, MR141",K1 distance,-0.056373,-0.540050,0.439705,17,0.826217
+1052,B1 argmax,"conception seule, MR141",K2 dispersion,0.139706,-0.359410,0.599125,17,0.591841
+1052,B1 argmax,M1 attitudes seules,K1 distance,-0.214706,-0.756398,0.369874,16,0.430457
+1052,B1 argmax,M1 attitudes seules,K2 dispersion,0.126471,-0.415860,0.626715,16,0.636636
+1052,B1 argmax,M1 sans les items de depense,K1 distance,,,,5,
+1052,B1 argmax,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,B2 argmax,"conception seule, MR141",K1 distance,-0.237745,-0.710407,0.371649,17,0.346065
+1052,B2 argmax,"conception seule, MR141",K2 dispersion,0.204782,-0.300470,0.645685,17,0.426557
+1052,B2 argmax,M1 attitudes seules,K1 distance,-0.167647,-0.688087,0.529310,16,0.528547
+1052,B2 argmax,M1 attitudes seules,K2 dispersion,0.120588,-0.434547,0.568873,16,0.657934
+1052,B2 argmax,M1 sans les items de depense,K1 distance,,,,5,
+1052,B2 argmax,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,B3 foret,"conception seule, MR141",K1 distance,-0.049020,-0.536737,0.461588,17,0.853515
+1052,B3 foret,"conception seule, MR141",K2 dispersion,0.121398,-0.398512,0.583971,17,0.640836
+1052,B3 foret,M1 attitudes seules,K1 distance,-0.117647,-0.680132,0.509848,16,0.660634
+1052,B3 foret,M1 attitudes seules,K2 dispersion,0.050000,-0.512299,0.551206,16,0.856714
+1052,B3 foret,M1 sans les items de depense,K1 distance,,,,5,
+1052,B3 foret,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents composite,"conception seule, MR141",K1 distance,-0.328431,-0.762933,0.242274,17,0.190881
+1052,agents composite,"conception seule, MR141",K2 dispersion,0.186275,-0.379845,0.641118,17,0.471253
+1052,agents composite,M1 attitudes seules,K1 distance,0.076527,-0.410741,0.528020,16,0.781322
+1052,agents composite,M1 attitudes seules,K2 dispersion,0.058824,-0.545878,0.577907,16,0.833217
+1052,agents composite,M1 sans les items de depense,K1 distance,,,,5,
+1052,agents composite,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents demographiques (v6),"conception seule, MR141",K1 distance,-0.257353,-0.667925,0.274540,17,0.319868
+1052,agents demographiques (v6),"conception seule, MR141",K2 dispersion,0.049020,-0.476629,0.494414,17,0.854315
+1052,agents demographiques (v6),M1 attitudes seules,K1 distance,-0.050000,-0.522259,0.503149,16,0.855614
+1052,agents demographiques (v6),M1 attitudes seules,K2 dispersion,-0.082353,-0.580238,0.414636,16,0.762524
+1052,agents demographiques (v6),M1 sans les items de depense,K1 distance,,,,5,
+1052,agents demographiques (v6),M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents enquete,"conception seule, MR141",K1 distance,-0.571078,-0.882658,-0.098183,17,0.020598
+1052,agents enquete,"conception seule, MR141",K2 dispersion,0.188725,-0.407523,0.647077,17,0.468553
+1052,agents enquete,M1 attitudes seules,K1 distance,0.020588,-0.466589,0.515754,16,0.941906
+1052,agents enquete,M1 attitudes seules,K2 dispersion,0.038235,-0.504489,0.566526,16,0.883712
+1052,agents enquete,M1 sans les items de depense,K1 distance,,,,5,
+1052,agents enquete,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents entretien (v3),"conception seule, MR141",K1 distance,0.009804,-0.506783,0.516302,17,0.975902
+1052,agents entretien (v3),"conception seule, MR141",K2 dispersion,0.151961,-0.262794,0.514185,17,0.554445
+1052,agents entretien (v3),M1 attitudes seules,K1 distance,-0.401766,-0.805105,0.175951,16,0.121988
+1052,agents entretien (v3),M1 attitudes seules,K2 dispersion,0.282353,-0.307613,0.722806,16,0.286771
+1052,agents entretien (v3),M1 sans les items de depense,K1 distance,,,,5,
+1052,agents entretien (v3),M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents v7,"conception seule, MR141",K1 distance,-0.071078,-0.560808,0.421118,17,0.792321
+1052,agents v7,"conception seule, MR141",K2 dispersion,0.284314,-0.301079,0.693896,17,0.262774
+1052,agents v7,M1 attitudes seules,K1 distance,0.202941,-0.340348,0.656216,16,0.458654
+1052,agents v7,M1 attitudes seules,K2 dispersion,-0.079412,-0.652426,0.534403,16,0.771423
+1052,agents v7,M1 sans les items de depense,K1 distance,,,,5,
+1052,agents v7,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,agents v8,"conception seule, MR141",K1 distance,0.098039,-0.419759,0.537191,17,0.712529
+1052,agents v8,"conception seule, MR141",K2 dispersion,0.041667,-0.546762,0.524041,17,0.882512
+1052,agents v8,M1 attitudes seules,K1 distance,0.335294,-0.346481,0.740967,16,0.210879
+1052,agents v8,M1 attitudes seules,K2 dispersion,0.205882,-0.382829,0.743367,16,0.436856
+1052,agents v8,M1 sans les items de depense,K1 distance,,,,5,
+1052,agents v8,M1 sans les items de depense,K2 dispersion,,,,5,
+1052,humains vague 2,"conception seule, MR141",K1 distance,0.234212,-0.248470,0.687752,17,0.359164
+1052,humains vague 2,"conception seule, MR141",K2 dispersion,-0.250000,-0.688576,0.287424,17,0.322768
+1052,humains vague 2,M1 attitudes seules,K1 distance,0.275405,-0.319413,0.767594,16,0.292471
+1052,humains vague 2,M1 attitudes seules,K2 dispersion,0.041176,-0.434535,0.518612,16,0.883512
+1052,humains vague 2,M1 sans les items de depense,K1 distance,,,,5,
+1052,humains vague 2,M1 sans les items de depense,K2 dispersion,,,,5,
+150,B0 mode,"conception seule, MR141",K1 distance,-0.026977,-0.571796,0.513054,17,0.915308
+150,B0 mode,"conception seule, MR141",K2 dispersion,,,,17,
+150,B0 mode,M1 attitudes seules,K1 distance,-0.275812,-0.818528,0.338969,16,0.291371
+150,B0 mode,M1 attitudes seules,K2 dispersion,0.109932,-0.494504,0.581893,16,0.688831
+150,B0 mode,M1 sans les items de depense,K1 distance,,,,5,
+150,B0 mode,M1 sans les items de depense,K2 dispersion,,,,5,
+150,B0 tirage,"conception seule, MR141",K1 distance,-0.310926,-0.745157,0.276144,17,0.223378
+150,B0 tirage,"conception seule, MR141",K2 dispersion,0.098039,-0.435775,0.594484,17,0.707229
+150,B0 tirage,M1 attitudes seules,K1 distance,-0.293729,-0.782751,0.292011,16,0.263274
+150,B0 tirage,M1 attitudes seules,K2 dispersion,0.288235,-0.313077,0.740967,16,0.285471
+150,B0 tirage,M1 sans les items de depense,K1 distance,,,,5,
+150,B0 tirage,M1 sans les items de depense,K2 dispersion,,,,5,
+150,B1 argmax,"conception seule, MR141",K1 distance,-0.186275,-0.567646,0.306035,17,0.475352
+150,B1 argmax,"conception seule, MR141",K2 dispersion,0.215686,-0.273481,0.646456,17,0.410159
+150,B1 argmax,M1 attitudes seules,K1 distance,-0.191458,-0.700869,0.369233,16,0.471053
+150,B1 argmax,M1 attitudes seules,K2 dispersion,0.250000,-0.293609,0.698345,16,0.345965
+150,B1 argmax,M1 sans les items de depense,K1 distance,,,,5,
+150,B1 argmax,M1 sans les items de depense,K2 dispersion,,,,5,
+150,B2 argmax,"conception seule, MR141",K1 distance,-0.251689,-0.693452,0.333428,17,0.328967
+150,B2 argmax,"conception seule, MR141",K2 dispersion,0.214592,-0.295011,0.673681,17,0.405959
+150,B2 argmax,M1 attitudes seules,K1 distance,-0.088693,-0.606548,0.531393,16,0.741226
+150,B2 argmax,M1 attitudes seules,K2 dispersion,0.141176,-0.422527,0.575960,16,0.601240
+150,B2 argmax,M1 sans les items de depense,K1 distance,,,,5,
+150,B2 argmax,M1 sans les items de depense,K2 dispersion,,,,5,
+150,B3 foret,"conception seule, MR141",K1 distance,-0.131208,-0.553316,0.392841,17,0.611139
+150,B3 foret,"conception seule, MR141",K2 dispersion,0.150828,-0.350224,0.599770,17,0.560044
+150,B3 foret,M1 attitudes seules,K1 distance,-0.036846,-0.654737,0.572733,16,0.895410
+150,B3 foret,M1 attitudes seules,K2 dispersion,0.070588,-0.491756,0.599436,16,0.798220
+150,B3 foret,M1 sans les items de depense,K1 distance,,,,5,
+150,B3 foret,M1 sans les items de depense,K2 dispersion,,,,5,
+150,C2,"conception seule, MR141",K1 distance,0.071078,-0.501891,0.593582,17,0.782022
+150,C2,"conception seule, MR141",K2 dispersion,0.349903,-0.116145,0.678679,17,0.163884
+150,C2,M1 attitudes seules,K1 distance,0.016188,-0.453760,0.479639,16,0.950905
+150,C2,M1 attitudes seules,K2 dispersion,0.041176,-0.475904,0.558218,16,0.883912
+150,C2,M1 sans les items de depense,K1 distance,,,,5,
+150,C2,M1 sans les items de depense,K2 dispersion,,,,5,
+150,C3,"conception seule, MR141",K1 distance,0.311275,-0.205592,0.706948,17,0.221378
+150,C3,"conception seule, MR141",K2 dispersion,0.123850,-0.371454,0.563388,17,0.635836
+150,C3,M1 attitudes seules,K1 distance,0.341176,-0.200595,0.788063,16,0.200480
+150,C3,M1 attitudes seules,K2 dispersion,-0.197059,-0.639427,0.438530,16,0.472353
+150,C3,M1 sans les items de depense,K1 distance,,,,5,
+150,C3,M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents composite,"conception seule, MR141",K1 distance,-0.149510,-0.600012,0.440316,17,0.573643
+150,agents composite,"conception seule, MR141",K2 dispersion,0.240196,-0.291597,0.651438,17,0.350865
+150,agents composite,M1 attitudes seules,K1 distance,0.036901,-0.519959,0.616786,16,0.893911
+150,agents composite,M1 attitudes seules,K2 dispersion,0.035294,-0.511981,0.551271,16,0.901410
+150,agents composite,M1 sans les items de depense,K1 distance,,,,5,
+150,agents composite,M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents demographiques (v6),"conception seule, MR141",K1 distance,-0.200980,-0.648860,0.289693,17,0.431657
+150,agents demographiques (v6),"conception seule, MR141",K2 dispersion,0.100490,-0.427536,0.520499,17,0.696630
+150,agents demographiques (v6),M1 attitudes seules,K1 distance,-0.129794,-0.588893,0.443460,16,0.627337
+150,agents demographiques (v6),M1 attitudes seules,K2 dispersion,-0.114706,-0.598835,0.423854,16,0.671733
+150,agents demographiques (v6),M1 sans les items de depense,K1 distance,,,,5,
+150,agents demographiques (v6),M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents enquete,"conception seule, MR141",K1 distance,-0.546569,-0.865357,-0.068282,17,0.026097
+150,agents enquete,"conception seule, MR141",K2 dispersion,0.186275,-0.442385,0.677884,17,0.467353
+150,agents enquete,M1 attitudes seules,K1 distance,0.064706,-0.421822,0.539646,16,0.807719
+150,agents enquete,M1 attitudes seules,K2 dispersion,0.202941,-0.340417,0.690942,16,0.456154
+150,agents enquete,M1 sans les items de depense,K1 distance,,,,5,
+150,agents enquete,M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents entretien (v3),"conception seule, MR141",K1 distance,0.155733,-0.318572,0.614597,17,0.554145
+150,agents entretien (v3),"conception seule, MR141",K2 dispersion,0.176471,-0.288751,0.559243,17,0.498350
+150,agents entretien (v3),M1 attitudes seules,K1 distance,-0.168267,-0.665179,0.433076,16,0.537846
+150,agents entretien (v3),M1 attitudes seules,K2 dispersion,0.264706,-0.383980,0.731778,16,0.318768
+150,agents entretien (v3),M1 sans les items de depense,K1 distance,,,,5,
+150,agents entretien (v3),M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents v7,"conception seule, MR141",K1 distance,-0.117791,-0.595478,0.427189,17,0.654935
+150,agents v7,"conception seule, MR141",K2 dispersion,0.392157,-0.184456,0.793288,17,0.115888
+150,agents v7,M1 attitudes seules,K1 distance,0.182487,-0.339286,0.657808,16,0.490651
+150,agents v7,M1 attitudes seules,K2 dispersion,-0.070588,-0.605425,0.584858,16,0.801820
+150,agents v7,M1 sans les items de depense,K1 distance,,,,5,
+150,agents v7,M1 sans les items de depense,K2 dispersion,,,,5,
+150,agents v8,"conception seule, MR141",K1 distance,0.107976,-0.425014,0.548964,17,0.679332
+150,agents v8,"conception seule, MR141",K2 dispersion,0.095588,-0.464210,0.621730,17,0.721828
+150,agents v8,M1 attitudes seules,K1 distance,0.322533,-0.293444,0.750220,16,0.215978
+150,agents v8,M1 attitudes seules,K2 dispersion,0.261765,-0.314478,0.788391,16,0.323768
+150,agents v8,M1 sans les items de depense,K1 distance,,,,5,
+150,agents v8,M1 sans les items de depense,K2 dispersion,,,,5,
+150,humains vague 2,"conception seule, MR141",K1 distance,-0.141278,-0.617834,0.368838,17,0.589041
+150,humains vague 2,"conception seule, MR141",K2 dispersion,-0.038013,-0.527997,0.478486,17,0.886311
+150,humains vague 2,M1 attitudes seules,K1 distance,-0.181152,-0.693869,0.489601,16,0.498250
+150,humains vague 2,M1 attitudes seules,K2 dispersion,-0.205882,-0.666704,0.408494,16,0.439656
+150,humains vague 2,M1 sans les items de depense,K1 distance,,,,5,
+150,humains vague 2,M1 sans les items de depense,K2 dispersion,,,,5,

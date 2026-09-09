@@ -1,0 +1,157 @@
+perimetre,hypothese,condition,score,metrique,rho_spearman,ic_items_bas,ic_items_haut,n_items,p_permutation
+1052,K1 distance,B0 mode,M1 mode,distance,-0.165638,-0.525955,0.232423,21,0.472526
+1052,K2 dispersion,B0 mode,M1 mode,ratio_entropie,0.061178,-0.404083,0.541292,21,0.799610
+1052,K1 distance,B0 mode,M2 mode plus conception,distance,0.198074,-0.120450,0.529824,38,0.235888
+1052,K2 dispersion,B0 mode,M2 mode plus conception,ratio_entropie,-0.123271,-0.386948,0.129161,38,0.488926
+1052,K1 distance,B0 mode,M3 toutes sources,distance,0.231501,-0.065080,0.546224,39,0.159042
+1052,K2 dispersion,B0 mode,M3 toutes sources,ratio_entropie,-0.128676,-0.375448,0.113767,39,0.462077
+1052,K1 distance,B0 tirage,M1 mode,distance,-0.152245,-0.508685,0.298674,21,0.509625
+1052,K2 dispersion,B0 tirage,M1 mode,ratio_entropie,-0.042222,-0.430277,0.369121,21,0.855007
+1052,K1 distance,B0 tirage,M2 mode plus conception,distance,-0.004380,-0.324433,0.315436,38,0.978801
+1052,K2 dispersion,B0 tirage,M2 mode plus conception,ratio_entropie,0.064562,-0.281252,0.369489,38,0.697165
+1052,K1 distance,B0 tirage,M3 toutes sources,distance,0.003950,-0.303995,0.310421,39,0.982001
+1052,K2 dispersion,B0 tirage,M3 toutes sources,ratio_entropie,0.095956,-0.194417,0.396717,39,0.562322
+1052,K1 distance,B1 argmax,M1 mode,distance,-0.172134,-0.634593,0.355699,21,0.452827
+1052,K2 dispersion,B1 argmax,M1 mode,ratio_entropie,-0.009743,-0.474896,0.428653,21,0.965502
+1052,K1 distance,B1 argmax,M2 mode plus conception,distance,-0.132845,-0.443713,0.205091,38,0.418379
+1052,K2 dispersion,B1 argmax,M2 mode plus conception,ratio_entropie,0.115993,-0.228046,0.433553,38,0.492725
+1052,K1 distance,B1 argmax,M3 toutes sources,distance,-0.057189,-0.389476,0.251393,39,0.723564
+1052,K2 dispersion,B1 argmax,M3 toutes sources,ratio_entropie,0.113670,-0.210857,0.414990,39,0.485576
+1052,K1 distance,B2 argmax,M1 mode,distance,-0.150698,-0.556175,0.321075,21,0.504575
+1052,K2 dispersion,B2 argmax,M1 mode,ratio_entropie,-0.116921,-0.576522,0.356190,21,0.611619
+1052,K1 distance,B2 argmax,M2 mode plus conception,distance,-0.349529,-0.604407,-0.033528,38,0.034048
+1052,K2 dispersion,B2 argmax,M2 mode plus conception,ratio_entropie,0.204531,-0.121852,0.522886,38,0.218739
+1052,K1 distance,B2 argmax,M3 toutes sources,distance,-0.256200,-0.547225,0.070422,39,0.115494
+1052,K2 dispersion,B2 argmax,M3 toutes sources,ratio_entropie,0.162567,-0.193271,0.479675,39,0.326934
+1052,K1 distance,B3 foret,M1 mode,distance,-0.065606,-0.564479,0.527202,21,0.775461
+1052,K2 dispersion,B3 foret,M1 mode,ratio_entropie,-0.103280,-0.535671,0.340306,21,0.658467
+1052,K1 distance,B3 foret,M2 mode plus conception,distance,-0.029326,-0.375487,0.323692,38,0.859407
+1052,K2 dispersion,B3 foret,M2 mode plus conception,ratio_entropie,0.059641,-0.278285,0.399056,38,0.716364
+1052,K1 distance,B3 foret,M3 toutes sources,distance,0.042816,-0.295531,0.359744,39,0.799560
+1052,K2 dispersion,B3 foret,M3 toutes sources,ratio_entropie,0.047981,-0.267519,0.371351,39,0.776261
+1052,K1 distance,agents composite,M1 mode,distance,-0.092268,-0.522802,0.345554,21,0.688316
+1052,K2 dispersion,agents composite,M1 mode,ratio_entropie,0.218902,-0.267408,0.577546,21,0.340683
+1052,K1 distance,agents composite,M2 mode plus conception,distance,-0.144561,-0.413555,0.169942,38,0.386031
+1052,K2 dispersion,agents composite,M2 mode plus conception,ratio_entropie,-0.310335,-0.559266,-0.019909,38,0.057947
+1052,K1 distance,agents composite,M3 toutes sources,distance,-0.147282,-0.430101,0.152797,39,0.364682
+1052,K2 dispersion,agents composite,M3 toutes sources,ratio_entropie,-0.333316,-0.557270,-0.061340,39,0.039798
+1052,K1 distance,agents demographiques (v6),M1 mode,distance,-0.003897,-0.485973,0.486648,21,0.986801
+1052,K2 dispersion,agents demographiques (v6),M1 mode,ratio_entropie,-0.106528,-0.498363,0.357593,21,0.643668
+1052,K1 distance,agents demographiques (v6),M2 mode plus conception,distance,-0.030092,-0.344009,0.312011,38,0.859657
+1052,K2 dispersion,agents demographiques (v6),M2 mode plus conception,ratio_entropie,-0.063577,-0.378529,0.253258,38,0.707415
+1052,K1 distance,agents demographiques (v6),M3 toutes sources,distance,0.041500,-0.293286,0.366618,39,0.801460
+1052,K2 dispersion,agents demographiques (v6),M3 toutes sources,ratio_entropie,-0.108103,-0.419326,0.219285,39,0.504425
+1052,K1 distance,agents enquete,M1 mode,distance,0.078597,-0.306405,0.504956,21,0.733663
+1052,K2 dispersion,agents enquete,M1 mode,ratio_entropie,0.021436,-0.380099,0.466175,21,0.927154
+1052,K1 distance,agents enquete,M2 mode plus conception,distance,0.097062,-0.238207,0.409050,38,0.560322
+1052,K2 dispersion,agents enquete,M2 mode plus conception,ratio_entropie,0.097609,-0.214441,0.377057,38,0.561072
+1052,K1 distance,agents enquete,M3 toutes sources,distance,0.050509,-0.279581,0.377895,39,0.756062
+1052,K2 dispersion,agents enquete,M3 toutes sources,ratio_entropie,0.069943,-0.226587,0.344182,39,0.674466
+1052,K1 distance,agents entretien (v3),M1 mode,distance,-0.202079,-0.640922,0.293646,21,0.379581
+1052,K2 dispersion,agents entretien (v3),M1 mode,ratio_entropie,0.368301,-0.094915,0.671766,21,0.099945
+1052,K1 distance,agents entretien (v3),M2 mode plus conception,distance,-0.081528,-0.421083,0.265273,38,0.623319
+1052,K2 dispersion,agents entretien (v3),M2 mode plus conception,ratio_entropie,-0.203644,-0.494753,0.117526,38,0.218789
+1052,K1 distance,agents entretien (v3),M3 toutes sources,distance,-0.027938,-0.364964,0.338969,39,0.867857
+1052,K2 dispersion,agents entretien (v3),M3 toutes sources,ratio_entropie,-0.248798,-0.535449,0.076444,39,0.128194
+1052,K1 distance,agents v7,M1 mode,distance,0.133810,-0.354365,0.559555,21,0.563122
+1052,K2 dispersion,agents v7,M1 mode,ratio_entropie,-0.195518,-0.652083,0.333038,21,0.390080
+1052,K1 distance,agents v7,M2 mode plus conception,distance,0.155715,-0.171053,0.457382,38,0.345233
+1052,K2 dispersion,agents v7,M2 mode plus conception,ratio_entropie,-0.037752,-0.318444,0.275823,38,0.823559
+1052,K1 distance,agents v7,M3 toutes sources,distance,0.188370,-0.146844,0.505157,39,0.248138
+1052,K2 dispersion,agents v7,M3 toutes sources,ratio_entropie,-0.075307,-0.359028,0.217189,39,0.647968
+1052,K1 distance,agents v8,M1 mode,distance,0.193569,-0.312448,0.585322,21,0.402480
+1052,K2 dispersion,agents v8,M1 mode,ratio_entropie,0.198766,-0.234504,0.588982,21,0.393530
+1052,K1 distance,agents v8,M2 mode plus conception,distance,-0.188981,-0.465960,0.137777,38,0.255287
+1052,K2 dispersion,agents v8,M2 mode plus conception,ratio_entropie,-0.104722,-0.415324,0.191875,38,0.530423
+1052,K1 distance,agents v8,M3 toutes sources,distance,-0.140999,-0.422981,0.174874,39,0.392780
+1052,K2 dispersion,agents v8,M3 toutes sources,ratio_entropie,-0.148793,-0.431303,0.158732,39,0.364482
+1052,K1 distance,humains vague 2,M1 mode,distance,0.135566,-0.369264,0.577904,21,0.554122
+1052,K2 dispersion,humains vague 2,M1 mode,ratio_entropie,-0.159143,-0.576126,0.281538,21,0.484776
+1052,K1 distance,humains vague 2,M2 mode plus conception,distance,0.226559,-0.133266,0.526203,38,0.172891
+1052,K2 dispersion,humains vague 2,M2 mode plus conception,ratio_entropie,-0.118291,-0.437201,0.209513,38,0.480726
+1052,K1 distance,humains vague 2,M3 toutes sources,distance,0.167865,-0.189243,0.472585,39,0.305485
+1052,K2 dispersion,humains vague 2,M3 toutes sources,ratio_entropie,-0.083000,-0.391089,0.218741,39,0.617969
+150,K1 distance,B0 mode,M1 mode,distance,-0.299838,-0.707663,0.154524,21,0.183791
+150,K2 dispersion,B0 mode,M1 mode,ratio_entropie,0.099413,-0.403636,0.522129,21,0.674766
+150,K1 distance,B0 mode,M2 mode plus conception,distance,0.114669,-0.214038,0.442108,38,0.486176
+150,K2 dispersion,B0 mode,M2 mode plus conception,ratio_entropie,-0.113092,-0.360826,0.129151,38,0.520674
+150,K1 distance,B0 mode,M3 toutes sources,distance,0.152245,-0.168971,0.477085,39,0.351532
+150,K2 dispersion,B0 mode,M3 toutes sources,ratio_entropie,-0.119144,-0.378991,0.128855,39,0.488676
+150,K1 distance,B0 tirage,M1 mode,distance,-0.171448,-0.623235,0.367400,21,0.448178
+150,K2 dispersion,B0 tirage,M1 mode,ratio_entropie,0.163690,-0.320185,0.594786,21,0.481976
+150,K1 distance,B0 tirage,M2 mode plus conception,distance,-0.256040,-0.510685,0.045731,38,0.118094
+150,K2 dispersion,B0 tirage,M2 mode plus conception,ratio_entropie,-0.053838,-0.362022,0.263647,38,0.746713
+150,K1 distance,B0 tirage,M3 toutes sources,distance,-0.166321,-0.448085,0.135761,39,0.312484
+150,K2 dispersion,B0 tirage,M3 toutes sources,ratio_entropie,-0.093223,-0.397133,0.229050,39,0.569822
+150,K1 distance,B1 argmax,M1 mode,distance,-0.116710,-0.571334,0.368722,21,0.611319
+150,K2 dispersion,B1 argmax,M1 mode,ratio_entropie,0.095486,-0.343954,0.535845,21,0.678266
+150,K1 distance,B1 argmax,M2 mode plus conception,distance,-0.163482,-0.448016,0.186749,38,0.318634
+150,K2 dispersion,B1 argmax,M2 mode plus conception,ratio_entropie,0.126060,-0.194525,0.430857,38,0.450177
+150,K1 distance,B1 argmax,M3 toutes sources,distance,-0.077987,-0.399190,0.254706,39,0.635518
+150,K2 dispersion,B1 argmax,M3 toutes sources,ratio_entropie,0.111240,-0.210331,0.394645,39,0.499325
+150,K1 distance,B2 argmax,M1 mode,distance,-0.089193,-0.513478,0.362514,21,0.697415
+150,K2 dispersion,B2 argmax,M1 mode,ratio_entropie,-0.101981,-0.559930,0.347338,21,0.658117
+150,K1 distance,B2 argmax,M2 mode plus conception,distance,-0.278800,-0.535462,0.030219,38,0.089946
+150,K2 dispersion,B2 argmax,M2 mode plus conception,ratio_entropie,0.210330,-0.151227,0.518095,38,0.207840
+150,K1 distance,B2 argmax,M3 toutes sources,distance,-0.190722,-0.488514,0.129945,39,0.242738
+150,K2 dispersion,B2 argmax,M3 toutes sources,ratio_entropie,0.167932,-0.173744,0.492170,39,0.303185
+150,K1 distance,B3 foret,M1 mode,distance,0.032542,-0.467958,0.562763,21,0.890105
+150,K2 dispersion,B3 foret,M1 mode,ratio_entropie,-0.057811,-0.507033,0.375217,21,0.803460
+150,K1 distance,B3 foret,M2 mode plus conception,distance,-0.043645,-0.358694,0.280496,38,0.792460
+150,K2 dispersion,B3 foret,M2 mode plus conception,ratio_entropie,0.054944,-0.289111,0.396146,38,0.743763
+150,K1 distance,B3 foret,M3 toutes sources,distance,0.027200,-0.300792,0.360397,39,0.870206
+150,K2 dispersion,B3 foret,M3 toutes sources,ratio_entropie,0.055581,-0.259297,0.381302,39,0.740363
+150,K1 distance,C2,M1 mode,distance,-0.021442,-0.452563,0.451080,21,0.924254
+150,K2 dispersion,C2,M1 mode,ratio_entropie,0.045469,-0.435962,0.501832,21,0.844358
+150,K1 distance,C2,M2 mode plus conception,distance,0.057018,-0.265329,0.369639,38,0.733263
+150,K2 dispersion,C2,M2 mode plus conception,ratio_entropie,-0.248877,-0.556914,0.093071,38,0.134293
+150,K1 distance,C2,M3 toutes sources,distance,0.126133,-0.210903,0.440577,39,0.439428
+150,K2 dispersion,C2,M3 toutes sources,ratio_entropie,-0.296606,-0.585788,0.044110,39,0.067597
+150,K1 distance,C3,M1 mode,distance,0.289474,-0.170786,0.675634,21,0.199940
+150,K2 dispersion,C3,M1 mode,ratio_entropie,-0.139656,-0.608971,0.356553,21,0.539223
+150,K1 distance,C3,M2 mode plus conception,distance,0.099874,-0.231927,0.406952,38,0.552622
+150,K2 dispersion,C3,M2 mode plus conception,ratio_entropie,0.133093,-0.232475,0.460458,38,0.421079
+150,K1 distance,C3,M3 toutes sources,distance,0.158492,-0.190011,0.466762,39,0.336833
+150,K2 dispersion,C3,M3 toutes sources,ratio_entropie,0.102759,-0.250535,0.422165,39,0.526874
+150,K1 distance,agents composite,M1 mode,distance,-0.170192,-0.659685,0.376737,21,0.460477
+150,K2 dispersion,agents composite,M1 mode,ratio_entropie,0.183826,-0.320617,0.591608,21,0.421529
+150,K1 distance,agents composite,M2 mode plus conception,distance,-0.202738,-0.478583,0.104336,38,0.220289
+150,K2 dispersion,agents composite,M2 mode plus conception,ratio_entropie,-0.296985,-0.533134,-0.015420,38,0.068297
+150,K1 distance,agents composite,M3 toutes sources,distance,-0.223477,-0.497221,0.088714,39,0.172641
+150,K2 dispersion,agents composite,M3 toutes sources,ratio_entropie,-0.299914,-0.529868,0.003912,39,0.061247
+150,K1 distance,agents demographiques (v6),M1 mode,distance,-0.028302,-0.514791,0.450776,21,0.900105
+150,K2 dispersion,agents demographiques (v6),M1 mode,ratio_entropie,-0.176031,-0.589804,0.284451,21,0.444178
+150,K1 distance,agents demographiques (v6),M2 mode plus conception,distance,-0.057378,-0.376724,0.273744,38,0.734863
+150,K2 dispersion,agents demographiques (v6),M2 mode plus conception,ratio_entropie,-0.068939,-0.381267,0.259948,38,0.679166
+150,K1 distance,agents demographiques (v6),M3 toutes sources,distance,0.016306,-0.337677,0.351771,39,0.921454
+150,K2 dispersion,agents demographiques (v6),M3 toutes sources,ratio_entropie,-0.116909,-0.423102,0.196214,39,0.476926
+150,K1 distance,agents enquete,M1 mode,distance,0.036074,-0.369683,0.451141,21,0.878206
+150,K2 dispersion,agents enquete,M1 mode,ratio_entropie,0.120169,-0.316966,0.547208,21,0.602270
+150,K1 distance,agents enquete,M2 mode plus conception,distance,-0.045151,-0.386780,0.300406,38,0.786461
+150,K2 dispersion,agents enquete,M2 mode plus conception,ratio_entropie,0.133939,-0.164412,0.396248,38,0.420929
+150,K1 distance,agents enquete,M3 toutes sources,distance,-0.094715,-0.419366,0.239558,39,0.563472
+150,K2 dispersion,agents enquete,M3 toutes sources,ratio_entropie,0.133003,-0.137202,0.402534,39,0.411829
+150,K1 distance,agents entretien (v3),M1 mode,distance,-0.038788,-0.520982,0.459496,21,0.865607
+150,K2 dispersion,agents entretien (v3),M1 mode,ratio_entropie,0.352712,-0.105893,0.692672,21,0.118494
+150,K1 distance,agents entretien (v3),M2 mode plus conception,distance,0.008817,-0.320321,0.380925,38,0.957652
+150,K2 dispersion,agents entretien (v3),M2 mode plus conception,ratio_entropie,-0.215900,-0.502658,0.098104,38,0.189641
+150,K1 distance,agents entretien (v3),M3 toutes sources,distance,0.070253,-0.290087,0.423170,39,0.674216
+150,K2 dispersion,agents entretien (v3),M3 toutes sources,ratio_entropie,-0.260135,-0.539067,0.066077,39,0.108895
+150,K1 distance,agents v7,M1 mode,distance,0.138772,-0.339531,0.559142,21,0.540673
+150,K2 dispersion,agents v7,M1 mode,ratio_entropie,-0.143553,-0.592195,0.345272,21,0.536573
+150,K1 distance,agents v7,M2 mode plus conception,distance,0.155256,-0.168559,0.461742,38,0.348683
+150,K2 dispersion,agents v7,M2 mode plus conception,ratio_entropie,0.005362,-0.305102,0.303157,38,0.972651
+150,K1 distance,agents v7,M3 toutes sources,distance,0.171248,-0.153139,0.466639,39,0.293535
+150,K2 dispersion,agents v7,M3 toutes sources,ratio_entropie,-0.008705,-0.300092,0.271952,39,0.959352
+150,K1 distance,agents v8,M1 mode,distance,0.173927,-0.331416,0.592047,21,0.443278
+150,K2 dispersion,agents v8,M1 mode,ratio_entropie,0.242286,-0.202507,0.655153,21,0.291885
+150,K1 distance,agents v8,M2 mode plus conception,distance,-0.119492,-0.422897,0.189784,38,0.473576
+150,K2 dispersion,agents v8,M2 mode plus conception,ratio_entropie,-0.182306,-0.458638,0.137152,38,0.272786
+150,K1 distance,agents v8,M3 toutes sources,distance,-0.065566,-0.367626,0.250287,39,0.694765
+150,K2 dispersion,agents v8,M3 toutes sources,ratio_entropie,-0.228048,-0.521537,0.074549,39,0.160542
+150,K1 distance,humains vague 2,M1 mode,distance,-0.233281,-0.662102,0.326149,21,0.303685
+150,K2 dispersion,humains vague 2,M1 mode,ratio_entropie,-0.280611,-0.695039,0.229855,21,0.217639
+150,K1 distance,humains vague 2,M2 mode plus conception,distance,-0.045395,-0.370790,0.292129,38,0.789511
+150,K2 dispersion,humains vague 2,M2 mode plus conception,ratio_entropie,-0.127708,-0.444563,0.222304,38,0.437678
+150,K1 distance,humains vague 2,M3 toutes sources,distance,-0.101504,-0.424843,0.250790,39,0.530223
+150,K2 dispersion,humains vague 2,M3 toutes sources,ratio_entropie,-0.117522,-0.444139,0.227058,39,0.475276

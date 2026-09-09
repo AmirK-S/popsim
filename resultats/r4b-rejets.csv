@@ -1,0 +1,5 @@
+cle_modele,cellules,echecs_premiere_tentative,taux_echec_premiere,relances,relances_rattrapees,part_relances_rattrapees,rejets_apres_relance,taux_rejet_apres_relance,rejets_K_sup_4,K_median_des_rejets,motifs,K_des_rejets
+q4,894,13,0.0145413870246085,13,13,1.0,0,0.0,0,,,
+q4nogab,894,16,0.017897091722595078,16,15,0.9375,1,0.0011185682326621924,1,6.0,lettre A donnee deux fois x1,K=6 x1
+q4base,894,24,0.026845637583892617,24,24,1.0,0,0.0,0,,,
+q4hyb,894,28,0.03131991051454139,28,6,0.21428571428571427,22,0.024608501118568233,22,7.0,"aucune ligne au format demande x13; lettre A donnee deux fois x7; somme 110.0 hors de [95, 105] x1; lettres manquantes x1",K=5 x2; K=6 x7; K=7 x6; K=8 x1; K=12 x6

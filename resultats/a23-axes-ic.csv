@@ -1,0 +1,145 @@
+condition,axe,mesure,inter_humain_vague1,ratio_inter,inter_ic_bas,inter_ic_haut,p_sup,ratio_intra,intra_ic_bas,intra_ic_haut
+humains vague 1,gender,entropie,1.6981,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,gender,gini_simpson,0.5670,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,race,entropie,0.8383,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,race,gini_simpson,0.4697,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,political_ideology,entropie,7.1233,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,political_ideology,gini_simpson,3.4325,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,age,entropie,4.5011,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,age,gini_simpson,1.9355,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,education,entropie,1.9591,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,education,gini_simpson,0.7041,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,profil croise,entropie,9.2185,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 1,profil croise,gini_simpson,4.1424,1.0000,1.0000,1.0000,0.0000,1.0000,1.0000,1.0000
+humains vague 2,gender,entropie,1.6981,0.8319,0.4366,1.3185,0.1920,1.0002,0.9897,1.0112
+humains vague 2,gender,gini_simpson,0.5670,0.7771,0.2433,1.2853,0.1580,1.0002,0.9902,1.0108
+humains vague 2,race,entropie,0.8383,1.4575,-5.7141,7.8656,0.8540,0.9966,0.9860,1.0075
+humains vague 2,race,gini_simpson,0.4697,1.2720,-1.7637,4.7504,0.7810,0.9970,0.9863,1.0068
+humains vague 2,political_ideology,entropie,7.1233,1.1118,0.9342,1.4115,0.8860,0.9947,0.9832,1.0081
+humains vague 2,political_ideology,gini_simpson,3.4325,1.0118,0.8601,1.2027,0.5620,0.9987,0.9877,1.0128
+humains vague 2,age,entropie,4.5011,1.0970,0.8260,1.6604,0.7640,0.9964,0.9863,1.0062
+humains vague 2,age,gini_simpson,1.9355,1.0232,0.7721,1.4412,0.5550,0.9981,0.9879,1.0091
+humains vague 2,education,entropie,1.9591,1.0628,-0.9163,3.7669,0.5910,0.9979,0.9871,1.0096
+humains vague 2,education,gini_simpson,0.7041,1.1677,-1.8215,4.0874,0.7550,0.9972,0.9864,1.0083
+humains vague 2,profil croise,entropie,9.2185,0.9680,0.7026,1.1930,0.3510,0.9990,0.9867,1.0123
+humains vague 2,profil croise,gini_simpson,4.1424,0.9048,0.5863,1.0703,0.1240,1.0027,0.9912,1.0157
+C2 argmax,gender,entropie,1.6981,0.0746,-1.1434,1.1680,0.0420,0.6588,0.6204,0.6950
+C2 argmax,gender,gini_simpson,0.5670,0.0834,-1.4272,1.2041,0.0460,0.6654,0.6237,0.7058
+C2 argmax,race,entropie,0.8383,4.8381,-37.4600,55.4233,0.9970,0.6353,0.5951,0.6727
+C2 argmax,race,gini_simpson,0.4697,3.3144,-14.5676,30.0069,0.9890,0.6451,0.6002,0.6879
+C2 argmax,political_ideology,entropie,7.1233,8.1616,5.4344,15.5491,1.0000,0.3520,0.3314,0.3705
+C2 argmax,political_ideology,gini_simpson,3.4325,6.9286,4.9162,11.4926,1.0000,0.3645,0.3406,0.3864
+C2 argmax,age,entropie,4.5011,1.8675,1.0870,4.1125,0.9870,0.6238,0.5830,0.6624
+C2 argmax,age,gini_simpson,1.9355,1.3984,0.7720,2.9596,0.8590,0.6423,0.5979,0.6858
+C2 argmax,education,entropie,1.9591,2.5985,-21.0945,25.7366,0.9570,0.6329,0.5942,0.6694
+C2 argmax,education,gini_simpson,0.7041,2.2103,-14.5878,19.8222,0.8830,0.6474,0.6046,0.6884
+C2 argmax,profil croise,entropie,9.2185,4.8838,2.8887,16.0075,1.0000,0.4127,0.3835,0.4430
+C2 argmax,profil croise,gini_simpson,4.1424,4.6002,2.6885,13.2599,1.0000,0.4308,0.3986,0.4641
+C3 argmax,gender,entropie,1.6981,0.6642,0.0928,1.1023,0.0680,0.6727,0.6562,0.6886
+C3 argmax,gender,gini_simpson,0.5670,0.5181,-0.2846,0.9643,0.0200,0.6831,0.6654,0.6997
+C3 argmax,race,entropie,0.8383,-0.0866,-10.2808,8.3635,0.0360,0.6757,0.6586,0.6911
+C3 argmax,race,gini_simpson,0.4697,-0.0040,-5.8010,4.7245,0.0070,0.6866,0.6684,0.7032
+C3 argmax,political_ideology,entropie,7.1233,0.7329,0.4720,0.9855,0.0220,0.6675,0.6495,0.6848
+C3 argmax,political_ideology,gini_simpson,3.4325,0.7225,0.5027,0.9320,0.0030,0.6801,0.6616,0.6987
+C3 argmax,age,entropie,4.5011,0.4345,-0.0824,0.7522,0.0000,0.6758,0.6605,0.6908
+C3 argmax,age,gini_simpson,1.9355,0.4327,-0.0461,0.7266,0.0000,0.6885,0.6708,0.7054
+C3 argmax,education,entropie,1.9591,0.9663,-3.9406,4.5016,0.4830,0.6680,0.6515,0.6829
+C3 argmax,education,gini_simpson,0.7041,0.9705,-2.5119,4.5531,0.5140,0.6792,0.6619,0.6946
+C3 argmax,profil croise,entropie,9.2185,0.5690,0.1630,0.8199,0.0030,0.6743,0.6582,0.6911
+C3 argmax,profil croise,gini_simpson,4.1424,0.5005,-0.0543,0.7266,0.0000,0.6924,0.6750,0.7108
+agents composite,gender,entropie,1.6981,0.9543,0.2580,1.6692,0.4090,0.8889,0.8734,0.9049
+agents composite,gender,gini_simpson,0.5670,1.1551,0.2516,2.2152,0.6050,0.9047,0.8872,0.9215
+agents composite,race,entropie,0.8383,1.4863,-6.8397,9.5928,0.7590,0.8875,0.8717,0.9027
+agents composite,race,gini_simpson,0.4697,1.3436,-2.1450,6.4333,0.7510,0.9046,0.8880,0.9201
+agents composite,political_ideology,entropie,7.1233,2.2040,1.6858,3.3613,1.0000,0.8369,0.8181,0.8542
+agents composite,political_ideology,gini_simpson,3.4325,2.0350,1.6179,2.7288,1.0000,0.8539,0.8338,0.8732
+agents composite,age,entropie,4.5011,1.2601,0.8717,2.0684,0.8820,0.8806,0.8644,0.8962
+agents composite,age,gini_simpson,1.9355,1.1692,0.7829,1.8714,0.7910,0.9006,0.8826,0.9174
+agents composite,education,entropie,1.9591,1.2786,-4.1599,4.4189,0.7680,0.8845,0.8691,0.8996
+agents composite,education,gini_simpson,0.7041,1.3433,-4.3590,5.9531,0.7830,0.9022,0.8854,0.9185
+agents composite,profil croise,entropie,9.2185,1.6257,1.2128,3.4731,1.0000,0.8492,0.8314,0.8661
+agents composite,profil croise,gini_simpson,4.1424,1.5920,1.2114,3.0115,1.0000,0.8669,0.8483,0.8843
+agents entretien (v3),gender,entropie,1.6981,0.8535,0.1658,1.6530,0.3120,0.8605,0.8410,0.8792
+agents entretien (v3),gender,gini_simpson,0.5670,0.9800,0.0810,2.1885,0.4300,0.8605,0.8378,0.8816
+agents entretien (v3),race,entropie,0.8383,1.9801,-11.2493,16.2508,0.8690,0.8560,0.8361,0.8759
+agents entretien (v3),race,gini_simpson,0.4697,1.2680,-2.3708,6.4665,0.6530,0.8596,0.8365,0.8815
+agents entretien (v3),political_ideology,entropie,7.1233,2.9156,2.0905,4.7750,1.0000,0.7769,0.7527,0.7986
+agents entretien (v3),political_ideology,gini_simpson,3.4325,2.6594,2.0029,3.7855,1.0000,0.7768,0.7510,0.8020
+agents entretien (v3),age,entropie,4.5011,1.3619,0.9016,2.4915,0.9370,0.8477,0.8270,0.8683
+agents entretien (v3),age,gini_simpson,1.9355,1.1150,0.6360,1.8505,0.6970,0.8562,0.8328,0.8786
+agents entretien (v3),education,entropie,1.9591,1.5454,-7.0486,6.3568,0.8980,0.8522,0.8309,0.8733
+agents entretien (v3),education,gini_simpson,0.7041,1.5624,-6.7945,7.6399,0.8560,0.8546,0.8307,0.8798
+agents entretien (v3),profil croise,entropie,9.2185,2.1230,1.4416,5.3675,1.0000,0.7873,0.7657,0.8082
+agents entretien (v3),profil croise,gini_simpson,4.1424,2.0329,1.4004,4.5559,1.0000,0.7932,0.7702,0.8167
+agents enquete,gender,entropie,1.6981,0.8911,0.1205,1.6836,0.3350,0.8517,0.8319,0.8707
+agents enquete,gender,gini_simpson,0.5670,0.9892,-0.1405,2.0195,0.4480,0.8735,0.8504,0.8957
+agents enquete,race,entropie,0.8383,1.1693,-7.1911,8.2895,0.5790,0.8509,0.8319,0.8685
+agents enquete,race,gini_simpson,0.4697,1.1084,-2.2186,6.3345,0.5750,0.8735,0.8523,0.8934
+agents enquete,political_ideology,entropie,7.1233,2.4343,1.8241,3.7203,1.0000,0.7874,0.7666,0.8061
+agents enquete,political_ideology,gini_simpson,3.4325,2.2612,1.7777,3.0460,1.0000,0.8088,0.7875,0.8287
+agents enquete,age,entropie,4.5011,0.9860,0.4427,1.5937,0.4750,0.8480,0.8274,0.8670
+agents enquete,age,gini_simpson,1.9355,0.9577,0.4255,1.5217,0.4070,0.8728,0.8507,0.8949
+agents enquete,education,entropie,1.9591,1.2140,-2.8186,5.6437,0.7120,0.8472,0.8272,0.8660
+agents enquete,education,gini_simpson,0.7041,1.3269,-4.7514,5.2409,0.7600,0.8702,0.8467,0.8925
+agents enquete,profil croise,entropie,9.2185,1.8974,1.3270,4.7176,1.0000,0.7924,0.7719,0.8131
+agents enquete,profil croise,gini_simpson,4.1424,1.8532,1.2882,3.8625,1.0000,0.8171,0.7960,0.8388
+agents demographiques (v6),gender,entropie,1.6981,0.9056,0.4222,2.0986,0.3960,0.6258,0.6012,0.6492
+agents demographiques (v6),gender,gini_simpson,0.5670,0.8479,0.2925,2.5489,0.3690,0.6291,0.5993,0.6569
+agents demographiques (v6),race,entropie,0.8383,3.8990,-29.9493,39.8027,0.9950,0.6132,0.5889,0.6355
+agents demographiques (v6),race,gini_simpson,0.4697,2.3037,-12.5563,20.2713,0.9590,0.6205,0.5931,0.6465
+agents demographiques (v6),political_ideology,entropie,7.1233,0.2431,-0.2470,0.6615,0.0010,0.6404,0.6158,0.6652
+agents demographiques (v6),political_ideology,gini_simpson,3.4325,0.2240,-0.1795,0.6204,0.0000,0.6502,0.6208,0.6799
+agents demographiques (v6),age,entropie,4.5011,0.9941,0.5150,2.1027,0.5140,0.6161,0.5905,0.6398
+agents demographiques (v6),age,gini_simpson,1.9355,0.8884,0.4303,1.8600,0.3450,0.6242,0.5944,0.6526
+agents demographiques (v6),education,entropie,1.9591,2.6572,-20.1103,22.0657,0.9970,0.6052,0.5783,0.6308
+agents demographiques (v6),education,gini_simpson,0.7041,3.1623,-28.7325,27.9399,0.9990,0.6073,0.5769,0.6381
+agents demographiques (v6),profil croise,entropie,9.2185,0.6888,0.3636,1.2723,0.1060,0.6196,0.5922,0.6452
+agents demographiques (v6),profil croise,gini_simpson,4.1424,0.6988,0.3700,1.2955,0.1080,0.6272,0.5984,0.6561
+agents v7,gender,entropie,1.6981,0.4252,-0.2363,1.4799,0.0930,0.6394,0.5942,0.6832
+agents v7,gender,gini_simpson,0.5670,0.6571,0.0674,2.2671,0.2510,0.6206,0.5798,0.6627
+agents v7,race,entropie,0.8383,2.0934,-12.5724,21.3194,0.8920,0.6292,0.5886,0.6702
+agents v7,race,gini_simpson,0.4697,0.9932,-3.3233,5.8109,0.5010,0.6184,0.5775,0.6598
+agents v7,political_ideology,entropie,7.1233,0.3592,-0.1011,0.8487,0.0080,0.6417,0.6022,0.6823
+agents v7,political_ideology,gini_simpson,3.4325,0.2362,-0.0743,0.5510,0.0000,0.6397,0.5997,0.6804
+agents v7,age,entropie,4.5011,0.4988,-0.1087,1.1602,0.0610,0.6333,0.5928,0.6727
+agents v7,age,gini_simpson,1.9355,0.3568,-0.1690,0.8433,0.0120,0.6271,0.5871,0.6671
+agents v7,education,entropie,1.9591,-0.0054,-6.2183,4.9548,0.0360,0.6415,0.5997,0.6837
+agents v7,education,gini_simpson,0.7041,-0.0416,-4.5363,5.4881,0.0250,0.6273,0.5858,0.6689
+agents v7,profil croise,entropie,9.2185,0.5107,-0.1092,0.9747,0.0200,0.6291,0.5879,0.6685
+agents v7,profil croise,gini_simpson,4.1424,0.3841,-0.2575,0.7163,0.0010,0.6326,0.5935,0.6716
+agents v8,gender,entropie,1.6981,0.1285,-1.0230,1.5377,0.0780,0.7898,0.7510,0.8229
+agents v8,gender,gini_simpson,0.5670,0.0092,-1.7681,1.6143,0.0740,0.8065,0.7603,0.8466
+agents v8,race,entropie,0.8383,5.1746,-38.8357,60.1220,0.9890,0.7650,0.7257,0.8007
+agents v8,race,gini_simpson,0.4697,4.0063,-21.5573,35.8752,0.9890,0.7812,0.7352,0.8224
+agents v8,political_ideology,entropie,7.1233,8.9529,5.9966,16.8013,1.0000,0.4577,0.4238,0.4925
+agents v8,political_ideology,gini_simpson,3.4325,7.8538,5.5297,12.9426,1.0000,0.4668,0.4338,0.5024
+agents v8,age,entropie,4.5011,3.0707,1.8713,7.2364,1.0000,0.7293,0.6935,0.7655
+agents v8,age,gini_simpson,1.9355,2.8117,1.7176,6.2551,1.0000,0.7494,0.7091,0.7895
+agents v8,education,entropie,1.9591,0.9634,-6.4831,10.9373,0.4510,0.7822,0.7413,0.8195
+agents v8,education,gini_simpson,0.7041,0.6953,-7.9746,10.9958,0.3370,0.8018,0.7551,0.8446
+agents v8,profil croise,entropie,9.2185,5.9482,3.4676,19.0004,1.0000,0.4938,0.4606,0.5261
+agents v8,profil croise,gini_simpson,4.1424,5.7121,3.3086,16.2037,1.0000,0.5140,0.4797,0.5488
+C2 distribution,gender,entropie,1.6981,0.1156,-1.0819,1.2469,0.0440,0.6737,0.6346,0.7098
+C2 distribution,gender,gini_simpson,0.5670,0.1007,-1.3496,1.1900,0.0490,0.6746,0.6328,0.7146
+C2 distribution,race,entropie,0.8383,4.6693,-36.8520,55.2546,0.9970,0.6517,0.6113,0.6898
+C2 distribution,race,gini_simpson,0.4697,3.1529,-14.0576,29.0130,0.9790,0.6561,0.6113,0.6990
+C2 distribution,political_ideology,entropie,7.1233,7.8757,5.2283,15.0301,1.0000,0.3819,0.3600,0.4032
+C2 distribution,political_ideology,gini_simpson,3.4325,6.7180,4.7662,11.1638,1.0000,0.3877,0.3635,0.4102
+C2 distribution,age,entropie,4.5011,1.7695,1.0125,4.0998,0.9760,0.6447,0.6032,0.6853
+C2 distribution,age,gini_simpson,1.9355,1.3637,0.7572,2.9583,0.8400,0.6564,0.6130,0.6999
+C2 distribution,education,entropie,1.9591,2.5069,-20.1105,23.0196,0.9490,0.6475,0.6084,0.6839
+C2 distribution,education,gini_simpson,0.7041,2.1255,-14.4391,20.8798,0.8620,0.6587,0.6161,0.6988
+C2 distribution,profil croise,entropie,9.2185,4.6583,2.7261,15.0729,1.0000,0.4310,0.3987,0.4630
+C2 distribution,profil croise,gini_simpson,4.1424,4.4693,2.5691,13.2588,1.0000,0.4604,0.4284,0.4961
+C3 distribution,gender,entropie,1.6981,0.6974,0.2323,1.1352,0.0790,0.6932,0.6776,0.7086
+C3 distribution,gender,gini_simpson,0.5670,0.5585,-0.0909,1.0094,0.0270,0.6960,0.6792,0.7123
+C3 distribution,race,entropie,0.8383,-0.0976,-9.6768,6.4439,0.0420,0.6969,0.6804,0.7127
+C3 distribution,race,gini_simpson,0.4697,0.0045,-5.3031,4.2141,0.0070,0.7004,0.6833,0.7169
+C3 distribution,political_ideology,entropie,7.1233,0.7449,0.5033,1.0204,0.0400,0.6920,0.6753,0.7098
+C3 distribution,political_ideology,gini_simpson,3.4325,0.7177,0.5042,0.9273,0.0050,0.6984,0.6817,0.7160
+C3 distribution,age,entropie,4.5011,0.4660,0.0624,0.8014,0.0030,0.6997,0.6847,0.7146
+C3 distribution,age,gini_simpson,1.9355,0.4390,0.0398,0.7337,0.0010,0.7059,0.6893,0.7223
+C3 distribution,education,entropie,1.9591,0.9235,-3.7526,3.5575,0.4920,0.6880,0.6713,0.7037
+C3 distribution,education,gini_simpson,0.7041,0.9250,-2.7354,4.6698,0.5080,0.6944,0.6774,0.7097
+C3 distribution,profil croise,entropie,9.2185,0.6123,0.2483,1.1044,0.0380,0.6862,0.6657,0.7076
+C3 distribution,profil croise,gini_simpson,4.1424,0.5362,0.2180,0.8394,0.0070,0.7187,0.7001,0.7391

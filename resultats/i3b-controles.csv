@@ -1,0 +1,57 @@
+controle,jeu,objet,valeur,seuil,passe
+part de cellules hors nomenclature,gss,humains vague 1,0.0,0.005,True
+part de cellules hors nomenclature,gss,agents v8,0.000702,0.005,True
+cellules perdues par l'intersection des masques,gss,agents v8,0.00171,0.005,True
+part de cellules hors nomenclature,gss,agents demographiques (v6),0.00044,0.005,True
+cellules perdues par l'intersection des masques,gss,agents demographiques (v6),0.002443,0.005,True
+part de cellules hors nomenclature,gss,agents composite,0.000427,0.005,True
+cellules perdues par l'intersection des masques,gss,agents composite,0.000427,0.005,True
+part de cellules hors nomenclature,gss,C2,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,C2,0.0,0.005,True
+part de cellules hors nomenclature,gss,C3,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,C3,0.0,0.005,True
+part de cellules hors nomenclature,gss,PMM k=10,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,PMM k=10,0.0,0.005,True
+part de cellules hors nomenclature,gss,E2 regression contexte tirage,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,E2 regression contexte tirage,0.0,0.005,True
+part de cellules hors nomenclature,gss,IM m=10 mode des m,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,IM m=10 mode des m,0.0,0.005,True
+part de cellules hors nomenclature,gss,humains vague 2,0.0,0.005,True
+cellules perdues par l'intersection des masques,gss,humains vague 2,0.0,0.005,True
+"taux de repli du generateur nul, S_ideo",gss,humains vague 1,0.0,0.0,True
+le flux a taux 0 egale la population de fond,gss,toutes sources,0.0,0,True
+"controle negatif, fond melange a lui meme",gss,cinq taux,0.0,0,True
+"s0(1052) par loi de puissance contre i3, ecart relatif",gss,A,0.4654,"publie, non bloquant",True
+"s0(1052) par loi de puissance contre i3, ecart relatif",gss,B,0.771,"publie, non bloquant",True
+"s0(1052) par loi de puissance contre i3, ecart relatif",gss,C,0.4623,"publie, non bloquant",True
+"biais du bootstrap avec remise, en s0",gss,A,-67.05,"publie, non bloquant",True
+"biais du bootstrap avec remise, en s0",gss,B,3.64,"publie, non bloquant",True
+"biais du bootstrap avec remise, en s0",gss,C,14.17,"publie, non bloquant",True
+"validite de la mise a l'echelle, naif, N = 300",gss,A,1.181,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 300",gss,A,1.16,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 300",gss,B,1.373,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 300",gss,B,1.35,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 300",gss,C,1.018,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 300",gss,C,1.018,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 500",gss,A,1.413,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 500",gss,A,1.336,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 500",gss,B,1.361,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 500",gss,B,1.329,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 500",gss,C,1.202,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 500",gss,C,1.202,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 750",gss,A,1.061,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 750",gss,A,0.938,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 750",gss,B,1.399,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 750",gss,B,1.326,"entre 0,7 et 1,4",True
+"validite de la mise a l'echelle, naif, N = 750",gss,C,1.194,publie pour comparaison,True
+"validite de la mise a l'echelle, corrige, N = 750",gss,C,1.194,"entre 0,7 et 1,4",True
+"reproduction de i3, sources pures",gss,agents v8,0.00158,0.005,True
+"reproduction de i3, sources pures",gss,agents demographiques (v6),0.00055,0.005,True
+"reproduction de i3, sources pures",gss,agents composite,0.00105,0.005,True
+"reproduction de i3, sources pures",gss,C2,0.00222,0.005,True
+"reproduction de i3, sources pures",gss,C3,0.00167,0.005,True
+"reproduction de i3, sources pures",gss,PMM k=10,0.00111,0.005,True
+"reproduction de i3, sources pures",gss,E2 regression contexte tirage,0.00046,0.005,True
+"reproduction de i3, sources pures",gss,IM m=10 mode des m,0.00161,0.005,True
+"reproduction de i3, sources pures",gss,B0 segment,0.001,0.005,True
+"reproduction de i3, sources pures",gss,humains vague 1,0.00016,0.005,True

@@ -1,0 +1,13 @@
+mesure,valeur,detail
+taux de changement global,0.2882,"48632 changements sur 168768 cellules, 108 items"
+taux de stabilite global,0.7118,a comparer au plancher de 0.7953 du GSS a deux semaines
+ecart type inter personnes du taux de changement,0.0862,"n = 2058 personnes, 82.0 items en moyenne"
+ecart type attendu si toutes les personnes etaient identiques,0.05,modele binomial homogene au meme taux global
+part de la variance inter personnes non imputable au tirage,0.6637,1 moins variance binomiale sur variance observee
+ecart type inter items du taux de changement,0.1692,"108 items, min 0.062, max 0.640"
+correlation taux de changement de l'item / entropie de l'item,0.912,"plus un item divise, plus il est instable"
+correlation taux de changement / nombre de modalites,0.8699,
+probabilite de changer quand la reponse initiale est le mode,0.2081,
+probabilite de changer quand la reponse initiale n'est pas le mode,0.3761,l'ecart mesure le confondu entre deviance et instabilite
+part des changements qui aboutissent au mode de l'item,0.3708,
+part attendue sous tirage dans la marginale,0.3793,regression vers le mode si l'observe depasse l'attendu

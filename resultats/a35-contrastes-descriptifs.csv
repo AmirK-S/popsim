@@ -1,0 +1,16 @@
+famille,methode_a,methode_b,quantite,difference_a_moins_b,ic_bas,ic_haut,p_bootstrap
+"hors famille, descriptif",E1 regression contexte argmax,agents composite,exactitude,0.021914,0.019068,0.025080,0.002500
+"hors famille, descriptif",E1 regression contexte argmax,agents composite,intra,-0.046808,-0.053630,-0.039739,0.002500
+"hors famille, descriptif",E1 regression contexte argmax,agents composite,inter,-0.543918,-0.626363,-0.457791,0.002500
+"hors famille, descriptif",IM m=10 mode des m,agents composite,exactitude,0.003651,0.000549,0.006967,0.020000
+"hors famille, descriptif",IM m=10 mode des m,agents composite,intra,-0.004001,-0.011066,0.003065,0.275000
+"hors famille, descriptif",IM m=10 mode des m,agents composite,inter,-0.703085,-0.785870,-0.613617,0.002500
+"hors famille, descriptif",PMM k=10,agents composite,exactitude,-0.015539,-0.018470,-0.012497,0.002500
+"hors famille, descriptif",PMM k=10,agents composite,intra,0.111224,0.105118,0.118064,0.002500
+"hors famille, descriptif",PMM k=10,agents composite,inter,-0.706389,-0.792181,-0.627590,0.002500
+"hors famille, descriptif",PMM k=10,E1 regression contexte argmax,exactitude,-0.037454,-0.039165,-0.035642,0.002500
+"hors famille, descriptif",PMM k=10,E1 regression contexte argmax,intra,0.158032,0.154051,0.162200,0.002500
+"hors famille, descriptif",PMM k=10,E1 regression contexte argmax,inter,-0.162471,-0.191113,-0.126288,0.002500
+"hors famille, descriptif",B2 argmax,E1 regression contexte argmax,exactitude,-0.034127,-0.036761,-0.031659,0.002500
+"hors famille, descriptif",B2 argmax,E1 regression contexte argmax,intra,-0.258760,-0.264708,-0.252709,0.002500
+"hors famille, descriptif",B2 argmax,E1 regression contexte argmax,inter,0.224042,0.158066,0.289152,0.002500

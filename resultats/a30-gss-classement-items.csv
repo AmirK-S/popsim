@@ -1,0 +1,150 @@
+item,famille,n_modalites
+natspac/y,depenses publiques (nat*),3
+natenvir/y,depenses publiques (nat*),3
+natheal/y,depenses publiques (nat*),3
+natcity/y,depenses publiques (nat*),3
+natdrug/y,depenses publiques (nat*),3
+nateduc/y,depenses publiques (nat*),3
+natrace/y,depenses publiques (nat*),3
+natarms/y,depenses publiques (nat*),3
+nataid/y,depenses publiques (nat*),3
+natfare/y,depenses publiques (nat*),3
+natroad,depenses publiques (nat*),3
+natsoc,depenses publiques (nat*),3
+natmass,depenses publiques (nat*),3
+natpark,depenses publiques (nat*),3
+natchld,depenses publiques (nat*),3
+natsci,depenses publiques (nat*),3
+natenrgy,depenses publiques (nat*),3
+uswary,residu : social,2
+prayer,residu : social,2
+courts,residu : social,3
+discaffw,residu : social,4
+discaffm,residu : social,4
+fehire,roles de genre (fe*),5
+fechld,roles de genre (fe*),4
+fepresch,roles de genre (fe*),4
+fefam,roles de genre (fe*),4
+fepol,roles de genre (fe*),2
+mobile16,residu : hors axe,3
+incom16,residu : economique,5
+dwelown16,residu : hors axe,3
+divorced,residu : hors axe,2
+posslq/y,residu : hors axe,4
+wrkstat,residu : hors axe,8
+evwork,residu : hors axe,2
+wrkgovt1,residu : hors axe,2
+wrkgovt2,residu : hors axe,2
+partfull,residu : hors axe,3
+wksub1,residu : hors axe,3
+wksup1,residu : hors axe,3
+conarmy,confiance dans les institutions (con*),3
+conbus,confiance dans les institutions (con*),3
+conclerg,confiance dans les institutions (con*),3
+coneduc,confiance dans les institutions (con*),3
+confed,confiance dans les institutions (con*),3
+confinan,confiance dans les institutions (con*),3
+conjudge,confiance dans les institutions (con*),3
+conlabor,confiance dans les institutions (con*),3
+conlegis,confiance dans les institutions (con*),3
+conmedic,confiance dans les institutions (con*),3
+conpress,confiance dans les institutions (con*),3
+consci,confiance dans les institutions (con*),3
+contv,confiance dans les institutions (con*),3
+joblose,residu : economique,5
+jobfind,residu : economique,4
+happy,residu : hors axe,3
+hapmar,residu : hors axe,4
+satjob,residu : economique,5
+spdeg*,residu : hors axe,6
+spjew,residu : hors axe,5
+spfund,residu : hors axe,4
+unemp,residu : hors axe,2
+union1,residu : economique,4
+spkath/y,libertes civiles (spk/col/lib),2
+colath,libertes civiles (spk/col/lib),2
+spkrac/y,libertes civiles (spk/col/lib),2
+colrac,libertes civiles (spk/col/lib),2
+librac/y,libertes civiles (spk/col/lib),2
+spkcom/y,libertes civiles (spk/col/lib),2
+colcom/y,libertes civiles (spk/col/lib),2
+libcom/y,libertes civiles (spk/col/lib),2
+spkhomo/y,libertes civiles (spk/col/lib),2
+colhomo,libertes civiles (spk/col/lib),2
+libhomo/y,libertes civiles (spk/col/lib),2
+cappun,residu : social,2
+polhitok/y,residu : social,2
+polabuse/y,residu : social,2
+polattak/y,residu : social,2
+grass,residu : social,2
+gunlaw,residu : social,2
+owngun,residu : hors axe,2
+hunt1,residu : hors axe,4
+class,residu : economique,4
+satfin,residu : economique,3
+finalter,residu : economique,3
+finrela,residu : economique,5
+racdif1,residu : social,2
+racdif2,residu : social,2
+racdif3,residu : social,2
+racdif4,residu : social,2
+wlthwhts,residu : social,7
+wlthblks,residu : social,7
+wlthhsps,residu : social,7
+racwork,residu : hors axe,7
+letin1a,residu : social,5
+getahead,residu : economique,3
+aged,residu : social,3
+parsol,residu : economique,5
+kidssol,residu : economique,6
+spanking,residu : social,4
+divlaw,residu : social,3
+sexeduc,residu : social,2
+pillok,residu : social,4
+xmarsex,residu : social,4
+homosex,residu : social,4
+marhomo,residu : social,5
+discaff,residu : social,3
+abdefect,avortement (ab*),2
+abnomore,avortement (ab*),2
+abhlth,avortement (ab*),2
+abpoor,avortement (ab*),2
+abrape,avortement (ab*),2
+absingle,avortement (ab*),2
+abany,avortement (ab*),2
+letdie1,fin de vie (suicide/letdie),2
+suicide1,fin de vie (suicide/letdie),2
+suicide2,fin de vie (suicide/letdie),2
+suicide3,fin de vie (suicide/letdie),2
+suicide4,fin de vie (suicide/letdie),2
+pornlaw,residu : social,3
+fair,residu : social,3
+helpful,residu : social,3
+trust,residu : social,3
+tax,residu : economique,3
+vote16,residu : social,3
+pres16,residu : social,4
+if16who,residu : social,3
+news,residu : hors axe,5
+jew,residu : hors axe,5
+relig16*,residu : hors axe,5
+jew16*,residu : hors axe,5
+attend,residu : social,9
+pray,residu : social,6
+postlife,residu : social,2
+bible,residu : social,3
+reborn,residu : social,3
+savesoul,residu : social,2
+granborn,residu : hors axe,5
+uscitzn*,residu : hors axe,2
+fucitzn,residu : hors axe,5
+mnthsusa,residu : hors axe,6
+income,residu : economique,12
+othlang,residu : hors axe,2
+health,residu : hors axe,4
+compuse*,residu : hors axe,2
+webmob,residu : hors axe,2
+xmovie,residu : hors axe,2
+usewww*,residu : hors axe,2
+life,residu : hors axe,3
+richwork,residu : economique,2

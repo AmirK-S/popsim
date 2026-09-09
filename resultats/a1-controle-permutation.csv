@@ -1,0 +1,25 @@
+condition,mesure,inter_observe,inter_sous_permutation,part
+humains vague 1,entropie,30.1526,1.5057,0.0499
+humains vague 1,gini_simpson,11.8654,-0.0041,-0.0003
+humains vague 1,variance_ordinale,1.7947,-0.0019,-0.0010
+humains vague 2,entropie,30.3052,1.5623,0.0516
+humains vague 2,gini_simpson,11.9940,-0.0008,-0.0001
+humains vague 2,variance_ordinale,1.8200,-0.0013,-0.0007
+agents composite,entropie,51.9699,1.7553,0.0338
+agents composite,gini_simpson,21.2741,0.0065,0.0003
+agents composite,variance_ordinale,3.6934,0.0009,0.0002
+agents entretien (v3),entropie,63.5557,1.7966,0.0283
+agents entretien (v3),gini_simpson,26.2617,0.0105,0.0004
+agents entretien (v3),variance_ordinale,4.9368,0.0032,0.0006
+agents enquete,entropie,53.9308,1.6755,0.0311
+agents enquete,gini_simpson,22.4229,-0.0187,-0.0008
+agents enquete,variance_ordinale,3.8581,-0.0034,-0.0009
+agents persona (v7),entropie,14.6722,2.1473,0.1463
+agents persona (v7),gini_simpson,4.0164,-0.0048,-0.0012
+agents persona (v7),variance_ordinale,0.3991,0.0003,0.0007
+agents demographiques (v6),entropie,26.3214,1.8349,0.0697
+agents demographiques (v6),gini_simpson,9.4372,-0.0042,-0.0004
+agents demographiques (v6),variance_ordinale,0.8953,-0.0011,-0.0012
+agents demographiques (v8),entropie,170.6731,1.4518,0.0085
+agents demographiques (v8),gini_simpson,70.3772,0.0100,0.0001
+agents demographiques (v8),variance_ordinale,10.6257,-0.0025,-0.0002

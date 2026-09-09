@@ -1,0 +1,13 @@
+modele,cle_modele,identite,quantite,n_items,rho_spearman,p,p_holm
+gpt-oss-20b,oss20,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6776663357654792,0.0004997501249375312,0.0029985007496251873
+gpt-oss-20b,oss20,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.5510504676672536,0.0004997501249375312,0.0029985007496251873
+Qwen3-30B-A3B-Instruct-2507,q30,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.49547191991331224,0.0004997501249375312,0.0029985007496251873
+Qwen3-30B-A3B-Instruct-2507,q30,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.4340019974084055,0.0004997501249375312,0.0029985007496251873
+Qwen3-4B-Instruct-2507,q4,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6352703476299169,0.0004997501249375312,0.0029985007496251873
+Qwen3-4B-Instruct-2507,q4,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6485259408195888,0.0004997501249375312,0.0029985007496251873
+gpt-oss-20b,oss20,journaliste,log amplification de l'ecart entre camps,52,0.379541479439742,0.0069965017491254375,0.020989505247376312
+gpt-oss-20b,oss20,adversaire,log amplification de l'ecart entre camps,62,0.4168335185999998,0.0009995002498750624,0.00399800099950025
+Qwen3-30B-A3B-Instruct-2507,q30,journaliste,log amplification de l'ecart entre camps,77,0.4606152242538805,0.0004997501249375312,0.0029985007496251873
+Qwen3-30B-A3B-Instruct-2507,q30,adversaire,log amplification de l'ecart entre camps,75,0.4971512722470484,0.0004997501249375312,0.0029985007496251873
+Qwen3-4B-Instruct-2507,q4,journaliste,log amplification de l'ecart entre camps,71,0.23350185778008528,0.04697651174412794,0.06996501749125437
+Qwen3-4B-Instruct-2507,q4,adversaire,log amplification de l'ecart entre camps,61,0.269383331314476,0.03498250874562719,0.06996501749125437

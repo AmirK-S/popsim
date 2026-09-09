@@ -1,0 +1,6 @@
+controle,attendu,obtenu,passe,n_personnes
+nombre de paires de vagues,11.0,11.0,True,
+taille du noyau commun,118.0,118.0,True,
+"consistance a 2 ans, noyau commun, a12",0.6953,0.695267,True,9556.0
+"consistance a 4 ans, noyau commun, a12",0.6745,0.674471,True,4683.0
+"inversion de l'ordre des vagues, part monotone",0.41624,0.41624,True,122583.0

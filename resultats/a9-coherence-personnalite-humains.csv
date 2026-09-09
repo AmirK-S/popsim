@@ -1,0 +1,22 @@
+echelle,source,n_items,n_repondants,alpha,r_inter_items_moyen,ecart_type_r,cotation
+BFI44_extraversion,humains_vagues1_3,8,2058,0.8807,0.4798,0.1229,cles canoniques du BFI-44
+BFI44_agreabilite,humains_vagues1_3,9,2058,0.8213,0.348,0.0863,cles canoniques du BFI-44
+BFI44_conscience,humains_vagues1_3,9,2058,0.8741,0.4522,0.0788,cles canoniques du BFI-44
+BFI44_nevrosisme,humains_vagues1_3,8,2058,0.904,0.5418,0.0829,cles canoniques du BFI-44
+BFI44_ouverture,humains_vagues1_3,10,2058,0.8446,0.3651,0.1277,cles canoniques du BFI-44
+BFI44_total,humains_vagues1_3,44,2058,0.7727,0.0857,0.2466,cles canoniques du BFI-44
+QID26_personnalite,humains_vagues1_3,18,2058,0.9387,0.4608,0.1186,signes alignes sur la 1re composante ; 9 items retournes
+QID29_personnalite,humains_vagues1_3,24,2000,0.8391,0.1721,0.1783,signes alignes sur la 1re composante ; 0 items retournes
+QID35_personnalite,humains_vagues1_3,12,2058,0.8868,0.3923,0.1432,signes alignes sur la 1re composante ; 0 items retournes
+QID232_personnalite,humains_vagues1_3,20,2058,0.8914,0.2981,0.1347,signes alignes sur la 1re composante ; 8 items retournes
+QID235_personnalite,humains_vagues1_3,6,2058,0.9288,0.6853,0.0616,signes alignes sur la 1re composante ; 0 items retournes
+QID27_personnalite,humains_vagues1_3,13,2058,0.8078,0.2436,0.0647,signes alignes sur la 1re composante ; 5 items retournes
+QID30_personnalite,humains_vagues1_3,8,2058,0.8876,0.4947,0.1353,signes alignes sur la 1re composante ; 4 items retournes
+QID125_personnalite,humains_vagues1_3,21,2058,0.9256,0.3837,0.0945,signes alignes sur la 1re composante ; 0 items retournes
+QID233_personnalite,humains_vagues1_3,16,2058,0.738,0.1485,0.1716,signes alignes sur la 1re composante ; 0 items retournes
+QID28_personnalite,humains_vagues1_3,10,2042,0.5528,0.127,0.1804,signes alignes sur la 1re composante ; 0 items retournes
+QID234_personnalite,humains_vagues1_3,12,2058,0.912,0.4628,0.1602,signes alignes sur la 1re composante ; 0 items retournes
+QID236_personnalite,humains_vagues1_3,13,2058,0.8801,0.3676,0.1655,signes alignes sur la 1re composante ; 2 items retournes
+QID237_personnalite,humains_vagues1_3,12,2058,0.9248,0.5059,0.1327,signes alignes sur la 1re composante ; 2 items retournes
+QID238_personnalite,humains_vagues1_3,15,2058,0.8602,0.2966,0.1523,signes alignes sur la 1re composante ; 0 items retournes
+QID239_personnalite,humains_vagues1_3,6,2058,0.418,0.1165,0.1968,signes alignes sur la 1re composante ; 2 items retournes

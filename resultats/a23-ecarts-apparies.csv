@@ -1,0 +1,83 @@
+perimetre,A,B,ecart,ic_bas,ic_haut,ecart_normalise
+149 items,C2,agents v8,-0.038747,-0.047385,-0.029530,-0.048954
+149 items,C3,agents enquete,-0.064116,-0.073155,-0.054943,-0.081006
+149 items,C3,agents composite,-0.100761,-0.111276,-0.091183,-0.127304
+149 items,C3,agents entretien (v3),-0.072528,-0.082774,-0.062192,-0.091634
+149 items,C3,B0 mode,-0.013915,-0.024162,-0.003084,-0.017581
+149 items,C3,B1 argmax,-0.046398,-0.057141,-0.036017,-0.058621
+149 items,C3,B2 argmax,-0.088054,-0.097630,-0.078388,-0.111249
+149 items,C3,C2,0.055391,0.046039,0.065772,0.069983
+149 items,C3,agents v8,0.016644,0.004206,0.028950,0.021029
+149 items,C3,agents demographiques (v6),-0.006980,-0.017002,0.003226,-0.008819
+149 items,C3,agents v7,0.013647,0.001789,0.025682,0.017241
+149 items,C2,agents demographiques (v6),-0.062371,-0.073424,-0.051543,-0.078802
+149 items,C2,B0 mode,-0.069306,-0.080091,-0.058345,-0.087564
+149 items,C2,B1 argmax,-0.101790,-0.112573,-0.090961,-0.128604
+149 items,C2,B2 argmax,-0.143445,-0.155393,-0.131230,-0.181232
+149 items,C2,agents v7,-0.041745,-0.053828,-0.029966,-0.052742
+149 items,agents enquete,B2 argmax,-0.023937,-0.031499,-0.016464,-0.030243
+149 items,agents composite,B2 argmax,0.012707,0.003982,0.021120,0.016054
+depenses publiques (nat*),C3,B2 argmax,-0.146275,-0.173343,-0.117647,
+depenses publiques (nat*),C3,B1 argmax,-0.103137,-0.134902,-0.070980,
+depenses publiques (nat*),C3,B0 mode,-0.080392,-0.111373,-0.048618,
+depenses publiques (nat*),C3,agents enquete,-0.090588,-0.112951,-0.067451,
+depenses publiques (nat*),C3,agents composite,-0.088235,-0.114529,-0.062343,
+depenses publiques (nat*),C3,C2,0.050196,0.009412,0.090588,
+confiance dans les institutions (con*),C3,B2 argmax,-0.047692,-0.081538,-0.012821,
+confiance dans les institutions (con*),C3,B1 argmax,-0.000513,-0.036410,0.037449,
+confiance dans les institutions (con*),C3,B0 mode,0.031282,-0.007192,0.070769,
+confiance dans les institutions (con*),C3,agents enquete,-0.026667,-0.056423,0.004615,
+confiance dans les institutions (con*),C3,agents composite,-0.052308,-0.086679,-0.017436,
+confiance dans les institutions (con*),C3,C2,0.063590,0.028192,0.099487,
+avortement (ab*),C3,B2 argmax,-0.062857,-0.095262,-0.029524,
+avortement (ab*),C3,B1 argmax,-0.011429,-0.058095,0.035238,
+avortement (ab*),C3,B0 mode,0.059048,0.001905,0.117143,
+avortement (ab*),C3,agents enquete,-0.057143,-0.087643,-0.025714,
+avortement (ab*),C3,agents composite,-0.077143,-0.105738,-0.047619,
+avortement (ab*),C3,C2,0.030476,-0.016214,0.081905,
+libertes civiles (spk/col/lib),C3,B2 argmax,0.009697,-0.014545,0.033939,
+libertes civiles (spk/col/lib),C3,B1 argmax,0.056970,0.026652,0.088485,
+libertes civiles (spk/col/lib),C3,B0 mode,0.046061,0.018182,0.073939,
+libertes civiles (spk/col/lib),C3,agents enquete,0.013939,-0.012136,0.040000,
+libertes civiles (spk/col/lib),C3,agents composite,0.015758,-0.010303,0.043030,
+libertes civiles (spk/col/lib),C3,C2,0.066667,0.040000,0.094545,
+fin de vie (suicide/letdie),C3,B2 argmax,-0.073333,-0.108000,-0.037333,
+fin de vie (suicide/letdie),C3,B1 argmax,0.029333,-0.012000,0.074667,
+fin de vie (suicide/letdie),C3,B0 mode,0.041333,-0.001333,0.082700,
+fin de vie (suicide/letdie),C3,agents enquete,-0.018667,-0.044000,0.005333,
+fin de vie (suicide/letdie),C3,agents composite,-0.009333,-0.037333,0.017333,
+fin de vie (suicide/letdie),C3,C2,0.088000,0.054667,0.121367,
+roles de genre (fe*),C3,B2 argmax,-0.028000,-0.066667,0.012000,
+roles de genre (fe*),C3,B1 argmax,0.033333,-0.008000,0.077367,
+roles de genre (fe*),C3,B0 mode,0.018667,-0.026667,0.065333,
+roles de genre (fe*),C3,agents enquete,0.012000,-0.036000,0.061333,
+roles de genre (fe*),C3,agents composite,-0.024000,-0.066700,0.021333,
+roles de genre (fe*),C3,C2,0.074667,0.028000,0.120000,
+familles reunies,humains vague 2,,0.776092,,,
+hors famille,humains vague 2,,0.801319,,,
+familles reunies,B2 argmax,,0.692989,,,
+hors famille,B2 argmax,,0.654945,,,
+familles reunies,agents composite,,0.671724,,,
+hors famille,agents composite,,0.689304,,,
+familles reunies,agents enquete,,0.662299,,,
+hors famille,agents enquete,,0.635311,,,
+familles reunies,B1 argmax,,0.640460,,,
+hors famille,B1 argmax,,0.620220,,,
+familles reunies,agents entretien (v3),,0.635862,,,
+hors famille,agents entretien (v3),,0.665934,,,
+familles reunies,C3,,0.624943,,,
+hors famille,C3,,0.554139,,,
+familles reunies,B0 mode,,0.620460,,,
+hors famille,B0 mode,,0.579780,,,
+familles reunies,agents demographiques (v6),,0.590000,,,
+hors famille,agents demographiques (v6),,0.587839,,,
+familles reunies,agents v7,,0.587241,,,
+hors famille,agents v7,,0.555824,,,
+familles reunies,C3F,,0.580388,,,
+hors famille,C3F,,,,,
+familles reunies,agents v8,,0.577586,,,
+hors famille,agents v8,,0.557070,,,
+familles reunies,C2,,0.565632,,,
+hors famille,C2,,0.501245,,,
+familles reunies,B0 tirage,,0.516437,,,
+hors famille,B0 tirage,,0.479707,,,

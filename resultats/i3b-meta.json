@@ -1,0 +1,30 @@
+{
+ "marginales": [
+  {
+   "rang": 1,
+   "item": "letin1a",
+   "modalite_modale_humaine": "remain the same as it is",
+   "ecart_entre_camps_humain": 1.2362682872830935
+  },
+  {
+   "rang": 2,
+   "item": "racdif1",
+   "modalite_modale_humaine": "yes",
+   "ecart_entre_camps_humain": 1.2067027794680698
+  },
+  {
+   "rang": 3,
+   "item": "natrace/y",
+   "modalite_modale_humaine": "about right",
+   "ecart_entre_camps_humain": 1.1949383306103925
+  }
+ ],
+ "z_holm3": 2.393979799818508,
+ "z_holm27": 3.113,
+ "z_holm39": 3.219967505017034,
+ "z_holm5": 2.575829303548897,
+ "n_items_polarisation": 149,
+ "tirages": 12,
+ "nul": 15,
+ "reference": 300
+}

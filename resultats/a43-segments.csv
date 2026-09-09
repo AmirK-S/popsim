@@ -1,0 +1,63 @@
+segmentation,segment,n_1052,n_150
+primaire 18,centre|female|age,58,9
+primaire 18,centre|female|jeune,42,10
+primaire 18,centre|female|median,77,10
+primaire 18,centre|male|age,43,7
+primaire 18,centre|male|jeune,37,4
+primaire 18,centre|male|median,46,5
+primaire 18,droite|female|age,74,10
+primaire 18,droite|female|jeune,18,1
+primaire 18,droite|female|median,77,9
+primaire 18,droite|male|age,73,9
+primaire 18,droite|male|jeune,33,7
+primaire 18,droite|male|median,57,6
+primaire 18,gauche|female|age,92,10
+primaire 18,gauche|female|jeune,80,13
+primaire 18,gauche|female|median,75,12
+primaire 18,gauche|male|age,58,7
+primaire 18,gauche|male|jeune,52,12
+primaire 18,gauche|male|median,60,9
+primaire 18,SANS SEGMENT,0,0
+secondaire 42,centre|female|18 - 24,15,3
+secondaire 42,centre|female|25 - 34,27,7
+secondaire 42,centre|female|35 - 44,38,3
+secondaire 42,centre|female|45 - 54,39,7
+secondaire 42,centre|female|55 - 64,31,4
+secondaire 42,centre|female|65 - 74,23,4
+secondaire 42,centre|female|75 or more,4,1
+secondaire 42,centre|male|18 - 24,16,4
+secondaire 42,centre|male|25 - 34,21,0
+secondaire 42,centre|male|35 - 44,19,2
+secondaire 42,centre|male|45 - 54,27,3
+secondaire 42,centre|male|55 - 64,29,5
+secondaire 42,centre|male|65 - 74,11,2
+secondaire 42,centre|male|75 or more,3,0
+secondaire 42,droite|female|18 - 24,5,0
+secondaire 42,droite|female|25 - 34,13,1
+secondaire 42,droite|female|35 - 44,35,2
+secondaire 42,droite|female|45 - 54,42,7
+secondaire 42,droite|female|55 - 64,43,5
+secondaire 42,droite|female|65 - 74,27,4
+secondaire 42,droite|female|75 or more,4,1
+secondaire 42,droite|male|18 - 24,10,1
+secondaire 42,droite|male|25 - 34,23,6
+secondaire 42,droite|male|35 - 44,23,4
+secondaire 42,droite|male|45 - 54,34,2
+secondaire 42,droite|male|55 - 64,42,4
+secondaire 42,droite|male|65 - 74,26,4
+secondaire 42,droite|male|75 or more,5,1
+secondaire 42,gauche|female|18 - 24,45,8
+secondaire 42,gauche|female|25 - 34,35,5
+secondaire 42,gauche|female|35 - 44,38,6
+secondaire 42,gauche|female|45 - 54,37,6
+secondaire 42,gauche|female|55 - 64,52,5
+secondaire 42,gauche|female|65 - 74,32,4
+secondaire 42,gauche|female|75 or more,8,1
+secondaire 42,gauche|male|18 - 24,25,6
+secondaire 42,gauche|male|25 - 34,27,6
+secondaire 42,gauche|male|35 - 44,31,6
+secondaire 42,gauche|male|45 - 54,29,3
+secondaire 42,gauche|male|55 - 64,29,5
+secondaire 42,gauche|male|65 - 74,23,1
+secondaire 42,gauche|male|75 or more,6,1
+secondaire 42,SANS SEGMENT,0,0

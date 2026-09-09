@@ -1,0 +1,150 @@
+item,classe_norc,classe_comportement,m1_mode,m2_mode_plus_conception,m3_toutes_sources,rapport_retenu,famille_retenue,n_mesures_disponibles,pole_endogroupe,niveau_pole_endogroupe,source_pole_endogroupe,sources_ampleur,detail_ampleur
+natspac/y,mixte,attitude,1.020000,1.020000,1.020000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 1.02 points (mode),face a face 11.8/50.4/37.7 contre web 11.5/49.8/38.8 ; ampleur enoncee par NORC 1.1 points
+natenvir/y,temoin,attitude,4.000000,4.000000,4.000000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 4.0 points (mode),face a face 60.0/33.2/6.8 contre web 60.5/29.2/10.3 ; ampleur enoncee par NORC 3.5 points
+natheal/y,mixte,attitude,5.530000,5.530000,5.530000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 5.53 points (mode),face a face 74.9/21.3/3.9 contre web 69.3/25.1/5.6 ; ampleur enoncee par NORC 1.7 points
+natcity/y,mixte,attitude,10.950000,10.950000,10.950000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 10.95 points (mode),face a face 45.4/39.9/14.8 contre web 34.4/44.5/21.1 ; ampleur enoncee par NORC 6.3 points
+natdrug/y,temoin,attitude,14.000000,14.000000,14.000000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 14.0 points (mode),face a face 59.1/31.2/9.7 contre web 45.1/38.2/16.7 ; ampleur enoncee par NORC 7.0 points
+nateduc/y,temoin,attitude,1.200000,1.200000,1.200000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 1.2 points (mode),face a face 73.9/20.7/5.4 contre web 73.5/19.9/6.6 ; ampleur enoncee par NORC 1.2 points
+natrace/y,sensible,attitude,13.800000,13.800000,13.800000,MR099,mode,1,droite_bas,[CONFIRME],"MR099 Table 3 : les depenses pour les Noirs portent la plus grande ampleur de mode des 17 items, 13,8 points, et le clivage partisan sur l'aide ciblee est etabli. Reserve explicite de la source : Smith et Dennis refusent de dire que le pole pro depense est le pole desirable",MR099 = 13.8 points (mode),face a face 32.7/49.0/18.3 contre web 23.0/44.9/32.1 ; ampleur enoncee par NORC 13.8 points
+natarms/y,temoin,attitude,2.110000,2.110000,2.110000,MR099,mode,1,,,,MR099 = 2.11 points (mode),face a face 31.3/46.5/22.3 contre web 32.5/44.3/23.1 ; ampleur enoncee par NORC 0.8 points
+nataid/y,temoin,attitude,8.500000,8.500000,8.500000,MR099,mode,1,,,,MR099 = 8.5 points (mode),face a face 6.7/27.8/65.5 contre web 6.1/19.9/74.0 ; ampleur enoncee par NORC 8.5 points
+natfare/y,mixte,attitude,9.700000,9.700000,9.700000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 9.7 points (mode),face a face 21.2/38.2/40.6 contre web 18.5/31.2/50.3 ; ampleur enoncee par NORC 9.7 points
+natroad,sensible,attitude,0.360000,0.360000,0.360000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 0.36 points (mode),face a face 35.7/51.7/12.7 contre web 35.3/51.9/12.8 ; ampleur enoncee par NORC 0.1 points
+natsoc,temoin,attitude,2.330000,2.330000,2.330000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 2.33 points (mode),face a face 60.8/34.6/4.6 contre web 62.4/32.3/5.4 ; ampleur enoncee par NORC 0.8 points
+natmass,temoin,attitude,3.050000,3.050000,3.050000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 3.05 points (mode),face a face 37.0/52.4/10.7 contre web 37.5/49.3/13.2 ; ampleur enoncee par NORC 2.5 points
+natpark,temoin,attitude,6.700000,6.700000,6.700000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 6.7 points (mode),face a face 35.0/59.5/5.5 contre web 37.8/52.8/9.4 ; ampleur enoncee par NORC 3.9 points
+natchld,sensible,attitude,5.800000,5.800000,5.800000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 5.8 points (mode),face a face 59.1/33.2/7.7 contre web 53.3/37.2/9.5 ; ampleur enoncee par NORC 1.8 points
+natsci,temoin,attitude,4.800000,4.800000,4.800000,MR099,mode,1,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,MR099 = 4.8 points (mode),face a face 36.4/49.7/13.9 contre web 31.6/52.4/16.0 ; ampleur enoncee par NORC 2.1 points
+natenrgy,temoin,attitude,,,,,,0,droite_bas,[CONFIRME],MR099 : le face a face donne moins de « trop » sur les 17 items et plus de « pas assez » sur 12 sur 17 ; Smith et Dennis refusent d'en conclure que le pole pro depense est le pole socialement desirable,,
+uswary,non teste,attitude,,20.480000,20.480000,MR141,conception,1,,,,MR141 = 20.48 points (conception),"modalite volontaire « Don't know », prise par 20.5 pour cent"
+prayer,non teste,attitude,,17.680000,17.680000,MR141,conception,1,,,,MR141 = 17.68 points (conception),"modalite volontaire « No opinion », prise par 17.7 pour cent"
+courts,non teste,attitude,,40.100000,40.100000,MR141,conception,1,,,,MR141 = 40.1 points (conception),"modalite volontaire « About right », prise par 40.5 pour cent"
+discaffw,non teste,attitude,,11.600000,11.600000,MR141,conception,1,,,,MR141 = 11.6 points (conception),"modalite volontaire « Don't know », prise par 7.3 pour cent"
+discaffm,non teste,attitude,,,,,,0,,,,,
+fehire,non teste,attitude,,,,,,0,,,,,
+fechld,temoin,attitude,,,,,,0,droite_bas,[HYPOTHESE],meme raisonnement,,
+fepresch,investiguer,attitude,,,,,,0,droite_bas,[HYPOTHESE],meme raisonnement,,
+fefam,investiguer,attitude,,,,,,0,droite_bas,[HYPOTHESE],"l'egalitarisme de role est la norme declaree et le clivage partisan est etabli ; aucune ampleur publiee par item, la direction seule est reprise",,
+fepol,non teste,attitude,,14.100000,14.100000,MR141,conception,1,droite_bas,[HYPOTHESE],"meme raisonnement ; MR141 mesure sur cet item 14,1 pour cent de « ne sais pas » des que la modalite est offerte, ce qui est un confondant",MR141 = 14.1 points (conception),"modalite volontaire « Don't know », prise par 14.1 pour cent"
+mobile16,non teste,comportement,,,,,,0,,,,,
+incom16,temoin,comportement,,,,,,0,,,,,
+dwelown16,non teste,comportement,,,,,,0,,,,,
+divorced,temoin,comportement,,,,,,0,,,,,
+posslq/y,temoin,comportement,,,,,,0,,,,,
+wrkstat,temoin,comportement,,,,,,0,,,,,
+evwork,temoin,comportement,,,,,,0,,,,,
+wrkgovt1,non teste,comportement,,,,,,0,,,,,
+wrkgovt2,non teste,comportement,,,,,,0,,,,,
+partfull,non teste,comportement,,,,,,0,,,,,
+wksub1,non teste,comportement,,,,,,0,,,,,
+wksup1,non teste,comportement,,,,,,0,,,,,
+conarmy,investiguer,attitude,,,,,,0,,,,,
+conbus,temoin,attitude,,,,,,0,,,,,
+conclerg,temoin,attitude,,,,,,0,,,,,
+coneduc,sensible,attitude,,,,,,0,,,,,
+confed,temoin,attitude,,,,,,0,,,,,
+confinan,temoin,attitude,,,,,,0,,,,,
+conjudge,temoin,attitude,,,,,,0,,,,,
+conlabor,temoin,attitude,,,,,,0,,,,,
+conlegis,sensible,attitude,,,,,,0,,,,,
+conmedic,sensible,attitude,,,,,,0,,,,,
+conpress,temoin,attitude,,,,,,0,,,,,
+consci,temoin,attitude,,,,,,0,,,,,
+contv,temoin,attitude,,,,,,0,,,,,
+joblose,non teste,comportement,,,,,,0,,,,,
+jobfind,temoin,auto evaluation,,,,,,0,,,,,
+happy,temoin,auto evaluation,,,,,,0,,,,,
+hapmar,non teste,auto evaluation,,,,,,0,,,,,
+satjob,temoin,auto evaluation,,,,,,0,,,,,
+spdeg*,non teste,comportement,,,,,,0,,,,,
+spjew,non teste,comportement,,,,,,0,,,,,
+spfund,non teste,comportement,,,,,,0,,,,,
+unemp,temoin,comportement,1.000000,1.000000,1.000000,Atlas NBER 2025,mode,1,,,,Atlas NBER 2025 = 1.0 points (mode),"Dutz et al. (2021), applied for unemployment insurance, N = 1 700 : reel 9.0 pour cent contre declare 8.0"
+union1,non teste,comportement,,,,,,0,,,,,
+spkath/y,temoin,attitude,,,,,,0,,,,,
+colath,temoin,attitude,,,,,,0,,,,,
+spkrac/y,sensible,attitude,,,,,,0,,,,,
+colrac,temoin,attitude,,,,,,0,,,,,
+librac/y,non teste,attitude,,,,,,0,,,,,
+spkcom/y,non teste,attitude,,,,,,0,,,,,
+colcom/y,non teste,attitude,,,,,,0,,,,,
+libcom/y,temoin,attitude,,,,,,0,,,,,
+spkhomo/y,non teste,attitude,,,,,,0,droite_bas,[PROBABLE],"meme source, echelle de Stouffer",,
+colhomo,non teste,attitude,,,,,,0,droite_bas,[PROBABLE],meme source,,
+libhomo/y,non teste,attitude,,,,,,0,droite_bas,[PROBABLE],meme source,,
+cappun,temoin,attitude,,,,,,0,,,,,
+polhitok/y,temoin,attitude,,,86.000000,MR010,regime,1,,,,MR010 = 86.0 points (regime),"part des 'non' a la question absolue qui approuvent au moins une des quatre situations concretes ; 1,52 situation approuvee en moyenne ; seuls 1,1 pour cent des 'oui' n'approuvent aucune situation"
+polabuse/y,sensible,attitude,,,,,,0,,,,,
+polattak/y,sensible,attitude,,,,,,0,,,,,
+grass,non teste,attitude,,15.100000,15.100000,MR141,conception,1,,,,MR141 = 15.1 points (conception),"modalite volontaire « No opinion », prise par 15.1 pour cent"
+gunlaw,temoin,attitude,,,,,,0,,,,,
+owngun,temoin,comportement,,,,,,0,,,,,
+hunt1,non teste,comportement,,,,,,0,,,,,
+class,non teste,auto evaluation,,,,,,0,,,,,
+satfin,temoin,auto evaluation,,,,,,0,,,,,
+finalter,temoin,auto evaluation,,,,,,0,,,,,
+finrela,temoin,auto evaluation,,,,,,0,,,,,
+racdif1,temoin,attitude,,,,,,0,droite_bas,[PROBABLE],"Berinsky 1999, corpus 04-19 : l'opinion raciale liberale est sur declaree, et la sur declaration vient de ceux qui tiennent la position conservatrice ; Engelhardt 2021, L04-21, teste et ne trouve PAS de changement de desirabilite sur le ressentiment racial, reserve a porter",,
+racdif2,temoin,attitude,,,,,,0,droite_bas,[PROBABLE],meme source,,
+racdif3,temoin,attitude,,,,,,0,droite_bas,[HYPOTHESE],"meme famille, direction moins nette",,
+racdif4,temoin,attitude,,,,,,0,droite_bas,[PROBABLE],meme source,,
+wlthwhts,non teste,attitude,,,,,,0,,,,,
+wlthblks,non teste,attitude,,,,,,0,,,,,
+wlthhsps,non teste,attitude,,,,,,0,,,,,
+racwork,temoin,comportement,,,,,,0,,,,,
+letin1a,temoin,attitude,,,,,,0,droite_bas,[CONFIRME],"Bursztyn, Egorov et Fiorin 2020, corpus 04-27 : l'opinion xenophobe est cachee par ceux qui la tiennent quand ils la croient minoritaire",,
+getahead,non teste,attitude,,43.500000,43.500000,MR141,conception,1,,,,MR141 = 43.5 points (conception),"modalite volontaire « Equally important », prise par 43.5 pour cent"
+aged,non teste,attitude,,63.960000,63.960000,MR141,conception,1,,,,MR141 = 63.96 points (conception),"modalite volontaire « It depends », prise par 63.9 pour cent"
+parsol,temoin,auto evaluation,,,,,,0,,,,,
+kidssol,non teste,auto evaluation,,11.850000,11.850000,MR141,conception,1,,,,MR141 = 11.85 points (conception),"modalite volontaire « No children », prise par 11.0 pour cent"
+spanking,temoin,attitude,,,,,,0,,,,,
+divlaw,non teste,attitude,,54.400000,54.400000,MR141,conception,1,,,,MR141 = 54.4 points (conception),"modalite volontaire « Stay as is », prise par 54.4 pour cent"
+sexeduc,temoin,attitude,,,,,,0,,,,,
+pillok,investiguer,attitude,,,,,,0,,,,,
+xmarsex,sensible,attitude,,,,,,0,,,,,
+homosex,temoin,attitude,,,,,,0,droite_bas,[PROBABLE],"Coffman, Coffman et Ericson 2017, corpus 04-21 : la desapprobation est sous declaree en question directe, par ceux qui la tiennent",,
+marhomo,temoin,attitude,,,,,,0,droite_bas,[PROBABLE],"meme source ; reserve forte : Lax, Phillips et Stollwerk 2016, corpus 04-22, ne trouvent aucune desirabilite sur le mariage entre personnes de meme sexe",,
+discaff,temoin,attitude,,,,,,0,,,,,
+abdefect,temoin,attitude,,,,,,0,,,,,
+abnomore,temoin,attitude,,,,,,0,,,,,
+abhlth,temoin,attitude,,,,,,0,,,,,
+abpoor,investiguer,attitude,,,,,,0,,,,,
+abrape,investiguer,attitude,,,,,,0,,,,,
+absingle,temoin,attitude,,,,,,0,,,,,
+abany,investiguer,attitude,,,,,,0,,,,,
+letdie1,temoin,attitude,,,,,,0,,,,,
+suicide1,investiguer,attitude,,,,,,0,,,,,
+suicide2,non teste,attitude,,,,,,0,,,,,
+suicide3,non teste,attitude,,,,,,0,,,,,
+suicide4,temoin,attitude,,,,,,0,,,,,
+pornlaw,temoin,attitude,,,,,,0,,,,,
+fair,non teste,attitude,,42.960000,42.960000,MR141,conception,1,,,,MR141 = 42.96 points (conception),"modalite volontaire « It depends », prise par 43.2 pour cent"
+helpful,non teste,attitude,,45.250000,45.250000,MR141,conception,1,,,,MR141 = 45.25 points (conception),"modalite volontaire « It depends », prise par 45.2 pour cent"
+trust,non teste,attitude,,39.340000,39.340000,MR141,conception,1,,,,MR141 = 39.34 points (conception),"modalite volontaire « It depends », prise par 39.3 pour cent"
+tax,non teste,attitude,,,,,,0,,,,,
+vote16,sensible,comportement,10.000000,10.000000,10.000000,MR021,mode,2,,,,MR021 = 10.0 points (mode) ; Atlas NBER 2025 = 3.0 points (mode),"la participation declaree au GSS depasse d'environ 10 points les estimations tirees des resultats officiels (page 3) ; Kleven (2022), non-voting Norway 1969-2021, N = 26 333 : reel 14.0 pour cent contre declare 11.0"
+pres16,temoin,comportement,3.300000,3.300000,3.300000,MR021,mode,1,,,,MR021 = 3.3 points (mode),"ecart absolu moyen de 3,3 points entre le choix de candidat declare au GSS et les resultats ; effet de maison de 4,2 points vers le candidat democrate (page 9)"
+if16who,investiguer,comportement,3.300000,3.300000,3.300000,MR021,mode,1,,,,MR021 = 3.3 points (mode),"meme mesure que PRES16, question posee aux non votants"
+news,investiguer,comportement,,,,,,0,,,,,
+jew,non teste,comportement,,,,,,0,,,,,
+relig16*,non teste,comportement,,,,,,0,,,,,
+jew16*,non teste,comportement,,,,,,0,,,,,
+attend,sensible,comportement,,,,,,0,,,,,
+pray,investiguer,comportement,,,,,,0,,,,,
+postlife,non teste,attitude,,26.000000,26.000000,MR141,conception,1,,,,MR141 = 26.0 points (conception),"modalite volontaire « Don't know », prise par 26.0 pour cent"
+bible,non teste,attitude,,13.810000,13.810000,MR141,conception,1,,,,MR141 = 13.81 points (conception),"modalite volontaire « Something else/Other », prise par 9.9 pour cent"
+reborn,investiguer,comportement,,,,,,0,,,,,
+savesoul,investiguer,comportement,,,,,,0,,,,,
+granborn,non teste,comportement,,,,,,0,,,,,
+uscitzn*,non teste,comportement,,12.850000,12.850000,MR141,conception,1,,,,MR141 = 12.85 points (conception),"modalite volontaire « Citizen born in PR, USVI, N. Marianas », prise par 3.5 pour cent"
+fucitzn,non teste,comportement,,38.700000,38.700000,MR141,conception,1,,,,MR141 = 38.7 points (conception),"modalite volontaire « Not eligible to become a U.S. citizen », prise par 28.2 pour cent"
+mnthsusa,non teste,comportement,,,,,,0,,,,,
+income,non teste,comportement,,,,,,0,,,,,
+othlang,temoin,comportement,,,,,,0,,,,,
+health,temoin,auto evaluation,5.000000,5.000000,5.000000,MR086,mode,1,,,,MR086 = 5.0 points (mode),"29 pour cent d'« excellente » quand quelqu'un est present contre 34 pour cent seul ; 35, 31 et 23,5 pour cent pour 0, 1 et 2 personnes et plus (page 10). Seule association survivant aux controles"
+compuse*,temoin,comportement,,,,,,0,,,,,
+webmob,non teste,comportement,,,,,,0,,,,,
+xmovie,non teste,comportement,,,,,,0,,,,,
+usewww*,non teste,comportement,,,,,,0,,,,,
+life,temoin,auto evaluation,,,,,,0,,,,,
+richwork,temoin,attitude,,,,,,0,,,,,

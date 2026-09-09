@@ -1,0 +1,4 @@
+cle_modele,modele,n_couples,n_identiques,ecart_absolu_moyen_points,ic_bas,ic_haut,ecart_signe_moyen_points_parti_moins_ideologie,signe_ic_bas,signe_ic_haut
+oss20,gpt-oss-20b,16,11,8.25,2.625,15.0,-4.5,-11.625,3.0
+q30,Qwen3-30B-A3B,16,5,9.625,5.0,14.564062499999991,3.5,-2.8125,10.3125
+q4,Qwen3-4B,16,3,11.5,7.2484375,16.5,2.875,-4.4375,10.251562499999991

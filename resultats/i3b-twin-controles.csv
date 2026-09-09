@@ -1,0 +1,22 @@
+controle,jeu,objet,valeur,seuil,passe
+"sujets, items, configurations, contre a6 section 1.4",twin,structure,2058/108/13,2058/108/13,True
+"taux de cellules vides, contre a6 section 1.4",twin,humains vague 4,0.2407,"0,241",True
+"taux de repli du generateur nul, ideologie a cinq niveaux",twin,humains vagues 1-3 (retest),0.0,0.0,True
+cellules perdues par l'intersection des masques,twin,humains vague 4,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Demographics Only - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,JSON Persona (Predicted Output) - GPT4.1,0.00508,0.005,False
+cellules perdues par l'intersection des masques,twin,JSON Persona (Predicted Output) - GPT4.1-mini,0.099178,0.005,False
+cellules perdues par l'intersection des masques,twin,JSON Persona - GPT4.1,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,JSON Persona - GPT4.1-mini,0.001865,0.005,True
+cellules perdues par l'intersection des masques,twin,LLM Finetuning (500 training samples) - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Persona Summary - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Persona Summary - JSON Persona - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Text Persona (Default Temperature) - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Text Persona (Reasoning) - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Text Persona (Repeating Questions) - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Text Persona - GPT4.1-mini,0.0,0.005,True
+cellules perdues par l'intersection des masques,twin,Text Persona - Gemini-Flash2.5,0.0,0.005,True
+le flux a taux 0 egale la population de fond,twin,toutes sources,0,0,True
+"controle negatif, fond melange a lui meme",twin,50 pour cent,0,0,True
+"fausse alarme, retest humain vague 4 sous 25 pour cent",twin,|z| maximal,0.4,< 3.220,True
+"R2 de l'ajustement quadratique, courbes a effet reel",twin,minimum sur 36 courbes,0.986,"> 0,95",True

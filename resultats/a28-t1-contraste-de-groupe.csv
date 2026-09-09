@@ -1,0 +1,7 @@
+quantite,moyenne_llm,moyenne_statistique,difference,p_permutation_methodes,n_llm,n_stat
+H1 distance,0.050326,-0.000055,0.050381,0.000780,8,5
+H2 dispersion,-0.093840,0.015196,-0.109036,0.206956,8,5
+H4 desirabilite,-0.064808,-0.002758,-0.062051,0.069779,8,5
+"H3 continu, S1 NORC ordinal",0.117567,-0.044270,0.161837,0.001580,8,5
+"H3 continu, S2 ampleur publiee",0.212708,-0.142826,0.355534,0.000860,8,5
+"H3 continu, S3 composite",0.235498,0.002818,0.232679,0.014660,8,5

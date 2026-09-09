@@ -1,0 +1,16 @@
+famille,couple,quantite,argmax,tirage,difference_tirage_moins_argmax,ic_bas,ic_haut,p_bootstrap,signe_attendu,signe_observe,conforme,p_holm,p_bh
+H1 primaire,marginale,exactitude,B0 mode,B0 tirage,-0.101565,-0.105256,-0.097926,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,marginale,intra,B0 mode,B0 tirage,1.011493,1.001487,1.022067,0.002500,tirage plus haut,tirage plus haut,True,0.030000,0.002500
+H1 primaire,marginale,inter,B0 mode,B0 tirage,0.092367,0.074902,0.109810,0.002500,tirage plus bas,tirage plus haut,False,0.030000,0.002500
+H1 primaire,regression sur demographies,exactitude,B1 argmax,B1 tirage,-0.078253,-0.081156,-0.075489,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,regression sur demographies,intra,B1 argmax,B1 tirage,0.363029,0.354502,0.372414,0.002500,tirage plus haut,tirage plus haut,True,0.030000,0.002500
+H1 primaire,regression sur demographies,inter,B1 argmax,B1 tirage,-1.477301,-1.614049,-1.343930,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,regression sur contexte,exactitude,E1 regression contexte argmax,E2 regression contexte tirage,-0.085502,-0.087759,-0.083293,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,regression sur contexte,intra,E1 regression contexte argmax,E2 regression contexte tirage,0.203527,0.197156,0.211032,0.002500,tirage plus haut,tirage plus haut,True,0.030000,0.002500
+H1 primaire,regression sur contexte,inter,E1 regression contexte argmax,E2 regression contexte tirage,-0.576178,-0.617583,-0.535321,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,hot deck k=30,exactitude,B2 argmax,B2 tirage,-0.096394,-0.099255,-0.094029,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+H1 primaire,hot deck k=30,intra,B2 argmax,B2 tirage,0.426748,0.417048,0.436549,0.002500,tirage plus haut,tirage plus haut,True,0.030000,0.002500
+H1 primaire,hot deck k=30,inter,B2 argmax,B2 tirage,-0.976580,-1.030684,-0.917002,0.002500,tirage plus bas,tirage plus bas,True,0.030000,0.002500
+"hors famille, 70 items ordinaux",copule gaussienne,exactitude,copule argmax,copule tirage,-0.130781,-0.135282,-0.126379,0.002500,tirage plus bas,tirage plus bas,True,,
+"hors famille, 70 items ordinaux",copule gaussienne,intra,copule argmax,copule tirage,0.457392,0.446930,0.467279,0.002500,tirage plus haut,tirage plus haut,True,,
+"hors famille, 70 items ordinaux",copule gaussienne,inter,copule argmax,copule tirage,-1.004483,-1.072289,-0.940305,0.002500,tirage plus bas,tirage plus bas,True,,

@@ -1,0 +1,5 @@
+condition,trace,personnes completes,items couverts,items couverts hors des 58 familles,appels lus
+C3E,r3-C3E-qwen4.jsonl,94,58,0,5491
+C2S,r3-C2S-qwen4.jsonl,130,58,0,7564
+C3,a5-C3-p1.jsonl,150,149,91,22350
+C2,a5-C2-p1.jsonl,150,149,91,22350

@@ -1,0 +1,21 @@
+configuration,perimetre,n,spearman_avantage_retest,p
+"GPT-4.1-mini, persona texte","108 items, tous",108,0.7974,5.364e-25
+"GPT-4.1-mini, persona texte",hors bloc Product Preferences - Pricing,68,0.5606,6.651e-07
+"GPT-4.1-mini, persona texte",au niveau du bloc,33,0.4788,4.816e-03
+"GPT-4.1-mini, persona texte",blocs a plus d un item,7,0.8571,1.370e-02
+"GPT-4.1, persona JSON","108 items, tous",108,0.7856,7.700e-24
+"GPT-4.1, persona JSON",hors bloc Product Preferences - Pricing,68,0.5155,6.837e-06
+"GPT-4.1, persona JSON",au niveau du bloc,33,0.4524,8.207e-03
+"GPT-4.1, persona JSON",blocs a plus d un item,7,0.8571,1.370e-02
+"Gemini-Flash-2.5, persona texte","108 items, tous",108,0.7947,1.014e-24
+"Gemini-Flash-2.5, persona texte",hors bloc Product Preferences - Pricing,68,0.5303,3.296e-06
+"Gemini-Flash-2.5, persona texte",au niveau du bloc,33,0.4993,3.093e-03
+"Gemini-Flash-2.5, persona texte",blocs a plus d un item,7,1.0000,0.000e+00
+"GPT-4.1-mini, affine sur 500 exemples","108 items, tous",108,0.2012,3.682e-02
+"GPT-4.1-mini, affine sur 500 exemples",hors bloc Product Preferences - Pricing,68,0.2969,1.396e-02
+"GPT-4.1-mini, affine sur 500 exemples",au niveau du bloc,33,0.0511,7.775e-01
+"GPT-4.1-mini, affine sur 500 exemples",blocs a plus d un item,7,0.7143,7.134e-02
+"GPT-4.1-mini, persona texte",avantage moyen dans Product Preferences - Pricing,40,0.1034,
+"GPT-4.1-mini, persona texte",avantage moyen hors ce bloc,68,-0.0561,
+structure,blocs,33,,
+structure,blocs a un seul item,26,,

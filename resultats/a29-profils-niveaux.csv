@@ -1,0 +1,1177 @@
+perimetre,axe,niveau,condition,personnes,taux_rares,ic_bas,ic_haut
+150,gender,female,"reel, vague 1",84,0.029802,0.025130,0.034881
+150,gender,male,"reel, vague 1",66,0.038031,0.031669,0.044548
+150,gender,female,agents composite,84,0.029163,0.024697,0.033925
+150,gender,male,agents composite,66,0.038540,0.031115,0.046501
+150,gender,female,agents entretien (v3),84,0.035075,0.030244,0.039845
+150,gender,male,agents entretien (v3),66,0.038641,0.031117,0.046439
+150,gender,female,agents enquete,84,0.033717,0.028923,0.038680
+150,gender,male,agents enquete,66,0.038235,0.031135,0.045892
+150,gender,female,agents demographiques (v6),84,0.017657,0.015482,0.019736
+150,gender,male,agents demographiques (v6),66,0.014541,0.011838,0.017230
+150,gender,female,agents v7,84,0.020134,0.015514,0.026548
+150,gender,male,agents v7,66,0.021049,0.015660,0.027544
+150,gender,female,agents v8,84,0.038351,0.030788,0.046309
+150,gender,male,agents v8,66,0.042201,0.032088,0.053011
+150,gender,female,C2,84,0.040748,0.033834,0.048051
+150,gender,male,C2,66,0.046370,0.036853,0.057002
+150,gender,female,C3,84,0.053851,0.049317,0.058438
+150,gender,male,C3,66,0.058267,0.051931,0.065215
+150,gender,female,B0 mode,84,0.000000,0.000000,0.000000
+150,gender,male,B0 mode,66,0.000000,0.000000,0.000000
+150,gender,female,B0 tirage,84,0.037712,0.034731,0.040559
+150,gender,male,B0 tirage,66,0.036404,0.032627,0.040367
+150,gender,female,B1 argmax,84,0.008389,0.006629,0.010181
+150,gender,male,B1 argmax,66,0.011186,0.008290,0.014400
+150,gender,female,B2 argmax,84,0.001198,0.000546,0.002031
+150,gender,male,B2 argmax,66,0.002949,0.001424,0.004952
+150,gender,female,B3 foret,84,0.001278,0.000657,0.002013
+150,gender,male,B3 foret,66,0.001322,0.000660,0.002043
+150,gender,female,humains vague 2,84,0.031560,0.026767,0.036630
+150,gender,male,humains vague 2,66,0.040167,0.033662,0.047614
+150,race,black,"reel, vague 1",22,0.031422,0.022091,0.041528
+150,race,other,"reel, vague 1",19,0.037089,0.025727,0.049664
+150,race,white,"reel, vague 1",109,0.033188,0.028831,0.037915
+150,race,black,agents composite,22,0.028371,0.018967,0.040268
+150,race,other,agents composite,19,0.034970,0.025015,0.046183
+150,race,white,agents composite,109,0.033988,0.028951,0.039335
+150,race,black,agents entretien (v3),22,0.027151,0.019345,0.036185
+150,race,other,agents entretien (v3),19,0.036383,0.027130,0.045455
+150,race,white,agents entretien (v3),109,0.038606,0.033064,0.044258
+150,race,black,agents enquete,22,0.030201,0.023264,0.038256
+150,race,other,agents enquete,19,0.028612,0.021996,0.035794
+150,race,white,agents enquete,109,0.038052,0.032702,0.043716
+150,race,black,agents demographiques (v6),22,0.015558,0.012010,0.019175
+150,race,other,agents demographiques (v6),19,0.016955,0.012943,0.020805
+150,race,white,agents demographiques (v6),109,0.016317,0.014175,0.018410
+150,race,black,agents v7,22,0.023490,0.017338,0.029799
+150,race,other,agents v7,19,0.025079,0.017371,0.033877
+150,race,white,agents v7,109,0.019149,0.014444,0.024766
+150,race,black,agents v8,22,0.032337,0.021332,0.044752
+150,race,other,agents v8,19,0.034970,0.020527,0.052952
+150,race,white,agents v8,109,0.042485,0.034727,0.050610
+150,race,black,C2,22,0.040879,0.028888,0.054388
+150,race,other,C2,19,0.038149,0.026846,0.053691
+150,race,white,C2,109,0.044579,0.037364,0.052422
+150,race,black,C3,22,0.055827,0.047272,0.065704
+150,race,other,C3,19,0.052278,0.044915,0.059613
+150,race,white,C3,109,0.056400,0.051585,0.061657
+150,race,black,B0 mode,22,0.000000,0.000000,0.000000
+150,race,other,B0 mode,19,0.000000,0.000000,0.000000
+150,race,white,B0 mode,109,0.000000,0.000000,0.000000
+150,race,black,B0 tirage,22,0.037828,0.030947,0.044297
+150,race,other,B0 tirage,19,0.037796,0.033557,0.042186
+150,race,white,B0 tirage,109,0.036882,0.034178,0.039838
+150,race,black,B1 argmax,22,0.011287,0.006419,0.017114
+150,race,other,B1 argmax,19,0.012010,0.006711,0.017451
+150,race,white,B1 argmax,109,0.008866,0.006953,0.010713
+150,race,black,B2 argmax,22,0.000610,0.000000,0.001525
+150,race,other,B2 argmax,19,0.001060,0.000000,0.002349
+150,race,white,B2 argmax,109,0.002401,0.001354,0.003701
+150,race,black,B3 foret,22,0.000305,0.000000,0.001033
+150,race,other,B3 foret,19,0.001060,0.000000,0.002323
+150,race,white,B3 foret,109,0.001539,0.000932,0.002196
+150,race,black,humains vague 2,22,0.031117,0.019761,0.042603
+150,race,other,humains vague 2,19,0.044860,0.033162,0.058539
+150,race,white,humains vague 2,109,0.034542,0.029807,0.039461
+150,political_ideology,conservative,"reel, vague 1",22,0.036608,0.025296,0.051812
+150,political_ideology,extremely conservative,"reel, vague 1",8,0.054530,0.032522,0.079422
+150,political_ideology,extremely liberal,"reel, vague 1",12,0.035235,0.024327,0.046422
+150,political_ideology,liberal,"reel, vague 1",36,0.030015,0.022700,0.039151
+150,political_ideology,moderate,"reel, vague 1",45,0.028486,0.022847,0.034015
+150,political_ideology,slightly conservative,"reel, vague 1",12,0.039150,0.024405,0.054654
+150,political_ideology,slightly liberal,"reel, vague 1",15,0.034452,0.025353,0.045761
+150,political_ideology,conservative,agents composite,22,0.053691,0.041227,0.068865
+150,political_ideology,extremely conservative,agents composite,8,0.082215,0.059784,0.107383
+150,political_ideology,extremely liberal,agents composite,12,0.029642,0.020134,0.039010
+150,political_ideology,liberal,agents composite,36,0.020880,0.016632,0.025465
+150,political_ideology,moderate,agents composite,45,0.027890,0.022133,0.033869
+150,political_ideology,slightly conservative,agents composite,12,0.034116,0.024609,0.043400
+150,political_ideology,slightly liberal,agents composite,15,0.025503,0.014861,0.042506
+150,political_ideology,conservative,agents entretien (v3),22,0.061928,0.050219,0.076065
+150,political_ideology,extremely conservative,agents entretien (v3),8,0.082215,0.064870,0.097315
+150,political_ideology,extremely liberal,agents entretien (v3),12,0.040828,0.030574,0.051454
+150,political_ideology,liberal,agents entretien (v3),36,0.025913,0.020896,0.031086
+150,political_ideology,moderate,agents entretien (v3),45,0.029381,0.022475,0.036913
+150,political_ideology,slightly conservative,agents entretien (v3),12,0.034676,0.024161,0.044747
+150,political_ideology,slightly liberal,agents entretien (v3),15,0.021029,0.010906,0.033914
+150,political_ideology,conservative,agents enquete,22,0.052776,0.041425,0.065504
+150,political_ideology,extremely conservative,agents enquete,8,0.076342,0.050803,0.102353
+150,political_ideology,extremely liberal,agents enquete,12,0.031879,0.021961,0.041820
+150,political_ideology,liberal,agents enquete,36,0.025913,0.020298,0.033385
+150,political_ideology,moderate,agents enquete,45,0.029978,0.024129,0.036470
+150,political_ideology,slightly conservative,agents enquete,12,0.035235,0.022931,0.047653
+150,political_ideology,slightly liberal,agents enquete,15,0.033110,0.023908,0.046236
+150,political_ideology,conservative,agents demographiques (v6),22,0.019524,0.014382,0.024888
+150,political_ideology,extremely conservative,agents demographiques (v6),8,0.020973,0.016779,0.025887
+150,political_ideology,extremely liberal,agents demographiques (v6),12,0.017897,0.012813,0.023969
+150,political_ideology,liberal,agents demographiques (v6),36,0.015287,0.012334,0.018409
+150,political_ideology,moderate,agents demographiques (v6),45,0.015958,0.012752,0.019372
+150,political_ideology,slightly conservative,agents demographiques (v6),12,0.016779,0.009808,0.023795
+150,political_ideology,slightly liberal,agents demographiques (v6),15,0.010738,0.006195,0.015397
+150,political_ideology,conservative,agents v7,22,0.019219,0.013423,0.025354
+150,political_ideology,extremely conservative,agents v7,8,0.031040,0.010067,0.060403
+150,political_ideology,extremely liberal,agents v7,12,0.020134,0.012078,0.030872
+150,political_ideology,liberal,agents v7,36,0.019575,0.014764,0.024609
+150,political_ideology,moderate,agents v7,45,0.016107,0.010796,0.023668
+150,political_ideology,slightly conservative,agents v7,12,0.021253,0.008725,0.036433
+150,political_ideology,slightly liberal,agents v7,15,0.032215,0.014541,0.062095
+150,political_ideology,conservative,agents v8,22,0.095180,0.082213,0.106546
+150,political_ideology,extremely conservative,agents v8,8,0.133389,0.124161,0.140394
+150,political_ideology,extremely liberal,agents v8,12,0.059843,0.052349,0.067631
+150,political_ideology,liberal,agents v8,36,0.021253,0.017180,0.025280
+150,political_ideology,moderate,agents v8,45,0.014467,0.010802,0.018856
+150,political_ideology,slightly conservative,agents v8,12,0.050336,0.033557,0.067787
+150,political_ideology,slightly liberal,agents v8,15,0.007159,0.004195,0.010404
+150,political_ideology,conservative,C2,22,0.087248,0.073820,0.101232
+150,political_ideology,extremely conservative,C2,8,0.149329,0.138063,0.161074
+150,political_ideology,extremely liberal,C2,12,0.064877,0.057604,0.072987
+150,political_ideology,liberal,C2,36,0.025913,0.022673,0.029169
+150,political_ideology,moderate,C2,45,0.021178,0.019329,0.023232
+150,political_ideology,slightly conservative,C2,12,0.034676,0.027964,0.041760
+150,political_ideology,slightly liberal,C2,15,0.019239,0.014318,0.025356
+150,political_ideology,conservative,C3,22,0.062843,0.049915,0.077039
+150,political_ideology,extremely conservative,C3,8,0.088926,0.061239,0.119588
+150,political_ideology,extremely liberal,C3,12,0.062081,0.050890,0.075086
+150,political_ideology,liberal,C3,36,0.048844,0.041609,0.056628
+150,political_ideology,moderate,C3,45,0.052349,0.047315,0.057352
+150,political_ideology,slightly conservative,C3,12,0.053691,0.042953,0.064434
+150,political_ideology,slightly liberal,C3,15,0.051454,0.042502,0.061521
+150,political_ideology,conservative,B0 mode,22,0.000000,0.000000,0.000000
+150,political_ideology,extremely conservative,B0 mode,8,0.000000,0.000000,0.000000
+150,political_ideology,extremely liberal,B0 mode,12,0.000000,0.000000,0.000000
+150,political_ideology,liberal,B0 mode,36,0.000000,0.000000,0.000000
+150,political_ideology,moderate,B0 mode,45,0.000000,0.000000,0.000000
+150,political_ideology,slightly conservative,B0 mode,12,0.000000,0.000000,0.000000
+150,political_ideology,slightly liberal,B0 mode,15,0.000000,0.000000,0.000000
+150,political_ideology,conservative,B0 tirage,22,0.037218,0.030378,0.044938
+150,political_ideology,extremely conservative,B0 tirage,8,0.043624,0.025168,0.062845
+150,political_ideology,extremely liberal,B0 tirage,12,0.036353,0.029083,0.044295
+150,political_ideology,liberal,B0 tirage,36,0.035235,0.029913,0.040485
+150,political_ideology,moderate,B0 tirage,45,0.035794,0.032674,0.038904
+150,political_ideology,slightly conservative,B0 tirage,12,0.038591,0.031640,0.045062
+150,political_ideology,slightly liberal,B0 tirage,15,0.041611,0.035567,0.047939
+150,political_ideology,conservative,B1 argmax,22,0.017999,0.013423,0.023012
+150,political_ideology,extremely conservative,B1 argmax,8,0.025168,0.015340,0.037754
+150,political_ideology,extremely liberal,B1 argmax,12,0.013982,0.008725,0.018696
+150,political_ideology,liberal,B1 argmax,36,0.007457,0.004935,0.010487
+150,political_ideology,moderate,B1 argmax,45,0.005518,0.003508,0.007628
+150,political_ideology,slightly conservative,B1 argmax,12,0.007271,0.002876,0.012975
+150,political_ideology,slightly liberal,B1 argmax,15,0.004922,0.001491,0.010072
+150,political_ideology,conservative,B2 argmax,22,0.003051,0.001220,0.005369
+150,political_ideology,extremely conservative,B2 argmax,8,0.007550,0.000000,0.019178
+150,political_ideology,extremely liberal,B2 argmax,12,0.005034,0.001218,0.009396
+150,political_ideology,liberal,B2 argmax,36,0.000373,0.000000,0.000959
+150,political_ideology,moderate,B2 argmax,45,0.001790,0.000530,0.003590
+150,political_ideology,slightly conservative,B2 argmax,12,0.001119,0.000000,0.003835
+150,political_ideology,slightly liberal,B2 argmax,15,0.000000,0.000000,0.000000
+150,political_ideology,conservative,B3 foret,22,0.003661,0.001864,0.005544
+150,political_ideology,extremely conservative,B3 foret,8,0.005034,0.001678,0.008629
+150,political_ideology,extremely liberal,B3 foret,12,0.000559,0.000000,0.001866
+150,political_ideology,liberal,B3 foret,36,0.000373,0.000000,0.000936
+150,political_ideology,moderate,B3 foret,45,0.001044,0.000312,0.001893
+150,political_ideology,slightly conservative,B3 foret,12,0.000559,0.000000,0.001918
+150,political_ideology,slightly liberal,B3 foret,15,0.000000,0.000000,0.000000
+150,political_ideology,conservative,humains vague 2,22,0.037828,0.028762,0.047299
+150,political_ideology,extremely conservative,humains vague 2,8,0.059564,0.031632,0.092742
+150,political_ideology,extremely liberal,humains vague 2,12,0.035794,0.022651,0.049498
+150,political_ideology,liberal,humains vague 2,36,0.032625,0.022434,0.044744
+150,political_ideology,moderate,humains vague 2,45,0.031618,0.026099,0.037266
+150,political_ideology,slightly conservative,humains vague 2,12,0.032998,0.023490,0.044104
+150,political_ideology,slightly liberal,humains vague 2,15,0.038031,0.029530,0.049077
+150,age,18 - 24,"reel, vague 1",22,0.030201,0.021193,0.040017
+150,age,25 - 34,"reel, vague 1",25,0.042685,0.030423,0.056134
+150,age,35 - 44,"reel, vague 1",23,0.042603,0.033557,0.052413
+150,age,45 - 54,"reel, vague 1",28,0.027804,0.021713,0.033781
+150,age,55 - 64,"reel, vague 1",28,0.023969,0.019259,0.029623
+150,age,65 - 74,"reel, vague 1",19,0.036030,0.022897,0.052777
+150,age,75 or more,"reel, vague 1",5,0.033557,0.020134,0.046980
+150,age,18 - 24,agents composite,22,0.021049,0.015570,0.026846
+150,age,25 - 34,agents composite,25,0.046174,0.031804,0.061865
+150,age,35 - 44,agents composite,23,0.040268,0.030760,0.051179
+150,age,45 - 54,agents composite,28,0.029482,0.022679,0.036691
+150,age,55 - 64,agents composite,28,0.022771,0.017406,0.028587
+150,age,65 - 74,agents composite,19,0.043448,0.028336,0.062919
+150,age,75 or more,agents composite,5,0.032215,0.020134,0.046980
+150,age,18 - 24,agents entretien (v3),22,0.022880,0.014006,0.032642
+150,age,25 - 34,agents entretien (v3),25,0.040805,0.031438,0.051573
+150,age,35 - 44,agents entretien (v3),23,0.037934,0.029472,0.047895
+150,age,45 - 54,agents entretien (v3),28,0.038591,0.028186,0.048900
+150,age,55 - 64,agents entretien (v3),28,0.032838,0.024373,0.041763
+150,age,65 - 74,agents entretien (v3),19,0.049452,0.033107,0.069236
+150,age,75 or more,agents entretien (v3),5,0.032215,0.011745,0.055928
+150,age,18 - 24,agents enquete,22,0.029286,0.023154,0.035655
+150,age,25 - 34,agents enquete,25,0.042148,0.027917,0.057778
+150,age,35 - 44,agents enquete,23,0.040268,0.031320,0.051456
+150,age,45 - 54,agents enquete,28,0.032838,0.024474,0.041164
+150,age,55 - 64,agents enquete,28,0.026127,0.021029,0.031879
+150,age,65 - 74,agents enquete,19,0.045920,0.031437,0.062469
+150,age,75 or more,agents enquete,5,0.041611,0.023490,0.063758
+150,age,18 - 24,agents demographiques (v6),22,0.014338,0.010582,0.018015
+150,age,25 - 34,agents demographiques (v6),25,0.015034,0.011505,0.018394
+150,age,35 - 44,agents demographiques (v6),23,0.018092,0.015286,0.020909
+150,age,45 - 54,agents demographiques (v6),28,0.017498,0.013015,0.021547
+150,age,55 - 64,agents demographiques (v6),28,0.015820,0.011592,0.020134
+150,age,65 - 74,agents demographiques (v6),19,0.018368,0.011630,0.025503
+150,age,75 or more,agents demographiques (v6),5,0.010738,0.000000,0.020134
+150,age,18 - 24,agents v7,22,0.024405,0.016955,0.032498
+150,age,25 - 34,agents v7,25,0.029799,0.018216,0.047942
+150,age,35 - 44,agents v7,23,0.015174,0.009337,0.021747
+150,age,45 - 54,agents v7,28,0.014621,0.010201,0.019495
+150,age,55 - 64,agents v7,28,0.017498,0.011054,0.026310
+150,age,65 - 74,agents v7,19,0.023667,0.011930,0.041353
+150,age,75 or more,agents v7,5,0.020134,0.009815,0.036493
+150,age,18 - 24,agents v8,22,0.028066,0.020134,0.036608
+150,age,25 - 34,agents v8,25,0.036510,0.020392,0.053386
+150,age,35 - 44,agents v8,23,0.036475,0.021332,0.054532
+150,age,45 - 54,agents v8,28,0.046261,0.031470,0.060919
+150,age,55 - 64,agents v8,28,0.036673,0.022549,0.051774
+150,age,65 - 74,agents v8,19,0.053691,0.031314,0.078773
+150,age,75 or more,agents v8,5,0.059060,0.010067,0.114094
+150,age,18 - 24,C2,22,0.033252,0.027720,0.039463
+150,age,25 - 34,C2,25,0.048859,0.031222,0.068552
+150,age,35 - 44,C2,23,0.040268,0.023746,0.059153
+150,age,45 - 54,C2,28,0.046980,0.033550,0.061570
+150,age,55 - 64,C2,28,0.040988,0.026846,0.056376
+150,age,65 - 74,C2,19,0.048746,0.033557,0.065894
+150,age,75 or more,C2,5,0.042953,0.013423,0.064877
+150,age,18 - 24,C3,22,0.051556,0.045060,0.058539
+150,age,25 - 34,C3,25,0.066040,0.053351,0.080543
+150,age,35 - 44,C3,23,0.057776,0.048656,0.067728
+150,age,45 - 54,C3,28,0.056328,0.049361,0.063140
+150,age,55 - 64,C3,28,0.052013,0.044966,0.059940
+150,age,65 - 74,C3,19,0.053338,0.040268,0.069464
+150,age,75 or more,C3,5,0.041611,0.029362,0.057047
+150,age,18 - 24,B0 mode,22,0.000000,0.000000,0.000000
+150,age,25 - 34,B0 mode,25,0.000000,0.000000,0.000000
+150,age,35 - 44,B0 mode,23,0.000000,0.000000,0.000000
+150,age,45 - 54,B0 mode,28,0.000000,0.000000,0.000000
+150,age,55 - 64,B0 mode,28,0.000000,0.000000,0.000000
+150,age,65 - 74,B0 mode,19,0.000000,0.000000,0.000000
+150,age,75 or more,B0 mode,5,0.000000,0.000000,0.000000
+150,age,18 - 24,B0 tirage,22,0.035692,0.030761,0.040702
+150,age,25 - 34,B0 tirage,25,0.039195,0.033264,0.045229
+150,age,35 - 44,B0 tirage,23,0.037059,0.031320,0.043034
+150,age,45 - 54,B0 tirage,28,0.033797,0.028993,0.038800
+150,age,55 - 64,B0 tirage,28,0.039310,0.032716,0.046175
+150,age,65 - 74,B0 tirage,19,0.035676,0.028981,0.042388
+150,age,75 or more,B0 tirage,5,0.045638,0.040268,0.055034
+150,age,18 - 24,B1 argmax,22,0.007627,0.004194,0.011380
+150,age,25 - 34,B1 argmax,25,0.010470,0.005369,0.016539
+150,age,35 - 44,B1 argmax,23,0.009046,0.004971,0.013715
+150,age,45 - 54,B1 argmax,28,0.009827,0.006357,0.013423
+150,age,55 - 64,B1 argmax,28,0.009108,0.005329,0.013184
+150,age,65 - 74,B1 argmax,19,0.011303,0.007106,0.016107
+150,age,75 or more,B1 argmax,5,0.012081,0.002685,0.024609
+150,age,18 - 24,B2 argmax,22,0.001830,0.000000,0.004155
+150,age,25 - 34,B2 argmax,25,0.002953,0.000610,0.007031
+150,age,35 - 44,B2 argmax,23,0.001459,0.000292,0.003051
+150,age,45 - 54,B2 argmax,28,0.000959,0.000000,0.002302
+150,age,55 - 64,B2 argmax,28,0.000479,0.000000,0.001168
+150,age,65 - 74,B2 argmax,19,0.004239,0.000895,0.008809
+150,age,75 or more,B2 argmax,5,0.005369,0.000000,0.010067
+150,age,18 - 24,B3 foret,22,0.000610,0.000000,0.001525
+150,age,25 - 34,B3 foret,25,0.001074,0.000248,0.002098
+150,age,35 - 44,B3 foret,23,0.000584,0.000000,0.001525
+150,age,45 - 54,B3 foret,28,0.001438,0.000305,0.002686
+150,age,55 - 64,B3 foret,28,0.000959,0.000000,0.002237
+150,age,65 - 74,B3 foret,19,0.003532,0.001578,0.005705
+150,age,75 or more,B3 foret,5,0.001342,0.000000,0.004474
+150,age,18 - 24,humains vague 2,22,0.029896,0.020134,0.040560
+150,age,25 - 34,humains vague 2,25,0.048054,0.031879,0.065325
+150,age,35 - 44,humains vague 2,23,0.048731,0.038926,0.060160
+150,age,45 - 54,humains vague 2,28,0.029962,0.025105,0.034606
+150,age,55 - 64,humains vague 2,28,0.026366,0.021291,0.032047
+150,age,65 - 74,humains vague 2,19,0.030378,0.021593,0.039896
+150,age,75 or more,humains vague 2,5,0.033557,0.023490,0.046980
+150,education,associate/junior college,"reel, vague 1",24,0.035794,0.027684,0.045431
+150,education,bachelor's,"reel, vague 1",39,0.035106,0.025961,0.045199
+150,education,graduate,"reel, vague 1",26,0.035106,0.024965,0.047445
+150,education,high school,"reel, vague 1",60,0.030537,0.025950,0.035289
+150,education,less than high school,"reel, vague 1",1,0.040268,0.040268,0.040268
+150,education,associate/junior college,agents composite,24,0.037472,0.025266,0.051454
+150,education,bachelor's,agents composite,39,0.034417,0.025055,0.045205
+150,education,graduate,agents composite,26,0.031492,0.024748,0.037783
+150,education,high school,agents composite,60,0.031320,0.025193,0.037769
+150,education,less than high school,agents composite,1,0.053691,0.053691,0.053691
+150,education,associate/junior college,agents entretien (v3),24,0.042506,0.030537,0.055371
+150,education,bachelor's,agents entretien (v3),39,0.039408,0.029529,0.049500
+150,education,graduate,agents entretien (v3),26,0.030459,0.021885,0.039712
+150,education,high school,agents entretien (v3),60,0.034340,0.028465,0.040271
+150,education,less than high school,agents entretien (v3),1,0.087248,0.087248,0.087248
+150,education,associate/junior college,agents enquete,24,0.043345,0.033877,0.055090
+150,education,bachelor's,agents enquete,39,0.033385,0.025392,0.042506
+150,education,graduate,agents enquete,26,0.037171,0.024779,0.051174
+150,education,high school,agents enquete,60,0.033557,0.027869,0.039286
+150,education,less than high school,agents enquete,1,0.033557,0.033557,0.033557
+150,education,associate/junior college,agents demographiques (v6),24,0.015380,0.011264,0.019672
+150,education,bachelor's,agents demographiques (v6),39,0.016176,0.012621,0.019590
+150,education,graduate,agents demographiques (v6),26,0.017295,0.012703,0.021860
+150,education,high school,agents demographiques (v6),60,0.015996,0.013528,0.018519
+150,education,less than high school,agents demographiques (v6),1,0.033557,0.033557,0.033557
+150,education,associate/junior college,agents v7,24,0.017058,0.011285,0.023797
+150,education,bachelor's,agents v7,39,0.021167,0.014691,0.028259
+150,education,graduate,agents v7,26,0.018069,0.009933,0.031098
+150,education,high school,agents v7,60,0.022819,0.016961,0.030563
+150,education,less than high school,agents v7,1,0.006711,0.006711,0.006711
+150,education,associate/junior college,agents v8,24,0.060403,0.039999,0.082456
+150,education,bachelor's,agents v8,39,0.039924,0.027037,0.053691
+150,education,graduate,agents v8,26,0.039494,0.024710,0.054251
+150,education,high school,agents v8,60,0.032662,0.025191,0.041029
+150,education,less than high school,agents v8,1,0.013423,0.013423,0.013423
+150,education,associate/junior college,C2,24,0.068512,0.048590,0.089767
+150,education,bachelor's,C2,39,0.039064,0.027240,0.052710
+150,education,graduate,C2,26,0.044399,0.032144,0.057607
+150,education,high school,C2,60,0.035570,0.029152,0.043308
+150,education,less than high school,C2,1,0.026846,0.026846,0.026846
+150,education,associate/junior college,C3,24,0.059843,0.048935,0.072483
+150,education,bachelor's,C3,39,0.056100,0.047352,0.066240
+150,education,graduate,C3,26,0.058338,0.049127,0.068399
+150,education,high school,C3,60,0.052908,0.048484,0.057606
+150,education,less than high school,C3,1,0.053691,0.053691,0.053691
+150,education,associate/junior college,B0 mode,24,0.000000,0.000000,0.000000
+150,education,bachelor's,B0 mode,39,0.000000,0.000000,0.000000
+150,education,graduate,B0 mode,26,0.000000,0.000000,0.000000
+150,education,high school,B0 mode,60,0.000000,0.000000,0.000000
+150,education,less than high school,B0 mode,1,0.000000,0.000000,0.000000
+150,education,associate/junior college,B0 tirage,24,0.032718,0.027165,0.038518
+150,education,bachelor's,B0 tirage,39,0.038203,0.033094,0.043295
+150,education,graduate,B0 tirage,26,0.041559,0.035704,0.047260
+150,education,high school,B0 tirage,60,0.036130,0.032687,0.039771
+150,education,less than high school,B0 tirage,1,0.046980,0.046980,0.046980
+150,education,associate/junior college,B1 argmax,24,0.012025,0.006711,0.018000
+150,education,bachelor's,B1 argmax,39,0.008604,0.005622,0.011950
+150,education,graduate,B1 argmax,26,0.013423,0.009127,0.017811
+150,education,high school,B1 argmax,60,0.007718,0.005503,0.010068
+150,education,less than high school,B1 argmax,1,0.006711,0.006711,0.006711
+150,education,associate/junior college,B2 argmax,24,0.003076,0.001119,0.005298
+150,education,bachelor's,B2 argmax,39,0.001893,0.000177,0.004606
+150,education,graduate,B2 argmax,26,0.001549,0.000537,0.002685
+150,education,high school,B2 argmax,60,0.001790,0.000649,0.003409
+150,education,less than high school,B2 argmax,1,0.000000,0.000000,0.000000
+150,education,associate/junior college,B3 foret,24,0.001398,0.000280,0.002983
+150,education,bachelor's,B3 foret,39,0.001377,0.000463,0.002480
+150,education,graduate,B3 foret,26,0.001291,0.000240,0.002626
+150,education,high school,B3 foret,60,0.001119,0.000455,0.001918
+150,education,less than high school,B3 foret,1,0.006711,0.006711,0.006711
+150,education,associate/junior college,humains vague 2,24,0.038591,0.031320,0.047819
+150,education,bachelor's,humains vague 2,39,0.039924,0.029021,0.051727
+150,education,graduate,humains vague 2,26,0.031234,0.022574,0.043465
+150,education,high school,humains vague 2,60,0.032662,0.027761,0.037739
+150,education,less than high school,humains vague 2,1,0.046980,0.046980,0.046980
+150,profil croise,female|black|centre,"reel, vague 1",5,0.029530,0.013423,0.046980
+150,profil croise,female|black|droite,"reel, vague 1",1,0.020134,0.020134,0.020134
+150,profil croise,female|black|gauche,"reel, vague 1",6,0.021253,0.012569,0.029083
+150,profil croise,female|other|centre,"reel, vague 1",6,0.022371,0.015101,0.031320
+150,profil croise,female|other|droite,"reel, vague 1",3,0.051454,0.013423,0.093960
+150,profil croise,female|other|gauche,"reel, vague 1",1,0.067114,0.067114,0.067114
+150,profil croise,female|white|centre,"reel, vague 1",18,0.027591,0.018553,0.036321
+150,profil croise,female|white|droite,"reel, vague 1",16,0.030201,0.020804,0.041459
+150,profil croise,female|white|gauche,"reel, vague 1",28,0.031160,0.022550,0.042045
+150,profil croise,male|black|centre,"reel, vague 1",2,0.020134,0.006711,0.033557
+150,profil croise,male|black|droite,"reel, vague 1",2,0.043624,0.006711,0.080537
+150,profil croise,male|black|gauche,"reel, vague 1",6,0.044743,0.020134,0.071186
+150,profil croise,male|other|centre,"reel, vague 1",1,0.013423,0.013423,0.013423
+150,profil croise,male|other|droite,"reel, vague 1",3,0.058166,0.033557,0.080537
+150,profil croise,male|other|gauche,"reel, vague 1",5,0.032215,0.010067,0.053691
+150,profil croise,male|white|centre,"reel, vague 1",13,0.034590,0.020744,0.048999
+150,profil croise,male|white|droite,"reel, vague 1",17,0.046585,0.030976,0.063982
+150,profil croise,male|white|gauche,"reel, vague 1",17,0.030794,0.024017,0.038206
+150,profil croise,female|black|centre,agents composite,5,0.026846,0.006711,0.050336
+150,profil croise,female|black|droite,agents composite,1,0.033557,0.033557,0.033557
+150,profil croise,female|black|gauche,agents composite,6,0.017897,0.013423,0.022672
+150,profil croise,female|other|centre,agents composite,6,0.025727,0.006711,0.045336
+150,profil croise,female|other|droite,agents composite,3,0.044743,0.026846,0.067114
+150,profil croise,female|other|gauche,agents composite,1,0.053691,0.053691,0.053691
+150,profil croise,female|white|centre,agents composite,18,0.024609,0.019016,0.030575
+150,profil croise,female|white|droite,agents composite,16,0.042785,0.030574,0.054877
+150,profil croise,female|white|gauche,agents composite,28,0.025168,0.017552,0.034715
+150,profil croise,male|black|centre,agents composite,2,0.016779,0.006711,0.026846
+150,profil croise,male|black|droite,agents composite,2,0.070470,0.020134,0.120805
+150,profil croise,male|black|gauche,agents composite,6,0.029083,0.016779,0.045374
+150,profil croise,male|other|centre,agents composite,1,0.013423,0.013423,0.013423
+150,profil croise,male|other|droite,agents composite,3,0.062640,0.040268,0.093960
+150,profil croise,male|other|gauche,agents composite,5,0.024161,0.013423,0.033557
+150,profil croise,male|white|centre,agents composite,13,0.036655,0.022371,0.053020
+150,profil croise,male|white|droite,agents composite,17,0.062771,0.045947,0.081950
+150,profil croise,male|white|gauche,agents composite,17,0.019345,0.013423,0.025588
+150,profil croise,female|black|centre,agents entretien (v3),5,0.029530,0.010067,0.052349
+150,profil croise,female|black|droite,agents entretien (v3),1,0.033557,0.033557,0.033557
+150,profil croise,female|black|gauche,agents entretien (v3),6,0.022371,0.015101,0.029083
+150,profil croise,female|other|centre,agents entretien (v3),6,0.026846,0.014178,0.040268
+150,profil croise,female|other|droite,agents entretien (v3),3,0.053691,0.040268,0.067114
+150,profil croise,female|other|gauche,agents entretien (v3),1,0.060403,0.060403,0.060403
+150,profil croise,female|white|centre,agents entretien (v3),18,0.029828,0.021473,0.039710
+150,profil croise,female|white|droite,agents entretien (v3),16,0.053691,0.039751,0.067114
+150,profil croise,female|white|gauche,agents entretien (v3),28,0.030441,0.022299,0.038389
+150,profil croise,male|black|centre,agents entretien (v3),2,0.010067,0.006711,0.013423
+150,profil croise,male|black|droite,agents entretien (v3),2,0.050336,0.013423,0.087248
+150,profil croise,male|black|gauche,agents entretien (v3),6,0.026846,0.011745,0.042506
+150,profil croise,male|other|centre,agents entretien (v3),1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,agents entretien (v3),3,0.042506,0.026846,0.060403
+150,profil croise,male|other|gauche,agents entretien (v3),5,0.036242,0.018434,0.056376
+150,profil croise,male|white|centre,agents entretien (v3),13,0.035106,0.017151,0.054533
+150,profil croise,male|white|droite,agents entretien (v3),17,0.067904,0.053212,0.085015
+150,profil croise,male|white|gauche,agents entretien (v3),17,0.020529,0.013796,0.028394
+150,profil croise,female|black|centre,agents enquete,5,0.028188,0.013423,0.037584
+150,profil croise,female|black|droite,agents enquete,1,0.033557,0.033557,0.033557
+150,profil croise,female|black|gauche,agents enquete,6,0.027964,0.013423,0.042506
+150,profil croise,female|other|centre,agents enquete,6,0.020134,0.011745,0.028188
+150,profil croise,female|other|droite,agents enquete,3,0.049217,0.033557,0.067114
+150,profil croise,female|other|gauche,agents enquete,1,0.040268,0.040268,0.040268
+150,profil croise,female|white|centre,agents enquete,18,0.030574,0.021300,0.041108
+150,profil croise,female|white|droite,agents enquete,16,0.041107,0.028818,0.052113
+150,profil croise,female|white|gauche,agents enquete,28,0.034756,0.025771,0.045681
+150,profil croise,male|black|centre,agents enquete,2,0.026846,0.026846,0.026846
+150,profil croise,male|black|droite,agents enquete,2,0.057047,0.026846,0.087248
+150,profil croise,male|black|gauche,agents enquete,6,0.025727,0.013423,0.038031
+150,profil croise,male|other|centre,agents enquete,1,0.026846,0.026846,0.026846
+150,profil croise,male|other|droite,agents enquete,3,0.033557,0.020134,0.053691
+150,profil croise,male|other|gauche,agents enquete,5,0.021477,0.013423,0.032215
+150,profil croise,male|white|centre,agents enquete,13,0.035106,0.020134,0.052013
+150,profil croise,male|white|droite,agents enquete,17,0.067114,0.050815,0.085129
+150,profil croise,male|white|gauche,agents enquete,17,0.021713,0.016779,0.027241
+150,profil croise,female|black|centre,agents demographiques (v6),5,0.014765,0.006711,0.026846
+150,profil croise,female|black|droite,agents demographiques (v6),1,0.013423,0.013423,0.013423
+150,profil croise,female|black|gauche,agents demographiques (v6),6,0.019016,0.013423,0.025727
+150,profil croise,female|other|centre,agents demographiques (v6),6,0.019016,0.013423,0.024640
+150,profil croise,female|other|droite,agents demographiques (v6),3,0.017897,0.006711,0.026846
+150,profil croise,female|other|gauche,agents demographiques (v6),1,0.026846,0.026846,0.026846
+150,profil croise,female|white|centre,agents demographiques (v6),18,0.019389,0.013685,0.025587
+150,profil croise,female|white|droite,agents demographiques (v6),16,0.016779,0.011745,0.021477
+150,profil croise,female|white|gauche,agents demographiques (v6),28,0.016779,0.013418,0.020383
+150,profil croise,male|black|centre,agents demographiques (v6),2,0.010067,0.006711,0.013423
+150,profil croise,male|black|droite,agents demographiques (v6),2,0.013423,0.013423,0.013423
+150,profil croise,male|black|gauche,agents demographiques (v6),6,0.015660,0.006711,0.025503
+150,profil croise,male|other|centre,agents demographiques (v6),1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,agents demographiques (v6),3,0.020134,0.006711,0.033557
+150,profil croise,male|other|gauche,agents demographiques (v6),5,0.013423,0.009396,0.017450
+150,profil croise,male|white|centre,agents demographiques (v6),13,0.012390,0.006711,0.018370
+150,profil croise,male|white|droite,agents demographiques (v6),17,0.022108,0.015863,0.028425
+150,profil croise,male|white|gauche,agents demographiques (v6),17,0.009080,0.005527,0.012677
+150,profil croise,female|black|centre,agents v7,5,0.025503,0.006711,0.043624
+150,profil croise,female|black|droite,agents v7,1,0.013423,0.013423,0.013423
+150,profil croise,female|black|gauche,agents v7,6,0.020134,0.011186,0.029083
+150,profil croise,female|other|centre,agents v7,6,0.015660,0.010067,0.022371
+150,profil croise,female|other|droite,agents v7,3,0.020134,0.006711,0.026846
+150,profil croise,female|other|gauche,agents v7,1,0.067114,0.067114,0.067114
+150,profil croise,female|white|centre,agents v7,18,0.010067,0.006711,0.013423
+150,profil croise,female|white|droite,agents v7,16,0.018037,0.009508,0.028771
+150,profil croise,female|white|gauche,agents v7,28,0.026366,0.015569,0.042587
+150,profil croise,male|black|centre,agents v7,2,0.010067,0.006711,0.013423
+150,profil croise,male|black|droite,agents v7,2,0.046980,0.046980,0.046980
+150,profil croise,male|black|gauche,agents v7,6,0.023490,0.013423,0.035794
+150,profil croise,male|other|centre,agents v7,1,0.006711,0.006711,0.006711
+150,profil croise,male|other|droite,agents v7,3,0.038031,0.020134,0.067114
+150,profil croise,male|other|gauche,agents v7,5,0.026846,0.013423,0.036913
+150,profil croise,male|white|centre,agents v7,13,0.022716,0.008629,0.048098
+150,profil croise,male|white|droite,agents v7,17,0.020924,0.010596,0.034618
+150,profil croise,male|white|gauche,agents v7,17,0.013423,0.008259,0.019241
+150,profil croise,female|black|centre,agents v8,5,0.013423,0.006711,0.020134
+150,profil croise,female|black|droite,agents v8,1,0.087248,0.087248,0.087248
+150,profil croise,female|black|gauche,agents v8,6,0.025727,0.010067,0.051055
+150,profil croise,female|other|centre,agents v8,6,0.022371,0.010067,0.036242
+150,profil croise,female|other|droite,agents v8,3,0.089485,0.006711,0.140940
+150,profil croise,female|other|gauche,agents v8,1,0.013423,0.013423,0.013423
+150,profil croise,female|white|centre,agents v8,18,0.012304,0.008542,0.015940
+150,profil croise,female|white|droite,agents v8,16,0.086409,0.067114,0.105148
+150,profil croise,female|white|gauche,agents v8,28,0.031879,0.024328,0.039374
+150,profil croise,male|black|centre,agents v8,2,0.016779,0.013423,0.020134
+150,profil croise,male|black|droite,agents v8,2,0.087248,0.067114,0.107383
+150,profil croise,male|black|gauche,agents v8,6,0.032438,0.017258,0.048658
+150,profil croise,male|other|centre,agents v8,1,0.026846,0.026846,0.026846
+150,profil croise,male|other|droite,agents v8,3,0.044743,0.026846,0.053691
+150,profil croise,male|other|gauche,agents v8,5,0.017450,0.006711,0.029530
+150,profil croise,male|white|centre,agents v8,13,0.012907,0.004642,0.025817
+150,profil croise,male|white|droite,agents v8,17,0.101066,0.082774,0.116216
+150,profil croise,male|white|gauche,agents v8,17,0.014607,0.006704,0.024609
+150,profil croise,female|black|centre,C2,5,0.018792,0.011186,0.024609
+150,profil croise,female|black|droite,C2,1,0.087248,0.087248,0.087248
+150,profil croise,female|black|gauche,C2,6,0.035794,0.020134,0.054398
+150,profil croise,female|other|centre,C2,6,0.023490,0.020134,0.028523
+150,profil croise,female|other|droite,C2,3,0.082774,0.013423,0.140940
+150,profil croise,female|other|gauche,C2,1,0.020134,0.020134,0.020134
+150,profil croise,female|white|centre,C2,18,0.020880,0.017524,0.024609
+150,profil croise,female|white|droite,C2,16,0.079279,0.055607,0.101930
+150,profil croise,female|white|gauche,C2,28,0.034756,0.027429,0.042120
+150,profil croise,male|black|centre,C2,2,0.020134,0.020134,0.020134
+150,profil croise,male|black|droite,C2,2,0.097315,0.060403,0.134228
+150,profil croise,male|black|gauche,C2,6,0.044743,0.026846,0.070470
+150,profil croise,male|other|centre,C2,1,0.033557,0.033557,0.033557
+150,profil croise,male|other|droite,C2,3,0.040268,0.040268,0.040268
+150,profil croise,male|other|gauche,C2,5,0.032215,0.024161,0.041745
+150,profil croise,male|white|centre,C2,13,0.020650,0.017258,0.024163
+150,profil croise,male|white|droite,C2,17,0.094749,0.071961,0.118408
+150,profil croise,male|white|gauche,C2,17,0.021319,0.016299,0.028523
+150,profil croise,female|black|centre,C3,5,0.055034,0.035794,0.079726
+150,profil croise,female|black|droite,C3,1,0.093960,0.093960,0.093960
+150,profil croise,female|black|gauche,C3,6,0.049217,0.037975,0.061745
+150,profil croise,female|other|centre,C3,6,0.048098,0.033557,0.060403
+150,profil croise,female|other|droite,C3,3,0.051454,0.040268,0.067114
+150,profil croise,female|other|gauche,C3,1,0.087248,0.087248,0.087248
+150,profil croise,female|white|centre,C3,18,0.050336,0.044423,0.056208
+150,profil croise,female|white|droite,C3,16,0.053272,0.042186,0.064505
+150,profil croise,female|white|gauche,C3,28,0.056088,0.046980,0.065716
+150,profil croise,male|black|centre,C3,2,0.046980,0.040268,0.053691
+150,profil croise,male|black|droite,C3,2,0.080537,0.040268,0.120805
+150,profil croise,male|black|gauche,C3,6,0.051454,0.040268,0.067114
+150,profil croise,male|other|centre,C3,1,0.040268,0.040268,0.040268
+150,profil croise,male|other|droite,C3,3,0.060403,0.046980,0.073826
+150,profil croise,male|other|gauche,C3,5,0.048322,0.033557,0.063758
+150,profil croise,male|white|centre,C3,13,0.057821,0.046980,0.069485
+150,profil croise,male|white|droite,C3,17,0.076194,0.058033,0.096204
+150,profil croise,male|white|gauche,C3,17,0.045401,0.036913,0.054586
+150,profil croise,female|black|centre,B0 mode,5,0.000000,0.000000,0.000000
+150,profil croise,female|black|droite,B0 mode,1,0.000000,0.000000,0.000000
+150,profil croise,female|black|gauche,B0 mode,6,0.000000,0.000000,0.000000
+150,profil croise,female|other|centre,B0 mode,6,0.000000,0.000000,0.000000
+150,profil croise,female|other|droite,B0 mode,3,0.000000,0.000000,0.000000
+150,profil croise,female|other|gauche,B0 mode,1,0.000000,0.000000,0.000000
+150,profil croise,female|white|centre,B0 mode,18,0.000000,0.000000,0.000000
+150,profil croise,female|white|droite,B0 mode,16,0.000000,0.000000,0.000000
+150,profil croise,female|white|gauche,B0 mode,28,0.000000,0.000000,0.000000
+150,profil croise,male|black|centre,B0 mode,2,0.000000,0.000000,0.000000
+150,profil croise,male|black|droite,B0 mode,2,0.000000,0.000000,0.000000
+150,profil croise,male|black|gauche,B0 mode,6,0.000000,0.000000,0.000000
+150,profil croise,male|other|centre,B0 mode,1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,B0 mode,3,0.000000,0.000000,0.000000
+150,profil croise,male|other|gauche,B0 mode,5,0.000000,0.000000,0.000000
+150,profil croise,male|white|centre,B0 mode,13,0.000000,0.000000,0.000000
+150,profil croise,male|white|droite,B0 mode,17,0.000000,0.000000,0.000000
+150,profil croise,male|white|gauche,B0 mode,17,0.000000,0.000000,0.000000
+150,profil croise,female|black|centre,B0 tirage,5,0.037584,0.030201,0.044743
+150,profil croise,female|black|droite,B0 tirage,1,0.020134,0.020134,0.020134
+150,profil croise,female|black|gauche,B0 tirage,6,0.045861,0.025867,0.060403
+150,profil croise,female|other|centre,B0 tirage,6,0.031320,0.026846,0.035794
+150,profil croise,female|other|droite,B0 tirage,3,0.049217,0.040268,0.053691
+150,profil croise,female|other|gauche,B0 tirage,1,0.046980,0.046980,0.046980
+150,profil croise,female|white|centre,B0 tirage,18,0.038777,0.032998,0.044295
+150,profil croise,female|white|droite,B0 tirage,16,0.034815,0.028393,0.041389
+150,profil croise,female|white|gauche,B0 tirage,28,0.037392,0.032508,0.042506
+150,profil croise,male|black|centre,B0 tirage,2,0.050336,0.046980,0.053691
+150,profil croise,male|black|droite,B0 tirage,2,0.016779,0.013423,0.020134
+150,profil croise,male|black|gauche,B0 tirage,6,0.035794,0.028523,0.043624
+150,profil croise,male|other|centre,B0 tirage,1,0.026846,0.026846,0.026846
+150,profil croise,male|other|droite,B0 tirage,3,0.040268,0.040268,0.040268
+150,profil croise,male|other|gauche,B0 tirage,5,0.037584,0.026846,0.048658
+150,profil croise,male|white|centre,B0 tirage,13,0.031492,0.026425,0.036608
+150,profil croise,male|white|droite,B0 tirage,17,0.044216,0.034036,0.054811
+150,profil croise,male|white|gauche,B0 tirage,17,0.032767,0.024924,0.040689
+150,profil croise,female|black|centre,B1 argmax,5,0.009396,0.002685,0.016779
+150,profil croise,female|black|droite,B1 argmax,1,0.006711,0.006711,0.006711
+150,profil croise,female|black|gauche,B1 argmax,6,0.011186,0.003775,0.020134
+150,profil croise,female|other|centre,B1 argmax,6,0.006711,0.000000,0.014765
+150,profil croise,female|other|droite,B1 argmax,3,0.015660,0.006711,0.026846
+150,profil croise,female|other|gauche,B1 argmax,1,0.013423,0.013423,0.013423
+150,profil croise,female|white|centre,B1 argmax,18,0.005220,0.002397,0.008389
+150,profil croise,female|white|droite,B1 argmax,16,0.010487,0.005298,0.016186
+150,profil croise,female|white|gauche,B1 argmax,28,0.007910,0.005243,0.010697
+150,profil croise,male|black|centre,B1 argmax,2,0.010067,0.000000,0.020134
+150,profil croise,male|black|droite,B1 argmax,2,0.036913,0.013423,0.060403
+150,profil croise,male|black|gauche,B1 argmax,6,0.005593,0.001678,0.010067
+150,profil croise,male|other|centre,B1 argmax,1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,B1 argmax,3,0.017897,0.006711,0.033557
+150,profil croise,male|other|gauche,B1 argmax,5,0.014765,0.000000,0.033557
+150,profil croise,male|white|centre,B1 argmax,13,0.003614,0.000559,0.007272
+150,profil croise,male|white|droite,B1 argmax,17,0.019739,0.014381,0.025168
+150,profil croise,male|white|gauche,B1 argmax,17,0.005922,0.002349,0.010490
+150,profil croise,female|black|centre,B2 argmax,5,0.000000,0.000000,0.000000
+150,profil croise,female|black|droite,B2 argmax,1,0.006711,0.006711,0.006711
+150,profil croise,female|black|gauche,B2 argmax,6,0.000000,0.000000,0.000000
+150,profil croise,female|other|centre,B2 argmax,6,0.002237,0.000000,0.005369
+150,profil croise,female|other|droite,B2 argmax,3,0.000000,0.000000,0.000000
+150,profil croise,female|other|gauche,B2 argmax,1,0.000000,0.000000,0.000000
+150,profil croise,female|white|centre,B2 argmax,18,0.000373,0.000000,0.001221
+150,profil croise,female|white|droite,B2 argmax,16,0.001258,0.000000,0.003356
+150,profil croise,female|white|gauche,B2 argmax,28,0.001918,0.000447,0.003835
+150,profil croise,male|black|centre,B2 argmax,2,0.000000,0.000000,0.000000
+150,profil croise,male|black|droite,B2 argmax,2,0.003356,0.000000,0.006711
+150,profil croise,male|black|gauche,B2 argmax,6,0.000000,0.000000,0.000000
+150,profil croise,male|other|centre,B2 argmax,1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,B2 argmax,3,0.002237,0.000000,0.006711
+150,profil croise,male|other|gauche,B2 argmax,5,0.000000,0.000000,0.000000
+150,profil croise,male|white|centre,B2 argmax,13,0.004646,0.000839,0.010067
+150,profil croise,male|white|droite,B2 argmax,17,0.005922,0.001678,0.011825
+150,profil croise,male|white|gauche,B2 argmax,17,0.001184,0.000000,0.003158
+150,profil croise,female|black|centre,B3 foret,5,0.001342,0.000000,0.004474
+150,profil croise,female|black|droite,B3 foret,1,0.000000,0.000000,0.000000
+150,profil croise,female|black|gauche,B3 foret,6,0.000000,0.000000,0.000000
+150,profil croise,female|other|centre,B3 foret,6,0.001119,0.000000,0.003854
+150,profil croise,female|other|droite,B3 foret,3,0.004474,0.000000,0.006711
+150,profil croise,female|other|gauche,B3 foret,1,0.000000,0.000000,0.000000
+150,profil croise,female|white|centre,B3 foret,18,0.001491,0.000000,0.003553
+150,profil croise,female|white|droite,B3 foret,16,0.002517,0.000373,0.005034
+150,profil croise,female|white|gauche,B3 foret,28,0.000479,0.000000,0.001198
+150,profil croise,male|black|centre,B3 foret,2,0.000000,0.000000,0.000000
+150,profil croise,male|black|droite,B3 foret,2,0.000000,0.000000,0.000000
+150,profil croise,male|black|gauche,B3 foret,6,0.000000,0.000000,0.000000
+150,profil croise,male|other|centre,B3 foret,1,0.000000,0.000000,0.000000
+150,profil croise,male|other|droite,B3 foret,3,0.000000,0.000000,0.000000
+150,profil croise,male|other|gauche,B3 foret,5,0.000000,0.000000,0.000000
+150,profil croise,male|white|centre,B3 foret,13,0.000516,0.000000,0.001678
+150,profil croise,male|white|droite,B3 foret,17,0.004343,0.002397,0.006292
+150,profil croise,male|white|gauche,B3 foret,17,0.000395,0.000000,0.001280
+150,profil croise,female|black|centre,humains vague 2,5,0.032215,0.016779,0.053691
+150,profil croise,female|black|droite,humains vague 2,1,0.033557,0.033557,0.033557
+150,profil croise,female|black|gauche,humains vague 2,6,0.014541,0.000000,0.030201
+150,profil croise,female|other|centre,humains vague 2,6,0.031320,0.016779,0.048658
+150,profil croise,female|other|droite,humains vague 2,3,0.053691,0.026846,0.093960
+150,profil croise,female|other|gauche,humains vague 2,1,0.073826,0.073826,0.073826
+150,profil croise,female|white|centre,humains vague 2,18,0.027591,0.018367,0.036918
+150,profil croise,female|white|droite,humains vague 2,16,0.032718,0.025503,0.039790
+150,profil croise,female|white|gauche,humains vague 2,28,0.033078,0.023666,0.043904
+150,profil croise,male|black|centre,humains vague 2,2,0.013423,0.006711,0.020134
+150,profil croise,male|black|droite,humains vague 2,2,0.050336,0.020134,0.080537
+150,profil croise,male|black|gauche,humains vague 2,6,0.045861,0.015604,0.076107
+150,profil croise,male|other|centre,humains vague 2,1,0.020134,0.020134,0.020134
+150,profil croise,male|other|droite,humains vague 2,3,0.062640,0.040268,0.073826
+150,profil croise,male|other|gauche,humains vague 2,5,0.044295,0.023490,0.078300
+150,profil croise,male|white|centre,humains vague 2,13,0.040785,0.029722,0.051113
+150,profil croise,male|white|droite,humains vague 2,17,0.041058,0.025838,0.059735
+150,profil croise,male|white|gauche,humains vague 2,17,0.034741,0.024161,0.051059
+1052,gender,female,"reel, vague 1",593,0.034134,0.032310,0.035907
+1052,gender,male,"reel, vague 1",459,0.039377,0.037213,0.041568
+1052,gender,female,agents composite,593,0.032063,0.029987,0.034265
+1052,gender,male,agents composite,459,0.037827,0.035079,0.040610
+1052,gender,female,agents entretien (v3),593,0.034994,0.032874,0.037203
+1052,gender,male,agents entretien (v3),459,0.039713,0.036927,0.042443
+1052,gender,female,agents enquete,593,0.034960,0.032799,0.037204
+1052,gender,male,agents enquete,459,0.037300,0.034746,0.039986
+1052,gender,female,agents demographiques (v6),593,0.016139,0.015172,0.017106
+1052,gender,male,agents demographiques (v6),459,0.016888,0.015790,0.018043
+1052,gender,female,agents v7,593,0.017882,0.016524,0.019359
+1052,gender,male,agents v7,459,0.019871,0.017926,0.021896
+1052,gender,female,agents v8,593,0.038277,0.035257,0.041600
+1052,gender,male,agents v8,459,0.047185,0.043013,0.051340
+1052,gender,female,B0 mode,593,0.000000,0.000000,0.000000
+1052,gender,male,B0 mode,459,0.000000,0.000000,0.000000
+1052,gender,female,B0 tirage,593,0.036296,0.035255,0.037389
+1052,gender,male,B0 tirage,459,0.036438,0.035080,0.037864
+1052,gender,female,B1 argmax,593,0.007888,0.007161,0.008609
+1052,gender,male,B1 argmax,459,0.011683,0.010569,0.012812
+1052,gender,female,B2 argmax,593,0.002264,0.001885,0.002664
+1052,gender,male,B2 argmax,459,0.003173,0.002536,0.003873
+1052,gender,female,B3 foret,593,0.001664,0.001389,0.001958
+1052,gender,male,B3 foret,459,0.000877,0.000654,0.001119
+1052,gender,female,humains vague 2,593,0.034870,0.033033,0.036901
+1052,gender,male,humains vague 2,459,0.041204,0.038632,0.044069
+1052,race,black,"reel, vague 1",150,0.038389,0.034809,0.041878
+1052,race,other,"reel, vague 1",103,0.036945,0.032645,0.041284
+1052,race,white,"reel, vague 1",799,0.035985,0.034392,0.037596
+1052,race,black,agents composite,150,0.029799,0.026602,0.033427
+1052,race,other,agents composite,103,0.035316,0.030061,0.040850
+1052,race,white,agents composite,799,0.035380,0.033356,0.037392
+1052,race,black,agents entretien (v3),150,0.028054,0.025354,0.031121
+1052,race,other,agents entretien (v3),103,0.034600,0.029732,0.039578
+1052,race,white,agents entretien (v3),799,0.039059,0.036863,0.041071
+1052,race,black,agents enquete,150,0.032125,0.029169,0.035526
+1052,race,other,agents enquete,103,0.035316,0.030533,0.040472
+1052,race,white,agents enquete,799,0.036791,0.034737,0.039005
+1052,race,black,agents demographiques (v6),150,0.018568,0.016756,0.020556
+1052,race,other,agents demographiques (v6),103,0.015312,0.013165,0.017574
+1052,race,white,agents demographiques (v6),799,0.016220,0.015394,0.017051
+1052,race,black,agents v7,150,0.021253,0.018381,0.024406
+1052,race,other,agents v7,103,0.020199,0.016778,0.024300
+1052,race,white,agents v7,799,0.018093,0.016761,0.019417
+1052,race,black,agents v8,150,0.031454,0.026846,0.036892
+1052,race,other,agents v8,103,0.035382,0.027736,0.043157
+1052,race,white,agents v8,799,0.045048,0.042125,0.048020
+1052,race,black,B0 mode,150,0.000000,0.000000,0.000000
+1052,race,other,B0 mode,103,0.000000,0.000000,0.000000
+1052,race,white,B0 mode,799,0.000000,0.000000,0.000000
+1052,race,black,B0 tirage,150,0.037494,0.035019,0.040099
+1052,race,other,B0 tirage,103,0.035382,0.032892,0.037822
+1052,race,white,B0 tirage,799,0.036270,0.035274,0.037216
+1052,race,black,B1 argmax,150,0.011678,0.009900,0.013517
+1052,race,other,B1 argmax,103,0.012836,0.010615,0.015101
+1052,race,white,B1 argmax,799,0.008719,0.008052,0.009476
+1052,race,black,B2 argmax,150,0.002461,0.001834,0.003150
+1052,race,other,B2 argmax,103,0.003062,0.001873,0.004576
+1052,race,white,B2 argmax,799,0.002646,0.002237,0.003103
+1052,race,black,B3 foret,150,0.001477,0.000986,0.002022
+1052,race,other,B3 foret,103,0.001824,0.001162,0.002525
+1052,race,white,B3 foret,799,0.001226,0.001013,0.001447
+1052,race,black,humains vague 2,150,0.040179,0.035628,0.045315
+1052,race,other,humains vague 2,103,0.038249,0.033883,0.042730
+1052,race,white,humains vague 2,799,0.037077,0.035347,0.038968
+1052,political_ideology,conservative,"reel, vague 1",177,0.044439,0.040790,0.048395
+1052,political_ideology,extremely conservative,"reel, vague 1",61,0.060843,0.054001,0.068529
+1052,political_ideology,extremely liberal,"reel, vague 1",119,0.031470,0.028425,0.034330
+1052,political_ideology,liberal,"reel, vague 1",200,0.031309,0.028281,0.034295
+1052,political_ideology,moderate,"reel, vague 1",303,0.033402,0.031167,0.035688
+1052,political_ideology,slightly conservative,"reel, vague 1",94,0.036270,0.031879,0.040836
+1052,political_ideology,slightly liberal,"reel, vague 1",98,0.032667,0.028385,0.037114
+1052,political_ideology,conservative,agents composite,177,0.055398,0.051057,0.060028
+1052,political_ideology,extremely conservative,agents composite,61,0.084388,0.075398,0.093185
+1052,political_ideology,extremely liberal,agents composite,119,0.025605,0.022808,0.028418
+1052,political_ideology,liberal,agents composite,200,0.021879,0.019733,0.024002
+1052,political_ideology,moderate,agents composite,303,0.028418,0.026181,0.030719
+1052,political_ideology,slightly conservative,agents composite,94,0.036270,0.031101,0.041898
+1052,political_ideology,slightly liberal,agents composite,98,0.020203,0.017198,0.023531
+1052,political_ideology,conservative,agents entretien (v3),177,0.062943,0.058886,0.067277
+1052,political_ideology,extremely conservative,agents entretien (v3),61,0.082407,0.074227,0.090402
+1052,political_ideology,extremely liberal,agents entretien (v3),119,0.029045,0.025630,0.032488
+1052,political_ideology,liberal,agents entretien (v3),200,0.023456,0.021304,0.025597
+1052,political_ideology,moderate,agents entretien (v3),303,0.028706,0.026486,0.031038
+1052,political_ideology,slightly conservative,agents entretien (v3),94,0.042339,0.036876,0.047801
+1052,political_ideology,slightly liberal,agents entretien (v3),98,0.020271,0.017517,0.023317
+1052,political_ideology,conservative,agents enquete,177,0.057028,0.052697,0.061616
+1052,political_ideology,extremely conservative,agents enquete,61,0.087248,0.078431,0.096701
+1052,political_ideology,extremely liberal,agents enquete,119,0.029271,0.026844,0.031879
+1052,political_ideology,liberal,agents enquete,200,0.023893,0.021638,0.026283
+1052,political_ideology,moderate,agents enquete,303,0.028152,0.026085,0.030424
+1052,political_ideology,slightly conservative,agents enquete,94,0.035413,0.030072,0.040472
+1052,political_ideology,slightly liberal,agents enquete,98,0.023627,0.020417,0.027207
+1052,political_ideology,conservative,agents demographiques (v6),177,0.019414,0.017503,0.021461
+1052,political_ideology,extremely conservative,agents demographiques (v6),61,0.021675,0.018585,0.024947
+1052,political_ideology,extremely liberal,agents demographiques (v6),119,0.014720,0.012915,0.016491
+1052,political_ideology,liberal,agents demographiques (v6),200,0.015638,0.013898,0.017457
+1052,political_ideology,moderate,agents demographiques (v6),303,0.015704,0.014415,0.017066
+1052,political_ideology,slightly conservative,agents demographiques (v6),94,0.016564,0.014444,0.018846
+1052,political_ideology,slightly liberal,agents demographiques (v6),98,0.013971,0.011874,0.016135
+1052,political_ideology,conservative,agents v7,177,0.017859,0.015221,0.020539
+1052,political_ideology,extremely conservative,agents v7,61,0.027726,0.019701,0.036342
+1052,political_ideology,extremely liberal,agents v7,119,0.022447,0.018804,0.026960
+1052,political_ideology,liberal,agents v7,200,0.017886,0.015834,0.020135
+1052,political_ideology,moderate,agents v7,303,0.017166,0.015484,0.018929
+1052,political_ideology,slightly conservative,agents v7,94,0.016493,0.013353,0.020056
+1052,political_ideology,slightly liberal,agents v7,98,0.019107,0.014836,0.024609
+1052,political_ideology,conservative,agents v8,177,0.096500,0.092664,0.100262
+1052,political_ideology,extremely conservative,agents v8,61,0.134998,0.131494,0.138479
+1052,political_ideology,extremely liberal,agents v8,119,0.049292,0.046927,0.051622
+1052,political_ideology,liberal,agents v8,200,0.019430,0.018077,0.021027
+1052,political_ideology,moderate,agents v8,303,0.012803,0.011193,0.014528
+1052,political_ideology,slightly conservative,agents v8,94,0.048051,0.043134,0.053361
+1052,political_ideology,slightly liberal,agents v8,98,0.009108,0.007328,0.010975
+1052,political_ideology,conservative,B0 mode,177,0.000000,0.000000,0.000000
+1052,political_ideology,extremely conservative,B0 mode,61,0.000000,0.000000,0.000000
+1052,political_ideology,extremely liberal,B0 mode,119,0.000000,0.000000,0.000000
+1052,political_ideology,liberal,B0 mode,200,0.000000,0.000000,0.000000
+1052,political_ideology,moderate,B0 mode,303,0.000000,0.000000,0.000000
+1052,political_ideology,slightly conservative,B0 mode,94,0.000000,0.000000,0.000000
+1052,political_ideology,slightly liberal,B0 mode,98,0.000000,0.000000,0.000000
+1052,political_ideology,conservative,B0 tirage,177,0.036060,0.033934,0.038020
+1052,political_ideology,extremely conservative,B0 tirage,61,0.037408,0.033557,0.041419
+1052,political_ideology,extremely liberal,B0 tirage,119,0.035869,0.033619,0.038284
+1052,political_ideology,liberal,B0 tirage,200,0.036107,0.034144,0.037996
+1052,political_ideology,moderate,B0 tirage,303,0.036171,0.034567,0.037872
+1052,political_ideology,slightly conservative,B0 tirage,94,0.038769,0.036034,0.041462
+1052,political_ideology,slightly liberal,B0 tirage,98,0.035612,0.032976,0.038286
+1052,political_ideology,conservative,B1 argmax,177,0.013537,0.011887,0.015215
+1052,political_ideology,extremely conservative,B1 argmax,61,0.027946,0.024329,0.031706
+1052,political_ideology,extremely liberal,B1 argmax,119,0.009475,0.007795,0.011225
+1052,political_ideology,liberal,B1 argmax,200,0.006409,0.005389,0.007521
+1052,political_ideology,moderate,B1 argmax,303,0.005759,0.004940,0.006598
+1052,political_ideology,slightly conservative,B1 argmax,94,0.009210,0.007258,0.011252
+1052,political_ideology,slightly liberal,B1 argmax,98,0.009382,0.007817,0.011067
+1052,political_ideology,conservative,B2 argmax,177,0.004778,0.003650,0.006134
+1052,political_ideology,extremely conservative,B2 argmax,61,0.010342,0.007199,0.013830
+1052,political_ideology,extremely liberal,B2 argmax,119,0.002200,0.001553,0.002856
+1052,political_ideology,liberal,B2 argmax,200,0.001107,0.000729,0.001495
+1052,political_ideology,moderate,B2 argmax,303,0.001706,0.001294,0.002166
+1052,political_ideology,slightly conservative,B2 argmax,94,0.002142,0.001167,0.003318
+1052,political_ideology,slightly liberal,B2 argmax,98,0.001233,0.000702,0.001754
+1052,political_ideology,conservative,B3 foret,177,0.000569,0.000268,0.000897
+1052,political_ideology,extremely conservative,B3 foret,61,0.005501,0.004322,0.006831
+1052,political_ideology,extremely liberal,B3 foret,119,0.001636,0.001066,0.002254
+1052,political_ideology,liberal,B3 foret,200,0.001007,0.000630,0.001448
+1052,political_ideology,moderate,B3 foret,303,0.001263,0.000926,0.001627
+1052,political_ideology,slightly conservative,B3 foret,94,0.000428,0.000140,0.000797
+1052,political_ideology,slightly liberal,B3 foret,98,0.001370,0.000769,0.002076
+1052,political_ideology,conservative,humains vague 2,177,0.045122,0.041187,0.049317
+1052,political_ideology,extremely conservative,humains vague 2,61,0.061833,0.055102,0.069032
+1052,political_ideology,extremely liberal,humains vague 2,119,0.033670,0.029553,0.038326
+1052,political_ideology,liberal,humains vague 2,200,0.032651,0.028933,0.036571
+1052,political_ideology,moderate,humains vague 2,303,0.035395,0.033149,0.037940
+1052,political_ideology,slightly conservative,humains vague 2,94,0.035913,0.030281,0.042605
+1052,political_ideology,slightly liberal,humains vague 2,98,0.032598,0.028262,0.037599
+1052,age,18 - 24,"reel, vague 1",116,0.038359,0.035151,0.041676
+1052,age,25 - 34,"reel, vague 1",146,0.040682,0.036519,0.045028
+1052,age,35 - 44,"reel, vague 1",184,0.037350,0.034248,0.040519
+1052,age,45 - 54,"reel, vague 1",208,0.036364,0.033351,0.039725
+1052,age,55 - 64,"reel, vague 1",226,0.034982,0.032039,0.038263
+1052,age,65 - 74,"reel, vague 1",142,0.032706,0.028823,0.036712
+1052,age,75 or more,"reel, vague 1",30,0.031320,0.024994,0.038830
+1052,age,18 - 24,agents composite,116,0.034598,0.031019,0.038591
+1052,age,25 - 34,agents composite,146,0.031442,0.026930,0.036307
+1052,age,35 - 44,agents composite,184,0.032536,0.029043,0.036235
+1052,age,45 - 54,agents composite,208,0.034138,0.030471,0.038213
+1052,age,55 - 64,agents composite,226,0.036913,0.033333,0.040922
+1052,age,65 - 74,agents composite,142,0.038000,0.032967,0.043813
+1052,age,75 or more,agents composite,30,0.031544,0.020366,0.045782
+1052,age,18 - 24,agents entretien (v3),116,0.035235,0.030984,0.039688
+1052,age,25 - 34,agents entretien (v3),146,0.031626,0.027759,0.035402
+1052,age,35 - 44,agents entretien (v3),184,0.034797,0.031469,0.038421
+1052,age,45 - 54,agents entretien (v3),208,0.036848,0.032952,0.040818
+1052,age,55 - 64,agents entretien (v3),226,0.040001,0.036100,0.044220
+1052,age,65 - 74,agents entretien (v3),142,0.042537,0.037160,0.048658
+1052,age,75 or more,agents entretien (v3),30,0.037584,0.025727,0.052224
+1052,age,18 - 24,agents enquete,116,0.032111,0.028425,0.036148
+1052,age,25 - 34,agents enquete,146,0.032408,0.028101,0.036889
+1052,age,35 - 44,agents enquete,184,0.033849,0.030857,0.037335
+1052,age,45 - 54,agents enquete,208,0.036590,0.032923,0.040344
+1052,age,55 - 64,agents enquete,226,0.039110,0.035160,0.043119
+1052,age,65 - 74,agents enquete,142,0.039654,0.034228,0.046159
+1052,age,75 or more,agents enquete,30,0.036242,0.025726,0.049102
+1052,age,18 - 24,agents demographiques (v6),116,0.015737,0.013824,0.017638
+1052,age,25 - 34,agents demographiques (v6),146,0.013699,0.012110,0.015313
+1052,age,35 - 44,agents demographiques (v6),184,0.016268,0.014590,0.017991
+1052,age,45 - 54,agents demographiques (v6),208,0.017230,0.015524,0.018964
+1052,age,55 - 64,agents demographiques (v6),226,0.017877,0.016200,0.019632
+1052,age,65 - 74,agents demographiques (v6),142,0.017487,0.015446,0.019524
+1052,age,75 or more,agents demographiques (v6),30,0.013199,0.009551,0.017373
+1052,age,18 - 24,agents v7,116,0.024936,0.021242,0.029288
+1052,age,25 - 34,agents v7,146,0.020916,0.017459,0.024967
+1052,age,35 - 44,agents v7,184,0.017070,0.014918,0.019345
+1052,age,45 - 54,agents v7,208,0.018747,0.016201,0.021443
+1052,age,55 - 64,agents v7,226,0.015650,0.013823,0.017786
+1052,age,65 - 74,agents v7,142,0.017960,0.014849,0.021728
+1052,age,75 or more,agents v7,30,0.021700,0.015310,0.029685
+1052,age,18 - 24,agents v8,116,0.041946,0.036287,0.047795
+1052,age,25 - 34,agents v8,146,0.034752,0.028730,0.041006
+1052,age,35 - 44,agents v8,184,0.040050,0.034122,0.046177
+1052,age,45 - 54,agents v8,208,0.042075,0.036229,0.047908
+1052,age,55 - 64,agents v8,226,0.043981,0.038852,0.049616
+1052,age,65 - 74,agents v8,142,0.048445,0.040964,0.056753
+1052,age,75 or more,agents v8,30,0.049217,0.031583,0.068922
+1052,age,18 - 24,B0 mode,116,0.000000,0.000000,0.000000
+1052,age,25 - 34,B0 mode,146,0.000000,0.000000,0.000000
+1052,age,35 - 44,B0 mode,184,0.000000,0.000000,0.000000
+1052,age,45 - 54,B0 mode,208,0.000000,0.000000,0.000000
+1052,age,55 - 64,B0 mode,226,0.000000,0.000000,0.000000
+1052,age,65 - 74,B0 mode,142,0.000000,0.000000,0.000000
+1052,age,75 or more,B0 mode,30,0.000000,0.000000,0.000000
+1052,age,18 - 24,B0 tirage,116,0.035177,0.032805,0.037515
+1052,age,25 - 34,B0 tirage,146,0.035901,0.033507,0.038269
+1052,age,35 - 44,B0 tirage,184,0.036037,0.034039,0.038181
+1052,age,45 - 54,B0 tirage,208,0.036945,0.034986,0.038887
+1052,age,55 - 64,B0 tirage,226,0.035695,0.033880,0.037357
+1052,age,65 - 74,B0 tirage,142,0.037527,0.035162,0.039954
+1052,age,75 or more,B0 tirage,30,0.040492,0.035666,0.045432
+1052,age,18 - 24,B1 argmax,116,0.015969,0.014117,0.017877
+1052,age,25 - 34,B1 argmax,146,0.009791,0.007957,0.011661
+1052,age,35 - 44,B1 argmax,184,0.008681,0.007186,0.010190
+1052,age,45 - 54,B1 argmax,208,0.009260,0.007894,0.010760
+1052,age,55 - 64,B1 argmax,226,0.008107,0.006949,0.009291
+1052,age,65 - 74,B1 argmax,142,0.007846,0.006176,0.009767
+1052,age,75 or more,B1 argmax,30,0.009620,0.005716,0.014382
+1052,age,18 - 24,B2 argmax,116,0.002719,0.002019,0.003443
+1052,age,25 - 34,B2 argmax,146,0.003080,0.001940,0.004355
+1052,age,35 - 44,B2 argmax,184,0.002189,0.001562,0.002838
+1052,age,45 - 54,B2 argmax,208,0.002097,0.001462,0.002905
+1052,age,55 - 64,B2 argmax,226,0.002970,0.002033,0.004064
+1052,age,65 - 74,B2 argmax,142,0.003119,0.002191,0.004241
+1052,age,75 or more,B2 argmax,30,0.002685,0.000671,0.005202
+1052,age,18 - 24,B3 foret,116,0.005207,0.004418,0.006057
+1052,age,25 - 34,B3 foret,146,0.001057,0.000639,0.001562
+1052,age,35 - 44,B3 foret,184,0.000985,0.000596,0.001433
+1052,age,45 - 54,B3 foret,208,0.000839,0.000477,0.001226
+1052,age,55 - 64,B3 foret,226,0.000802,0.000482,0.001158
+1052,age,65 - 74,B3 foret,142,0.000567,0.000247,0.000915
+1052,age,75 or more,B3 foret,30,0.000447,0.000000,0.001157
+1052,age,18 - 24,humains vague 2,116,0.042236,0.037652,0.047744
+1052,age,25 - 34,humains vague 2,146,0.042613,0.037316,0.048826
+1052,age,35 - 44,humains vague 2,184,0.040925,0.037387,0.044549
+1052,age,45 - 54,humains vague 2,208,0.038332,0.034959,0.042005
+1052,age,55 - 64,humains vague 2,226,0.033438,0.030525,0.036391
+1052,age,65 - 74,humains vague 2,142,0.030816,0.027465,0.034309
+1052,age,75 or more,humains vague 2,30,0.034452,0.028234,0.041612
+1052,education,associate/junior college,"reel, vague 1",185,0.036750,0.033557,0.040128
+1052,education,bachelor's,"reel, vague 1",283,0.036118,0.033392,0.039018
+1052,education,graduate,"reel, vague 1",151,0.039113,0.035053,0.043427
+1052,education,high school,"reel, vague 1",409,0.035149,0.033046,0.037309
+1052,education,less than high school,"reel, vague 1",24,0.042226,0.036353,0.049362
+1052,education,associate/junior college,agents composite,185,0.032940,0.029202,0.037113
+1052,education,bachelor's,agents composite,283,0.033794,0.030642,0.037160
+1052,education,graduate,agents composite,151,0.034179,0.029870,0.038704
+1052,education,high school,agents composite,409,0.035526,0.032629,0.038299
+1052,education,less than high school,agents composite,24,0.042785,0.033202,0.053272
+1052,education,associate/junior college,agents entretien (v3),185,0.035371,0.031478,0.039497
+1052,education,bachelor's,agents entretien (v3),283,0.037778,0.034266,0.041418
+1052,education,graduate,agents entretien (v3),151,0.034846,0.030583,0.039514
+1052,education,high school,agents entretien (v3),409,0.037545,0.034785,0.040284
+1052,education,less than high school,agents entretien (v3),24,0.046980,0.037248,0.057626
+1052,education,associate/junior college,agents enquete,185,0.037403,0.033443,0.041929
+1052,education,bachelor's,agents enquete,283,0.034719,0.031519,0.038193
+1052,education,graduate,agents enquete,151,0.035779,0.031145,0.040512
+1052,education,high school,agents enquete,409,0.035953,0.033349,0.038641
+1052,education,less than high school,agents enquete,24,0.041667,0.034072,0.050481
+1052,education,associate/junior college,agents demographiques (v6),185,0.016506,0.014757,0.018374
+1052,education,bachelor's,agents demographiques (v6),283,0.013802,0.012503,0.015124
+1052,education,graduate,agents demographiques (v6),151,0.018979,0.016962,0.020875
+1052,education,high school,agents demographiques (v6),409,0.017000,0.015857,0.018116
+1052,education,less than high school,agents demographiques (v6),24,0.022651,0.017337,0.027762
+1052,education,associate/junior college,agents v7,185,0.019699,0.016889,0.022688
+1052,education,bachelor's,agents v7,283,0.016933,0.014679,0.019150
+1052,education,graduate,agents v7,151,0.017245,0.014563,0.020254
+1052,education,high school,agents v7,409,0.020003,0.018101,0.022048
+1052,education,less than high school,agents v7,24,0.020973,0.013028,0.031320
+1052,education,associate/junior college,agents v8,185,0.041067,0.034755,0.047528
+1052,education,bachelor's,agents v8,283,0.047217,0.042309,0.052083
+1052,education,graduate,agents v8,151,0.041157,0.034883,0.048013
+1052,education,high school,agents v8,409,0.040334,0.036567,0.044372
+1052,education,less than high school,agents v8,24,0.028523,0.016156,0.044218
+1052,education,associate/junior college,B0 mode,185,0.000000,0.000000,0.000000
+1052,education,bachelor's,B0 mode,283,0.000000,0.000000,0.000000
+1052,education,graduate,B0 mode,151,0.000000,0.000000,0.000000
+1052,education,high school,B0 mode,409,0.000000,0.000000,0.000000
+1052,education,less than high school,B0 mode,24,0.000000,0.000000,0.000000
+1052,education,associate/junior college,B0 tirage,185,0.036568,0.034465,0.038643
+1052,education,bachelor's,B0 tirage,283,0.036213,0.034597,0.037740
+1052,education,graduate,B0 tirage,151,0.038624,0.036218,0.040930
+1052,education,high school,B0 tirage,409,0.035772,0.034424,0.037142
+1052,education,less than high school,B0 tirage,24,0.032159,0.025838,0.038833
+1052,education,associate/junior college,B1 argmax,185,0.008598,0.007277,0.010197
+1052,education,bachelor's,B1 argmax,283,0.009130,0.007787,0.010447
+1052,education,graduate,B1 argmax,151,0.013689,0.011720,0.016004
+1052,education,high school,B1 argmax,409,0.008451,0.007536,0.009368
+1052,education,less than high school,B1 argmax,24,0.014262,0.010626,0.017786
+1052,education,associate/junior college,B2 argmax,185,0.001995,0.001382,0.002670
+1052,education,bachelor's,B2 argmax,283,0.002964,0.002216,0.003839
+1052,education,graduate,B2 argmax,151,0.002533,0.001689,0.003485
+1052,education,high school,B2 argmax,409,0.002740,0.002169,0.003364
+1052,education,less than high school,B2 argmax,24,0.003635,0.001957,0.005421
+1052,education,associate/junior college,B3 foret,185,0.000798,0.000474,0.001140
+1052,education,bachelor's,B3 foret,283,0.000759,0.000457,0.001072
+1052,education,graduate,B3 foret,151,0.000311,0.000095,0.000559
+1052,education,high school,B3 foret,409,0.002264,0.001899,0.002678
+1052,education,less than high school,B3 foret,24,0.002237,0.000839,0.003872
+1052,education,associate/junior college,humains vague 2,185,0.036931,0.033684,0.040404
+1052,education,bachelor's,humains vague 2,283,0.035502,0.032775,0.038421
+1052,education,graduate,humains vague 2,151,0.040180,0.035257,0.045771
+1052,education,high school,humains vague 2,409,0.038152,0.035646,0.040946
+1052,education,less than high school,humains vague 2,24,0.043345,0.036321,0.051368
+1052,profil croise,female|black|centre,"reel, vague 1",30,0.038255,0.032973,0.043770
+1052,profil croise,female|black|droite,"reel, vague 1",12,0.044183,0.030871,0.062422
+1052,profil croise,female|black|gauche,"reel, vague 1",38,0.029848,0.024549,0.035387
+1052,profil croise,female|other|centre,"reel, vague 1",22,0.023795,0.017660,0.030732
+1052,profil croise,female|other|droite,"reel, vague 1",14,0.044104,0.030425,0.058166
+1052,profil croise,female|other|gauche,"reel, vague 1",21,0.041866,0.034137,0.049778
+1052,profil croise,female|white|centre,"reel, vague 1",125,0.032107,0.028795,0.035829
+1052,profil croise,female|white|droite,"reel, vague 1",143,0.042803,0.038638,0.047172
+1052,profil croise,female|white|gauche,"reel, vague 1",188,0.028059,0.025285,0.030973
+1052,profil croise,male|black|centre,"reel, vague 1",22,0.040268,0.031320,0.050895
+1052,profil croise,male|black|droite,"reel, vague 1",17,0.048164,0.036137,0.061243
+1052,profil croise,male|black|gauche,"reel, vague 1",31,0.040052,0.031320,0.049281
+1052,profil croise,male|other|centre,"reel, vague 1",13,0.028394,0.021354,0.036353
+1052,profil croise,male|other|droite,"reel, vague 1",13,0.060919,0.047416,0.073837
+1052,profil croise,male|other|gauche,"reel, vague 1",20,0.031208,0.024161,0.039564
+1052,profil croise,male|white|centre,"reel, vague 1",91,0.034958,0.030477,0.039340
+1052,profil croise,male|white|droite,"reel, vague 1",133,0.045920,0.041252,0.051124
+1052,profil croise,male|white|gauche,"reel, vague 1",119,0.034065,0.030613,0.037459
+1052,profil croise,female|black|centre,agents composite,30,0.027293,0.021477,0.033895
+1052,profil croise,female|black|droite,agents composite,12,0.041946,0.031117,0.054209
+1052,profil croise,female|black|gauche,agents composite,38,0.022960,0.018402,0.028020
+1052,profil croise,female|other|centre,agents composite,22,0.021660,0.015980,0.027457
+1052,profil croise,female|other|droite,agents composite,14,0.049856,0.031320,0.071244
+1052,profil croise,female|other|gauche,agents composite,21,0.029083,0.024329,0.033952
+1052,profil croise,female|white|centre,agents composite,125,0.027114,0.023844,0.030681
+1052,profil croise,female|white|droite,agents composite,143,0.053785,0.048492,0.059372
+1052,profil croise,female|white|gauche,agents composite,188,0.021027,0.018784,0.023324
+1052,profil croise,male|black|centre,agents composite,22,0.028066,0.022771,0.033557
+1052,profil croise,male|black|droite,agents composite,17,0.048164,0.032659,0.066369
+1052,profil croise,male|black|gauche,agents composite,31,0.027062,0.021301,0.035075
+1052,profil croise,male|other|centre,agents composite,13,0.042334,0.025502,0.060413
+1052,profil croise,male|other|droite,agents composite,13,0.065565,0.045638,0.086781
+1052,profil croise,male|other|gauche,agents composite,20,0.022483,0.016004,0.029723
+1052,profil croise,male|white|centre,agents composite,91,0.030312,0.025851,0.035217
+1052,profil croise,male|white|droite,agents composite,133,0.058637,0.052539,0.065037
+1052,profil croise,male|white|gauche,agents composite,119,0.022503,0.019903,0.025199
+1052,profil croise,female|black|centre,agents entretien (v3),30,0.030425,0.025502,0.035873
+1052,profil croise,female|black|droite,agents entretien (v3),12,0.036913,0.026846,0.047726
+1052,profil croise,female|black|gauche,agents entretien (v3),38,0.023667,0.019739,0.028189
+1052,profil croise,female|other|centre,agents entretien (v3),22,0.023185,0.018456,0.028425
+1052,profil croise,female|other|droite,agents entretien (v3),14,0.056088,0.041451,0.074306
+1052,profil croise,female|other|gauche,agents entretien (v3),21,0.027804,0.019328,0.036715
+1052,profil croise,female|white|centre,agents entretien (v3),125,0.029208,0.025526,0.033178
+1052,profil croise,female|white|droite,agents entretien (v3),143,0.058995,0.053839,0.064196
+1052,profil croise,female|white|gauche,agents entretien (v3),188,0.024097,0.021521,0.026741
+1052,profil croise,male|black|centre,agents entretien (v3),22,0.024710,0.019294,0.030947
+1052,profil croise,male|black|droite,agents entretien (v3),17,0.044216,0.029780,0.060949
+1052,profil croise,male|black|gauche,agents entretien (v3),31,0.021217,0.017752,0.024994
+1052,profil croise,male|other|centre,agents entretien (v3),13,0.031492,0.018790,0.046234
+1052,profil croise,male|other|droite,agents entretien (v3),13,0.055756,0.036913,0.074499
+1052,profil croise,male|other|gauche,agents entretien (v3),20,0.027517,0.020134,0.035676
+1052,profil croise,male|white|centre,agents entretien (v3),91,0.029353,0.024767,0.034092
+1052,profil croise,male|white|droite,agents entretien (v3),133,0.067720,0.062758,0.072903
+1052,profil croise,male|white|gauche,agents entretien (v3),119,0.024477,0.021716,0.027432
+1052,profil croise,female|black|centre,agents enquete,30,0.027517,0.023010,0.032090
+1052,profil croise,female|black|droite,agents enquete,12,0.044743,0.032438,0.058485
+1052,profil croise,female|black|gauche,agents enquete,38,0.028435,0.023969,0.033557
+1052,profil croise,female|other|centre,agents enquete,22,0.024100,0.018555,0.030025
+1052,profil croise,female|other|droite,agents enquete,14,0.052253,0.037135,0.069032
+1052,profil croise,female|other|gauche,agents enquete,21,0.033557,0.026007,0.041389
+1052,profil croise,female|white|centre,agents enquete,125,0.026899,0.023597,0.030312
+1052,profil croise,female|white|droite,agents enquete,143,0.058807,0.052934,0.064516
+1052,profil croise,female|white|gauche,agents enquete,188,0.024204,0.021604,0.026748
+1052,profil croise,male|black|centre,agents enquete,22,0.035998,0.028676,0.043904
+1052,profil croise,male|black|droite,agents enquete,17,0.044611,0.029605,0.061148
+1052,profil croise,male|black|gauche,agents enquete,31,0.026629,0.021182,0.032948
+1052,profil croise,male|other|centre,agents enquete,13,0.030976,0.016405,0.048098
+1052,profil croise,male|other|droite,agents enquete,13,0.059886,0.040828,0.079979
+1052,profil croise,male|other|gauche,agents enquete,20,0.024497,0.019495,0.029671
+1052,profil croise,male|white|centre,agents enquete,91,0.028763,0.024609,0.033158
+1052,profil croise,male|white|droite,agents enquete,133,0.056618,0.050690,0.062927
+1052,profil croise,male|white|gauche,agents enquete,119,0.024590,0.021936,0.027466
+1052,profil croise,female|black|centre,agents demographiques (v6),30,0.016107,0.012238,0.020134
+1052,profil croise,female|black|droite,agents demographiques (v6),12,0.019016,0.014169,0.023863
+1052,profil croise,female|black|gauche,agents demographiques (v6),38,0.019604,0.016049,0.023232
+1052,profil croise,female|other|centre,agents demographiques (v6),22,0.011287,0.008149,0.014861
+1052,profil croise,female|other|droite,agents demographiques (v6),14,0.022531,0.016405,0.028943
+1052,profil croise,female|other|gauche,agents demographiques (v6),21,0.010547,0.006711,0.014543
+1052,profil croise,female|white|centre,agents demographiques (v6),125,0.015839,0.013742,0.018146
+1052,profil croise,female|white|droite,agents demographiques (v6),143,0.019008,0.016891,0.021174
+1052,profil croise,female|white|gauche,agents demographiques (v6),188,0.013994,0.012523,0.015555
+1052,profil croise,male|black|centre,agents demographiques (v6),22,0.018914,0.014430,0.023893
+1052,profil croise,male|black|droite,agents demographiques (v6),17,0.018555,0.012864,0.024836
+1052,profil croise,male|black|gauche,agents demographiques (v6),31,0.019268,0.013681,0.025059
+1052,profil croise,male|other|centre,agents demographiques (v6),13,0.016004,0.010738,0.021395
+1052,profil croise,male|other|droite,agents demographiques (v6),13,0.018585,0.010738,0.026846
+1052,profil croise,male|other|gauche,agents demographiques (v6),20,0.017114,0.011449,0.023293
+1052,profil croise,male|white|centre,agents demographiques (v6),91,0.015635,0.013423,0.018112
+1052,profil croise,male|white|droite,agents demographiques (v6),133,0.018772,0.016607,0.021050
+1052,profil croise,male|white|gauche,agents demographiques (v6),119,0.014382,0.012369,0.016393
+1052,profil croise,female|black|centre,agents v7,30,0.022595,0.015730,0.030293
+1052,profil croise,female|black|droite,agents v7,12,0.023490,0.014211,0.033557
+1052,profil croise,female|black|gauche,agents v7,38,0.018015,0.014606,0.021608
+1052,profil croise,female|other|centre,agents v7,22,0.015253,0.011616,0.018792
+1052,profil croise,female|other|droite,agents v7,14,0.019175,0.013817,0.025019
+1052,profil croise,female|other|gauche,agents v7,21,0.018217,0.011742,0.026329
+1052,profil croise,female|white|centre,agents v7,125,0.014819,0.012736,0.017214
+1052,profil croise,female|white|droite,agents v7,143,0.016192,0.013753,0.018950
+1052,profil croise,female|white|gauche,agents v7,188,0.020241,0.017105,0.023952
+1052,profil croise,male|black|centre,agents v7,22,0.015863,0.010067,0.023043
+1052,profil croise,male|black|droite,agents v7,17,0.026451,0.014541,0.040268
+1052,profil croise,male|black|gauche,agents v7,31,0.024031,0.017673,0.033029
+1052,profil croise,male|other|centre,agents v7,13,0.017037,0.013423,0.021253
+1052,profil croise,male|other|droite,agents v7,13,0.031492,0.015340,0.051013
+1052,profil croise,male|other|gauche,agents v7,20,0.023154,0.013423,0.035309
+1052,profil croise,male|white|centre,agents v7,91,0.019397,0.015796,0.023278
+1052,profil croise,male|white|droite,agents v7,133,0.020134,0.016000,0.024336
+1052,profil croise,male|white|gauche,agents v7,119,0.017145,0.014464,0.020134
+1052,profil croise,female|black|centre,agents v8,30,0.010291,0.007361,0.013423
+1052,profil croise,female|black|droite,agents v8,12,0.048098,0.026846,0.072720
+1052,profil croise,female|black|gauche,agents v8,38,0.027905,0.021850,0.034212
+1052,profil croise,female|other|centre,agents v8,22,0.014643,0.009043,0.020842
+1052,profil croise,female|other|droite,agents v8,14,0.076222,0.051593,0.099553
+1052,profil croise,female|other|gauche,agents v8,21,0.025567,0.016028,0.035048
+1052,profil croise,female|white|centre,agents v8,125,0.011812,0.009664,0.014135
+1052,profil croise,female|white|droite,agents v8,143,0.086685,0.080248,0.092547
+1052,profil croise,female|white|gauche,agents v8,188,0.026346,0.023701,0.029016
+1052,profil croise,male|black|centre,agents v8,22,0.014948,0.010440,0.021302
+1052,profil croise,male|black|droite,agents v8,17,0.091591,0.072764,0.108501
+1052,profil croise,male|black|gauche,agents v8,31,0.028578,0.022123,0.035235
+1052,profil croise,male|other|centre,agents v8,13,0.012390,0.005749,0.019576
+1052,profil croise,male|other|droite,agents v8,13,0.089313,0.059652,0.115786
+1052,profil croise,male|other|gauche,agents v8,20,0.019799,0.013902,0.026040
+1052,profil croise,male|white|centre,agents v8,91,0.014087,0.010406,0.018095
+1052,profil croise,male|white|droite,agents v8,133,0.098299,0.092359,0.103660
+1052,profil croise,male|white|gauche,agents v8,119,0.023631,0.020306,0.027061
+1052,profil croise,female|black|centre,B0 mode,30,0.000000,0.000000,0.000000
+1052,profil croise,female|black|droite,B0 mode,12,0.000000,0.000000,0.000000
+1052,profil croise,female|black|gauche,B0 mode,38,0.000000,0.000000,0.000000
+1052,profil croise,female|other|centre,B0 mode,22,0.000000,0.000000,0.000000
+1052,profil croise,female|other|droite,B0 mode,14,0.000000,0.000000,0.000000
+1052,profil croise,female|other|gauche,B0 mode,21,0.000000,0.000000,0.000000
+1052,profil croise,female|white|centre,B0 mode,125,0.000000,0.000000,0.000000
+1052,profil croise,female|white|droite,B0 mode,143,0.000000,0.000000,0.000000
+1052,profil croise,female|white|gauche,B0 mode,188,0.000000,0.000000,0.000000
+1052,profil croise,male|black|centre,B0 mode,22,0.000000,0.000000,0.000000
+1052,profil croise,male|black|droite,B0 mode,17,0.000000,0.000000,0.000000
+1052,profil croise,male|black|gauche,B0 mode,31,0.000000,0.000000,0.000000
+1052,profil croise,male|other|centre,B0 mode,13,0.000000,0.000000,0.000000
+1052,profil croise,male|other|droite,B0 mode,13,0.000000,0.000000,0.000000
+1052,profil croise,male|other|gauche,B0 mode,20,0.000000,0.000000,0.000000
+1052,profil croise,male|white|centre,B0 mode,91,0.000000,0.000000,0.000000
+1052,profil croise,male|white|droite,B0 mode,133,0.000000,0.000000,0.000000
+1052,profil croise,male|white|gauche,B0 mode,119,0.000000,0.000000,0.000000
+1052,profil croise,female|black|centre,B0 tirage,30,0.038479,0.032811,0.043978
+1052,profil croise,female|black|droite,B0 tirage,12,0.036353,0.027964,0.045302
+1052,profil croise,female|black|gauche,B0 tirage,38,0.037972,0.032831,0.042919
+1052,profil croise,female|other|centre,B0 tirage,22,0.034777,0.029361,0.039374
+1052,profil croise,female|other|droite,B0 tirage,14,0.039789,0.032525,0.046980
+1052,profil croise,female|other|gauche,B0 tirage,21,0.035155,0.030759,0.039977
+1052,profil croise,female|white|centre,B0 tirage,125,0.035919,0.033457,0.038434
+1052,profil croise,female|white|droite,B0 tirage,143,0.034871,0.032743,0.037030
+1052,profil croise,female|white|gauche,B0 tirage,188,0.036984,0.035243,0.038683
+1052,profil croise,male|black|centre,B0 tirage,22,0.040268,0.033288,0.047400
+1052,profil croise,male|black|droite,B0 tirage,17,0.038295,0.030459,0.046980
+1052,profil croise,male|black|gauche,B0 tirage,31,0.033990,0.028652,0.039393
+1052,profil croise,male|other|centre,B0 tirage,13,0.032008,0.024448,0.040268
+1052,profil croise,male|other|droite,B0 tirage,13,0.039752,0.033557,0.046143
+1052,profil croise,male|other|gauche,B0 tirage,20,0.032550,0.026846,0.038351
+1052,profil croise,male|white|centre,B0 tirage,91,0.035696,0.032657,0.038821
+1052,profil croise,male|white|droite,B0 tirage,133,0.038805,0.036241,0.041253
+1052,profil croise,male|white|gauche,B0 tirage,119,0.034798,0.032037,0.037612
+1052,profil croise,female|black|centre,B1 argmax,30,0.008054,0.005273,0.010907
+1052,profil croise,female|black|droite,B1 argmax,12,0.018456,0.011931,0.025015
+1052,profil croise,female|black|gauche,B1 argmax,38,0.008124,0.005491,0.011041
+1052,profil croise,female|other|centre,B1 argmax,22,0.007016,0.003758,0.011672
+1052,profil croise,female|other|droite,B1 argmax,14,0.011026,0.006152,0.016219
+1052,profil croise,female|other|gauche,B1 argmax,21,0.014062,0.010209,0.017987
+1052,profil croise,female|white|centre,B1 argmax,125,0.004027,0.003041,0.005086
+1052,profil croise,female|white|droite,B1 argmax,143,0.010842,0.009122,0.012710
+1052,profil croise,female|white|gauche,B1 argmax,188,0.006640,0.005566,0.007768
+1052,profil croise,male|black|centre,B1 argmax,22,0.009762,0.006711,0.013050
+1052,profil croise,male|black|droite,B1 argmax,17,0.026846,0.019739,0.033565
+1052,profil croise,male|black|gauche,B1 argmax,31,0.009959,0.006711,0.013663
+1052,profil croise,male|other|centre,B1 argmax,13,0.010325,0.004846,0.016299
+1052,profil croise,male|other|droite,B1 argmax,13,0.027362,0.018217,0.035573
+1052,profil croise,male|other|gauche,B1 argmax,20,0.011409,0.007106,0.015940
+1052,profil croise,male|white|centre,B1 argmax,91,0.005458,0.003878,0.007065
+1052,profil croise,male|white|droite,B1 argmax,133,0.016753,0.014482,0.019283
+1052,profil croise,male|white|gauche,B1 argmax,119,0.007896,0.006385,0.009508
+1052,profil croise,female|black|centre,B2 argmax,30,0.002237,0.001017,0.003596
+1052,profil croise,female|black|droite,B2 argmax,12,0.005034,0.001830,0.008544
+1052,profil croise,female|black|gauche,B2 argmax,38,0.001766,0.000767,0.002926
+1052,profil croise,female|other|centre,B2 argmax,22,0.000915,0.000000,0.002013
+1052,profil croise,female|other|droite,B2 argmax,14,0.003835,0.001549,0.006232
+1052,profil croise,female|other|gauche,B2 argmax,21,0.003835,0.001829,0.006128
+1052,profil croise,female|white|centre,B2 argmax,125,0.001074,0.000634,0.001533
+1052,profil croise,female|white|droite,B2 argmax,143,0.004271,0.003101,0.005601
+1052,profil croise,female|white|gauche,B2 argmax,188,0.001321,0.000915,0.001770
+1052,profil croise,male|black|centre,B2 argmax,22,0.003661,0.002082,0.005491
+1052,profil croise,male|black|droite,B2 argmax,17,0.004343,0.001579,0.007830
+1052,profil croise,male|black|gauche,B2 argmax,31,0.000649,0.000000,0.001438
+1052,profil croise,male|other|centre,B2 argmax,13,0.001033,0.000000,0.002685
+1052,profil croise,male|other|droite,B2 argmax,13,0.008776,0.001678,0.020744
+1052,profil croise,male|other|gauche,B2 argmax,20,0.001678,0.000395,0.003158
+1052,profil croise,male|white|centre,B2 argmax,91,0.002213,0.001193,0.003427
+1052,profil croise,male|white|droite,B2 argmax,133,0.005753,0.004059,0.007637
+1052,profil croise,male|white|gauche,B2 argmax,119,0.001297,0.000815,0.001841
+1052,profil croise,female|black|centre,B3 foret,30,0.002237,0.000875,0.003803
+1052,profil croise,female|black|droite,B3 foret,12,0.001119,0.000000,0.002876
+1052,profil croise,female|black|gauche,B3 foret,38,0.002119,0.000883,0.003553
+1052,profil croise,female|other|centre,B3 foret,22,0.002135,0.000559,0.004085
+1052,profil croise,female|other|droite,B3 foret,14,0.000959,0.000000,0.002398
+1052,profil croise,female|other|gauche,B3 foret,21,0.003516,0.001676,0.005527
+1052,profil croise,female|white|centre,B3 foret,125,0.001611,0.001009,0.002288
+1052,profil croise,female|white|droite,B3 foret,143,0.001690,0.001128,0.002302
+1052,profil croise,female|white|gauche,B3 foret,188,0.001321,0.000872,0.001795
+1052,profil croise,male|black|centre,B3 foret,22,0.000305,0.000000,0.001033
+1052,profil croise,male|black|droite,B3 foret,17,0.000790,0.000000,0.001919
+1052,profil croise,male|black|gauche,B3 foret,31,0.001299,0.000462,0.002296
+1052,profil croise,male|other|centre,B3 foret,13,0.000516,0.000000,0.001678
+1052,profil croise,male|other|droite,B3 foret,13,0.002065,0.000419,0.004027
+1052,profil croise,male|other|gauche,B3 foret,20,0.001007,0.000000,0.002237
+1052,profil croise,male|white|centre,B3 foret,91,0.000590,0.000226,0.000997
+1052,profil croise,male|white|droite,B3 foret,133,0.001262,0.000763,0.001830
+1052,profil croise,male|white|gauche,B3 foret,119,0.000564,0.000228,0.000959
+1052,profil croise,female|black|centre,humains vague 2,30,0.037136,0.030105,0.044494
+1052,profil croise,female|black|droite,humains vague 2,12,0.043065,0.026846,0.065576
+1052,profil croise,female|black|gauche,humains vague 2,38,0.034793,0.027591,0.042919
+1052,profil croise,female|other|centre,humains vague 2,22,0.025930,0.019654,0.032551
+1052,profil croise,female|other|droite,humains vague 2,14,0.043624,0.030870,0.057470
+1052,profil croise,female|other|gauche,humains vague 2,21,0.037712,0.029641,0.046349
+1052,profil croise,female|white|centre,humains vague 2,125,0.032537,0.029291,0.036114
+1052,profil croise,female|white|droite,humains vague 2,143,0.043882,0.039117,0.049102
+1052,profil croise,female|white|gauche,humains vague 2,188,0.028773,0.025987,0.031768
+1052,profil croise,male|black|centre,humains vague 2,22,0.035692,0.029896,0.041611
+1052,profil croise,male|black|droite,humains vague 2,17,0.050138,0.035889,0.064979
+1052,profil croise,male|black|gauche,humains vague 2,31,0.046330,0.033109,0.063971
+1052,profil croise,male|other|centre,humains vague 2,13,0.041817,0.031724,0.052142
+1052,profil croise,male|other|droite,humains vague 2,13,0.060919,0.049217,0.072277
+1052,profil croise,male|other|gauche,humains vague 2,20,0.031544,0.023862,0.042102
+1052,profil croise,male|white|centre,humains vague 2,91,0.040047,0.035187,0.045622
+1052,profil croise,male|white|droite,humains vague 2,133,0.045769,0.041031,0.050641
+1052,profil croise,male|white|gauche,humains vague 2,119,0.034798,0.029993,0.040061

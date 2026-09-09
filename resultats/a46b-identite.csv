@@ -1,0 +1,7 @@
+cle_modele,modele,ancrage,n_items,n_items_identiques,ecart_absolu_moyen_points,ic_bas,ic_haut,ecart_signe_moyen_points,signe_ic_bas,signe_ic_haut,ecart_max_points
+oss20,gpt-oss-20b,ideologie,8,4,12.75,3.75,22.5,-9.75,-21.0,0.75,30.0
+oss20,gpt-oss-20b,parti,8,7,3.75,0.0,11.25,3.75,0.0,11.25,30.0
+q30,Qwen3-30B-A3B,ideologie,8,3,3.625,0.875,8.125,-1.375,-6.125,2.0,17.0
+q30,Qwen3-30B-A3B,parti,8,5,4.625,0.0,9.625,0.375,-4.625,6.625,20.0
+q4,Qwen3-4B,ideologie,8,1,7.625,3.25,12.625,-2.375,-9.375,4.875,20.0
+q4,Qwen3-4B,parti,8,1,13.375,7.871875,19.5,1.625,-10.253125,11.625,30.0

@@ -1,0 +1,142 @@
+{
+  "moteur": "mlx-lm",
+  "modele": "data/modeles/mlx/Qwen3-4B-Instruct-2507-4bit",
+  "chargement_s": 0.6240360736846924,
+  "cache_kv": "q8_0",
+  "slots_paralleles": 8,
+  "contexte_par_slot": 16384,
+  "tokens_persona": 3029,
+  "t1": {
+    "brut": {
+      "A": 0.0031498189347202296,
+      "B": 0.0003761922248763538,
+      "C": 0.003569212453318827,
+      "D": 0.8733574918641023,
+      "E": 0.01411650909327954
+    },
+    "normalisee": {
+      "A": 0.0035210454911784304,
+      "B": 0.00042052891441358964,
+      "C": 0.003989867251506762,
+      "D": 0.9762883272489238,
+      "E": 0.015780231093977495
+    },
+    "manquantes": [],
+    "masse_totale": 0.8945692245702972,
+    "entropie_bits": 0.1934654367995684,
+    "methode": "distribution complete sur le vocabulaire (exacte)"
+  },
+  "t2": {
+    "applicable": true,
+    "lignes": [
+      {
+        "modalite": "A",
+        "libelle": "oui",
+        "n_tokens": 1,
+        "a_etiquette": -5.760410308837891,
+        "b_somme_brute": -16.88541030883789,
+        "c_par_token": -16.88541030883789,
+        "d_pmi": -5.399101257324219
+      },
+      {
+        "modalite": "B",
+        "libelle": "non",
+        "n_tokens": 1,
+        "a_etiquette": -7.885410308837891,
+        "b_somme_brute": -13.76041030883789,
+        "c_par_token": -13.76041030883789,
+        "d_pmi": -3.3678512573242188
+      },
+      {
+        "modalite": "C",
+        "libelle": "plutot d'accord",
+        "n_tokens": 5,
+        "a_etiquette": -5.635410308837891,
+        "b_somme_brute": -21.154315948486328,
+        "c_par_token": -4.230863189697265,
+        "d_pmi": -5.264429092407227
+      },
+      {
+        "modalite": "D",
+        "libelle": "je ne sais pas vraiment quoi en penser",
+        "n_tokens": 9,
+        "a_etiquette": -0.13541030883789062,
+        "b_somme_brute": -13.407953262329102,
+        "c_par_token": -1.4897725847032335,
+        "d_pmi": -5.457864761352539
+      },
+      {
+        "modalite": "E",
+        "libelle": "absolument pas, c'est contraire a ce que je crois",
+        "n_tokens": 14,
+        "a_etiquette": -4.260410308837891,
+        "b_somme_brute": -18.87835121154785,
+        "c_par_token": -1.3484536579677038,
+        "d_pmi": -5.282144546508789
+      }
+    ],
+    "classements": {
+      "a_etiquette": [
+        "D",
+        "E",
+        "C",
+        "A",
+        "B"
+      ],
+      "b_somme_brute": [
+        "D",
+        "B",
+        "A",
+        "E",
+        "C"
+      ],
+      "c_par_token": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "d_pmi": [
+        "B",
+        "C",
+        "E",
+        "A",
+        "D"
+      ]
+    },
+    "meme_gagnante_a_b": true,
+    "tau_a_b": 0.0
+  },
+  "t3_t4": {
+    "tokens_prompt": 3094,
+    "prefill_t_par_s": 689.2727253750583,
+    "decodage_t_par_s": 27.20090856539629
+  },
+  "t5": {
+    "tokens_persona": 3029,
+    "froid_ms": 4293.759332969785,
+    "chaud_ms": 260.48433349933475,
+    "sans_cache_ms": 4185.880271019414,
+    "tokens_reevalues": 66.0,
+    "gain": 16.069604704384666
+  },
+  "t6": {
+    "applicable": false
+  },
+  "t7": {
+    "duree_totale_s": 16.556982083944604,
+    "premier_appel_ms": 312.9471669672057,
+    "mediane_ms": 262.0826670899987,
+    "min_ms": 177.4393330560997,
+    "max_ms": 285.1109590847045,
+    "memoire_debut_mo": 4344.382568,
+    "memoire_fin_mo": 4344.382568,
+    "entropie_moyenne_bits": 0.48559000263423774,
+    "appels_par_heure": 13736.123948875133
+  },
+  "duree_du_banc_s": 91.46195077896118,
+  "appels_par_heure_sequentiel": 13736.123948875133,
+  "appels_par_heure_avec_lots": 13736.123948875133,
+  "heures_pour_45000_appels": 3.276033338624984
+}

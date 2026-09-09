@@ -1,0 +1,18 @@
+# Manifeste des preenregistrements, empreintes SHA-256 et horodatages de fichier
+# genere le 2026-09-09 01:48:51 CEST (horloge machine)
+d08ea03962ae39aad5fa23617fdc6abd09a91b4cb59326f7a9cc6b9f28958427  resultats/a42-preenregistrement.md  mtime=2026-09-08T15:43:56
+68e2007e965ba36447e38a6abaf5a546aa419d7330ecbd674e5c067b0f4c2b74  resultats/a43-preenregistrement.md  mtime=2026-09-08T15:43:10
+e71568fd2a601b6e4e76cc9f4a5202125f259d6410910a25910a839d4aa6a793  resultats/a44-preenregistrement.md  mtime=2026-09-08T15:48:33
+9bc201fa2b3d865dccbf4719cd8cdd72876034e97997674f671f3523edbc6ae8  resultats/a46-preenregistrement-composition.md  mtime=2026-09-08T22:46:43
+14f06ab13c6e23f869e1c60f71192bb81f22d06044f8ed41b8e41cdab04da246  resultats/c1-preenregistrement.md  mtime=2026-09-08T22:33:13
+e546333dd1d7d116f1b65860f9c264de402cf47eef0112f3d4b0f770c1b032ca  resultats/i1-preenregistrement.md  mtime=2026-09-08T18:32:46
+bde00acaef02d5e3e1e1cf4a4d7baacf5c84412c79be947381392714458bd08a  resultats/i3-preenregistrement.md  mtime=2026-09-08T19:11:32
+57f921196aef0789bc17d63ef4d2ebbffa5d95c8c0bb78b5c31497d734781168  resultats/i3b-preenregistrement.md  mtime=2026-09-08T21:08:28
+96baab6b777aa087e8981f356bb3eefcc44d04e4f48af6d640d0dc99731a9084  resultats/r1-preenregistrement.md  mtime=2026-09-08T22:08:01
+b2684f0e3f7a5595ced29f5d1ff79734fd45a710c2fcd04c3e4814cda5b362bc  resultats/r2-preenregistrement.md  mtime=2026-09-08T22:05:42
+24926e0a951f3a850440c8fe5f9e21480d84987e3b8920dc21859dd1349881c1  resultats/r3-preenregistrement.md  mtime=2026-09-08T22:32:01
+f5c6716b6a83aae08bd666bfe1ff2d754f0229b56d0d6f667cff3d1b6b6f0ef7  resultats/r4-preenregistrement.md  mtime=2026-09-08T23:57:57
+6b8e0f83db8c8b9342f8cf89284ae406ab98c2d84d075940e53abcf8fc5881c0  resultats/t1-preenregistrement.md  mtime=2026-09-09T01:08:37
+b4ff26535cc63a407f2b70e1f0e50e848aea88970f2a8b4cf01749775368df1f  resultats/t2-preenregistrement.md  mtime=2026-09-09T01:07:18
+3774e76911e5faff86a34a33f4b70f367fdc863cd0fadd06443c2c6e7aa85b08  resultats/r5-preenregistrement.md
+db0729734c732d43c8db2d08d30545ba434f32190170a062df4f3772f6a00dc6  resultats/r6-preenregistrement.md

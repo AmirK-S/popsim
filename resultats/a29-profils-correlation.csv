@@ -1,0 +1,157 @@
+perimetre,axe,condition,niveaux,rho_profil,r_profil,amplitude_reelle,amplitude_predite,niveau_le_plus_rare_reel,niveau_le_plus_rare_predit
+150,gender,agents composite,2,,,1.276139,1.321544,male,male
+150,gender,agents entretien (v3),2,,,1.276139,1.101677,male,male
+150,gender,agents enquete,2,,,1.276139,1.133994,male,male
+150,gender,agents demographiques (v6),2,,,1.276139,1.214286,male,female
+150,gender,agents v7,2,,,1.276139,1.045455,male,male
+150,gender,agents v8,2,,,1.276139,1.100379,male,male
+150,gender,C2,2,,,1.276139,1.137968,male,male
+150,gender,C3,2,,,1.276139,1.082007,male,male
+150,gender,B0 mode,2,,,1.276139,,male,female
+150,gender,B0 tirage,2,,,1.276139,1.035914,male,female
+150,gender,B1 argmax,2,,,1.276139,1.333333,male,male
+150,gender,B2 argmax,2,,,1.276139,2.460606,male,male
+150,gender,B3 foret,2,,,1.276139,1.034091,male,male
+150,gender,humains vague 2,2,,,1.276139,1.272727,male,male
+150,race,agents composite,3,,,1.180378,1.232598,other,other
+150,race,agents entretien (v3),3,,,1.180378,1.421915,other,white
+150,race,agents enquete,3,,,1.180378,1.329935,other,white
+150,race,agents demographiques (v6),3,,,1.180378,1.089783,other,other
+150,race,agents v7,3,,,1.180378,1.309697,other,other
+150,race,agents v8,3,,,1.180378,1.313831,other,white
+150,race,C2,3,,,1.180378,1.168536,other,white
+150,race,C3,3,,,1.180378,1.078849,other,white
+150,race,B0 mode,3,,,1.180378,,other,black
+150,race,B0 tirage,3,,,1.180378,1.025649,other,black
+150,race,B1 argmax,3,,,1.180378,1.354532,other,other
+150,race,B2 argmax,3,,,1.180378,3.935780,other,white
+150,race,B3 foret,3,,,1.180378,5.045872,other,white
+150,race,humains vague 2,3,,,1.180378,1.441692,other,other
+150,political_ideology,agents composite,7,0.857143,0.905413,1.914267,3.937500,extremely conservative,extremely conservative
+150,political_ideology,agents entretien (v3),7,0.750000,0.840426,1.914267,3.909574,extremely conservative,extremely conservative
+150,political_ideology,agents enquete,7,0.892857,0.909701,1.914267,2.946043,extremely conservative,extremely conservative
+150,political_ideology,agents demographiques (v6),7,0.750000,0.605020,1.914267,1.953125,extremely conservative,extremely conservative
+150,political_ideology,agents v7,7,0.500000,0.629703,1.914267,2.000000,extremely conservative,slightly liberal
+150,political_ideology,agents v8,7,0.785714,0.855276,1.914267,18.632812,extremely conservative,extremely conservative
+150,political_ideology,C2,7,0.785714,0.879066,1.914267,7.761628,extremely conservative,extremely conservative
+150,political_ideology,C3,7,0.785714,0.917784,1.914267,1.820611,extremely conservative,extremely conservative
+150,political_ideology,B0 mode,7,,,1.914267,,extremely conservative,conservative
+150,political_ideology,B0 tirage,7,0.750000,0.810565,1.914267,1.238095,extremely conservative,extremely conservative
+150,political_ideology,B1 argmax,7,0.642857,0.814130,1.914267,5.113636,extremely conservative,extremely conservative
+150,political_ideology,B2 argmax,7,0.535714,0.765704,1.914267,,extremely conservative,extremely conservative
+150,political_ideology,B3 foret,7,0.504525,0.763663,1.914267,,extremely conservative,extremely conservative
+150,political_ideology,humains vague 2,7,0.678571,0.927033,1.914267,1.883844,extremely conservative,extremely conservative
+150,age,agents composite,7,0.857143,0.864730,1.780800,2.193623,25 - 34,25 - 34
+150,age,agents entretien (v3),7,0.464286,0.432157,1.780800,2.161404,25 - 34,65 - 74
+150,age,agents enquete,7,0.785714,0.791044,1.780800,1.757605,25 - 34,65 - 74
+150,age,agents demographiques (v6),7,0.142857,0.132584,1.780800,1.710526,25 - 34,65 - 74
+150,age,agents v7,7,0.464286,0.394184,1.780800,2.038033,25 - 34,25 - 34
+150,age,agents v8,7,-0.142857,0.002919,1.780800,2.104348,25 - 34,75 or more
+150,age,C2,7,0.392857,0.297626,1.780800,1.469358,25 - 34,25 - 34
+150,age,C3,7,0.571429,0.491588,1.780800,1.587097,25 - 34,25 - 34
+150,age,B0 mode,7,,,1.780800,,25 - 34,18 - 24
+150,age,B0 tirage,7,0.071429,0.095316,1.780800,1.350355,25 - 34,75 or more
+150,age,B1 argmax,7,0.250000,0.256146,1.780800,1.584000,25 - 34,75 or more
+150,age,B2 argmax,7,0.571429,0.382638,1.780800,11.200000,25 - 34,75 or more
+150,age,B3 foret,7,-0.071429,0.037896,1.780800,6.052632,25 - 34,65 - 74
+150,age,humains vague 2,7,0.892857,0.912470,1.780800,1.848221,25 - 34,35 - 44
+150,education,agents composite,5,0.974679,0.869031,1.318681,1.714286,less than high school,less than high school
+150,education,agents entretien (v3),5,0.820783,0.824440,1.318681,2.864407,less than high school,less than high school
+150,education,agents enquete,5,0.461690,0.056364,1.318681,1.298325,less than high school,associate/junior college
+150,education,agents demographiques (v6),5,0.359092,0.795175,1.318681,2.181818,less than high school,less than high school
+150,education,agents v7,5,-0.974679,-0.920064,1.318681,3.400000,less than high school,high school
+150,education,agents v8,5,-0.051299,-0.369493,1.318681,4.500000,less than high school,associate/junior college
+150,education,C2,5,-0.051299,-0.146498,1.318681,2.552083,less than high school,associate/junior college
+150,education,C3,5,0.359092,0.113293,1.318681,1.131078,less than high school,associate/junior college
+150,education,B0 mode,5,,,1.318681,,less than high school,associate/junior college
+150,education,B0 tirage,5,0.359092,0.663068,1.318681,1.435897,less than high school,less than high school
+150,education,B1 argmax,5,-0.205196,-0.119652,1.318681,2.000000,less than high school,graduate
+150,education,B2 argmax,5,-0.205196,-0.538916,1.318681,,less than high school,associate/junior college
+150,education,B3 foret,5,0.974679,0.819950,1.318681,6.000000,less than high school,less than high school
+150,education,humains vague 2,5,0.666886,0.819355,1.318681,1.504132,less than high school,less than high school
+150,profil croise,agents composite,18,0.751678,0.772106,5.000000,5.250000,female|other|gauche,male|black|droite
+150,profil croise,agents entretien (v3),18,0.735917,0.751060,5.000000,,female|other|gauche,male|white|droite
+150,profil croise,agents enquete,18,0.501292,0.509913,5.000000,3.333333,female|other|gauche,male|white|droite
+150,profil croise,agents demographiques (v6),18,0.485760,0.645657,5.000000,,female|other|gauche,female|other|gauche
+150,profil croise,agents v7,18,0.765375,0.791590,5.000000,10.000000,female|other|gauche,female|other|gauche
+150,profil croise,agents v8,18,0.225840,0.224161,5.000000,8.213904,female|other|gauche,male|white|droite
+150,profil croise,C2,18,0.224690,0.206527,5.000000,5.178571,female|other|gauche,male|black|droite
+150,profil croise,C3,18,0.522727,0.442096,5.000000,2.333333,female|other|gauche,female|black|droite
+150,profil croise,B0 mode,18,,,5.000000,,female|other|gauche,female|black|centre
+150,profil croise,B0 tirage,18,0.300620,0.319622,5.000000,3.000000,female|other|gauche,male|black|centre
+150,profil croise,B1 argmax,18,0.539773,0.511750,5.000000,,female|other|gauche,male|black|droite
+150,profil croise,B2 argmax,18,0.091347,0.012085,5.000000,,female|other|gauche,female|black|droite
+150,profil croise,B3 foret,18,0.129061,0.225406,5.000000,,female|other|gauche,female|other|droite
+150,profil croise,humains vague 2,18,0.915849,0.930814,5.000000,5.500000,female|other|gauche,female|other|gauche
+1052,gender,agents composite,2,,,1.153578,1.179755,male,male
+1052,gender,agents entretien (v3),2,,,1.153578,1.134834,male,male
+1052,gender,agents enquete,2,,,1.153578,1.066927,male,male
+1052,gender,agents demographiques (v6),2,,,1.153578,1.046416,male,male
+1052,gender,agents v7,2,,,1.153578,1.111231,male,male
+1052,gender,agents v8,2,,,1.153578,1.232728,male,male
+1052,gender,B0 mode,2,,,1.153578,,male,female
+1052,gender,B0 tirage,2,,,1.153578,1.003901,male,male
+1052,gender,B1 argmax,2,,,1.153578,1.481003,male,male
+1052,gender,B2 argmax,2,,,1.153578,1.401754,male,male
+1052,gender,B3 foret,2,,,1.153578,1.896374,male,female
+1052,gender,humains vague 2,2,,,1.153578,1.181657,male,male
+1052,race,agents composite,3,,,1.066825,1.187295,black,white
+1052,race,agents entretien (v3),3,,,1.066825,1.392291,black,white
+1052,race,agents enquete,3,,,1.066825,1.145234,black,white
+1052,race,agents demographiques (v6),3,,,1.066825,1.212624,black,black
+1052,race,agents v7,3,,,1.066825,1.174636,black,black
+1052,race,agents v8,3,,,1.066825,1.432178,black,white
+1052,race,B0 mode,3,,,1.066825,,black,black
+1052,race,B0 tirage,3,,,1.066825,1.059718,black,black
+1052,race,B1 argmax,3,,,1.066825,1.472239,black,other
+1052,race,B2 argmax,3,,,1.066825,1.244484,black,other
+1052,race,B3 foret,3,,,1.066825,1.487698,black,other
+1052,race,humains vague 2,3,,,1.066825,1.083676,black,black
+1052,political_ideology,agents composite,7,0.892857,0.989523,1.943317,4.177049,extremely conservative,extremely conservative
+1052,political_ideology,agents entretien (v3),7,0.821429,0.961521,1.943317,4.065241,extremely conservative,extremely conservative
+1052,political_ideology,agents enquete,7,0.821429,0.992026,1.943317,3.692754,extremely conservative,extremely conservative
+1052,political_ideology,agents demographiques (v6),7,0.857143,0.952032,1.943317,1.551430,extremely conservative,extremely conservative
+1052,political_ideology,agents v7,7,-0.035714,0.717005,1.943317,1.681073,extremely conservative,extremely conservative
+1052,political_ideology,agents v8,7,0.607143,0.926366,1.943317,14.821398,extremely conservative,extremely conservative
+1052,political_ideology,B0 mode,7,,,1.943317,,extremely conservative,conservative
+1052,political_ideology,B0 tirage,7,0.500000,0.365870,1.943317,1.088666,extremely conservative,slightly conservative
+1052,political_ideology,B1 argmax,7,0.571429,0.967276,1.943317,4.852585,extremely conservative,extremely conservative
+1052,political_ideology,B2 argmax,7,0.785714,0.988094,1.943317,9.339295,extremely conservative,extremely conservative
+1052,political_ideology,B3 foret,7,0.000000,0.804495,1.943317,12.841530,extremely conservative,extremely conservative
+1052,political_ideology,humains vague 2,7,0.892857,0.995991,1.943317,1.896818,extremely conservative,extremely conservative
+1052,age,agents composite,7,-0.357143,-0.342541,1.298924,1.208550,25 - 34,65 - 74
+1052,age,agents entretien (v3),7,-0.857143,-0.808972,1.298924,1.344989,25 - 34,65 - 74
+1052,age,agents enquete,7,-0.750000,-0.761105,1.298924,1.234919,25 - 34,65 - 74
+1052,age,agents demographiques (v6),7,-0.214286,-0.119554,1.298924,1.354432,25 - 34,55 - 64
+1052,age,agents v7,7,0.214286,0.237094,1.298924,1.593372,25 - 34,18 - 24
+1052,age,agents v8,7,-0.964286,-0.966555,1.298924,1.416226,25 - 34,75 or more
+1052,age,B0 mode,7,,,1.298924,,25 - 34,18 - 24
+1052,age,B0 tirage,7,-0.714286,-0.786443,1.298924,1.151096,25 - 34,75 or more
+1052,age,B1 argmax,7,0.571429,0.403716,1.298924,2.035314,25 - 34,18 - 24
+1052,age,B2 argmax,7,0.000000,-0.083623,1.298924,1.487324,25 - 34,65 - 74
+1052,age,B3 foret,7,0.964286,0.439285,1.298924,11.637931,25 - 34,18 - 24
+1052,age,humains vague 2,7,0.892857,0.882657,1.298924,1.382826,25 - 34,25 - 34
+1052,education,agents composite,5,0.300000,0.791639,1.201350,1.298871,less than high school,less than high school
+1052,education,agents entretien (v3),5,0.100000,0.712918,1.201350,1.348214,less than high school,less than high school
+1052,education,agents enquete,5,0.500000,0.814759,1.201350,1.200108,less than high school,less than high school
+1052,education,agents demographiques (v6),5,0.700000,0.889998,1.201350,1.641108,less than high school,less than high school
+1052,education,agents v7,5,0.300000,0.321869,1.201350,1.238620,less than high school,less than high school
+1052,education,agents v8,5,-0.300000,-0.817716,1.201350,1.655373,less than high school,bachelor's
+1052,education,B0 mode,5,,,1.201350,,less than high school,associate/junior college
+1052,education,B0 tirage,5,0.000000,-0.520706,1.201350,1.201037,less than high school,graduate
+1052,education,B1 argmax,5,0.900000,0.926792,1.201350,1.687621,less than high school,less than high school
+1052,education,B2 argmax,5,0.200000,0.598509,1.201350,1.821970,less than high school,less than high school
+1052,education,B3 foret,5,-0.300000,0.167860,1.201350,7.278379,less than high school,high school
+1052,education,humains vague 2,5,0.700000,0.897497,1.201350,1.220914,less than high school,less than high school
+1052,profil croise,agents composite,18,0.814241,0.795810,2.560158,3.118193,male|other|droite,male|other|droite
+1052,profil croise,agents entretien (v3),18,0.711042,0.694167,2.560158,3.191806,male|other|droite,male|white|droite
+1052,profil croise,agents enquete,18,0.851393,0.818573,2.560158,2.484907,male|other|droite,male|other|droite
+1052,profil croise,agents demographiques (v6),18,0.469556,0.485106,2.560158,2.136364,male|other|droite,female|other|droite
+1052,profil croise,agents v7,18,0.496388,0.675989,2.560158,2.125139,male|other|droite,male|other|droite
+1052,profil croise,agents v8,18,0.706914,0.762600,2.560158,9.552141,male|other|droite,male|white|droite
+1052,profil croise,B0 mode,18,,,2.560158,,male|other|droite,female|black|centre
+1052,profil croise,B0 tirage,18,0.554180,0.558958,2.560158,1.258065,male|other|droite,male|black|centre
+1052,profil croise,B1 argmax,18,0.762642,0.814445,2.560158,6.794872,male|other|droite,male|other|droite
+1052,profil croise,B2 argmax,18,0.855521,0.903420,2.560158,13.512821,male|other|droite,male|other|droite
+1052,profil croise,B3 foret,18,-0.054696,0.087614,2.560158,11.523810,male|other|droite,female|other|gauche
+1052,profil croise,humains vague 2,18,0.843137,0.891154,2.560158,2.349321,male|other|droite,male|other|droite

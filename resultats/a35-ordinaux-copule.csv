@@ -1,0 +1,24 @@
+methode,famille,regime,exactitude,exactitude_normalisee,part_diversite_humaine,accord_par_paires,ratio_intra_ideologie,ratio_inter_ideologie,ratio_total_ideologie
+humains vague 2,humains,humains,0.714435,1.000000,1.001253,0.384636,0.999259,1.032990,1.000731
+agents composite,modele de langage,modele de langage,0.559601,0.783277,0.893949,0.439756,0.834834,2.570999,0.910571
+agents entretien (v3),modele de langage,modele de langage,0.527268,0.738021,0.896851,0.444727,0.788283,3.358302,0.900396
+agents enquete,modele de langage,modele de langage,0.520627,0.728726,0.860149,0.460813,0.777363,3.040187,0.876075
+agents demographiques (v6),modele de langage,modele de langage,0.451073,0.631370,0.624024,0.609738,0.650111,0.269620,0.633513
+agents v7,modele de langage,modele de langage,0.439747,0.615518,0.642532,0.603949,0.664237,0.171139,0.642727
+agents v8,modele de langage,modele de langage,0.437738,0.612705,0.834719,0.476711,0.422593,10.186281,0.848518
+E1 regression contexte argmax,regression sur contexte,esperance,0.591160,0.827451,0.821969,0.477453,0.808009,1.765717,0.849788
+B2 argmax,hot deck,esperance,0.565521,0.791565,0.612145,0.604750,0.565037,2.346975,0.642771
+IM m=10 mode des m,imputation multiple,esperance,0.568726,0.796050,0.866024,0.451214,0.864016,1.516010,0.892458
+B3 foret,foret sur demographies,esperance,0.532428,0.745243,0.515088,0.663748,0.403612,3.686595,0.546827
+B1 argmax,regression sur demographies,esperance,0.514163,0.719678,0.763511,0.523520,0.659285,3.308919,0.774871
+B0 mode,marginale,esperance,0.490793,0.686967,0.044120,0.967993,0.054438,-0.000304,0.052050
+copule argmax,copule gaussienne,esperance,0.583990,0.817415,0.573061,0.625506,0.563499,1.606943,0.609017
+E2 regression contexte tirage,regression sur contexte,tirage,0.499117,0.698618,0.992047,0.388456,0.999094,0.894181,0.994518
+PMM k=5,appariement sur moyenne predite,tirage,0.544079,0.761552,0.967873,0.397264,0.962484,1.368481,0.980195
+PMM k=10,appariement sur moyenne predite,tirage,0.546700,0.765220,0.964098,0.398895,0.957201,1.423477,0.977542
+hot deck k=5 tirage,hot deck,tirage,0.472909,0.661934,0.964507,0.403392,0.974416,0.878446,0.970229
+hot deck k=10 tirage,hot deck,tirage,0.466676,0.653209,0.967316,0.401906,0.978437,0.845681,0.972646
+B2 tirage,hot deck,tirage,0.455676,0.637813,0.965823,0.403630,0.981990,0.703517,0.969842
+B1 tirage,regression sur demographies,tirage,0.431708,0.604265,0.999338,0.385397,0.998348,1.024581,0.999493
+B0 tirage,marginale,tirage,0.384343,0.537967,0.999076,0.385676,1.044568,0.000876,0.999038
+copule tirage,copule gaussienne,tirage,0.453273,0.634449,0.993879,0.388288,1.020987,0.420472,0.994790

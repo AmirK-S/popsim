@@ -1,0 +1,43 @@
+specification_peng,valeur_peng,notre_condition,perimetre,definition,tranche,notre_valeur,correspondance
+full_persona_without_reasoning,0.541600,agents composite,1052,rarete,bas,0.219883,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.764300,agents composite,1052,rarete,milieu,0.676903,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.662300,agents composite,1052,rarete,haut,0.979740,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.541600,agents composite,1052,ordinale,bas,0.677687,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.764300,agents composite,1052,ordinale,milieu,0.800105,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.662300,agents composite,1052,ordinale,haut,0.744285,condition riche la plus forte de Stanford
+full_persona_without_reasoning,0.541600,C3,150,rarete,bas,0.184426,"notre condition sans etiquette, meme modele que C2"
+full_persona_without_reasoning,0.764300,C3,150,rarete,milieu,0.566902,"notre condition sans etiquette, meme modele que C2"
+full_persona_without_reasoning,0.662300,C3,150,rarete,haut,0.981427,"notre condition sans etiquette, meme modele que C2"
+full_persona_without_reasoning,0.541600,C3,150,ordinale,bas,0.619656,"notre condition sans etiquette, meme modele que C2"
+full_persona_without_reasoning,0.764300,C3,150,ordinale,milieu,0.729083,"notre condition sans etiquette, meme modele que C2"
+full_persona_without_reasoning,0.662300,C3,150,ordinale,haut,0.602166,"notre condition sans etiquette, meme modele que C2"
+demographics_only,0.516500,agents v8,1052,rarete,bas,0.059649,"etiquette ideologie, parti, race, genre"
+demographics_only,0.764400,agents v8,1052,rarete,milieu,0.546987,"etiquette ideologie, parti, race, genre"
+demographics_only,0.647500,agents v8,1052,rarete,haut,0.987458,"etiquette ideologie, parti, race, genre"
+demographics_only,0.516500,agents v8,1052,ordinale,bas,0.600711,"etiquette ideologie, parti, race, genre"
+demographics_only,0.764400,agents v8,1052,ordinale,milieu,0.724606,"etiquette ideologie, parti, race, genre"
+demographics_only,0.647500,agents v8,1052,ordinale,haut,0.644269,"etiquette ideologie, parti, race, genre"
+demographics_only,0.516500,agents demographiques (v6),1052,rarete,bas,0.231579,etiquette demographique sans ideologie
+demographics_only,0.764400,agents demographiques (v6),1052,rarete,milieu,0.568590,etiquette demographique sans ideologie
+demographics_only,0.647500,agents demographiques (v6),1052,rarete,haut,0.993890,etiquette demographique sans ideologie
+demographics_only,0.516500,agents demographiques (v6),1052,ordinale,bas,0.587373,etiquette demographique sans ideologie
+demographics_only,0.764400,agents demographiques (v6),1052,ordinale,milieu,0.748962,etiquette demographique sans ideologie
+demographics_only,0.647500,agents demographiques (v6),1052,ordinale,haut,0.530895,etiquette demographique sans ideologie
+demographics_only,0.516500,C2,150,rarete,bas,0.139344,onze attributs demographiques
+demographics_only,0.764400,C2,150,rarete,milieu,0.513637,onze attributs demographiques
+demographics_only,0.647500,C2,150,rarete,haut,0.879765,onze attributs demographiques
+demographics_only,0.516500,C2,150,ordinale,bas,0.577275,onze attributs demographiques
+demographics_only,0.764400,C2,150,ordinale,milieu,0.722373,onze attributs demographiques
+demographics_only,0.647500,C2,150,ordinale,haut,0.574376,onze attributs demographiques
+random_benchmark,0.532500,B0 uniforme,1052,rarete,bas,0.185965,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.640100,B0 uniforme,1052,rarete,milieu,0.353463,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.522100,B0 uniforme,1052,rarete,haut,0.393632,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.532500,B0 uniforme,1052,ordinale,bas,0.500898,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.640100,B0 uniforme,1052,ordinale,milieu,0.592811,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.522100,B0 uniforme,1052,ordinale,haut,0.516321,"tirage uniforme sur la nomenclature, le seul temoin comparable au leur"
+random_benchmark,0.532500,B0 tirage,1052,rarete,bas,0.032164,"tirage dans la marginale observee, temoin plus fort que le leur"
+random_benchmark,0.640100,B0 tirage,1052,rarete,milieu,0.476377,"tirage dans la marginale observee, temoin plus fort que le leur"
+random_benchmark,0.522100,B0 tirage,1052,rarete,haut,0.987940,"tirage dans la marginale observee, temoin plus fort que le leur"
+random_benchmark,0.532500,B0 tirage,1052,ordinale,bas,0.541932,"tirage dans la marginale observee, temoin plus fort que le leur"
+random_benchmark,0.640100,B0 tirage,1052,ordinale,milieu,0.687199,"tirage dans la marginale observee, temoin plus fort que le leur"
+random_benchmark,0.522100,B0 tirage,1052,ordinale,haut,0.481577,"tirage dans la marginale observee, temoin plus fort que le leur"

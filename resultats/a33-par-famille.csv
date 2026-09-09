@@ -1,0 +1,97 @@
+famille,n_items,condition,cousins_vus_par_C3,cellules,exactitude,ic_bas,ic_haut,raretes_osees,fausses_raretes,taux_fausses_raretes
+depenses publiques (nat*),17,C3F,13.058824,1020,0.425490,0.376471,0.475490,89,83,0.932584
+depenses publiques (nat*),17,C3,13.058824,1020,0.519608,0.472549,0.567647,68,59,0.867647
+depenses publiques (nat*),17,C2,13.058824,1020,0.415686,0.376471,0.454902,68,60,0.882353
+depenses publiques (nat*),17,agents composite,13.058824,1020,0.574510,0.524510,0.624510,76,60,0.789474
+depenses publiques (nat*),17,agents enquete,13.058824,1020,0.607843,0.567647,0.648039,62,44,0.709677
+depenses publiques (nat*),17,agents entretien (v3),13.058824,1020,0.560784,0.510784,0.608848,102,84,0.823529
+depenses publiques (nat*),17,agents demographiques (v6),13.058824,1020,0.519608,0.477451,0.562745,10,10,1.000000
+depenses publiques (nat*),17,agents v7,13.058824,1020,0.518627,0.472549,0.565686,41,38,0.926829
+depenses publiques (nat*),17,agents v8,13.058824,1020,0.516667,0.465686,0.568627,129,112,0.868217
+depenses publiques (nat*),17,B0 mode,13.058824,1020,0.582353,0.546078,0.617647,0,0,
+depenses publiques (nat*),17,B0 tirage,13.058824,1020,0.462745,0.430392,0.495098,55,51,0.927273
+depenses publiques (nat*),17,B1 argmax,13.058824,1020,0.600980,0.563725,0.638235,11,9,0.818182
+depenses publiques (nat*),17,B2 argmax,13.058824,1020,0.653922,0.614706,0.692157,6,3,0.500000
+depenses publiques (nat*),17,B2 famille retiree,13.058824,1020,0.643137,0.604902,0.680392,1,1,1.000000
+depenses publiques (nat*),17,B3 foret,13.058824,1020,0.617647,0.580392,0.652941,0,0,
+depenses publiques (nat*),17,humains vague 2,13.058824,1020,0.737255,0.697059,0.775490,34,17,0.500000
+confiance dans les institutions (con*),13,C3F,9.692308,780,0.471795,0.428205,0.515385,0,0,
+confiance dans les institutions (con*),13,C3,9.692308,780,0.475641,0.432051,0.520513,2,2,1.000000
+confiance dans les institutions (con*),13,C2,9.692308,780,0.467949,0.429487,0.506410,0,0,
+confiance dans les institutions (con*),13,agents composite,9.692308,780,0.601282,0.562821,0.641026,0,0,
+confiance dans les institutions (con*),13,agents enquete,9.692308,780,0.569231,0.532051,0.606410,0,0,
+confiance dans les institutions (con*),13,agents entretien (v3),9.692308,778,0.575835,0.533419,0.617949,0,0,
+confiance dans les institutions (con*),13,agents demographiques (v6),9.692308,780,0.512821,0.473077,0.553878,0,0,
+confiance dans les institutions (con*),13,agents v7,9.692308,780,0.498718,0.458974,0.538494,0,0,
+confiance dans les institutions (con*),13,agents v8,9.692308,780,0.508974,0.466667,0.551314,1,1,1.000000
+confiance dans les institutions (con*),13,B0 mode,9.692308,780,0.528205,0.491026,0.565385,0,0,
+confiance dans les institutions (con*),13,B0 tirage,9.692308,780,0.414103,0.380769,0.448718,13,13,1.000000
+confiance dans les institutions (con*),13,B1 argmax,9.692308,780,0.529487,0.483333,0.574359,5,5,1.000000
+confiance dans les institutions (con*),13,B2 argmax,9.692308,780,0.594872,0.555128,0.634615,0,0,
+confiance dans les institutions (con*),13,B2 famille retiree,9.692308,780,0.579487,0.538462,0.620513,0,0,
+confiance dans les institutions (con*),13,B3 foret,9.692308,780,0.551282,0.506410,0.594872,0,0,
+confiance dans les institutions (con*),13,humains vague 2,9.692308,780,0.705128,0.656410,0.751282,10,6,0.600000
+avortement (ab*),7,C3F,4.857143,420,0.707143,0.657143,0.757143,3,2,0.666667
+avortement (ab*),7,C3,4.857143,420,0.828571,0.780952,0.871429,8,6,0.750000
+avortement (ab*),7,C2,4.857143,420,0.790476,0.709524,0.869048,11,10,0.909091
+avortement (ab*),7,agents composite,4.857143,420,0.892857,0.845238,0.935714,4,3,0.750000
+avortement (ab*),7,agents enquete,4.857143,420,0.883333,0.833333,0.926190,8,7,0.875000
+avortement (ab*),7,agents entretien (v3),4.857143,420,0.864286,0.809524,0.911905,1,1,1.000000
+avortement (ab*),7,agents demographiques (v6),4.857143,420,0.814286,0.750000,0.873810,0,0,
+avortement (ab*),7,agents v7,4.857143,420,0.814286,0.738095,0.878571,0,0,
+avortement (ab*),7,agents v8,4.857143,418,0.787081,0.709135,0.864286,4,4,1.000000
+avortement (ab*),7,B0 mode,4.857143,420,0.797619,0.714286,0.871429,0,0,
+avortement (ab*),7,B0 tirage,4.857143,420,0.673810,0.619048,0.723810,2,2,1.000000
+avortement (ab*),7,B1 argmax,4.857143,420,0.833333,0.766667,0.895238,0,0,
+avortement (ab*),7,B2 argmax,4.857143,420,0.907143,0.864226,0.945238,0,0,
+avortement (ab*),7,B2 famille retiree,4.857143,420,0.869048,0.816667,0.914286,0,0,
+avortement (ab*),7,B3 foret,4.857143,420,0.840476,0.771369,0.904762,0,0,
+avortement (ab*),7,humains vague 2,4.857143,420,0.914286,0.864286,0.957143,4,2,0.500000
+libertes civiles (spk/col/lib),11,C3F,8.181818,660,0.754545,0.713636,0.792424,11,9,0.818182
+libertes civiles (spk/col/lib),11,C3,8.181818,660,0.810606,0.768182,0.848485,9,5,0.555556
+libertes civiles (spk/col/lib),11,C2,8.181818,660,0.769697,0.728788,0.812121,7,5,0.714286
+libertes civiles (spk/col/lib),11,agents composite,8.181818,660,0.783333,0.739394,0.825758,10,7,0.700000
+libertes civiles (spk/col/lib),11,agents enquete,8.181818,660,0.769697,0.721212,0.813636,15,10,0.666667
+libertes civiles (spk/col/lib),11,agents entretien (v3),8.181818,660,0.780303,0.736364,0.821212,11,6,0.545455
+libertes civiles (spk/col/lib),11,agents demographiques (v6),8.181818,660,0.757576,0.718182,0.796970,4,2,0.500000
+libertes civiles (spk/col/lib),11,agents v7,8.181818,660,0.778788,0.737879,0.818182,3,3,1.000000
+libertes civiles (spk/col/lib),11,agents v8,8.181818,660,0.709091,0.642424,0.771212,24,19,0.791667
+libertes civiles (spk/col/lib),11,B0 mode,8.181818,660,0.786364,0.743939,0.825758,0,0,
+libertes civiles (spk/col/lib),11,B0 tirage,8.181818,660,0.660606,0.621212,0.700000,8,8,1.000000
+libertes civiles (spk/col/lib),11,B1 argmax,8.181818,660,0.772727,0.734811,0.807614,0,0,
+libertes civiles (spk/col/lib),11,B2 argmax,8.181818,660,0.813636,0.775758,0.850000,0,0,
+libertes civiles (spk/col/lib),11,B2 famille retiree,8.181818,660,0.795455,0.748485,0.839394,0,0,
+libertes civiles (spk/col/lib),11,B3 foret,8.181818,660,0.795455,0.757576,0.831818,0,0,
+libertes civiles (spk/col/lib),11,humains vague 2,8.181818,660,0.845455,0.803030,0.884848,4,2,0.500000
+fin de vie (suicide/letdie),5,C3F,3.200000,300,0.686667,0.620000,0.753333,0,0,
+fin de vie (suicide/letdie),5,C3,3.200000,300,0.766667,0.720000,0.810000,0,0,
+fin de vie (suicide/letdie),5,C2,3.200000,300,0.706667,0.660000,0.753333,0,0,
+fin de vie (suicide/letdie),5,agents composite,3.200000,300,0.783333,0.743333,0.823333,0,0,
+fin de vie (suicide/letdie),5,agents enquete,3.200000,300,0.776667,0.726667,0.826667,0,0,
+fin de vie (suicide/letdie),5,agents entretien (v3),3.200000,300,0.716667,0.650000,0.780000,0,0,
+fin de vie (suicide/letdie),5,agents demographiques (v6),3.200000,300,0.706667,0.646667,0.766667,0,0,
+fin de vie (suicide/letdie),5,agents v7,3.200000,300,0.726667,0.670000,0.783333,0,0,
+fin de vie (suicide/letdie),5,agents v8,3.200000,298,0.694631,0.634228,0.755034,0,0,
+fin de vie (suicide/letdie),5,B0 mode,3.200000,300,0.720000,0.656667,0.783333,0,0,
+fin de vie (suicide/letdie),5,B0 tirage,3.200000,300,0.623333,0.570000,0.676750,0,0,
+fin de vie (suicide/letdie),5,B1 argmax,3.200000,300,0.760000,0.703333,0.816667,0,0,
+fin de vie (suicide/letdie),5,B2 argmax,3.200000,300,0.850000,0.803333,0.893333,0,0,
+fin de vie (suicide/letdie),5,B2 famille retiree,3.200000,300,0.763333,0.710000,0.820000,0,0,
+fin de vie (suicide/letdie),5,B3 foret,3.200000,300,0.726667,0.673333,0.780083,0,0,
+fin de vie (suicide/letdie),5,humains vague 2,3.200000,300,0.880000,0.830000,0.926667,0,0,
+roles de genre (fe*),5,C3F,3.600000,300,0.453333,0.400000,0.506667,40,30,0.750000
+roles de genre (fe*),5,C3,3.600000,300,0.473333,0.416667,0.530000,28,23,0.821429
+roles de genre (fe*),5,C2,3.600000,300,0.423333,0.370000,0.480000,18,12,0.666667
+roles de genre (fe*),5,agents composite,3.600000,300,0.530000,0.466667,0.590000,5,1,0.200000
+roles de genre (fe*),5,agents enquete,3.600000,300,0.493333,0.430000,0.553333,14,10,0.714286
+roles de genre (fe*),5,agents entretien (v3),3.600000,300,0.490000,0.420000,0.560000,12,5,0.416667
+roles de genre (fe*),5,agents demographiques (v6),3.600000,300,0.453333,0.393250,0.520000,2,2,1.000000
+roles de genre (fe*),5,agents v7,3.600000,300,0.423333,0.363333,0.486667,0,0,
+roles de genre (fe*),5,agents v8,3.600000,300,0.493333,0.436667,0.550000,28,21,0.750000
+roles de genre (fe*),5,B0 mode,3.600000,300,0.476667,0.413333,0.543333,0,0,
+roles de genre (fe*),5,B0 tirage,3.600000,300,0.380000,0.326667,0.433333,14,13,0.928571
+roles de genre (fe*),5,B1 argmax,3.600000,300,0.476667,0.426667,0.533333,4,3,0.750000
+roles de genre (fe*),5,B2 argmax,3.600000,300,0.540000,0.476667,0.603333,3,2,0.666667
+roles de genre (fe*),5,B2 famille retiree,3.600000,300,0.490000,0.430000,0.550000,3,2,0.666667
+roles de genre (fe*),5,B3 foret,3.600000,300,0.496667,0.430000,0.566667,4,3,0.750000
+roles de genre (fe*),5,humains vague 2,3.600000,300,0.656667,0.593333,0.716667,8,3,0.375000

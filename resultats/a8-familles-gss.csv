@@ -1,0 +1,99 @@
+famille,methode,n_items,exactitude,ic_bas,ic_haut,part_diversite_humaine,accord_par_paires,plancher_uniforme
+depenses publiques (nat*),B2 famille retiree (argmax),17,0.617032,0.608084,0.625868,0.557034,0.703792,0.333333
+depenses publiques (nat*),B2 famille retiree (tirage),17,0.521304,0.512749,0.530139,0.972866,0.472647,0.333333
+depenses publiques (nat*),B2 blocs aleatoires (a2),17,0.637162,0.628662,0.645549,0.596235,0.685773,0.333333
+depenses publiques (nat*),B1 argmax,17,0.589969,0.580518,0.599084,0.724341,0.617063,0.333333
+depenses publiques (nat*),B1 tirage,17,0.504138,0.495973,0.511913,0.991132,0.462928,0.333333
+depenses publiques (nat*),B0 mode,17,0.573306,0.564470,0.582196,0.065639,0.962371,0.333333
+depenses publiques (nat*),B0 tirage,17,0.456274,0.448668,0.463599,0.999918,0.459352,0.333333
+depenses publiques (nat*),agents composite,17,0.591143,0.581244,0.602216,1.056515,0.434707,0.333333
+depenses publiques (nat*),agents entretien (v3),17,0.563912,0.554294,0.573532,0.992768,0.472796,0.333333
+depenses publiques (nat*),agents enquete,17,0.582811,0.571908,0.592766,0.942761,0.502775,0.333333
+depenses publiques (nat*),agents demographiques (v6),17,0.487978,0.477744,0.497709,0.693178,0.616374,0.333333
+depenses publiques (nat*),agents v7,17,0.485462,0.473998,0.496480,0.735950,0.617926,0.333333
+depenses publiques (nat*),agents v8,17,0.470029,0.457616,0.482613,1.125045,0.388744,0.333333
+depenses publiques (nat*),humains reinterroges,17,0.746813,0.737754,0.755536,0.999266,0.458758,0.333333
+confiance dans les institutions (con*),B2 famille retiree (argmax),13,0.568953,0.558859,0.578974,0.643536,0.597445,0.333333
+confiance dans les institutions (con*),B2 famille retiree (tirage),13,0.479672,0.470532,0.488447,0.969681,0.431093,0.333333
+confiance dans les institutions (con*),B2 blocs aleatoires (a2),13,0.595130,0.585476,0.604343,0.668174,0.586495,0.333333
+confiance dans les institutions (con*),B1 argmax,13,0.547090,0.536997,0.557403,0.778917,0.530877,0.333333
+confiance dans les institutions (con*),B1 tirage,13,0.458687,0.450058,0.467973,0.996776,0.416288,0.333333
+confiance dans les institutions (con*),B0 mode,13,0.502705,0.492394,0.512431,0.040074,0.975396,0.333333
+confiance dans les institutions (con*),B0 tirage,13,0.416496,0.407500,0.424761,1.000280,0.414995,0.333333
+confiance dans les institutions (con*),agents composite,13,0.590085,0.579625,0.600691,0.746333,0.541403,0.333333
+confiance dans les institutions (con*),agents entretien (v3),13,0.562153,0.552062,0.572390,0.799208,0.513593,0.333333
+confiance dans les institutions (con*),agents enquete,13,0.583577,0.574360,0.593156,0.728436,0.555361,0.333333
+confiance dans les institutions (con*),agents demographiques (v6),13,0.499781,0.488006,0.510167,0.422073,0.753524,0.333333
+confiance dans les institutions (con*),agents v7,13,0.495174,0.484493,0.505996,0.531810,0.690562,0.333333
+confiance dans les institutions (con*),agents v8,13,0.507385,0.496779,0.518209,0.806686,0.517123,0.333333
+confiance dans les institutions (con*),humains reinterroges,13,0.720898,0.709345,0.732162,0.999409,0.413941,0.333333
+avortement (ab*),B2 famille retiree (argmax),7,0.827811,0.812459,0.842070,0.664490,0.776080,0.500000
+avortement (ab*),B2 famille retiree (tirage),7,0.769555,0.756382,0.782184,0.908038,0.689540,0.500000
+avortement (ab*),B2 blocs aleatoires (a2),7,0.877920,0.865698,0.889191,0.737279,0.750232,0.500000
+avortement (ab*),B1 argmax,7,0.805269,0.789924,0.819935,0.783371,0.726513,0.500000
+avortement (ab*),B1 tirage,7,0.729902,0.716051,0.742803,0.996023,0.649616,0.500000
+avortement (ab*),B0 mode,7,0.743618,0.722977,0.762901,0.000000,1.000000,0.500000
+avortement (ab*),B0 tirage,7,0.652227,0.639326,0.664992,0.989505,0.652596,0.500000
+avortement (ab*),agents composite,7,0.891363,0.880771,0.901005,1.039198,0.632691,0.500000
+avortement (ab*),agents entretien (v3),7,0.837317,0.824009,0.850085,0.937845,0.674701,0.500000
+avortement (ab*),agents enquete,7,0.881043,0.870179,0.891910,1.097315,0.608537,0.500000
+avortement (ab*),agents demographiques (v6),7,0.757197,0.739537,0.774447,0.652283,0.784995,0.500000
+avortement (ab*),agents v7,7,0.754074,0.734648,0.772410,0.438445,0.876206,0.500000
+avortement (ab*),agents v8,7,0.787887,0.771721,0.803507,0.952983,0.664913,0.500000
+avortement (ab*),humains reinterroges,7,0.917165,0.907112,0.926942,1.020514,0.638096,0.500000
+libertes civiles (spk/col/lib),B2 famille retiree (argmax),11,0.756568,0.745506,0.767545,0.319152,0.905608,0.500000
+libertes civiles (spk/col/lib),B2 famille retiree (tirage),11,0.706187,0.695815,0.716989,0.893437,0.696479,0.500000
+libertes civiles (spk/col/lib),B2 blocs aleatoires (a2),11,0.788282,0.779122,0.797701,0.458257,0.859372,0.500000
+libertes civiles (spk/col/lib),B1 argmax,11,0.740581,0.728653,0.752333,0.543208,0.830935,0.500000
+libertes civiles (spk/col/lib),B1 tirage,11,0.670325,0.660558,0.680351,0.999544,0.654239,0.500000
+libertes civiles (spk/col/lib),B0 mode,11,0.749654,0.739282,0.760197,0.000000,1.000000,0.500000
+libertes civiles (spk/col/lib),B0 tirage,11,0.653906,0.644314,0.663241,1.002061,0.653401,0.500000
+libertes civiles (spk/col/lib),agents composite,11,0.785517,0.774456,0.796751,1.037392,0.642677,0.500000
+libertes civiles (spk/col/lib),agents entretien (v3),11,0.713878,0.701519,0.725979,0.847190,0.718582,0.500000
+libertes civiles (spk/col/lib),agents enquete,11,0.797269,0.787504,0.807293,0.991228,0.663992,0.500000
+libertes civiles (spk/col/lib),agents demographiques (v6),11,0.702299,0.690805,0.714140,0.628456,0.810522,0.500000
+libertes civiles (spk/col/lib),agents v7,11,0.715175,0.703941,0.726495,0.512160,0.853933,0.500000
+libertes civiles (spk/col/lib),agents v8,11,0.659696,0.645437,0.674475,0.940333,0.677394,0.500000
+libertes civiles (spk/col/lib),humains reinterroges,11,0.837971,0.827685,0.847997,1.016701,0.648713,0.500000
+fin de vie (suicide/letdie),B2 famille retiree (argmax),5,0.758175,0.744862,0.771488,0.650793,0.772499,0.500000
+fin de vie (suicide/letdie),B2 famille retiree (tirage),5,0.680798,0.668631,0.693536,0.979978,0.618323,0.500000
+fin de vie (suicide/letdie),B2 blocs aleatoires (a2),5,0.837643,0.826616,0.848484,0.758671,0.726807,0.500000
+fin de vie (suicide/letdie),B1 argmax,5,0.726616,0.712167,0.740875,0.608868,0.795704,0.500000
+fin de vie (suicide/letdie),B1 tirage,5,0.633840,0.620532,0.648099,1.015846,0.600894,0.500000
+fin de vie (suicide/letdie),B0 mode,5,0.728327,0.713683,0.742586,0.000000,1.000000,0.500000
+fin de vie (suicide/letdie),B0 tirage,5,0.611787,0.598284,0.625665,0.999761,0.609580,0.500000
+fin de vie (suicide/letdie),agents composite,5,0.804373,0.793536,0.815019,0.900715,0.658170,0.500000
+fin de vie (suicide/letdie),agents entretien (v3),5,0.736692,0.722053,0.751145,0.583848,0.789638,0.500000
+fin de vie (suicide/letdie),agents enquete,5,0.820722,0.808931,0.831369,0.849638,0.665064,0.500000
+fin de vie (suicide/letdie),agents demographiques (v6),5,0.701141,0.686122,0.715779,0.756403,0.711166,0.500000
+fin de vie (suicide/letdie),agents v7,5,0.723004,0.708360,0.737833,0.456221,0.852173,0.500000
+fin de vie (suicide/letdie),agents v8,5,0.690304,0.676041,0.704563,0.797644,0.688573,0.500000
+fin de vie (suicide/letdie),humains reinterroges,5,0.883270,0.870913,0.894487,0.973682,0.623357,0.500000
+roles de genre (fe*),B2 famille retiree (argmax),5,0.521673,0.505894,0.537262,0.676744,0.560434,0.290000
+roles de genre (fe*),B2 famille retiree (tirage),5,0.437833,0.424140,0.452091,0.954201,0.407284,0.290000
+roles de genre (fe*),B2 blocs aleatoires (a2),5,0.553992,0.538023,0.569772,0.667686,0.565194,0.290000
+roles de genre (fe*),B1 argmax,5,0.478327,0.464639,0.493916,0.824729,0.485947,0.290000
+roles de genre (fe*),B1 tirage,5,0.415779,0.402281,0.430228,0.995279,0.382127,0.290000
+roles de genre (fe*),B0 mode,5,0.475095,0.459501,0.491635,0.120535,0.903893,0.290000
+roles de genre (fe*),B0 tirage,5,0.379087,0.366160,0.392400,0.998309,0.381507,0.290000
+roles de genre (fe*),agents composite,5,0.534791,0.520342,0.550000,0.973046,0.395645,0.290000
+roles de genre (fe*),agents entretien (v3),5,0.491065,0.476046,0.507034,0.953804,0.416037,0.290000
+roles de genre (fe*),agents enquete,5,0.477757,0.461977,0.493921,0.972290,0.391446,0.290000
+roles de genre (fe*),agents demographiques (v6),5,0.454373,0.439734,0.469202,0.657620,0.591134,0.290000
+roles de genre (fe*),agents v7,5,0.462928,0.448289,0.478897,0.661656,0.582930,0.290000
+roles de genre (fe*),agents v8,5,0.454943,0.438973,0.471103,1.010323,0.377983,0.290000
+roles de genre (fe*),humains reinterroges,5,0.688593,0.673950,0.702852,1.024249,0.364343,0.290000
+toutes familles reunies,B2 famille retiree (argmax),58,0.662105,0.656106,0.668054,0.580187,0.720520,0.395690
+toutes familles reunies,B2 famille retiree (tirage),58,0.583552,0.577733,0.589190,0.954962,0.538884,0.395690
+toutes familles reunies,B2 blocs aleatoires (a2),58,0.695572,0.690114,0.701111,0.629084,0.697367,0.395690
+toutes familles reunies,B1 argmax,58,0.637062,0.630703,0.643292,0.726316,0.655614,0.395690
+toutes familles reunies,B1 tirage,58,0.556280,0.550987,0.561429,0.996202,0.516217,0.395690
+toutes familles reunies,B0 mode,58,0.616379,0.609478,0.622722,0.047671,0.975171,0.395690
+toutes familles reunies,B0 tirage,58,0.515242,0.510734,0.519536,0.999237,0.515775,0.395690
+toutes familles reunies,agents composite,58,0.677527,0.671954,0.683363,0.947717,0.537856,0.395690
+toutes familles reunies,agents entretien (v3),58,0.633572,0.627785,0.639669,0.886391,0.575343,0.395690
+toutes familles reunies,agents enquete,58,0.671103,0.665922,0.676511,0.900380,0.562295,0.395690
+toutes familles reunies,agents demographiques (v6),58,0.579242,0.572637,0.585520,0.607217,0.710282,0.395690
+toutes familles reunies,agents v7,58,0.582159,0.575209,0.589092,0.601135,0.727315,0.395690
+toutes familles reunies,agents v8,58,0.570424,0.562246,0.578637,0.966029,0.530513,0.395690
+toutes familles reunies,humains reinterroges,58,0.785597,0.779091,0.792039,1.004646,0.512433,0.395690

@@ -1,0 +1,53 @@
+hypothese,condition,perimetre,difference,ic_bas,ic_haut,p_bootstrap,p_holm,p_bh,famille
+H1 precision contre humains,agents composite,1052,-0.207351,-0.226183,-0.189210,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents composite,1052,-0.200674,-0.244067,-0.156213,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents composite,1052,0.531310,0.484457,0.575332,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,agents composite,1052,-0.021393,-0.058316,0.017258,0.272000,1.000000,0.372211,secondaire
+H1 precision contre humains,agents entretien (v3),1052,-0.240309,-0.259842,-0.221261,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents entretien (v3),1052,-0.341156,-0.395620,-0.285454,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents entretien (v3),1052,0.390828,0.334636,0.445473,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,agents entretien (v3),1052,-0.037369,-0.075286,-0.000304,0.046000,0.506000,0.074750,secondaire
+H1 precision contre humains,agents enquete,1052,-0.297265,-0.316984,-0.278697,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents enquete,1052,-0.227871,-0.278926,-0.175951,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents enquete,1052,0.504113,0.455279,0.551594,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,agents enquete,1052,-0.101360,-0.131104,-0.072635,0.000500,0.013000,0.001000,secondaire
+H1 precision contre humains,agents demographiques (v6),1052,-0.171435,-0.197250,-0.147609,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents demographiques (v6),1052,-0.396450,-0.454405,-0.338469,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents demographiques (v6),1052,0.335535,0.280467,0.387172,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,agents demographiques (v6),1052,0.018728,-0.004835,0.041969,0.118000,1.000000,0.170444,secondaire
+H1 precision contre humains,agents v7,1052,-0.399942,-0.422043,-0.378821,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents v7,1052,-0.644743,-0.711700,-0.576848,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents v7,1052,0.087242,0.023334,0.146354,0.007000,0.091000,0.013000,secondaire
+H4 rappel sensibles contre temoins,agents v7,1052,0.005710,-0.015553,0.027771,0.623000,1.000000,0.704261,secondaire
+H1 precision contre humains,agents v8,1052,-0.382316,-0.402346,-0.364125,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,agents v8,1052,-0.518999,-0.580674,-0.454184,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,agents v8,1052,0.212985,0.153551,0.273635,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,agents v8,1052,0.012595,-0.016839,0.041538,0.417000,1.000000,0.516286,secondaire
+H1 precision contre humains,C2,150,-0.348722,-0.393602,-0.300098,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,C2,150,-0.460316,-0.632254,-0.272205,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,C2,150,0.193833,0.047329,0.347832,0.010000,0.120000,0.017333,secondaire
+H4 rappel sensibles contre temoins,C2,150,-0.031681,-0.106718,0.044245,0.397000,1.000000,0.516100,secondaire
+H1 precision contre humains,C3,150,-0.316586,-0.360959,-0.273040,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,C3,150,-0.244349,-0.404448,-0.072578,0.005000,0.020000,0.005652,primaire
+H3 correlation contre zero,C3,150,0.409800,0.260215,0.541209,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,C3,150,-0.070553,-0.147004,0.004143,0.067000,0.670000,0.102471,secondaire
+H1 precision contre humains,B0 mode,1052,,,,1.000000,1.000000,1.000000,primaire
+H2 correlation contre humains,B0 mode,1052,,,,1.000000,1.000000,1.000000,primaire
+H3 correlation contre zero,B0 mode,1052,,,,1.000000,1.000000,1.000000,secondaire
+H4 rappel sensibles contre temoins,B0 mode,1052,0.000000,0.000000,0.000000,1.000000,1.000000,1.000000,secondaire
+H1 precision contre humains,B0 tirage,1052,-0.468833,-0.488439,-0.450229,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,B0 tirage,1052,-0.751131,-0.818772,-0.678077,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,B0 tirage,1052,-0.019146,-0.078353,0.040945,0.570000,1.000000,0.673636,secondaire
+H4 rappel sensibles contre temoins,B0 tirage,1052,0.003583,-0.016729,0.023972,0.696000,1.000000,0.754000,secondaire
+H1 precision contre humains,B1 argmax,1052,-0.309342,-0.335882,-0.281530,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,B1 argmax,1052,-0.512143,-0.576988,-0.448210,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,B1 argmax,1052,0.219842,0.161678,0.278831,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,B1 argmax,1052,0.053453,0.031348,0.075592,0.000500,0.013000,0.001000,secondaire
+H1 precision contre humains,B2 argmax,1052,-0.041390,-0.096291,0.011684,0.117000,0.351000,0.126750,primaire
+H2 correlation contre humains,B2 argmax,1052,-0.431679,-0.491298,-0.372901,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,B2 argmax,1052,0.300306,0.243195,0.354745,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,B2 argmax,1052,0.049407,0.028192,0.072327,0.000500,0.013000,0.001000,secondaire
+H1 precision contre humains,B3 foret,1052,-0.134463,-0.200908,-0.065340,0.000500,0.013000,0.000591,primaire
+H2 correlation contre humains,B3 foret,1052,-0.626975,-0.690707,-0.560695,0.000500,0.013000,0.000591,primaire
+H3 correlation contre zero,B3 foret,1052,0.105009,0.050513,0.161732,0.000500,0.013000,0.001000,secondaire
+H4 rappel sensibles contre temoins,B3 foret,1052,0.049675,0.033350,0.067040,0.000500,0.013000,0.001000,secondaire

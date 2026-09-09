@@ -1,0 +1,10 @@
+controle,valeur,reference
+argmax hors pli = B1 argmax,156748.000000,156748.000000
+cases de segment ideologie x genre x age non vides,98.000000,98.000000
+"rappel global agents composite, perimetre 1052",0.306884,0.306900
+"rappel global B1 argmax, perimetre 1052",0.057979,0.058000
+"rappel global B3 foret, perimetre 1052",0.014363,0.014400
+"rappel global C3, perimetre 150",0.219545,0.219500
+"rappel global C2, perimetre 150",0.128514,0.128500
+"couverture D_seg sur cellules minoritaires, 1052",0.895779,1.000000
+min D_logit des raretes osees par B1 argmax,0.145210,0.104648

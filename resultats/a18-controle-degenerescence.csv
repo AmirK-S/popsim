@@ -1,0 +1,17 @@
+condition,mesure,terme,voie_ponctuelle_a1,voie_distributionnelle,ecart_absolu
+humains vague 1,entropie,inter,48.1475295436,48.1475295436,0.000e+00
+humains vague 1,entropie,intra,1076.0186420722,1076.0186420722,0.000e+00
+humains vague 1,gini_simpson,inter,11.1130966660,11.1130966660,0.000e+00
+humains vague 1,gini_simpson,intra,443.0557640273,443.0557640273,0.000e+00
+humains vague 2,entropie,inter,49.5155647292,49.5155647292,0.000e+00
+humains vague 2,entropie,intra,1073.3000768631,1073.3000768631,0.000e+00
+humains vague 2,gini_simpson,inter,11.0337087261,11.0337087261,0.000e+00
+humains vague 2,gini_simpson,intra,442.5886776442,442.5886776442,0.000e+00
+agents composite,entropie,inter,62.8966765852,62.8966765852,0.000e+00
+agents composite,entropie,intra,938.1710129374,938.1710129374,0.000e+00
+agents composite,gini_simpson,inter,17.9107669864,17.9107669864,0.000e+00
+agents composite,gini_simpson,intra,393.9541239016,393.9541239016,0.000e+00
+agents entretien (v3),entropie,inter,74.2870782293,74.2870782293,0.000e+00
+agents entretien (v3),entropie,intra,894.4248538442,894.4248538442,0.000e+00
+agents entretien (v3),gini_simpson,inter,21.8697228025,21.8697228025,0.000e+00
+agents entretien (v3),gini_simpson,intra,369.5602899299,369.5602899299,0.000e+00

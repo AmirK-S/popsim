@@ -1,0 +1,21 @@
+controle,valeur,reference,source,ecart
+exactitude B2 famille retiree (argmax) sur les 58 items,0.662105,0.662105,a8-familles-gss.csv,0.000000
+exactitude agents composite sur les 58 items,0.677527,0.677527,a8-familles-gss.csv,0.000000
+exactitude agents enquete sur les 58 items,0.671103,0.671103,a8-familles-gss.csv,0.000000
+exactitude agents entretien (v3) sur les 58 items,0.633572,0.633572,a8-familles-gss.csv,0.000000
+exactitude B2 argmax sur les 58 items,0.695572,0.695572,a8-familles-gss.csv,0.000000
+exactitude B0 mode sur les 58 items,0.616379,0.616379,a8-familles-gss.csv,0.000000
+exactitude humains vague 2 sur les 58 items,0.785597,0.785597,a8-familles-gss.csv,0.000000
+exactitude E1 famille retiree (argmax) sur les 58 items,0.664891,0.664900,a35-familles-regime-severe.csv,0.000009
+"exactitude IM m=10 mode, famille retiree sur les 58 items",0.650108,0.650100,a35-familles-regime-severe.csv,0.000008
+exactitude PMM k=10 famille retiree sur les 58 items,0.627950,0.628000,a35-familles-regime-severe.csv,0.000050
+exactitude E2 famille retiree (tirage) sur les 58 items,0.593680,0.593700,a35-familles-regime-severe.csv,0.000020
+exactitude E1 regression contexte argmax sur les 58 items,0.730382,0.730400,a35-familles-regime-severe.csv,0.000018
+exactitude PMM k=10 sur les 58 items,0.694179,0.694200,a35-familles-regime-severe.csv,0.000021
+"exactitude B2 famille retiree tirage, 58 items",0.580454,0.583552,"a8-familles-gss.csv, IC [0,5777 ; 0,5892]",0.003098
+ecart maximal versions vectorisees contre reference,0.000000,0.000000,interne,0.000000
+couverture de D_seg sur les cellules minoritaires,0.863084,0.896000,"a34 section 0.2, perimetre 149 items",0.032916
+personnes completes dans la trace C3F,60.000000,60.000000,a33 section 0.1,0.000000
+personnes partielles ecartees de C3F,1.000000,1.000000,a33 section 0.1,0.000000
+exactitude C3F sur 60 personnes et 58 items,0.557184,0.557200,a33 section 2,0.000016
+exactitude B2 famille retiree sur les 60,0.682184,0.682200,a33 section 7,0.000016

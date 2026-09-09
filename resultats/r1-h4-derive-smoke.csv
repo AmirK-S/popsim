@@ -1,0 +1,7 @@
+modele,cle_modele,identite,quantite,n_items,rho_spearman,p,p_holm
+gpt-oss-20b,oss20,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,2,,,
+Qwen3-30B-A3B-Instruct-2507,q30,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,2,,,
+Qwen3-4B-Instruct-2507,q4,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,8,-0.9761904761904763,0.0004997501249375312,0.0009995002498750624
+Qwen3-4B-Instruct-2507,q4,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,8,-0.9761904761904763,0.0004997501249375312,0.0009995002498750624
+Qwen3-4B-Instruct-2507,q4,journaliste,log amplification de l'ecart entre camps,7,-0.10714285714285716,0.8425787106446777,0.8425787106446777
+Qwen3-4B-Instruct-2507,q4,adversaire,log amplification de l'ecart entre camps,7,0.5357142857142858,0.2383808095952024,0.4767616191904048

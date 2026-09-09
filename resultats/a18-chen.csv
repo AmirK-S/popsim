@@ -1,0 +1,78 @@
+condition,version,axe,n_segments_retenus,n_couples,mediane_rapport_ecart,mediane_delta_eta2,part_cellules_positives
+humains vague 2,argmax,gender,2,42,0.8317,-0.0009,0.4286
+humains vague 2,argmax,race,3,60,0.9391,0.0000,0.5000
+humains vague 2,argmax,political_ideology,7,70,1.0626,0.0036,0.5429
+humains vague 2,argmax,age,6,70,1.0231,-0.0027,0.4714
+humains vague 2,argmax,education,4,66,1.0868,0.0024,0.5571
+humains vague 2,argmax,profil croise,6,70,1.0000,-0.0049,0.4714
+humains vague 2,argmax,ideologie en 3 blocs,3,62,1.0000,0.0047,0.6286
+C2 argmax,argmax,gender,2,42,0.5395,-0.0052,0.3768
+C2 argmax,argmax,race,3,60,1.0534,0.0149,0.7826
+C2 argmax,argmax,political_ideology,7,70,1.7729,0.5087,0.9275
+C2 argmax,argmax,age,6,70,0.8151,0.0080,0.6087
+C2 argmax,argmax,education,4,66,1.1341,0.0254,0.8116
+C2 argmax,argmax,profil croise,6,70,1.1778,0.2428,0.8406
+C2 argmax,argmax,ideologie en 3 blocs,3,62,1.7358,0.2960,0.8551
+C3 argmax,argmax,gender,2,42,0.5721,-0.0014,0.4776
+C3 argmax,argmax,race,3,60,0.5261,-0.0027,0.4030
+C3 argmax,argmax,political_ideology,7,70,0.7500,-0.0225,0.3731
+C3 argmax,argmax,age,6,70,0.7066,-0.0045,0.4478
+C3 argmax,argmax,education,4,66,0.8778,0.0050,0.5821
+C3 argmax,argmax,profil croise,6,70,0.7458,-0.0246,0.3433
+C3 argmax,argmax,ideologie en 3 blocs,3,62,0.4891,-0.0104,0.4179
+agents composite,argmax,gender,2,42,0.9834,0.0025,0.5857
+agents composite,argmax,race,3,60,1.0424,-0.0012,0.4857
+agents composite,argmax,political_ideology,7,70,1.2560,0.0800,0.7429
+agents composite,argmax,age,6,70,1.2308,0.0130,0.6571
+agents composite,argmax,education,4,66,1.2270,0.0099,0.6571
+agents composite,argmax,profil croise,6,70,1.1450,0.0611,0.7000
+agents composite,argmax,ideologie en 3 blocs,3,62,1.4547,0.0460,0.7714
+agents entretien (v3),argmax,gender,2,42,0.7357,0.0025,0.5429
+agents entretien (v3),argmax,race,3,60,1.1208,0.0025,0.5714
+agents entretien (v3),argmax,political_ideology,7,70,1.3199,0.0835,0.8286
+agents entretien (v3),argmax,age,6,70,1.1555,0.0048,0.6000
+agents entretien (v3),argmax,education,4,66,1.1656,0.0134,0.7571
+agents entretien (v3),argmax,profil croise,6,70,1.3603,0.0991,0.7571
+agents entretien (v3),argmax,ideologie en 3 blocs,3,62,1.7874,0.0961,0.8143
+agents enquete,argmax,gender,2,42,0.9955,0.0029,0.6000
+agents enquete,argmax,race,3,60,0.9810,0.0026,0.5714
+agents enquete,argmax,political_ideology,7,70,1.2361,0.0709,0.7286
+agents enquete,argmax,age,6,70,1.0625,0.0136,0.6143
+agents enquete,argmax,education,4,66,1.0222,0.0026,0.5143
+agents enquete,argmax,profil croise,6,70,1.1810,0.0744,0.7857
+agents enquete,argmax,ideologie en 3 blocs,3,62,1.2351,0.0575,0.7429
+agents demographiques (v6),argmax,gender,2,42,0.4427,-0.0017,0.4286
+agents demographiques (v6),argmax,race,3,60,0.7460,0.0134,0.6429
+agents demographiques (v6),argmax,political_ideology,7,70,0.4941,-0.0333,0.2571
+agents demographiques (v6),argmax,age,6,70,0.6516,0.0038,0.5286
+agents demographiques (v6),argmax,education,4,66,0.8595,0.0103,0.6714
+agents demographiques (v6),argmax,profil croise,6,70,0.5550,-0.0430,0.2794
+agents demographiques (v6),argmax,ideologie en 3 blocs,3,62,0.4429,-0.0226,0.2429
+agents v7,argmax,gender,2,42,0.3771,-0.0008,0.4429
+agents v7,argmax,race,3,60,0.8044,0.0050,0.6000
+agents v7,argmax,political_ideology,7,70,0.6043,-0.0248,0.3714
+agents v7,argmax,age,6,70,0.6392,-0.0009,0.4571
+agents v7,argmax,education,4,66,0.5386,-0.0085,0.3000
+agents v7,argmax,profil croise,6,70,0.5424,-0.0400,0.2571
+agents v7,argmax,ideologie en 3 blocs,3,62,0.4293,-0.0155,0.3714
+agents v8,argmax,gender,2,42,0.6768,-0.0058,0.4143
+agents v8,argmax,race,3,60,1.3247,0.0134,0.6857
+agents v8,argmax,political_ideology,7,70,1.9429,0.5519,0.9571
+agents v8,argmax,age,6,70,1.4196,0.0322,0.7571
+agents v8,argmax,education,4,66,1.1292,0.0019,0.5571
+agents v8,argmax,profil croise,6,70,1.9866,0.4799,0.8986
+agents v8,argmax,ideologie en 3 blocs,3,62,2.7148,0.5178,0.9286
+C2 distribution,distribution,gender,2,42,0.5989,-0.0047,0.3429
+C2 distribution,distribution,race,3,60,0.8831,0.0122,0.7000
+C2 distribution,distribution,political_ideology,7,70,1.6439,0.4792,0.8857
+C2 distribution,distribution,age,6,70,0.8358,0.0003,0.5000
+C2 distribution,distribution,education,4,66,1.1246,0.0199,0.7857
+C2 distribution,distribution,profil croise,6,70,1.2181,0.2255,0.8143
+C2 distribution,distribution,ideologie en 3 blocs,3,62,1.7845,0.2760,0.8286
+C3 distribution,distribution,gender,2,42,0.6217,-0.0022,0.4000
+C3 distribution,distribution,race,3,60,0.5434,-0.0041,0.3571
+C3 distribution,distribution,political_ideology,7,70,0.7413,-0.0242,0.3429
+C3 distribution,distribution,age,6,70,0.6851,-0.0080,0.4000
+C3 distribution,distribution,education,4,66,0.8104,0.0029,0.5286
+C3 distribution,distribution,profil croise,6,70,0.7806,-0.0326,0.3286
+C3 distribution,distribution,ideologie en 3 blocs,3,62,0.4760,-0.0111,0.3714

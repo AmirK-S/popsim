@@ -1,0 +1,68 @@
+famille,hypothese,condition,perimetre,comparaison,difference,ic_bas,ic_haut,p_bootstrap,p_holm,p_bh,tests_dans_la_famille
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents composite,1052,"agents composite contre B1 argmax, raretes stables",0.327476,0.305837,0.350228,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents entretien (v3),1052,"agents entretien (v3) contre B1 argmax, raretes stables",0.292013,0.271446,0.313044,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents enquete,1052,"agents enquete contre B1 argmax, raretes stables",0.204473,0.182519,0.227113,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents demographiques (v6),1052,"agents demographiques (v6) contre B1 argmax, raretes stables",0.088498,0.069571,0.107994,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents v7,1052,"agents v7 contre B1 argmax, raretes stables",0.006070,-0.009253,0.022001,0.485000,0.485000,0.485000,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",agents v8,1052,"agents v8 contre B1 argmax, raretes stables",0.127476,0.106505,0.148824,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",B2 argmax,1052,"B2 argmax contre B1 argmax, raretes stables",-0.028435,-0.041639,-0.014999,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",B3 foret,1052,"B3 foret contre B1 argmax, raretes stables",-0.057827,-0.067692,-0.047923,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",PMM k=5,1052,"PMM k=5 contre B1 argmax, raretes stables",0.187540,0.167061,0.208242,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",PMM k=10,1052,"PMM k=10 contre B1 argmax, raretes stables",0.186581,0.166932,0.206941,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",IM m=10 mode des m,1052,"IM m=10 mode des m contre B1 argmax, raretes stables",0.090735,0.074706,0.107885,0.000250,0.006750,0.000293,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",C2,150,"C2 contre B1 argmax, raretes stables",0.070621,0.027543,0.114460,0.001000,0.006750,0.001080,27.000000
+primaire,"H1 avantage sur B1 argmax, raretes stables",C3,150,"C3 contre B1 argmax, raretes stables",0.177966,0.121116,0.232144,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents composite,1052,"exces contre zero, raretes stables",0.289060,0.267292,0.311277,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents entretien (v3),1052,"exces contre zero, raretes stables",0.257742,0.236261,0.278558,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents enquete,1052,"exces contre zero, raretes stables",0.164869,0.142274,0.187626,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents demographiques (v6),1052,"exces contre zero, raretes stables",0.063358,0.044532,0.083208,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents v7,1052,"exces contre zero, raretes stables",-0.026635,-0.040242,-0.012875,0.000500,0.006750,0.000562,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",agents v8,1052,"exces contre zero, raretes stables",0.075597,0.057692,0.094731,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",B2 argmax,1052,"exces contre zero, raretes stables",-0.059033,-0.070211,-0.047526,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",B3 foret,1052,"exces contre zero, raretes stables",-0.087830,-0.094207,-0.081329,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",PMM k=5,1052,"exces contre zero, raretes stables",0.150471,0.131032,0.170608,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",PMM k=10,1052,"exces contre zero, raretes stables",0.149391,0.130817,0.169293,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",IM m=10 mode des m,1052,"exces contre zero, raretes stables",0.051839,0.036779,0.067571,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",C2,150,"exces contre zero, raretes stables",0.032697,-0.005413,0.074907,0.099500,0.199000,0.103327,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",C3,150,"exces contre zero, raretes stables",0.161628,0.108556,0.210593,0.000250,0.006750,0.000293,27.000000
+primaire,"H2 exces sur plancher de segment, raretes stables",B1 argmax,1052,"exces contre zero, raretes stables",-0.035275,-0.044650,-0.026103,0.000250,0.006750,0.000293,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents composite,1052,(agents composite moins B1 argmax) stables moins instables,0.173928,0.149443,0.200367,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents entretien (v3),1052,(agents entretien (v3) moins B1 argmax) stables moins instables,0.121016,0.096185,0.146018,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents enquete,1052,(agents enquete moins B1 argmax) stables moins instables,0.070700,0.045083,0.096997,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents demographiques (v6),1052,(agents demographiques (v6) moins B1 argmax) stables moins instables,-0.035193,-0.057945,-0.011335,0.005000,0.045000,0.007105,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents v7,1052,(agents v7 moins B1 argmax) stables moins instables,-0.007113,-0.025004,0.010413,0.431000,1.000000,0.447577,27.000000
+secondaire,H3 avantage stables moins avantage instables,agents v8,1052,(agents v8 moins B1 argmax) stables moins instables,0.030539,0.008452,0.053392,0.006500,0.052000,0.008775,27.000000
+secondaire,H3 avantage stables moins avantage instables,B2 argmax,1052,(B2 argmax moins B1 argmax) stables moins instables,-0.013700,-0.027968,0.000600,0.061500,0.430500,0.079071,27.000000
+secondaire,H3 avantage stables moins avantage instables,B3 foret,1052,(B3 foret moins B1 argmax) stables moins instables,-0.031461,-0.043352,-0.019979,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,PMM k=5,1052,(PMM k=5 moins B1 argmax) stables moins instables,0.070440,0.046605,0.094580,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,PMM k=10,1052,(PMM k=10 moins B1 argmax) stables moins instables,0.070645,0.047956,0.094007,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,IM m=10 mode des m,1052,(IM m=10 mode des m moins B1 argmax) stables moins instables,0.047695,0.028711,0.066059,0.000250,0.006750,0.000450,27.000000
+secondaire,H3 avantage stables moins avantage instables,C2,150,(C2 moins B1 argmax) stables moins instables,-0.023526,-0.079313,0.031723,0.422500,1.000000,0.447577,27.000000
+secondaire,H3 avantage stables moins avantage instables,C3,150,(C3 moins B1 argmax) stables moins instables,0.007483,-0.065980,0.076580,0.865000,1.000000,0.865000,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents composite,1052,T3 deductible contre T1 non deductible,0.072017,0.041417,0.103837,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents entretien (v3),1052,T3 deductible contre T1 non deductible,0.122719,0.090284,0.155915,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents enquete,1052,T3 deductible contre T1 non deductible,0.055063,0.024021,0.087336,0.000500,0.006750,0.000844,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents demographiques (v6),1052,T3 deductible contre T1 non deductible,-0.161118,-0.189753,-0.133264,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents v7,1052,T3 deductible contre T1 non deductible,-0.029649,-0.049335,-0.010489,0.003000,0.030000,0.004500,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",agents v8,1052,T3 deductible contre T1 non deductible,0.052326,0.027400,0.077837,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",B2 argmax,1052,T3 deductible contre T1 non deductible,-0.014367,-0.030431,0.003022,0.097000,0.582000,0.119045,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",B3 foret,1052,T3 deductible contre T1 non deductible,-0.056532,-0.064577,-0.048544,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",PMM k=5,1052,T3 deductible contre T1 non deductible,0.103623,0.075074,0.131594,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",PMM k=10,1052,T3 deductible contre T1 non deductible,0.122915,0.095311,0.151333,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",IM m=10 mode des m,1052,T3 deductible contre T1 non deductible,0.081326,0.057925,0.105002,0.000250,0.006750,0.000450,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",C2,150,T3 deductible contre T1 non deductible,-0.044939,-0.111745,0.015751,0.156500,0.782500,0.183717,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",C3,150,T3 deductible contre T1 non deductible,0.051486,-0.028639,0.136384,0.215500,0.862000,0.242438,27.000000
+secondaire,"H4 gradient de l'exces sur plancher, T3 moins T1 de P_B",B1 argmax,1052,T3 deductible contre T1 non deductible,0.022837,0.007205,0.038858,0.002000,0.022000,0.003176,27.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents composite,1052,"agents composite contre B1 argmax, support >= 20",0.327665,0.306174,0.350523,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents entretien (v3),1052,"agents entretien (v3) contre B1 argmax, support >= 20",0.292348,0.271504,0.313313,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents enquete,1052,"agents enquete contre B1 argmax, support >= 20",0.204382,0.182527,0.227474,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents demographiques (v6),1052,"agents demographiques (v6) contre B1 argmax, support >= 20",0.081753,0.063072,0.101102,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents v7,1052,"agents v7 contre B1 argmax, support >= 20",0.004905,-0.010926,0.020943,0.593000,1.000000,0.700818,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",agents v8,1052,"agents v8 contre B1 argmax, support >= 20",0.130477,0.109040,0.152401,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",B2 argmax,1052,"B2 argmax contre B1 argmax, support >= 20",-0.029104,-0.042615,-0.015353,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",B3 foret,1052,"B3 foret contre B1 argmax, support >= 20",-0.059189,-0.069248,-0.049158,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",PMM k=5,1052,"PMM k=5 contre B1 argmax, support >= 20",0.191956,0.170965,0.213336,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",PMM k=10,1052,"PMM k=10 contre B1 argmax, support >= 20",0.190647,0.170567,0.211428,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",IM m=10 mode des m,1052,"IM m=10 mode des m contre B1 argmax, support >= 20",0.092871,0.076375,0.110337,0.000250,0.003250,0.000325,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",C2,150,"C2 contre B1 argmax, support >= 20",,,,1.000000,1.000000,1.000000,13.000000
+tertiaire,"H5 avantage sur B1, raretes stables, support >= 20",C3,150,"C3 contre B1 argmax, support >= 20",,,,1.000000,1.000000,1.000000,13.000000

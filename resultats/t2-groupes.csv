@@ -1,0 +1,54 @@
+axe,groupe,n_personnes,part_du_perimetre
+camp,centre,1718,0.3668588511637839
+camp,droite,1494,0.31902626521460603
+camp,gauche,1334,0.2848601323937647
+age,18-34,1204,0.2571001494768311
+age,35-54,1809,0.3862908392056374
+age,55+,1655,0.3534059363655776
+education,bas,2838,0.6060217809096733
+education,haut,553,0.11808669656203288
+education,moyen,1292,0.27589152252829385
+genre,femme,2670,0.5701473414477899
+genre,homme,2013,0.4298526585522101
+camp x age,centre | 18-34,454,0.0969464018791373
+camp x age,centre | 35-54,698,0.14904975443092036
+camp x age,centre | 55+,558,0.11915438821268418
+camp x age,droite | 18-34,301,0.06427503736920777
+camp x age,droite | 35-54,585,0.12491992312620115
+camp x age,droite | 55+,605,0.12919068972880632
+camp x age,gauche | 18-34,406,0.08669656203288491
+camp x age,gauche | 35-54,480,0.10249839846252402
+camp x age,gauche | 55+,444,0.09481101857783472
+camp x education,centre | bas,1172,0.25026692291266284
+camp x education,centre | moyen,402,0.08584240871236387
+camp x education,droite | bas,873,0.18641896220371557
+camp x education,droite | moyen,474,0.10121716848174248
+camp x education,gauche | bas,678,0.1447789878283152
+camp x education,gauche | haut,258,0.05509288917360666
+camp x education,gauche | moyen,398,0.08498825539184283
+camp x genre,centre | femme,1005,0.21460602178090968
+camp x genre,centre | homme,713,0.15225282938287424
+camp x genre,droite | femme,797,0.17019004911381594
+camp x genre,droite | homme,697,0.1488362161007901
+camp x genre,gauche | femme,789,0.16848174247277387
+camp x genre,gauche | homme,545,0.11637838992099082
+age x education,18-34 | bas,780,0.16655989750160155
+age x education,18-34 | moyen,346,0.0738842622250694
+age x education,35-54 | bas,1056,0.22549647661755284
+age x education,35-54 | haut,218,0.046551355968396324
+age x education,35-54 | moyen,535,0.11424300661968824
+age x education,55+ | bas,998,0.21311125346999787
+age x education,55+ | haut,255,0.05445227418321589
+age x education,55+ | moyen,402,0.08584240871236387
+age x genre,18-34 | femme,691,0.14755498612000853
+age x genre,18-34 | homme,513,0.10954516335682254
+age x genre,35-54 | femme,1017,0.21716848174247277
+age x genre,35-54 | homme,792,0.16912235746316465
+age x genre,55+ | femme,950,0.20286141362374546
+age x genre,55+ | homme,705,0.15054452274183217
+education x genre,bas | femme,1638,0.34977578475336324
+education x genre,bas | homme,1200,0.25624599615631005
+education x genre,haut | femme,307,0.06555626734998932
+education x genre,haut | homme,246,0.05253042921204356
+education x genre,moyen | femme,725,0.15481528934443733
+education x genre,moyen | homme,567,0.1210762331838565

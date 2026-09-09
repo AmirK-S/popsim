@@ -1,0 +1,11 @@
+item,libelle,sens_codeur_A,sens_codeur_B,retenu,derive_agregee,position_moyenne,gs_gauche,gs_droite,ratio_droite_gauche,log_ratio,derive_vague4,ratio_vague4
+QID287_1,Placing a tax on carbon emissions?,-1,-1,True,-0.125243,0.374757,0.636472,0.761506,1.196449,0.179358,-0.130588,1.243007
+QID287_2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities?,-1,-1,True,-0.146380,0.353620,0.669395,0.792797,1.184348,0.169193,-0.163265,1.206432
+QID287_3,Federal investments to ensure a carbon-pollution free electricity sector by 2035?,-1,-1,True,-0.172498,0.327502,0.575634,0.782090,1.358660,0.306499,-0.181244,1.379017
+QID287_4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan?,-1,-1,True,-0.246720,0.253280,0.399531,0.792579,1.983771,0.685000,-0.239553,1.827095
+QID287_5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so?",-1,-1,True,-0.245991,0.254009,0.632076,0.732620,1.159070,0.147618,-0.255466,1.158595
+QID287_6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States?,-1,-1,True,-0.178693,0.321307,0.509642,0.774375,1.519450,0.418348,-0.180029,1.491790
+QID287_7,A law that requires companies to provide paid family leave for parents?,-1,-1,True,-0.297741,0.202259,0.417555,0.758621,1.816817,0.597086,-0.294582,1.811489
+QID287_10,A 2% tax on the assets of individuals with a net worth of more than $50 million?,-1,-1,True,-0.256317,0.243683,0.414124,0.794598,1.918746,0.651672,-0.264577,2.004043
+QID287_11,Increasing deportations for those in the US illegally?,1,1,True,0.044704,0.544704,0.747886,0.561364,0.750601,-0.286881,0.048348,0.764439
+QID287_12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage?,1,1,True,0.106535,0.606535,0.789932,0.723584,0.916008,-0.087731,0.113703,0.902022

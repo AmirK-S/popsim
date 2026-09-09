@@ -1,0 +1,19 @@
+perimetre,definition,tranche,n_cellules,part_des_cellules,n_items,items_a_modale_sup_95
+150,rarete,bas,244,0.010917,149,7
+150,rarete,milieu,21083,0.943311,149,7
+150,rarete,haut,1023,0.045772,149,7
+150,ordinale,bas,568,0.053333,71,-1
+150,ordinale,milieu,9514,0.893333,71,-1
+150,ordinale,haut,568,0.053333,71,-1
+150,ordinale extremes,bas,3002,0.281878,71,-1
+150,ordinale extremes,milieu,5436,0.510423,71,-1
+150,ordinale extremes,haut,2212,0.207700,71,-1
+1052,rarete,bas,1710,0.010909,149,6
+1052,rarete,milieu,148819,0.949416,149,6
+1052,rarete,haut,6219,0.039675,149,6
+1052,ordinale,bas,3763,0.050380,71,-1
+1052,ordinale,milieu,67166,0.899240,71,-1
+1052,ordinale,haut,3763,0.050380,71,-1
+1052,ordinale extremes,bas,21307,0.285265,71,-1
+1052,ordinale extremes,milieu,37351,0.500067,71,-1
+1052,ordinale extremes,haut,16034,0.214668,71,-1

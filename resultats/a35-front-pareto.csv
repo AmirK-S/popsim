@@ -1,0 +1,23 @@
+perimetre,methode,famille,regime,conditionnement,exactitude,ratio_intra_ideologie,ratio_inter_ideologie,proximite_intra,proximite_inter,sur_le_front
+1052,agents composite,modele de langage,modele de langage,entretien et questionnaire,0.683932,0.843243,2.156335,-0.156757,-1.156335,True
+1052,agents entretien (v3),modele de langage,modele de langage,entretien,0.656493,0.764094,2.826088,-0.235906,-1.826088,False
+1052,agents enquete,modele de langage,modele de langage,questionnaire,0.650988,0.792242,2.518529,-0.207758,-1.518529,False
+1052,agents demographiques (v6),modele de langage,modele de langage,etiquette demographique,0.581787,0.651945,0.312117,-0.348055,-0.687883,False
+1052,agents v7,modele de langage,modele de langage,persona,0.564014,0.647595,0.163403,-0.352405,-0.836597,False
+1052,agents v8,modele de langage,modele de langage,etiquette demographique,0.559146,0.442486,8.130032,-0.557514,-7.130032,False
+1052,E1 regression contexte argmax,regression sur contexte,esperance,119 items et 11 demographies,0.705872,0.796657,1.552152,-0.203343,-0.552152,True
+1052,B2 argmax,hot deck,esperance,119 items,0.671709,0.537865,1.829804,-0.462135,-0.829804,False
+1052,IM m=10 mode des m,imputation multiple,esperance,119 items et 11 demographies,0.687607,0.839340,1.371795,-0.160660,-0.371795,True
+1052,B3 foret,foret sur demographies,esperance,11 demographies,0.633979,0.393913,2.781137,-0.606087,-1.781137,False
+1052,B1 argmax,regression sur demographies,esperance,11 demographies,0.620856,0.638007,2.673368,-0.361993,-1.673368,False
+1052,B0 mode,marginale,esperance,rien,0.593386,0.040114,-0.000335,-0.959886,-1.000335,False
+1052,E2 regression contexte tirage,regression sur contexte,tirage,119 items et 11 demographies,0.620365,1.000266,0.892068,-0.000266,-0.107932,True
+1052,PMM k=5,appariement sur moyenne predite,tirage,119 items et 11 demographies,0.667441,0.958128,1.343967,-0.041872,-0.343967,True
+1052,PMM k=10,appariement sur moyenne predite,tirage,119 items et 11 demographies,0.668404,0.954786,1.354061,-0.045214,-0.354061,True
+1052,hot deck k=5 tirage,hot deck,tirage,119 items,0.594081,0.957385,0.850721,-0.042615,-0.149279,False
+1052,hot deck k=10 tirage,hot deck,tirage,119 items,0.585711,0.963210,0.799345,-0.036790,-0.200655,False
+1052,B2 tirage,hot deck,tirage,119 items,0.575235,0.964761,0.699616,-0.035239,-0.300384,False
+1052,B1 tirage,regression sur demographies,tirage,11 demographies,0.542584,1.001034,1.001020,-0.001034,-0.001020,True
+1052,B0 tirage,marginale,tirage,rien,0.491828,1.051692,-0.008503,-0.051692,-1.008503,False
+150,C2,modele de langage,modele de langage,etiquette demographique,0.526309,0.364637,6.893673,-0.635363,-5.893673,False
+150,C3,modele de langage,modele de langage,"119 items, sans etiquette",0.581700,0.680760,0.724272,-0.319240,-0.275728,False

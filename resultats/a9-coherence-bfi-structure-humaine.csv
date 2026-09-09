@@ -1,0 +1,5 @@
+source,bloc,keyage,n_paires,r_moyen,r_absolu_moyen,r_p10,r_p90
+humains_vagues1_3,facettes differentes,sens inverses,362,0.0327,0.1576,-0.1833,0.3323
+humains_vagues1_3,facettes differentes,meme sens,411,0.0463,0.1734,-0.243,0.2769
+humains_vagues1_3,meme facette,sens inverses,86,-0.3732,0.3732,-0.5265,-0.219
+humains_vagues1_3,meme facette,meme sens,87,0.4799,0.4799,0.3568,0.6053

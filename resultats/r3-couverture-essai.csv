@@ -1,0 +1,4 @@
+condition,trace,personnes_completes,personnes_partielles,appels_lus,passes,modele,quantification,gabarit,variante_fin,version_prompt
+C3,a5-C3-p1.jsonl,150,0,22350,1,Qwen3-4B-Instruct-2507,Q4_K_M,,,a5-p1
+C2,a5-C2-p1.jsonl,150,0,22350,1,Qwen3-4B-Instruct-2507,Q4_K_M,,,a5-p1
+C3 bis,a5-C3-p1.jsonl,150,0,22350,1,Qwen3-4B-Instruct-2507,Q4_K_M,,,a5-p1

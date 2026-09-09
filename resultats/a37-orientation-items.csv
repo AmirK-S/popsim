@@ -1,0 +1,150 @@
+item,famille,n_modalites,modalites,oriente,sens_codeur_A,niveau_codeur_A,justification_codeur_A,sens_codeur_B,ecart_position_droite_moins_gauche,accord_A_B
+natspac/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[HYPOTHESE],"meme regle uniforme, mais le sujet est faiblement ideologique ; exclu de l'analyse de sensibilite stricte",1,0.023320,True
+natenvir/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.375990,True
+natheal/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.151122,True
+natcity/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.280330,True
+natdrug/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.142462,True
+nateduc/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.176754,True
+natrace/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.463140,True
+natarms/y,depenses publiques (nat*),3,too little | about right | too much,True,-1,[PROBABLE],"seule exception a la regle : sur la defense nationale, « too much » est le pole de gauche",-1,-0.386420,True
+nataid/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.207337,True
+natfare/y,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.252860,True
+natroad,depenses publiques (nat*),3,too little | about right | too much,True,1,[HYPOTHESE],"meme regle uniforme, mais le sujet est faiblement ideologique ; exclu de l'analyse de sensibilite stricte",-1,-0.009271,False
+natsoc,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.051956,True
+natmass,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.233889,True
+natpark,depenses publiques (nat*),3,too little | about right | too much,True,1,[HYPOTHESE],"meme regle uniforme, mais le sujet est faiblement ideologique ; exclu de l'analyse de sensibilite stricte",1,0.091730,True
+natchld,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.229696,True
+natsci,depenses publiques (nat*),3,too little | about right | too much,True,1,[HYPOTHESE],"meme regle uniforme, mais le sujet est faiblement ideologique ; exclu de l'analyse de sensibilite stricte",1,0.185180,True
+natenrgy,depenses publiques (nat*),3,too little | about right | too much,True,1,[PROBABLE],regle uniforme de la batterie nat* : « too little » est le pole de gauche ; sujet dont l'alignement partisan est documente,1,0.319559,True
+uswary,residu : social,2,yes | no,False,0,,"anticipation d'un evenement, pas une position",0,-0.152798,
+prayer,residu : social,2,approve | disapprove,True,1,[PROBABLE],approuver l'arret de la Cour supreme qui interdit la priere obligatoire a l'ecole est le pole de gauche,1,0.368106,True
+courts,residu : social,3,too harshly | about right | not harshly enough,True,1,[PROBABLE],"« too harshly » est le pole de gauche, « not harshly enough » celui de droite",1,0.334865,True
+discaffw,residu : social,4,very likely | somewhat likely | somewhat unlikely | very unlikely,True,1,[PROBABLE],croire probable qu'une femme soit ecartee est le pole de gauche,1,0.236295,True
+discaffm,residu : social,4,very likely | somewhat likely | somewhat unlikely | very unlikely,True,-1,[PROBABLE],croire probable qu'un homme soit ecarte est le pole de droite,-1,-0.200885,True
+fehire,roles de genre (fe*),5,strongly agree | agree | neither agree nor disagree | disagree | strongly disagree,True,1,[PROBABLE],approuver l'effort special d'embauche des femmes est le pole de gauche,1,0.254778,True
+fechld,roles de genre (fe*),4,strongly agree | agree | disagree | strongly disagree,True,1,[CONFIRME],echelle de roles de genre : approuver « une mere qui travaille peut etablir une relation aussi chaleureuse » est le pole egalitaire,1,0.122302,True
+fepresch,roles de genre (fe*),4,strongly agree | agree | disagree | strongly disagree,True,-1,[CONFIRME],"approuver « un enfant d'age prescolaire souffre » est le pole traditionnel, donc l'ordre va de droite a gauche",-1,-0.161358,True
+fefam,roles de genre (fe*),4,strongly agree | agree | disagree | strongly disagree,True,-1,[CONFIRME],approuver « il vaut bien mieux que l'homme soit dehors et la femme au foyer » est le pole traditionnel,-1,-0.280828,True
+fepol,roles de genre (fe*),2,agree | disagree,True,-1,[CONFIRME],approuver « les hommes sont mieux faits pour la politique » est le pole traditionnel,-1,-0.332344,True
+mobile16,residu : hors axe,3,"same city | same state, different city | different state",False,0,,fait,0,0.025956,
+incom16,residu : economique,5,far below average | below average | average | above average | far above average,False,0,,fait,0,-0.014202,
+dwelown16,residu : hors axe,3,own or is buying | pays rent | other,False,0,,fait,0,-0.019412,
+divorced,residu : hors axe,2,yes | no,False,0,,fait,0,-0.140266,
+posslq/y,residu : hors axe,4,"i am married and living in the same household as my husband or wife | i have a steady partner, and we live in the same household | i have a husband or wife or steady partner, but we don't live in the same household | i don't have a steady partner",False,0,,fait,0,-0.110290,
+wrkstat,residu : hors axe,8,"working full time | working part time | with a job, but not at work because of temporary illness, vacation, strike | unemployed, looking for work | keeping house | retired | in school | other",False,0,,fait,0,-0.017663,
+evwork,residu : hors axe,2,yes | no,False,0,,fait,0,-0.030944,
+wrkgovt1,residu : hors axe,2,yes | no,False,0,,fait,0,-0.007389,
+wrkgovt2,residu : hors axe,2,yes | no,False,0,,fait,0,0.020456,
+partfull,residu : hors axe,3,full-time | part-time | inapplicable (i did not work),False,0,,fait,0,-0.027484,
+wksub1,residu : hors axe,3,yes | no | inapplicable (i am not currently working/employed),False,0,,fait,0,-0.014284,
+wksup1,residu : hors axe,3,yes | no | inapplicable (i am not currently working/employed),False,0,,fait,0,-0.018166,
+conarmy,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,-1,[PROBABLE],confiance dans l'armee : pole de droite en premier,-1,-0.100311,True
+conbus,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,-1,[PROBABLE],confiance dans les grandes entreprises : pole de droite en premier,-1,-0.117333,True
+conclerg,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,-1,[PROBABLE],confiance dans la religion organisee : pole de droite en premier,-1,-0.220392,True
+coneduc,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[HYPOTHESE],"confiance dans l'education, direction moins nette ; exclu du strict",1,0.189430,True
+confed,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[HYPOTHESE],"confiance dans l'executif federal, direction dependante de qui gouverne en 2022 ; exclu du strict",1,0.202959,True
+confinan,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,-1,[HYPOTHESE],confiance dans la finance ; exclu du strict,-1,-0.049966,True
+conjudge,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,-1,[HYPOTHESE],confiance dans la Cour supreme apres 2022 ; exclu du strict,-1,-0.329498,True
+conlabor,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[PROBABLE],confiance dans les syndicats : pole de gauche en premier,1,0.280684,True
+conlegis,confiance dans les institutions (con*),3,a great deal | only some | hardly any,False,0,,"confiance dans le Congres, direction non definie",0,0.030576,
+conmedic,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[HYPOTHESE],confiance dans la medecine ; exclu du strict,1,0.202291,True
+conpress,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[PROBABLE],confiance dans la presse : pole de gauche en premier,1,0.275834,True
+consci,confiance dans les institutions (con*),3,a great deal | only some | hardly any,True,1,[PROBABLE],confiance dans la communaute scientifique : pole de gauche en premier,1,0.335616,True
+contv,confiance dans les institutions (con*),3,a great deal | only some | hardly any,False,0,,"confiance dans la television, direction non definie",0,0.130067,
+joblose,residu : economique,5,very likely | fairly likely | not too likely | not likely | inapplicable (i am currently not employed),False,0,,anticipation,0,0.006687,
+jobfind,residu : economique,4,very easy | somewhat easy | not easy | inapplicable (i am currently not employed),False,0,,anticipation,0,0.008511,
+happy,residu : hors axe,3,very happy | pretty happy | not too happy,False,0,,bien etre,0,-0.059674,
+hapmar,residu : hors axe,4,very happy | pretty happy | not too happy | inapplicable (i am not married),False,0,,bien etre,0,-0.127688,
+satjob,residu : economique,5,very satisfied | moderately satisfied | a little dissatisfied | very dissatisfied | inapplicable (i am currently not working),False,0,,bien etre,0,-0.020297,
+spdeg*,residu : hors axe,6,less than high school | high school | associate/junior college | bachelor's | graduate | inapplicable (i currently do not have a spouse),False,0,,fait,0,-0.100027,
+spjew,residu : hors axe,5,orthodox | conservative | reform | none of these (some other denomination) | inapplicable (i currently do not have a spouse or my spouse is not jewish),False,0,,idem,0,-0.114680,
+spfund,residu : hors axe,4,fundamentalist | moderate | liberal | inapplicable (i currently do not have a spouse or my spouse is not religious),False,0,,idem,0,-0.180073,
+unemp,residu : hors axe,2,yes | no,False,0,,fait biographique,0,0.135130,
+union1,residu : economique,4,"you belong | spouse or partner belongs | you and spouse or partner belong | neither belongs (you don't belong, if you don't have a spouse/partner)",False,0,,"appartenance, un fait",0,0.027708,
+spkath/y,libertes civiles (spk/col/lib),2,allowed | not allowed,True,1,[CONFIRME],echelle de Stouffer : autoriser est le pole de gauche,1,0.090383,True
+colath,libertes civiles (spk/col/lib),2,allowed | not allowed,True,1,[CONFIRME],echelle de Stouffer,1,0.159277,True
+spkrac/y,libertes civiles (spk/col/lib),2,allowed | not allowed,False,0,,"deux normes s'opposent, le pole de gauche n'est pas defini (a25 : aucune)",0,-0.116307,
+colrac,libertes civiles (spk/col/lib),2,allowed | not allowed,False,0,,idem spkrac/y,0,-0.171499,
+librac/y,libertes civiles (spk/col/lib),2,remove | not remove,False,0,,idem spkrac/y,0,0.032894,
+spkcom/y,libertes civiles (spk/col/lib),2,"yes, allowed to speak | not allowed",True,1,[PROBABLE],"echelle de Stouffer, cible communiste",1,0.133072,True
+colcom/y,libertes civiles (spk/col/lib),2,"yes, fired | not fired",True,-1,[PROBABLE],"« yes, fired » vient en premier, donc l'ordre va de droite a gauche",-1,-0.139096,True
+libcom/y,libertes civiles (spk/col/lib),2,remove | not remove,True,-1,[PROBABLE],« remove » vient en premier,-1,-0.138251,True
+spkhomo/y,libertes civiles (spk/col/lib),2,"yes, allowed to speak | not allowed",True,1,[CONFIRME],"echelle de Stouffer, cible homosexuelle",1,0.066381,True
+colhomo,libertes civiles (spk/col/lib),2,allowed | not allowed,True,1,[CONFIRME],"echelle de Stouffer, cible homosexuelle",1,0.073633,True
+libhomo/y,libertes civiles (spk/col/lib),2,remove | not remove,True,-1,[CONFIRME],« remove » vient en premier,-1,-0.197798,True
+cappun,residu : social,2,favor | oppose,True,-1,[CONFIRME],peine de mort : « favor » est le pole de droite et vient en premier,-1,-0.395373,True
+polhitok/y,residu : social,2,yes | no,True,-1,[PROBABLE],approuver un coup porte par un policier est le pole de droite,-1,-0.167382,True
+polabuse/y,residu : social,2,yes | no,True,-1,[PROBABLE],"meme raisonnement, cible qui a insulte le policier",-1,-0.051992,True
+polattak/y,residu : social,2,yes | no,True,-1,[HYPOTHESE],"meme famille, mais approuver quand le citoyen frappe le policier n'est pas une position de droite marquee ; exclu du strict",-1,-0.053769,True
+grass,residu : social,2,should be legal | should not be legal,True,1,[CONFIRME],legalisation du cannabis : « legal » est le pole de gauche,1,0.210309,True
+gunlaw,residu : social,2,favor | oppose,True,1,[CONFIRME],permis de police avant achat d'arme : « favor » est le pole de gauche,1,0.320086,True
+owngun,residu : hors axe,2,yes | no,False,0,,"possession d'arme, un fait",0,-0.209370,
+hunt1,residu : hors axe,4,"you hunt | spouse or partner hunts | both hunt | neither hunt (you don't hunt, if you don't have a spouse/partner)",False,0,,"chasse, un fait",0,-0.110634,
+class,residu : economique,4,lower class | working class | middle class | upper class,False,0,,"auto classement social, un fait declare",0,0.009479,
+satfin,residu : economique,3,satisfied | more or less | not at all satisfied,False,0,,bien etre,0,-0.049583,
+finalter,residu : economique,3,better | stayed same | worse,False,0,,bien etre,0,0.076471,
+finrela,residu : economique,5,far below average | below average | average | above average | far above average,False,0,,fait,0,0.001073,
+racdif1,residu : social,2,yes | no,True,1,[CONFIRME],explication de l'ecart racial par la discrimination : « yes » est le pole de gauche,1,0.602720,True
+racdif2,residu : social,2,yes | no,True,-1,[CONFIRME],explication par une capacite innee : « yes » est le pole de droite,-1,-0.014735,True
+racdif3,residu : social,2,yes | no,True,1,[PROBABLE],explication par le manque d'education et de chances : pole de gauche,1,0.457376,True
+racdif4,residu : social,2,yes | no,True,-1,[CONFIRME],explication par le manque de volonte : « yes » est le pole de droite,-1,-0.362024,True
+wlthwhts,residu : social,7,1 (rich) | 2 | 3 | 4 | 5 | 6 | 7 (poor),False,0,,"perception de richesse d'un groupe, pas une position",0,0.051706,
+wlthblks,residu : social,7,1 (rich) | 2 | 3 | 4 | 5 | 6 | 7 (poor),False,0,,idem,0,-0.025421,
+wlthhsps,residu : social,7,1 (rich) | 2 | 3 | 4 | 5 | 6 | 7 (poor),False,0,,idem,0,-0.033120,
+racwork,residu : hors axe,7,all white | mostly white | about half and half | mostly black | all black | works alone | inapplicable (i am currently not working),False,0,,"composition du lieu de travail, un fait",0,-0.018141,
+letin1a,residu : social,5,increased a lot | increased a little | remain the same as it is | reduced a little | reduced a lot,True,1,[CONFIRME],nombre d'immigrants : « increased a lot » est le pole de gauche et vient en premier,1,0.377167,True
+getahead,residu : economique,3,"hard work most important | hard work, luck equally important | luck most important",True,-1,[PROBABLE],« hard work most important » est le pole de droite et vient en premier,-1,-0.215181,True
+aged,residu : social,3,good idea | depends | bad idea,False,0,,"cohabitation intergenerationnelle, pas d'alignement gauche droite",0,0.025859,
+parsol,residu : economique,5,much better | somewhat better | about the same | somewhat worse | much worse,False,0,,bien etre,0,-0.025339,
+kidssol,residu : economique,6,much better | somewhat better | about the same | somewhat worse | much worse | i have no children,False,0,,anticipation,0,-0.088417,
+spanking,residu : social,4,strongly agree | agree | disagree | strongly disagree,True,-1,[PROBABLE],approuver la fessee est le pole traditionnel et vient en premier,-1,-0.308955,True
+divlaw,residu : social,3,easier | stay as is | more difficult,True,1,[PROBABLE],divorce plus facile est le pole de gauche et vient en premier,1,0.225535,True
+sexeduc,residu : social,2,favor | oppose,True,1,[CONFIRME],education sexuelle a l'ecole : « favor » est le pole de gauche,1,0.252629,True
+pillok,residu : social,4,strongly agree | agree | disagree | strongly disagree,True,1,[PROBABLE],contraception disponible pour les adolescents : approuver est le pole de gauche,1,0.340602,True
+xmarsex,residu : social,4,always wrong | almost always wrong | sometimes wrong | not wrong at all,True,-1,[PROBABLE],permissivite sexuelle : « always wrong » en premier,-1,-0.188755,True
+homosex,residu : social,4,always wrong | almost always wrong | sometimes wrong | not wrong at all,True,-1,[CONFIRME],"« always wrong » vient en premier, donc l'ordre va de droite a gauche",-1,-0.431115,True
+marhomo,residu : social,5,strongly agree | agree | neither agree nor disagree | disagree | strongly disagree,True,1,[CONFIRME],mariage entre personnes de meme sexe : « strongly agree » est le pole de gauche,1,0.397329,True
+discaff,residu : social,3,very likely | somewhat likely | not very likely,True,-1,[PROBABLE],croire probable qu'un Blanc soit ecarte au profit d'un Noir est le pole de droite et vient en premier,-1,-0.307175,True
+abdefect,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.274385,True
+abnomore,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.538564,True
+abhlth,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.081499,True
+abpoor,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.548099,True
+abrape,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.207391,True
+absingle,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.550613,True
+abany,avortement (ab*),2,yes | no,True,1,[CONFIRME],echelle d'avortement du GSS : « yes » est le pole de gauche,1,0.574767,True
+letdie1,fin de vie (suicide/letdie),2,yes | no,True,1,[PROBABLE],"autoriser le medecin a mettre fin a la vie : « yes » est le pole permissif, associe a la gauche sur les enquetes americaines",1,0.240429,True
+suicide1,fin de vie (suicide/letdie),2,yes | no,True,1,[HYPOTHESE],"droit de mettre fin a sa vie : « yes » traite comme le pole permissif, mais l'alignement partisan de ces quatre items est faible et conteste ; exclu de l'analyse de sensibilite stricte",1,0.209139,True
+suicide2,fin de vie (suicide/letdie),2,yes | no,True,1,[HYPOTHESE],"droit de mettre fin a sa vie : « yes » traite comme le pole permissif, mais l'alignement partisan de ces quatre items est faible et conteste ; exclu de l'analyse de sensibilite stricte",1,0.217590,True
+suicide3,fin de vie (suicide/letdie),2,yes | no,True,1,[HYPOTHESE],"droit de mettre fin a sa vie : « yes » traite comme le pole permissif, mais l'alignement partisan de ces quatre items est faible et conteste ; exclu de l'analyse de sensibilite stricte",1,0.183959,True
+suicide4,fin de vie (suicide/letdie),2,yes | no,True,1,[HYPOTHESE],"droit de mettre fin a sa vie : « yes » traite comme le pole permissif, mais l'alignement partisan de ces quatre items est faible et conteste ; exclu de l'analyse de sensibilite stricte",1,0.270499,True
+pornlaw,residu : social,3,there should be laws against the distribution of pornography whatever the age | there should be laws against the distribution of pornography to persons under 18 | there should be no laws forbidding the distribution of pornography,True,-1,[PROBABLE],"l'ordre va de l'interdiction totale a l'absence de loi, donc de droite a gauche",-1,-0.134401,True
+fair,residu : social,3,would take advantage of you | depends | would try to be fair,False,0,,idem trust,0,-0.066485,
+helpful,residu : social,3,try to be helpful | depends | looking out for themselves,False,0,,idem trust,0,0.040692,
+trust,residu : social,3,can trust | depends | can't be too careful,False,0,,confiance interpersonnelle,0,0.081625,
+tax,residu : economique,3,too high | about right | too low,True,-1,[PROBABLE],« too high » est le pole de droite et vient en premier,-1,-0.137781,True
+vote16,residu : social,3,voted | did not vote | ineligible,False,0,,"participation declaree, un fait et non une position",0,-0.088122,
+pres16,residu : social,4,clinton | trump | other candidate | didn't vote for president,False,0,,"choix de candidat : c'est la variable de camp elle meme, pas une position",0,0.119293,
+if16who,residu : social,3,clinton | trump | other,False,0,,idem pres16,0,0.342254,
+news,residu : hors axe,5,every day | a few times a week | once a week | less than once a week | never,False,0,,"consommation d'information, un comportement",0,0.046660,
+jew,residu : hors axe,5,orthodox | conservative | reform | none of these (some other denomination) | inapplicable (not jewish),False,0,,"appartenance religieuse, un fait",0,-0.115155,
+relig16*,residu : hors axe,5,protestant | catholic | jewish | other | none,False,0,,idem,0,-0.071159,
+jew16*,residu : hors axe,5,orthodox | conservative | reform | none of these (some other denomination) | inapplicable (not raised as a jew),False,0,,idem,0,-0.080070,
+attend,residu : social,9,never | less than once a year | once a year | several times a year | once a month | 2-3 times a month | nearly every week | every week | more than once a week,False,0,,"pratique religieuse, un comportement et non une position de politique publique",0,0.176921,
+pray,residu : social,6,several times a day | once a day | several times a week | once a week | less than once a week | never,False,0,,idem attend,0,-0.286090,
+postlife,residu : social,2,yes | no,False,0,,idem bible,0,-0.255786,
+bible,residu : social,3,word of god | inspired word | ancient book,False,0,,"croyance religieuse, hors du champ des positions de politique publique",0,-0.307052,
+reborn,residu : social,3,yes | no | inapplicable (i am not a christian),False,0,,idem attend,0,-0.278257,
+savesoul,residu : social,2,yes | no,False,0,,idem attend,0,-0.288911,
+granborn,residu : hors axe,5,none | one | two | three | four,False,0,,fait biographique,0,-0.052680,
+uscitzn*,residu : hors axe,2,a u.s. citizen | not a u.s. citizen,False,0,,fait,0,-0.001170,
+fucitzn,residu : hors axe,5,currently applying for u.s. citizenship | planning to apply for u.s. citizenship | not planning to apply to u.s. citizenship | not eligible to become a u.s. citizen | inapplicable (i am already a u.s. citizen),False,0,,fait,0,0.001002,
+mnthsusa,residu : hors axe,6,10+ months | 9 months | 8 months | 6 months | 1 month | inapplicable (i have not lived in the united states),False,0,,fait,0,0.001286,
+income,residu : economique,12,less than $1000 | $1000 to 2999 | $3000 to 3999 | $4000 to 4999 | $5000 to 5999 | $6000 to 6999 | $7000 to 7999 | $8000 to 9999 | $10000 to 14999 | $15000 to 19999 | $20000 to 24999 | $25000 or more,False,0,,fait,0,-0.018831,
+othlang,residu : hors axe,2,yes | no,False,0,,competence declaree,0,0.015132,
+health,residu : hors axe,4,excellent | good | fair | poor,False,0,,etat de sante,0,-0.053959,
+compuse*,residu : hors axe,2,yes | no,False,0,,equipement,0,-0.004124,
+webmob,residu : hors axe,2,yes | no,False,0,,equipement,0,0.018130,
+xmovie,residu : hors axe,2,yes | no,False,0,,comportement prive,0,0.120186,
+usewww*,residu : hors axe,2,yes | no,False,0,,equipement,0,-0.008364,
+life,residu : hors axe,3,exciting | routine | dull,False,0,,bien etre,0,-0.025537,
+richwork,residu : economique,2,continue to work | stop working,False,0,,"preference de travail, pas d'alignement gauche droite",0,-0.080661,

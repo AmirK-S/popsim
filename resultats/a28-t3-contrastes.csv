@@ -1,0 +1,24 @@
+perimetre,axe,hypothese,condition,difference,ic_bas,ic_haut,p_bootstrap,p_holm,p_bh
+150,political_ideology,H7 contre B0 mode,agents composite,0.474141,0.438544,0.507727,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,agents entretien (v3),0.488318,0.444137,0.529555,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,agents enquete,0.470324,0.434471,0.505678,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,agents demographiques (v6),0.270844,0.242640,0.298576,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,agents v7,0.312329,0.274851,0.351541,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,agents v8,0.615298,0.577838,0.649625,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,C2,0.510291,0.482293,0.538810,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,C3,0.381458,0.354119,0.409130,0.000200,0.001800,0.000200
+150,political_ideology,H7 contre B0 mode,B0 tirage,0.273436,0.248998,0.296501,0.000200,,
+150,political_ideology,H7 contre B0 mode,B1 argmax,0.451746,0.415886,0.486488,0.000200,,
+150,political_ideology,H7 contre B0 mode,B2 argmax,0.349725,0.311378,0.388467,0.000200,,
+150,political_ideology,H7 contre B0 mode,B3 foret,0.366420,0.333215,0.398796,0.000200,,
+150,political_ideology,H8 C3 contre C2,C3 moins C2,-0.128833,-0.159626,-0.098960,0.000200,0.001800,0.000200
+1052,political_ideology,H7 contre B0 mode,agents composite,0.521415,0.506488,0.536407,0.000200,,
+1052,political_ideology,H7 contre B0 mode,agents entretien (v3),0.571238,0.555000,0.587199,0.000200,,
+1052,political_ideology,H7 contre B0 mode,agents enquete,0.499333,0.484891,0.513216,0.000200,,
+1052,political_ideology,H7 contre B0 mode,agents demographiques (v6),0.266675,0.254210,0.280440,0.000200,,
+1052,political_ideology,H7 contre B0 mode,agents v7,0.260755,0.245899,0.276244,0.000200,,
+1052,political_ideology,H7 contre B0 mode,agents v8,0.696600,0.679830,0.712482,0.000200,,
+1052,political_ideology,H7 contre B0 mode,B0 tirage,0.316348,0.305793,0.327337,0.000200,,
+1052,political_ideology,H7 contre B0 mode,B1 argmax,0.621627,0.608827,0.634721,0.000200,,
+1052,political_ideology,H7 contre B0 mode,B2 argmax,0.461648,0.443551,0.479960,0.000200,,
+1052,political_ideology,H7 contre B0 mode,B3 foret,0.567968,0.554038,0.581950,0.000200,,

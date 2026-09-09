@@ -1,0 +1,10 @@
+condition,mesure,ratio_inter,inter_ic_bas,inter_ic_haut,ratio_intra,intra_ic_bas,intra_ic_haut,produit,ratio_dispersion_globale
+humains vague 4,entropie,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),entropie,1.0705,0.9360,1.2283,1.0114,1.0069,1.0155,1.0827,1.0119
+JSON Persona - GPT4.1-mini,entropie,2.6734,2.1660,3.5056,0.6054,0.5981,0.6122,1.6184,0.6228
+humains vague 4,gini_simpson,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),gini_simpson,1.0938,0.9416,1.2733,1.0070,1.0022,1.0113,1.1014,1.0076
+JSON Persona - GPT4.1-mini,gini_simpson,3.0398,2.4051,4.3161,0.6670,0.6607,0.6744,2.0276,0.6822
+humains vague 4,variance_ordinale,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000
+humains vagues 1-3 (retest),variance_ordinale,1.1259,0.8795,1.4813,1.0470,1.0204,1.0717,1.1788,1.0481
+JSON Persona - GPT4.1-mini,variance_ordinale,1.0454,0.8093,1.4317,0.1279,0.1231,0.1329,0.1337,0.1406

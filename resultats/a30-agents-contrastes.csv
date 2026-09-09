@@ -1,0 +1,5 @@
+jeu,avec_etiquette,sans_etiquette,ratio_avec,ratio_sans,ecart,ic_bas,ic_haut
+GSS 150,C2 (avec etiquette ideologique),C3 (sans etiquette),1.367382,1.153985,0.209651,0.018108,0.383818
+GSS 150,agents v8 (avec etiquette),agents demographiques v6 (sans),1.306334,1.200629,0.110328,-0.115964,0.351975
+GSS 150,"TEMOIN, pas une etiquette : agents composite",agents enquete,1.156960,1.293880,-0.135497,-0.202175,-0.066482
+Twin vague 4,gpt41mini_defaut,gpt41mini_demo_seules,1.141871,1.115482,0.026179,-0.005199,0.059967

@@ -1,0 +1,17 @@
+famille,condition,perimetre,reference,difference_condition_moins_reference,ic_bas,ic_haut,p_bootstrap,signe_attendu,conforme,p_holm,p_bh
+H2 secondaire,agents composite,1052,E1 regression contexte argmax,0.046808,0.039739,0.053630,0.002500,au dessus de E1,True,0.040000,0.002667
+H2 secondaire,agents composite,1052,E2 regression contexte tirage,-0.156719,-0.166020,-0.148059,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,agents entretien (v3),1052,E1 regression contexte argmax,-0.032343,-0.041840,-0.023115,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,agents entretien (v3),1052,E2 regression contexte tirage,-0.235870,-0.246990,-0.224900,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,agents enquete,1052,E1 regression contexte argmax,-0.004425,-0.011185,0.002641,0.210000,au dessus de E1,False,0.210000,0.210000
+H2 secondaire,agents enquete,1052,E2 regression contexte tirage,-0.207951,-0.218095,-0.199395,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,agents demographiques (v6),1052,E1 regression contexte argmax,-0.144904,-0.157117,-0.133670,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,agents demographiques (v6),1052,E2 regression contexte tirage,-0.348430,-0.359356,-0.338958,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,agents v7,1052,E1 regression contexte argmax,-0.149659,-0.167295,-0.131889,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,agents v7,1052,E2 regression contexte tirage,-0.353186,-0.368308,-0.337741,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,agents v8,1052,E1 regression contexte argmax,-0.353849,-0.365429,-0.342720,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,agents v8,1052,E2 regression contexte tirage,-0.557375,-0.569901,-0.545846,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,C2,150,E1 regression contexte argmax,-0.429326,-0.456808,-0.398848,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,C2,150,E2 regression contexte tirage,-0.629633,-0.655236,-0.602899,0.002500,en dessous de E2,True,0.040000,0.002667
+H2 secondaire,C3,150,E1 regression contexte argmax,-0.113501,-0.130028,-0.092991,0.002500,au dessus de E1,False,0.040000,0.002667
+H2 secondaire,C3,150,E2 regression contexte tirage,-0.313809,-0.337704,-0.288724,0.002500,en dessous de E2,True,0.040000,0.002667

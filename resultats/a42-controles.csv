@@ -1,0 +1,19 @@
+controle,valeur,reference,detail
+methodes testees disponibles,13.000000,13.000000,aucune absente
+niveaux de census_division,10.000000,9.000000,"e. nor. central, e. sou. central, foreign, middle atlantic, mountain, new england, pacific, south atlantic, w. nor. central, w. sou. central"
+cases du segment ideologie x genre x age,98.000000,98.000000,
+groupes de la partition aleatoire placebo,9.000000,9.000000,
+"rappel global agents composite, perimetre 1052",0.306884,0.306900,"a29, a34"
+"rappel global B1 argmax, perimetre 1052",0.057979,0.058000,"a29, a34"
+"rappel global B3 foret, perimetre 1052",0.014363,0.014400,"a29, a34"
+"rappel global C3, perimetre 150",0.219545,0.219500,"a29, a34"
+"rappel global C2, perimetre 150",0.128514,0.128500,"a29, a34"
+"couverture vague 2 sur cellules minoritaires, 1052",1.000000,1.000000,
+"couverture du score P_B division, 1052",1.000000,1.000000,
+"couverture du score P_C aleatoire, 1052",1.000000,1.000000,
+"part des raretes osees par B1 dans T1 non deductible, P_B division de recensement",0.110294,0.333300,1496 raretes osees
+"part des raretes osees par B1 dans T2 intermediaire, P_B division de recensement",0.296123,0.333300,1496 raretes osees
+"part des raretes osees par B1 dans T3 deductible, P_B division de recensement",0.593583,0.333300,1496 raretes osees
+"part des raretes osees par B1 dans T1 non deductible, P_C partition aleatoire",0.222594,0.333300,1496 raretes osees
+"part des raretes osees par B1 dans T2 intermediaire, P_C partition aleatoire",0.418449,0.333300,1496 raretes osees
+"part des raretes osees par B1 dans T3 deductible, P_C partition aleatoire",0.358957,0.333300,1496 raretes osees

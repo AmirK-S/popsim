@@ -1,0 +1,9 @@
+axe,matrice,n_items_reference,n_items_vectorise,ecart_total,ecart_intra,ecart_inter
+political_ideology,_humains,149,149,0.000000,0.000000,0.000000
+political_ideology,E1 regression contexte argmax,149,149,0.000000,0.000000,0.000000
+political_ideology,E2 regression contexte tirage,149,149,0.000000,0.000000,0.000000
+political_ideology,agents composite,149,149,0.000000,0.000000,0.000000
+profil croise,_humains,149,149,0.000000,0.000000,0.000000
+profil croise,E1 regression contexte argmax,149,149,0.000000,0.000000,0.000000
+profil croise,E2 regression contexte tirage,149,149,0.000000,0.000000,0.000000
+profil croise,agents composite,149,149,0.000000,0.000000,0.000000

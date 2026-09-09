@@ -1,0 +1,13 @@
+n_items,p_minimal_bilateral,p_minimal_apres_holm_famille_2,atteint_0_05_seul,atteint_0_05_famille_2
+1,1.0,1.0,False,False
+2,0.5,1.0,False,False
+3,0.25,0.5,False,False
+4,0.125,0.25,False,False
+5,0.0625,0.125,False,False
+6,0.03125,0.0625,True,False
+7,0.015625,0.03125,True,True
+8,0.0078125,0.015625,True,True
+9,0.00390625,0.0078125,True,True
+10,0.001953125,0.00390625,True,True
+11,0.0009765625,0.001953125,True,True
+12,0.00048828125,0.0009765625,True,True

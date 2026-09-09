@@ -1,0 +1,13 @@
+famille,condition,reference,quantite,difference,ic_bas,ic_haut,p_bootstrap,signe_attendu,conforme,p_holm,p_bh,decidable
+F2 secondaire (a),agents composite,E1 famille retiree (argmax),exactitude,0.012686,0.007080,0.017980,0.000500,agent plus haut,True,0.006000,0.000545,True
+F2 secondaire (a),agents composite,E1 famille retiree (argmax),diversite,0.143173,0.133275,0.153134,0.000500,agent plus haut,True,0.006000,0.000545,True
+F2 secondaire (a),agents composite,E1 famille retiree (argmax),intra,0.107658,0.092868,0.122610,0.000500,agent plus haut,True,0.006000,0.000545,True
+F2 secondaire (a),agents composite,E1 famille retiree (argmax),inter,0.747936,0.632448,0.874391,0.000500,"agent plus haut, et c'est un defaut",True,0.006000,0.000545,True
+F2 secondaire (a),agents enquete,E1 famille retiree (argmax),exactitude,0.006219,0.000737,0.011801,0.029000,agent plus haut,True,0.029000,0.029000,True
+F2 secondaire (a),agents enquete,E1 famille retiree (argmax),diversite,0.095912,0.084277,0.106907,0.000500,agent plus haut,True,0.006000,0.000545,True
+F2 secondaire (a),agents enquete,E1 famille retiree (argmax),intra,0.044043,0.028898,0.058839,0.000500,agent plus haut,True,0.006000,0.000545,True
+F2 secondaire (a),agents enquete,E1 famille retiree (argmax),inter,0.876734,0.750453,1.007264,0.000500,"agent plus haut, et c'est un defaut",True,0.006000,0.000545,True
+"F2 secondaire (b), condition appariee",agents composite [appariee],E1 famille retiree (argmax),exactitude,-0.026594,-0.032200,-0.021300,0.000500,"inconnu, c'est l'objet du test",False,0.006000,0.000545,True
+"F2 secondaire (b), condition appariee",agents composite [appariee],B2 famille retiree (argmax),exactitude,-0.023853,-0.029398,-0.018383,0.000500,"inconnu, c'est l'objet du test",False,0.006000,0.000545,True
+"F2 secondaire (b), condition appariee",agents enquete [appariee],E1 famille retiree (argmax),exactitude,-0.033061,-0.038543,-0.027479,0.000500,"inconnu, c'est l'objet du test",False,0.006000,0.000545,True
+"F2 secondaire (b), condition appariee",agents enquete [appariee],B2 famille retiree (argmax),exactitude,-0.030320,-0.036429,-0.024415,0.000500,"inconnu, c'est l'objet du test",False,0.006000,0.000545,True

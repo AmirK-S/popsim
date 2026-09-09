@@ -1,0 +1,12 @@
+test,famille_de_tests,mesure,n_a,n_b,n_items,valeur_a,valeur_b,ratio,ic_bas,ic_haut,p,p_holm
+"H1 droite / gauche, ideologie, Gini Simpson",H1,gs,332,417,149,0.509323,0.453756,1.122459,1.100561,1.144719,0.000500,0.000500
+"H1 bis droite / gauche, ideologie, entropie",H1 bis,h,332,417,149,1.263154,1.138805,1.109192,1.088036,1.128104,0.000500,0.000500
+"H4a droite / gauche, ancrage parti",H4,gs,367,496,149,0.508397,0.464596,1.094277,1.074829,1.114036,0.000500,0.000500
+"H5 droite / gauche, vague 2 (controle)",H5,gs,332,417,149,0.507053,0.455873,1.112270,1.088046,1.137557,0.000500,0.000500
+H6a centre / gauche,H6,gs,303,417,149,0.503942,0.453756,1.110600,1.086257,1.130426,0.000500,0.001000
+H6b centre / droite,H6,gs,303,332,149,0.503942,0.509323,0.989434,0.973349,1.004894,0.136932,0.136932
+"H6c centre / gauche, ancrage parti",H6 bis,gs,164,496,149,0.502754,0.464596,1.082130,1.052828,1.103773,0.000500,0.001000
+"H6d centre / droite, ancrage parti",H6 bis,gs,164,367,149,0.502754,0.508397,0.988900,0.964384,1.005162,0.194903,0.194903
+sept points : extremely conservative / extremely liberal,sept points,gs,61,119,149,0.510713,0.425779,1.199477,1.135294,1.252506,0.000500,0.001499
+sept points : conservative / liberal,sept points,gs,177,200,149,0.499995,0.451236,1.108058,1.072904,1.139900,0.000500,0.001499
+sept points : slightly conservative / slightly liberal,sept points,gs,94,98,149,0.503480,0.475170,1.059579,1.019627,1.096851,0.001000,0.001499

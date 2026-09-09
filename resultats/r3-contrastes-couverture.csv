@@ -1,0 +1,5 @@
+contraste,avec,sans,personnes_communes,teste,motif
+H1,C3E,C3,94,True,
+H2,C2,C2S,130,True,
+H3a,C3E,C3ES,0,False,"condition absente ; NON TESTE, jamais non rejete"
+H3b,C3ES,C3,0,False,"condition absente ; NON TESTE, jamais non rejete"

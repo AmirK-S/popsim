@@ -1,0 +1,337 @@
+perimetre,definition,tranche,rang,condition,exactitude
+1052,ordinale,bas,1,humains vague 2,0.835553
+1052,ordinale,bas,2,agents enquete,0.694014
+1052,ordinale,bas,3,agents composite,0.677687
+1052,ordinale,bas,4,B2 argmax,0.660270
+1052,ordinale,bas,5,agents entretien (v3),0.659757
+1052,ordinale,bas,6,B1 argmax,0.637765
+1052,ordinale,bas,7,B3 foret,0.623388
+1052,ordinale,bas,8,agents v7,0.608875
+1052,ordinale,bas,9,agents v8,0.600711
+1052,ordinale,bas,10,agents demographiques (v6),0.587373
+1052,ordinale,bas,11,B0 mode,0.567393
+1052,ordinale,bas,12,B0 tirage,0.541932
+1052,ordinale,bas,13,B0 uniforme,0.500898
+1052,ordinale,ensemble,1,humains vague 2,0.869164
+1052,ordinale,ensemble,2,agents composite,0.791125
+1052,ordinale,ensemble,3,B2 argmax,0.790052
+1052,ordinale,ensemble,4,agents entretien (v3),0.770299
+1052,ordinale,ensemble,5,B3 foret,0.770299
+1052,ordinale,ensemble,6,agents enquete,0.767164
+1052,ordinale,ensemble,7,B1 argmax,0.759050
+1052,ordinale,ensemble,8,B0 mode,0.748229
+1052,ordinale,ensemble,9,agents demographiques (v6),0.729835
+1052,ordinale,ensemble,10,agents v7,0.719831
+1052,ordinale,ensemble,11,agents v8,0.714317
+1052,ordinale,ensemble,12,B0 tirage,0.669521
+1052,ordinale,ensemble,13,B0 uniforme,0.584326
+1052,ordinale,haut,1,humains vague 2,0.827006
+1052,ordinale,haut,2,agents entretien (v3),0.747282
+1052,ordinale,haut,3,agents composite,0.744285
+1052,ordinale,haut,4,agents enquete,0.676059
+1052,ordinale,haut,5,agents v8,0.644269
+1052,ordinale,haut,6,B2 argmax,0.603882
+1052,ordinale,haut,7,B1 argmax,0.577302
+1052,ordinale,haut,8,B3 foret,0.555709
+1052,ordinale,haut,9,agents demographiques (v6),0.530895
+1052,ordinale,haut,10,B0 uniforme,0.516321
+1052,ordinale,haut,11,agents v7,0.507291
+1052,ordinale,haut,12,B0 tirage,0.481577
+1052,ordinale,haut,13,B0 mode,0.465298
+1052,ordinale,milieu,1,humains vague 2,0.873409
+1052,ordinale,milieu,2,B2 argmax,0.807753
+1052,ordinale,milieu,3,agents composite,0.800105
+1052,ordinale,milieu,4,B3 foret,0.790552
+1052,ordinale,milieu,5,agents entretien (v3),0.777782
+1052,ordinale,milieu,6,agents enquete,0.776367
+1052,ordinale,milieu,7,B1 argmax,0.776028
+1052,ordinale,milieu,8,B0 mode,0.774211
+1052,ordinale,milieu,9,agents demographiques (v6),0.748962
+1052,ordinale,milieu,10,agents v7,0.737955
+1052,ordinale,milieu,11,agents v8,0.724606
+1052,ordinale,milieu,12,B0 tirage,0.687199
+1052,ordinale,milieu,13,B0 uniforme,0.592811
+1052,ordinale extremes,bas,1,humains vague 2,0.871393
+1052,ordinale extremes,bas,2,B2 argmax,0.778537
+1052,ordinale extremes,bas,3,agents enquete,0.756514
+1052,ordinale extremes,bas,4,B3 foret,0.754413
+1052,ordinale extremes,bas,5,agents composite,0.749173
+1052,ordinale extremes,bas,6,B1 argmax,0.747394
+1052,ordinale extremes,bas,7,agents entretien (v3),0.725467
+1052,ordinale extremes,bas,8,B0 mode,0.718179
+1052,ordinale extremes,bas,9,agents v7,0.703275
+1052,ordinale extremes,bas,10,agents demographiques (v6),0.669216
+1052,ordinale extremes,bas,11,agents v8,0.654565
+1052,ordinale extremes,bas,12,B0 tirage,0.630927
+1052,ordinale extremes,bas,13,B0 uniforme,0.498426
+1052,ordinale extremes,ensemble,1,humains vague 2,0.869164
+1052,ordinale extremes,ensemble,2,agents composite,0.791125
+1052,ordinale extremes,ensemble,3,B2 argmax,0.790052
+1052,ordinale extremes,ensemble,4,agents entretien (v3),0.770299
+1052,ordinale extremes,ensemble,5,B3 foret,0.770299
+1052,ordinale extremes,ensemble,6,agents enquete,0.767164
+1052,ordinale extremes,ensemble,7,B1 argmax,0.759050
+1052,ordinale extremes,ensemble,8,B0 mode,0.748229
+1052,ordinale extremes,ensemble,9,agents demographiques (v6),0.729835
+1052,ordinale extremes,ensemble,10,agents v7,0.719831
+1052,ordinale extremes,ensemble,11,agents v8,0.714317
+1052,ordinale extremes,ensemble,12,B0 tirage,0.669521
+1052,ordinale extremes,ensemble,13,B0 uniforme,0.584326
+1052,ordinale extremes,haut,1,humains vague 2,0.857496
+1052,ordinale extremes,haut,2,agents composite,0.799039
+1052,ordinale extremes,haut,3,agents entretien (v3),0.797542
+1052,ordinale extremes,haut,4,B2 argmax,0.727103
+1052,ordinale extremes,haut,5,agents enquete,0.726494
+1052,ordinale extremes,haut,6,B3 foret,0.694297
+1052,ordinale extremes,haut,7,B1 argmax,0.693118
+1052,ordinale extremes,haut,8,agents v8,0.672224
+1052,ordinale extremes,haut,9,agents demographiques (v6),0.625856
+1052,ordinale extremes,haut,10,B0 mode,0.608582
+1052,ordinale extremes,haut,11,agents v7,0.586459
+1052,ordinale extremes,haut,12,B0 tirage,0.568011
+1052,ordinale extremes,haut,13,B0 uniforme,0.503867
+1052,ordinale extremes,milieu,1,humains vague 2,0.872901
+1052,ordinale extremes,milieu,2,B0 mode,0.825317
+1052,ordinale extremes,milieu,3,B2 argmax,0.823643
+1052,ordinale extremes,milieu,4,B3 foret,0.811988
+1052,ordinale extremes,milieu,5,agents composite,0.811659
+1052,ordinale extremes,milieu,6,agents demographiques (v6),0.809052
+1052,ordinale extremes,milieu,7,B1 argmax,0.794003
+1052,ordinale extremes,milieu,8,agents enquete,0.790699
+1052,ordinale extremes,milieu,9,agents v7,0.786530
+1052,ordinale extremes,milieu,10,agents entretien (v3),0.784179
+1052,ordinale extremes,milieu,11,agents v8,0.766471
+1052,ordinale extremes,milieu,12,B0 tirage,0.735114
+1052,ordinale extremes,milieu,13,B0 uniforme,0.667868
+1052,rarete,bas,1,humains vague 2,0.499415
+1052,rarete,bas,2,agents demographiques (v6),0.231579
+1052,rarete,bas,3,agents composite,0.219883
+1052,rarete,bas,4,agents entretien (v3),0.219298
+1052,rarete,bas,5,B0 uniforme,0.185965
+1052,rarete,bas,6,agents enquete,0.111111
+1052,rarete,bas,7,agents v8,0.059649
+1052,rarete,bas,8,agents v7,0.045614
+1052,rarete,bas,9,B0 tirage,0.032164
+1052,rarete,bas,10,B1 argmax,0.022222
+1052,rarete,bas,11,B3 foret,0.005263
+1052,rarete,bas,12,B2 argmax,0.001754
+1052,rarete,bas,13,B0 mode,0.000000
+1052,rarete,ensemble,1,humains vague 2,0.795002
+1052,rarete,ensemble,2,agents composite,0.683932
+1052,rarete,ensemble,3,B2 argmax,0.671709
+1052,rarete,ensemble,4,agents entretien (v3),0.656493
+1052,rarete,ensemble,5,agents enquete,0.650988
+1052,rarete,ensemble,6,B3 foret,0.633979
+1052,rarete,ensemble,7,B1 argmax,0.620856
+1052,rarete,ensemble,8,B0 mode,0.593386
+1052,rarete,ensemble,9,agents demographiques (v6),0.581787
+1052,rarete,ensemble,10,agents v7,0.564014
+1052,rarete,ensemble,11,agents v8,0.559146
+1052,rarete,ensemble,12,B0 tirage,0.491828
+1052,rarete,ensemble,13,B0 uniforme,0.353229
+1052,rarete,haut,1,B0 mode,1.000000
+1052,rarete,haut,2,B2 argmax,1.000000
+1052,rarete,haut,3,B3 foret,1.000000
+1052,rarete,haut,4,B1 argmax,0.999839
+1052,rarete,haut,5,agents demographiques (v6),0.993890
+1052,rarete,haut,6,B0 tirage,0.987940
+1052,rarete,haut,7,agents v8,0.987458
+1052,rarete,haut,8,humains vague 2,0.984724
+1052,rarete,haut,9,agents composite,0.979740
+1052,rarete,haut,10,agents entretien (v3),0.959801
+1052,rarete,haut,11,agents v7,0.939701
+1052,rarete,haut,12,agents enquete,0.874096
+1052,rarete,haut,13,B0 uniforme,0.393632
+1052,rarete,milieu,1,humains vague 2,0.790470
+1052,rarete,milieu,2,agents composite,0.676903
+1052,rarete,milieu,3,B2 argmax,0.665688
+1052,rarete,milieu,4,agents entretien (v3),0.648842
+1052,rarete,milieu,5,agents enquete,0.647868
+1052,rarete,milieu,6,B3 foret,0.625908
+1052,rarete,milieu,7,B1 argmax,0.611898
+1052,rarete,milieu,8,B0 mode,0.583212
+1052,rarete,milieu,9,agents demographiques (v6),0.568590
+1052,rarete,milieu,10,agents v7,0.554271
+1052,rarete,milieu,11,agents v8,0.546987
+1052,rarete,milieu,12,B0 tirage,0.476377
+1052,rarete,milieu,13,B0 uniforme,0.353463
+150,ordinale,bas,1,humains vague 2,0.816276
+150,ordinale,bas,2,agents enquete,0.698446
+150,ordinale,bas,3,agents composite,0.683894
+150,ordinale,bas,4,agents entretien (v3),0.669977
+150,ordinale,bas,5,B2 argmax,0.653142
+150,ordinale,bas,6,B1 argmax,0.646336
+150,ordinale,bas,7,B3 foret,0.636470
+150,ordinale,bas,8,agents v8,0.624621
+150,ordinale,bas,9,C3,0.619656
+150,ordinale,bas,10,agents v7,0.614701
+150,ordinale,bas,11,agents demographiques (v6),0.602978
+150,ordinale,bas,12,C2,0.577275
+150,ordinale,bas,13,B0 mode,0.570836
+150,ordinale,bas,14,B0 tirage,0.553880
+150,ordinale,bas,15,B0 uniforme,0.533680
+150,ordinale,ensemble,1,humains vague 2,0.866640
+150,ordinale,ensemble,2,agents composite,0.792426
+150,ordinale,ensemble,3,B2 argmax,0.789941
+150,ordinale,ensemble,4,B3 foret,0.769526
+150,ordinale,ensemble,5,agents entretien (v3),0.769269
+150,ordinale,ensemble,6,agents enquete,0.765443
+150,ordinale,ensemble,7,B1 argmax,0.760947
+150,ordinale,ensemble,8,B0 mode,0.750923
+150,ordinale,ensemble,9,agents demographiques (v6),0.733977
+150,ordinale,ensemble,10,agents v7,0.724953
+150,ordinale,ensemble,11,agents v8,0.720121
+150,ordinale,ensemble,12,C3,0.716478
+150,ordinale,ensemble,13,C2,0.706741
+150,ordinale,ensemble,14,B0 tirage,0.672083
+150,ordinale,ensemble,15,B0 uniforme,0.587817
+150,ordinale,haut,1,humains vague 2,0.799004
+150,ordinale,haut,2,agents composite,0.729247
+150,ordinale,haut,3,agents entretien (v3),0.726152
+150,ordinale,haut,4,agents enquete,0.667100
+150,ordinale,haut,5,agents v8,0.614413
+150,ordinale,haut,6,B2 argmax,0.604607
+150,ordinale,haut,7,C3,0.602166
+150,ordinale,haut,8,C2,0.574376
+150,ordinale,haut,9,B1 argmax,0.569722
+150,ordinale,haut,10,B3 foret,0.547242
+150,ordinale,haut,11,agents v7,0.527323
+150,ordinale,haut,12,agents demographiques (v6),0.522300
+150,ordinale,haut,13,B0 uniforme,0.511305
+150,ordinale,haut,14,B0 mode,0.464055
+150,ordinale,haut,15,B0 tirage,0.461444
+150,ordinale,milieu,1,humains vague 2,0.873684
+150,ordinale,milieu,2,B2 argmax,0.809173
+150,ordinale,milieu,3,agents composite,0.802677
+150,ordinale,milieu,4,B3 foret,0.790740
+150,ordinale,milieu,5,B1 argmax,0.779206
+150,ordinale,milieu,6,B0 mode,0.778801
+150,ordinale,milieu,7,agents entretien (v3),0.777771
+150,ordinale,milieu,8,agents enquete,0.775314
+150,ordinale,milieu,9,agents demographiques (v6),0.754436
+150,ordinale,milieu,10,agents v7,0.743334
+150,ordinale,milieu,11,agents v8,0.732134
+150,ordinale,milieu,12,C3,0.729083
+150,ordinale,milieu,13,C2,0.722373
+150,ordinale,milieu,14,B0 tirage,0.691715
+150,ordinale,milieu,15,B0 uniforme,0.595616
+150,ordinale extremes,bas,1,humains vague 2,0.859037
+150,ordinale extremes,bas,2,B2 argmax,0.776183
+150,ordinale extremes,bas,3,B1 argmax,0.754533
+150,ordinale extremes,bas,4,agents enquete,0.753630
+150,ordinale extremes,bas,5,B3 foret,0.753470
+150,ordinale extremes,bas,6,agents composite,0.750131
+150,ordinale extremes,bas,7,agents entretien (v3),0.723242
+150,ordinale extremes,bas,8,B0 mode,0.718715
+150,ordinale extremes,bas,9,agents v7,0.706659
+150,ordinale extremes,bas,10,C3,0.697830
+150,ordinale extremes,bas,11,agents demographiques (v6),0.673040
+150,ordinale extremes,bas,12,agents v8,0.665462
+150,ordinale extremes,bas,13,B0 tirage,0.632170
+150,ordinale extremes,bas,14,C2,0.615653
+150,ordinale extremes,bas,15,B0 uniforme,0.504134
+150,ordinale extremes,ensemble,1,humains vague 2,0.866640
+150,ordinale extremes,ensemble,2,agents composite,0.792426
+150,ordinale extremes,ensemble,3,B2 argmax,0.789941
+150,ordinale extremes,ensemble,4,B3 foret,0.769526
+150,ordinale extremes,ensemble,5,agents entretien (v3),0.769269
+150,ordinale extremes,ensemble,6,agents enquete,0.765443
+150,ordinale extremes,ensemble,7,B1 argmax,0.760947
+150,ordinale extremes,ensemble,8,B0 mode,0.750923
+150,ordinale extremes,ensemble,9,agents demographiques (v6),0.733977
+150,ordinale extremes,ensemble,10,agents v7,0.724953
+150,ordinale extremes,ensemble,11,agents v8,0.720121
+150,ordinale extremes,ensemble,12,C3,0.716478
+150,ordinale extremes,ensemble,13,C2,0.706741
+150,ordinale extremes,ensemble,14,B0 tirage,0.672083
+150,ordinale extremes,ensemble,15,B0 uniforme,0.587817
+150,ordinale extremes,haut,1,humains vague 2,0.848796
+150,ordinale extremes,haut,2,agents composite,0.798086
+150,ordinale extremes,haut,3,agents entretien (v3),0.794797
+150,ordinale extremes,haut,4,B2 argmax,0.727449
+150,ordinale extremes,haut,5,agents enquete,0.719872
+150,ordinale extremes,haut,6,B1 argmax,0.692414
+150,ordinale extremes,haut,7,B3 foret,0.690137
+150,ordinale extremes,haut,8,agents v8,0.659901
+150,ordinale extremes,haut,9,C3,0.649216
+150,ordinale extremes,haut,10,agents demographiques (v6),0.642074
+150,ordinale extremes,haut,11,C2,0.614110
+150,ordinale extremes,haut,12,B0 mode,0.613547
+150,ordinale extremes,haut,13,agents v7,0.602383
+150,ordinale extremes,haut,14,B0 tirage,0.561573
+150,ordinale extremes,haut,15,B0 uniforme,0.504347
+150,ordinale extremes,milieu,1,humains vague 2,0.878099
+150,ordinale extremes,milieu,2,B0 mode,0.824611
+150,ordinale extremes,milieu,3,B2 argmax,0.822969
+150,ordinale extremes,milieu,4,agents composite,0.813479
+150,ordinale extremes,milieu,5,B3 foret,0.810697
+150,ordinale extremes,milieu,6,agents demographiques (v6),0.805027
+150,ordinale extremes,milieu,7,C2,0.794737
+150,ordinale extremes,milieu,8,B1 argmax,0.792376
+150,ordinale extremes,milieu,9,agents enquete,0.790509
+150,ordinale extremes,milieu,10,agents v7,0.784931
+150,ordinale extremes,milieu,11,agents entretien (v3),0.784299
+150,ordinale extremes,milieu,12,agents v8,0.774812
+150,ordinale extremes,milieu,13,C3,0.754147
+150,ordinale extremes,milieu,14,B0 tirage,0.739092
+150,ordinale extremes,milieu,15,B0 uniforme,0.667995
+150,rarete,bas,1,humains vague 2,0.405738
+150,rarete,bas,2,B0 uniforme,0.221311
+150,rarete,bas,3,C3,0.184426
+150,rarete,bas,4,agents composite,0.176230
+150,rarete,bas,5,agents demographiques (v6),0.159836
+150,rarete,bas,6,agents entretien (v3),0.151639
+150,rarete,bas,7,C2,0.139344
+150,rarete,bas,8,agents enquete,0.122951
+150,rarete,bas,9,agents v8,0.065574
+150,rarete,bas,10,agents v7,0.049180
+150,rarete,bas,11,B0 tirage,0.049180
+150,rarete,bas,12,B1 argmax,0.008197
+150,rarete,bas,13,B0 mode,0.000000
+150,rarete,bas,14,B2 argmax,0.000000
+150,rarete,bas,15,B3 foret,0.000000
+150,rarete,ensemble,1,humains vague 2,0.791499
+150,rarete,ensemble,2,agents composite,0.682461
+150,rarete,ensemble,3,B2 argmax,0.669754
+150,rarete,ensemble,4,agents entretien (v3),0.654228
+150,rarete,ensemble,5,agents enquete,0.645817
+150,rarete,ensemble,6,B3 foret,0.636913
+150,rarete,ensemble,7,B1 argmax,0.628098
+150,rarete,ensemble,8,B0 mode,0.595615
+150,rarete,ensemble,9,agents demographiques (v6),0.588680
+150,rarete,ensemble,10,C3,0.581700
+150,rarete,ensemble,11,agents v7,0.568054
+150,rarete,ensemble,12,agents v8,0.565056
+150,rarete,ensemble,13,C2,0.526309
+150,rarete,ensemble,14,B0 tirage,0.494004
+150,rarete,ensemble,15,B0 uniforme,0.350962
+150,rarete,haut,1,B0 mode,1.000000
+150,rarete,haut,2,B2 argmax,1.000000
+150,rarete,haut,3,B3 foret,1.000000
+150,rarete,haut,4,B1 argmax,0.998045
+150,rarete,haut,5,agents demographiques (v6),0.992180
+150,rarete,haut,6,C3,0.981427
+150,rarete,haut,7,humains vague 2,0.981427
+150,rarete,haut,8,agents composite,0.978495
+150,rarete,haut,9,B0 tirage,0.973607
+150,rarete,haut,10,agents v8,0.972630
+150,rarete,haut,11,agents entretien (v3),0.958944
+150,rarete,haut,12,agents v7,0.940371
+150,rarete,haut,13,agents enquete,0.890518
+150,rarete,haut,14,C2,0.879765
+150,rarete,haut,15,B0 uniforme,0.367546
+150,rarete,milieu,1,humains vague 2,0.786748
+150,rarete,milieu,2,agents composite,0.673955
+150,rarete,milieu,3,B2 argmax,0.661481
+150,rarete,milieu,4,agents entretien (v3),0.645259
+150,rarete,milieu,5,agents enquete,0.639994
+150,rarete,milieu,6,B3 foret,0.626666
+150,rarete,milieu,7,B1 argmax,0.617322
+150,rarete,milieu,8,B0 mode,0.582887
+150,rarete,milieu,9,agents demographiques (v6),0.574064
+150,rarete,milieu,10,C3,0.566902
+150,rarete,milieu,11,agents v7,0.555993
+150,rarete,milieu,12,agents v8,0.551060
+150,rarete,milieu,13,C2,0.513637
+150,rarete,milieu,14,B0 tirage,0.475881
+150,rarete,milieu,15,B0 uniforme,0.351658

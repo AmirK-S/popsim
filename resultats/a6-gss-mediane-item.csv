@@ -1,0 +1,33 @@
+mesure,sous_ensemble,condition,mediane_ratio_inter,mediane_ratio_intra,n_items
+entropie,tous items non demo,humains vague 1,1.0000,1.0000,771
+entropie,tous items non demo,humains vague 2,0.9799,1.0019,771
+entropie,tous items non demo,agents composite,1.2354,0.9119,771
+entropie,tous items non demo,agents entretien (v3),1.2377,0.8912,771
+entropie,tous items non demo,agents enquete,1.0801,0.8320,771
+entropie,tous items non demo,agents persona (v7),0.4782,0.6826,771
+entropie,tous items non demo,agents demographiques (v6),0.7262,0.6574,771
+entropie,tous items non demo,agents demographiques (v8),2.1843,0.6085,771
+entropie,attitudinal,humains vague 1,1.0000,1.0000,254
+entropie,attitudinal,humains vague 2,1.0043,1.0008,254
+entropie,attitudinal,agents composite,1.7658,0.8779,254
+entropie,attitudinal,agents entretien (v3),2.2596,0.8537,254
+entropie,attitudinal,agents enquete,1.5285,0.8103,254
+entropie,attitudinal,agents persona (v7),0.3769,0.6321,254
+entropie,attitudinal,agents demographiques (v6),0.6969,0.6132,254
+entropie,attitudinal,agents demographiques (v8),3.8160,0.7611,254
+gini_simpson,tous items non demo,humains vague 1,1.0000,1.0000,678
+gini_simpson,tous items non demo,humains vague 2,0.9711,1.0020,678
+gini_simpson,tous items non demo,agents composite,1.2464,0.9188,678
+gini_simpson,tous items non demo,agents entretien (v3),1.1601,0.9163,678
+gini_simpson,tous items non demo,agents enquete,1.1173,0.8665,678
+gini_simpson,tous items non demo,agents persona (v7),0.2760,0.6582,678
+gini_simpson,tous items non demo,agents demographiques (v6),0.5696,0.7124,678
+gini_simpson,tous items non demo,agents demographiques (v8),2.3501,0.6533,678
+gini_simpson,attitudinal,humains vague 1,1.0000,1.0000,238
+gini_simpson,attitudinal,humains vague 2,1.0106,1.0008,238
+gini_simpson,attitudinal,agents composite,1.9517,0.8821,238
+gini_simpson,attitudinal,agents entretien (v3),2.1275,0.8576,238
+gini_simpson,attitudinal,agents enquete,1.4667,0.8445,238
+gini_simpson,attitudinal,agents persona (v7),0.2249,0.5984,238
+gini_simpson,attitudinal,agents demographiques (v6),0.5450,0.6196,238
+gini_simpson,attitudinal,agents demographiques (v8),3.8839,0.7310,238

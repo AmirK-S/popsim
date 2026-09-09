@@ -1,0 +1,253 @@
+perimetre,condition,famille,n_items,gs_gauche,gs_centre,gs_droite,ratio_droite_gauche
+1052 personnes,humains vague 1,avortement (ab*),7,0.160240,0.332250,0.395698,2.469407
+1052 personnes,humains vague 1,confiance dans les institutions (con*),13,0.543859,0.575623,0.570552,1.049080
+1052 personnes,humains vague 1,depenses publiques (nat*),17,0.463438,0.520335,0.567797,1.225184
+1052 personnes,humains vague 1,fin de vie (suicide/letdie),5,0.378007,0.389588,0.352299,0.931990
+1052 personnes,humains vague 1,libertes civiles (spk/col/lib),11,0.275427,0.369434,0.394462,1.432181
+1052 personnes,humains vague 1,residu : economique,15,0.628849,0.621010,0.612627,0.974203
+1052 personnes,humains vague 1,residu : hors axe,35,0.421535,0.445356,0.452432,1.073298
+1052 personnes,humains vague 1,residu : social,41,0.481879,0.549025,0.526391,1.092371
+1052 personnes,humains vague 1,roles de genre (fe*),5,0.535229,0.601683,0.668474,1.248951
+1052 personnes,agents composite,avortement (ab*),7,0.130949,0.336665,0.406225,3.102158
+1052 personnes,agents composite,confiance dans les institutions (con*),13,0.417049,0.439765,0.407007,0.975920
+1052 personnes,agents composite,depenses publiques (nat*),17,0.354306,0.529687,0.549367,1.550542
+1052 personnes,agents composite,fin de vie (suicide/letdie),5,0.279197,0.340096,0.343588,1.230632
+1052 personnes,agents composite,libertes civiles (spk/col/lib),11,0.235725,0.384841,0.430078,1.824495
+1052 personnes,agents composite,residu : economique,15,0.561448,0.573269,0.543903,0.968751
+1052 personnes,agents composite,residu : hors axe,35,0.366122,0.366131,0.363192,0.991998
+1052 personnes,agents composite,residu : social,41,0.373162,0.463892,0.445050,1.192646
+1052 personnes,agents composite,roles de genre (fe*),5,0.447948,0.512613,0.592717,1.323182
+1052 personnes,agents entretien (v3),avortement (ab*),7,0.048172,0.239803,0.361896,7.512500
+1052 personnes,agents entretien (v3),confiance dans les institutions (con*),13,0.408279,0.470451,0.378532,0.927141
+1052 personnes,agents entretien (v3),depenses publiques (nat*),17,0.311422,0.504166,0.450339,1.446074
+1052 personnes,agents entretien (v3),fin de vie (suicide/letdie),5,0.129635,0.157061,0.196673,1.517131
+1052 personnes,agents entretien (v3),libertes civiles (spk/col/lib),11,0.088763,0.210810,0.389313,4.385959
+1052 personnes,agents entretien (v3),residu : economique,15,0.561506,0.578970,0.557286,0.992486
+1052 personnes,agents entretien (v3),residu : hors axe,35,0.355065,0.364118,0.365470,1.029305
+1052 personnes,agents entretien (v3),residu : social,41,0.320777,0.436059,0.402026,1.253286
+1052 personnes,agents entretien (v3),roles de genre (fe*),5,0.331938,0.485669,0.582484,1.754795
+1052 personnes,agents enquete,avortement (ab*),7,0.114248,0.349641,0.451337,3.950494
+1052 personnes,agents enquete,confiance dans les institutions (con*),13,0.379597,0.433626,0.409318,1.078295
+1052 personnes,agents enquete,depenses publiques (nat*),17,0.268566,0.439025,0.574652,2.139704
+1052 personnes,agents enquete,fin de vie (suicide/letdie),5,0.294152,0.324910,0.301587,1.025275
+1052 personnes,agents enquete,libertes civiles (spk/col/lib),11,0.206687,0.347121,0.435323,2.106196
+1052 personnes,agents enquete,residu : economique,15,0.522481,0.544732,0.537157,1.028089
+1052 personnes,agents enquete,residu : hors axe,35,0.342259,0.368041,0.361530,1.056305
+1052 personnes,agents enquete,residu : social,41,0.329040,0.441185,0.434569,1.320720
+1052 personnes,agents enquete,roles de genre (fe*),5,0.334568,0.507534,0.593106,1.772749
+1052 personnes,agents demographiques (v6),avortement (ab*),7,0.141437,0.183145,0.296420,2.095769
+1052 personnes,agents demographiques (v6),confiance dans les institutions (con*),13,0.237091,0.251761,0.241164,1.017178
+1052 personnes,agents demographiques (v6),depenses publiques (nat*),17,0.359512,0.370023,0.416362,1.158131
+1052 personnes,agents demographiques (v6),fin de vie (suicide/letdie),5,0.270923,0.275943,0.277272,1.023432
+1052 personnes,agents demographiques (v6),libertes civiles (spk/col/lib),11,0.138513,0.165185,0.257505,1.859066
+1052 personnes,agents demographiques (v6),residu : economique,15,0.458794,0.478332,0.470000,1.024425
+1052 personnes,agents demographiques (v6),residu : hors axe,35,0.266242,0.284817,0.291329,1.094226
+1052 personnes,agents demographiques (v6),residu : social,41,0.307153,0.336137,0.368748,1.200532
+1052 personnes,agents demographiques (v6),roles de genre (fe*),5,0.366142,0.412864,0.435142,1.188452
+1052 personnes,agents v7,avortement (ab*),7,0.065555,0.079882,0.220487,3.363371
+1052 personnes,agents v7,confiance dans les institutions (con*),13,0.318210,0.300000,0.299265,0.940465
+1052 personnes,agents v7,depenses publiques (nat*),17,0.336851,0.382001,0.428056,1.270757
+1052 personnes,agents v7,fin de vie (suicide/letdie),5,0.133582,0.122746,0.178004,1.332540
+1052 personnes,agents v7,libertes civiles (spk/col/lib),11,0.115196,0.131427,0.191221,1.659961
+1052 personnes,agents v7,residu : economique,15,0.389376,0.394788,0.372029,0.955447
+1052 personnes,agents v7,residu : hors axe,35,0.331234,0.338845,0.337311,1.018347
+1052 personnes,agents v7,residu : social,41,0.310609,0.326671,0.355422,1.144274
+1052 personnes,agents v7,roles de genre (fe*),5,0.406996,0.382712,0.434723,1.068128
+1052 personnes,agents v8,avortement (ab*),7,0.008818,0.172004,0.228583,25.921616
+1052 personnes,agents v8,confiance dans les institutions (con*),13,0.350104,0.188805,0.274180,0.783138
+1052 personnes,agents v8,depenses publiques (nat*),17,0.149945,0.473907,0.298866,1.993171
+1052 personnes,agents v8,fin de vie (suicide/letdie),5,0.153081,0.064477,0.142247,0.929226
+1052 personnes,agents v8,libertes civiles (spk/col/lib),11,0.036240,0.105357,0.326196,9.001108
+1052 personnes,agents v8,residu : economique,15,0.303986,0.233625,0.334477,1.100304
+1052 personnes,agents v8,residu : hors axe,35,0.273580,0.251712,0.219622,0.802770
+1052 personnes,agents v8,residu : social,41,0.229949,0.273317,0.292027,1.269966
+1052 personnes,agents v8,roles de genre (fe*),5,0.278976,0.310130,0.522116,1.871546
+1052 personnes,B0 mode,avortement (ab*),7,0.000000,0.000000,0.000000,
+1052 personnes,B0 mode,confiance dans les institutions (con*),13,0.023450,0.024819,0.025943,1.106287
+1052 personnes,B0 mode,depenses publiques (nat*),17,0.034779,0.037724,0.041049,1.180278
+1052 personnes,B0 mode,fin de vie (suicide/letdie),5,0.000000,0.000000,0.000000,
+1052 personnes,B0 mode,libertes civiles (spk/col/lib),11,0.000000,0.000000,0.000000,
+1052 personnes,B0 mode,residu : economique,15,0.000000,0.000000,0.000000,
+1052 personnes,B0 mode,residu : hors axe,35,0.008710,0.009661,0.009232,1.059960
+1052 personnes,B0 mode,residu : social,41,0.026741,0.027376,0.028108,1.051128
+1052 personnes,B0 mode,roles de genre (fe*),5,0.096269,0.093852,0.098027,1.018261
+1052 personnes,B0 tirage,avortement (ab*),7,0.354313,0.341192,0.346824,0.978862
+1052 personnes,B0 tirage,confiance dans les institutions (con*),13,0.583576,0.584466,0.580569,0.994846
+1052 personnes,B0 tirage,depenses publiques (nat*),17,0.541534,0.540132,0.533890,0.985885
+1052 personnes,B0 tirage,fin de vie (suicide/letdie),5,0.385611,0.364732,0.380446,0.986605
+1052 personnes,B0 tirage,libertes civiles (spk/col/lib),11,0.343127,0.354930,0.353972,1.031608
+1052 personnes,B0 tirage,residu : economique,15,0.632194,0.626661,0.632194,1.000001
+1052 personnes,B0 tirage,residu : hors axe,35,0.441748,0.440220,0.443599,1.004190
+1052 personnes,B0 tirage,residu : social,41,0.550852,0.550052,0.552899,1.003714
+1052 personnes,B0 tirage,roles de genre (fe*),5,0.618698,0.610530,0.624828,1.009908
+1052 personnes,B1 argmax,avortement (ab*),7,0.020894,0.172660,0.224452,10.742252
+1052 personnes,B1 argmax,confiance dans les institutions (con*),13,0.365852,0.415098,0.376776,1.029858
+1052 personnes,B1 argmax,depenses publiques (nat*),17,0.269063,0.298912,0.371762,1.381689
+1052 personnes,B1 argmax,fin de vie (suicide/letdie),5,0.232411,0.152891,0.144567,0.622033
+1052 personnes,B1 argmax,libertes civiles (spk/col/lib),11,0.091551,0.189798,0.222329,2.428484
+1052 personnes,B1 argmax,residu : economique,15,0.517212,0.487416,0.476107,0.920527
+1052 personnes,B1 argmax,residu : hors axe,35,0.276463,0.297016,0.297183,1.074948
+1052 personnes,B1 argmax,residu : social,41,0.318221,0.378132,0.361558,1.136183
+1052 personnes,B1 argmax,roles de genre (fe*),5,0.409648,0.368741,0.582929,1.423000
+1052 personnes,B2 argmax,avortement (ab*),7,0.042398,0.190951,0.332357,7.838997
+1052 personnes,B2 argmax,confiance dans les institutions (con*),13,0.299358,0.381490,0.380282,1.270325
+1052 personnes,B2 argmax,depenses publiques (nat*),17,0.199494,0.277433,0.325066,1.629453
+1052 personnes,B2 argmax,fin de vie (suicide/letdie),5,0.272173,0.239468,0.212842,0.782009
+1052 personnes,B2 argmax,libertes civiles (spk/col/lib),11,0.085843,0.149347,0.186679,2.174670
+1052 personnes,B2 argmax,residu : economique,15,0.388983,0.404476,0.402072,1.033649
+1052 personnes,B2 argmax,residu : hors axe,35,0.185805,0.193655,0.187245,1.007753
+1052 personnes,B2 argmax,residu : social,41,0.225984,0.324996,0.352265,1.558802
+1052 personnes,B2 argmax,roles de genre (fe*),5,0.345803,0.380373,0.414261,1.197968
+1052 personnes,B3 foret,avortement (ab*),7,0.000000,0.054841,0.192503,
+1052 personnes,B3 foret,confiance dans les institutions (con*),13,0.236864,0.315803,0.242465,1.023646
+1052 personnes,B3 foret,depenses publiques (nat*),17,0.135664,0.140665,0.242936,1.790719
+1052 personnes,B3 foret,fin de vie (suicide/letdie),5,0.117783,0.031692,0.052368,0.444613
+1052 personnes,B3 foret,libertes civiles (spk/col/lib),11,0.049171,0.079911,0.091268,1.856132
+1052 personnes,B3 foret,residu : economique,15,0.382173,0.352316,0.369985,0.968110
+1052 personnes,B3 foret,residu : hors axe,35,0.173145,0.170592,0.165848,0.957851
+1052 personnes,B3 foret,residu : social,41,0.205134,0.247575,0.242198,1.180681
+1052 personnes,B3 foret,roles de genre (fe*),5,0.303475,0.186077,0.389593,1.283775
+1052 personnes,humains vague 2,avortement (ab*),7,0.168037,0.354487,0.390888,2.326200
+1052 personnes,humains vague 2,confiance dans les institutions (con*),13,0.539589,0.574160,0.571645,1.059409
+1052 personnes,humains vague 2,depenses publiques (nat*),17,0.462050,0.527856,0.562381,1.217144
+1052 personnes,humains vague 2,fin de vie (suicide/letdie),5,0.361354,0.384464,0.348721,0.965039
+1052 personnes,humains vague 2,libertes civiles (spk/col/lib),11,0.280454,0.380422,0.392713,1.400276
+1052 personnes,humains vague 2,residu : economique,15,0.633758,0.625938,0.611230,0.964455
+1052 personnes,humains vague 2,residu : hors axe,35,0.427528,0.445771,0.450341,1.053361
+1052 personnes,humains vague 2,residu : social,41,0.482504,0.550289,0.523110,1.084156
+1052 personnes,humains vague 2,roles de genre (fe*),5,0.546993,0.625686,0.676308,1.236410
+150 personnes,humains vague 1,avortement (ab*),7,0.181991,0.323232,0.404679,2.223620
+150 personnes,humains vague 1,confiance dans les institutions (con*),13,0.568238,0.566200,0.562852,0.990521
+150 personnes,humains vague 1,depenses publiques (nat*),17,0.489955,0.515686,0.566168,1.155551
+150 personnes,humains vague 1,fin de vie (suicide/letdie),5,0.396109,0.377374,0.318235,0.803403
+150 personnes,humains vague 1,libertes civiles (spk/col/lib),11,0.246148,0.407346,0.389399,1.581971
+150 personnes,humains vague 1,residu : economique,15,0.637208,0.608081,0.598064,0.938570
+150 personnes,humains vague 1,residu : hors axe,35,0.417263,0.443030,0.447586,1.072671
+150 personnes,humains vague 1,residu : social,41,0.489841,0.555556,0.525651,1.073106
+150 personnes,humains vague 1,roles de genre (fe*),5,0.571633,0.627475,0.669686,1.171531
+150 personnes,agents composite,avortement (ab*),7,0.165021,0.338817,0.397876,2.411067
+150 personnes,agents composite,confiance dans les institutions (con*),13,0.437237,0.454779,0.387206,0.885576
+150 personnes,agents composite,depenses publiques (nat*),17,0.377398,0.516221,0.546557,1.448223
+150 personnes,agents composite,fin de vie (suicide/letdie),5,0.282232,0.363232,0.322880,1.144023
+150 personnes,agents composite,libertes civiles (spk/col/lib),11,0.218498,0.421120,0.447154,2.046489
+150 personnes,agents composite,residu : economique,15,0.571692,0.563816,0.539477,0.943650
+150 personnes,agents composite,residu : hors axe,35,0.361422,0.373480,0.363365,1.005376
+150 personnes,agents composite,residu : social,41,0.393378,0.487534,0.448654,1.140518
+150 personnes,agents composite,roles de genre (fe*),5,0.492883,0.499596,0.593728,1.204603
+150 personnes,agents entretien (v3),avortement (ab*),7,0.061005,0.278211,0.400199,6.560099
+150 personnes,agents entretien (v3),confiance dans les institutions (con*),13,0.406885,0.478943,0.364156,0.894985
+150 personnes,agents entretien (v3),depenses publiques (nat*),17,0.353333,0.515805,0.438614,1.241364
+150 personnes,agents entretien (v3),fin de vie (suicide/letdie),5,0.145827,0.163636,0.205807,1.411311
+150 personnes,agents entretien (v3),libertes civiles (spk/col/lib),11,0.101848,0.255280,0.384753,3.777723
+150 personnes,agents entretien (v3),residu : economique,15,0.576620,0.572080,0.548080,0.950503
+150 personnes,agents entretien (v3),residu : hors axe,35,0.348987,0.382096,0.368143,1.054891
+150 personnes,agents entretien (v3),residu : social,41,0.330027,0.463464,0.413559,1.253107
+150 personnes,agents entretien (v3),roles de genre (fe*),5,0.352791,0.516970,0.587456,1.665170
+150 personnes,agents enquete,avortement (ab*),7,0.138688,0.370851,0.465074,3.353388
+150 personnes,agents enquete,confiance dans les institutions (con*),13,0.402024,0.441011,0.396945,0.987364
+150 personnes,agents enquete,depenses publiques (nat*),17,0.313575,0.443850,0.550796,1.756505
+150 personnes,agents enquete,fin de vie (suicide/letdie),5,0.301895,0.346263,0.291986,0.967179
+150 personnes,agents enquete,libertes civiles (spk/col/lib),11,0.172974,0.381818,0.433745,2.507575
+150 personnes,agents enquete,residu : economique,15,0.533212,0.533009,0.531045,0.995937
+150 personnes,agents enquete,residu : hors axe,35,0.338830,0.375619,0.361505,1.066920
+150 personnes,agents enquete,residu : social,41,0.346292,0.468638,0.442208,1.276981
+150 personnes,agents enquete,roles de genre (fe*),5,0.374408,0.565252,0.611382,1.632928
+150 personnes,agents demographiques (v6),avortement (ab*),7,0.159901,0.200289,0.305293,1.909267
+150 personnes,agents demographiques (v6),confiance dans les institutions (con*),13,0.256489,0.261305,0.268972,1.048667
+150 personnes,agents demographiques (v6),depenses publiques (nat*),17,0.335381,0.359763,0.406982,1.213491
+150 personnes,agents demographiques (v6),fin de vie (suicide/letdie),5,0.282847,0.289293,0.319164,1.128398
+150 personnes,agents demographiques (v6),libertes civiles (spk/col/lib),11,0.150538,0.190817,0.281744,1.871587
+150 personnes,agents demographiques (v6),residu : economique,15,0.455768,0.462448,0.463019,1.015909
+150 personnes,agents demographiques (v6),residu : hors axe,35,0.257728,0.284945,0.284555,1.104088
+150 personnes,agents demographiques (v6),residu : social,41,0.301361,0.336600,0.384938,1.277332
+150 personnes,agents demographiques (v6),roles de genre (fe*),5,0.352381,0.505859,0.386527,1.096902
+150 personnes,agents v7,avortement (ab*),7,0.038914,0.120635,0.236768,6.084312
+150 personnes,agents v7,confiance dans les institutions (con*),13,0.308756,0.317327,0.273028,0.884284
+150 personnes,agents v7,depenses publiques (nat*),17,0.295142,0.431313,0.451824,1.530872
+150 personnes,agents v7,fin de vie (suicide/letdie),5,0.132719,0.124444,0.132869,1.001129
+150 personnes,agents v7,libertes civiles (spk/col/lib),11,0.090956,0.143251,0.176222,1.937452
+150 personnes,agents v7,residu : economique,15,0.393804,0.393983,0.367247,0.932563
+150 personnes,agents v7,residu : hors axe,35,0.333729,0.338468,0.339524,1.017364
+150 personnes,agents v7,residu : social,41,0.308959,0.324415,0.361973,1.171586
+150 personnes,agents v7,roles de genre (fe*),5,0.393036,0.388485,0.423693,1.078001
+150 personnes,agents v8,avortement (ab*),7,0.017994,0.161039,0.252198,14.015468
+150 personnes,agents v8,confiance dans les institutions (con*),13,0.356414,0.204040,0.293130,0.822441
+150 personnes,agents v8,depenses publiques (nat*),17,0.191109,0.465359,0.345768,1.809272
+150 personnes,agents v8,fin de vie (suicide/letdie),5,0.161598,0.088889,0.144483,0.894093
+150 personnes,agents v8,libertes civiles (spk/col/lib),11,0.036028,0.087052,0.381955,10.601483
+150 personnes,agents v8,residu : economique,15,0.277333,0.238492,0.337402,1.216594
+150 personnes,agents v8,residu : hors axe,35,0.278838,0.272468,0.242575,0.869949
+150 personnes,agents v8,residu : social,41,0.244804,0.270791,0.313249,1.279591
+150 personnes,agents v8,roles de genre (fe*),5,0.333641,0.315152,0.547271,1.640300
+150 personnes,C2,avortement (ab*),7,0.004535,0.033766,0.340966,75.182929
+150 personnes,C2,confiance dans les institutions (con*),13,0.356532,0.012743,0.380863,1.068243
+150 personnes,C2,depenses publiques (nat*),17,0.417216,0.042543,0.417982,1.001835
+150 personnes,C2,fin de vie (suicide/letdie),5,0.000000,0.026263,0.229965,
+150 personnes,C2,libertes civiles (spk/col/lib),11,0.000000,0.000000,0.171682,
+150 personnes,C2,residu : economique,15,0.424680,0.317037,0.419048,0.986737
+150 personnes,C2,residu : hors axe,35,0.275942,0.253247,0.253592,0.919006
+150 personnes,C2,residu : social,41,0.142170,0.146070,0.276366,1.943909
+150 personnes,C2,roles de genre (fe*),5,0.166103,0.136970,0.625552,3.766037
+150 personnes,C3,avortement (ab*),7,0.287470,0.366234,0.365024,1.269782
+150 personnes,C3,confiance dans les institutions (con*),13,0.456142,0.439627,0.426874,0.935835
+150 personnes,C3,depenses publiques (nat*),17,0.173368,0.180570,0.331694,1.913232
+150 personnes,C3,fin de vie (suicide/letdie),5,0.186380,0.250909,0.282695,1.516765
+150 personnes,C3,libertes civiles (spk/col/lib),11,0.144021,0.322681,0.314645,2.184716
+150 personnes,C3,residu : economique,15,0.522034,0.518182,0.484243,0.927608
+150 personnes,C3,residu : hors axe,35,0.252432,0.247648,0.280670,1.111864
+150 personnes,C3,residu : social,41,0.334582,0.386524,0.370754,1.108111
+150 personnes,C3,roles de genre (fe*),5,0.439427,0.513535,0.432288,0.983755
+150 personnes,B0 mode,avortement (ab*),7,0.000000,0.000000,0.000000,
+150 personnes,B0 mode,confiance dans les institutions (con*),13,0.022529,0.029060,0.024301,1.078629
+150 personnes,B0 mode,depenses publiques (nat*),17,0.037890,0.038027,0.038874,1.025961
+150 personnes,B0 mode,fin de vie (suicide/letdie),5,0.000000,0.000000,0.000000,
+150 personnes,B0 mode,libertes civiles (spk/col/lib),11,0.000000,0.000000,0.000000,
+150 personnes,B0 mode,residu : economique,15,0.000000,0.000000,0.000000,
+150 personnes,B0 mode,residu : hors axe,35,0.008953,0.009351,0.009856,1.100789
+150 personnes,B0 mode,residu : social,41,0.026301,0.029515,0.027790,1.056598
+150 personnes,B0 mode,roles de genre (fe*),5,0.100358,0.084040,0.101510,1.011474
+150 personnes,B0 tirage,avortement (ab*),7,0.353888,0.355556,0.348930,0.985990
+150 personnes,B0 tirage,confiance dans les institutions (con*),13,0.577297,0.565812,0.575181,0.996334
+150 personnes,B0 tirage,depenses publiques (nat*),17,0.545947,0.524005,0.540070,0.989234
+150 personnes,B0 tirage,fin de vie (suicide/letdie),5,0.382591,0.375758,0.393496,1.028503
+150 personnes,B0 tirage,libertes civiles (spk/col/lib),11,0.327422,0.355188,0.350227,1.069651
+150 personnes,B0 tirage,residu : economique,15,0.629288,0.642626,0.641115,1.018794
+150 personnes,B0 tirage,residu : hors axe,35,0.437130,0.442049,0.446756,1.022022
+150 personnes,B0 tirage,residu : social,41,0.535049,0.551786,0.556075,1.039297
+150 personnes,B0 tirage,roles de genre (fe*),5,0.626933,0.610101,0.618583,0.986682
+150 personnes,B1 argmax,avortement (ab*),7,0.026918,0.120924,0.164759,6.120693
+150 personnes,B1 argmax,confiance dans les institutions (con*),13,0.363149,0.413675,0.404002,1.112497
+150 personnes,B1 argmax,depenses publiques (nat*),17,0.269269,0.297089,0.383480,1.424153
+150 personnes,B1 argmax,fin de vie (suicide/letdie),5,0.218536,0.184646,0.113357,0.518710
+150 personnes,B1 argmax,libertes civiles (spk/col/lib),11,0.079784,0.176125,0.231127,2.896904
+150 personnes,B1 argmax,residu : economique,15,0.495579,0.498317,0.480914,0.970407
+150 personnes,B1 argmax,residu : hors axe,35,0.275064,0.316104,0.303600,1.103745
+150 personnes,B1 argmax,residu : social,41,0.321332,0.368022,0.364409,1.134058
+150 personnes,B1 argmax,roles de genre (fe*),5,0.417102,0.358788,0.595122,1.426802
+150 personnes,B2 argmax,avortement (ab*),7,0.069490,0.241270,0.354405,5.100078
+150 personnes,B2 argmax,confiance dans les institutions (con*),13,0.312143,0.387723,0.341374,1.093646
+150 personnes,B2 argmax,depenses publiques (nat*),17,0.206319,0.281521,0.332582,1.611978
+150 personnes,B2 argmax,fin de vie (suicide/letdie),5,0.300256,0.262626,0.204414,0.680797
+150 personnes,B2 argmax,libertes civiles (spk/col/lib),11,0.070754,0.154270,0.189420,2.677182
+150 personnes,B2 argmax,residu : economique,15,0.399659,0.401010,0.373829,0.935370
+150 personnes,B2 argmax,residu : hors axe,35,0.166367,0.197345,0.191571,1.151500
+150 personnes,B2 argmax,residu : social,41,0.246875,0.342474,0.350585,1.420093
+150 personnes,B2 argmax,roles de genre (fe*),5,0.375422,0.367879,0.363531,0.968325
+150 personnes,B3 foret,avortement (ab*),7,0.000000,0.042713,0.176207,
+150 personnes,B3 foret,confiance dans les institutions (con*),13,0.232699,0.344367,0.272760,1.172156
+150 personnes,B3 foret,depenses publiques (nat*),17,0.142646,0.140404,0.252169,1.767793
+150 personnes,B3 foret,fin de vie (suicide/letdie),5,0.106912,0.026263,0.036702,0.343286
+150 personnes,B3 foret,libertes civiles (spk/col/lib),11,0.055300,0.078053,0.092493,1.672580
+150 personnes,B3 foret,residu : economique,15,0.394334,0.329630,0.374603,0.949965
+150 personnes,B3 foret,residu : hors axe,35,0.172892,0.175844,0.173287,1.002287
+150 personnes,B3 foret,residu : social,41,0.214954,0.262823,0.243846,1.134410
+150 personnes,B3 foret,roles de genre (fe*),5,0.289401,0.206061,0.357956,1.236886
+150 personnes,humains vague 2,avortement (ab*),7,0.178773,0.350361,0.401858,2.247874
+150 personnes,humains vague 2,confiance dans les institutions (con*),13,0.543661,0.591842,0.535424,0.984849
+150 personnes,humains vague 2,depenses publiques (nat*),17,0.491220,0.500357,0.539318,1.097915
+150 personnes,humains vague 2,fin de vie (suicide/letdie),5,0.372760,0.340606,0.316609,0.849363
+150 personnes,humains vague 2,libertes civiles (spk/col/lib),11,0.254620,0.397796,0.392989,1.543434
+150 personnes,humains vague 2,residu : economique,15,0.643386,0.621953,0.601394,0.934732
+150 personnes,humains vague 2,residu : hors axe,35,0.432141,0.443636,0.434445,1.005332
+150 personnes,humains vague 2,residu : social,41,0.494286,0.553954,0.522846,1.057780
+150 personnes,humains vague 2,roles de genre (fe*),5,0.590988,0.635960,0.678281,1.147707

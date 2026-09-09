@@ -1,0 +1,28 @@
+famille,condition,adversaire,regime_adversaire,quantite,difference_agent_moins_adversaire,ic_bas,ic_haut,p_bootstrap,signe_attendu,conforme,p_holm,p_bh,decidable
+F1 primaire,agents composite,E1 famille retiree (argmax),esperance,exactitude,0.012686,0.007080,0.017980,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,E1 famille retiree (argmax),esperance,proximite_intra,-0.107658,-0.122610,-0.092868,0.000500,agent plus proche de 1,True,0.013500,0.000500,True
+F1 primaire,agents composite,E1 famille retiree (argmax),esperance,rappel,0.318104,0.282084,0.354923,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,E2 famille retiree (tirage),tirage,exactitude,0.083854,0.078143,0.089436,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,E2 famille retiree (tirage),tirage,proximite_intra,0.134790,0.118814,0.150158,0.000500,agent plus proche de 1,False,0.013500,0.000500,True
+F1 primaire,agents composite,E2 famille retiree (tirage),tirage,rappel,0.253430,0.214905,0.292619,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,PMM k=10 famille retiree,tirage,exactitude,0.049614,0.043939,0.054904,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,PMM k=10 famille retiree,tirage,proximite_intra,0.099117,0.083588,0.114076,0.000500,agent plus proche de 1,False,0.013500,0.000500,True
+F1 primaire,agents composite,PMM k=10 famille retiree,tirage,rappel,0.195884,0.160343,0.232459,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,"IM m=10 mode, famille retiree",esperance,exactitude,0.027417,0.021877,0.032779,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,"IM m=10 mode, famille retiree",esperance,proximite_intra,-0.042074,-0.056594,-0.027663,0.000500,agent plus proche de 1,True,0.013500,0.000500,True
+F1 primaire,agents composite,"IM m=10 mode, famille retiree",esperance,rappel,0.308382,0.272669,0.345265,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (argmax),esperance,exactitude,0.015427,0.009882,0.020897,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (argmax),esperance,proximite_intra,-0.366738,-0.380924,-0.352577,0.000500,agent plus proche de 1,True,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (argmax),esperance,rappel,0.396551,0.358146,0.435319,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (tirage),tirage,exactitude,0.097029,0.091369,0.102645,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (tirage),tirage,proximite_intra,0.113456,0.096462,0.130564,0.000500,agent plus proche de 1,False,0.013500,0.000500,True
+F1 primaire,agents composite,B2 famille retiree (tirage),tirage,rappel,0.299656,0.261450,0.337983,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B3 foret,esperance,exactitude,0.028471,0.022469,0.034647,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B3 foret,esperance,proximite_intra,-0.538324,-0.553450,-0.521944,0.000500,agent plus proche de 1,True,0.013500,0.000500,True
+F1 primaire,agents composite,B3 foret,esperance,rappel,0.412723,0.371284,0.453765,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B0 mode,esperance,exactitude,0.061095,0.053805,0.068277,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B0 mode,esperance,proximite_intra,-0.803972,-0.818192,-0.789771,0.000500,agent plus proche de 1,True,0.013500,0.000500,True
+F1 primaire,agents composite,B0 mode,esperance,rappel,0.424861,0.383352,0.467084,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B0 tirage,tirage,exactitude,0.161251,0.154745,0.167646,0.000500,agent plus haut,True,0.013500,0.000500,True
+F1 primaire,agents composite,B0 tirage,tirage,proximite_intra,0.076178,0.057213,0.093918,0.000500,agent plus proche de 1,False,0.013500,0.000500,True
+F1 primaire,agents composite,B0 tirage,tirage,rappel,0.353456,0.310387,0.396740,0.000500,agent plus haut,True,0.013500,0.000500,True

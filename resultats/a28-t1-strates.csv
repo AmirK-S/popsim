@@ -1,0 +1,85 @@
+condition,type,metrique,moyenne_groupe,moyenne_temoin,n_groupe,n_temoin,difference,ic_items_bas,ic_items_haut,p_permutation
+B0 mode,binaire,distance,0.300000,0.266933,3,25,0.033067,-0.198667,0.190933,0.693431
+B0 mode,binaire,ratio_entropie,0.000000,0.028934,3,25,-0.028934,-0.086802,0.000000,1.000000
+B0 mode,nominal,distance,0.366667,0.621111,1,6,-0.254444,,,
+B0 mode,nominal,ratio_entropie,0.000000,0.000000,1,6,0.000000,,,
+B0 mode,ordinal 3 et plus,distance,0.237778,0.237108,8,34,0.000670,-0.031299,0.032885,0.971903
+B0 mode,ordinal 3 et plus,ratio_entropie,0.127502,0.014028,8,34,0.113473,-0.028057,0.280529,0.033797
+B0 tirage,binaire,distance,0.048889,0.051200,3,25,-0.002311,-0.045424,0.046133,0.962004
+B0 tirage,binaire,ratio_entropie,0.945333,0.967982,3,25,-0.022649,-0.097323,0.065533,0.769123
+B0 tirage,nominal,distance,0.060000,0.084444,1,6,-0.024444,,,
+B0 tirage,nominal,ratio_entropie,0.864926,0.991713,1,6,-0.126787,,,
+B0 tirage,ordinal 3 et plus,distance,0.031701,0.034395,8,34,-0.002694,-0.013834,0.008491,0.715828
+B0 tirage,ordinal 3 et plus,ratio_entropie,0.987774,0.990670,8,34,-0.002896,-0.056339,0.051021,0.908309
+B1 argmax,binaire,distance,0.142222,0.114400,3,25,0.027822,-0.068533,0.187200,0.474053
+B1 argmax,binaire,ratio_entropie,0.477274,0.598632,3,25,-0.121358,-0.573831,0.349632,0.569143
+B1 argmax,nominal,distance,0.093333,0.158889,1,6,-0.065556,,,
+B1 argmax,nominal,ratio_entropie,0.866455,0.818445,1,6,0.048010,,,
+B1 argmax,ordinal 3 et plus,distance,0.107049,0.087255,8,34,0.019794,-0.015965,0.055688,0.193381
+B1 argmax,ordinal 3 et plus,ratio_entropie,0.721402,0.733521,8,34,-0.012119,-0.150078,0.119574,0.858414
+B2 argmax,binaire,distance,0.173333,0.148533,3,25,0.024800,-0.094400,0.182133,0.707029
+B2 argmax,binaire,ratio_entropie,0.418274,0.467649,3,25,-0.049375,-0.466388,0.424030,0.829617
+B2 argmax,nominal,distance,0.340000,0.227778,1,6,0.112222,,,
+B2 argmax,nominal,ratio_entropie,0.141005,0.695093,1,6,-0.554087,,,
+B2 argmax,ordinal 3 et plus,distance,0.116632,0.110098,8,34,0.006534,-0.021863,0.036022,0.667533
+B2 argmax,ordinal 3 et plus,ratio_entropie,0.660532,0.612842,8,34,0.047690,-0.104055,0.195368,0.552445
+B3 foret,binaire,distance,0.211111,0.168000,3,25,0.043111,-0.101333,0.195200,0.431357
+B3 foret,binaire,ratio_entropie,0.330360,0.386833,3,25,-0.056473,-0.414336,0.386702,0.818818
+B3 foret,nominal,distance,0.180000,0.266667,1,6,-0.086667,,,
+B3 foret,nominal,ratio_entropie,0.684524,0.607140,1,6,0.077384,,,
+B3 foret,ordinal 3 et plus,distance,0.140694,0.133088,8,34,0.007606,-0.042075,0.061864,0.718028
+B3 foret,ordinal 3 et plus,ratio_entropie,0.548506,0.479818,8,34,0.068688,-0.162459,0.284948,0.542846
+C2,binaire,distance,0.366667,0.234400,3,25,0.132267,0.003627,0.243736,0.271173
+C2,binaire,ratio_entropie,1.327753,0.533314,3,25,0.794438,-0.517040,2.435588,0.060694
+C2,nominal,distance,0.586667,0.384444,1,6,0.202222,,,
+C2,nominal,ratio_entropie,0.506781,0.690126,1,6,-0.183345,,,
+C2,ordinal 3 et plus,distance,0.158507,0.161471,8,34,-0.002964,-0.053201,0.046905,0.930007
+C2,ordinal 3 et plus,ratio_entropie,0.666659,0.734582,8,34,-0.067923,-0.259219,0.109017,0.539046
+C3,binaire,distance,0.288889,0.249867,3,25,0.039022,-0.106402,0.188540,0.777622
+C3,binaire,ratio_entropie,1.476890,0.723948,3,25,0.752942,-0.096273,1.991928,0.066393
+C3,nominal,distance,0.660000,0.274444,1,6,0.385556,,,
+C3,nominal,ratio_entropie,0.350046,0.761737,1,6,-0.411691,,,
+C3,ordinal 3 et plus,distance,0.191424,0.169902,8,34,0.021522,-0.054555,0.103244,0.667633
+C3,ordinal 3 et plus,ratio_entropie,0.657453,0.658127,8,34,-0.000673,-0.160174,0.144468,0.994801
+agents composite,binaire,distance,0.186667,0.056800,3,25,0.129867,-0.042400,0.351740,0.037296
+agents composite,binaire,ratio_entropie,1.302041,0.957931,3,25,0.344110,-0.227566,1.217945,0.100290
+agents composite,nominal,distance,0.053333,0.108337,1,6,-0.055004,,,
+agents composite,nominal,ratio_entropie,1.032995,0.947391,1,6,0.085604,,,
+agents composite,ordinal 3 et plus,distance,0.118156,0.081659,8,34,0.036497,-0.002382,0.072355,0.034197
+agents composite,ordinal 3 et plus,ratio_entropie,0.775096,0.884134,8,34,-0.109038,-0.289697,0.058078,0.163284
+agents demographiques (v6),binaire,distance,0.293333,0.139620,3,25,0.153714,-0.079608,0.311764,0.051595
+agents demographiques (v6),binaire,ratio_entropie,0.128294,0.581614,3,25,-0.453319,-0.656879,-0.231790,0.056194
+agents demographiques (v6),nominal,distance,0.066309,0.226324,1,6,-0.160015,,,
+agents demographiques (v6),nominal,ratio_entropie,0.864187,0.796399,1,6,0.067788,,,
+agents demographiques (v6),ordinal 3 et plus,distance,0.176192,0.146606,8,34,0.029586,-0.021045,0.078536,0.257674
+agents demographiques (v6),ordinal 3 et plus,ratio_entropie,0.515177,0.568275,8,34,-0.053098,-0.281206,0.154206,0.654535
+agents enquete,binaire,distance,0.224444,0.069858,3,25,0.154587,-0.030406,0.325343,0.013499
+agents enquete,binaire,ratio_entropie,0.426401,0.929196,3,25,-0.502795,-0.915251,-0.183225,0.013899
+agents enquete,nominal,distance,0.113333,0.159441,1,6,-0.046107,,,
+agents enquete,nominal,ratio_entropie,0.809357,0.844494,1,6,-0.035137,,,
+agents enquete,ordinal 3 et plus,distance,0.118819,0.101746,8,34,0.017073,-0.013725,0.050225,0.404460
+agents enquete,ordinal 3 et plus,ratio_entropie,0.721031,0.863077,8,34,-0.142047,-0.298791,-0.014770,0.079892
+agents entretien (v3),binaire,distance,0.288889,0.081980,3,25,0.206909,-0.014082,0.341824,0.005499
+agents entretien (v3),binaire,ratio_entropie,0.082456,0.831338,3,25,-0.748883,-0.888864,-0.603745,0.000200
+agents entretien (v3),nominal,distance,0.091261,0.112413,1,6,-0.021151,,,
+agents entretien (v3),nominal,ratio_entropie,0.972001,0.983129,1,6,-0.011128,,,
+agents entretien (v3),ordinal 3 et plus,distance,0.128264,0.093979,8,34,0.034285,-0.009987,0.076386,0.109589
+agents entretien (v3),ordinal 3 et plus,ratio_entropie,0.756857,0.906921,8,34,-0.150064,-0.327598,0.036839,0.055694
+agents v7,binaire,distance,0.293318,0.166575,3,25,0.126743,-0.100994,0.279943,0.111989
+agents v7,binaire,ratio_entropie,0.099003,0.529558,3,25,-0.430554,-0.572143,-0.290210,0.017598
+agents v7,nominal,distance,0.173333,0.213848,1,6,-0.040515,,,
+agents v7,nominal,ratio_entropie,0.694730,0.835917,1,6,-0.141187,,,
+agents v7,ordinal 3 et plus,distance,0.173961,0.155828,8,34,0.018133,-0.030569,0.072385,0.465353
+agents v7,ordinal 3 et plus,ratio_entropie,0.578323,0.624884,8,34,-0.046561,-0.192150,0.092726,0.582242
+agents v8,binaire,distance,0.297763,0.079087,3,25,0.218676,-0.010407,0.364431,0.003700
+agents v8,binaire,ratio_entropie,0.021502,0.836869,3,25,-0.815367,-0.937195,-0.679127,0.004300
+agents v8,nominal,distance,0.240000,0.280000,1,6,-0.040000,,,
+agents v8,nominal,ratio_entropie,0.475424,0.670431,1,6,-0.195007,,,
+agents v8,ordinal 3 et plus,distance,0.122917,0.116995,8,34,0.005922,-0.040401,0.054731,0.828717
+agents v8,ordinal 3 et plus,ratio_entropie,0.753247,0.833785,8,34,-0.080537,-0.300956,0.129419,0.534147
+humains vague 2,binaire,distance,0.026667,0.025600,3,25,0.001067,-0.025067,0.038933,1.000000
+humains vague 2,binaire,ratio_entropie,0.954050,1.023890,3,25,-0.069840,-0.123557,-0.015495,0.236876
+humains vague 2,nominal,distance,0.006667,0.043333,1,6,-0.036667,,,
+humains vague 2,nominal,ratio_entropie,0.992841,1.007866,1,6,-0.015025,,,
+humains vague 2,ordinal 3 et plus,distance,0.022326,0.024641,8,34,-0.002314,-0.008423,0.004052,0.630137
+humains vague 2,ordinal 3 et plus,ratio_entropie,0.989341,0.987887,8,34,0.001454,-0.029665,0.032852,0.926007

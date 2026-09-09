@@ -1,0 +1,13 @@
+cle_modele,K,cellules_de_ce_K,recopies_exactes,taux,retire_des_mesures
+q4,2,312,0,0.0,False
+q4,3,318,0,0.0,True
+q4,6,24,0,0.0,True
+q4nogab,2,312,0,0.0,False
+q4nogab,3,318,0,0.0,True
+q4nogab,6,24,0,0.0,True
+q4base,2,312,3,0.009615384615384616,False
+q4base,3,318,0,0.0,True
+q4base,6,24,0,0.0,True
+q4hyb,2,312,1,0.003205128205128205,False
+q4hyb,3,318,0,0.0,True
+q4hyb,6,24,0,0.0,True

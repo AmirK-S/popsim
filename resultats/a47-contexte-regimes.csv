@@ -1,0 +1,8 @@
+regime,famille,n_items_retires,n_items_de_contexte
+"severe, retrait de la famille",depenses publiques (nat*),17,132
+"severe, retrait de la famille",confiance dans les institutions (con*),13,136
+"severe, retrait de la famille",avortement (ab*),7,142
+"severe, retrait de la famille",libertes civiles (spk/col/lib),11,138
+"severe, retrait de la famille",fin de vie (suicide/letdie),5,144
+"severe, retrait de la famille",roles de genre (fe*),5,144
+"facile, retrait du bloc de validation croisee",bloc de 30 items,30,119

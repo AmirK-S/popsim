@@ -1,0 +1,12 @@
+partition,camp,n_personnes,n_items,gini_simpson,entropie
+bloc3,gauche,909,609,0.536457,1.436575
+bloc3,centre,582,609,0.549087,1.470836
+bloc3,droite,567,609,0.547395,1.466046
+points5,tres conservateur,137,609,0.555372,1.489262
+points5,conservateur,430,609,0.543378,1.453612
+points5,modere,582,609,0.549087,1.470836
+points5,liberal,564,609,0.538347,1.438183
+points5,tres liberal,345,609,0.530601,1.425551
+parti3,gauche,847,609,0.538191,1.439904
+parti3,centre,609,609,0.543849,1.459882
+parti3,droite,540,609,0.550527,1.474113

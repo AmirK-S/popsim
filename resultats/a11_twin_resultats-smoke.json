@@ -1,0 +1,120 @@
+{
+  "jeu": "Twin-2K-500, LLM-Digital-Twin/Twin-2K-500, CC BY 4.0",
+  "suffixe": "smoke",
+  "conditions_evaluees": [
+    "C3-Twin"
+  ],
+  "fichiers_traces": {
+    "C3-Twin": [
+      "/Users/amirkellousidhoum/Desktop/Code/Projets/popsim/data/traces/a11-C3-Twin-p1-smoke.jsonl"
+    ]
+  },
+  "personnes_evaluees": [
+    1392
+  ],
+  "n_personnes": 1,
+  "n_items": 108,
+  "n_cellules_evaluees": 8,
+  "plafond_test_retest": {
+    "exactitude": 0.375,
+    "ic_bas": 0.375,
+    "ic_haut": 0.375
+  },
+  "qualite_des_appels": {
+    "C3-Twin": {
+      "passes_par_appel": [
+        1
+      ],
+      "appels_rejetes": 0,
+      "masse_min": 0.9999815351153178,
+      "masse_mediane": 0.9999979375772924,
+      "masse_moyenne": 0.9999958899605701
+    }
+  },
+  "calibration": {
+    "C3-Twin": [
+      {
+        "borne_basse": 0.4,
+        "borne_haute": 0.5,
+        "n": 1,
+        "confiance": 0.4824299470752195,
+        "exactitude": 0.0
+      },
+      {
+        "borne_basse": 0.5,
+        "borne_haute": 0.6000000000000001,
+        "n": 1,
+        "confiance": 0.5501785377738503,
+        "exactitude": 0.0
+      },
+      {
+        "borne_basse": 0.7000000000000001,
+        "borne_haute": 0.8,
+        "n": 3,
+        "confiance": 0.7575811366959977,
+        "exactitude": 0.0
+      },
+      {
+        "borne_basse": 0.8,
+        "borne_haute": 0.9,
+        "n": 1,
+        "confiance": 0.8542453274163303,
+        "exactitude": 0.0
+      },
+      {
+        "borne_basse": 0.9,
+        "borne_haute": 1.0,
+        "n": 2,
+        "confiance": 0.9806506566504696,
+        "exactitude": 0.0
+      }
+    ]
+  },
+  "controle_alignement_formate_catalogue": null,
+  "resultats": [
+    {
+      "methode": "retest humain (plafond)",
+      "information": "la meme personne, deux semaines plus tot",
+      "n_personnes": 1,
+      "n_cellules": 8,
+      "exactitude": 0.375,
+      "ic_bas": 0.375,
+      "ic_haut": 0.375,
+      "normalise": 1.0,
+      "part_diversite_humaine": NaN,
+      "accord_par_paires": NaN
+    },
+    {
+      "methode": "C3-Twin (Qwen3-4B local)",
+      "information": "persona texte complet vagues 1 a 3, 27 500 tokens",
+      "n_personnes": 1,
+      "n_cellules": 8,
+      "exactitude": 0.0,
+      "ic_bas": 0.0,
+      "ic_haut": 0.0,
+      "normalise": 0.0,
+      "part_diversite_humaine": NaN,
+      "accord_par_paires": NaN,
+      "exactitude_esperee_tirage": 0.044249284759221116,
+      "confiance_moyenne": 0.7651123169567915,
+      "ecart_calibration": 0.7651123169567915,
+      "ece": 0.7651123169567915
+    }
+  ],
+  "exactitude_par_bloc": {
+    "retest humain (plafond)": {
+      "False consensus": {
+        "n_items": 8,
+        "n_cellules": 8,
+        "exactitude": 0.375
+      }
+    },
+    "C3-Twin (Qwen3-4B local)": {
+      "False consensus": {
+        "n_items": 8,
+        "n_cellules": 8,
+        "exactitude": 0.0
+      }
+    }
+  }
+}

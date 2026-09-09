@@ -1,0 +1,145 @@
+condition,axe,mesure,ratio_inter,ratio_intra
+humains vague 1,gender,entropie,1.0000,1.0000
+humains vague 1,gender,gini_simpson,1.0000,1.0000
+humains vague 1,gender,variance_ordinale,1.0000,1.0000
+humains vague 1,race,entropie,1.0000,1.0000
+humains vague 1,race,gini_simpson,1.0000,1.0000
+humains vague 1,race,variance_ordinale,1.0000,1.0000
+humains vague 1,political_ideology,entropie,1.0000,1.0000
+humains vague 1,political_ideology,gini_simpson,1.0000,1.0000
+humains vague 1,political_ideology,variance_ordinale,1.0000,1.0000
+humains vague 1,age,entropie,1.0000,1.0000
+humains vague 1,age,gini_simpson,1.0000,1.0000
+humains vague 1,age,variance_ordinale,1.0000,1.0000
+humains vague 1,education,entropie,1.0000,1.0000
+humains vague 1,education,gini_simpson,1.0000,1.0000
+humains vague 1,education,variance_ordinale,1.0000,1.0000
+humains vague 1,profil croise,entropie,1.0000,1.0000
+humains vague 1,profil croise,gini_simpson,1.0000,1.0000
+humains vague 1,profil croise,variance_ordinale,1.0000,1.0000
+humains vague 2,gender,entropie,0.9690,1.0045
+humains vague 2,gender,gini_simpson,0.9782,1.0033
+humains vague 2,gender,variance_ordinale,0.9827,0.9904
+humains vague 2,race,entropie,1.0303,1.0042
+humains vague 2,race,gini_simpson,1.0616,1.0029
+humains vague 2,race,variance_ordinale,1.0763,0.9897
+humains vague 2,political_ideology,entropie,1.0128,1.0038
+humains vague 2,political_ideology,gini_simpson,1.0152,1.0025
+humains vague 2,political_ideology,variance_ordinale,1.0304,0.9864
+humains vague 2,age,entropie,0.9772,1.0049
+humains vague 2,age,gini_simpson,0.9666,1.0040
+humains vague 2,age,variance_ordinale,0.8926,0.9925
+humains vague 2,education,entropie,1.0076,1.0042
+humains vague 2,education,gini_simpson,1.0237,1.0029
+humains vague 2,education,variance_ordinale,1.0062,0.9900
+humains vague 2,profil croise,entropie,1.0062,1.0044
+humains vague 2,profil croise,gini_simpson,1.0196,1.0025
+humains vague 2,profil croise,variance_ordinale,1.0241,0.9870
+agents composite,gender,entropie,1.2623,0.9026
+agents composite,gender,gini_simpson,1.4067,0.9151
+agents composite,gender,variance_ordinale,1.4462,0.9031
+agents composite,race,entropie,1.4805,0.9008
+agents composite,race,gini_simpson,1.5037,0.9135
+agents composite,race,variance_ordinale,1.5209,0.9020
+agents composite,political_ideology,entropie,2.0890,0.8516
+agents composite,political_ideology,gini_simpson,2.1149,0.8589
+agents composite,political_ideology,variance_ordinale,2.3261,0.7691
+agents composite,age,entropie,1.1699,0.8981
+agents composite,age,gini_simpson,1.1427,0.9119
+agents composite,age,variance_ordinale,1.2149,0.9002
+agents composite,education,entropie,1.3507,0.8995
+agents composite,education,gini_simpson,1.3339,0.9129
+agents composite,education,variance_ordinale,1.3976,0.9011
+agents composite,profil croise,entropie,1.8929,0.8523
+agents composite,profil croise,gini_simpson,1.9388,0.8618
+agents composite,profil croise,variance_ordinale,2.1795,0.7733
+agents entretien (v3),gender,entropie,1.3579,0.8790
+agents entretien (v3),gender,gini_simpson,1.4677,0.8795
+agents entretien (v3),gender,variance_ordinale,1.7760,0.9561
+agents entretien (v3),race,entropie,1.6081,0.8770
+agents entretien (v3),race,gini_simpson,1.5593,0.8778
+agents entretien (v3),race,variance_ordinale,1.9637,0.9540
+agents entretien (v3),political_ideology,entropie,2.7219,0.7996
+agents entretien (v3),political_ideology,gini_simpson,2.7589,0.7906
+agents entretien (v3),political_ideology,variance_ordinale,3.1586,0.7492
+agents entretien (v3),age,entropie,1.1875,0.8740
+agents entretien (v3),age,gini_simpson,1.1172,0.8764
+agents entretien (v3),age,variance_ordinale,1.3383,0.9539
+agents entretien (v3),education,entropie,1.2663,0.8770
+agents entretien (v3),education,gini_simpson,1.1895,0.8787
+agents entretien (v3),education,variance_ordinale,1.3195,0.9577
+agents entretien (v3),profil croise,entropie,2.4390,0.7998
+agents entretien (v3),profil croise,gini_simpson,2.5338,0.7927
+agents entretien (v3),profil croise,variance_ordinale,3.0217,0.7459
+agents enquete,gender,entropie,0.7950,0.8450
+agents enquete,gender,gini_simpson,1.0249,0.8700
+agents enquete,gender,variance_ordinale,0.8488,0.8792
+agents enquete,race,entropie,1.2179,0.8424
+agents enquete,race,gini_simpson,1.2843,0.8682
+agents enquete,race,variance_ordinale,1.3968,0.8747
+agents enquete,political_ideology,entropie,2.4945,0.7715
+agents enquete,political_ideology,gini_simpson,2.4853,0.7922
+agents enquete,political_ideology,variance_ordinale,2.6429,0.7077
+agents enquete,age,entropie,0.7762,0.8460
+agents enquete,age,gini_simpson,0.8442,0.8714
+agents enquete,age,variance_ordinale,0.9598,0.8773
+agents enquete,education,entropie,1.0645,0.8422
+agents enquete,education,gini_simpson,1.0274,0.8691
+agents enquete,education,variance_ordinale,0.6740,0.8816
+agents enquete,profil croise,entropie,2.0560,0.7810
+agents enquete,profil croise,gini_simpson,2.1228,0.8030
+agents enquete,profil croise,variance_ordinale,2.3302,0.7266
+agents persona (v7),gender,entropie,0.9936,0.6605
+agents persona (v7),gender,gini_simpson,0.9467,0.6482
+agents persona (v7),gender,variance_ordinale,0.6760,0.5380
+agents persona (v7),race,entropie,0.7255,0.6616
+agents persona (v7),race,gini_simpson,0.5686,0.6499
+agents persona (v7),race,variance_ordinale,0.4595,0.5398
+agents persona (v7),political_ideology,entropie,0.2729,0.6785
+agents persona (v7),political_ideology,gini_simpson,0.1810,0.6722
+agents persona (v7),political_ideology,variance_ordinale,0.1330,0.5784
+agents persona (v7),age,entropie,0.7155,0.6603
+agents persona (v7),age,gini_simpson,0.6220,0.6501
+agents persona (v7),age,variance_ordinale,0.4494,0.5412
+agents persona (v7),education,entropie,0.3543,0.6651
+agents persona (v7),education,gini_simpson,0.3356,0.6527
+agents persona (v7),education,variance_ordinale,0.2366,0.5431
+agents persona (v7),profil croise,entropie,0.3803,0.6740
+agents persona (v7),profil croise,gini_simpson,0.2808,0.6694
+agents persona (v7),profil croise,variance_ordinale,0.1932,0.5753
+agents demographiques (v6),gender,entropie,1.5659,0.6381
+agents demographiques (v6),gender,gini_simpson,1.4983,0.6429
+agents demographiques (v6),gender,variance_ordinale,0.9437,0.4988
+agents demographiques (v6),race,entropie,2.4423,0.6319
+agents demographiques (v6),race,gini_simpson,2.1347,0.6375
+agents demographiques (v6),race,variance_ordinale,1.9959,0.4898
+agents demographiques (v6),political_ideology,entropie,0.3437,0.6555
+agents demographiques (v6),political_ideology,gini_simpson,0.3479,0.6612
+agents demographiques (v6),political_ideology,variance_ordinale,0.2250,0.5292
+agents demographiques (v6),age,entropie,0.7029,0.6407
+agents demographiques (v6),age,gini_simpson,0.7289,0.6446
+agents demographiques (v6),age,variance_ordinale,0.5601,0.5010
+agents demographiques (v6),education,entropie,2.6897,0.6206
+agents demographiques (v6),education,gini_simpson,2.6371,0.6263
+agents demographiques (v6),education,variance_ordinale,1.7043,0.4868
+agents demographiques (v6),profil croise,entropie,0.7051,0.6377
+agents demographiques (v6),profil croise,gini_simpson,0.6504,0.6465
+agents demographiques (v6),profil croise,variance_ordinale,0.4136,0.5116
+agents demographiques (v8),gender,entropie,1.0870,0.8001
+agents demographiques (v8),gender,gini_simpson,1.1339,0.8308
+agents demographiques (v8),gender,variance_ordinale,1.1813,0.9493
+agents demographiques (v8),race,entropie,4.0105,0.7822
+agents demographiques (v8),race,gini_simpson,3.8636,0.8135
+agents demographiques (v8),race,variance_ordinale,3.4273,0.9302
+agents demographiques (v8),political_ideology,entropie,8.5144,0.4605
+agents demographiques (v8),political_ideology,gini_simpson,8.2486,0.4713
+agents demographiques (v8),political_ideology,variance_ordinale,7.6270,0.3024
+agents demographiques (v8),age,entropie,3.4988,0.7408
+agents demographiques (v8),age,gini_simpson,3.6151,0.7684
+agents demographiques (v8),age,variance_ordinale,1.5703,0.9374
+agents demographiques (v8),education,entropie,0.3685,0.8057
+agents demographiques (v8),education,gini_simpson,0.3835,0.8363
+agents demographiques (v8),education,variance_ordinale,-0.0399,0.9632
+agents demographiques (v8),profil croise,entropie,6.6448,0.4982
+agents demographiques (v8),profil croise,gini_simpson,6.5709,0.5217
+agents demographiques (v8),profil croise,variance_ordinale,6.7129,0.3464

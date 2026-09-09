@@ -1,0 +1,62 @@
+{
+  "moteur": "llama.cpp",
+  "modele": "data/modeles/gguf/gpt-oss-20b-MXFP4.gguf",
+  "chargement_s": 3.5782339572906494,
+  "cache_kv": "q8_0",
+  "slots_paralleles": 8,
+  "contexte_par_slot": 8192,
+  "tokens_persona": 2652,
+  "t1": {
+    "brut": {
+      "A": 0.012130785972638112,
+      "B": 0.008613089002622434,
+      "C": 0.002402346939948415,
+      "D": 0.0,
+      "E": 0.003819597364720461
+    },
+    "normalisee": {
+      "A": 0.449857868092553,
+      "B": 0.3194076513385644,
+      "C": 0.08908859452812824,
+      "D": 0.0,
+      "E": 0.1416458860407544
+    },
+    "manquantes": [
+      "D"
+    ],
+    "masse_totale": 0.026965819279929422,
+    "entropie_bits": 1.7545428752232963,
+    "methode": "top-k renvoye par llama-server (n_probs=40)"
+  },
+  "t2": {
+    "applicable": false
+  },
+  "t3_t4": {
+    "tokens_prompt": 2709,
+    "prefill_t_par_s": 431.4776396946686,
+    "decodage_t_par_s": 25.327073225354916
+  },
+  "t5": {
+    "tokens_persona": 2652,
+    "froid_ms": 6571.054,
+    "chaud_ms": 369.4995,
+    "sans_cache_ms": 6100.7635,
+    "tokens_reevalues": 54.5,
+    "gain": 16.510884317840755
+  },
+  "t7": {
+    "duree_totale_s": 24.95841304201167,
+    "premier_appel_ms": 6069.279165938497,
+    "mediane_ms": 376.2173750437796,
+    "min_ms": 347.657416947186,
+    "max_ms": 566.0813340218738,
+    "memoire_debut_mo": 11791.875,
+    "memoire_fin_mo": 11792.5625,
+    "entropie_moyenne_bits": 1.723462400108493,
+    "appels_par_heure": 9568.936042842455
+  },
+  "duree_du_banc_s": 92.93526411056519,
+  "appels_par_heure_sequentiel": 9568.936042842455,
+  "appels_par_heure_avec_lots": 9568.936042842455,
+  "heures_pour_45000_appels": 4.702717188047244
+}

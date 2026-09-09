@@ -1,0 +1,60 @@
+{
+  "moteur": "llama.cpp",
+  "modele": "data/modeles/gguf/Qwen3-30B-A3B-Instruct-2507-Q4_K_M.gguf",
+  "chargement_s": 9.660022974014282,
+  "cache_kv": "q8_0",
+  "slots_paralleles": 4,
+  "contexte_par_slot": 8192,
+  "tokens_persona": 3029,
+  "t1": {
+    "brut": {
+      "A": 0.01175892897641705,
+      "B": 0.0026114198685984373,
+      "C": 0.049108839940978026,
+      "D": 0.8609722822906738,
+      "E": 0.0017074380478622978
+    },
+    "normalisee": {
+      "A": 0.012696448590590588,
+      "B": 0.0028196239790717285,
+      "C": 0.053024205087439207,
+      "D": 0.9296161531335105,
+      "E": 0.0018435692093879312
+    },
+    "manquantes": [],
+    "masse_totale": 0.9261589091245296,
+    "entropie_bits": 0.44316553971561123,
+    "methode": "top-k renvoye par llama-server (n_probs=40)"
+  },
+  "t2": {
+    "applicable": false
+  },
+  "t3_t4": {
+    "tokens_prompt": 3094,
+    "prefill_t_par_s": 282.07564276824695,
+    "decodage_t_par_s": 22.599473272119013
+  },
+  "t5": {
+    "tokens_persona": 3029,
+    "froid_ms": 9735.568,
+    "chaud_ms": 422.5155,
+    "sans_cache_ms": 9264.8005,
+    "tokens_reevalues": 63.0,
+    "gain": 21.92771744468546
+  },
+  "t7": {
+    "duree_totale_s": 31.849663333036005,
+    "premier_appel_ms": 9196.03329198435,
+    "mediane_ms": 431.66645895689726,
+    "min_ms": 411.4549580262974,
+    "max_ms": 1048.6104590818286,
+    "memoire_debut_mo": 9619.671875,
+    "memoire_fin_mo": 9587.40625,
+    "entropie_moyenne_bits": 0.8664536881951783,
+    "appels_par_heure": 8339.772352707781
+  },
+  "duree_du_banc_s": 135.4781723022461,
+  "appels_par_heure_sequentiel": 8339.772352707781,
+  "appels_par_heure_avec_lots": 8339.772352707781,
+  "heures_pour_45000_appels": 5.395830736961216
+}

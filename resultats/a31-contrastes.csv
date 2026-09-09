@@ -1,0 +1,86 @@
+famille,hypothese,comparaison,condition,perimetre,difference,ic_bas,ic_haut,p_bootstrap,p_holm,p_bh
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents composite,1052,0.069134,0.022437,0.116437,0.003500,0.136500,0.011813
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents composite,1052,-0.025057,-0.071510,0.022831,0.290000,1.000000,0.455143
+primaire,H3 position extreme,contre les vraies raretes humaines,agents composite,1052,0.006864,-0.014990,0.028402,0.542000,1.000000,0.723073
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents composite,1052,-0.005579,-0.007913,-0.003288,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents composite,1052,0.007623,0.006209,0.009171,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents composite,1052,0.032943,0.028748,0.037166,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents entretien (v3),1052,0.016735,-0.033651,0.067280,0.507000,1.000000,0.702000
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents entretien (v3),1052,-0.002755,-0.047617,0.042712,0.908500,1.000000,1.000000
+primaire,H3 position extreme,contre les vraies raretes humaines,agents entretien (v3),1052,0.006443,-0.014961,0.027794,0.549000,1.000000,0.723073
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents entretien (v3),1052,-0.008155,-0.010527,-0.005800,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents entretien (v3),1052,0.003832,0.002629,0.005145,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents entretien (v3),1052,0.035707,0.031593,0.039783,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents enquete,1052,0.047652,-0.004494,0.097363,0.076500,1.000000,0.147536
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents enquete,1052,-0.038349,-0.082518,0.003257,0.071000,1.000000,0.142000
+primaire,H3 position extreme,contre les vraies raretes humaines,agents enquete,1052,-0.020778,-0.051416,0.009885,0.180000,1.000000,0.294545
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents enquete,1052,-0.010853,-0.013858,-0.007959,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents enquete,1052,0.007175,0.005956,0.008459,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents enquete,1052,0.032320,0.028065,0.036675,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents demographiques (v6),1052,-0.182498,-0.252970,-0.109539,0.000250,0.013500,0.000964
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents demographiques (v6),1052,0.051837,0.003689,0.098227,0.036500,1.000000,0.082125
+primaire,H3 position extreme,contre les vraies raretes humaines,agents demographiques (v6),1052,-0.045457,-0.082925,-0.009016,0.013000,0.429000,0.031909
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents demographiques (v6),1052,-0.003214,-0.005537,-0.000858,0.005000,0.185000,0.015000
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents demographiques (v6),1052,0.002182,0.000882,0.003455,0.001500,0.016500,0.002294
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents demographiques (v6),1052,0.007499,0.002984,0.012180,0.001500,0.016500,0.002294
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents v7,1052,-0.085505,-0.150547,-0.021168,0.009500,0.332500,0.025650
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents v7,1052,0.064169,0.017261,0.109920,0.006000,0.216000,0.017053
+primaire,H3 position extreme,contre les vraies raretes humaines,agents v7,1052,-0.036122,-0.076773,0.002973,0.064000,1.000000,0.132923
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents v7,1052,-0.008771,-0.013946,-0.003710,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents v7,1052,0.000802,-0.000584,0.002294,0.266000,0.798000,0.288167
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents v7,1052,0.006137,0.001349,0.011009,0.010500,0.085500,0.014368
+primaire,H1a deplacement dans la famille,contre les humains vague 2,agents v8,1052,-0.041302,-0.090751,0.007715,0.104500,1.000000,0.188100
+primaire,H2a rarete modale du segment,contre les humains vague 2,agents v8,1052,0.140991,0.101024,0.181691,0.000250,0.013500,0.000964
+primaire,H3 position extreme,contre les vraies raretes humaines,agents v8,1052,-0.002055,-0.024371,0.020220,0.864000,1.000000,1.000000
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,agents v8,1052,-0.013410,-0.017160,-0.009856,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,agents v8,1052,0.003637,0.002300,0.005018,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,agents v8,1052,0.063773,0.060258,0.067150,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,C2,150,-0.012509,-0.157593,0.139044,0.891500,1.000000,1.000000
+primaire,H2a rarete modale du segment,contre les humains vague 2,C2,150,0.014970,-0.070282,0.106799,0.721000,1.000000,0.905442
+primaire,H3 position extreme,contre les vraies raretes humaines,C2,150,-0.004479,-0.111363,0.104763,0.892500,1.000000,1.000000
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,C2,150,-0.019909,-0.033242,-0.007905,0.000250,0.013500,0.000964
+primaire,H4 sur confiance,fausses raretes contre raretes justes,C2,150,-0.161819,-0.260300,-0.057907,0.004500,0.171000,0.014294
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,C2,150,0.002366,-0.000717,0.005725,0.128500,0.726000,0.151864
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,C2,150,0.031518,0.023515,0.039616,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,C3,150,-0.119417,-0.234878,0.003568,0.059500,1.000000,0.128520
+primaire,H2a rarete modale du segment,contre les humains vague 2,C3,150,-0.045314,-0.131205,0.048481,0.369500,1.000000,0.554250
+primaire,H3 position extreme,contre les vraies raretes humaines,C3,150,0.006921,-0.059350,0.081398,0.890500,1.000000,1.000000
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,C3,150,-0.018793,-0.028429,-0.008499,0.000250,0.013500,0.000964
+primaire,H4 sur confiance,fausses raretes contre raretes justes,C3,150,-0.176586,-0.257603,-0.090621,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,C3,150,0.003477,0.001407,0.005882,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,C3,150,0.004237,-0.001108,0.009724,0.121000,0.726000,0.149810
+primaire,H1a deplacement dans la famille,contre les humains vague 2,B0 mode,1052,,,,1.000000,1.000000,1.000000
+primaire,H2a rarete modale du segment,contre les humains vague 2,B0 mode,1052,,,,1.000000,1.000000,1.000000
+primaire,H3 position extreme,contre les vraies raretes humaines,B0 mode,1052,,,,1.000000,1.000000,1.000000
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,B0 mode,1052,,,,1.000000,1.000000,1.000000
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,B0 mode,1052,,,,1.000000,1.000000,1.000000
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,B0 mode,1052,,,,1.000000,1.000000,1.000000
+primaire,H1a deplacement dans la famille,contre les humains vague 2,B0 tirage,1052,-0.160736,-0.210167,-0.111266,0.000250,0.013500,0.000964
+primaire,H2a rarete modale du segment,contre les humains vague 2,B0 tirage,1052,-0.047084,-0.084636,-0.010363,0.014000,0.448000,0.032870
+primaire,H3 position extreme,contre les vraies raretes humaines,B0 tirage,1052,0.000769,-0.022145,0.022512,0.942000,1.000000,1.000000
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,B0 tirage,1052,-0.011259,-0.015132,-0.007580,0.000250,0.013500,0.000964
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,B0 tirage,1052,-0.000741,-0.001310,-0.000186,0.009500,0.085500,0.013722
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,B0 tirage,1052,-0.002102,-0.004388,0.000109,0.069000,0.483000,0.089700
+primaire,H1a deplacement dans la famille,contre les humains vague 2,B1 argmax,1052,-0.033084,-0.112696,0.048140,0.421500,1.000000,0.598974
+primaire,H2a rarete modale du segment,contre les humains vague 2,B1 argmax,1052,0.143853,0.091215,0.193993,0.000250,0.013500,0.000964
+primaire,H3 position extreme,contre les vraies raretes humaines,B1 argmax,1052,-0.007360,-0.045585,0.030302,0.697500,1.000000,0.896786
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,B1 argmax,1052,-0.005162,-0.009566,-0.001154,0.010500,0.357000,0.027000
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,B1 argmax,1052,0.003413,0.001606,0.005249,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,B1 argmax,1052,0.063811,0.055862,0.071936,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,B2 argmax,1052,0.219235,0.089998,0.346381,0.002000,0.080000,0.007200
+primaire,H2a rarete modale du segment,contre les humains vague 2,B2 argmax,1052,0.300486,0.201898,0.391059,0.000250,0.013500,0.000964
+primaire,H3 position extreme,contre les vraies raretes humaines,B2 argmax,1052,-0.059873,-0.150080,0.025754,0.160500,1.000000,0.270844
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,B2 argmax,1052,-0.003666,-0.011721,0.004300,0.380500,1.000000,0.555324
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,B2 argmax,1052,0.019624,0.013782,0.025525,0.000250,0.006500,0.000433
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,B2 argmax,1052,0.086080,0.065609,0.106154,0.000250,0.006500,0.000433
+primaire,H1a deplacement dans la famille,contre les humains vague 2,B3 foret,1052,-0.170765,-0.319021,0.029343,0.087500,1.000000,0.162931
+primaire,H2a rarete modale du segment,contre les humains vague 2,B3 foret,1052,-0.083805,-0.237938,0.076778,0.295000,1.000000,0.455143
+primaire,H3 position extreme,contre les vraies raretes humaines,B3 foret,1052,0.070001,-0.026018,0.162841,0.152500,1.000000,0.265645
+primaire,H5 rarete du contexte,fausses raretes contre raretes justes,B3 foret,1052,-0.000093,-0.007703,0.007470,0.983000,1.000000,1.000000
+secondaire,H1b exces de rarete de la personne,contre le temoin aveugle a la personne,B3 foret,1052,0.003529,-0.001411,0.008774,0.164500,0.726000,0.185957
+secondaire,H2b exces de rarete du segment,contre le temoin aveugle a la personne,B3 foret,1052,0.129481,0.104295,0.155242,0.000250,0.006500,0.000433
+"post hoc, ablation",H1a deplacement dans la famille,C2 avec etiquette contre C3 sans etiquette,C2 moins C3,150,0.106908,-0.021129,0.237341,0.102000,0.285000,0.127500
+"post hoc, ablation",H2a rarete modale du segment,C2 avec etiquette contre C3 sans etiquette,C2 moins C3,150,0.060284,-0.011781,0.132886,0.095000,0.285000,0.127500
+"post hoc, ablation",H3 position extreme,C2 avec etiquette contre C3 sans etiquette,C2 moins C3,150,-0.149422,-0.214059,-0.092616,0.000250,0.001250,0.000625
+"post hoc, ablation",H1b exces de rarete de la personne,C2 avec etiquette contre C3 sans etiquette,C2 moins C3,150,-0.001155,-0.004617,0.002400,0.553500,0.553500,0.553500
+"post hoc, ablation",H2b exces de rarete du segment,C2 avec etiquette contre C3 sans etiquette,C2 moins C3,150,0.033832,0.025031,0.042968,0.000250,0.001250,0.000625

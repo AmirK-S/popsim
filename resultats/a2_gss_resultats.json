@@ -1,0 +1,260 @@
+{
+  "jeu": "OSF t6g7k, GSS filtre",
+  "n_participants": 1052,
+  "n_items_cibles": 149,
+  "attributs_demographiques": [
+    "age",
+    "census_division",
+    "political_ideology",
+    "political_party",
+    "education",
+    "race",
+    "ethnicity",
+    "gender",
+    "income",
+    "neighborhood",
+    "sexual_orientation"
+  ],
+  "items_retires_pour_fuite": [
+    "polviews"
+  ],
+  "k_voisins": 30,
+  "n_plis": 5,
+  "n_blocs_items": 5,
+  "test_retest_humain": {
+    "exactitude": 0.795002169086687,
+    "ic_bas": 0.7897309694541558,
+    "ic_haut": 0.7999145124658689
+  },
+  "baselines": [
+    {
+      "baseline": "B0 mode",
+      "exactitude": 0.5933855615382653,
+      "ic_bas": 0.5889832725138439,
+      "ic_haut": 0.597609538877689,
+      "part_diversite_humaine": 0.033488133955943536,
+      "accord_par_paires": 0.9806701318474977
+    },
+    {
+      "baseline": "B0 tirage",
+      "exactitude": 0.4918276469237247,
+      "ic_bas": 0.4890898129481716,
+      "ic_haut": 0.494717795442366,
+      "part_diversite_humaine": 0.9989705102201064,
+      "accord_par_paires": 0.4932077491183374
+    },
+    {
+      "baseline": "B1 argmax",
+      "exactitude": 0.6208564064613266,
+      "ic_bas": 0.6168620971240463,
+      "ic_haut": 0.6250106859417665,
+      "part_diversite_humaine": 0.740353905551124,
+      "accord_par_paires": 0.6248265865757681
+    },
+    {
+      "baseline": "B1 tirage",
+      "exactitude": 0.5425842753974532,
+      "ic_bas": 0.5390754586980376,
+      "ic_haut": 0.5461068083803301,
+      "part_diversite_humaine": 1.0003044888229577,
+      "accord_par_paires": 0.4921026281628913
+    },
+    {
+      "baseline": "B2 argmax",
+      "exactitude": 0.6717087299359481,
+      "ic_bas": 0.6675426480720646,
+      "ic_haut": 0.6756263237808456,
+      "part_diversite_humaine": 0.5852715175416755,
+      "accord_par_paires": 0.694434237921919
+    },
+    {
+      "baseline": "B2 tirage",
+      "exactitude": 0.5752354097021972,
+      "ic_bas": 0.5713308941740883,
+      "ic_haut": 0.5789742133870927,
+      "part_diversite_humaine": 0.9540300135721792,
+      "accord_par_paires": 0.517211005407068
+    }
+  ],
+  "b1_sans_politique": {
+    "exactitude": 0.5997652282644754,
+    "ic_bas": 0.595847793911246,
+    "ic_haut": 0.6037590591267513,
+    "part_diversite_humaine": 0.6370633289303456,
+    "accord_par_paires": 0.6777460009808783
+  },
+  "references_llm": [
+    {
+      "condition": "agents composite",
+      "exactitude": 0.683932171383367,
+      "ic_bas": 0.6799252622043024,
+      "ic_haut": 0.6879334983540459,
+      "part_diversite_humaine": 0.895930502907929,
+      "accord_par_paires": 0.538555415703333
+    },
+    {
+      "condition": "agents entretien (v3)",
+      "exactitude": 0.6564932247939368,
+      "ic_bas": 0.6527290619338045,
+      "ic_haut": 0.6603926365886646,
+      "part_diversite_humaine": 0.871007162735559,
+      "accord_par_paires": 0.5591026986057445
+    },
+    {
+      "condition": "agents enquete",
+      "exactitude": 0.6509875724092173,
+      "ic_bas": 0.6471275550565239,
+      "ic_haut": 0.6548286102534003,
+      "part_diversite_humaine": 0.8610453846930312,
+      "accord_par_paires": 0.5539840118632579
+    },
+    {
+      "condition": "agents demographiques (v6)",
+      "exactitude": 0.581787327430015,
+      "ic_bas": 0.5774167772475566,
+      "ic_haut": 0.585858352259678,
+      "part_diversite_humaine": 0.638504403539534,
+      "accord_par_paires": 0.6772189826625022
+    },
+    {
+      "condition": "agents v7",
+      "exactitude": 0.5640135759307934,
+      "ic_bas": 0.5589468446168372,
+      "ic_haut": 0.5690732896113506,
+      "part_diversite_humaine": 0.6420547562650039,
+      "accord_par_paires": 0.6830419427812484
+    },
+    {
+      "condition": "agents v8",
+      "exactitude": 0.559145890218695,
+      "ic_bas": 0.5542397670145711,
+      "ic_haut": 0.564390135759308,
+      "part_diversite_humaine": 0.8061079606978194,
+      "accord_par_paires": 0.5801524373474432
+    }
+  ],
+  "courbe": [
+    {
+      "n_entrainement": 50,
+      "B0 mode": 0.5846407277989071,
+      "B0 mode ecart": 0.00581961832235851,
+      "B1 argmax": 0.5732987589471574,
+      "B1 argmax ecart": 0.006214948387715546,
+      "B2 argmax": 0.613994119123099,
+      "B2 argmax ecart": 0.006541854801927965
+    },
+    {
+      "n_entrainement": 100,
+      "B0 mode": 0.5915543680707968,
+      "B0 mode ecart": 0.006882490987796453,
+      "B1 argmax": 0.5760883888527897,
+      "B1 argmax ecart": 0.004314572792918515,
+      "B2 argmax": 0.637453658053868,
+      "B2 argmax ecart": 0.005925901602054182
+    },
+    {
+      "n_entrainement": 150,
+      "B0 mode": 0.5907243404587468,
+      "B0 mode ecart": 0.0064266152000784895,
+      "B1 argmax": 0.5823679718396472,
+      "B1 argmax ecart": 0.0028961605990125345,
+      "B2 argmax": 0.6467270203775818,
+      "B2 argmax ecart": 0.008015052938272054
+    },
+    {
+      "n_entrainement": 200,
+      "B0 mode": 0.591287486929842,
+      "B0 mode ecart": 0.005612830454514346,
+      "B1 argmax": 0.5892802994157998,
+      "B1 argmax ecart": 0.00494326978579133,
+      "B2 argmax": 0.6534103077918084,
+      "B2 argmax ecart": 0.006777519690443038
+    },
+    {
+      "n_entrainement": 300,
+      "B0 mode": 0.5927954209133636,
+      "B0 mode ecart": 0.006924116462576268,
+      "B1 argmax": 0.5989960402028215,
+      "B1 argmax ecart": 0.006485058279591612,
+      "B2 argmax": 0.6588964924265029,
+      "B2 argmax ecart": 0.006056293566586515
+    },
+    {
+      "n_entrainement": 400,
+      "B0 mode": 0.5943771940320812,
+      "B0 mode ecart": 0.006856448137583052,
+      "B1 argmax": 0.6046643866151484,
+      "B1 argmax ecart": 0.0068962149142833525,
+      "B2 argmax": 0.6639954318188359,
+      "B2 argmax ecart": 0.00532203302080499
+    },
+    {
+      "n_entrainement": 600,
+      "B0 mode": 0.5940055496736689,
+      "B0 mode ecart": 0.007398956278081012,
+      "B1 argmax": 0.6141994045410185,
+      "B1 argmax ecart": 0.006056700977859537,
+      "B2 argmax": 0.668159832823149,
+      "B2 argmax ecart": 0.005296154272112448
+    },
+    {
+      "n_entrainement": 841,
+      "B0 mode": 0.594361264974198,
+      "B0 mode ecart": 0.0073650351895621045,
+      "B1 argmax": 0.6221642869007608,
+      "B1 argmax ecart": 0.006273625216645731,
+      "B2 argmax": 0.6726759353083346,
+      "B2 argmax ecart": 0.0051616092959380355
+    }
+  ],
+  "questions_jamais_posees": [
+    {
+      "famille": "depenses publiques (nat*)",
+      "n_items": 17,
+      "modalites_moyennes": 3.0,
+      "plancher_uniforme": 0.3333333333333333,
+      "plafond_modalite_majoritaire": 0.5768284500111832,
+      "accord_par_paires_humain": 0.4593451487022509
+    },
+    {
+      "famille": "confiance dans les institutions (con*)",
+      "n_items": 13,
+      "modalites_moyennes": 3.0,
+      "plancher_uniforme": 0.33333333333333337,
+      "plafond_modalite_majoritaire": 0.5048259725065808,
+      "accord_par_paires_humain": 0.41479514071613577
+    },
+    {
+      "famille": "avortement (ab*)",
+      "n_items": 7,
+      "modalites_moyennes": 2.0,
+      "plancher_uniforme": 0.5,
+      "plafond_modalite_majoritaire": 0.7436175991309071,
+      "accord_par_paires_humain": 0.6481677779265086
+    },
+    {
+      "famille": "libertes civiles (spk/col/lib)",
+      "n_items": 11,
+      "modalites_moyennes": 2.0,
+      "plancher_uniforme": 0.5,
+      "plafond_modalite_majoritaire": 0.74965433805738,
+      "accord_par_paires_humain": 0.6541063553450814
+    },
+    {
+      "famille": "fin de vie (suicide/letdie)",
+      "n_items": 5,
+      "modalites_moyennes": 2.0,
+      "plancher_uniforme": 0.5,
+      "plafond_modalite_majoritaire": 0.7283269961977187,
+      "accord_par_paires_humain": 0.6093993408414221
+    },
+    {
+      "famille": "roles de genre (fe*)",
+      "n_items": 5,
+      "modalites_moyennes": 3.8,
+      "plancher_uniforme": 0.29,
+      "plafond_modalite_majoritaire": 0.48022813688212923,
+      "accord_par_paires_humain": 0.3798594856247717
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+condition,cellules,n,p_max_moyen,p_max_median,part_p_max_sup_099,entropie_moyenne_bits
+C2,"rarete non osee, cellule majoritaire",3376,0.971910,0.999985,0.821090,0.097717
+C2,rarete juste,17,0.981925,0.999606,0.882353,0.069700
+C2,fausse rarete,87,0.918211,0.997436,0.563218,0.261803
+C2,mauvaise modalite rare,0,,,,
+C3,"rarete non osee, cellule majoritaire",3365,0.978101,0.999998,0.844874,0.078062
+C3,rarete juste,20,0.989535,0.999974,0.850000,0.055610
+C3,fausse rarete,95,0.931690,0.999973,0.684211,0.223864
+C3,mauvaise modalite rare,0,,,,
+C3F,"rarete non osee, cellule majoritaire",3337,0.945706,0.998972,0.650285,0.187521
+C3F,rarete juste,19,0.938412,0.983004,0.421053,0.264011
+C3F,fausse rarete,124,0.902208,0.974685,0.387097,0.350680
+C3F,mauvaise modalite rare,0,,,,

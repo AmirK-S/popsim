@@ -1,0 +1,121 @@
+condition,axe_transport,mesure_de_calibration,bloc,lambda_retenu,inter_calibration_avant,inter_calibration_apres
+agents composite,political_ideology,gini_simpson,0,0.7,2.1993,1.0757
+agents composite,political_ideology,gini_simpson,1,0.7,2.1054,1.0298
+agents composite,political_ideology,gini_simpson,2,0.7,2.1529,1.0522
+agents composite,political_ideology,gini_simpson,3,0.7,2.1729,1.0617
+agents composite,political_ideology,gini_simpson,4,0.7,2.1394,1.0458
+agents composite,profil croise,gini_simpson,0,0.7,2.0031,1.0348
+agents composite,profil croise,gini_simpson,1,0.7,1.9586,1.0199
+agents composite,profil croise,gini_simpson,2,0.7,1.9907,1.0356
+agents composite,profil croise,gini_simpson,3,0.7,2.0326,1.0566
+agents composite,profil croise,gini_simpson,4,0.7,1.9803,1.0277
+agents enquete,political_ideology,gini_simpson,0,0.6,2.5915,0.9342
+agents enquete,political_ideology,gini_simpson,1,0.6,2.3705,0.8555
+agents enquete,political_ideology,gini_simpson,2,0.6,2.5119,0.9070
+agents enquete,political_ideology,gini_simpson,3,0.6,2.5233,0.9103
+agents enquete,political_ideology,gini_simpson,4,0.6,2.5912,0.9348
+agents enquete,profil croise,gini_simpson,0,0.6,2.2320,0.8955
+agents enquete,profil croise,gini_simpson,1,0.7,2.0614,1.0742
+agents enquete,profil croise,gini_simpson,2,0.7,2.1471,1.1212
+agents enquete,profil croise,gini_simpson,3,0.6,2.2031,0.8812
+agents enquete,profil croise,gini_simpson,4,0.6,2.2184,0.8828
+agents entretien (v3),political_ideology,gini_simpson,0,0.6,2.8848,1.0379
+agents entretien (v3),political_ideology,gini_simpson,1,0.6,2.7504,0.9906
+agents entretien (v3),political_ideology,gini_simpson,2,0.6,2.9165,1.0501
+agents entretien (v3),political_ideology,gini_simpson,3,0.6,2.7098,0.9762
+agents entretien (v3),political_ideology,gini_simpson,4,0.6,2.8490,1.0247
+agents entretien (v3),profil croise,gini_simpson,0,0.6,2.6573,1.0306
+agents entretien (v3),profil croise,gini_simpson,1,0.6,2.5917,1.0116
+agents entretien (v3),profil croise,gini_simpson,2,0.6,2.6622,1.0342
+agents entretien (v3),profil croise,gini_simpson,3,0.6,2.5223,0.9799
+agents entretien (v3),profil croise,gini_simpson,4,0.6,2.6426,1.0279
+agents demographiques (v8),political_ideology,gini_simpson,0,0.3,8.1287,0.7303
+agents demographiques (v8),political_ideology,gini_simpson,1,0.4,7.7773,1.2433
+agents demographiques (v8),political_ideology,gini_simpson,2,0.3,8.4284,0.7575
+agents demographiques (v8),political_ideology,gini_simpson,3,0.4,7.6656,1.2238
+agents demographiques (v8),political_ideology,gini_simpson,4,0.3,8.6625,0.7776
+agents demographiques (v8),profil croise,gini_simpson,0,0.3,6.4028,0.9540
+agents demographiques (v8),profil croise,gini_simpson,1,0.3,6.4490,0.9649
+agents demographiques (v8),profil croise,gini_simpson,2,0.3,6.6521,0.9937
+agents demographiques (v8),profil croise,gini_simpson,3,0.3,6.2934,0.9538
+agents demographiques (v8),profil croise,gini_simpson,4,0.3,6.9034,1.0390
+agents composite,political_ideology,entropie,0,0.7,2.1415,0.9904
+agents composite,political_ideology,entropie,1,0.7,2.0835,0.9652
+agents composite,political_ideology,entropie,2,0.7,2.1251,0.9847
+agents composite,political_ideology,entropie,3,0.7,2.1303,0.9850
+agents composite,political_ideology,entropie,4,0.7,2.1795,1.0133
+agents composite,profil croise,entropie,0,0.7,1.9401,0.9386
+agents composite,profil croise,entropie,1,0.7,1.9308,0.9406
+agents composite,profil croise,entropie,2,0.7,1.9456,0.9474
+agents composite,profil croise,entropie,3,0.7,1.9676,0.9560
+agents composite,profil croise,entropie,4,0.7,1.9844,0.9626
+agents enquete,political_ideology,entropie,0,0.6,2.5443,0.8550
+agents enquete,political_ideology,entropie,1,0.7,2.4029,1.1022
+agents enquete,political_ideology,entropie,2,0.7,2.5066,1.1528
+agents enquete,political_ideology,entropie,3,0.7,2.4989,1.1438
+agents enquete,political_ideology,entropie,4,0.6,2.6891,0.9067
+agents enquete,profil croise,entropie,0,0.7,2.1397,1.0281
+agents enquete,profil croise,entropie,1,0.7,2.0457,0.9816
+agents enquete,profil croise,entropie,2,0.7,2.0837,1.0008
+agents enquete,profil croise,entropie,3,0.7,2.1207,1.0146
+agents enquete,profil croise,entropie,4,0.7,2.2438,1.0728
+agents entretien (v3),political_ideology,entropie,0,0.6,2.8038,0.9371
+agents entretien (v3),political_ideology,entropie,1,0.6,2.7040,0.9032
+agents entretien (v3),political_ideology,entropie,2,0.6,2.8613,0.9595
+agents entretien (v3),political_ideology,entropie,3,0.6,2.6851,0.8984
+agents entretien (v3),political_ideology,entropie,4,0.6,2.9000,0.9717
+agents entretien (v3),profil croise,entropie,0,0.6,2.5365,0.8998
+agents entretien (v3),profil croise,entropie,1,0.6,2.4926,0.8935
+agents entretien (v3),profil croise,entropie,2,0.6,2.5577,0.9116
+agents entretien (v3),profil croise,entropie,3,0.6,2.4556,0.8712
+agents entretien (v3),profil croise,entropie,4,0.6,2.6125,0.9313
+agents demographiques (v8),political_ideology,entropie,0,0.4,8.2689,1.1816
+agents demographiques (v8),political_ideology,entropie,1,0.4,8.0984,1.1440
+agents demographiques (v8),political_ideology,entropie,2,0.4,8.6731,1.2310
+agents demographiques (v8),political_ideology,entropie,3,0.4,7.9124,1.1279
+agents demographiques (v8),political_ideology,entropie,4,0.3,9.0291,0.7342
+agents demographiques (v8),profil croise,entropie,0,0.3,6.4865,0.8698
+agents demographiques (v8),profil croise,entropie,1,0.3,6.5750,0.8829
+agents demographiques (v8),profil croise,entropie,2,0.3,6.7438,0.9036
+agents demographiques (v8),profil croise,entropie,3,0.3,6.4127,0.8679
+agents demographiques (v8),profil croise,entropie,4,0.3,7.0209,0.9467
+agents composite,political_ideology,variance_ordinale,0,0.7,2.2917,1.1217
+agents composite,political_ideology,variance_ordinale,1,0.6,2.4348,0.8756
+agents composite,political_ideology,variance_ordinale,2,0.7,2.3604,1.1529
+agents composite,political_ideology,variance_ordinale,3,0.6,2.5337,0.9099
+agents composite,political_ideology,variance_ordinale,4,0.7,2.1756,1.0645
+agents composite,profil croise,variance_ordinale,0,0.7,2.1425,1.1119
+agents composite,profil croise,variance_ordinale,1,0.6,2.3189,0.9081
+agents composite,profil croise,variance_ordinale,2,0.6,2.2248,0.8781
+agents composite,profil croise,variance_ordinale,3,0.6,2.3574,0.9330
+agents composite,profil croise,variance_ordinale,4,0.7,1.9990,1.0346
+agents enquete,political_ideology,variance_ordinale,0,0.6,2.4878,0.8978
+agents enquete,political_ideology,variance_ordinale,1,0.6,2.8193,1.0180
+agents enquete,political_ideology,variance_ordinale,2,0.6,2.6826,0.9708
+agents enquete,political_ideology,variance_ordinale,3,0.6,2.8547,1.0326
+agents enquete,political_ideology,variance_ordinale,4,0.6,2.5211,0.9122
+agents enquete,profil croise,variance_ordinale,0,0.6,2.1972,0.8709
+agents enquete,profil croise,variance_ordinale,1,0.6,2.5367,0.9956
+agents enquete,profil croise,variance_ordinale,2,0.6,2.3646,0.9461
+agents enquete,profil croise,variance_ordinale,3,0.6,2.5223,0.9958
+agents enquete,profil croise,variance_ordinale,4,0.7,2.1829,1.1271
+agents entretien (v3),political_ideology,variance_ordinale,0,0.6,3.2060,1.1571
+agents entretien (v3),political_ideology,variance_ordinale,1,0.5,3.2827,0.8193
+agents entretien (v3),political_ideology,variance_ordinale,2,0.6,3.1569,1.1379
+agents entretien (v3),political_ideology,variance_ordinale,3,0.5,3.5225,0.8791
+agents entretien (v3),political_ideology,variance_ordinale,4,0.6,2.9086,1.0481
+agents entretien (v3),profil croise,variance_ordinale,0,0.5,3.0596,0.8669
+agents entretien (v3),profil croise,variance_ordinale,1,0.5,3.1874,0.8854
+agents entretien (v3),profil croise,variance_ordinale,2,0.5,3.0363,0.8603
+agents entretien (v3),profil croise,variance_ordinale,3,0.5,3.3787,0.9549
+agents entretien (v3),profil croise,variance_ordinale,4,0.6,2.7266,1.0636
+agents demographiques (v8),political_ideology,variance_ordinale,0,0.4,7.2641,1.1593
+agents demographiques (v8),political_ideology,variance_ordinale,1,0.4,7.8517,1.2534
+agents demographiques (v8),political_ideology,variance_ordinale,2,0.4,7.9820,1.2736
+agents demographiques (v8),political_ideology,variance_ordinale,3,0.3,8.1247,0.7313
+agents demographiques (v8),political_ideology,variance_ordinale,4,0.4,7.3610,1.1745
+agents demographiques (v8),profil croise,variance_ordinale,0,0.3,6.3874,0.9535
+agents demographiques (v8),profil croise,variance_ordinale,1,0.3,7.1126,1.0441
+agents demographiques (v8),profil croise,variance_ordinale,2,0.3,6.9737,1.0414
+agents demographiques (v8),profil croise,variance_ordinale,3,0.3,7.2642,1.0759
+agents demographiques (v8),profil croise,variance_ordinale,4,0.3,6.3317,0.9418

@@ -1,0 +1,9 @@
+jeu_items,n_items,condition_a,condition_b,acc_a,acc_b,ecart_appari_b_moins_a,ic_bas,ic_haut,t_appari
+177 items (tous),177,agents persona (v7),agents demographiques (v8),56.7582,56.9043,0.1461,-0.2916,0.5833,0.6893
+177 items (tous),177,agents demographiques (v6),agents demographiques (v8),60.7457,56.9043,-3.8415,-4.2368,-3.4290,-18.7516
+169 items (a1),169,agents persona (v7),agents demographiques (v8),57.0314,56.2001,-0.8313,-1.2822,-0.3762,-3.8212
+169 items (a1),169,agents demographiques (v6),agents demographiques (v8),60.3685,56.2001,-4.1684,-4.5690,-3.7359,-19.6271
+150 items (Stanford),150,agents persona (v7),agents demographiques (v8),56.1711,56.1863,0.0152,-0.4430,0.4810,0.0665
+150 items (Stanford),150,agents demographiques (v6),agents demographiques (v8),57.9284,56.1863,-1.7421,-2.1737,-1.2864,-7.6957
+"149 items (a2, a7, a8, a12)",149,agents persona (v7),agents demographiques (v8),56.4026,55.9184,-0.4842,-0.9461,-0.0125,-2.1050
+"149 items (a2, a7, a8, a12)",149,agents demographiques (v6),agents demographiques (v8),58.1832,55.9184,-2.2648,-2.7000,-1.8072,-9.9575

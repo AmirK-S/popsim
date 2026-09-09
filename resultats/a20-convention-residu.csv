@@ -1,0 +1,41 @@
+condition,axe,jeu_items,mesure,moment,ratio_intra_convention_a1,ratio_intra_convention_a20,ecart_pct
+agents composite,political_ideology,149 items,entropie,avant,0.8331,0.8336,+0.06
+agents composite,political_ideology,149 items,gini_simpson,avant,0.8432,0.8432,-0.00
+agents composite,political_ideology,70 items ordinaux,entropie,avant,0.8183,0.8187,+0.05
+agents composite,political_ideology,70 items ordinaux,gini_simpson,avant,0.8348,0.8347,-0.01
+agents composite,political_ideology,70 items ordinaux,variance_ordinale,avant,0.7546,0.7545,-0.01
+agents composite,profil croise,149 items,entropie,avant,0.8342,0.8352,+0.12
+agents composite,profil croise,149 items,gini_simpson,avant,0.8466,0.8466,-0.01
+agents composite,profil croise,70 items ordinaux,entropie,avant,0.8227,0.8238,+0.13
+agents composite,profil croise,70 items ordinaux,gini_simpson,avant,0.8406,0.8404,-0.02
+agents composite,profil croise,70 items ordinaux,variance_ordinale,avant,0.7595,0.7596,+0.01
+agents enquete,political_ideology,149 items,entropie,avant,0.7773,0.7778,+0.07
+agents enquete,political_ideology,149 items,gini_simpson,avant,0.7922,0.7922,-0.00
+agents enquete,political_ideology,70 items ordinaux,entropie,avant,0.7591,0.7597,+0.07
+agents enquete,political_ideology,70 items ordinaux,gini_simpson,avant,0.7774,0.7773,-0.00
+agents enquete,political_ideology,70 items ordinaux,variance_ordinale,avant,0.7037,0.7036,-0.01
+agents enquete,profil croise,149 items,entropie,avant,0.7873,0.7888,+0.20
+agents enquete,profil croise,149 items,gini_simpson,avant,0.8041,0.8042,+0.01
+agents enquete,profil croise,70 items ordinaux,entropie,avant,0.7734,0.7750,+0.20
+agents enquete,profil croise,70 items ordinaux,gini_simpson,avant,0.7929,0.7930,+0.01
+agents enquete,profil croise,70 items ordinaux,variance_ordinale,avant,0.7228,0.7231,+0.05
+agents entretien (v3),political_ideology,149 items,entropie,avant,0.7714,0.7720,+0.08
+agents entretien (v3),political_ideology,149 items,gini_simpson,avant,0.7641,0.7642,+0.01
+agents entretien (v3),political_ideology,70 items ordinaux,entropie,avant,0.7849,0.7854,+0.05
+agents entretien (v3),political_ideology,70 items ordinaux,gini_simpson,avant,0.7883,0.7883,+0.00
+agents entretien (v3),political_ideology,70 items ordinaux,variance_ordinale,avant,0.7307,0.7307,+0.00
+agents entretien (v3),profil croise,149 items,entropie,avant,0.7721,0.7736,+0.20
+agents entretien (v3),profil croise,149 items,gini_simpson,avant,0.7667,0.7668,+0.01
+agents entretien (v3),profil croise,70 items ordinaux,entropie,avant,0.7850,0.7863,+0.16
+agents entretien (v3),profil croise,70 items ordinaux,gini_simpson,avant,0.7897,0.7897,+0.00
+agents entretien (v3),profil croise,70 items ordinaux,variance_ordinale,avant,0.7281,0.7284,+0.04
+agents demographiques (v8),political_ideology,149 items,entropie,avant,0.4360,0.4364,+0.10
+agents demographiques (v8),political_ideology,149 items,gini_simpson,avant,0.4425,0.4424,-0.03
+agents demographiques (v8),political_ideology,70 items ordinaux,entropie,avant,0.4146,0.4149,+0.08
+agents demographiques (v8),political_ideology,70 items ordinaux,gini_simpson,avant,0.4226,0.4224,-0.04
+agents demographiques (v8),political_ideology,70 items ordinaux,variance_ordinale,avant,0.2965,0.2961,-0.11
+agents demographiques (v8),profil croise,149 items,entropie,avant,0.4803,0.4821,+0.38
+agents demographiques (v8),profil croise,149 items,gini_simpson,avant,0.4985,0.4989,+0.08
+agents demographiques (v8),profil croise,70 items ordinaux,entropie,avant,0.4787,0.4806,+0.38
+agents demographiques (v8),profil croise,70 items ordinaux,gini_simpson,avant,0.5012,0.5016,+0.08
+agents demographiques (v8),profil croise,70 items ordinaux,variance_ordinale,avant,0.3395,0.3402,+0.21

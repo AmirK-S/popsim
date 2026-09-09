@@ -1,0 +1,992 @@
+{
+  "traces": {
+    "C2": {
+      "appels": 22350,
+      "personnes_touchees": 150,
+      "personnes_completes": 150
+    },
+    "C3": {
+      "appels": 22350,
+      "personnes_touchees": 150,
+      "personnes_completes": 150
+    }
+  },
+  "population": {
+    "n_personnes": 150,
+    "n_items": 149,
+    "conditions_presentes": [
+      "C2",
+      "C3"
+    ]
+  },
+  "n_min": 30,
+  "cellules_exploitables": 22147,
+  "controle_degenerescence_ecart_max": 0.0,
+  "verdict_a15": {
+    "texte": [
+      "controle vague 2 par axe : gender 0.83, race 1.46, political_ideology 1.11, age 1.10, education 1.06, profil croise 0.97",
+      "ratio inter ideologie : C2 = 8.16, C3 = 0.73",
+      "ratio inter genre     : C2 = 0.07, C3 = 0.66",
+      "ratio inter age       : C2 = 1.87, C3 = 0.43",
+      "AUCUNE des trois issues ecrites dans a15 ne decrit ce tableau. Le detail par axe doit etre lu tel quel et a15 section 7.1 doit etre reouverte.",
+      "Reserve a porter avec le resultat, elle est dans a15 : pour C2 l'axe political_ideology est DANS l'invite, pour C3 il ne l'est pas. Mesurer un gonflement sur un axe fourni au modele n'est pas la meme chose que le mesurer sur un axe qu'il doit inferer."
+    ],
+    "issue": "indeterminee",
+    "controle_vague2": {
+      "gender": 0.8318979372297134,
+      "race": 1.4575047141853854,
+      "political_ideology": 1.1117733912504828,
+      "age": 1.0970067671771344,
+      "education": 1.0627925066171724,
+      "profil croise": 0.9679711844279466
+    },
+    "axes_sains": [
+      "gender",
+      "political_ideology",
+      "age",
+      "education",
+      "profil croise"
+    ],
+    "ratios": {
+      "C2": {
+        "gender": 0.07457716332139966,
+        "race": 4.8380834468935205,
+        "political_ideology": 8.161581181706284,
+        "age": 1.867483803944293,
+        "education": 2.5985081205083858,
+        "profil croise": 4.883788374372879
+      },
+      "C3": {
+        "gender": 0.6641708659720116,
+        "race": -0.08657703028033285,
+        "political_ideology": 0.7329221474077118,
+        "age": 0.43447272066664344,
+        "education": 0.9662986561506863,
+        "profil croise": 0.5689957977891906
+      }
+    }
+  },
+  "part_tirages_inter_sup_humain": {
+    "humains vague 1": {
+      "entropie": 0.0,
+      "gini_simpson": 0.0
+    },
+    "humains vague 2": {
+      "entropie": 0.737,
+      "gini_simpson": 0.382
+    },
+    "C2 argmax": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "C3 argmax": {
+      "entropie": 0.0,
+      "gini_simpson": 0.0
+    },
+    "agents composite": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "agents entretien (v3)": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "agents enquete": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "agents demographiques (v6)": {
+      "entropie": 0.274,
+      "gini_simpson": 0.146
+    },
+    "agents v7": {
+      "entropie": 0.008,
+      "gini_simpson": 0.0
+    },
+    "agents v8": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "C2 distribution": {
+      "entropie": 1.0,
+      "gini_simpson": 1.0
+    },
+    "C3 distribution": {
+      "entropie": 0.004,
+      "gini_simpson": 0.0
+    }
+  },
+  "ratios": {
+    "humains vague 1": {
+      "entropie": {
+        "inter": 1.0,
+        "intra": 1.0,
+        "total": 1.0
+      },
+      "gini_simpson": {
+        "inter": 1.0,
+        "intra": 1.0,
+        "total": 1.0
+      }
+    },
+    "humains vague 2": {
+      "entropie": {
+        "inter": 1.0457262994007102,
+        "intra": 0.9974734961804874,
+        "total": 0.998583623574673
+      },
+      "gini_simpson": {
+        "inter": 0.9831446124581386,
+        "intra": 0.9989457616375426,
+        "total": 0.9985544328403828
+      }
+    },
+    "C2 argmax": {
+      "entropie": {
+        "inter": 4.768934241356238,
+        "intra": 0.5563387584642722,
+        "total": 0.6532557733128707
+      },
+      "gini_simpson": {
+        "inter": 4.328923895441737,
+        "intra": 0.5680323144649178,
+        "total": 0.6611739690320556
+      }
+    },
+    "C3 argmax": {
+      "entropie": {
+        "inter": 0.6065913134044574,
+        "intra": 0.672329020674345,
+        "total": 0.6708166270971637
+      },
+      "gini_simpson": {
+        "inter": 0.5657943899990115,
+        "intra": 0.6849498331581031,
+        "total": 0.681998848029296
+      }
+    },
+    "agents composite": {
+      "entropie": {
+        "inter": 1.6468736789814518,
+        "intra": 0.8718910400387394,
+        "total": 0.8897206665079427
+      },
+      "gini_simpson": {
+        "inter": 1.6064790949727619,
+        "intra": 0.8891750336810612,
+        "total": 0.9069396742344812
+      }
+    },
+    "agents entretien (v3)": {
+      "entropie": {
+        "inter": 2.0761678184888424,
+        "intra": 0.8312354627256026,
+        "total": 0.8598769803123271
+      },
+      "gini_simpson": {
+        "inter": 1.9516796439798274,
+        "intra": 0.8341168763287663,
+        "total": 0.8617942616030884
+      }
+    },
+    "agents enquete": {
+      "entropie": {
+        "inter": 1.7420796632781745,
+        "intra": 0.830532231345204,
+        "total": 0.8515037336778232
+      },
+      "gini_simpson": {
+        "inter": 1.7160762343911746,
+        "intra": 0.85312697418427,
+        "total": 0.8744986410277694
+      }
+    },
+    "agents demographiques (v6)": {
+      "entropie": {
+        "inter": 0.8906360778275606,
+        "intra": 0.6199608655687288,
+        "total": 0.6261881507833128
+      },
+      "gini_simpson": {
+        "inter": 0.815267180604668,
+        "intra": 0.6262656345431308,
+        "total": 0.6309464173673318
+      }
+    },
+    "agents v7": {
+      "entropie": {
+        "inter": 0.4727257799253538,
+        "intra": 0.6357875032330293,
+        "total": 0.6320360261393401
+      },
+      "gini_simpson": {
+        "inter": 0.34683391890522486,
+        "intra": 0.6275056736834983,
+        "total": 0.6205546007617098
+      }
+    },
+    "agents v8": {
+      "entropie": {
+        "inter": 5.480683489385254,
+        "intra": 0.6741942233220206,
+        "total": 0.7847746465932541
+      },
+      "gini_simpson": {
+        "inter": 5.194013228392646,
+        "intra": 0.6891857669928212,
+        "total": 0.8007516215940538
+      }
+    },
+    "C2 distribution": {
+      "entropie": {
+        "inter": 4.579191736869138,
+        "intra": 0.575437221836674,
+        "total": 0.6675495400878341
+      },
+      "gini_simpson": {
+        "inter": 4.199282446083985,
+        "intra": 0.5842804409331557,
+        "total": 0.6738090170097403
+      }
+    },
+    "C3 distribution": {
+      "entropie": {
+        "inter": 0.6298642602919516,
+        "intra": 0.6927734142162718,
+        "total": 0.6913260957092475
+      },
+      "gini_simpson": {
+        "inter": 0.5780846718550975,
+        "intra": 0.7022148919756218,
+        "total": 0.6991407022961613
+      }
+    }
+  },
+  "ratios_par_axe_entropie": {
+    "humains vague 1": {
+      "gender": 1.0,
+      "race": 1.0,
+      "political_ideology": 1.0,
+      "age": 1.0,
+      "education": 1.0,
+      "profil croise": 1.0
+    },
+    "humains vague 2": {
+      "gender": 0.8318979372297134,
+      "race": 1.4575047141853854,
+      "political_ideology": 1.1117733912504828,
+      "age": 1.0970067671771344,
+      "education": 1.0627925066171724,
+      "profil croise": 0.9679711844279466
+    },
+    "C2 argmax": {
+      "gender": 0.07457716332139966,
+      "race": 4.8380834468935205,
+      "political_ideology": 8.161581181706284,
+      "age": 1.867483803944293,
+      "education": 2.5985081205083858,
+      "profil croise": 4.883788374372879
+    },
+    "C3 argmax": {
+      "gender": 0.6641708659720116,
+      "race": -0.08657703028033285,
+      "political_ideology": 0.7329221474077118,
+      "age": 0.43447272066664344,
+      "education": 0.9662986561506863,
+      "profil croise": 0.5689957977891906
+    },
+    "agents composite": {
+      "gender": 0.9542698445247593,
+      "race": 1.486304885905573,
+      "political_ideology": 2.2039881684577876,
+      "age": 1.260145697199129,
+      "education": 1.2786257840089197,
+      "profil croise": 1.6256547525628933
+    },
+    "agents entretien (v3)": {
+      "gender": 0.8535492027712649,
+      "race": 1.9801163684053849,
+      "political_ideology": 2.915641726664716,
+      "age": 1.3618953546530794,
+      "education": 1.5454253533654316,
+      "profil croise": 2.122996044098881
+    },
+    "agents enquete": {
+      "gender": 0.8910737309622202,
+      "race": 1.169300826685617,
+      "political_ideology": 2.434318174103405,
+      "age": 0.9859869918428561,
+      "education": 1.213990734740217,
+      "profil croise": 1.8974287921036153
+    },
+    "agents demographiques (v6)": {
+      "gender": 0.9056431797029413,
+      "race": 3.8990403212238056,
+      "political_ideology": 0.24311349865761087,
+      "age": 0.9940577519786774,
+      "education": 2.65718476742143,
+      "profil croise": 0.6887506715431397
+    },
+    "agents v7": {
+      "gender": 0.4252092912372258,
+      "race": 2.093377501111648,
+      "political_ideology": 0.35922334508415105,
+      "age": 0.4988263187652382,
+      "education": -0.005402169731287563,
+      "profil croise": 0.5106797883972732
+    },
+    "agents v8": {
+      "gender": 0.1284957998391973,
+      "race": 5.174642441027429,
+      "political_ideology": 8.952875804112745,
+      "age": 3.0706600922645295,
+      "education": 0.9634056875404111,
+      "profil croise": 5.948154297343306
+    },
+    "C2 distribution": {
+      "gender": 0.11561288590640037,
+      "race": 4.669271409827607,
+      "political_ideology": 7.875685314864089,
+      "age": 1.76954363450969,
+      "education": 2.5069025873504747,
+      "profil croise": 4.658250150516113
+    },
+    "C3 distribution": {
+      "gender": 0.6973575868363268,
+      "race": -0.09756689395656307,
+      "political_ideology": 0.7448774299955088,
+      "age": 0.46595974227804865,
+      "education": 0.9235448261832416,
+      "profil croise": 0.6123242359957468
+    }
+  },
+  "c2_contre_v8": {
+    "C2": {
+      "gender": 0.07457716332139966,
+      "race": 4.8380834468935205,
+      "political_ideology": 8.161581181706284,
+      "age": 1.867483803944293,
+      "education": 2.5985081205083858,
+      "profil croise": 4.883788374372879
+    },
+    "C2 distribution": {
+      "gender": 0.11561288590640037,
+      "race": 4.669271409827607,
+      "political_ideology": 7.875685314864089,
+      "age": 1.76954363450969,
+      "education": 2.5069025873504747,
+      "profil croise": 4.658250150516113
+    },
+    "gss_v8, avec ideologie": {
+      "gender": 0.1284957998391973,
+      "race": 5.174642441027429,
+      "political_ideology": 8.952875804112745,
+      "age": 3.0706600922645295,
+      "education": 0.9634056875404111,
+      "profil croise": 5.948154297343306
+    },
+    "gss_v6, sans ideologie": {
+      "gender": 0.9056431797029413,
+      "race": 3.8990403212238056,
+      "political_ideology": 0.24311349865761087,
+      "age": 0.9940577519786774,
+      "education": 2.65718476742143,
+      "profil croise": 0.6887506715431397
+    },
+    "cote": "v8"
+  },
+  "chen": {
+    "humains vague 2": {
+      "gender": {
+        "rapport_ecart": 0.831656346749226,
+        "delta_eta2": -0.0009442252829185477
+      },
+      "race": {
+        "rapport_ecart": 0.9391466023459822,
+        "delta_eta2": 3.271093662505359e-05
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.0625599232981782,
+        "delta_eta2": 0.003551680814337422
+      },
+      "age": {
+        "rapport_ecart": 1.023076923076923,
+        "delta_eta2": -0.002697454320658526
+      },
+      "education": {
+        "rapport_ecart": 1.086839649577292,
+        "delta_eta2": 0.0024219730952852944
+      },
+      "profil croise": {
+        "rapport_ecart": 1.0,
+        "delta_eta2": -0.004941235934755643
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.0,
+        "delta_eta2": 0.004727157322150302
+      }
+    },
+    "C2 argmax": {
+      "gender": {
+        "rapport_ecart": 0.5395182486608776,
+        "delta_eta2": -0.005187944928953631
+      },
+      "race": {
+        "rapport_ecart": 1.0534048052307465,
+        "delta_eta2": 0.014900155413737064
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.7728997490946394,
+        "delta_eta2": 0.5086626064677235
+      },
+      "age": {
+        "rapport_ecart": 0.8151078608161355,
+        "delta_eta2": 0.007998246733323703
+      },
+      "education": {
+        "rapport_ecart": 1.1340575869987641,
+        "delta_eta2": 0.025389127203179044
+      },
+      "profil croise": {
+        "rapport_ecart": 1.1777815934065936,
+        "delta_eta2": 0.24277331242073635
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.7358255451713394,
+        "delta_eta2": 0.29600200344209304
+      }
+    },
+    "C3 argmax": {
+      "gender": {
+        "rapport_ecart": 0.5721353499102795,
+        "delta_eta2": -0.0014455684672785313
+      },
+      "race": {
+        "rapport_ecart": 0.5260779525485408,
+        "delta_eta2": -0.0026922762564294
+      },
+      "political_ideology": {
+        "rapport_ecart": 0.75,
+        "delta_eta2": -0.022461099882457508
+      },
+      "age": {
+        "rapport_ecart": 0.7065704052797803,
+        "delta_eta2": -0.004512194790422155
+      },
+      "education": {
+        "rapport_ecart": 0.8777589134125638,
+        "delta_eta2": 0.004967023955498955
+      },
+      "profil croise": {
+        "rapport_ecart": 0.7457805155960691,
+        "delta_eta2": -0.024558836906803827
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 0.48906926406926404,
+        "delta_eta2": -0.010441943581724289
+      }
+    },
+    "agents composite": {
+      "gender": {
+        "rapport_ecart": 0.9833553706152292,
+        "delta_eta2": 0.0025223002197075272
+      },
+      "race": {
+        "rapport_ecart": 1.0423728813559323,
+        "delta_eta2": -0.0012053832236923405
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.2560224089635854,
+        "delta_eta2": 0.07995184889795093
+      },
+      "age": {
+        "rapport_ecart": 1.2307549175970227,
+        "delta_eta2": 0.013045519516355214
+      },
+      "education": {
+        "rapport_ecart": 1.2270370370370374,
+        "delta_eta2": 0.009896165884963762
+      },
+      "profil croise": {
+        "rapport_ecart": 1.1449579831932775,
+        "delta_eta2": 0.061136296660250944
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.4546759639048403,
+        "delta_eta2": 0.04595980772169338
+      }
+    },
+    "agents entretien (v3)": {
+      "gender": {
+        "rapport_ecart": 0.7356619901179358,
+        "delta_eta2": 0.0024828853341679613
+      },
+      "race": {
+        "rapport_ecart": 1.1208100285205225,
+        "delta_eta2": 0.002547605698518255
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.3198863636363636,
+        "delta_eta2": 0.08348143682653728
+      },
+      "age": {
+        "rapport_ecart": 1.1555305557614846,
+        "delta_eta2": 0.004775819978493131
+      },
+      "education": {
+        "rapport_ecart": 1.1655701754385963,
+        "delta_eta2": 0.013411070221031107
+      },
+      "profil croise": {
+        "rapport_ecart": 1.360319042871386,
+        "delta_eta2": 0.09913285752550444
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.7874082439299828,
+        "delta_eta2": 0.0960754108373032
+      }
+    },
+    "agents enquete": {
+      "gender": {
+        "rapport_ecart": 0.9955357142857142,
+        "delta_eta2": 0.0029171745697018237
+      },
+      "race": {
+        "rapport_ecart": 0.9809954751131221,
+        "delta_eta2": 0.0025960522358030318
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.2361111111111112,
+        "delta_eta2": 0.07093862814623762
+      },
+      "age": {
+        "rapport_ecart": 1.0625,
+        "delta_eta2": 0.013638018716026918
+      },
+      "education": {
+        "rapport_ecart": 1.0222164730574705,
+        "delta_eta2": 0.0025537255057049447
+      },
+      "profil croise": {
+        "rapport_ecart": 1.1809781383817892,
+        "delta_eta2": 0.07441660227263662
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.2350746268656714,
+        "delta_eta2": 0.05748022788028829
+      }
+    },
+    "agents demographiques (v6)": {
+      "gender": {
+        "rapport_ecart": 0.4427434661994455,
+        "delta_eta2": -0.0017182877568754176
+      },
+      "race": {
+        "rapport_ecart": 0.7460143379385653,
+        "delta_eta2": 0.0134136594756119
+      },
+      "political_ideology": {
+        "rapport_ecart": 0.49408773045136684,
+        "delta_eta2": -0.033291834228153246
+      },
+      "age": {
+        "rapport_ecart": 0.65164206887382,
+        "delta_eta2": 0.003839217881135233
+      },
+      "education": {
+        "rapport_ecart": 0.8594568262087444,
+        "delta_eta2": 0.010257691079804152
+      },
+      "profil croise": {
+        "rapport_ecart": 0.555005838411952,
+        "delta_eta2": -0.04295964181662511
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 0.44291118118512673,
+        "delta_eta2": -0.022619343858816983
+      }
+    },
+    "agents v7": {
+      "gender": {
+        "rapport_ecart": 0.3770870606369219,
+        "delta_eta2": -0.0008418034817113345
+      },
+      "race": {
+        "rapport_ecart": 0.804433083549268,
+        "delta_eta2": 0.005046959897863138
+      },
+      "political_ideology": {
+        "rapport_ecart": 0.6043478260869566,
+        "delta_eta2": -0.024802077439333624
+      },
+      "age": {
+        "rapport_ecart": 0.6392167286904129,
+        "delta_eta2": -0.0009151497850097973
+      },
+      "education": {
+        "rapport_ecart": 0.5385965798580415,
+        "delta_eta2": -0.008533234682033127
+      },
+      "profil croise": {
+        "rapport_ecart": 0.542386185243328,
+        "delta_eta2": -0.04000016761592935
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 0.4293206793206793,
+        "delta_eta2": -0.015457831505356337
+      }
+    },
+    "agents v8": {
+      "gender": {
+        "rapport_ecart": 0.6767769607843136,
+        "delta_eta2": -0.005823926505113699
+      },
+      "race": {
+        "rapport_ecart": 1.324703834995527,
+        "delta_eta2": 0.013396151402951618
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.942857142857143,
+        "delta_eta2": 0.5519415901069837
+      },
+      "age": {
+        "rapport_ecart": 1.4196268803177055,
+        "delta_eta2": 0.03224484140460969
+      },
+      "education": {
+        "rapport_ecart": 1.1292088917947043,
+        "delta_eta2": 0.001921302471328542
+      },
+      "profil croise": {
+        "rapport_ecart": 1.9866071428571428,
+        "delta_eta2": 0.4798774583917998
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 2.7147603227337447,
+        "delta_eta2": 0.5178331635587888
+      }
+    },
+    "C2 distribution": {
+      "gender": {
+        "rapport_ecart": 0.5988798277377345,
+        "delta_eta2": -0.004701077270798141
+      },
+      "race": {
+        "rapport_ecart": 0.8831242592813007,
+        "delta_eta2": 0.012215359205087513
+      },
+      "political_ideology": {
+        "rapport_ecart": 1.64394607970562,
+        "delta_eta2": 0.47916570504702316
+      },
+      "age": {
+        "rapport_ecart": 0.8357718854044833,
+        "delta_eta2": 0.0002822447401435446
+      },
+      "education": {
+        "rapport_ecart": 1.1246071901411048,
+        "delta_eta2": 0.01991752832607548
+      },
+      "profil croise": {
+        "rapport_ecart": 1.2180624508413926,
+        "delta_eta2": 0.22554419511556092
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 1.7845250142969593,
+        "delta_eta2": 0.27601666733035535
+      }
+    },
+    "C3 distribution": {
+      "gender": {
+        "rapport_ecart": 0.6216951421085057,
+        "delta_eta2": -0.002239637645765691
+      },
+      "race": {
+        "rapport_ecart": 0.5434484900188807,
+        "delta_eta2": -0.0040912906870821065
+      },
+      "political_ideology": {
+        "rapport_ecart": 0.7413455401564082,
+        "delta_eta2": -0.02417474661362732
+      },
+      "age": {
+        "rapport_ecart": 0.6850641919523963,
+        "delta_eta2": -0.008035156630725017
+      },
+      "education": {
+        "rapport_ecart": 0.8103644912437795,
+        "delta_eta2": 0.0028658416114370148
+      },
+      "profil croise": {
+        "rapport_ecart": 0.780646114452686,
+        "delta_eta2": -0.03263110467537364
+      },
+      "ideologie en 3 blocs": {
+        "rapport_ecart": 0.4759774131921432,
+        "delta_eta2": -0.011065973722858575
+      }
+    }
+  },
+  "dispersion_totale": {
+    "total_humain_bits": 187.36102860262892,
+    "C2": {
+      "ratio_argmax": 0.6543782844773444,
+      "ratio_tirage": 0.6684815466099465,
+      "entropie_individuelle_bits": 0.11654472991348316,
+      "tau_pour_ratio_1": 6.288646039746936,
+      "entropie_individuelle_requise_bits": 1.0071235973420014
+    },
+    "C3": {
+      "ratio_argmax": 0.6735620221999457,
+      "ratio_tirage": 0.692820932318072,
+      "entropie_individuelle_bits": 0.13961287549103432,
+      "tau_pour_ratio_1": 6.273278289353647,
+      "entropie_individuelle_requise_bits": 1.002652936334447
+    }
+  },
+  "calibration": {
+    "C2": {
+      "n_cellules": 22147,
+      "exactitude_esperee": 0.5266505194153046,
+      "entropie_moyenne_bits": 0.11654472991348316,
+      "entropie_maximale_moyenne_bits": 1.594203556422758,
+      "part_entropie_maximale": 0.0731053004140817,
+      "part_cellules_quasi_certaines": 0.7932902876236059,
+      "ecart_de_calibration_attendu": 0.4401295650435576
+    },
+    "C3": {
+      "n_cellules": 22147,
+      "exactitude_esperee": 0.5820969715009134,
+      "entropie_moyenne_bits": 0.13961287549103432,
+      "entropie_maximale_moyenne_bits": 1.594203556422758,
+      "part_entropie_maximale": 0.0875753130323661,
+      "part_cellules_quasi_certaines": 0.7685013771616923,
+      "ecart_de_calibration_attendu": 0.37835427413263056
+    }
+  },
+  "critere_a6": {
+    "political_ideology": {
+      "humains vague 2": {
+        "r_deviance": 0.8954751285102643,
+        "rho_deviance": 0.8918707498111028,
+        "deviance_agent": 0.3984616411044354,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.999398888301014
+      },
+      "C2": {
+        "r_deviance": 0.2462539920575651,
+        "rho_deviance": 0.28649628872394334,
+        "deviance_agent": 0.4094035238270189,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.30737165984048265
+      },
+      "C3": {
+        "r_deviance": 0.6727978177549533,
+        "rho_deviance": 0.6857318103026802,
+        "deviance_agent": 0.42943653040262364,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.4130347645567015
+      },
+      "agents composite": {
+        "r_deviance": 0.7729931707039186,
+        "rho_deviance": 0.7775510022667674,
+        "deviance_agent": 0.37368178525792456,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.7897695476021901
+      },
+      "agents entretien (v3)": {
+        "r_deviance": 0.5848308777434235,
+        "rho_deviance": 0.5666011822747679,
+        "deviance_agent": 0.37241612903730875,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.6588277885536566
+      },
+      "agents enquete": {
+        "r_deviance": 0.7426923637864539,
+        "rho_deviance": 0.7341464065069558,
+        "deviance_agent": 0.37734745183120694,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.6504839158036194
+      },
+      "agents demographiques (v6)": {
+        "r_deviance": 0.5097539572416314,
+        "rho_deviance": 0.5160780479132406,
+        "deviance_agent": 0.35041675660593985,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.5293165165323834
+      },
+      "agents v7": {
+        "r_deviance": 0.29847323484848953,
+        "rho_deviance": 0.29013378372372106,
+        "deviance_agent": 0.3497057116680393,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.444810080330712
+      },
+      "agents v8": {
+        "r_deviance": 0.18555191217061817,
+        "rho_deviance": 0.23451175607804792,
+        "deviance_agent": 0.33633142745253203,
+        "deviance_humaine": 0.3962571549835342,
+        "r_exactitude_consistance": 0.4193474223638527
+      }
+    },
+    "profil croise": {
+      "humains vague 2": {
+        "r_deviance": 0.8669076917402287,
+        "rho_deviance": 0.8726699861729217,
+        "deviance_agent": 0.4147223807000789,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.999398888301014
+      },
+      "C2": {
+        "r_deviance": 0.34156904334491917,
+        "rho_deviance": 0.30767516188259825,
+        "deviance_agent": 0.4304403359589008,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.30737165984048265
+      },
+      "C3": {
+        "r_deviance": 0.7266539279849223,
+        "rho_deviance": 0.711554299616922,
+        "deviance_agent": 0.4596175234762191,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.4130347645567015
+      },
+      "agents composite": {
+        "r_deviance": 0.8221509355096335,
+        "rho_deviance": 0.8092920989202789,
+        "deviance_agent": 0.4035446414004325,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.7897695476021901
+      },
+      "agents entretien (v3)": {
+        "r_deviance": 0.7452418702001233,
+        "rho_deviance": 0.7032618304633961,
+        "deviance_agent": 0.40366352366237573,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.6588277885536566
+      },
+      "agents enquete": {
+        "r_deviance": 0.8127103110573453,
+        "rho_deviance": 0.8056313232438477,
+        "deviance_agent": 0.4033617773692024,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.6504839158036194
+      },
+      "agents demographiques (v6)": {
+        "r_deviance": 0.5735834883456128,
+        "rho_deviance": 0.5403856470392674,
+        "deviance_agent": 0.3787626189977576,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.5293165165323834
+      },
+      "agents v7": {
+        "r_deviance": 0.4585467200800856,
+        "rho_deviance": 0.4670076842288192,
+        "deviance_agent": 0.38304028291072817,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.444810080330712
+      },
+      "agents v8": {
+        "r_deviance": 0.48434804219280275,
+        "rho_deviance": 0.46998466176548365,
+        "deviance_agent": 0.3739687717211571,
+        "deviance_humaine": 0.4160397873143167,
+        "r_exactitude_consistance": 0.4193474223638527
+      }
+    }
+  },
+  "recapitulatif": {
+    "humains vague 2": {
+      "exactitude": 0.791359215540898,
+      "exactitude_esperee": 0.791359215540898,
+      "ratio_inter_ideologie": 1.1117733912504828,
+      "ratio_inter_genre": 0.8318979372297134,
+      "ratio_intra": 0.9974734961804874,
+      "ratio_total": 0.998583623574673,
+      "diversite": 0.9988133899935429,
+      "accord": 0.4925924089818222
+    },
+    "C2": {
+      "exactitude": 0.5273556742345796,
+      "exactitude_esperee": 0.5266505194153046,
+      "ratio_inter_ideologie": 8.161581181706284,
+      "ratio_inter_genre": 0.07457716332139966,
+      "ratio_intra": 0.5563387584642722,
+      "ratio_total": 0.6532557733128707,
+      "diversite": 0.6541638905435077,
+      "accord": 0.6638625174003673
+    },
+    "agents v8": {
+      "exactitude": 0.5661392756265226,
+      "exactitude_esperee": 0.5661392756265226,
+      "ratio_inter_ideologie": 8.952875804112745,
+      "ratio_inter_genre": 0.1284957998391973,
+      "ratio_intra": 0.6741942233220206,
+      "ratio_total": 0.7847746465932541,
+      "diversite": 0.7847633983958907,
+      "accord": 0.5930165361402374
+    },
+    "C3": {
+      "exactitude": 0.5825058221049296,
+      "exactitude_esperee": 0.5820969715009134,
+      "ratio_inter_ideologie": 0.7329221474077118,
+      "ratio_inter_genre": 0.6641708659720116,
+      "ratio_intra": 0.672329020674345,
+      "ratio_total": 0.6708166270971637,
+      "diversite": 0.6728680210603332,
+      "accord": 0.6534605154368551
+    },
+    "agents composite": {
+      "exactitude": 0.6831553679728988,
+      "exactitude_esperee": 0.6831553679728988,
+      "ratio_inter_ideologie": 2.2039881684577876,
+      "ratio_inter_genre": 0.9542698445247593,
+      "ratio_intra": 0.8718910400387394,
+      "ratio_total": 0.8897206665079427,
+      "diversite": 0.8907968540998918,
+      "accord": 0.5391878006741823
+    },
+    "agents enquete": {
+      "exactitude": 0.6473301822479057,
+      "exactitude_esperee": 0.6473301822479057,
+      "ratio_inter_ideologie": 2.434318174103405,
+      "ratio_inter_genre": 0.8910737309622202,
+      "ratio_intra": 0.830532231345204,
+      "ratio_total": 0.8515037336778232,
+      "diversite": 0.8528021926178673,
+      "accord": 0.5556482272578008
+    },
+    "agents entretien (v3)": {
+      "exactitude": 0.6563632231189178,
+      "exactitude_esperee": 0.6563632231189178,
+      "ratio_inter_ideologie": 2.915641726664716,
+      "ratio_inter_genre": 0.8535492027712649,
+      "ratio_intra": 0.8312354627256026,
+      "ratio_total": 0.8598769803123271,
+      "diversite": 0.8615163137571571,
+      "accord": 0.562077258066534
+    },
+    "agents demographiques (v6)": {
+      "exactitude": 0.590227786946762,
+      "exactitude_esperee": 0.590227786946762,
+      "ratio_inter_ideologie": 0.24311349865761087,
+      "ratio_inter_genre": 0.9056431797029413,
+      "ratio_intra": 0.6199608655687288,
+      "ratio_total": 0.6261881507833128,
+      "diversite": 0.6283804418315007,
+      "accord": 0.679515037339974
+    },
+    "agents v7": {
+      "exactitude": 0.5691679351660226,
+      "exactitude_esperee": 0.5691679351660226,
+      "ratio_inter_ideologie": 0.35922334508415105,
+      "ratio_inter_genre": 0.4252092912372258,
+      "ratio_intra": 0.6357875032330293,
+      "ratio_total": 0.6320360261393401,
+      "diversite": 0.6385042545467736,
+      "accord": 0.6843178589653953
+    },
+    "plafond_humain": 0.791359215540898
+  }
+}

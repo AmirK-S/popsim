@@ -1,0 +1,5 @@
+controle,mesure,taille,tirages,valeur_droite,valeur_gauche,ratio,ic_bas,ic_haut,n_items
+rarefaction a effectif egal,gs,567,200,0.547395,0.536296,1.020703,1.014635,1.026335,609
+rarefaction a effectif egal,h,567,200,1.466046,1.436108,1.020854,1.014870,1.026871,609
+appariement genre x ethnicite x age x education,gs,486,200,0.547713,0.532097,1.029356,1.024259,1.034856,609
+appariement genre x ethnicite x age x education,h,486,200,1.466847,1.425639,1.028912,1.023175,1.034171,609

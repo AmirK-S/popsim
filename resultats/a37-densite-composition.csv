@@ -1,0 +1,7 @@
+partage_des_noeuds,camp,n_noeuds,n_noeuds_neutres,taux_endossement_moyen,taux_endossement_median,n_noeuds_endosses_sous_10_pour_cent,ce_que_la_densite_mesure
+brut,droite,33,8,0.221437,0.198148,3,le stock de positions que ce camp detient effectivement est il serre
+brut,gauche,17,2,0.409820,0.386068,0,le stock de positions que ce camp detient effectivement est il serre
+egalise,droite,17,2,0.250654,0.209259,0,"les positions les plus caracteristiques de ce camp, a nombre egal de noeuds, sont elles serrees"
+egalise,gauche,17,2,0.409820,0.386068,0,"les positions les plus caracteristiques de ce camp, a nombre egal de noeuds, sont elles serrees"
+sans neutre,droite,25,0,0.232074,0.238889,3,les positions non neutres que ce camp detient sont elles serrees
+sans neutre,gauche,15,0,0.431798,0.389610,0,les positions non neutres que ce camp detient sont elles serrees

@@ -1,0 +1,16 @@
+controle,valeur,sur
+personnes C3F completes retenues,60,150
+items de famille dans la trace C3F,58,58
+personnes C3F partielles ecartees,1,1
+cellules du perimetre apparie,3480,3480
+"cellules ecartees, reponse vague 1 non observee",0,3480
+reference de minorite : items porteurs sur les 58,21,58
+items a deux modalites minoritaires ou plus sur les 58,0,58
+P7 H2a evaluable : items multimodalites du perimetre,"non, 0 item","test non evaluable, p = 1"
+"B2 famille retiree recalculee, exactitude sur les 1 052 (a8 publie 0,662105)",0.662105,1
+ecart a la valeur publiee de a8,0.0,1
+plis d'origine des 60 personnes de C3F,0 et 1,5 plis
+"C3F sur 58 items, calcul de a5_evaluer, personnes du run",0.5572,60 personnes predites
+"C3F diversite conservee, calcul de a5_evaluer, predictions contre les 150 humains",0.5676,1
+"C3 sur 58 items, calcul de a5_evaluer, personnes du run",0.6249,150 personnes predites
+"C3 diversite conservee, calcul de a5_evaluer, predictions contre les 150 humains",0.685,1

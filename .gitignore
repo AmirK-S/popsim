@@ -1,0 +1,45 @@
+# Microdonnees d'enquete : JAMAIS versionnees.
+# Les licences ICPSR, NORC, Pew et assimilees interdisent la redistribution,
+# et un commit git est une redistribution. Voir exploration/07-ethique-conformite.md.
+data/
+*.dta
+*.sav
+*.parquet
+*.csv
+
+# Exception : les tableaux de resultats agreges de resultats/ sont versionnes.
+# Ils ne contiennent ni ligne individuelle ni identifiant, uniquement des
+# statistiques par condition, et c'est ce qui rend les chiffres du projet
+# verifiables par un tiers sans acces aux microdonnees.
+!resultats/*.csv
+
+# Secrets et environnements
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+
+# Artefacts de run
+runs/
+outputs/local/
+.DS_Store
+
+# Pieces internes non publiees (journaux dates, brainstorms, lettres, pilotage personnel)
+JOURNAL-*.md
+BRAINSTORM*.md
+brainstorm/
+demandes/
+DECISIONS-*.md
+CONTEXTE.md
+PASSATION.md
+POUR-SIMON.md
+POINT-DE-SITUATION.md
+ETAT-DU-MATIN-*.md
+ARBITRAGE.md
+MOONSHOTS.md
+STRATEGIE-REFERENCE.md
+VEILLE.md
+resultats/veille-*.md
+data/

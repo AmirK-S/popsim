@@ -1,0 +1,87 @@
+{
+  "moteur": "llama.cpp",
+  "modele": "data/modeles/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+  "chargement_s": 1.0217647552490234,
+  "cache_kv": "q8_0",
+  "slots_paralleles": 8,
+  "contexte_par_slot": 8192,
+  "tokens_persona": 3029,
+  "t1": {
+    "brut": {
+      "A": 0.01652128804597649,
+      "B": 0.003344284881240126,
+      "C": 0.019758727161082717,
+      "D": 0.9101734165924963,
+      "E": 0.011969516523908407
+    },
+    "normalisee": {
+      "A": 0.017178052522049347,
+      "B": 0.003477228965366845,
+      "C": 0.020544188322204192,
+      "D": 0.9463551940314165,
+      "E": 0.012445336158963108
+    },
+    "manquantes": [],
+    "masse_totale": 0.961767233204704,
+    "entropie_bits": 0.39831041997458017,
+    "methode": "top-k renvoye par llama-server (n_probs=40)"
+  },
+  "t2": {
+    "applicable": false
+  },
+  "t3_t4": {
+    "tokens_prompt": 3094,
+    "prefill_t_par_s": 786.4644736153116,
+    "decodage_t_par_s": 38.35114245637557
+  },
+  "t5": {
+    "tokens_persona": 3029,
+    "froid_ms": 3981.451,
+    "chaud_ms": 156.046,
+    "sans_cache_ms": 4151.58,
+    "tokens_reevalues": 63.0,
+    "gain": 26.60484728862002
+  },
+  "t6": {
+    "applicable": true,
+    "resultats": {
+      "1": {
+        "duree_s": 1.1801308329449967,
+        "appels": 8,
+        "appels_par_s": 6.7789094028126815,
+        "appels_par_heure": 24404.073850125653,
+        "gain": 1.0
+      },
+      "2": {
+        "duree_s": 2.044847165932879,
+        "appels": 16,
+        "appels_par_s": 7.824545651410895,
+        "appels_par_heure": 28168.364345079222,
+        "gain": 1.1542484471269614
+      },
+      "4": {
+        "duree_s": 4.657729750033468,
+        "appels": 32,
+        "appels_par_s": 6.870299849356881,
+        "appels_par_heure": 24733.079457684773,
+        "gain": 1.0134815854754278
+      }
+    },
+    "gain_max": 1.1542484471269614
+  },
+  "t7": {
+    "duree_totale_s": 10.053025958011858,
+    "premier_appel_ms": 193.76633304636925,
+    "mediane_ms": 199.33616602793336,
+    "min_ms": 189.68191696330905,
+    "max_ms": 214.85804195981473,
+    "memoire_debut_mo": 13418.03125,
+    "memoire_fin_mo": 13418.046875,
+    "entropie_moyenne_bits": 1.021075543739731,
+    "appels_par_heure": 18059.94402187672
+  },
+  "duree_du_banc_s": 78.4496579170227,
+  "appels_par_heure_sequentiel": 18059.94402187672,
+  "appels_par_heure_avec_lots": 20845.662342451054,
+  "heures_pour_45000_appels": 2.15872248435877
+}

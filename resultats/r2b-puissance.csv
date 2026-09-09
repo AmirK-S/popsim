@@ -1,0 +1,8 @@
+hypothese,adversaire,effet,ic_bas,ic_haut,ecart_type_bootstrap,personnes,z_observe,z_exige_holm_7,plus_petit_effet_detectable_holm,plus_petit_effet_detectable_ic95,personnes_exigees_holm,personnes_exigees_ic95,signe_observe
+H1a,plancher de segment,0.031460,-0.035458,0.101522,0.034721,150,0.906082,2.449998,0.085067,0.068053,1097.000000,702.000000,en faveur du jumeau
+H1b,E1 famille retiree (argmax),0.037736,-0.051027,0.125984,0.044596,150,0.846178,2.449998,0.109259,0.087406,1258.000000,805.000000,en faveur du jumeau
+H1b,E2 famille retiree (tirage),-0.047170,-0.134336,0.034195,0.042800,150,-1.102109,2.449998,0.104859,0.083886,742.000000,475.000000,contre le jumeau
+H1b,PMM k=10 famille retiree,-0.094340,-0.172932,-0.009901,0.041660,150,-2.264538,2.449998,0.102066,0.081651,176.000000,113.000000,contre le jumeau
+H1b,"IM m=10 mode, famille retiree",-0.009434,-0.086957,0.066038,0.039661,150,-0.237864,2.449998,0.097170,0.077734,15914.000000,10185.000000,contre le jumeau
+H1b,B2 famille retiree (argmax),0.150943,0.057471,0.236224,0.044924,150,3.360001,2.449998,0.110063,0.088049,80.000000,52.000000,en faveur du jumeau
+H1b,B2 famille retiree (tirage),0.047170,-0.034195,0.122642,0.039596,150,1.191268,2.449998,0.097011,0.077607,635.000000,407.000000,en faveur du jumeau

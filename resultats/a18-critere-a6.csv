@@ -1,0 +1,19 @@
+condition,axe,n_personnes,r_pearson_deviance,r_spearman_deviance,deviance_moyenne_agent,deviance_moyenne_humaine,r_exactitude_consistance
+humains vague 2,political_ideology,150,0.8955,0.8919,0.3985,0.3963,0.9994
+C2,political_ideology,150,0.2463,0.2865,0.4094,0.3963,0.3074
+C3,political_ideology,150,0.6728,0.6857,0.4294,0.3963,0.4130
+agents composite,political_ideology,150,0.7730,0.7776,0.3737,0.3963,0.7898
+agents entretien (v3),political_ideology,150,0.5848,0.5666,0.3724,0.3963,0.6588
+agents enquete,political_ideology,150,0.7427,0.7341,0.3773,0.3963,0.6505
+agents demographiques (v6),political_ideology,150,0.5098,0.5161,0.3504,0.3963,0.5293
+agents v7,political_ideology,150,0.2985,0.2901,0.3497,0.3963,0.4448
+agents v8,political_ideology,150,0.1856,0.2345,0.3363,0.3963,0.4193
+humains vague 2,profil croise,147,0.8669,0.8727,0.4147,0.4160,0.9994
+C2,profil croise,147,0.3416,0.3077,0.4304,0.4160,0.3074
+C3,profil croise,147,0.7267,0.7116,0.4596,0.4160,0.4130
+agents composite,profil croise,147,0.8222,0.8093,0.4035,0.4160,0.7898
+agents entretien (v3),profil croise,147,0.7452,0.7033,0.4037,0.4160,0.6588
+agents enquete,profil croise,147,0.8127,0.8056,0.4034,0.4160,0.6505
+agents demographiques (v6),profil croise,147,0.5736,0.5404,0.3788,0.4160,0.5293
+agents v7,profil croise,147,0.4585,0.4670,0.3830,0.4160,0.4448
+agents v8,profil croise,147,0.4843,0.4700,0.3740,0.4160,0.4193

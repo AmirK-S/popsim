@@ -1,0 +1,150 @@
+item,classe_norc,s1_norc,domaine,s2_points,niveau_s2,source_s2,s3_composite,type
+natspac/y,mixte,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natenvir/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natheal/y,mixte,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natcity/y,mixte,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natdrug/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+nateduc/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natrace/y,sensible,2.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.916667,ordinal 3 et plus
+natarms/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+nataid/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natfare/y,mixte,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natroad,sensible,2.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natsoc,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natmass,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natpark,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natchld,sensible,2.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natsci,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+natenrgy,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+uswary,non teste,,,,,domaine non mesure par corpus/04,,binaire
+prayer,non teste,,,,,domaine non mesure par corpus/04,,binaire
+courts,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+discaffw,non teste,,discrimination percue,13.000000,[HYPOTHESE],"Pew 2015, corpus 04-15 : 12 a 15 points sur les items de discrimination percue. Nos items portent sur la discrimination inverse, le transfert est une hypothese",,ordinal 3 et plus
+discaffm,non teste,,discrimination percue,13.000000,[HYPOTHESE],"Pew 2015, corpus 04-15 : 12 a 15 points sur les items de discrimination percue. Nos items portent sur la discrimination inverse, le transfert est une hypothese",,ordinal 3 et plus
+fehire,non teste,,roles de genre,4.000000,[HYPOTHESE],NORC 04-18 note des reponses plus extremes sur le web pour les items de femmes au travail ; aucune ampleur chiffree,,ordinal 3 et plus
+fechld,temoin,0.000000,roles de genre,4.000000,[HYPOTHESE],NORC 04-18 note des reponses plus extremes sur le web pour les items de femmes au travail ; aucune ampleur chiffree,0.243590,ordinal 3 et plus
+fepresch,investiguer,1.000000,roles de genre,4.000000,[HYPOTHESE],NORC 04-18 note des reponses plus extremes sur le web pour les items de femmes au travail ; aucune ampleur chiffree,0.467949,ordinal 3 et plus
+fefam,investiguer,1.000000,roles de genre,4.000000,[HYPOTHESE],NORC 04-18 note des reponses plus extremes sur le web pour les items de femmes au travail ; aucune ampleur chiffree,0.467949,ordinal 3 et plus
+fepol,non teste,,roles de genre,4.000000,[HYPOTHESE],NORC 04-18 note des reponses plus extremes sur le web pour les items de femmes au travail ; aucune ampleur chiffree,,binaire
+mobile16,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+incom16,temoin,0.000000,revenu et statut,8.000000,[PROBABLE],"Tourangeau et Yan 2007, corpus 04-03 : le revenu est un item sensible classique ; Kreuter, Presser et Tourangeau 2008, corpus 04-11 : 25 points sur un fait scolaire embarrassant et une non reponse a l'item multipliee par sept au telephone",0.461538,ordinal 3 et plus
+dwelown16,non teste,,,,,domaine non mesure par corpus/04,,nominal
+divorced,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+posslq/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,nominal
+wrkstat,temoin,0.000000,,,,domaine non mesure par corpus/04,,nominal
+evwork,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+wrkgovt1,non teste,,,,,domaine non mesure par corpus/04,,binaire
+wrkgovt2,non teste,,,,,domaine non mesure par corpus/04,,binaire
+partfull,non teste,,,,,domaine non mesure par corpus/04,,nominal
+wksub1,non teste,,,,,domaine non mesure par corpus/04,,nominal
+wksup1,non teste,,,,,domaine non mesure par corpus/04,,nominal
+conarmy,investiguer,1.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conbus,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conclerg,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+coneduc,sensible,2.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+confed,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+confinan,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conjudge,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conlabor,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conlegis,sensible,2.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conmedic,sensible,2.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+conpress,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+consci,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+contv,temoin,0.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+joblose,non teste,,,,,domaine non mesure par corpus/04,,nominal
+jobfind,temoin,0.000000,,,,domaine non mesure par corpus/04,,nominal
+happy,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+hapmar,non teste,,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",,nominal
+satjob,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,nominal
+spdeg*,non teste,,,,,domaine non mesure par corpus/04,,nominal
+spjew,non teste,,,,,domaine non mesure par corpus/04,,nominal
+spfund,non teste,,,,,domaine non mesure par corpus/04,,nominal
+unemp,temoin,0.000000,chomage passe,5.000000,[HYPOTHESE],"Kreuter et al. 2008, corpus 04-11 : les faits stigmatises sont sous declares en presence d'un enqueteur ; ampleur transposee",0.294872,binaire
+union1,non teste,,,,,domaine non mesure par corpus/04,,nominal
+spkath/y,temoin,0.000000,tolerance politique,4.000000,[HYPOTHESE],"Tourangeau et Yan 2007, corpus 04-03 : les items de tolerance sont sur declares du cote tolerant ; aucune ampleur publiee par item",0.243590,binaire
+colath,temoin,0.000000,tolerance politique,4.000000,[HYPOTHESE],"Tourangeau et Yan 2007, corpus 04-03 : les items de tolerance sont sur declares du cote tolerant ; aucune ampleur publiee par item",0.243590,binaire
+spkrac/y,sensible,2.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.916667,binaire
+colrac,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,binaire
+librac/y,non teste,,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",,binaire
+spkcom/y,non teste,,tolerance politique,4.000000,[HYPOTHESE],"Tourangeau et Yan 2007, corpus 04-03 : les items de tolerance sont sur declares du cote tolerant ; aucune ampleur publiee par item",,binaire
+colcom/y,non teste,,tolerance politique,4.000000,[HYPOTHESE],"Tourangeau et Yan 2007, corpus 04-03 : les items de tolerance sont sur declares du cote tolerant ; aucune ampleur publiee par item",,binaire
+libcom/y,temoin,0.000000,tolerance politique,4.000000,[HYPOTHESE],"Tourangeau et Yan 2007, corpus 04-03 : les items de tolerance sont sur declares du cote tolerant ; aucune ampleur publiee par item",0.243590,binaire
+spkhomo/y,non teste,,hostilite envers les gays,10.000000,[PROBABLE],"Coffman, Coffman et Ericson 2017, corpus 04-21 : la desapprobation d'un manager gay augmente de 67 pour cent sous le voile ; conversion en points faite par nous sur une base d'environ 15 pour cent",,binaire
+colhomo,non teste,,hostilite envers les gays,10.000000,[PROBABLE],"Coffman, Coffman et Ericson 2017, corpus 04-21 : la desapprobation d'un manager gay augmente de 67 pour cent sous le voile ; conversion en points faite par nous sur une base d'environ 15 pour cent",,binaire
+libhomo/y,non teste,,hostilite envers les gays,10.000000,[PROBABLE],"Coffman, Coffman et Ericson 2017, corpus 04-21 : la desapprobation d'un manager gay augmente de 67 pour cent sous le voile ; conversion en points faite par nous sur une base d'environ 15 pour cent",,binaire
+cappun,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+polhitok/y,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+polabuse/y,sensible,2.000000,,,,domaine non mesure par corpus/04,,binaire
+polattak/y,sensible,2.000000,,,,domaine non mesure par corpus/04,,binaire
+grass,non teste,,"drogues, opinion",2.000000,[HYPOTHESE],"Gnambs et Kaspar 2015 mesurent Omega = 1,17 sur le COMPORTEMENT ; l'opinion sur la legalisation est bien moins exposee, valeur basse assumee",,binaire
+gunlaw,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+owngun,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+hunt1,non teste,,,,,domaine non mesure par corpus/04,,nominal
+class,non teste,,revenu et statut,8.000000,[PROBABLE],"Tourangeau et Yan 2007, corpus 04-03 : le revenu est un item sensible classique ; Kreuter, Presser et Tourangeau 2008, corpus 04-11 : 25 points sur un fait scolaire embarrassant et une non reponse a l'item multipliee par sept au telephone",,ordinal 3 et plus
+satfin,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+finalter,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+finrela,temoin,0.000000,revenu et statut,8.000000,[PROBABLE],"Tourangeau et Yan 2007, corpus 04-03 : le revenu est un item sensible classique ; Kreuter, Presser et Tourangeau 2008, corpus 04-11 : 25 points sur un fait scolaire embarrassant et une non reponse a l'item multipliee par sept au telephone",0.461538,ordinal 3 et plus
+racdif1,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,binaire
+racdif2,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,binaire
+racdif3,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,binaire
+racdif4,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,binaire
+wlthwhts,non teste,,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",,ordinal 3 et plus
+wlthblks,non teste,,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",,ordinal 3 et plus
+wlthhsps,non teste,,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",,ordinal 3 et plus
+racwork,temoin,0.000000,attitude raciale,13.500000,[CONFIRME],"Berinsky 1999, corpus 04-19 : 13,5 points de soutien en trop a l'integration scolaire apres correction",0.615385,nominal
+letin1a,temoin,0.000000,immigration,10.000000,[CONFIRME],"Bursztyn, Egorov et Fiorin 2020, corpus 04-27 : 30 pour cent en prive contre 20 en public",0.512821,ordinal 3 et plus
+getahead,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+aged,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+parsol,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+kidssol,non teste,,,,,domaine non mesure par corpus/04,,nominal
+spanking,temoin,0.000000,punition corporelle,5.000000,[HYPOTHESE],fait devenu stigmatise ; aucune mesure publiee dans corpus/04,0.294872,ordinal 3 et plus
+divlaw,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+sexeduc,temoin,0.000000,conduite sexuelle,6.000000,[PROBABLE],"Gnambs et Kaspar 2015, corpus 04-14 : Omega = 1,29 sur les comportements sexuels ; Tourangeau et Yan 2007, corpus 04-03",0.423077,binaire
+pillok,investiguer,1.000000,conduite sexuelle,6.000000,[PROBABLE],"Gnambs et Kaspar 2015, corpus 04-14 : Omega = 1,29 sur les comportements sexuels ; Tourangeau et Yan 2007, corpus 04-03",0.647436,ordinal 3 et plus
+xmarsex,sensible,2.000000,conduite sexuelle,6.000000,[PROBABLE],"Gnambs et Kaspar 2015, corpus 04-14 : Omega = 1,29 sur les comportements sexuels ; Tourangeau et Yan 2007, corpus 04-03",0.724359,ordinal 3 et plus
+homosex,temoin,0.000000,hostilite envers les gays,10.000000,[PROBABLE],"Coffman, Coffman et Ericson 2017, corpus 04-21 : la desapprobation d'un manager gay augmente de 67 pour cent sous le voile ; conversion en points faite par nous sur une base d'environ 15 pour cent",0.512821,ordinal 3 et plus
+marhomo,temoin,0.000000,mariage entre personnes de meme sexe,0.000000,[CONFIRME],"Lax, Phillips et Stollwerk 2016, corpus 04-22 : aucune preuve de desirabilite. Zero est ici un resultat mesure",0.185897,ordinal 3 et plus
+discaff,temoin,0.000000,discrimination percue,13.000000,[HYPOTHESE],"Pew 2015, corpus 04-15 : 12 a 15 points sur les items de discrimination percue. Nos items portent sur la discrimination inverse, le transfert est une hypothese",0.557692,ordinal 3 et plus
+abdefect,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+abnomore,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+abhlth,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+abpoor,investiguer,1.000000,,,,domaine non mesure par corpus/04,,binaire
+abrape,investiguer,1.000000,,,,domaine non mesure par corpus/04,,binaire
+absingle,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+abany,investiguer,1.000000,,,,domaine non mesure par corpus/04,,binaire
+letdie1,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+suicide1,investiguer,1.000000,,,,domaine non mesure par corpus/04,,binaire
+suicide2,non teste,,,,,domaine non mesure par corpus/04,,binaire
+suicide3,non teste,,,,,domaine non mesure par corpus/04,,binaire
+suicide4,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+pornlaw,temoin,0.000000,conduite sexuelle,6.000000,[PROBABLE],"Gnambs et Kaspar 2015, corpus 04-14 : Omega = 1,29 sur les comportements sexuels ; Tourangeau et Yan 2007, corpus 04-03",0.423077,ordinal 3 et plus
+fair,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+helpful,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+trust,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+tax,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+vote16,sensible,2.000000,vote declare,15.800000,[CONFIRME],"Ansolabehere et Hersh 2012, corpus 04-20 : 84,3 pour cent declare contre 68,5 valide",0.974359,nominal
+pres16,temoin,0.000000,choix de candidat,0.000000,[CONFIRME],Coppock 2017 corpus 04-30 et AAPOR 2021 corpus 04-31 : aucun electeur cache detecte. Zero est ici un resultat mesure,0.185897,nominal
+if16who,investiguer,1.000000,choix de candidat,0.000000,[CONFIRME],Coppock 2017 corpus 04-30 et AAPOR 2021 corpus 04-31 : aucun electeur cache detecte. Zero est ici un resultat mesure,0.410256,nominal
+news,investiguer,1.000000,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+jew,non teste,,,,,domaine non mesure par corpus/04,,nominal
+relig16*,non teste,,,,,domaine non mesure par corpus/04,,nominal
+jew16*,non teste,,,,,domaine non mesure par corpus/04,,nominal
+attend,sensible,2.000000,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",0.814103,ordinal 3 et plus
+pray,investiguer,1.000000,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",0.737179,ordinal 3 et plus
+postlife,non teste,,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",,binaire
+bible,non teste,,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",,ordinal 3 et plus
+reborn,investiguer,1.000000,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",0.737179,nominal
+savesoul,investiguer,1.000000,religion,10.000000,[PROBABLE],"Presser et Stinson 1998, corpus 04-13 : un tiers de pratique hebdomadaire en moins sans enqueteur, soit environ 10 points sur la base americaine ; NORC 04-18 confirme la direction",0.737179,binaire
+granborn,non teste,,,,,domaine non mesure par corpus/04,,ordinal 3 et plus
+uscitzn*,non teste,,,,,domaine non mesure par corpus/04,,binaire
+fucitzn,non teste,,,,,domaine non mesure par corpus/04,,nominal
+mnthsusa,non teste,,,,,domaine non mesure par corpus/04,,nominal
+income,non teste,,revenu et statut,8.000000,[PROBABLE],"Tourangeau et Yan 2007, corpus 04-03 : le revenu est un item sensible classique ; Kreuter, Presser et Tourangeau 2008, corpus 04-11 : 25 points sur un fait scolaire embarrassant et une non reponse a l'item multipliee par sept au telephone",,ordinal 3 et plus
+othlang,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+health,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+compuse*,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire
+webmob,non teste,,,,,domaine non mesure par corpus/04,,binaire
+xmovie,non teste,,conduite sexuelle,6.000000,[PROBABLE],"Gnambs et Kaspar 2015, corpus 04-14 : Omega = 1,29 sur les comportements sexuels ; Tourangeau et Yan 2007, corpus 04-03",,binaire
+usewww*,non teste,,,,,domaine non mesure par corpus/04,,binaire
+life,temoin,0.000000,satisfaction et bien etre,5.500000,[PROBABLE],"Pew 2015, corpus 04-15 : ecart moyen de 5,5 points sur 60 questions, les plus gros ecarts du panneau etant sur la satisfaction, 18 et 14 points",0.352564,ordinal 3 et plus
+richwork,temoin,0.000000,,,,domaine non mesure par corpus/04,,binaire

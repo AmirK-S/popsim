@@ -1,0 +1,97 @@
+sous_ensemble,condition,axe,silhouette,ic_bas,ic_haut
+attitudinal,humains vague 1,gender,0.0131,0.0088,0.0173
+attitudinal,humains vague 1,race,-0.0015,-0.0138,0.0091
+attitudinal,humains vague 1,political_ideology,-0.0284,-0.0332,-0.0236
+attitudinal,humains vague 1,age,-0.0295,-0.0400,-0.0222
+attitudinal,humains vague 1,education,-0.0192,-0.0295,-0.0109
+attitudinal,humains vague 1,profil croise,-0.0466,-0.0611,-0.0352
+attitudinal,humains vague 2,gender,0.0130,0.0089,0.0179
+attitudinal,humains vague 2,race,-0.0010,-0.0118,0.0093
+attitudinal,humains vague 2,political_ideology,-0.0313,-0.0372,-0.0259
+attitudinal,humains vague 2,age,-0.0300,-0.0452,-0.0196
+attitudinal,humains vague 2,education,-0.0184,-0.0276,-0.0116
+attitudinal,humains vague 2,profil croise,-0.0507,-0.0670,-0.0387
+attitudinal,agents composite,gender,0.0198,0.0117,0.0293
+attitudinal,agents composite,race,-0.0130,-0.0277,0.0016
+attitudinal,agents composite,political_ideology,-0.0539,-0.0639,-0.0446
+attitudinal,agents composite,age,-0.0688,-0.0914,-0.0484
+attitudinal,agents composite,education,-0.0286,-0.0477,-0.0158
+attitudinal,agents composite,profil croise,-0.0910,-0.1172,-0.0665
+attitudinal,agents entretien (v3),gender,0.0258,0.0147,0.0390
+attitudinal,agents entretien (v3),race,-0.0470,-0.0623,-0.0347
+attitudinal,agents entretien (v3),political_ideology,-0.0771,-0.0887,-0.0643
+attitudinal,agents entretien (v3),age,-0.0919,-0.1142,-0.0703
+attitudinal,agents entretien (v3),education,-0.0372,-0.0641,-0.0170
+attitudinal,agents entretien (v3),profil croise,-0.1152,-0.1456,-0.0857
+attitudinal,agents enquete,gender,0.0160,0.0061,0.0265
+attitudinal,agents enquete,race,-0.0363,-0.0536,-0.0176
+attitudinal,agents enquete,political_ideology,-0.0624,-0.0734,-0.0521
+attitudinal,agents enquete,age,-0.0874,-0.1071,-0.0651
+attitudinal,agents enquete,education,-0.0413,-0.0688,-0.0220
+attitudinal,agents enquete,profil croise,-0.1019,-0.1387,-0.0774
+attitudinal,agents persona (v7),gender,0.0271,0.0172,0.0378
+attitudinal,agents persona (v7),race,-0.0594,-0.0910,-0.0222
+attitudinal,agents persona (v7),political_ideology,-0.0569,-0.0785,-0.0405
+attitudinal,agents persona (v7),age,-0.0601,-0.0875,-0.0382
+attitudinal,agents persona (v7),education,-0.0536,-0.0966,-0.0249
+attitudinal,agents persona (v7),profil croise,-0.1387,-0.1895,-0.1037
+attitudinal,agents demographiques (v6),gender,0.0469,0.0358,0.0580
+attitudinal,agents demographiques (v6),race,-0.0771,-0.0894,-0.0631
+attitudinal,agents demographiques (v6),political_ideology,-0.0592,-0.0724,-0.0467
+attitudinal,agents demographiques (v6),age,-0.0876,-0.1028,-0.0756
+attitudinal,agents demographiques (v6),education,-0.0127,-0.0255,-0.0026
+attitudinal,agents demographiques (v6),profil croise,-0.1317,-0.1508,-0.1150
+attitudinal,agents demographiques (v8),gender,0.0176,0.0053,0.0315
+attitudinal,agents demographiques (v8),race,-0.0795,-0.1003,-0.0583
+attitudinal,agents demographiques (v8),political_ideology,0.0955,0.0701,0.1192
+attitudinal,agents demographiques (v8),age,-0.1320,-0.1620,-0.1027
+attitudinal,agents demographiques (v8),education,-0.0694,-0.1188,-0.0293
+attitudinal,agents demographiques (v8),profil croise,-0.1099,-0.1502,-0.0757
+tous items non demo,humains vague 1,gender,0.0097,0.0070,0.0124
+tous items non demo,humains vague 1,race,0.0059,-0.0021,0.0125
+tous items non demo,humains vague 1,political_ideology,-0.0202,-0.0248,-0.0164
+tous items non demo,humains vague 1,age,-0.0212,-0.0293,-0.0150
+tous items non demo,humains vague 1,education,-0.0074,-0.0127,-0.0035
+tous items non demo,humains vague 1,profil croise,-0.0255,-0.0373,-0.0189
+tous items non demo,humains vague 2,gender,0.0098,0.0072,0.0124
+tous items non demo,humains vague 2,race,0.0066,-0.0016,0.0128
+tous items non demo,humains vague 2,political_ideology,-0.0213,-0.0262,-0.0173
+tous items non demo,humains vague 2,age,-0.0201,-0.0289,-0.0129
+tous items non demo,humains vague 2,education,-0.0084,-0.0143,-0.0041
+tous items non demo,humains vague 2,profil croise,-0.0264,-0.0377,-0.0190
+tous items non demo,agents composite,gender,0.0143,0.0090,0.0200
+tous items non demo,agents composite,race,0.0040,-0.0043,0.0125
+tous items non demo,agents composite,political_ideology,-0.0325,-0.0389,-0.0263
+tous items non demo,agents composite,age,-0.0378,-0.0518,-0.0282
+tous items non demo,agents composite,education,-0.0124,-0.0203,-0.0062
+tous items non demo,agents composite,profil croise,-0.0442,-0.0586,-0.0346
+tous items non demo,agents entretien (v3),gender,0.0163,0.0099,0.0236
+tous items non demo,agents entretien (v3),race,-0.0159,-0.0248,-0.0075
+tous items non demo,agents entretien (v3),political_ideology,-0.0442,-0.0506,-0.0367
+tous items non demo,agents entretien (v3),age,-0.0482,-0.0621,-0.0362
+tous items non demo,agents entretien (v3),education,-0.0147,-0.0261,-0.0068
+tous items non demo,agents entretien (v3),profil croise,-0.0517,-0.0635,-0.0415
+tous items non demo,agents enquete,gender,0.0115,0.0056,0.0181
+tous items non demo,agents enquete,race,-0.0118,-0.0223,-0.0005
+tous items non demo,agents enquete,political_ideology,-0.0409,-0.0488,-0.0343
+tous items non demo,agents enquete,age,-0.0563,-0.0683,-0.0451
+tous items non demo,agents enquete,education,-0.0176,-0.0293,-0.0088
+tous items non demo,agents enquete,profil croise,-0.0583,-0.0745,-0.0456
+tous items non demo,agents persona (v7),gender,0.0171,0.0124,0.0243
+tous items non demo,agents persona (v7),race,-0.0224,-0.0414,-0.0013
+tous items non demo,agents persona (v7),political_ideology,-0.0355,-0.0472,-0.0256
+tous items non demo,agents persona (v7),age,-0.0388,-0.0516,-0.0263
+tous items non demo,agents persona (v7),education,-0.0209,-0.0458,-0.0076
+tous items non demo,agents persona (v7),profil croise,-0.0787,-0.1014,-0.0569
+tous items non demo,agents demographiques (v6),gender,0.0239,0.0186,0.0310
+tous items non demo,agents demographiques (v6),race,-0.0321,-0.0442,-0.0197
+tous items non demo,agents demographiques (v6),political_ideology,-0.0624,-0.0753,-0.0501
+tous items non demo,agents demographiques (v6),age,-0.0806,-0.0928,-0.0675
+tous items non demo,agents demographiques (v6),education,-0.0011,-0.0124,0.0070
+tous items non demo,agents demographiques (v6),profil croise,-0.0906,-0.1124,-0.0715
+tous items non demo,agents demographiques (v8),gender,0.0140,0.0054,0.0260
+tous items non demo,agents demographiques (v8),race,-0.0141,-0.0305,0.0006
+tous items non demo,agents demographiques (v8),political_ideology,0.0785,0.0634,0.0924
+tous items non demo,agents demographiques (v8),age,-0.0281,-0.0425,-0.0113
+tous items non demo,agents demographiques (v8),education,-0.0556,-0.1109,-0.0177
+tous items non demo,agents demographiques (v8),profil croise,-0.0320,-0.0567,-0.0178

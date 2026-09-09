@@ -1,0 +1,10 @@
+pente,pente_ic_bas,pente_ic_haut,ordonnee,ordonnee_ic_bas,ordonnee_ic_haut,ratio_a_derive_nulle,r2,r2_ic_bas,r2_ic_haut,spearman,n_items,p,test,famille_de_tests,p_holm
+-2.218536,-2.563004,-1.957515,0.039544,0.004808,0.069400,1.040336,0.677036,0.583234,0.713189,-0.858517,79,0.000500,"H1 GSS, codeur A, tous items orientes",pentes humaines,0.001999
+-2.228767,-2.626180,-1.904516,0.060922,0.023447,0.095708,1.062816,0.653063,0.548423,0.691461,-0.833036,65,0.000500,"H2 GSS, codeur A, orientation stricte",pentes humaines,0.001999
+-2.189378,-2.544129,-1.910478,0.055177,0.023374,0.087930,1.056727,0.682962,0.582187,0.714929,-0.875516,79,0.000500,"H3 GSS, codeur B automatique",pentes humaines,0.001999
+-2.065764,-2.249014,-1.895897,-0.035638,-0.062088,-0.011760,0.964990,0.730597,0.690919,0.761647,-0.806061,10,0.000500,"H4 Twin, dix items de politique publique",pentes humaines,0.001999
+-2.144586,-2.519000,-1.875269,0.042386,0.006446,0.076944,1.043297,0.667919,0.569114,0.704755,-0.834991,79,0.000500,"H7 GSS vague 2, plancher de bruit",ce qui reste,0.001999
+-1.964172,-2.151456,-1.795693,-0.024500,-0.049028,-0.002009,0.975797,0.729152,0.689397,0.762518,-0.733333,10,0.000500,"Twin vague 4, plancher de bruit",ce qui reste,0.001999
+,,,0.039544,0.004808,0.069400,1.040336,,,,,79,0.026000,H5 ordonnee a l'origine differente de 0,ce qui reste,0.052000
+,,,,,,,,,,,79,0.072000,H6 rapport observe contre temoin de position,ce qui reste,0.072000
+,,,,,,0.987342,,,,0.953020,79,0.000000,H8 accord des deux codeurs d'orientation,accord des codeurs,0.000000

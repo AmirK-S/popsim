@@ -1,0 +1,9 @@
+item_as,groupe,parti_as,terme_realite,terme_humain,terme_modele_via_r1,terme_modele_via_run_composition,modeles_couverts,comparaison_a_trois_termes_possible,ce_qui_manque
+dem_black,Black,Democratic,"oui, deux bases","oui, YouGov 1 000 adultes",0,15,"oss20,q30,q4",True,
+dem_union,Union,Democratic,"oui, deux bases","oui, YouGov 1 000 adultes",25,15,"oss20,q30,q4,q4base",True,
+dem_aa,Atheist/Agnostic,Democratic,"oui, deux bases","oui, YouGov 1 000 adultes",0,15,"oss20,q30,q4",True,
+dem_lgb,LGB,Democratic,"oui, deux bases","oui, YouGov 1 000 adultes",0,14,"oss20,q30,q4",True,
+rep_evang,Evangelical,Republican,"oui, deux bases","oui, YouGov 1 000 adultes",24,15,"oss20,q30,q4",True,
+rep_rich,$250K+ Income,Republican,"oui, deux bases","oui, YouGov 1 000 adultes",0,15,"oss20,q30,q4",True,
+rep_old,Age 65+,Republican,"oui, deux bases","oui, YouGov 1 000 adultes",0,15,"oss20,q30,q4",True,
+rep_south,Southern,Republican,"oui, deux bases","oui, YouGov 1 000 adultes",0,15,"oss20,q30,q4",True,

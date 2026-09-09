@@ -1,0 +1,7 @@
+segmentation,etendue,n_conditions,pearson,spearman,variance_partagee
+S_ideo,"treize conditions du perimetre 1052, hors humains vague 1",13,0.9057099428672539,0.8736263736263737,0.8203105006086043
+S_ideo,toutes conditions du perimetre 1052,14,0.9678110385845115,0.8989010989010989,0.9366582064060307
+S_fin,"treize conditions du perimetre 1052, hors humains vague 1",13,0.8940748406366881,0.8571428571428571,0.7993698206595192
+S_fin,toutes conditions du perimetre 1052,14,0.963978337164569,0.8857142857142857,0.9292542345225675
+S_gra,"treize conditions du perimetre 1052, hors humains vague 1",13,0.9064549181544939,0.8406593406593407,0.8216605186464702
+S_gra,toutes conditions du perimetre 1052,14,0.9669386680412226,0.8725274725274725,0.9349703877533337

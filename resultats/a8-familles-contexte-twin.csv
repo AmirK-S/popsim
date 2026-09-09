@@ -1,0 +1,31 @@
+famille,methode,n_items,exactitude,ic_bas,ic_haut,part_diversite_humaine,accord_par_paires,plancher_uniforme
+Product Preferences - Pricing,B2 contexte complet,40,0.562281,0.556839,0.567857,0.772045,0.653412,0.500000
+Product Preferences - Pricing,B2 contexte sans Personality,40,0.555965,0.550498,0.561493,0.693352,0.699759,0.500000
+Product Preferences - Pricing,B2 contexte sans Economic preferences,40,0.561808,0.556547,0.567263,0.758248,0.661694,0.500000
+Product Preferences - Pricing,B2 contexte sans Cognitive tests,40,0.558880,0.553461,0.564225,0.827635,0.619212,0.500000
+Product Preferences - Pricing,B2 contexte demographies seules,40,0.552332,0.547024,0.557519,0.843847,0.609092,0.500000
+False consensus,B2 contexte complet,10,0.441497,0.431874,0.451167,0.554652,0.559906,0.200000
+False consensus,B2 contexte sans Personality,10,0.393732,0.384304,0.402965,0.502957,0.598096,0.200000
+False consensus,B2 contexte sans Economic preferences,10,0.449611,0.440135,0.459232,0.595871,0.536377,0.200000
+False consensus,B2 contexte sans Cognitive tests,10,0.446599,0.437025,0.456269,0.542888,0.563432,0.200000
+False consensus,B2 contexte demographies seules,10,0.436735,0.427162,0.445725,0.695504,0.473914,0.200000
+Non-experimental heuristics and biases,B2 contexte complet,10,0.372935,0.365889,0.379640,0.590881,0.521855,0.189286
+Non-experimental heuristics and biases,B2 contexte sans Personality,10,0.350632,0.343732,0.357047,0.556400,0.537417,0.189286
+Non-experimental heuristics and biases,B2 contexte sans Economic preferences,10,0.371769,0.364772,0.378426,0.619534,0.501476,0.189286
+Non-experimental heuristics and biases,B2 contexte sans Cognitive tests,10,0.372255,0.365403,0.379106,0.606122,0.507716,0.189286
+Non-experimental heuristics and biases,B2 contexte demographies seules,10,0.344461,0.337561,0.351263,0.610412,0.500606,0.189286
+Probability matching vs. maximizing - Problem 1,B2 contexte complet,10,0.771221,0.758040,0.783532,0.044301,0.991324,0.500000
+Probability matching vs. maximizing - Problem 1,B2 contexte sans Personality,10,0.772190,0.759012,0.784787,0.025367,0.995844,0.500000
+Probability matching vs. maximizing - Problem 1,B2 contexte sans Economic preferences,10,0.771996,0.758818,0.784501,0.050042,0.990435,0.500000
+Probability matching vs. maximizing - Problem 1,B2 contexte sans Cognitive tests,10,0.772093,0.759203,0.784787,0.067861,0.985670,0.500000
+Probability matching vs. maximizing - Problem 1,B2 contexte demographies seules,10,0.770736,0.757650,0.783236,0.052260,0.989648,0.500000
+autres experiences (blocs a 1 a 6 items),B2 contexte complet,38,0.521498,0.516059,0.527118,0.419643,0.726647,0.288221
+autres experiences (blocs a 1 a 6 items),B2 contexte sans Personality,38,0.513664,0.508225,0.519629,0.396137,0.742425,0.288221
+autres experiences (blocs a 1 a 6 items),B2 contexte sans Economic preferences,38,0.524951,0.519515,0.530487,0.420418,0.726794,0.288221
+autres experiences (blocs a 1 a 6 items),B2 contexte sans Cognitive tests,38,0.521731,0.516212,0.527440,0.439856,0.712439,0.288221
+autres experiences (blocs a 1 a 6 items),B2 contexte demographies seules,38,0.512582,0.507111,0.518159,0.436182,0.720515,0.288221
+tous les items,B2 contexte complet,108,0.530079,0.526455,0.533664,0.535233,0.689629,0.368937
+tous les items,B2 contexte sans Personality,108,0.516853,0.513185,0.520521,0.492182,0.717741,0.368937
+tous les items,B2 contexte sans Economic preferences,108,0.531419,0.528013,0.535059,0.541745,0.688600,0.368937
+tous les items,B2 contexte sans Cognitive tests,108,0.529091,0.525670,0.532685,0.559886,0.670457,0.368937
+tous les items,B2 contexte demographies seules,108,0.519164,0.515694,0.522932,0.582968,0.660971,0.368937

@@ -1,0 +1,43 @@
+famille,hypothese,condition,perimetre,comparaison,difference,ic_bas,ic_haut,p_bootstrap,p_holm,p_bh,tests_dans_la_famille
+primaire,H1 gradient de rappel T3 moins T1,agents composite,1052,T3 deductible contre T1 non deductible,0.185801,0.151100,0.220596,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents composite,1052,T3 deductible contre T1 non deductible,-0.034557,-0.067182,-0.001383,0.041500,0.290500,0.058100,21.000000
+primaire,H1 gradient de rappel T3 moins T1,agents entretien (v3),1052,T3 deductible contre T1 non deductible,0.204901,0.170790,0.238401,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents entretien (v3),1052,T3 deductible contre T1 non deductible,-0.015457,-0.047954,0.017205,0.371500,1.000000,0.410605,21.000000
+primaire,H1 gradient de rappel T3 moins T1,agents enquete,1052,T3 deductible contre T1 non deductible,0.115773,0.081135,0.150671,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents enquete,1052,T3 deductible contre T1 non deductible,-0.104585,-0.138669,-0.069406,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,agents demographiques (v6),1052,T3 deductible contre T1 non deductible,-0.048241,-0.074336,-0.022032,0.001000,0.005250,0.001105,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents demographiques (v6),1052,T3 deductible contre T1 non deductible,-0.268599,-0.295956,-0.240508,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,agents v7,1052,T3 deductible contre T1 non deductible,0.057193,0.036941,0.078781,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents v7,1052,T3 deductible contre T1 non deductible,-0.163165,-0.182320,-0.142895,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,agents v8,1052,T3 deductible contre T1 non deductible,0.250409,0.217425,0.281858,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,agents v8,1052,T3 deductible contre T1 non deductible,0.030051,0.000013,0.059332,0.050000,0.300000,0.065625,21.000000
+primaire,H1 gradient de rappel T3 moins T1,C2,150,T3 deductible contre T1 non deductible,0.076091,0.011396,0.136127,0.018500,0.037000,0.019425,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,C2,150,T3 deductible contre T1 non deductible,-0.126429,-0.176871,-0.078890,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,C3,150,T3 deductible contre T1 non deductible,0.151032,0.067692,0.233808,0.001000,0.005250,0.001105,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,C3,150,T3 deductible contre T1 non deductible,-0.051488,-0.126758,0.025146,0.182000,0.910000,0.224824,21.000000
+primaire,H1 gradient de rappel T3 moins T1,B0 mode,1052,T3 deductible contre T1 non deductible,0.000000,0.000000,0.000000,1.000000,1.000000,1.000000,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,B0 mode,1052,T3 deductible contre T1 non deductible,-0.220358,-0.228050,-0.212857,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,B0 tirage,1052,T3 deductible contre T1 non deductible,0.034098,0.017637,0.050207,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,B0 tirage,1052,T3 deductible contre T1 non deductible,-0.186260,-0.203948,-0.168332,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,B1 argmax,1052,T3 deductible contre T1 non deductible,0.108899,0.091523,0.125920,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,B1 argmax,1052,T3 deductible contre T1 non deductible,-0.111458,-0.127168,-0.095902,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,B2 argmax,1052,T3 deductible contre T1 non deductible,0.057012,0.040279,0.074630,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,B2 argmax,1052,T3 deductible contre T1 non deductible,-0.163346,-0.180795,-0.144693,0.000250,0.005250,0.000404,21.000000
+primaire,H1 gradient de rappel T3 moins T1,B3 foret,1052,T3 deductible contre T1 non deductible,0.035223,0.026530,0.044368,0.000250,0.005250,0.000309,21.000000
+secondaire,H4 gradient de l'exces sur plancher T3 moins T1,B3 foret,1052,T3 deductible contre T1 non deductible,-0.185135,-0.193523,-0.176639,0.000250,0.005250,0.000404,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents composite,1052,"agents composite contre B1 argmax, T1",0.203644,0.181570,0.225273,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents composite,1052,(agents composite moins B1 argmax) T1 moins T3,-0.076902,-0.114044,-0.041903,0.000500,0.005250,0.000750,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents entretien (v3),1052,"agents entretien (v3) contre B1 argmax, T1",0.188103,0.167304,0.209177,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents entretien (v3),1052,(agents entretien (v3) moins B1 argmax) T1 moins T3,-0.096001,-0.132494,-0.060788,0.000250,0.005250,0.000404,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents enquete,1052,"agents enquete contre B1 argmax, T1",0.153269,0.131437,0.174596,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents enquete,1052,(agents enquete moins B1 argmax) T1 moins T3,-0.006873,-0.044936,0.029837,0.713000,1.000000,0.713000,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents demographiques (v6),1052,"agents demographiques (v6) contre B1 argmax, T1",0.172562,0.153728,0.191501,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents demographiques (v6),1052,(agents demographiques (v6) moins B1 argmax) T1 moins T3,0.157141,0.126119,0.187730,0.000250,0.005250,0.000404,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents v7,1052,"agents v7 contre B1 argmax, T1",0.026795,0.015952,0.037746,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents v7,1052,(agents v7 moins B1 argmax) T1 moins T3,0.051706,0.027404,0.076300,0.000250,0.005250,0.000404,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,agents v8,1052,"agents v8 contre B1 argmax, T1",0.047696,0.034933,0.061319,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,agents v8,1052,(agents v8 moins B1 argmax) T1 moins T3,-0.141510,-0.173559,-0.109221,0.000250,0.005250,0.000404,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,C2,150,"C2 contre B1 argmax, T1",0.088235,0.054545,0.125000,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,C2,150,(C2 moins B1 argmax) T1 moins T3,0.021885,-0.034261,0.077858,0.438500,1.000000,0.460425,21.000000
+primaire,H2 avantage sur B1 argmax dans T1 non deductible,C3,150,"C3 contre B1 argmax, T1",0.150735,0.097641,0.204646,0.000250,0.005250,0.000309,21.000000
+secondaire,H3 avantage dans T1 moins avantage dans T3,C3,150,(C3 moins B1 argmax) T1 moins T3,-0.053056,-0.140496,0.036356,0.228000,0.912000,0.266000,21.000000

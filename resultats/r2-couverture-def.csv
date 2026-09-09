@@ -1,0 +1,4 @@
+condition,trace,personnes_completes,personnes_partielles,appels_lus,items_distincts,passes,modele,quantification,gabarit,variante_fin,version_prompt
+C3F gpt-oss-20b,r2-C3F-gptoss.jsonl,150,0,8700,58,1,gpt-oss-20b,MXFP4,harmony,answer,r2-p1-gptoss-answer
+C3 gpt-oss-20b,r2-C3-gptoss.jsonl,105,0,6090,58,1,gpt-oss-20b,MXFP4,harmony,answer,r2-p1-gptoss-answer
+C3F Qwen3-4B,a5-C3F-p1.jsonl,60,1,3498,58,1,Qwen3-4B-Instruct-2507,Q4_K_M,,,a5-p1

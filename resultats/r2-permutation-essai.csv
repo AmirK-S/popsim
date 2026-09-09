@@ -1,0 +1,25 @@
+condition_llm,personnes,segmentation,methode,exactitude,exactitude_permutee,chute,chute_relative,camps_exploitables,taille_camp_max
+C3F Qwen3-4B,60,S_fin,C3F Qwen3-4B,,,,,0,4
+C3F Qwen3-4B,60,S_fin,E1 famille retiree (argmax),,,,,0,4
+C3F Qwen3-4B,60,S_fin,E2 famille retiree (tirage),,,,,0,4
+C3F Qwen3-4B,60,S_fin,PMM k=10 famille retiree,,,,,0,4
+C3F Qwen3-4B,60,S_fin,"IM m=10 mode, famille retiree",,,,,0,4
+C3F Qwen3-4B,60,S_fin,B2 famille retiree (argmax),,,,,0,4
+C3F Qwen3-4B,60,S_fin,B2 famille retiree (tirage),,,,,0,4
+C3F Qwen3-4B,60,S_fin,humains vague 2,,,,,0,4
+C3F Qwen3-4B,60,S_ideo,C3F Qwen3-4B,0.557184,0.533546,0.023638,0.042424,2,18
+C3F Qwen3-4B,60,S_ideo,E1 famille retiree (argmax),0.691667,0.619511,0.072155,0.104321,2,18
+C3F Qwen3-4B,60,S_ideo,E2 famille retiree (tirage),0.621552,0.565080,0.056471,0.090855,2,18
+C3F Qwen3-4B,60,S_ideo,PMM k=10 famille retiree,0.655460,0.582109,0.073351,0.111907,2,18
+C3F Qwen3-4B,60,S_ideo,"IM m=10 mode, famille retiree",0.668103,0.602810,0.065293,0.097729,2,18
+C3F Qwen3-4B,60,S_ideo,B2 famille retiree (argmax),0.682184,0.638787,0.043397,0.063614,2,18
+C3F Qwen3-4B,60,S_ideo,B2 famille retiree (tirage),0.600862,0.577816,0.023046,0.038355,2,18
+C3F Qwen3-4B,60,S_ideo,humains vague 2,0.777299,0.591638,0.185661,0.238854,2,18
+C3F Qwen3-4B,60,S_camp,C3F Qwen3-4B,0.557184,0.527397,0.029787,0.053461,3,26
+C3F Qwen3-4B,60,S_camp,E1 famille retiree (argmax),0.691667,0.610149,0.081517,0.117856,3,26
+C3F Qwen3-4B,60,S_camp,E2 famille retiree (tirage),0.621552,0.556259,0.065293,0.105049,3,26
+C3F Qwen3-4B,60,S_camp,PMM k=10 famille retiree,0.655460,0.572822,0.082638,0.126076,3,26
+C3F Qwen3-4B,60,S_camp,"IM m=10 mode, famille retiree",0.668103,0.594701,0.073402,0.109867,3,26
+C3F Qwen3-4B,60,S_camp,B2 famille retiree (argmax),0.682184,0.634833,0.047351,0.069410,3,26
+C3F Qwen3-4B,60,S_camp,B2 famille retiree (tirage),0.600862,0.572649,0.028213,0.046954,3,26
+C3F Qwen3-4B,60,S_camp,humains vague 2,0.777299,0.577730,0.199569,0.256747,3,26

@@ -1,0 +1,13 @@
+methode,regime,famille_retiree,n_personnes,n_items,exactitude,exactitude_ic_bas,exactitude_ic_haut,exactitude_normalisee,ratio_intra_ideologie,ratio_inter_ideologie,part_diversite_humaine,accord_par_paires
+humains vague 2,humains,sans objet,60,58,0.777299,0.747701,0.804885,1.000000,0.991983,0.970508,0.977101,0.537103
+C3F,modele de langage,oui,60,58,0.557184,0.532471,0.581034,0.716821,0.640714,0.303760,0.589760,0.711913
+C3,modele de langage,"non, bloc secret retire seulement",60,58,0.619540,0.591092,0.648276,0.797043,0.644393,0.839385,0.658235,0.692256
+E1 famille retiree (argmax),esperance,oui,60,58,0.691667,0.661494,0.720402,0.889834,0.753654,1.614088,0.802749,0.618751
+E2 famille retiree (tirage),tirage,oui,60,58,0.621552,0.595115,0.645977,0.799630,1.051509,0.523058,0.994562,0.526378
+PMM k=10 famille retiree,tirage,oui,60,58,0.655460,0.627586,0.681322,0.843253,0.971641,1.338112,0.980275,0.533528
+"IM m=10 mode, famille retiree",esperance,oui,60,58,0.668103,0.641954,0.693103,0.859519,0.845732,1.161692,0.854373,0.594078
+B2 famille retiree (argmax),esperance,oui,60,58,0.682184,0.654598,0.707471,0.877634,0.531299,1.842541,0.617042,0.707471
+B2 famille retiree (tirage),tirage,oui,60,58,0.600862,0.575000,0.625287,0.773013,0.965859,0.633976,0.936985,0.559780
+B3 foret,esperance,"sans objet, aucun item vu",60,58,0.662356,0.635057,0.689368,0.852126,0.326746,2.732049,0.480807,0.766180
+B0 mode,esperance,"sans objet, aucun item vu",60,58,0.637644,0.610632,0.662644,0.820333,0.020470,-0.003263,0.015859,0.991233
+B0 tirage,tirage,"sans objet, aucun item vu",60,58,0.521552,0.501437,0.541092,0.670980,1.098599,-0.113121,1.001765,0.527411

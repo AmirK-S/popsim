@@ -1,0 +1,145 @@
+condition,axe_transport,variante,axe_mesure,mesure,ratio_inter_avant,ratio_inter_apres
+agents composite,political_ideology,naive,gender,gini_simpson,1.4331,1.1773
+agents composite,political_ideology,naive,race,gini_simpson,1.6280,1.3893
+agents composite,political_ideology,naive,political_ideology,gini_simpson,2.1548,1.0532
+agents composite,political_ideology,naive,age,gini_simpson,1.2020,0.9738
+agents composite,political_ideology,naive,education,gini_simpson,1.3861,1.2712
+agents composite,political_ideology,naive,profil croise,gini_simpson,1.9943,1.0760
+agents composite,political_ideology,informee,gender,gini_simpson,1.4331,1.3047
+agents composite,political_ideology,informee,race,gini_simpson,1.6280,1.4551
+agents composite,political_ideology,informee,political_ideology,gini_simpson,2.1548,1.0532
+agents composite,political_ideology,informee,age,gini_simpson,1.2020,1.1920
+agents composite,political_ideology,informee,education,gini_simpson,1.3861,1.4333
+agents composite,political_ideology,informee,profil croise,gini_simpson,1.9943,1.1322
+agents composite,political_ideology,dilatation,gender,gini_simpson,1.4331,1.4235
+agents composite,political_ideology,dilatation,race,gini_simpson,1.6280,1.6087
+agents composite,political_ideology,dilatation,political_ideology,gini_simpson,2.1548,1.3291
+agents composite,political_ideology,dilatation,age,gini_simpson,1.2020,1.3138
+agents composite,political_ideology,dilatation,education,gini_simpson,1.3861,1.5025
+agents composite,political_ideology,dilatation,profil croise,gini_simpson,1.9943,1.4077
+agents composite,profil croise,naive,gender,gini_simpson,1.4331,0.6948
+agents composite,profil croise,naive,race,gini_simpson,1.6280,0.7365
+agents composite,profil croise,naive,political_ideology,gini_simpson,2.1548,1.1809
+agents composite,profil croise,naive,age,gini_simpson,1.2020,0.9627
+agents composite,profil croise,naive,education,gini_simpson,1.3861,1.1925
+agents composite,profil croise,naive,profil croise,gini_simpson,1.9943,1.0351
+agents composite,profil croise,informee,gender,gini_simpson,1.4331,0.6997
+agents composite,profil croise,informee,race,gini_simpson,1.6280,0.7349
+agents composite,profil croise,informee,political_ideology,gini_simpson,2.1548,1.3262
+agents composite,profil croise,informee,age,gini_simpson,1.2020,1.1468
+agents composite,profil croise,informee,education,gini_simpson,1.3861,1.3529
+agents composite,profil croise,informee,profil croise,gini_simpson,1.9943,1.0351
+agents composite,profil croise,dilatation,gender,gini_simpson,1.4331,0.8954
+agents composite,profil croise,dilatation,race,gini_simpson,1.6280,0.9740
+agents composite,profil croise,dilatation,political_ideology,gini_simpson,2.1548,1.5753
+agents composite,profil croise,dilatation,age,gini_simpson,1.2020,1.2689
+agents composite,profil croise,dilatation,education,gini_simpson,1.3861,1.4299
+agents composite,profil croise,dilatation,profil croise,gini_simpson,1.9943,1.2161
+agents enquete,political_ideology,naive,gender,gini_simpson,1.0477,0.8376
+agents enquete,political_ideology,naive,race,gini_simpson,1.3575,1.0439
+agents enquete,political_ideology,naive,political_ideology,gini_simpson,2.5148,0.9076
+agents enquete,political_ideology,naive,age,gini_simpson,0.8630,0.6384
+agents enquete,political_ideology,naive,education,gini_simpson,1.0911,0.9363
+agents enquete,political_ideology,naive,profil croise,gini_simpson,2.1681,0.8578
+agents enquete,political_ideology,informee,gender,gini_simpson,1.0477,0.9364
+agents enquete,political_ideology,informee,race,gini_simpson,1.3575,0.9855
+agents enquete,political_ideology,informee,political_ideology,gini_simpson,2.5148,0.9076
+agents enquete,political_ideology,informee,age,gini_simpson,0.8630,0.7780
+agents enquete,political_ideology,informee,education,gini_simpson,1.0911,1.0936
+agents enquete,political_ideology,informee,profil croise,gini_simpson,2.1681,0.9080
+agents enquete,political_ideology,dilatation,gender,gini_simpson,1.0477,1.0641
+agents enquete,political_ideology,dilatation,race,gini_simpson,1.3575,1.1787
+agents enquete,political_ideology,dilatation,political_ideology,gini_simpson,2.5148,1.5567
+agents enquete,political_ideology,dilatation,age,gini_simpson,0.8630,0.8779
+agents enquete,political_ideology,dilatation,education,gini_simpson,1.0911,1.0912
+agents enquete,political_ideology,dilatation,profil croise,gini_simpson,2.1681,1.4630
+agents enquete,profil croise,naive,gender,gini_simpson,1.0477,0.3993
+agents enquete,profil croise,naive,race,gini_simpson,1.3575,0.4643
+agents enquete,profil croise,naive,political_ideology,gini_simpson,2.5148,1.2035
+agents enquete,profil croise,naive,age,gini_simpson,0.8630,0.6336
+agents enquete,profil croise,naive,education,gini_simpson,1.0911,0.9229
+agents enquete,profil croise,naive,profil croise,gini_simpson,2.1681,0.9767
+agents enquete,profil croise,informee,gender,gini_simpson,1.0477,0.3985
+agents enquete,profil croise,informee,race,gini_simpson,1.3575,0.4787
+agents enquete,profil croise,informee,political_ideology,gini_simpson,2.5148,1.4238
+agents enquete,profil croise,informee,age,gini_simpson,0.8630,0.7941
+agents enquete,profil croise,informee,education,gini_simpson,1.0911,1.0108
+agents enquete,profil croise,informee,profil croise,gini_simpson,2.1681,0.9767
+agents enquete,profil croise,dilatation,gender,gini_simpson,1.0477,0.6155
+agents enquete,profil croise,dilatation,race,gini_simpson,1.3575,0.8585
+agents enquete,profil croise,dilatation,political_ideology,gini_simpson,2.5148,1.8556
+agents enquete,profil croise,dilatation,age,gini_simpson,0.8630,0.8768
+agents enquete,profil croise,dilatation,education,gini_simpson,1.0911,1.0665
+agents enquete,profil croise,dilatation,profil croise,gini_simpson,2.1681,1.3322
+agents entretien (v3),political_ideology,naive,gender,gini_simpson,1.4805,1.0839
+agents entretien (v3),political_ideology,naive,race,gini_simpson,1.7149,1.2994
+agents entretien (v3),political_ideology,naive,political_ideology,gini_simpson,2.8239,1.0157
+agents entretien (v3),political_ideology,naive,age,gini_simpson,1.1822,0.8880
+agents entretien (v3),political_ideology,naive,education,gini_simpson,1.2411,1.0488
+agents entretien (v3),political_ideology,naive,profil croise,gini_simpson,2.6128,1.0525
+agents entretien (v3),political_ideology,informee,gender,gini_simpson,1.4805,1.3359
+agents entretien (v3),political_ideology,informee,race,gini_simpson,1.7149,1.3096
+agents entretien (v3),political_ideology,informee,political_ideology,gini_simpson,2.8239,1.0157
+agents entretien (v3),political_ideology,informee,age,gini_simpson,1.1822,1.0907
+agents entretien (v3),political_ideology,informee,education,gini_simpson,1.2411,1.2724
+agents entretien (v3),political_ideology,informee,profil croise,gini_simpson,2.6128,1.1074
+agents entretien (v3),political_ideology,dilatation,gender,gini_simpson,1.4805,1.5141
+agents entretien (v3),political_ideology,dilatation,race,gini_simpson,1.7149,1.4737
+agents entretien (v3),political_ideology,dilatation,political_ideology,gini_simpson,2.8239,1.6903
+agents entretien (v3),political_ideology,dilatation,age,gini_simpson,1.1822,1.2898
+agents entretien (v3),political_ideology,dilatation,education,gini_simpson,1.2411,1.4075
+agents entretien (v3),political_ideology,dilatation,profil croise,gini_simpson,2.6128,1.7351
+agents entretien (v3),profil croise,naive,gender,gini_simpson,1.4805,0.4947
+agents entretien (v3),profil croise,naive,race,gini_simpson,1.7149,0.5179
+agents entretien (v3),profil croise,naive,political_ideology,gini_simpson,2.8239,1.1544
+agents entretien (v3),profil croise,naive,age,gini_simpson,1.1822,0.8619
+agents entretien (v3),profil croise,naive,education,gini_simpson,1.2411,1.0059
+agents entretien (v3),profil croise,naive,profil croise,gini_simpson,2.6128,1.0167
+agents entretien (v3),profil croise,informee,gender,gini_simpson,1.4805,0.5018
+agents entretien (v3),profil croise,informee,race,gini_simpson,1.7149,0.5262
+agents entretien (v3),profil croise,informee,political_ideology,gini_simpson,2.8239,1.3320
+agents entretien (v3),profil croise,informee,age,gini_simpson,1.1822,1.0579
+agents entretien (v3),profil croise,informee,education,gini_simpson,1.2411,1.1551
+agents entretien (v3),profil croise,informee,profil croise,gini_simpson,2.6128,1.0167
+agents entretien (v3),profil croise,dilatation,gender,gini_simpson,1.4805,0.8710
+agents entretien (v3),profil croise,dilatation,race,gini_simpson,1.7149,1.0432
+agents entretien (v3),profil croise,dilatation,political_ideology,gini_simpson,2.8239,1.9837
+agents entretien (v3),profil croise,dilatation,age,gini_simpson,1.1822,1.2737
+agents entretien (v3),profil croise,dilatation,education,gini_simpson,1.2411,1.3504
+agents entretien (v3),profil croise,dilatation,profil croise,gini_simpson,2.6128,1.5622
+agents demographiques (v8),political_ideology,naive,gender,gini_simpson,0.9809,0.3383
+agents demographiques (v8),political_ideology,naive,race,gini_simpson,3.9503,2.1342
+agents demographiques (v8),political_ideology,naive,political_ideology,gini_simpson,8.1162,0.9774
+agents demographiques (v8),political_ideology,naive,age,gini_simpson,3.3261,2.2314
+agents demographiques (v8),political_ideology,naive,education,gini_simpson,0.4237,0.1443
+agents demographiques (v8),political_ideology,naive,profil croise,gini_simpson,6.5102,0.9788
+agents demographiques (v8),political_ideology,informee,gender,gini_simpson,0.9809,0.4683
+agents demographiques (v8),political_ideology,informee,race,gini_simpson,3.9503,3.3627
+agents demographiques (v8),political_ideology,informee,political_ideology,gini_simpson,8.1162,0.9774
+agents demographiques (v8),political_ideology,informee,age,gini_simpson,3.3261,3.1722
+agents demographiques (v8),political_ideology,informee,education,gini_simpson,0.4237,0.2221
+agents demographiques (v8),political_ideology,informee,profil croise,gini_simpson,6.5102,1.1727
+agents demographiques (v8),political_ideology,dilatation,gender,gini_simpson,0.9809,0.8686
+agents demographiques (v8),political_ideology,dilatation,race,gini_simpson,3.9503,4.1850
+agents demographiques (v8),political_ideology,dilatation,political_ideology,gini_simpson,8.1162,2.6805
+agents demographiques (v8),political_ideology,dilatation,age,gini_simpson,3.3261,3.5796
+agents demographiques (v8),political_ideology,dilatation,education,gini_simpson,0.4237,0.3150
+agents demographiques (v8),political_ideology,dilatation,profil croise,gini_simpson,6.5102,2.6018
+agents demographiques (v8),profil croise,naive,gender,gini_simpson,0.9809,0.0043
+agents demographiques (v8),profil croise,naive,race,gini_simpson,3.9503,0.2201
+agents demographiques (v8),profil croise,naive,political_ideology,gini_simpson,8.1162,1.5571
+agents demographiques (v8),profil croise,naive,age,gini_simpson,3.3261,2.0957
+agents demographiques (v8),profil croise,naive,education,gini_simpson,0.4237,0.1910
+agents demographiques (v8),profil croise,naive,profil croise,gini_simpson,6.5102,0.9795
+agents demographiques (v8),profil croise,informee,gender,gini_simpson,0.9809,-0.0246
+agents demographiques (v8),profil croise,informee,race,gini_simpson,3.9503,0.2051
+agents demographiques (v8),profil croise,informee,political_ideology,gini_simpson,8.1162,2.4213
+agents demographiques (v8),profil croise,informee,age,gini_simpson,3.3261,2.8355
+agents demographiques (v8),profil croise,informee,education,gini_simpson,0.4237,0.2136
+agents demographiques (v8),profil croise,informee,profil croise,gini_simpson,6.5102,0.9795
+agents demographiques (v8),profil croise,dilatation,gender,gini_simpson,0.9809,0.1994
+agents demographiques (v8),profil croise,dilatation,race,gini_simpson,3.9503,1.1782
+agents demographiques (v8),profil croise,dilatation,political_ideology,gini_simpson,8.1162,4.4547
+agents demographiques (v8),profil croise,dilatation,age,gini_simpson,3.3261,3.3048
+agents demographiques (v8),profil croise,dilatation,education,gini_simpson,0.4237,0.2858
+agents demographiques (v8),profil croise,dilatation,profil croise,gini_simpson,6.5102,2.3380

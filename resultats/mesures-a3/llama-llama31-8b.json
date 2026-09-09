@@ -1,0 +1,87 @@
+{
+  "moteur": "llama.cpp",
+  "modele": "data/modeles/gguf/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+  "chargement_s": 2.0453667640686035,
+  "cache_kv": "q8_0",
+  "slots_paralleles": 8,
+  "contexte_par_slot": 8192,
+  "tokens_persona": 2921,
+  "t1": {
+    "brut": {
+      "A": 0.15757784954937995,
+      "B": 0.1549582634597172,
+      "C": 0.22955621648770444,
+      "D": 0.3535938950245915,
+      "E": 0.07371029156041377
+    },
+    "normalisee": {
+      "A": 0.1625525230751727,
+      "B": 0.1598502376365466,
+      "C": 0.236803220023469,
+      "D": 0.36475672148459826,
+      "E": 0.07603729778021338
+    },
+    "manquantes": [],
+    "masse_totale": 0.9693965160818069,
+    "entropie_bits": 2.154385174533965,
+    "methode": "top-k renvoye par llama-server (n_probs=40)"
+  },
+  "t2": {
+    "applicable": false
+  },
+  "t3_t4": {
+    "tokens_prompt": 2985,
+    "prefill_t_par_s": 292.4723245859034,
+    "decodage_t_par_s": 13.080712839111044
+  },
+  "t5": {
+    "tokens_persona": 2921,
+    "froid_ms": 11888.349,
+    "chaud_ms": 409.04949999999997,
+    "sans_cache_ms": 10779.2985,
+    "tokens_reevalues": 63.0,
+    "gain": 26.35206374778603
+  },
+  "t6": {
+    "applicable": true,
+    "resultats": {
+      "1": {
+        "duree_s": 2.715876791975461,
+        "appels": 8,
+        "appels_par_s": 2.9456417255883687,
+        "appels_par_heure": 10604.310212118127,
+        "gain": 1.0
+      },
+      "2": {
+        "duree_s": 4.0500584580004215,
+        "appels": 16,
+        "appels_par_s": 3.950560261270761,
+        "appels_par_heure": 14222.016940574738,
+        "gain": 1.3411543661107217
+      },
+      "4": {
+        "duree_s": 7.870582834002562,
+        "appels": 32,
+        "appels_par_s": 4.065772595868418,
+        "appels_par_heure": 14636.781345126303,
+        "gain": 1.3802671793211077
+      }
+    },
+    "gain_max": 1.3802671793211077
+  },
+  "t7": {
+    "duree_totale_s": 18.234160499996506,
+    "premier_appel_ms": 354.07429095357656,
+    "mediane_ms": 364.18279202189296,
+    "min_ms": 351.30929097067565,
+    "max_ms": 379.3933748966083,
+    "memoire_debut_mo": 13687.421875,
+    "memoire_fin_mo": 13687.421875,
+    "entropie_moyenne_bits": 2.187186027967373,
+    "appels_par_heure": 9885.145808271976
+  },
+  "duree_du_banc_s": 185.71444988250732,
+  "appels_par_heure_sequentiel": 9885.145808271976,
+  "appels_par_heure_avec_lots": 13644.142321961432,
+  "heures_pour_45000_appels": 3.298118631287552
+}

@@ -1,0 +1,53 @@
+condition_llm,definition_raretes,personnes,famille,hypothese,adversaire,quantite,difference_llm_moins_adversaire,ic_bas,ic_haut,p_bootstrap,signe_attendu,p_holm,p_bh
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1a,plancher de segment,"exces de rappel, stables",0.124549,-0.046679,0.394537,0.245000,positif,0.585000,0.285833
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,E1 famille retiree (argmax),"rappel, raretes stables",0.161290,0.000000,0.357305,0.055000,positif,0.330000,0.163333
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,E2 famille retiree (tirage),"rappel, raretes stables",0.032258,-0.151675,0.233382,0.800000,positif,0.800000,0.800000
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,PMM k=10 famille retiree,"rappel, raretes stables",0.129032,-0.028592,0.357305,0.195000,positif,0.585000,0.273000
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,"IM m=10 mode, famille retiree","rappel, raretes stables",0.161290,0.000000,0.333333,0.070000,positif,0.350000,0.163333
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,B2 famille retiree (argmax),"rappel, raretes stables",0.225806,0.055482,0.444872,0.025000,positif,0.175000,0.163333
+C3F Qwen3-4B,perimetre,60,F1 primaire,H1b,B2 famille retiree (tirage),"rappel, raretes stables",0.129032,0.000000,0.307812,0.095000,positif,0.380000,0.166250
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2a,plancher de segment sur les cellules osees,"precision, raretes stables",-0.500583,-0.588577,-0.412343,0.002500,positif,0.017500,0.017500
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,E1 famille retiree (argmax),"precision, raretes stables",-0.114773,-0.234534,0.033932,0.130000,positif,0.750000,0.303333
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,E2 famille retiree (tirage),"precision, raretes stables",-0.061888,-0.151311,0.018727,0.125000,positif,0.750000,0.303333
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,PMM k=10 famille retiree,"precision, raretes stables",-0.018182,-0.095799,0.067234,0.805000,positif,1.000000,0.939167
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,"IM m=10 mode, famille retiree","precision, raretes stables",-0.042657,-0.170478,0.062558,0.495000,positif,1.000000,0.866250
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,B2 famille retiree (argmax),"precision, raretes stables",-0.127273,-0.378927,0.118433,0.710327,positif,1.000000,0.939167
+C3F Qwen3-4B,perimetre,60,F2 secondaire,H2b,B2 famille retiree (tirage),"precision, raretes stables",-0.005704,-0.064307,0.050088,0.940000,positif,1.000000,0.940000
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,E1 famille retiree (argmax),exactitude par personne,-0.134118,-0.156631,-0.112615,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,E2 famille retiree (tirage),exactitude par personne,-0.063908,-0.085345,-0.040783,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,PMM k=10 famille retiree,exactitude par personne,-0.097777,-0.121846,-0.074993,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,"IM m=10 mode, famille retiree",exactitude par personne,-0.110310,-0.128463,-0.091659,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,B2 famille retiree (argmax),exactitude par personne,-0.124703,-0.149468,-0.101724,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F3 tertiaire,H3a,B2 famille retiree (tirage),exactitude par personne,-0.042747,-0.065244,-0.020108,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4a,E2 famille retiree (tirage),diversite conservee,-0.406263,-0.465022,-0.347799,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4a,PMM k=10 famille retiree,diversite conservee,-0.391188,-0.452902,-0.338484,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4a,B2 famille retiree (tirage),diversite conservee,-0.348349,-0.411127,-0.289473,0.002500,bilateral,0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4b,E2 famille retiree (tirage),ecart absolu a 1 du ratio intra,0.301517,0.183595,0.406983,0.002500,"bilateral, negatif = plus proche de 1",0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4b,PMM k=10 famille retiree,ecart absolu a 1 du ratio intra,0.322107,0.246121,0.409016,0.002500,"bilateral, negatif = plus proche de 1",0.015000,0.002500
+C3F Qwen3-4B,perimetre,60,F4 quaternaire,H4b,B2 famille retiree (tirage),ecart absolu a 1 du ratio intra,0.317945,0.243642,0.411233,0.002500,"bilateral, negatif = plus proche de 1",0.015000,0.002500
+C3F Qwen3-4B,population,60,F1 primaire,H1a,plancher de segment,"exces de rappel, stables",0.094135,-0.043236,0.323201,0.210000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,E1 famille retiree (argmax),"rappel, raretes stables",0.066667,-0.115441,0.307692,0.555000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,E2 famille retiree (tirage),"rappel, raretes stables",0.033333,-0.121307,0.240250,0.885000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,PMM k=10 famille retiree,"rappel, raretes stables",0.033333,-0.121307,0.312582,0.875000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,"IM m=10 mode, famille retiree","rappel, raretes stables",0.066667,-0.115441,0.307692,0.555000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,B2 famille retiree (argmax),"rappel, raretes stables",0.166667,0.043433,0.346324,0.015000,positif,,
+C3F Qwen3-4B,population,60,F1 primaire,H1b,B2 famille retiree (tirage),"rappel, raretes stables",0.000000,-0.151573,0.222348,1.000000,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2a,plancher de segment sur les cellules osees,"precision, raretes stables",-0.529395,-0.602684,-0.457138,0.002500,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,E1 famille retiree (argmax),"precision, raretes stables",-0.281250,-0.500661,0.039713,0.115000,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,E2 famille retiree (tirage),"precision, raretes stables",-0.053180,-0.147069,0.031799,0.255000,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,PMM k=10 famille retiree,"precision, raretes stables",-0.069129,-0.204296,0.067416,0.480000,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,"IM m=10 mode, famille retiree","precision, raretes stables",-0.147917,-0.349257,0.043981,0.150000,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,B2 famille retiree (argmax),"precision, raretes stables",0.052083,0.010989,0.097451,0.016854,positif,,
+C3F Qwen3-4B,population,60,F2 secondaire,H2b,B2 famille retiree (tirage),"precision, raretes stables",-0.054300,-0.135100,0.032007,0.240000,positif,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,E1 famille retiree (argmax),exactitude par personne,-0.134118,-0.156631,-0.112615,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,E2 famille retiree (tirage),exactitude par personne,-0.063908,-0.085345,-0.040783,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,PMM k=10 famille retiree,exactitude par personne,-0.097777,-0.121846,-0.074993,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,"IM m=10 mode, famille retiree",exactitude par personne,-0.110310,-0.128463,-0.091659,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,B2 famille retiree (argmax),exactitude par personne,-0.124703,-0.149468,-0.101724,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F3 tertiaire,H3a,B2 famille retiree (tirage),exactitude par personne,-0.042747,-0.065244,-0.020108,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4a,E2 famille retiree (tirage),diversite conservee,-0.406263,-0.465022,-0.347799,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4a,PMM k=10 famille retiree,diversite conservee,-0.391188,-0.452902,-0.338484,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4a,B2 famille retiree (tirage),diversite conservee,-0.348349,-0.411127,-0.289473,0.002500,bilateral,,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4b,E2 famille retiree (tirage),ecart absolu a 1 du ratio intra,0.301517,0.183595,0.406983,0.002500,"bilateral, negatif = plus proche de 1",,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4b,PMM k=10 famille retiree,ecart absolu a 1 du ratio intra,0.322107,0.246121,0.409016,0.002500,"bilateral, negatif = plus proche de 1",,
+C3F Qwen3-4B,population,60,F4 quaternaire,H4b,B2 famille retiree (tirage),ecart absolu a 1 du ratio intra,0.317945,0.243642,0.411233,0.002500,"bilateral, negatif = plus proche de 1",,

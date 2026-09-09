@@ -1,0 +1,23 @@
+controle,objet,valeur,seuil,passe
+part de cellules hors nomenclature,humains vague 1,0.0,0.005,True
+part de cellules hors nomenclature,humains vague 2,0.0,0.005,True
+part de cellules hors nomenclature,agents composite,0.000427,0.005,True
+part de cellules hors nomenclature,agents entretien (v3),0.00118,0.005,True
+part de cellules hors nomenclature,agents enquete,0.000434,0.005,True
+part de cellules hors nomenclature,agents demographiques (v6),0.00044,0.005,True
+part de cellules hors nomenclature,agents v7,0.000491,0.005,True
+part de cellules hors nomenclature,agents v8,0.000702,0.005,True
+part de cellules hors nomenclature,C2,0.0,0.005,True
+part de cellules hors nomenclature,C3,0.0,0.005,True
+part de cellules hors nomenclature,B1 argmax,0.0,0.005,True
+part de cellules hors nomenclature,B2 argmax,0.0,0.005,True
+part de cellules hors nomenclature,PMM k=10,0.0,0.005,True
+part de cellules hors nomenclature,B0 mode,0.0,0.005,True
+part de cellules hors nomenclature,B0 tirage,0.0,0.005,True
+part de cellules hors nomenclature,B3 foret,0.0,0.005,True
+part de cellules hors nomenclature,humains vague 1 (150),0.0,0.005,True
+part de cellules hors nomenclature,humains vague 2 (150),0.0,0.005,True
+exactitude sur codes egale a celle de a2 sur chaines,toutes conditions,0.0,1e-06,True
+ratio inter invariant sous permutation intra segment,toutes conditions x deux segmentations,0.0,1e-12,True
+"marginale item x segment du nul egale a celle de la condition, ecart moyen","couples non replies, 100 replicats",0.004137,0.01,True
+"effet du repli sur la marginale d'item, ecart moyen","descriptif, pas un controle",0.002934,,True

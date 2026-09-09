@@ -1,0 +1,1009 @@
+{
+  "n_personnes": 300,
+  "n_items": 149,
+  "n_premier_echantillon": 150,
+  "n_extension": 150,
+  "plafond_humain": 0.795592841163311,
+  "traces": [
+    "a5-C2-p1.jsonl",
+    "a5-C3-p1.jsonl",
+    "a5-C3F-p1.jsonl",
+    "a5-C2-p1-ext.jsonl"
+  ],
+  "conditions": [
+    {
+      "condition": "C2 (1 passe)",
+      "n_cellules": 44700,
+      "exactitude": 0.528523489932886,
+      "ic_bas": 0.521162192393736,
+      "ic_haut": 0.5355480984340045,
+      "normalise": 0.6643140342490792,
+      "part_diversite_humaine": 0.6653793684675173,
+      "accord_par_paires": 0.6575762609144578
+    },
+    {
+      "condition": "humains vague 2",
+      "n_cellules": 44700,
+      "exactitude": 0.795592841163311,
+      "ic_bas": 0.7857712527964206,
+      "ic_haut": 0.8053249440715884,
+      "normalise": 1.0,
+      "part_diversite_humaine": 1.0016748629764731,
+      "accord_par_paires": 0.4924019662858298
+    },
+    {
+      "condition": "agents composite",
+      "n_cellules": 44700,
+      "exactitude": 0.6867114093959732,
+      "ic_bas": 0.6790380313199106,
+      "ic_haut": 0.6942058165548098,
+      "normalise": 0.8631442791665496,
+      "part_diversite_humaine": 0.8959347028267827,
+      "accord_par_paires": 0.539265560817939
+    },
+    {
+      "condition": "agents entretien (v3)",
+      "n_cellules": 44700,
+      "exactitude": 0.6588814317673378,
+      "ic_bas": 0.6512522371364653,
+      "ic_haut": 0.6660190156599552,
+      "normalise": 0.8281641031409048,
+      "part_diversite_humaine": 0.8701984522596906,
+      "accord_par_paires": 0.5599813532403266
+    },
+    {
+      "condition": "agents enquete",
+      "n_cellules": 44700,
+      "exactitude": 0.6501565995525727,
+      "ic_bas": 0.6423926174496645,
+      "ic_haut": 0.6576291946308725,
+      "normalise": 0.8171976492421898,
+      "part_diversite_humaine": 0.8604668184325361,
+      "accord_par_paires": 0.5540509285177464
+    },
+    {
+      "condition": "agents demographiques (v6)",
+      "n_cellules": 44700,
+      "exactitude": 0.5846979865771812,
+      "ic_bas": 0.5767544742729306,
+      "ic_haut": 0.5925956375838927,
+      "normalise": 0.734921125889267,
+      "part_diversite_humaine": 0.6413730405718968,
+      "accord_par_paires": 0.6752852142275749
+    },
+    {
+      "condition": "agents v7",
+      "n_cellules": 44700,
+      "exactitude": 0.5683668903803132,
+      "ic_bas": 0.5588573825503356,
+      "ic_haut": 0.5776521252796422,
+      "normalise": 0.7143941737198773,
+      "part_diversite_humaine": 0.6446120750010894,
+      "accord_par_paires": 0.6832498651596891
+    },
+    {
+      "condition": "agents v8",
+      "n_cellules": 44700,
+      "exactitude": 0.5597986577181208,
+      "ic_bas": 0.5496420581655481,
+      "ic_haut": 0.5693965324384789,
+      "normalise": 0.703624553609088,
+      "part_diversite_humaine": 0.7969701520593249,
+      "accord_par_paires": 0.5868019050013986
+    }
+  ],
+  "distributions": {
+    "C2": {
+      "n_cellules": 44700,
+      "exactitude_esperee": 0.527936688077522,
+      "entropie_moyenne_bits": 0.11665161992172093,
+      "entropie_maximale_moyenne_bits": 1.5983630278846324,
+      "part_entropie_maximale": 0.07298193081712141,
+      "part_cellules_quasi_certaines": 0.7946532438478747,
+      "ecart_de_calibration_attendu": 0.43877441147018015,
+      "calibration_par_decile": [
+        {
+          "decile": "0.2-0.3",
+          "n": 2,
+          "confiance_moyenne": 0.2839551885075563,
+          "exactitude_reelle": 0.0,
+          "ecart": -0.2839551885075563
+        },
+        {
+          "decile": "0.3-0.4",
+          "n": 40,
+          "confiance_moyenne": 0.36234941162767553,
+          "exactitude_reelle": 0.175,
+          "ecart": -0.18734941162767554
+        },
+        {
+          "decile": "0.4-0.5",
+          "n": 117,
+          "confiance_moyenne": 0.4545262660994184,
+          "exactitude_reelle": 0.2222222222222222,
+          "ecart": -0.23230404387719616
+        },
+        {
+          "decile": "0.5-0.6",
+          "n": 829,
+          "confiance_moyenne": 0.5495545180262573,
+          "exactitude_reelle": 0.36429433051869725,
+          "ecart": -0.18526018750756007
+        },
+        {
+          "decile": "0.6-0.7",
+          "n": 888,
+          "confiance_moyenne": 0.650945556948518,
+          "exactitude_reelle": 0.3761261261261261,
+          "ecart": -0.27481943082239185
+        },
+        {
+          "decile": "0.7-0.8",
+          "n": 1052,
+          "confiance_moyenne": 0.7511964987164151,
+          "exactitude_reelle": 0.3593155893536122,
+          "ecart": -0.39188090936280295
+        },
+        {
+          "decile": "0.8-0.9",
+          "n": 1550,
+          "confiance_moyenne": 0.8559960850075194,
+          "exactitude_reelle": 0.37548387096774194,
+          "ecart": -0.4805122140397775
+        },
+        {
+          "decile": "0.9-1.0",
+          "n": 40222,
+          "confiance_moyenne": 0.9949605125134484,
+          "exactitude_reelle": 0.5468648998060762,
+          "ecart": -0.4480956127073722
+        }
+      ]
+    }
+  },
+  "decomposition": {
+    "150 d'origine": {
+      "n": 150,
+      "J": 149,
+      "cellules": 22147,
+      "ratios": {
+        "humains vague 1": {
+          "entropie": [
+            1.0,
+            1.0
+          ],
+          "gini_simpson": [
+            1.0,
+            1.0
+          ]
+        },
+        "humains vague 2": {
+          "entropie": [
+            1.0457262994007102,
+            0.9974734961804874
+          ],
+          "gini_simpson": [
+            0.9831446124581386,
+            0.9989457616375426
+          ]
+        },
+        "C2": {
+          "entropie": [
+            4.768934241356238,
+            0.5563387584642722
+          ],
+          "gini_simpson": [
+            4.328923895441737,
+            0.5680323144649178
+          ]
+        },
+        "agents composite": {
+          "entropie": [
+            1.6468736789814518,
+            0.8718910400387394
+          ],
+          "gini_simpson": [
+            1.6064790949727619,
+            0.8891750336810612
+          ]
+        },
+        "agents entretien (v3)": {
+          "entropie": [
+            2.0761678184888424,
+            0.8312354627256026
+          ],
+          "gini_simpson": [
+            1.9516796439798274,
+            0.8341168763287663
+          ]
+        },
+        "agents enquete": {
+          "entropie": [
+            1.7420796632781745,
+            0.830532231345204
+          ],
+          "gini_simpson": [
+            1.7160762343911746,
+            0.85312697418427
+          ]
+        },
+        "agents demographiques (v6)": {
+          "entropie": [
+            0.8906360778275606,
+            0.6199608655687288
+          ],
+          "gini_simpson": [
+            0.815267180604668,
+            0.6262656345431308
+          ]
+        },
+        "agents v7": {
+          "entropie": [
+            0.4727257799253538,
+            0.6357875032330293
+          ],
+          "gini_simpson": [
+            0.34683391890522486,
+            0.6275056736834983
+          ]
+        },
+        "agents v8": {
+          "entropie": [
+            5.480683489385254,
+            0.6741942233220206
+          ],
+          "gini_simpson": [
+            5.194013228392646,
+            0.6891857669928212
+          ]
+        },
+        "C2 distribution": {
+          "entropie": [
+            4.579191736869138,
+            0.575437221836674
+          ],
+          "gini_simpson": [
+            4.199282446083985,
+            0.5842804409331557
+          ]
+        }
+      },
+      "total": {
+        "humains vague 1": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "humains vague 2": {
+          "entropie": 0.998583623574673,
+          "gini_simpson": 0.9985544328403828
+        },
+        "C2": {
+          "entropie": 0.6532557733128707,
+          "gini_simpson": 0.6611739690320556
+        },
+        "agents composite": {
+          "entropie": 0.8897206665079427,
+          "gini_simpson": 0.9069396742344812
+        },
+        "agents entretien (v3)": {
+          "entropie": 0.8598769803123271,
+          "gini_simpson": 0.8617942616030884
+        },
+        "agents enquete": {
+          "entropie": 0.8515037336778232,
+          "gini_simpson": 0.8744986410277694
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.6261881507833128,
+          "gini_simpson": 0.6309464173673318
+        },
+        "agents v7": {
+          "entropie": 0.6320360261393401,
+          "gini_simpson": 0.6205546007617098
+        },
+        "agents v8": {
+          "entropie": 0.7847746465932541,
+          "gini_simpson": 0.8007516215940538
+        },
+        "C2 distribution": {
+          "entropie": 0.6675495400878341,
+          "gini_simpson": 0.6738090170097403
+        }
+      },
+      "p_sup": {
+        "humains vague 1": {
+          "entropie": 0.0,
+          "gini_simpson": 0.0
+        },
+        "humains vague 2": {
+          "entropie": 0.737,
+          "gini_simpson": 0.382
+        },
+        "C2": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents composite": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents entretien (v3)": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents enquete": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.274,
+          "gini_simpson": 0.146
+        },
+        "agents v7": {
+          "entropie": 0.008,
+          "gini_simpson": 0.0
+        },
+        "agents v8": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "C2 distribution": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        }
+      },
+      "denominateur_axe": {
+        "gender": 1.6981450426023457,
+        "race": 0.8382515341028584,
+        "political_ideology": 7.123264468699274,
+        "age": 4.501125959011773,
+        "education": 1.9590518133038928,
+        "profil croise": 9.218514389607417
+      },
+      "ratios_axe": {
+        "humains vague 1": {
+          "gender": 1.0,
+          "race": 1.0,
+          "political_ideology": 1.0,
+          "age": 1.0,
+          "education": 1.0,
+          "profil croise": 1.0
+        },
+        "humains vague 2": {
+          "gender": 0.8318979372297134,
+          "race": 1.4575047141853854,
+          "political_ideology": 1.1117733912504828,
+          "age": 1.0970067671771344,
+          "education": 1.0627925066171724,
+          "profil croise": 0.9679711844279466
+        },
+        "C2": {
+          "gender": 0.07457716332139966,
+          "race": 4.8380834468935205,
+          "political_ideology": 8.161581181706284,
+          "age": 1.867483803944293,
+          "education": 2.5985081205083858,
+          "profil croise": 4.883788374372879
+        },
+        "agents composite": {
+          "gender": 0.9542698445247593,
+          "race": 1.486304885905573,
+          "political_ideology": 2.2039881684577876,
+          "age": 1.260145697199129,
+          "education": 1.2786257840089197,
+          "profil croise": 1.6256547525628933
+        },
+        "agents entretien (v3)": {
+          "gender": 0.8535492027712649,
+          "race": 1.9801163684053849,
+          "political_ideology": 2.915641726664716,
+          "age": 1.3618953546530794,
+          "education": 1.5454253533654316,
+          "profil croise": 2.122996044098881
+        },
+        "agents enquete": {
+          "gender": 0.8910737309622202,
+          "race": 1.169300826685617,
+          "political_ideology": 2.434318174103405,
+          "age": 0.9859869918428561,
+          "education": 1.213990734740217,
+          "profil croise": 1.8974287921036153
+        },
+        "agents demographiques (v6)": {
+          "gender": 0.9056431797029413,
+          "race": 3.8990403212238056,
+          "political_ideology": 0.24311349865761087,
+          "age": 0.9940577519786774,
+          "education": 2.65718476742143,
+          "profil croise": 0.6887506715431397
+        },
+        "agents v7": {
+          "gender": 0.4252092912372258,
+          "race": 2.093377501111648,
+          "political_ideology": 0.35922334508415105,
+          "age": 0.4988263187652382,
+          "education": -0.005402169731287563,
+          "profil croise": 0.5106797883972732
+        },
+        "agents v8": {
+          "gender": 0.1284957998391973,
+          "race": 5.174642441027429,
+          "political_ideology": 8.952875804112745,
+          "age": 3.0706600922645295,
+          "education": 0.9634056875404111,
+          "profil croise": 5.948154297343306
+        },
+        "C2 distribution": {
+          "gender": 0.11561288590640037,
+          "race": 4.669271409827607,
+          "political_ideology": 7.875685314864089,
+          "age": 1.76954363450969,
+          "education": 2.5069025873504747,
+          "profil croise": 4.658250150516113
+        }
+      }
+    },
+    "150 d'extension": {
+      "n": 150,
+      "J": 149,
+      "cellules": 22136,
+      "ratios": {
+        "humains vague 1": {
+          "entropie": [
+            1.0,
+            1.0
+          ],
+          "gini_simpson": [
+            1.0,
+            1.0
+          ]
+        },
+        "humains vague 2": {
+          "entropie": [
+            0.9387013409702406,
+            1.005866724906806
+          ],
+          "gini_simpson": [
+            0.9840407993332937,
+            1.003603130270555
+          ]
+        },
+        "C2": {
+          "entropie": [
+            4.69033317141646,
+            0.5797067809983495
+          ],
+          "gini_simpson": [
+            4.812778435331197,
+            0.5916365853824704
+          ]
+        },
+        "agents composite": {
+          "entropie": [
+            1.8657582103187094,
+            0.8723175109218885
+          ],
+          "gini_simpson": [
+            1.9359072207804093,
+            0.885395537520799
+          ]
+        },
+        "agents entretien (v3)": {
+          "entropie": [
+            2.3431297899126586,
+            0.828574554076178
+          ],
+          "gini_simpson": [
+            2.479274089408815,
+            0.8289246312336112
+          ]
+        },
+        "agents enquete": {
+          "entropie": [
+            1.9022326568974997,
+            0.8350676662739697
+          ],
+          "gini_simpson": [
+            2.034177006731098,
+            0.854174715042789
+          ]
+        },
+        "agents demographiques (v6)": {
+          "entropie": [
+            0.6248827313405827,
+            0.6443582329681083
+          ],
+          "gini_simpson": [
+            0.6433109392732121,
+            0.6476573313243322
+          ]
+        },
+        "agents v7": {
+          "entropie": [
+            0.5039236935395014,
+            0.6430026332757345
+          ],
+          "gini_simpson": [
+            0.46777599604960307,
+            0.631046858836394
+          ]
+        },
+        "agents v8": {
+          "entropie": [
+            6.035626553408321,
+            0.6744698703922606
+          ],
+          "gini_simpson": [
+            6.412174264876666,
+            0.6917348042021244
+          ]
+        },
+        "C2 distribution": {
+          "entropie": [
+            4.527389828338923,
+            0.6002224940259848
+          ],
+          "gini_simpson": [
+            4.714587889339945,
+            0.6088954719699244
+          ]
+        }
+      },
+      "total": {
+        "humains vague 1": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "humains vague 2": {
+          "entropie": 1.004266870818335,
+          "gini_simpson": 1.0031469917925049
+        },
+        "C2": {
+          "entropie": 0.677620349736349,
+          "gini_simpson": 0.690061728339338
+        },
+        "agents composite": {
+          "entropie": 0.8959808933285835,
+          "gini_simpson": 0.9098905121694104
+        },
+        "agents entretien (v3)": {
+          "entropie": 0.8646506880048779,
+          "gini_simpson": 0.8674061338989756
+        },
+        "agents enquete": {
+          "entropie": 0.8604871334646076,
+          "gini_simpson": 0.8816890460881349
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.6438943338719124,
+          "gini_simpson": 0.6475559856993367
+        },
+        "agents v7": {
+          "entropie": 0.6396898254375873,
+          "gini_simpson": 0.6272398420192083
+        },
+        "agents v8": {
+          "entropie": 0.802170598588161,
+          "gini_simpson": 0.8251193460411619
+        },
+        "C2 distribution": {
+          "entropie": 0.6937661373087217,
+          "gini_simpson": 0.7046286592167543
+        }
+      },
+      "p_sup": {
+        "humains vague 1": {
+          "entropie": 0.0,
+          "gini_simpson": 0.0
+        },
+        "humains vague 2": {
+          "entropie": 0.2,
+          "gini_simpson": 0.407
+        },
+        "C2": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents composite": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents entretien (v3)": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents enquete": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.006,
+          "gini_simpson": 0.014
+        },
+        "agents v7": {
+          "entropie": 0.005,
+          "gini_simpson": 0.0
+        },
+        "agents v8": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "C2 distribution": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        }
+      },
+      "denominateur_axe": {
+        "gender": 0.8327206301820996,
+        "race": 1.283524880654503,
+        "political_ideology": 9.699069267155862,
+        "age": 3.3714320442955032,
+        "education": 1.4798015127304174,
+        "profil croise": 9.581662575231823
+      },
+      "ratios_axe": {
+        "humains vague 1": {
+          "gender": 1.0,
+          "race": 1.0,
+          "political_ideology": 1.0,
+          "age": 1.0,
+          "education": 1.0,
+          "profil croise": 1.0
+        },
+        "humains vague 2": {
+          "gender": 0.7025991603573487,
+          "race": 0.8002298627609693,
+          "political_ideology": 0.9101259552790882,
+          "age": 1.0837748332430883,
+          "education": 0.9582887409923705,
+          "profil croise": 0.952624029592069
+        },
+        "C2": {
+          "gender": 0.012542772712203594,
+          "race": 3.152608112391498,
+          "political_ideology": 6.526968868793725,
+          "age": 1.7709452238208832,
+          "education": 3.7287057867234643,
+          "profil croise": 4.619456101208422
+        },
+        "agents composite": {
+          "gender": 0.9353577689205111,
+          "race": 1.496432578415338,
+          "political_ideology": 2.0445041307021214,
+          "age": 1.3516565487457124,
+          "education": 1.3526178066387073,
+          "profil croise": 2.0752978348015665
+        },
+        "agents entretien (v3)": {
+          "gender": 0.91211296359539,
+          "race": 0.868551348176144,
+          "political_ideology": 2.741395359717017,
+          "age": 1.3957467745718184,
+          "education": 1.126081201568166,
+          "profil croise": 2.7831909764484304
+        },
+        "agents enquete": {
+          "gender": 0.32879063147568643,
+          "race": 1.3663763158015936,
+          "political_ideology": 2.2962298750083376,
+          "age": 1.0104348904705622,
+          "education": 0.9391045026577687,
+          "profil croise": 2.1744704149663945
+        },
+        "agents demographiques (v6)": {
+          "gender": 1.6253103390120112,
+          "race": 2.843612237497036,
+          "political_ideology": 0.13547163868665202,
+          "age": 0.4143154029844755,
+          "education": 2.942142088547912,
+          "profil croise": 0.4523438221853997
+        },
+        "agents v7": {
+          "gender": 1.2997125506893958,
+          "race": 0.8066737452588288,
+          "political_ideology": 0.33111068353169415,
+          "age": 0.4903401001185672,
+          "education": 0.5624786015252226,
+          "profil croise": 0.5648750000427261
+        },
+        "agents v8": {
+          "gender": 0.613029567100569,
+          "race": 4.498024474726544,
+          "political_ideology": 7.539154950873715,
+          "age": 3.752418702011819,
+          "education": 1.1312590690455233,
+          "profil croise": 6.751723923202037
+        },
+        "C2 distribution": {
+          "gender": 0.028024345033857763,
+          "race": 3.0812326903546325,
+          "political_ideology": 6.321790344989436,
+          "age": 1.7492186756838641,
+          "education": 3.360126702355359,
+          "profil croise": 4.453562475135915
+        }
+      }
+    },
+    "300 union": {
+      "n": 300,
+      "J": 149,
+      "cellules": 44283,
+      "ratios": {
+        "humains vague 1": {
+          "entropie": [
+            1.0,
+            1.0
+          ],
+          "gini_simpson": [
+            1.0,
+            1.0
+          ]
+        },
+        "humains vague 2": {
+          "entropie": [
+            1.0191411965138337,
+            1.001168196356747
+          ],
+          "gini_simpson": [
+            1.0037973947613514,
+            1.000829902895295
+          ]
+        },
+        "C2": {
+          "entropie": [
+            4.797055743836285,
+            0.5668426329719534
+          ],
+          "gini_simpson": [
+            4.5336414033970796,
+            0.5796240257368414
+          ]
+        },
+        "agents composite": {
+          "entropie": [
+            1.8023272009922855,
+            0.8712201168914725
+          ],
+          "gini_simpson": [
+            1.8104092951027608,
+            0.8855243963372181
+          ]
+        },
+        "agents entretien (v3)": {
+          "entropie": [
+            2.2518435794091074,
+            0.8303823296786833
+          ],
+          "gini_simpson": [
+            2.23692089563248,
+            0.830923343631324
+          ]
+        },
+        "agents enquete": {
+          "entropie": [
+            1.8469188147317748,
+            0.833076166421493
+          ],
+          "gini_simpson": [
+            1.890599063332853,
+            0.8530547627198152
+          ]
+        },
+        "agents demographiques (v6)": {
+          "entropie": [
+            0.7770266578620634,
+            0.6340482386144882
+          ],
+          "gini_simpson": [
+            0.7152932417078591,
+            0.6374401164729869
+          ]
+        },
+        "agents v7": {
+          "entropie": [
+            0.43401127980962306,
+            0.6437163882478751
+          ],
+          "gini_simpson": [
+            0.34052162820678095,
+            0.6307929886298437
+          ]
+        },
+        "agents v8": {
+          "entropie": [
+            5.822457673115675,
+            0.6734826745935849
+          ],
+          "gini_simpson": [
+            5.763213759089408,
+            0.6904273091189451
+          ]
+        },
+        "C2 distribution": {
+          "entropie": [
+            4.644176158126105,
+            0.5866707490295741
+          ],
+          "gini_simpson": [
+            4.414799955884685,
+            0.5942079219771673
+          ]
+        }
+      },
+      "total": {
+        "humains vague 1": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "humains vague 2": {
+          "entropie": 1.0015842697838326,
+          "gini_simpson": 1.000901382297615
+        },
+        "C2": {
+          "entropie": 0.6647717071919534,
+          "gini_simpson": 0.6748663420345548
+        },
+        "agents composite": {
+          "entropie": 0.892775166804087,
+          "gini_simpson": 0.9078025432580928
+        },
+        "agents entretien (v3)": {
+          "entropie": 0.8632890368770028,
+          "gini_simpson": 0.8647902821830068
+        },
+        "agents enquete": {
+          "entropie": 0.8565465376183458,
+          "gini_simpson": 0.8780465907806094
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.6373581768760841,
+          "gini_simpson": 0.6393154021053361
+        },
+        "agents v7": {
+          "entropie": 0.6388617327989995,
+          "gini_simpson": 0.6238010829094038
+        },
+        "agents v8": {
+          "entropie": 0.7926810084770917,
+          "gini_simpson": 0.8126179535780594
+        },
+        "C2 distribution": {
+          "entropie": 0.6806016546227155,
+          "gini_simpson": 0.686236357915218
+        }
+      },
+      "p_sup": {
+        "humains vague 1": {
+          "entropie": 0.0,
+          "gini_simpson": 0.0
+        },
+        "humains vague 2": {
+          "entropie": 0.673,
+          "gini_simpson": 0.55
+        },
+        "C2": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents composite": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents entretien (v3)": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents enquete": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "agents demographiques (v6)": {
+          "entropie": 0.013,
+          "gini_simpson": 0.002
+        },
+        "agents v7": {
+          "entropie": 0.0,
+          "gini_simpson": 0.0
+        },
+        "agents v8": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        },
+        "C2 distribution": {
+          "entropie": 1.0,
+          "gini_simpson": 1.0
+        }
+      },
+      "denominateur_axe": {
+        "gender": 1.2403181121549764,
+        "race": 1.1558024118413015,
+        "political_ideology": 7.9704376244529325,
+        "age": 4.043903638504976,
+        "education": 1.6567123851988406,
+        "profil croise": 9.748926744997453
+      },
+      "ratios_axe": {
+        "humains vague 1": {
+          "gender": 1.0,
+          "race": 1.0,
+          "political_ideology": 1.0,
+          "age": 1.0,
+          "education": 1.0,
+          "profil croise": 1.0
+        },
+        "humains vague 2": {
+          "gender": 0.8508659205514923,
+          "race": 1.074903761792728,
+          "political_ideology": 1.0393329459815825,
+          "age": 1.0947366638948244,
+          "education": 1.0094285707410915,
+          "profil croise": 0.987724151264187
+        },
+        "C2": {
+          "gender": 0.16125896408395574,
+          "race": 3.4769032753699847,
+          "political_ideology": 7.642887702297777,
+          "age": 1.7817629521494986,
+          "education": 2.9348782292907334,
+          "profil croise": 4.783907429416622
+        },
+        "agents composite": {
+          "gender": 1.0352244747331358,
+          "race": 1.4520694030561963,
+          "political_ideology": 2.233555327498899,
+          "age": 1.3219934265381479,
+          "education": 1.4666558824260298,
+          "profil croise": 1.8451768057350637
+        },
+        "agents entretien (v3)": {
+          "gender": 0.9580346890849445,
+          "race": 1.3571301107953206,
+          "political_ideology": 2.9588865225604195,
+          "age": 1.4308286463479152,
+          "education": 1.4614346885985976,
+          "profil croise": 2.4193482110094857
+        },
+        "agents enquete": {
+          "gender": 0.7101973554316726,
+          "race": 1.2005958682025193,
+          "political_ideology": 2.5034370155672296,
+          "age": 0.9631115948386595,
+          "education": 1.1724528193348438,
+          "profil croise": 2.012640427816652
+        },
+        "agents demographiques (v6)": {
+          "gender": 1.2151533586952472,
+          "race": 2.858302597732182,
+          "political_ideology": 0.20958831164642322,
+          "age": 0.644075159450567,
+          "education": 2.8855338929991627,
+          "profil croise": 0.6352905131620461
+        },
+        "agents v7": {
+          "gender": 0.9140414152668618,
+          "race": 0.6192011627926238,
+          "political_ideology": 0.32931099403234565,
+          "age": 0.533549775920644,
+          "education": 0.2914267384195304,
+          "profil croise": 0.4195247211998482
+        },
+        "agents v8": {
+          "gender": 0.3974851615557084,
+          "race": 4.44712941228488,
+          "political_ideology": 8.603455509889475,
+          "age": 3.338400824907334,
+          "education": 0.8213011459574647,
+          "profil croise": 6.282333328773135
+        },
+        "C2 distribution": {
+          "gender": 0.1853594576842516,
+          "race": 3.3298939517271116,
+          "political_ideology": 7.4168816929865,
+          "age": 1.7233820748930975,
+          "education": 2.764503109313842,
+          "profil croise": 4.631376039414624
+        }
+      }
+    }
+  }
+}

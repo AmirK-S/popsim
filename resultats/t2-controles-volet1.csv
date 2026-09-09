@@ -1,0 +1,10 @@
+controle,attendu,obtenu,passe
+"consistance a deux ans, noyau commun, valeur de a12",0.695267,0.695267,True
+"consistance a quatre ans, noyau commun, valeur de a12",0.674471,0.674471,True
+nombre d'items du noyau commun,118,118,True
+"personnes, perimetre a quatre ans",4683,4683,True
+items marques ordinaux par le question_master,,63,True
+items ordinaux retenus (codes numeriques distincts),,63,True
+groupes retenus au seuil de 200 personnes,,53,True
+coupures 50/50 disjointes,oui,oui,True
+"effectif minimal d'une cellule retenue, cote A",>= 50,50,True

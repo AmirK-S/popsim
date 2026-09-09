@@ -1,0 +1,4 @@
+statistique,libelle,valeur,ic_bas,ic_haut,ecart_type_reechantillonnage,ecart_type_du_nul_interieur,s0,mode,n_tirages,valeur_bootstrap_avec_remise,biais_du_bootstrap_avec_remise
+A,"deficit de patrons distincts, relatif au nul du flux",-0.06856176129303881,-0.07427148677485697,-0.062995904702493,0.0029044415857474052,0.0002936785735295167,0.0029192512789359593,"sous echantillonnage sans remise m = 526, remis a l'echelle",1000,,
+B,exces de correlation inter items residualisee,0.042216062158601894,0.04059304305580586,0.04385563392509093,0.0008612843654312935,1.2586626690568835e-05,0.0008613763296653987,"sous echantillonnage sans remise m = 526, remis a l'echelle",1000,0.04782436155537755,0.005608299396775658
+C,"concentration par segment, patron modal, brute",0.02723384030418251,0.026026919262073605,0.028381141221299738,0.0006321561378142068,0.0,0.0006321561378142068,"sous echantillonnage sans remise m = 526, remis a l'echelle",1000,,

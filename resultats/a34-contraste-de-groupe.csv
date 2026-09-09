@@ -1,0 +1,17 @@
+perimetre,partition,tercile,moyenne_llm,moyenne_stat,difference,p_permutation,n_llm,n_stat
+1052,D_seg segment,T1 non deductible,0.146481,0.015113,0.131368,0.010249,6,5
+150,D_seg segment,T1 non deductible,0.126838,0.015441,0.111397,0.004350,8,5
+1052,D_seg segment,T2 intermediaire,0.179471,0.021255,0.158216,0.007800,6,5
+150,D_seg segment,T2 intermediaire,0.159226,0.025000,0.134226,0.012299,8,5
+1052,D_seg segment,T3 deductible,0.274120,0.062159,0.211961,0.015199,6,5
+150,D_seg segment,T3 deductible,0.237559,0.059716,0.177844,0.011349,8,5
+1052,D_seg segment,ensemble,0.205669,0.033946,0.171723,0.004550,6,5
+150,D_seg segment,ensemble,0.173360,0.032396,0.140964,0.004250,8,5
+1052,D_logit regression,T1 non deductible,0.132247,0.011140,0.121107,0.009700,6,5
+150,D_logit regression,T1 non deductible,0.112952,0.008835,0.104116,0.001650,8,5
+1052,D_logit regression,T2 intermediaire,0.186635,0.018392,0.168243,0.007150,6,5
+150,D_logit regression,T2 intermediaire,0.149096,0.021687,0.127410,0.008100,8,5
+1052,D_logit regression,T3 deductible,0.298126,0.072307,0.225819,0.017899,6,5
+150,D_logit regression,T3 deductible,0.258032,0.066667,0.191365,0.008900,8,5
+1052,D_logit regression,ensemble,0.205669,0.033946,0.171723,0.004100,6,5
+150,D_logit regression,ensemble,0.173360,0.032396,0.140964,0.003650,8,5

@@ -1,0 +1,16 @@
+jeu,configuration,n_sujets,exactitude_vs_humains_w4,n_cellules,accord_par_paires,modalites_par_item
+twin2k500,humains vague 4,2058,1.0000,168768,0.4431,3.6296
+twin2k500,humains vagues 1-3 (retest),2058,0.7118,168768,0.4401,3.6296
+twin2k500,Demographics Only - GPT4.1-mini,2058,0.4998,168768,0.6890,2.4907
+twin2k500,JSON Persona (Predicted Output) - GPT4.1-mini,2058,0.5136,152030,0.7134,2.5741
+twin2k500,JSON Persona - GPT4.1,2058,0.5740,168768,0.6045,3.0463
+twin2k500,Persona Summary - GPT4.1-mini,2058,0.5211,168768,0.6390,2.8056
+twin2k500,Persona Summary - JSON Persona - GPT4.1-mini,2058,0.4744,168768,0.6688,3.4722
+twin2k500,Text Persona (Default Temperature) - GPT4.1-mini,2058,0.5480,168768,0.6270,3.0000
+twin2k500,Text Persona (Reasoning) - GPT4.1-mini,2058,0.5437,168768,0.5942,2.9352
+twin2k500,Text Persona (Repeating Questions) - GPT4.1-mini,2058,0.5490,168768,0.6121,2.9074
+twin2k500,Text Persona - GPT4.1-mini,2058,0.5531,168768,0.6569,2.7778
+twin2k500,Text Persona - Gemini-Flash2.5,2058,0.5506,168768,0.5650,3.3796
+twin2k500 sous ensemble 2050 sujets,JSON Persona (Predicted Output) - GPT4.1,2050,0.5677,167258,0.6292,2.6204
+twin2k500 sous ensemble 1000 sujets,JSON Persona - GPT4.1-mini,1000,0.5451,81879,0.6181,2.6481
+twin2k500 sous ensemble 1558 sujets,LLM Finetuning (500 training samples) - GPT4.1-mini,1558,0.4621,127780,0.6647,2.8704

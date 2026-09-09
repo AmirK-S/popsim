@@ -1,0 +1,197 @@
+{
+  "jeu": "Twin-2K-500, LLM-Digital-Twin/Twin-2K-500, CC BY 4.0",
+  "n_participants": 2058,
+  "n_items_cibles": 108,
+  "n_items_contexte": 494,
+  "questions_demographiques": [
+    "QID11",
+    "QID12",
+    "QID13",
+    "QID14",
+    "QID15",
+    "QID16",
+    "QID17",
+    "QID18",
+    "QID19",
+    "QID20",
+    "QID21",
+    "QID22",
+    "QID23",
+    "QID24"
+  ],
+  "k_voisins": 30,
+  "n_plis": 5,
+  "taux_cellules_non_renseignees_cible": 0.24068675089083252,
+  "test_retest_humain": {
+    "exactitude": 0.7118506756444075,
+    "ic_bas": 0.7080737482067657,
+    "ic_haut": 0.7155917094729048
+  },
+  "baselines": [
+    {
+      "baseline": "B0 mode",
+      "exactitude": 0.5215838886575037,
+      "ic_bas": 0.5170267379911148,
+      "ic_haut": 0.526077437352492,
+      "part_diversite_humaine": 0.011411427145053093,
+      "accord_par_paires": 0.9924090102207807
+    },
+    {
+      "baseline": "B0 tirage",
+      "exactitude": 0.44250399139247537,
+      "ic_bas": 0.4401756574228331,
+      "ic_haut": 0.44485358386551904,
+      "part_diversite_humaine": 0.9965432209356407,
+      "accord_par_paires": 0.4444363913707932
+    },
+    {
+      "baseline": "B1 argmax",
+      "exactitude": 0.5184344486093757,
+      "ic_bas": 0.5147584412166227,
+      "ic_haut": 0.5220746491623861,
+      "part_diversite_humaine": 0.7623247996086329,
+      "accord_par_paires": 0.5750464643484698
+    },
+    {
+      "baseline": "B1 tirage",
+      "exactitude": 0.46199210976907773,
+      "ic_bas": 0.4592862999791753,
+      "ic_haut": 0.46454170571289743,
+      "part_diversite_humaine": 0.9985372621329194,
+      "accord_par_paires": 0.44382439666793183
+    },
+    {
+      "baseline": "B2 argmax",
+      "exactitude": 0.5300791915405618,
+      "ic_bas": 0.526412237088713,
+      "ic_haut": 0.5336959498935628,
+      "part_diversite_humaine": 0.5343969917350746,
+      "accord_par_paires": 0.6898502122731633
+    },
+    {
+      "baseline": "B2 tirage",
+      "exactitude": 0.4620054144106623,
+      "ic_bas": 0.45931636557684297,
+      "ic_haut": 0.46453111984589757,
+      "part_diversite_humaine": 0.968187013158136,
+      "accord_par_paires": 0.46132567211686026
+    }
+  ],
+  "references_llm": [
+    {
+      "condition": "GPT-4.1-mini, persona complet",
+      "exactitude": 0.5529706950807532,
+      "ic_bas": 0.5495431157156739,
+      "ic_haut": 0.556481197070665,
+      "part_diversite_humaine": 0.5855723508967905,
+      "accord_par_paires": 0.6568853188258019
+    },
+    {
+      "condition": "GPT-4.1-mini, demographies seules",
+      "exactitude": 0.4995875561108796,
+      "ic_bas": 0.4960072192142163,
+      "ic_haut": 0.5031517900527558,
+      "part_diversite_humaine": 0.5112634207376362,
+      "accord_par_paires": 0.6889519386545131
+    }
+  ],
+  "courbe": [
+    {
+      "n_entrainement": 50,
+      "B0 mode": 0.501611297604893,
+      "B0 mode ecart": 0.008527109939104879,
+      "B1 argmax": 0.4788687746041495,
+      "B1 argmax ecart": 0.006328710661633664,
+      "B2 argmax": 0.5032860887496677,
+      "B2 argmax ecart": 0.005202901631124968
+    },
+    {
+      "n_entrainement": 100,
+      "B0 mode": 0.5114427216852852,
+      "B0 mode ecart": 0.0060707742974052195,
+      "B1 argmax": 0.4805104653289359,
+      "B1 argmax ecart": 0.002974284873509631,
+      "B2 argmax": 0.5126792735338375,
+      "B2 argmax ecart": 0.006246907664429718
+    },
+    {
+      "n_entrainement": 200,
+      "B0 mode": 0.5153696625235894,
+      "B0 mode ecart": 0.004755642208461335,
+      "B1 argmax": 0.48241086520553783,
+      "B1 argmax ecart": 0.005126307798331339,
+      "B2 argmax": 0.5180949206714789,
+      "B2 argmax ecart": 0.006807149709214125
+    },
+    {
+      "n_entrainement": 400,
+      "B0 mode": 0.5195222671653957,
+      "B0 mode ecart": 0.005031375188397739,
+      "B1 argmax": 0.49136295341095676,
+      "B1 argmax ecart": 0.004995699482402081,
+      "B2 argmax": 0.5204902285976005,
+      "B2 argmax ecart": 0.0046957493892530065
+    },
+    {
+      "n_entrainement": 800,
+      "B0 mode": 0.5210469985421707,
+      "B0 mode ecart": 0.005162195202511338,
+      "B1 argmax": 0.5059258071117171,
+      "B1 argmax ecart": 0.005814836819379031,
+      "B2 argmax": 0.5252117593773705,
+      "B2 argmax ecart": 0.0034188217967443756
+    },
+    {
+      "n_entrainement": 1200,
+      "B0 mode": 0.5209993703315624,
+      "B0 mode ecart": 0.005145294815119334,
+      "B1 argmax": 0.5137294733807428,
+      "B1 argmax ecart": 0.005356011420301742,
+      "B2 argmax": 0.5285780026061323,
+      "B2 argmax ecart": 0.0038265338771710333
+    },
+    {
+      "n_entrainement": 1646,
+      "B0 mode": 0.5212671376021333,
+      "B0 mode ecart": 0.004954273157018491,
+      "B1 argmax": 0.5182852530662972,
+      "B1 argmax ecart": 0.006086660250043535,
+      "B2 argmax": 0.5305498070101039,
+      "B2 argmax ecart": 0.004068267992798042
+    }
+  ],
+  "questions_jamais_posees": [
+    {
+      "famille": "Product Preferences - Pricing",
+      "n_items": 40,
+      "modalites_moyennes": 2.0,
+      "plancher_uniforme": 0.5,
+      "plafond_modalite_majoritaire": 0.5590136054421769,
+      "accord_par_paires_humain": 0.506970084373773
+    },
+    {
+      "famille": "False consensus",
+      "n_items": 10,
+      "modalites_moyennes": 5.0,
+      "plancher_uniforme": 0.2,
+      "plafond_modalite_majoritaire": 0.39732750242954323,
+      "accord_par_paires_humain": 0.28294382688140196
+    },
+    {
+      "famille": "Non-experimental heuristics and biases",
+      "n_items": 10,
+      "modalites_moyennes": 6.2,
+      "plancher_uniforme": 0.18928571428571428,
+      "plafond_modalite_majoritaire": 0.36068999028182697,
+      "accord_par_paires_humain": 0.2747715851393686
+    },
+    {
+      "famille": "Probability matching vs. maximizing - Problem 1",
+      "n_items": 10,
+      "modalites_moyennes": 2.0,
+      "plancher_uniforme": 0.5,
+      "plafond_modalite_majoritaire": 0.7721899224806201,
+      "accord_par_paires_humain": 0.6585182971300536
+    }
+  ]
+}

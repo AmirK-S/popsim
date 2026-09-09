@@ -1,0 +1,114 @@
+controle,valeur,seuil,passe
+"bloquant 1, invariance des ratios sous permutation intra segment",0.0,1e-12,True
+"bloquant 2, marginales du generateur nul, S_ideo, 100 replicats",0.007336469353441383,0.01,True
+"masque, humains vagues 1-3 (retest)",0.0,0.005,True
+"masque, Demographics Only - GPT4.1-mini",0.0,0.005,True
+"masque, JSON Persona (Predicted Output) - GPT4.1",0.005079946702198535,0.005,False
+"masque, JSON Persona (Predicted Output) - GPT4.1-mini",0.09917756920743269,0.005,False
+"masque, JSON Persona - GPT4.1",0.0,0.005,True
+"masque, JSON Persona - GPT4.1-mini",0.0018651258045640725,0.005,True
+"masque, LLM Finetuning (500 training samples) - GPT4.1-mini",0.0,0.005,True
+"masque, Persona Summary - GPT4.1-mini",0.0,0.005,True
+"masque, Persona Summary - JSON Persona - GPT4.1-mini",0.0,0.005,True
+"masque, Text Persona (Default Temperature) - GPT4.1-mini",0.0,0.005,True
+"masque, Text Persona (Reasoning) - GPT4.1-mini",0.0,0.005,True
+"masque, Text Persona (Repeating Questions) - GPT4.1-mini",0.0,0.005,True
+"masque, Text Persona - GPT4.1-mini",0.0,0.005,True
+"masque, Text Persona - Gemini-Flash2.5",0.0,0.005,True
+"masque, B0 mode",0.0,0.005,True
+"masque, B0 tirage",0.0,0.005,True
+"masque, B1 argmax",0.0,0.005,True
+"masque, B2 argmax",0.0,0.005,True
+"masque, PMM k=10",0.0,0.005,True
+"repli du nul, S_ideo, humains vague 4",0.0,0.3,True
+"repli du nul, S_ideo, humains vagues 1-3 (retest)",0.0,0.3,True
+"repli du nul, S_ideo, Demographics Only - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, JSON Persona (Predicted Output) - GPT4.1",0.0,0.3,True
+"repli du nul, S_ideo, JSON Persona (Predicted Output) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, JSON Persona - GPT4.1",0.0,0.3,True
+"repli du nul, S_ideo, JSON Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, LLM Finetuning (500 training samples) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Persona Summary - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Persona Summary - JSON Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Text Persona (Default Temperature) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Text Persona (Reasoning) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Text Persona (Repeating Questions) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Text Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_ideo, Text Persona - Gemini-Flash2.5",0.0,0.3,True
+"repli du nul, S_ideo, B0 mode",0.0,0.3,True
+"repli du nul, S_ideo, B0 tirage",0.0,0.3,True
+"repli du nul, S_ideo, B1 argmax",0.0,0.3,True
+"repli du nul, S_ideo, B2 argmax",0.0,0.3,True
+"repli du nul, S_ideo, PMM k=10",0.0,0.3,True
+"repli du nul, S_fin, humains vague 4",0.0,0.3,True
+"repli du nul, S_fin, humains vagues 1-3 (retest)",0.0,0.3,True
+"repli du nul, S_fin, Demographics Only - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, JSON Persona (Predicted Output) - GPT4.1",0.0,0.3,True
+"repli du nul, S_fin, JSON Persona (Predicted Output) - GPT4.1-mini",0.0011574074074074073,0.3,True
+"repli du nul, S_fin, JSON Persona - GPT4.1",0.0,0.3,True
+"repli du nul, S_fin, JSON Persona - GPT4.1-mini",0.007716049382716049,0.3,True
+"repli du nul, S_fin, LLM Finetuning (500 training samples) - GPT4.1-mini",0.0023148148148148147,0.3,True
+"repli du nul, S_fin, Persona Summary - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Persona Summary - JSON Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Text Persona (Default Temperature) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Text Persona (Reasoning) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Text Persona (Repeating Questions) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Text Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_fin, Text Persona - Gemini-Flash2.5",0.0,0.3,True
+"repli du nul, S_fin, B0 mode",0.0,0.3,True
+"repli du nul, S_fin, B0 tirage",0.0,0.3,True
+"repli du nul, S_fin, B1 argmax",0.0,0.3,True
+"repli du nul, S_fin, B2 argmax",0.0,0.3,True
+"repli du nul, S_fin, PMM k=10",0.0,0.3,True
+"repli du nul, S_gra, humains vague 4",0.15810185185185185,0.3,True
+"repli du nul, S_gra, humains vagues 1-3 (retest)",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Demographics Only - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, JSON Persona (Predicted Output) - GPT4.1",0.1597222222222222,0.3,True
+"repli du nul, S_gra, JSON Persona (Predicted Output) - GPT4.1-mini",0.18287037037037038,0.3,True
+"repli du nul, S_gra, JSON Persona - GPT4.1",0.15810185185185185,0.3,True
+"repli du nul, S_gra, JSON Persona - GPT4.1-mini",0.3296296296296296,0.3,False
+"repli du nul, S_gra, LLM Finetuning (500 training samples) - GPT4.1-mini",0.1986111111111111,0.3,True
+"repli du nul, S_gra, Persona Summary - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Persona Summary - JSON Persona - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Text Persona (Default Temperature) - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Text Persona (Reasoning) - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Text Persona (Repeating Questions) - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Text Persona - GPT4.1-mini",0.15810185185185185,0.3,True
+"repli du nul, S_gra, Text Persona - Gemini-Flash2.5",0.15810185185185185,0.3,True
+"repli du nul, S_gra, B0 mode",0.125,0.3,True
+"repli du nul, S_gra, B0 tirage",0.125,0.3,True
+"repli du nul, S_gra, B1 argmax",0.125,0.3,True
+"repli du nul, S_gra, B2 argmax",0.125,0.3,True
+"repli du nul, S_gra, PMM k=10",0.125,0.3,True
+"repli du nul, S_parti, humains vague 4",0.0,0.3,True
+"repli du nul, S_parti, humains vagues 1-3 (retest)",0.0,0.3,True
+"repli du nul, S_parti, Demographics Only - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, JSON Persona (Predicted Output) - GPT4.1",0.0,0.3,True
+"repli du nul, S_parti, JSON Persona (Predicted Output) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, JSON Persona - GPT4.1",0.0,0.3,True
+"repli du nul, S_parti, JSON Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, LLM Finetuning (500 training samples) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Persona Summary - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Persona Summary - JSON Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Text Persona (Default Temperature) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Text Persona (Reasoning) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Text Persona (Repeating Questions) - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Text Persona - GPT4.1-mini",0.0,0.3,True
+"repli du nul, S_parti, Text Persona - Gemini-Flash2.5",0.0,0.3,True
+"repli du nul, S_parti, B0 mode",0.0,0.3,True
+"repli du nul, S_parti, B0 tirage",0.0,0.3,True
+"repli du nul, S_parti, B1 argmax",0.0,0.3,True
+"repli du nul, S_parti, B2 argmax",0.0,0.3,True
+"repli du nul, S_parti, PMM k=10",0.0,0.3,True
+"reproduction de a6, humains vagues 1-3 (retest)",0.0017881282998861714,0.02,True
+"reproduction de a6, Demographics Only - GPT4.1-mini",0.0015876757572457212,0.02,True
+"reproduction de a6, JSON Persona (Predicted Output) - GPT4.1-mini",0.0016144979049177444,0.02,True
+"reproduction de a6, JSON Persona - GPT4.1",0.002453559805694727,0.02,True
+"reproduction de a6, Persona Summary - GPT4.1-mini",0.002410083980839528,0.02,True
+"reproduction de a6, Persona Summary - JSON Persona - GPT4.1-mini",0.0028239397115555898,0.02,True
+"reproduction de a6, Text Persona (Default Temperature) - GPT4.1-mini",0.002168475496639677,0.02,True
+"reproduction de a6, Text Persona (Reasoning) - GPT4.1-mini",0.00023749819320473264,0.02,True
+"reproduction de a6, Text Persona (Repeating Questions) - GPT4.1-mini",0.0012929811895510124,0.02,True
+"reproduction de a6, Text Persona - GPT4.1-mini",0.0007734655671216562,0.02,True
+"reproduction de a6, Text Persona - Gemini-Flash2.5",0.0030177134925452043,0.02,True
+exactitude codes contre a2_commun sur chaines,0.0,1e-12,True
