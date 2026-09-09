@@ -1,0 +1,17 @@
+modele,cle_modele,identite,quantite,n_items,rho_spearman,p,p_holm
+Qwen3-4B-Instruct-2507,q4,journaliste,log amplification de l'ecart entre camps,71,0.23350185778008528,0.054972513743128434,0.0879560219890055
+Qwen3-4B-Instruct-2507,q4,adversaire,log amplification de l'ecart entre camps,61,0.269383331314476,0.04397801099450275,0.0879560219890055
+Qwen3-4B-Base,q4base,journaliste,log amplification de l'ecart entre camps,45,0.6141934846976114,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Base,q4base,adversaire,log amplification de l'ecart entre camps,66,0.2972860141457173,0.02148925537231384,0.06446776611694152
+Qwen3-4B-Instruct-2507,q4nogab,journaliste,log amplification de l'ecart entre camps,66,0.45150784752597656,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4nogab,adversaire,log amplification de l'ecart entre camps,77,0.439831735297421,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4gab3,journaliste,log amplification de l'ecart entre camps,70,0.5185042636496052,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4gab3,adversaire,log amplification de l'ecart entre camps,75,0.5144109046536526,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6352703476299169,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6485259408195888,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Base,q4base,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6283078138333215,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Base,q4base,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6267375920505229,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4nogab,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6413564785709966,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4nogab,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6275409613347455,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4gab3,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6314847741845653,0.0004997501249375312,0.00399800099950025
+Qwen3-4B-Instruct-2507,q4gab3,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6558414702107668,0.0004997501249375312,0.00399800099950025

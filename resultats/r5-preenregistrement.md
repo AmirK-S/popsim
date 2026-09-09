@@ -1,6 +1,6 @@
 # r5. Page de plan : gabarit ChatML plus trois exemples, et relance sans nombre
 
-Ecrite le 9 septembre 2026 a 09:50, avant tout appel. En attente d'une ligne d'Amir.
+Ecrite le 9 septembre 2026 a 09:50, avant tout appel. Validee par Amir (« R5 oui go ») ; deposee sur OSF le 9 septembre 2026 a 12:20 CEST, registration https://osf.io/3r6zg/ , avant le premier appel du run.
 
 ## Question
 

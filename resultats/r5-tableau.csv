@@ -1,0 +1,65 @@
+condition,libelle,quantite,perimetre,identite,n_items,valeur
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","facteur H2b, ecart signe entre camps",79 items orientes,journaliste,79,0.24461877977591442
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","facteur H2b, ecart signe entre camps",79 items orientes,journaliste,79,0.7271040016174922
+q4base,"Qwen3-4B-Base, completion a trois exemples","facteur H2b, ecart signe entre camps",79 items orientes,journaliste,79,0.5661002089418947
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","facteur H2b, ecart signe entre camps",79 items orientes,journaliste,79,0.6265204775440116
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","facteur H2b, ecart signe entre camps",79 items orientes,adversaire,79,0.2205909806511248
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","facteur H2b, ecart signe entre camps",79 items orientes,adversaire,79,0.858555355223549
+q4base,"Qwen3-4B-Base, completion a trois exemples","facteur H2b, ecart signe entre camps",79 items orientes,adversaire,79,0.44034888067566014
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","facteur H2b, ecart signe entre camps",79 items orientes,adversaire,79,0.7540695061097284
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","facteur H2b, ecart signe entre camps",65 items retenus stricts,journaliste,65,0.3043113573896534
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","facteur H2b, ecart signe entre camps",65 items retenus stricts,journaliste,65,0.8100920067907397
+q4base,"Qwen3-4B-Base, completion a trois exemples","facteur H2b, ecart signe entre camps",65 items retenus stricts,journaliste,65,0.5735651736884668
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","facteur H2b, ecart signe entre camps",65 items retenus stricts,journaliste,65,0.7076466321179313
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","facteur H2b, ecart signe entre camps",65 items retenus stricts,adversaire,65,0.2702951294005216
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","facteur H2b, ecart signe entre camps",65 items retenus stricts,adversaire,65,0.9816607368816963
+q4base,"Qwen3-4B-Base, completion a trois exemples","facteur H2b, ecart signe entre camps",65 items retenus stricts,adversaire,65,0.47597926015696335
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","facteur H2b, ecart signe entre camps",65 items retenus stricts,adversaire,65,0.8075631035437341
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp gauche,journaliste,147,1.17410748204039
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp gauche,journaliste,147,11.098066749238122
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp gauche,journaliste,147,1.1010217742911144
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp gauche,journaliste,147,11.639243261389568
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp gauche,journaliste,145,1.1636906423584563
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp gauche,journaliste,145,13.385107863604757
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp gauche,journaliste,146,1.1101576135331892
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp gauche,journaliste,146,11.50112295807518
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp gauche,adversaire,148,1.1809203721678916
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp gauche,adversaire,148,11.489353276527945
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp gauche,adversaire,148,1.0740010337493384
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp gauche,adversaire,148,11.054778212877686
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp gauche,adversaire,145,1.099276893094044
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp gauche,adversaire,145,13.342858094781196
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp gauche,adversaire,146,1.109413248330456
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp gauche,adversaire,146,11.502939541348178
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp centre,journaliste,145,1.1141964309944734
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp centre,journaliste,145,8.64047256624624
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp centre,journaliste,146,1.1219069285487715
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp centre,journaliste,146,7.736439165064553
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp centre,journaliste,145,1.1470649344174166
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp centre,journaliste,145,8.311423076923088
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp centre,journaliste,144,1.1662141933820374
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp centre,journaliste,144,8.009294973803486
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp centre,adversaire,148,1.1446648396141403
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp centre,adversaire,148,9.030044590543165
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp centre,adversaire,144,1.174389302875587
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp centre,adversaire,144,8.300097789716773
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp centre,adversaire,143,1.1729910972223805
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp centre,adversaire,143,8.219781078967955
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp centre,adversaire,145,1.1736052341464969
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp centre,adversaire,145,8.285204949729321
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp droite,journaliste,147,1.0594328820297794
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp droite,journaliste,147,11.31122541603633
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp droite,journaliste,148,1.0900995336681345
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp droite,journaliste,148,9.636068503350723
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp droite,journaliste,146,1.0811439322284326
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp droite,journaliste,146,10.344749667187608
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp droite,journaliste,148,1.088634028254962
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp droite,journaliste,148,9.899285682051893
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","ratio H1, dispersion interne",camp droite,adversaire,148,1.0603568745256815
+q4,"Qwen3-4B-Instruct-2507, gabarit ChatML, sans exemple","erreur TV(decrit, reel) en part du plancher humain",camp droite,adversaire,148,10.748734615216172
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","ratio H1, dispersion interne",camp droite,adversaire,145,1.0282025390229175
+q4nogab,"Qwen3-4B-Instruct-2507, completion a trois exemples, sans gabarit","erreur TV(decrit, reel) en part du plancher humain",camp droite,adversaire,145,10.11845965977981
+q4base,"Qwen3-4B-Base, completion a trois exemples","ratio H1, dispersion interne",camp droite,adversaire,146,1.0455179263863845
+q4base,"Qwen3-4B-Base, completion a trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp droite,adversaire,146,10.304486197909817
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","ratio H1, dispersion interne",camp droite,adversaire,145,1.0538453356442188
+q4gab3,"Qwen3-4B-Instruct-2507, gabarit ChatML ET trois exemples","erreur TV(decrit, reel) en part du plancher humain",camp droite,adversaire,145,10.261964646464664
