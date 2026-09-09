@@ -1,0 +1,4 @@
+jeu_de_donnees,sous_ensemble,n_items,contraste_q1,ic_bas,ic_haut,p,derive_moyenne,pente_derive,pente_abs_derive,r2
+GSS Stanford,derive negative,34,-0.019169,-0.030648,-0.008502,0.002997,-0.160134,,,
+GSS Stanford,derive positive,12,0.055477,0.026010,0.087722,0.004995,0.164865,,,
+GSS Stanford,regression sur derive et valeur absolue,46,0.008439,,,,-0.075352,0.157656,0.023203,0.247582

@@ -1,5 +1,8 @@
 # a31. Pourquoi la bonne personne recoit elle la mauvaise rarete ?
 
+> **Erratum du 9 septembre 2026, sur un point qui n'est pas couvert par les errata ci dessous.** Partout ou ce rapport ecrit « l'ablation C2 contre C3 » ou « l'ablation est propre », il nomme mal un contraste de conditionnement : C2 recoit onze attributs demographiques, C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> Les valeurs restent, 4,45 avec etiquette contre 0,44 sans et l'effet direct de plus 0,0338 ; leur attribution a la seule etiquette tombe. L'ablation propre, a un seul facteur, est le run R3 : `resultats/r3-resultats.md`.
+
 ## Errata du 9 septembre 2026
 
 Corrections apportees a la suite de la seconde relecture adverse,

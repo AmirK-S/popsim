@@ -1,0 +1,4 @@
+quantite,contraste,ic_bas,ic_haut,p,p_holm,plancher_vague2,contraste_P0,n_replications_meme_signe,n_replications_signe_inverse,c1_signe_et_holm,c2_au_dessus_du_plancher,c3_replication_meme_signe,c4_P0_ne_reproduit_pas,refutation_3_inversion,les_quatre
+Q1,0.000304,-0.012387,0.015974,0.971029,0.971029,0.003625,-0.010677,0,1,False,False,False,False,False,False
+Q2,12.411750,11.957494,12.864200,0.000999,0.002997,1.100000,0.709500,5,0,True,True,True,True,False,True
+Q3,0.033162,0.031024,0.035275,0.000999,0.002997,0.001212,0.052613,4,1,True,True,True,False,True,False

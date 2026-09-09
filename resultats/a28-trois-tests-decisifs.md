@@ -1,5 +1,8 @@
 # a28. Les trois tests decisifs, avant la seance
 
+> **Erratum du 9 septembre 2026, sur un point qui n'est pas couvert par l'errata E1 ci dessous.** « Seule l'ablation C2 contre C3 est defendable » et « son ablation la plus propre, C3 contre C2 » nomment mal ce couple : C2 recoit onze attributs demographiques, C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> C'est un contraste de conditionnement a deux facteurs confondus. L'ablation propre, a un seul facteur, est le run R3 : `resultats/r3-resultats.md`.
+
 ## Errata du 9 septembre 2026
 
 Correction apportee a la suite de la seconde relecture adverse,

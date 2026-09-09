@@ -1,5 +1,8 @@
 # a30. La variete interne des camps : la droite est elle plus variee que la gauche ?
 
+> **Erratum du 9 septembre 2026, sur un point qui n'est pas couvert par les errata ci dessous.** Section 7, « un seul contraste d'etiquette est concluant, le notre, C2 contre C3 [...] seule l'etiquette ideologique change » : c'est faux, C2 recoit onze attributs demographiques et C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> L'ecart de 0,210 reste mesure ; son attribution a la seule etiquette tombe. L'ablation propre, a un seul facteur, est le run R3 : `resultats/r3-resultats.md`.
+
 ## Errata du 9 septembre 2026
 
 Correction apportee a la suite de la seconde relecture adverse,

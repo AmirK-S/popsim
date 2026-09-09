@@ -1,5 +1,8 @@
 # a15. Gonflement ou aplatissement des ecarts inter groupes : reconciliation
 
+> **Erratum du 9 septembre 2026.** Ce rapport presente le couple C2 contre C3 comme deux invites « differant sur la presence des etiquettes de groupe ». C'est faux : C2 recoit onze attributs demographiques et rien d'autre, C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> Le plan annonce comme manquant a la litterature est donc un contraste de conditionnement a deux facteurs confondus. L'ablation propre est le run R3 : `resultats/r3-resultats.md`.
+
 Date : 7 septembre 2026. Auteur : agent de recherche a15. Aucun code execute, aucune
 microdonnee manipulee, aucun fichier existant modifie. Trois travaux lus en entier dans leur
 texte source, plus deux relus sur les points litigieux.

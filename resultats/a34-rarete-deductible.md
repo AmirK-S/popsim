@@ -1,5 +1,8 @@
 # a34. La rarete deductible : le seul test qui pouvait faire tomber la these
 
+> **Erratum du 9 septembre 2026, sur un point qui n'est pas couvert par l'errata E1 ci dessous.** « L'ablation C2 contre C3, coeur de a31, survit intacte » nomme mal un contraste de conditionnement : C2 recoit onze attributs demographiques, C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> La survie du couple par tercile reste mesuree ; son attribution a la seule etiquette tombe. L'ablation propre, a un seul facteur, est le run R3 : `resultats/r3-resultats.md`.
+
 ## Errata du 9 septembre 2026
 
 Corrections apportees a la suite de la seconde relecture adverse,

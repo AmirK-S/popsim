@@ -1,0 +1,13 @@
+controle,taille_appariee,jeu_de_donnees,condition,quantite,valeur_gauche,valeur_droite,contraste,ic_bas,ic_haut,p,n_unites,unite
+appariement demographique exact,281.000000,GSS Stanford,P1 appariement demographique,Q1,-0.031511,-0.032545,-0.001034,-0.016340,0.014434,0.883117,46,item
+appariement demographique exact,281.000000,GSS Stanford,P1 appariement demographique,Q2,-22.221000,-11.181500,11.039500,10.477450,11.612525,0.000999,2000,tirage
+appariement demographique exact,281.000000,GSS Stanford,P1 appariement demographique,Q3,0.436566,0.458326,0.021760,0.021148,0.022358,0.000999,100,tirage
+ancrage partisan partyid,,GSS Stanford,P1 ancrage partisan,Q1,-0.033137,-0.035693,-0.002557,-0.015816,0.011119,0.725275,46,item
+ancrage partisan partyid,,GSS Stanford,P1 ancrage partisan,Q2,-29.221500,-16.479500,12.742000,11.954262,13.420187,0.000999,2000,tirage
+ancrage partisan partyid,,GSS Stanford,P1 ancrage partisan,Q3,0.420021,0.459408,0.039387,0.037327,0.041411,0.000999,100,tirage
+sensibilite n_egal 166,166.000000,GSS Stanford,P1 n_egal 166,Q2,-14.097000,-5.057000,9.040000,8.466975,9.656100,0.000999,1000,tirage
+sensibilite n_egal 166,166.000000,GSS Stanford,P1 n_egal 166,Q3,0.460759,0.502273,0.041514,0.031293,0.051166,0.000999,50,tirage
+sensibilite n_egal 249,249.000000,GSS Stanford,P1 n_egal 249,Q2,-21.226000,-9.306000,11.920000,11.127700,12.694050,0.000999,1000,tirage
+sensibilite n_egal 249,249.000000,GSS Stanford,P1 n_egal 249,Q3,0.430430,0.466431,0.036001,0.029462,0.042807,0.000999,50,tirage
+sensibilite n_egal 332,332.000000,GSS Stanford,P1 n_egal 332,Q2,-27.754000,-14.221000,13.533000,12.537925,14.448125,0.000999,1000,tirage
+sensibilite n_egal 332,332.000000,GSS Stanford,P1 n_egal 332,Q3,0.419706,0.453105,0.033400,0.031463,0.035368,0.000999,50,tirage

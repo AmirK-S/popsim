@@ -64,11 +64,29 @@ BANDE_NULLE = (0.95, 1.05)   # seuil de materialite du preenregistrement, sectio
 # ---------------------------------------------------------------------------
 
 def lire_traces(suffixe):
-    """Toutes les lignes de trace, tolerant aux fichiers partiels et aux lignes tronquees."""
-    motif = os.path.join(TRACES, f"r1-*{'-' + suffixe if suffixe else ''}.jsonl")
+    """Toutes les lignes de trace, tolerant aux fichiers partiels et aux lignes tronquees.
+
+    Deux conventions de nom sont lues. Celle de R1, `r1-<cle>[-<suffixe>].jsonl`, qui vaut
+    pour R1, pour R4 et pour les copies de conditions deja jouees. Et, quand un suffixe est
+    demande, celle des runs qui nomment leur trace d'apres leur propre chantier,
+    `<suffixe>-<cle>.jsonl` : c'est le cas de R5, dont la page de plan nomme
+    `data/traces/r5-q4gab3.jsonl`. Ajout du 2026-09-09 ; il ne change rien aux suffixes
+    existants, aucun fichier `r4-*.jsonl` ni `smoke-*.jsonl` n'existant dans le depot.
+
+    Les traces d'essai a blanc sont ecartees sauf si le suffixe demande en est un : un
+    smoke test ne doit jamais entrer dans les mesures d'un run.
+    """
+    motifs = [os.path.join(TRACES, f"r1-*{'-' + suffixe if suffixe else ''}.jsonl")]
+    if suffixe:
+        motifs.append(os.path.join(TRACES, f"{suffixe}-*.jsonl"))
+    chemins = []
+    for motif in motifs:
+        for chemin in sorted(glob.glob(motif)):
+            if chemin not in chemins:
+                chemins.append(chemin)
     lignes = []
-    for chemin in sorted(glob.glob(motif)):
-        if not suffixe and "-smoke" in os.path.basename(chemin):
+    for chemin in chemins:
+        if "smoke" not in (suffixe or "") and "smoke" in os.path.basename(chemin):
             continue
         with open(chemin, encoding="utf-8") as fh:
             for ligne in fh:

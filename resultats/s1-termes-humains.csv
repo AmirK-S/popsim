@@ -1,0 +1,61 @@
+ancrage,camp,enonce,libelle,n_personnes,reel_soutien_4ou5,reel_soutien_3a5,croyance_humaine,plancher_retest,reel_du_camp_4ou5
+ideologie,gauche,1,Placing a tax on carbon emissions,909,62.779397473275026,75.85034013605441,51.233223322332236,12.886688668866887,76.76567656765677
+ideologie,gauche,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,909,61.613216715257536,84.20796890184646,44.63036303630363,15.242024202420241,76.76567656765677
+ideologie,gauche,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,909,66.47230320699708,81.14674441205054,51.11771177117712,14.646864686468646,76.76567656765677
+ideologie,gauche,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,909,73.46938775510205,83.38192419825073,58.394939493949394,14.049504950495049,76.76567656765677
+ideologie,gauche,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",909,75.94752186588921,92.56559766763849,59.114411441144114,15.19031903190319,76.76567656765677
+ideologie,gauche,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,909,66.22934888241011,78.76579203109816,48.66446644664467,14.608360836083609,76.76567656765677
+ideologie,gauche,7,A law that requires companies to provide paid family leave for parents,909,78.71720116618076,90.62196307094267,67.1012101210121,12.672167216721672,76.76567656765677
+ideologie,gauche,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,909,74.39261418853256,85.56851311953353,65.31903190319032,15.112211221122113,76.76567656765677
+ideologie,gauche,11,Increasing deportations for those in the US illegally,909,45.09232264334305,65.74344023323616,50.759075907590756,14.911991199119912,76.76567656765677
+ideologie,gauche,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,909,53.88726919339164,80.07774538386784,51.014301430143014,15.005500550055006,76.76567656765677
+ideologie,centre,1,Placing a tax on carbon emissions,582,62.779397473275026,75.85034013605441,46.71649484536083,13.847079037800688,64.24398625429554
+ideologie,centre,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,582,61.613216715257536,84.20796890184646,44.22852233676976,15.1786941580756,64.24398625429554
+ideologie,centre,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,582,66.47230320699708,81.14674441205054,48.24570446735395,15.621993127147766,64.24398625429554
+ideologie,centre,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,582,73.46938775510205,83.38192419825073,56.84192439862543,16.18041237113402,64.24398625429554
+ideologie,centre,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",582,75.94752186588921,92.56559766763849,59.4106529209622,16.551546391752577,64.24398625429554
+ideologie,centre,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,582,66.22934888241011,78.76579203109816,45.44158075601374,16.34536082474227,64.24398625429554
+ideologie,centre,7,A law that requires companies to provide paid family leave for parents,582,78.71720116618076,90.62196307094267,67.23024054982818,15.81786941580756,64.24398625429554
+ideologie,centre,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,582,74.39261418853256,85.56851311953353,65.27319587628865,17.080756013745706,64.24398625429554
+ideologie,centre,11,Increasing deportations for those in the US illegally,582,45.09232264334305,65.74344023323616,57.761168384879724,14.6340206185567,64.24398625429554
+ideologie,centre,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,582,53.88726919339164,80.07774538386784,59.106529209621996,16.847079037800686,64.24398625429554
+ideologie,droite,1,Placing a tax on carbon emissions,567,62.779397473275026,75.85034013605441,43.39506172839506,14.36331569664903,50.0352733686067
+ideologie,droite,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,567,61.613216715257536,84.20796890184646,41.85537918871252,16.02821869488536,50.0352733686067
+ideologie,droite,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,567,66.47230320699708,81.14674441205054,42.74955908289242,15.462081128747796,50.0352733686067
+ideologie,droite,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,567,73.46938775510205,83.38192419825073,49.070546737213405,16.530864197530864,50.0352733686067
+ideologie,droite,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",567,75.94752186588921,92.56559766763849,57.22574955908289,16.673721340388006,50.0352733686067
+ideologie,droite,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,567,66.22934888241011,78.76579203109816,40.32275132275132,15.957671957671957,50.0352733686067
+ideologie,droite,7,A law that requires companies to provide paid family leave for parents,567,78.71720116618076,90.62196307094267,62.439153439153436,15.843033509700176,50.0352733686067
+ideologie,droite,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,567,74.39261418853256,85.56851311953353,56.864197530864196,17.350970017636683,50.0352733686067
+ideologie,droite,11,Increasing deportations for those in the US illegally,567,45.09232264334305,65.74344023323616,66.11463844797179,15.437389770723104,50.0352733686067
+ideologie,droite,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,567,53.88726919339164,80.07774538386784,59.22927689594356,17.372134038800706,50.0352733686067
+parti,gauche,1,Placing a tax on carbon emissions,847,62.779397473275026,75.85034013605441,52.03305785123967,13.53482880755608,76.54073199527744
+parti,gauche,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,847,61.613216715257536,84.20796890184646,45.701298701298704,15.514757969303425,76.54073199527744
+parti,gauche,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,847,66.47230320699708,81.14674441205054,51.44391971664699,14.711924439197167,76.54073199527744
+parti,gauche,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,847,73.46938775510205,83.38192419825073,58.96340023612751,15.001180637544273,76.54073199527744
+parti,gauche,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",847,75.94752186588921,92.56559766763849,59.468713105076745,15.65879574970484,76.54073199527744
+parti,gauche,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,847,66.22934888241011,78.76579203109816,48.75796930342385,15.099173553719009,76.54073199527744
+parti,gauche,7,A law that requires companies to provide paid family leave for parents,847,78.71720116618076,90.62196307094267,67.70247933884298,13.147579693034238,76.54073199527744
+parti,gauche,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,847,74.39261418853256,85.56851311953353,65.97638724911452,15.894923258559622,76.54073199527744
+parti,gauche,11,Increasing deportations for those in the US illegally,847,45.09232264334305,65.74344023323616,50.85242030696576,15.412042502951595,76.54073199527744
+parti,gauche,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,847,53.88726919339164,80.07774538386784,52.50767414403778,15.565525383707202,76.54073199527744
+parti,centre,1,Placing a tax on carbon emissions,609,62.779397473275026,75.85034013605441,44.88834154351396,13.047619047619047,64.33497536945812
+parti,centre,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,609,61.613216715257536,84.20796890184646,42.01313628899836,14.773399014778326,64.33497536945812
+parti,centre,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,609,66.47230320699708,81.14674441205054,45.95238095238095,15.727422003284072,64.33497536945812
+parti,centre,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,609,73.46938775510205,83.38192419825073,54.64367816091954,14.776683087027914,64.33497536945812
+parti,centre,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",609,75.94752186588921,92.56559766763849,58.0328407224959,15.394088669950738,64.33497536945812
+parti,centre,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,609,66.22934888241011,78.76579203109816,44.78489326765189,14.697865353037766,64.33497536945812
+parti,centre,7,A law that requires companies to provide paid family leave for parents,609,78.71720116618076,90.62196307094267,65.8128078817734,14.954022988505747,64.33497536945812
+parti,centre,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,609,74.39261418853256,85.56851311953353,63.17733990147783,15.520525451559934,64.33497536945812
+parti,centre,11,Increasing deportations for those in the US illegally,609,45.09232264334305,65.74344023323616,58.399014778325125,13.412151067323482,64.33497536945812
+parti,centre,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,609,53.88726919339164,80.07774538386784,56.6551724137931,16.105090311986864,64.33497536945812
+parti,droite,1,Placing a tax on carbon emissions,540,62.779397473275026,75.85034013605441,44.75925925925926,13.964814814814815,51.629629629629626
+parti,droite,2,Ensuring 40% of all new clean energy infrastructure development spending goes to low-income communities,540,61.613216715257536,84.20796890184646,42.992592592592594,15.977777777777778,51.629629629629626
+parti,droite,3,Federal investments to ensure a carbon-pollution free electricity sector by 2035,540,66.47230320699708,81.14674441205054,45.224074074074075,15.327777777777778,51.629629629629626
+parti,droite,4,A ‘Medicare for All’ system in which all Americans would get healthcare from a government-run plan,540,73.46938775510205,83.38192419825073,50.67407407407408,16.52777777777778,51.629629629629626
+parti,droite,5,"A ‘public option’, which would allow Americans to buy into a government-run healthcare plan if they choose to do so",540,75.94752186588921,92.56559766763849,58.26111111111111,16.774074074074075,51.629629629629626
+parti,droite,6,Immigration reforms that would provide a path to U.S. citizenship for undocumented immigrants currently in the United States,540,66.22934888241011,78.76579203109816,41.32222222222222,16.43148148148148,51.629629629629626
+parti,droite,7,A law that requires companies to provide paid family leave for parents,540,78.71720116618076,90.62196307094267,63.50370370370371,15.753703703703703,51.629629629629626
+parti,droite,10,A 2% tax on the assets of individuals with a net worth of more than $50 million,540,74.39261418853256,85.56851311953353,58.22962962962963,17.555555555555557,51.629629629629626
+parti,droite,11,Increasing deportations for those in the US illegally,540,45.09232264334305,65.74344023323616,65.30740740740741,15.714814814814815,51.629629629629626
+parti,droite,12,Offering seniors healthcare vouchers to purchase private healthcare plans in place of traditional medicare coverage,540,53.88726919339164,80.07774538386784,59.82037037037037,16.944444444444443,51.629629629629626

@@ -1,0 +1,7 @@
+jeu_de_donnees,quantite,condition,contraste,ic_bas,ic_haut
+Twin-2K-500,Q1,vagues 1-3,0.004942,-0.003204,0.013729
+Twin-2K-500,Q1,vague 4,0.005829,-0.002249,0.014672
+panel 2006-2010,Q1,vague 2010 contre 2006,-0.007367,-0.025678,0.010996
+panel 2008-2012,Q1,vague 2012 contre 2008,-0.010208,-0.027198,0.008080
+panel 2010-2014,Q1,vague 2014 contre 2010,-0.004361,-0.020776,0.013783
+panel 2016-2020,Q1,vague 2020 contre 2016,-0.025450,-0.049090,-0.001750

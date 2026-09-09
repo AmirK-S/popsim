@@ -1,0 +1,169 @@
+famille,configuration,ancrage,camp,n_enonces,quantite,valeur,ic_bas,ic_haut,p_brute,sens_predit,p_holm,materiel
+F1 H1 endo contre reel,demographics_only__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.9886938864687043,1.497450021618843,2.866682441702841,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,demographics_only__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7570695480553321,0.6898344493174304,0.8182215379268086,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,demographics_only__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.8167627639244872,0.4827550363236234,1.1349512908229693,0.31640625,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,demographics_only__gpt41_mini,ideologie,droite,10,D_endo / D_reel,1.1925107251646652,0.6202007720991446,2.4676090810220943,0.6015625,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,demographics_only__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,0.8384612960453506,0.6749978957804691,1.1338278467590344,0.28515625,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,demographics_only__gpt41_mini,ideologie,droite,10,D_reel / plancher,0.9811355592205118,0.5641375614314429,1.3835586579013102,0.94921875,rapport superieur a 1,1.0,non
+F2 H2 amplification,demographics_only__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,2.4497426078688442,1.2889643966544402,4.063876614313169,0.03515625,rapport superieur a 1,0.140625,oui
+F1 H1 endo contre reel,demographics_only__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.9804417910615018,1.5050733143380153,2.8463590140274544,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,demographics_only__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.7725870917337723,0.7023921959720385,0.8337978129566371,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,demographics_only__gpt41_mini,parti,gauche,10,D_reel / plancher,0.766832909334773,0.45670880536792247,1.0689616152991304,0.224609375,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,demographics_only__gpt41_mini,parti,droite,10,D_endo / D_reel,1.1734119740617237,0.6304936020717994,2.3451295187711496,0.60546875,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,demographics_only__gpt41_mini,parti,droite,10,d_gauche / d_droite,0.8606440321594218,0.7036286008071695,1.1177196755268415,0.30078125,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,demographics_only__gpt41_mini,parti,droite,10,D_reel / plancher,0.9987368890610603,0.5875572429434649,1.4090156979673398,0.998046875,rapport superieur a 1,1.0,non
+F2 H2 amplification,demographics_only__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,2.680796194308633,1.3579328318719255,4.5826848790858525,0.03515625,rapport superieur a 1,0.140625,oui
+F1 H1 endo contre reel,json_persona__gpt41,ideologie,gauche,10,D_endo / D_reel,1.618264572568865,1.0124159188552608,2.9694010359302547,0.08203125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,json_persona__gpt41,ideologie,gauche,10,d_gauche / d_droite,0.614810588869444,0.5237483294918116,0.7275835446723944,0.005859375,rapport inferieur a 1,0.234375,oui
+F4 H4 plancher,json_persona__gpt41,ideologie,gauche,10,D_reel / plancher,0.4425035827577484,0.2635715098834928,0.6475622534030596,0.005859375,rapport superieur a 1,0.228515625,oui
+F1 H1 endo contre reel,json_persona__gpt41,ideologie,droite,10,D_endo / D_reel,0.5348444209575668,0.3713990877125731,0.7585060499053161,0.017578125,rapport inferieur a 1,0.6328125,oui
+F3 H3 lentille,json_persona__gpt41,ideologie,droite,10,d_gauche / d_droite,1.1686855240671163,0.8603013861463434,1.517608083301399,0.294921875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,json_persona__gpt41,ideologie,droite,10,D_reel / plancher,1.9330854644646531,1.426805394396779,2.3560686106331454,0.01171875,rapport superieur a 1,0.43359375,oui
+F2 H2 amplification,json_persona__gpt41,ideologie,gauche contre droite,10,ecart modele / ecart humain,3.3909676904163213,1.9557779838132792,5.530784695525025,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,json_persona__gpt41,parti,gauche,10,D_endo / D_reel,1.5030334403601184,0.9821250924035392,2.6158655979054273,0.1015625,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,json_persona__gpt41,parti,gauche,10,d_gauche / d_droite,0.643906035228588,0.5426880891838703,0.7883331988958331,0.01171875,rapport inferieur a 1,0.45703125,oui
+F4 H4 plancher,json_persona__gpt41,parti,gauche,10,D_reel / plancher,0.44104889332589364,0.26975590704850544,0.6339571749025341,0.00390625,rapport superieur a 1,0.18359375,oui
+F1 H1 endo contre reel,json_persona__gpt41,parti,droite,10,D_endo / D_reel,0.5767543797215036,0.429057577898195,0.8018245182749064,0.017578125,rapport inferieur a 1,0.6328125,oui
+F3 H3 lentille,json_persona__gpt41,parti,droite,10,d_gauche / d_droite,1.1276329944491579,0.8714960245870189,1.3903056953166335,0.3359375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,json_persona__gpt41,parti,droite,10,D_reel / plancher,1.9673926535978625,1.4466601282868117,2.385152464890196,0.01171875,rapport superieur a 1,0.43359375,oui
+F2 H2 amplification,json_persona__gpt41,parti,gauche contre droite,10,ecart modele / ecart humain,3.8611103125296706,2.2123762920744996,6.400055529753324,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,json_persona__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,2.389512861794964,1.2854047476479178,4.762181585734483,0.03125,rapport inferieur a 1,0.9375,oui
+F3 H3 lentille,json_persona__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.6317781075192219,0.5310382913478515,0.7227084584192237,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,json_persona__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.3733327700032467,0.22017093104240154,0.55977999318603,0.00390625,rapport superieur a 1,0.18359375,oui
+F1 H1 endo contre reel,json_persona__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.4603352283511111,0.24143445762620921,0.8407827313341294,0.037109375,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,json_persona__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.0288060433565276,0.6192408853697701,1.6494400071775541,0.91015625,rapport inferieur a 1,1.0,non
+F4 H4 plancher,json_persona__gpt41_mini,ideologie,droite,10,D_reel / plancher,1.3125310087403197,0.9672428804068834,1.6390517783493785,0.12109375,rapport superieur a 1,1.0,oui
+F2 H2 amplification,json_persona__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,2.5533813991675776,1.5318216415959367,3.986916812823936,0.017578125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,json_persona__gpt41_mini,parti,gauche,10,D_endo / D_reel,2.349929539220254,1.3214889156256833,4.6303323405601375,0.025390625,rapport inferieur a 1,0.86328125,oui
+F3 H3 lentille,json_persona__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.6595066374318177,0.5656622325193074,0.7457685578022791,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,json_persona__gpt41_mini,parti,gauche,10,D_reel / plancher,0.3593534399853179,0.20643153014770857,0.5375350787145252,0.001953125,rapport superieur a 1,0.09375,oui
+F1 H1 endo contre reel,json_persona__gpt41_mini,parti,droite,10,D_endo / D_reel,0.46377711574024305,0.23189618706402984,0.8344180655649354,0.03515625,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,json_persona__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.100896282304059,0.7024149551760851,1.7316360287625467,0.6875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,json_persona__gpt41_mini,parti,droite,10,D_reel / plancher,1.3352016102983912,0.9794379495892356,1.6586599140228906,0.109375,rapport superieur a 1,1.0,oui
+F2 H2 amplification,json_persona__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,2.8970099250322545,1.6610827148904328,4.687517144459778,0.009765625,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,json_persona_predicted_output__gpt41,ideologie,gauche,10,D_endo / D_reel,0.8152190547578209,0.5694794840319026,1.1840023559326744,0.3125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,json_persona_predicted_output__gpt41,ideologie,gauche,10,d_gauche / d_droite,0.5536897517183301,0.4446471179860581,0.7389974288965766,0.01171875,rapport inferieur a 1,0.45703125,oui
+F4 H4 plancher,json_persona_predicted_output__gpt41,ideologie,gauche,10,D_reel / plancher,0.644467597736538,0.5131015006040308,0.7876464526947187,0.00390625,rapport superieur a 1,0.18359375,oui
+F1 H1 endo contre reel,json_persona_predicted_output__gpt41,ideologie,droite,10,D_endo / D_reel,0.3501267934821063,0.16347873472849098,0.645192616062646,0.015625,rapport inferieur a 1,0.59375,oui
+F3 H3 lentille,json_persona_predicted_output__gpt41,ideologie,droite,10,d_gauche / d_droite,1.3541393151814494,0.7640540491433832,2.54618158547259,0.298828125,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,json_persona_predicted_output__gpt41,ideologie,droite,10,D_reel / plancher,1.3945992236471185,1.0320702415847705,1.6963243055114918,0.0703125,rapport superieur a 1,1.0,oui
+F2 H2 amplification,json_persona_predicted_output__gpt41,ideologie,gauche contre droite,10,ecart modele / ecart humain,1.9701496829563736,1.278248726181035,3.021586710592496,0.021484375,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,json_persona_predicted_output__gpt41,parti,gauche,10,D_endo / D_reel,0.8011819246920077,0.5513924893912895,1.165008696356667,0.271484375,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,json_persona_predicted_output__gpt41,parti,gauche,10,d_gauche / d_droite,0.5891060230511229,0.4636067366859447,0.8233595647835348,0.025390625,rapport inferieur a 1,0.888671875,oui
+F4 H4 plancher,json_persona_predicted_output__gpt41,parti,gauche,10,D_reel / plancher,0.6181622860087637,0.49259825015524467,0.7509924915203118,0.00390625,rapport superieur a 1,0.18359375,oui
+F1 H1 endo contre reel,json_persona_predicted_output__gpt41,parti,droite,10,D_endo / D_reel,0.407880242282949,0.2405044285332775,0.6837814800108503,0.015625,rapport inferieur a 1,0.59375,oui
+F3 H3 lentille,json_persona_predicted_output__gpt41,parti,droite,10,d_gauche / d_droite,1.2484031914775489,0.7827707719664072,1.9234561922459683,0.3359375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,json_persona_predicted_output__gpt41,parti,droite,10,D_reel / plancher,1.4294042368860238,1.0675420543821477,1.7337713028184265,0.048828125,rapport superieur a 1,1.0,oui
+F2 H2 amplification,json_persona_predicted_output__gpt41,parti,gauche contre droite,10,ecart modele / ecart humain,2.311426249893771,1.4878166536586435,3.634573745907773,0.009765625,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,llm_finetuning_500_training_samples__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,0.3785169806254682,0.22462501277901326,0.5051010003226875,0.001953125,rapport inferieur a 1,0.09375,oui
+F3 H3 lentille,llm_finetuning_500_training_samples__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7844853660551948,0.34905226284460056,1.401066038422369,0.474609375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,llm_finetuning_500_training_samples__gpt41_mini,ideologie,gauche,10,D_reel / plancher,1.2133314763374854,0.8395872098019372,1.588963037734876,0.294921875,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,llm_finetuning_500_training_samples__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.45596397210482353,0.24056803980444363,0.806772673356901,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,llm_finetuning_500_training_samples__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.226720312132388,0.8254168839119054,1.9243204808650958,0.32421875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,llm_finetuning_500_training_samples__gpt41_mini,ideologie,droite,10,D_reel / plancher,1.5679263611636975,1.1609136155029613,1.9220782560762284,0.029296875,rapport superieur a 1,0.732421875,oui
+F2 H2 amplification,llm_finetuning_500_training_samples__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,1.131416070133232,0.8457934633589304,1.5974612195239943,0.45703125,rapport superieur a 1,0.45703125,oui
+F1 H1 endo contre reel,llm_finetuning_500_training_samples__gpt41_mini,parti,gauche,10,D_endo / D_reel,0.4005002547110246,0.24412504199732213,0.5334769504033195,0.001953125,rapport inferieur a 1,0.09375,oui
+F3 H3 lentille,llm_finetuning_500_training_samples__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.8422181642465063,0.4069651428237043,1.4070049366473873,0.578125,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,llm_finetuning_500_training_samples__gpt41_mini,parti,gauche,10,D_reel / plancher,1.1697535440622002,0.8047683126824845,1.5319405089324052,0.41015625,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,llm_finetuning_500_training_samples__gpt41_mini,parti,droite,10,D_endo / D_reel,0.4894776394831709,0.2721645746015396,0.8239871327853147,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,llm_finetuning_500_training_samples__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.187491485228526,0.8464986531366093,1.751965353083534,0.34375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,llm_finetuning_500_training_samples__gpt41_mini,parti,droite,10,D_reel / plancher,1.5605680688516965,1.1621034176687963,1.9078793471802007,0.029296875,rapport superieur a 1,0.732421875,oui
+F2 H2 amplification,llm_finetuning_500_training_samples__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,1.2561771226974052,0.9225286753791316,1.8006992837527795,0.193359375,rapport superieur a 1,0.38671875,oui
+F1 H1 endo contre reel,persona_summary__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.662613802414301,1.3457940166171585,2.076709041393155,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,persona_summary__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7958069510001983,0.7479880916875642,0.8463244282392969,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,persona_summary__gpt41_mini,ideologie,gauche,10,D_reel / plancher,1.221758704265726,0.8864596822042438,1.563855635188458,0.267578125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,persona_summary__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.638064933776736,0.4162590357204316,0.9602253852450549,0.0625,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,persona_summary__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,0.9878112194814079,0.726741239394511,1.309332496644847,0.927734375,rapport inferieur a 1,1.0,non
+F4 H4 plancher,persona_summary__gpt41_mini,ideologie,droite,10,D_reel / plancher,1.7127048852356557,1.2632351931169084,2.159763995227226,0.021484375,rapport superieur a 1,0.6015625,oui
+F2 H2 amplification,persona_summary__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,4.925789447294039,2.9829426386552247,7.777682158059707,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,persona_summary__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.6522465086573492,1.3539025240902958,2.0405258478796098,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,persona_summary__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.811966782544757,0.7619830530890384,0.8611753943301105,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,persona_summary__gpt41_mini,parti,gauche,10,D_reel / plancher,1.168313330021692,0.8598870479659112,1.4934931258558861,0.359375,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,persona_summary__gpt41_mini,parti,droite,10,D_endo / D_reel,0.6536456601460554,0.4291568945011957,0.9605604249243264,0.05859375,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,persona_summary__gpt41_mini,parti,droite,10,d_gauche / d_droite,0.9954924867355189,0.761355428617223,1.2619531259269197,0.966796875,rapport inferieur a 1,1.0,non
+F4 H4 plancher,persona_summary__gpt41_mini,parti,droite,10,D_reel / plancher,1.7353962021145204,1.2755618774662287,2.2062637199490367,0.0234375,rapport superieur a 1,0.6328125,oui
+F2 H2 amplification,persona_summary__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,5.5594411312308925,3.2333636171410847,9.142360183254395,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,persona_summary__json_persona__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,2.0211235921293595,1.4618967115974582,3.1198789720643996,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,persona_summary__json_persona__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7545608507993193,0.7007386112627335,0.8122978605207857,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,persona_summary__json_persona__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.7928072438108204,0.4659101802591244,1.1635868457875773,0.298828125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,persona_summary__json_persona__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.7148070223382726,0.5029590851077936,1.0387753524784518,0.12890625,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,persona_summary__json_persona__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,0.9521232424071396,0.7077367121701181,1.21083593733021,0.716796875,rapport inferieur a 1,1.0,non
+F4 H4 plancher,persona_summary__json_persona__gpt41_mini,ideologie,droite,10,D_reel / plancher,1.7929695131574064,1.2913710570122587,2.266897856881341,0.02734375,rapport superieur a 1,0.7109375,oui
+F2 H2 amplification,persona_summary__json_persona__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,4.039536202036108,2.1080290421946675,6.706855489796401,0.013671875,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,persona_summary__json_persona__gpt41_mini,parti,gauche,10,D_endo / D_reel,2.0187080918194376,1.4667593819132552,3.1204075615961413,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,persona_summary__json_persona__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.7715871175161443,0.7157965354230157,0.828036338334665,0.001953125,rapport inferieur a 1,0.09375,oui
+F4 H4 plancher,persona_summary__json_persona__gpt41_mini,parti,gauche,10,D_reel / plancher,0.7480340017359527,0.4203668839558682,1.1124774187275133,0.21484375,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,persona_summary__json_persona__gpt41_mini,parti,droite,10,D_endo / D_reel,0.7339849783185391,0.5242216847642353,1.0509825556971066,0.14453125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,persona_summary__json_persona__gpt41_mini,parti,droite,10,d_gauche / d_droite,0.9561056272130356,0.7406493557462543,1.1886701129678598,0.70703125,rapport inferieur a 1,1.0,non
+F4 H4 plancher,persona_summary__json_persona__gpt41_mini,parti,droite,10,D_reel / plancher,1.7530896159770457,1.2569584428631402,2.214429993868534,0.029296875,rapport superieur a 1,0.732421875,oui
+F2 H2 amplification,persona_summary__json_persona__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,4.43288738474303,2.253333719400226,7.587052776606105,0.013671875,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,text_persona__gemini_flash25,ideologie,gauche,10,D_endo / D_reel,0.8736618887187912,0.5272885651880247,1.5717586490944526,0.638671875,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona__gemini_flash25,ideologie,gauche,10,d_gauche / d_droite,0.6685926768257604,0.5242169575589558,0.9237779211693214,0.044921875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gemini_flash25,ideologie,gauche,10,D_reel / plancher,0.7745068452406879,0.47060777012784516,1.1123219871561412,0.220703125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona__gemini_flash25,ideologie,droite,10,D_endo / D_reel,0.32320361408960296,0.2282897798395322,0.47478883392842514,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,text_persona__gemini_flash25,ideologie,droite,10,d_gauche / d_droite,1.3523597463454708,0.8696845724445051,1.87380863162982,0.201171875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gemini_flash25,ideologie,droite,10,D_reel / plancher,1.3479466881497282,1.0638845898444658,1.6479136136739776,0.044921875,rapport superieur a 1,0.98828125,oui
+F2 H2 amplification,text_persona__gemini_flash25,ideologie,gauche contre droite,10,ecart modele / ecart humain,2.0251744268103797,1.603475366668431,2.816331227919223,0.001953125,rapport superieur a 1,0.046875,oui
+F1 H1 endo contre reel,text_persona__gemini_flash25,parti,gauche,10,D_endo / D_reel,0.8459891185638695,0.5100372733369027,1.4763479084520261,0.55078125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona__gemini_flash25,parti,gauche,10,d_gauche / d_droite,0.6992008606202508,0.540973726775877,0.9723956083202225,0.064453125,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gemini_flash25,parti,gauche,10,D_reel / plancher,0.7556146308801032,0.45906024784553945,1.0720412114178586,0.17578125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona__gemini_flash25,parti,droite,10,D_endo / D_reel,0.3346020186251461,0.21188218346519253,0.5004760976174553,0.00390625,rapport inferieur a 1,0.1796875,oui
+F3 H3 lentille,text_persona__gemini_flash25,parti,droite,10,d_gauche / d_droite,1.37540541729741,0.9469891061591531,1.8908133567156957,0.125,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gemini_flash25,parti,droite,10,D_reel / plancher,1.3432223918779884,1.0560213710948039,1.6375596612096535,0.05078125,rapport superieur a 1,1.0,oui
+F2 H2 amplification,text_persona__gemini_flash25,parti,gauche contre droite,10,ecart modele / ecart humain,2.229022527486382,1.7505593895420317,3.1259054472256382,0.001953125,rapport superieur a 1,0.046875,oui
+F1 H1 endo contre reel,text_persona__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.8954814770212693,1.2199364478493258,3.074360231524999,0.02734375,rapport inferieur a 1,0.90234375,oui
+F3 H3 lentille,text_persona__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7263314638490563,0.6420674145238661,0.8486399472231146,0.01171875,rapport inferieur a 1,0.45703125,oui
+F4 H4 plancher,text_persona__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.5905127899251484,0.38197629582178566,0.8273513801972775,0.013671875,rapport superieur a 1,0.4375,oui
+F1 H1 endo contre reel,text_persona__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.6444042961492817,0.4713645095066257,0.8608823853409004,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.1112178970940743,0.9078619358956678,1.3450719980904544,0.294921875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gpt41_mini,ideologie,droite,10,D_reel / plancher,2.4334545183053833,1.8851514056874077,2.9420404657846917,0.00390625,rapport superieur a 1,0.18359375,oui
+F2 H2 amplification,text_persona__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,4.825311108346115,2.769302148978166,7.677823389064156,0.005859375,rapport superieur a 1,0.123046875,oui
+F1 H1 endo contre reel,text_persona__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.8304238356613118,1.1911656462814912,2.904628125618999,0.029296875,rapport inferieur a 1,0.9375,oui
+F3 H3 lentille,text_persona__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.7503839705034139,0.6573020690825835,0.897898746671409,0.025390625,rapport inferieur a 1,0.888671875,oui
+F4 H4 plancher,text_persona__gpt41_mini,parti,gauche,10,D_reel / plancher,0.5640016011457442,0.37405000476515504,0.7810392208497938,0.009765625,rapport superieur a 1,0.37109375,oui
+F1 H1 endo contre reel,text_persona__gpt41_mini,parti,droite,10,D_endo / D_reel,0.6722328995811844,0.5029921795061745,0.8885994147043232,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.0884540181735658,0.9132666025639186,1.2746479660839762,0.3359375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona__gpt41_mini,parti,droite,10,D_reel / plancher,2.435609029264362,1.8745169714255068,2.952946574114189,0.00390625,rapport superieur a 1,0.18359375,oui
+F2 H2 amplification,text_persona__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,5.396447050665397,3.0613008225204155,8.715494250090018,0.005859375,rapport superieur a 1,0.123046875,oui
+F1 H1 endo contre reel,text_persona_default_temperature__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.816861397649431,1.1849752930427686,2.8146173985914618,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_default_temperature__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7223984488716618,0.636544902442898,0.8363599049477021,0.01171875,rapport inferieur a 1,0.45703125,oui
+F4 H4 plancher,text_persona_default_temperature__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.6115495164043874,0.4135710250470556,0.8280633731020957,0.013671875,rapport superieur a 1,0.4375,oui
+F1 H1 endo contre reel,text_persona_default_temperature__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.6314811451192378,0.45241081026378266,0.8648954477643372,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_default_temperature__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.1176185784279884,0.9002473961572842,1.3709680291839041,0.294921875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_default_temperature__gpt41_mini,ideologie,droite,10,D_reel / plancher,2.3481185854262403,1.8112900703748929,2.8383063227642675,0.00390625,rapport superieur a 1,0.18359375,oui
+F2 H2 amplification,text_persona_default_temperature__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,4.677676891008173,2.711097137884639,7.375131810230445,0.005859375,rapport superieur a 1,0.123046875,oui
+F1 H1 endo contre reel,text_persona_default_temperature__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.7499587508908452,1.1373605397931352,2.729080837860234,0.0390625,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_default_temperature__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.749031616132463,0.652286686771285,0.8961675619431253,0.025390625,rapport inferieur a 1,0.888671875,oui
+F4 H4 plancher,text_persona_default_temperature__gpt41_mini,parti,gauche,10,D_reel / plancher,0.5856986804271745,0.39740802252153995,0.793604810360998,0.01171875,rapport superieur a 1,0.43359375,oui
+F1 H1 endo contre reel,text_persona_default_temperature__gpt41_mini,parti,droite,10,D_endo / D_reel,0.6618347097239153,0.5009052475751888,0.8901236950418078,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_default_temperature__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.092693964999398,0.9048415804892049,1.2937557645010813,0.3359375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_default_temperature__gpt41_mini,parti,droite,10,D_reel / plancher,2.360716880860566,1.8035092335722294,2.8510199238572573,0.00390625,rapport superieur a 1,0.18359375,oui
+F2 H2 amplification,text_persona_default_temperature__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,5.2486213513508995,3.0200846374318067,8.416831693368284,0.005859375,rapport superieur a 1,0.123046875,oui
+F1 H1 endo contre reel,text_persona_reasoning__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.193556163755766,0.6250466653912683,2.4653771232252426,0.599609375,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona_reasoning__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7013670474680509,0.5891173473188016,0.8828031451423861,0.02734375,rapport inferieur a 1,0.888671875,oui
+F4 H4 plancher,text_persona_reasoning__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.7525305476103503,0.41158448662745445,1.0861949508964615,0.205078125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona_reasoning__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.5461559565722379,0.32688449959289484,0.8382383857515697,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_reasoning__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.1469793831544242,0.849236700593447,1.5816856806208404,0.37109375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_reasoning__gpt41_mini,ideologie,droite,10,D_reel / plancher,1.8495096345182251,1.3637173389571906,2.3123831706800515,0.015625,rapport superieur a 1,0.46875,oui
+F2 H2 amplification,text_persona_reasoning__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,3.021518648432568,1.9200302994688225,4.616128692893374,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,text_persona_reasoning__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.1793007722833397,0.6272747484463982,2.392818490033615,0.611328125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona_reasoning__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.7345471716261779,0.6314748607311479,0.9156091115675427,0.03515625,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_reasoning__gpt41_mini,parti,gauche,10,D_reel / plancher,0.7217188799403711,0.3953126968600887,1.0362914086281034,0.14453125,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona_reasoning__gpt41_mini,parti,droite,10,D_endo / D_reel,0.5694799376400732,0.3412858608153335,0.8579144595281083,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_reasoning__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.1359140780327066,0.8717393774649266,1.5167416294034275,0.341796875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_reasoning__gpt41_mini,parti,droite,10,D_reel / plancher,1.8506104672856452,1.3595483479759927,2.301106256879674,0.015625,rapport superieur a 1,0.46875,oui
+F2 H2 amplification,text_persona_reasoning__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,3.3773735965918017,2.0769196531652847,5.226381676396432,0.0078125,rapport superieur a 1,0.125,oui
+F1 H1 endo contre reel,text_persona_repeating_questions__gpt41_mini,ideologie,gauche,10,D_endo / D_reel,1.1988023290625553,0.6336685050067097,2.5693221290730084,0.580078125,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona_repeating_questions__gpt41_mini,ideologie,gauche,10,d_gauche / d_droite,0.7025279410302337,0.6000081125225527,0.8840229028493622,0.029296875,rapport inferieur a 1,0.908203125,oui
+F4 H4 plancher,text_persona_repeating_questions__gpt41_mini,ideologie,gauche,10,D_reel / plancher,0.7322731715668506,0.3984268068302603,1.0641230902956356,0.171875,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona_repeating_questions__gpt41_mini,ideologie,droite,10,D_endo / D_reel,0.5713804230653057,0.38313846786751077,0.8449250704541469,0.033203125,rapport inferieur a 1,0.962890625,oui
+F3 H3 lentille,text_persona_repeating_questions__gpt41_mini,ideologie,droite,10,d_gauche / d_droite,1.1511900629844216,0.8711677418141087,1.4852479582792306,0.294921875,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_repeating_questions__gpt41_mini,ideologie,droite,10,D_reel / plancher,2.0188671231817223,1.4461373138736378,2.5184199133385126,0.01171875,rapport superieur a 1,0.43359375,oui
+F2 H2 amplification,text_persona_repeating_questions__gpt41_mini,ideologie,gauche contre droite,10,ecart modele / ecart humain,3.486991344121764,2.2883799701247627,5.258794549005472,0.005859375,rapport superieur a 1,0.123046875,oui
+F1 H1 endo contre reel,text_persona_repeating_questions__gpt41_mini,parti,gauche,10,D_endo / D_reel,1.1890793093383647,0.635606990109974,2.660115931051621,0.6015625,rapport inferieur a 1,1.0,oui
+F3 H3 lentille,text_persona_repeating_questions__gpt41_mini,parti,gauche,10,d_gauche / d_droite,0.7364682740935627,0.6377401253218156,0.921375018794328,0.037109375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_repeating_questions__gpt41_mini,parti,gauche,10,D_reel / plancher,0.7010823846201069,0.3673906007778042,1.0251610684654604,0.1171875,rapport superieur a 1,1.0,oui
+F1 H1 endo contre reel,text_persona_repeating_questions__gpt41_mini,parti,droite,10,D_endo / D_reel,0.6018680274859094,0.42779714483194164,0.8333106133307201,0.029296875,rapport inferieur a 1,0.9375,oui
+F3 H3 lentille,text_persona_repeating_questions__gpt41_mini,parti,droite,10,d_gauche / d_droite,1.1180310222814809,0.8755265588852148,1.370811200550227,0.3359375,rapport inferieur a 1,1.0,oui
+F4 H4 plancher,text_persona_repeating_questions__gpt41_mini,parti,droite,10,D_reel / plancher,2.038672492539479,1.4683473820124573,2.525704051654945,0.01171875,rapport superieur a 1,0.43359375,oui
+F2 H2 amplification,text_persona_repeating_questions__gpt41_mini,parti,gauche contre droite,10,ecart modele / ecart humain,3.94340460419213,2.5577571196613595,6.045112539217996,0.00390625,rapport superieur a 1,0.0859375,oui

@@ -1,5 +1,8 @@
 # Ce que dit le corpus, avant la seance
 
+> **Erratum du 9 septembre 2026.** Le rang 2 ecrit « notre ablation est sans equivalent » a propos du couple C2 contre C3 : ce couple n'est pas une ablation de l'etiquette, C2 recevant onze attributs demographiques et C3 les 119 reponses de la personne sans demographie (`a45` section 0, `a47` D1).
+> L'ablation propre, a un seul facteur, est le run R3 : `resultats/r3-resultats.md`. La revendication de nouveaute se lit desormais sur R3 et sur lui seul.
+
 Fusion des sept fichiers de `corpus/`, de `FAITS-ETABLIS.md`, de `JOURNAL-2026-09-08.md` et des trois rapports arrives
 pendant la redaction : a25 sur les items sensibles au mode, a26 sur les deux collisions, a27 sur arXiv 2607.25292. Le
 8 septembre 2026. Direction a tester : « Ce que la simulation efface », une IA qui simule une population efface une
