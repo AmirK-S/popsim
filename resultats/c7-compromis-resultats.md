@@ -38,3 +38,57 @@ proprement les deux familles.
 seulement une réponse plausible), plus elle permet de la retrouver dans la foule, que ce
 soit un jumeau de langage ou un simple modèle statistique. Ce n'est pas un défaut propre aux
 jumeaux LLM, c'est le prix de toute méthode qui vise l'individu plutôt que le groupe.
+
+## 4. Robustesse (préenregistré dans `c7-compromis-robustesse-preenregistrement.md`,
+calculé par `analyses/c7_compromis_robustesse.py`, figure `c7-compromis-robustesse.png`)
+
+**Objection reçue** : Platzer & Reutterer (arXiv 2104.00635) et Adams et al. (iScience
+2025) montrent que fidélité et risque peuvent être rendus séparables ; arXiv 2605.06835
+rapporte un découplage direct, le risque qui continue de croître quand la qualité sature.
+Quatre contrôles, plus un 13e point jamais calculé avant ce texte : le retest humain
+(vagues 1-3 attaquant la vague 4) donne une fuite de **81,6 % [79,9 ; 83,2]**, fidélité 1
+par construction.
+
+- **Retrait par famille** : sans les statistiques (n=9, LLM+humain) rho = 0,983
+  [0,967 ; 1,0] ; sans le retest humain (n=12, l'analyse d'origine) rho = 0,958
+  [0,930 ; 0,993] ; **à l'intérieur de la seule famille LLM (n=8, fidélité 0,56–0,71,
+  plage étroite)** rho = **0,976 [0,952 ; 1,0]** — tient, contrairement à ce qu'une plage
+  étroite laissait craindre. Seul le retrait total des LLM (n=5, 4 statistiques + humain)
+  fait chuter rho à 0,50 [0,10 ; 0,90], non significatif : les 4 statistiques, tassées près
+  du hasard, n'ont pas d'ordre interne fiable entre elles à si petit effectif.
+- **Jackknife** : rho varie seulement de 0,958 à 0,986 selon le point retiré un par un ;
+  sans `B0 tirage` (l'artefact d'extrapolation signalé en section 2), rho = 0,972. Aucun
+  point isolé ne porte la relation.
+- **Forme** : 3 des 4 statistiques (`B0`, `B2`, `PMM`) ont un IC de fuite qui contient le
+  hasard (0,049 %) ; `B1 argmax` est légèrement au-dessus. Un modèle à deux régimes
+  (plancher puis droite) réduit la somme des carrés de 98 % (0,318 → 0,006) par rapport à
+  une droite unique : la relation est plate près du hasard, puis monte. **Et surtout, en
+  haut de plage, pas de second palier** : le retest humain (fidélité ≈ 1) fuit 3,95 fois
+  plus que le meilleur jumeau (81,6 % contre 20,7 %) — la qualité ne sature pas avant que
+  le risque s'arrête, ils montent ensemble jusqu'au bout. Sur Stanford
+  (`c7-stanford-resultats.md`, lecture seule, pas de fidélité chute-sous-permutation
+  disponible pour ce jeu) : composite 65,7 % > entretien 44,7 % > enquête 20,6 % >
+  démographique 2,3 %, l'ordre attendu, et le retest humain (96,8 %) dépasse là aussi
+  largement la meilleure condition riche — même absence de saturation en haut.
+- **Verdict robustesse** : contre les trois références, **le couplage tient sur nos
+  données** : il survit au retrait de chaque famille prise séparément (sauf en écartant les
+  LLM, où il ne reste plus assez de variance utile), à aucun point isolé, et surtout il ne
+  sature pas en haut de plage — l'inverse du découplage rapporté par arXiv 2605.06835.
+
+## 5. Bits d'identité par unité de fidélité (préenregistré dans
+`c7-compromis-bits-preenregistrement.md`, calculé par `analyses/c7_compromis_bits.py`,
+bits repris tels quels de `c7-bits.csv`)
+
+**Hypothèse testée, et réfutée** : le coût en bits par point d'exactitude varie fortement
+entre familles (0,29–0,47 LLM contre 0,068 pour B2, déjà publié) ; celui par unité de
+fidélité individuelle devrait, lui, être à peu près constant. **CV(bits/fidélité) = 0,507
+(n=12), CV(bits/point d'exactitude) = 0,357 (n=9 définis)** : le second ratio est **plus**
+dispersé, pas moins — facteur 0,70, alors que 2,0 était prédit dans l'autre sens. La
+régression bits ~ fidélité passe raisonnablement près de l'origine (ordonnée −0,31 sur les
+12 points, −1,13 avec le retest humain ajouté ; `B0 tirage` lui-même est quasi à l'origine,
+bits ≈ −0,002 pour fidélité ≈ −0,001), donc « pas de fidélité, pas de fuite » tient. **Mais
+la loi d'un coût constant par unité de fidélité ne tient pas** : chez les LLM ce ratio va de
+1,47 (Demographics Only) à 5,02 (JSON Persona GPT4.1), largement au-dessus des 0,68–1,53
+des 3 statistiques définies — la corrélation de rang (section 1) survit à tous les
+contrôles, mais un surcoût en bits propre aux LLM, déjà documenté par `c7-bits-resultats.md`,
+reste réel et n'est pas expliqué par la seule fidélité individuelle.
