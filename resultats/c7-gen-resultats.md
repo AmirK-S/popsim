@@ -15,8 +15,12 @@ imprime.
 | deepseek-v4 | R2 | 0 | 0,50 % | [0 ; 1,50] | 2,15 % | 44,9 % |
 | qwen37-flash | R1 | 1 | 0,00 % | [0 ; 0] | 0,00 % | 42,0 % |
 Comparaison : `Demographics Only` de l'autre equipe = 2,13 %, `JSON Persona - GPT4.1` =
-**20,68 %** (`resultats/c7-resultats.md`). Meilleur score ici = deepseek-v4/R1 = 0,83 %,
-soit 25x moins que leur Demographics Only.
+**20,68 %** (`resultats/c7-resultats.md`). Meilleur score ici = deepseek-v4/R1 = 0,83 %
+**[0 ; 2,15]** : l'intervalle de confiance **contient** le 2,13 % de leur Demographics
+Only. Le facteur 25 ne peut donc pas etre annonce comme etabli sur ce point : rapporter un
+rapport de points estimes (0,83 % vs 2,13 %) sans montrer que l'IC recouvre la reference
+donnerait une fausse impression de precision. L'ecart entre les deux points reste
+compatible avec zero.
 ## 2. Verdict sur les trois predictions
 1. **Rejetee.** R1 >= 10 % sur >= 2 modeles sur 3 : aucun modele n'atteint 1 %.
 2. **Confirmee.** R2 < 3 % partout (0,00-0,50 %).
@@ -43,3 +47,6 @@ a LEUR recette (finetuning ou formatage propres), pas au simple fait de donner u
 a un LLM. Le risque de vie privee documente par C7 ne se generalise donc pas
 automatiquement a n'importe quel pipeline de jumeau ; il reste specifique a des pipelines
 proches de celui de l'article original.
+
+*Corrige apres relecture hostile du 12/09 : le facteur « 25x sous leur Demographics
+Only » est retire, l'IC [0 ; 2,15] du meilleur score ici contenant leur 2,13 %.*

@@ -45,7 +45,10 @@ agrégats ou du bruit calibré ; (b) casser l'alignement personne-jumeau dans le
 métadonnées de vague (`StartDate`/`EndDate`/`Duration`/`RecordedDate`, relevé dans le
 contre-examen) ; (d) documenter un test de liaison minimal avant toute mise en ligne de jumeaux ;
 (e) mélange intra-segment (permuter les réponses corrélées entre personnes du même groupe
-démographique), qui ramène le top-1 de 20,68 % à 0,13 % pour 1,47 point d'utilité perdue.
+démographique), qui ramène le top-1 de 20,68 % à 0,13 % au prix de 4,4 points sur les
+corrélations entre items (distribution et écarts entre segments exactement préservés) ;
+sur ce même indicateur, l'écart aux réponses humaines s'aggrave de 68 % (5,78 → 9,71),
+`resultats/c7-defense-resultats.md`.
 
 **8. Cas Park et al. (archive des 1 052 agents génératifs).** Leur matériel supplémentaire
 (section « Participant Consent ») avertissait déjà les participants d'une possibilité que
@@ -74,3 +77,14 @@ antériorité) ; `resultats/c7-mecanisme-resultats.md` (signal localisé au bloc
 `resultats/c7-stanford-provenance-resultats.md` (44,7 % / 65,7 %, contamination exclue) ;
 `resultats/c7-monde-ouvert-resultats.md` (20,4 % Stanford / 3,0 % Twin en monde ouvert) ;
 `resultats/c7-defense-resultats.md` (mélange intra-segment).
+
+## Manque à déclarer : aucune détermination IRB / exemption
+
+Cette section ne comporte, à ce jour, **aucune détermination d'exemption ou d'approbation
+éthique pour ce travail lui-même** — seul l'IRB *de Park et al.* (point 8) est mentionné,
+pour leur propre collecte, pas pour la présente ré-identification. PoPETs attend une phrase
+explicite, avec institution nommée, même pour conclure à une recherche hors du champ
+« sujets humains ». Tant que cette détermination n'est pas obtenue et citée ici, c'est un
+manque réel à signaler dans le dossier de soumission, distinct de la vérification de licence
+menée dans `resultats/licences-sources-verification-2026-09-11.md` (qui porte sur les
+conditions d'usage des données, pas sur l'approbation éthique de cette étude).

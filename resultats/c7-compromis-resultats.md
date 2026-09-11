@@ -81,14 +81,31 @@ bits repris tels quels de `c7-bits.csv`)
 
 **Hypothèse testée, et réfutée** : le coût en bits par point d'exactitude varie fortement
 entre familles (0,29–0,47 LLM contre 0,068 pour B2, déjà publié) ; celui par unité de
-fidélité individuelle devrait, lui, être à peu près constant. **CV(bits/fidélité) = 0,507
-(n=12), CV(bits/point d'exactitude) = 0,357 (n=9 définis)** : le second ratio est **plus**
-dispersé, pas moins — facteur 0,70, alors que 2,0 était prédit dans l'autre sens. La
-régression bits ~ fidélité passe raisonnablement près de l'origine (ordonnée −0,31 sur les
+fidélité individuelle devrait, lui, être à peu près constant.
+
+**Comparaison corrigée, à échantillon égal.** La comparaison publiée auparavant —
+CV(bits/fidélité) = 0,507 sur 12 points contre CV(bits/point d'exactitude) = 0,357 sur les
+9 points où ce second ratio est défini — opposait deux dispersions calculées sur deux
+échantillons différents, ce qui n'est pas valide. En restreignant CV(bits/fidélité) aux
+9 points où les deux ratios sont définis (mêmes 9 prédicteurs, `analyses/c7_compromis_bits.py`,
+écart-type d'échantillon comme dans le script) : **CV(bits/fidélité) = 0,436** contre
+**CV(bits/point d'exactitude) = 0,357**. La conclusion (le ratio bits/fidélité reste plus
+dispersé) survit, mais l'écart fond : facteur 0,82 (contre 0,70 annoncé sur les échantillons
+disparates), soit un ratio 22 % plus dispersé et non 42 %.
+
+La régression bits ~ fidélité passe raisonnablement près de l'origine (ordonnée −0,31 sur les
 12 points, −1,13 avec le retest humain ajouté ; `B0 tirage` lui-même est quasi à l'origine,
 bits ≈ −0,002 pour fidélité ≈ −0,001), donc « pas de fidélité, pas de fuite » tient. **Mais
-la loi d'un coût constant par unité de fidélité ne tient pas** : chez les LLM ce ratio va de
-1,47 (Demographics Only) à 5,02 (JSON Persona GPT4.1), largement au-dessus des 0,68–1,53
-des 3 statistiques définies — la corrélation de rang (section 1) survit à tous les
-contrôles, mais un surcoût en bits propre aux LLM, déjà documenté par `c7-bits-resultats.md`,
-reste réel et n'est pas expliqué par la seule fidélité individuelle.
+la loi d'un coût constant par unité de fidélité ne tient pas** : ce ratio va de 1,47
+(Demographics Only) à 5,02 (JSON Persona GPT4.1) chez les configurations issues de LLM,
+contre 0,68–1,53 pour les 3 statistiques définies. La corrélation de rang (section 1)
+survit à tous les contrôles, et un surcoût en bits par unité de fidélité, déjà documenté par
+`c7-bits-resultats.md` en points d'exactitude, reste réel sur cet échantillon — mais avec
+n=7 configurations LLM contre 3 statistiques définies, et sans mécanisme identifié, il ne
+doit **pas être attribué aux « LLM » comme famille** : il reste, en l'état, **un surcoût non
+expliqué**, à ne pas confondre avec une propriété démontrée de cette famille de modèles.
+
+*Corrigé après relecture hostile du 12/09 : la comparaison 0,507 (n=12) vs 0,357 (n=9)
+comparait deux échantillons différents ; recalculée sur les mêmes 9 points, elle donne
+0,436 contre 0,357 (facteur 0,82, pas 0,70) — la conclusion tient, l'écart est plus faible
+qu'annoncé, et le surcoût n'est plus attribué aux « LLM » mais décrit comme non expliqué.*
