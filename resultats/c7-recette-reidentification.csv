@@ -1,0 +1,4 @@
+configuration,n_attaques,n_pool,taux_parse_moyen,top1,top1_bas,top1_haut,top10,top10_bas,top10_haut,rang_median,top1_hasard
+"appel unique (60 items, 1 appel/personne)",40,2058,1.0,0.0,0.0,0.0,0.075,0.0,0.175,852.85,0.00048590864917395527
+"appel par item (1 appel/question, comme Twin)",10,2058,0.9233333333333333,0.0,0.0,0.0,0.0,0.0,0.0,834.825,0.00048590864917395527
+"Demographics Only (repere, n=40)",40,2058,1.0,0.058750000000000004,0.0,0.13374999999999998,0.14625,0.05,0.25875000000000004,243.425,0.00048590864917395527
