@@ -107,16 +107,31 @@ de jumeaux. C'est le trou que nous comblons.
 
 ## 5. Notre position
 
-Trois éléments résistent à « c'est connu depuis 2022 ». **L'entrée de l'attaque** ne contient
-aucune donnée réelle de la cible, seulement une sortie de modèle conditionnée sur un persona ;
-l'attaquant compare cette sortie à des réponses qu'il détient déjà par ailleurs (modèle de menace,
-`c7-contre-examen-2026-09-11.md` §4). **Des baselines internes** de même exactitude échouent où le
-jumeau réussit : Demographics Only (2,13 %), PMM k=10 (0,23 %), B2 argmax (0,07 %) restent sous
-3 % quand JSON Persona GPT4.1 atteint 20,7 % (retest humain 81,6 %) ; sur l'archive Stanford,
-65,7 % contre 2,26 % démographique et 0,095 % au hasard. **Le canal de fuite est localisé par
-ablation**, non supposé : permuter les 40 réponses d'achat fait chuter le top-1 de 33,1 % à
-0,046 %, sous le hasard (`c7-mecanisme-resultats.md`) ; l'audit de provenance exclut une fuite de
-la vague cible (0 colonne, symétrie 37,7 %/37,9 %).
+La thèse n'est plus « les jumeaux LLM fuient, contrairement aux prédicteurs statistiques de même
+exactitude ». Sur 12 prédicteurs confondus — 8 jumeaux LLM et 4 repères statistiques
+(Demographics Only, B1, B2, PMM k=10) —, la correspondance individuelle à la bonne personne et le
+taux de ré-identification suivent le même ordre presque parfaitement : Spearman = 0,958, IC 95 %
+[0,930 ; 0,993] (`c7-compromis-resultats.md`). Le contraste à exactitude égale reste vrai (20,7 %
+contre 0,23 % pour PMM, `c7-contre-examen-2026-09-11.md` §1) mais l'exactitude brute n'est qu'un
+proxy bruité (r = 0,72) de cet axe ; la fidélité individuelle en est le bon prédicteur. **Aucun
+jumeau individuellement fidèle n'est non reliable à sa personne : fidélité et identifiabilité ne
+font qu'un, et nous le quantifions.**
+
+Trois apports en découlent. **Premièrement**, la mesure de cet axe unique, avec son plafond humain
+(retest à 81,6 % sur Twin, 96,8 % sur Stanford) et sa version réaliste en monde ouvert : à un taux
+de fausses accusations tenable de 1 %, le meilleur jumeau retrouve la bonne personne 3,04 % du
+temps sur Twin et 20,39 % sur Stanford, contre environ 0 % pour les mêmes repères statistiques,
+loin sous le plafond humain (54,5 % / 90,7 %) mais loin d'être nul (`c7-monde-ouvert-resultats.md`).
+**Deuxièmement**, la démonstration que des pipelines réels se placent très différemment sur cet
+axe selon leur soin de fabrication : nos propres jumeaux, produits en un seul appel à des modèles
+bon marché à partir d'un profil brut, n'identifient presque personne (0 % à 0,83 %, mémorisation
+écartée par un contrôle verbatim, `c7-gen-resultats.md`), quand des agents Stanford construits à
+partir d'un entretien seul, sans aucune réponse d'enquête, en identifient 44,7 % sur 1 052,
+contamination par recopie exclue par un test de symétrie (`c7-stanford-provenance-resultats.md`).
+Le risque documenté n'est donc pas une propriété générique de « donner un profil à un LLM » : il
+dépend de la recette. **Troisièmement**, une défense (D4, section 6) qui casse spécifiquement la
+fidélité individuelle — donc, sur cet axe, l'identifiabilité — tout en préservant exactement les
+marges de groupe publiées.
 
 ## 6. Défenses
 
@@ -133,6 +148,7 @@ humains sur ce même indicateur (5,8 points).
 
 | Objection | Parade | Expérience à l'appui |
 |---|---|---|
+| « Tautologie : bien sûr qu'un modèle fidèle à l'individu identifie. » | Rien ne prédisait ni la forme ni la force de cette relation avant de la mesurer sur 12 méthodes hétérogènes ; à exactitude marginale égale, deux prédicteurs peuvent fuir à deux ordres de grandeur d'écart (20,7 % contre 0,23 %) ; la relation tient à travers des familles de méthodes qui n'ont rien en commun (jumeaux LLM, imputation par plus proche voisin, régression, agents construits sur entretien seul). | Spearman 0,958 [0,930 ; 0,993] sur 12 prédicteurs (`c7-compromis-resultats.md`) ; réplication inter-recettes (`c7-gen-resultats.md`, `c7-stanford-provenance-resultats.md`). |
 | « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
 | « Le persona contient déjà les réponses de la vague cible : fuite triviale. » | Audit de provenance : 0 colonne et 0 QID de vague 4 dans le contexte ; symétrie 37,7 % vs 37,9 % ; canal de randomisation écarté. | `c7-contre-examen-2026-09-11.md` §2 ; ablation H3 (`c7-mecanisme-resultats.md`). |
 | « Ce n'est pas une vraie ré-identification : il faut déjà tenir les réponses réelles de la cible. » | Assumé explicitement : c'est un résultat de linkability (au sens CAP/TCAP et RGPD/G29), pas une identification à partir d'informations publiques ; scénario de menace = détenteur de panel publiant des jumeaux sans clé. | Modèle de menace, `c7-contre-examen-2026-09-11.md` §4 ; brouillon de divulgation responsable. |
