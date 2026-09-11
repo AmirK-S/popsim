@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "method": "Imports statiques des fichiers analyses/*.py, puis versions installees dans .venv le 2026-09-11. Cela decrit l'environnement observe et non un verrou reproductible.",
+  "python": "3.13.14",
+  "direct_imports": [
+    {"distribution": "numpy", "import": "numpy", "version": "2.5.2"},
+    {"distribution": "pandas", "import": "pandas", "version": "3.0.5"},
+    {"distribution": "scipy", "import": "scipy", "version": "1.18.1"},
+    {"distribution": "matplotlib", "import": "matplotlib", "version": "3.11.1"},
+    {"distribution": "scikit-learn", "import": "sklearn", "version": "1.9.0"},
+    {"distribution": "pyreadstat", "import": "pyreadstat", "version": "1.3.6"},
+    {"distribution": "openpyxl", "import": "openpyxl", "version": "3.1.5"},
+    {"distribution": "mlx", "import": "mlx", "version": "0.32.2", "scope": "local MLX engine"},
+    {"distribution": "mlx-lm", "import": "mlx_lm", "version": "0.31.3", "scope": "local MLX engine"},
+    {"distribution": "threadpoolctl", "import": "threadpoolctl", "version": "3.6.0"},
+    {"distribution": "tokenizers", "import": "tokenizers", "version": "0.23.1", "scope": "R7 checkpoint validation"}
+  ],
+  "observed_transitive_dependencies": [
+    {"distribution": "contourpy", "version": "1.3.3", "required_by": ["matplotlib"]},
+    {"distribution": "cycler", "version": "0.12.1", "required_by": ["matplotlib"]},
+    {"distribution": "fonttools", "version": "4.64.0", "required_by": ["matplotlib"]},
+    {"distribution": "joblib", "version": "1.6.0", "required_by": ["scikit-learn"]},
+    {"distribution": "kiwisolver", "version": "1.5.1", "required_by": ["matplotlib"]},
+    {"distribution": "narwhals", "version": "2.25.0", "required_by": ["pyreadstat", "scikit-learn"]},
+    {"distribution": "packaging", "version": "26.3", "required_by": ["matplotlib"]},
+    {"distribution": "pillow", "version": "12.3.0", "required_by": ["matplotlib"]},
+    {"distribution": "pyparsing", "version": "3.3.2", "required_by": ["matplotlib"]},
+    {"distribution": "python-dateutil", "version": "2.9.0.post0", "required_by": ["matplotlib", "pandas"]},
+    {"distribution": "sentencepiece", "version": "0.2.2", "required_by": ["mlx-lm"]},
+    {"distribution": "six", "version": "1.17.0", "required_by": ["python-dateutil"]},
+    {"distribution": "protobuf", "version": "7.36.1", "required_by": ["mlx-lm"]},
+    {"distribution": "PyYAML", "version": "6.0.3", "required_by": ["mlx-lm"]},
+    {"distribution": "Jinja2", "version": "3.1.6", "required_by": ["mlx-lm"]},
+    {"distribution": "et_xmlfile", "version": "2.0.0", "required_by": ["openpyxl"]},
+    {"distribution": "mlx-metal", "version": "0.32.2", "required_by": ["mlx on Darwin"]},
+    {"distribution": "transformers", "version": "5.16.1", "required_by": ["mlx-lm"]}
+  ],
+  "not_a_fresh_environment_lock": true,
+  "limitations": [
+    "Aucun pyproject.toml, requirements.txt, lockfile, fichier Conda ou Dockerfile n'etait present.",
+    "Les dependances transitives sont seulement celles observees et attribuables localement; elles ne constituent pas la cloture complete de pip.",
+    "llama.cpp et les tokenizers externes ne sont pas versionnes par ce projet."
+  ]
+}

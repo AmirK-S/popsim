@@ -32,6 +32,11 @@ Seuil preenregistre : **au moins 38 distributions identiques sur 40** entre `com
 
 Entree  : data/modeles/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf, non versionne.
           data/traces/r1-q4.jsonl, lue et jamais modifiee.
+ATTENTION : `resultats/r6-voie-chat.md` porte, apres la section « Questions ouvertes pour
+Simon », une section « Essai a blanc sur modeles gratuits » ajoutee a la main le 9 septembre.
+Relancer ce script regenere le rapport et l'effacerait ; la recopier avant, ou la reecrire
+apres.
+
 Sortie  : data/traces/r6-verif-cellules.txt, la liste des 40 cellules.
           data/traces/r6-verif/r6-voie-chat-compl.jsonl, la voie /completion rejouee.
           data/traces/r6-verif/r6-Qwen3-4B-Instruct-2507-q4-voiechat.jsonl, la voie chat,

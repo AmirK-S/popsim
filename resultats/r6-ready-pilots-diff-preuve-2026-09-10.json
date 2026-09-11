@@ -1,0 +1,77 @@
+{
+  "kind": "R6 READY_PILOTS structural diff proof",
+  "parent": {
+    "path": "data/traces/reprise/GO-R6-campagne-PREPARE-20260910.json",
+    "sha256": "7afea7a98c8c5e51e202f4d1c293c3f23d8a6588e7b09948389d95a745d1fce6",
+    "immutable_verified": true,
+    "state": "PREPARE_BLOCKED",
+    "executable": false
+  },
+  "candidate": {
+    "path": "data/traces/reprise/R6-pilotes-READY-manifeste-20260910.json",
+    "sha256": "dc7482c982df7fc80f1fd8298d1421cbe75ac0053dd5a211c2cf43c0b61028fc",
+    "state": "READY",
+    "role": "READY_PILOTS",
+    "executable": true
+  },
+  "changed_paths": [
+    {
+      "path": "executable",
+      "before": false,
+      "after": true
+    },
+    {
+      "path": "osf_readiness_registration",
+      "before": "<absent>",
+      "after": {
+        "url": "https://osf.io/6yj8x/overview",
+        "date_registered": "2026-09-10T23:17:00+02:00",
+        "status": "Pending approval"
+      }
+    },
+    {
+      "path": "pilot_go_decision",
+      "before": "<absent>",
+      "after": {
+        "decision": "GO_PILOTS",
+        "manifest_role": "READY_PILOTS",
+        "scope": "seven remaining compatible model/provider pilots only",
+        "aggregate_pilot_cap_usd": "0.18",
+        "derivation": "5 x 0.02 USD + 2 x 0.04 USD",
+        "per_model_one_shot_go_still_required": true,
+        "no_model_go_created_by_this_decision": true,
+        "parent_manifest": "data/traces/reprise/GO-R6-campagne-PREPARE-20260910.json",
+        "parent_manifest_sha256": "7afea7a98c8c5e51e202f4d1c293c3f23d8a6588e7b09948389d95a745d1fce6"
+      }
+    },
+    {
+      "path": "state",
+      "before": "PREPARE_BLOCKED",
+      "after": "READY"
+    }
+  ],
+  "allowed_top_level_paths": [
+    "executable",
+    "osf_readiness_registration",
+    "pilot_go_decision",
+    "state"
+  ],
+  "scientific_payload_equal": {
+    "panel": true,
+    "cells": true,
+    "fixed_request": true,
+    "withdrawal_rules": true,
+    "hypotheses_or_estimands_modified": false
+  },
+  "pilot_caps": {
+    "model_count": 7,
+    "sum_usd": "0.18",
+    "limit_usd": "0.18",
+    "within_limit": true
+  },
+  "execution_state": {
+    "per_model_go_files_created": 0,
+    "model_calls": 0,
+    "network_calls": 0
+  }
+}

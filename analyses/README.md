@@ -56,3 +56,13 @@ preenregistre : 38 distributions identiques sur 40. Resultat du 9 septembre 2026
 serveur HTTP local : les deux formats d'invite, la lecture de R1, le plafond, le fichier
 d'arret, la reprise, le feu vert, le raisonnement et le resume d'essai. Aucun reseau,
 aucune cle lue, aucun octet ecrit dans `data/`.
+
+Incidents de transport et raisonnement, lecons de l'essai a blanc du 9 septembre 2026
+(`resultats/r6-voie-chat.md`, section « Essai a blanc sur modeles gratuits »). Un 429 ou un
+5xx n'est pas un rejet : rien n'a ete lu. `r6_oracle_distant.py` rejoue la cellule trois
+fois, 5 puis 20 puis 60 s, sur ces seuls codes, compte les incidents dans `erreurs_reseau`
+et jamais dans `taux_rejet`, et met la cellule sans reponse dans
+`r6-<cle>-non-jouees.jsonl`, d'ou la reprise sur index la rejouera. Le raisonnement se
+desactive explicitement, `--raisonnement off` par defaut : ne rien envoyer laisse le modele
+raisonner, et le resume d'essai porte la ligne « raisonnement desactive effectif », lue sur
+les jetons factures et jamais supposee.

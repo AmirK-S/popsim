@@ -1,0 +1,8 @@
+condition,cellules,cellules_attendues,rejets,taux_rejet,recopies_k_ge_3,taux_recopie_k_ge_3,recopies_k_2_informatif,items_comparables_camps,part_constante_camps,statut,detail,portee
+olmo3base,894.0,894.0,30.0,0.03355704697986577,0.0,0.0,0.0,282.0,0.23404255319148937,PASSE,controles disponibles passes,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+olmo3sft,894.0,894.0,57.0,0.06375838926174497,0.0,0.0,0.0,270.0,0.26666666666666666,PASSE,controles disponibles passes,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+olmo3dpo,894.0,894.0,61.0,0.06823266219239374,0.0,0.0,0.0,270.0,0.13333333333333333,PASSE,controles disponibles passes,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+olmo3rlvr,894.0,894.0,68.0,0.07606263982102908,0.0,0.0,0.0,272.0,0.21323529411764705,PASSE,controles disponibles passes,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+referent humain,,,,,,,,,,PASSE,SHA-256 R1 conforme,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+plancher humain,,,,,,,,,,PASSE,facteur w2/w1=1.008930,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+F contre taux de rejet,,,,,,,,,0.6000000000000001,PASSE,rho=0.600000,DESCRIPTIVE checkpoints publies; aucune causalite d'etape

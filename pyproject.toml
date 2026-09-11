@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "popsim"
+version = "0.1.0"
+description = "Code d'analyse du projet popsim : simulation d'individus par modele de langage, diagnostics de correspondance et de fidelite."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Amir Kellou Sidhoum" }]
+keywords = ["simulation", "modeles-de-langage", "sciences-sociales", "reproductibilite"]
+
+# Bornes basses fixees sur les versions effectivement installees dans .venv le 2026-09-11.
+# Aucun paquet n'est declare ici sans import direct constate par analyse statique des
+# fichiers .py de analyses/ et protocoles/, a une exception documentee : pyarrow, qui n'est
+# jamais importe mais qui est le moteur requis par les appels pandas.read_parquet /
+# DataFrame.to_parquet du code.
+dependencies = [
+  "numpy>=2.5.2",
+  "pandas>=3.0.5",
+  "scipy>=1.18.1",
+  "matplotlib>=3.11.1",
+  "scikit-learn>=1.9.0",
+  "pyreadstat>=1.3.6",
+  "openpyxl>=3.1.5",
+  "pyarrow>=25.0.1",
+  "threadpoolctl>=3.6.0",
+]
+
+[project.optional-dependencies]
+# Inference locale MLX (banc d'inference, agents locaux). Apple Silicon uniquement :
+# mlx et mlx-metal n'ont de roues que pour macOS arm64. Le coeur analytique ci-dessus
+# n'en depend pas et doit rester executable sans cet extra.
+modeles-locaux = [
+  "mlx>=0.32.2; sys_platform == 'darwin' and platform_machine == 'arm64'",
+  "mlx-lm>=0.31.3; sys_platform == 'darwin' and platform_machine == 'arm64'",
+  "tokenizers>=0.23.1",
+]
+
+[tool.setuptools]
+# Le depot est un ensemble de scripts d'analyse, pas une bibliotheque importable :
+# aucun paquet n'est installe. La declaration sert a fixer l'environnement.
+packages = []

@@ -1,0 +1,5 @@
+hypothese,critere,statut,satisfaite,portee
+H1,au moins un contraste F1 significatif,EVALUE,False,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+H2,Base-Final > 0 et significatif dans F2,EVALUE,False,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+H3,Base-SFT > 0 et plus grand contraste F1 en valeur absolue,EVALUE,False,DESCRIPTIVE checkpoints publies; aucune causalite d'etape
+H4,"SFT-DPO < 0 (F1) et SFT-Final < 0 (F2), deux p Holm < 0,05",EVALUE,False,DESCRIPTIVE checkpoints publies; aucune causalite d'etape

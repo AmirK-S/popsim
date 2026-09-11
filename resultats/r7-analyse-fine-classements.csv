@@ -1,0 +1,35 @@
+identite,mesure,a,b,valeur,n
+adversaire,spearman_items,Base,SFT,0.46557234177616286,76
+adversaire,spearman_items,Base,DPO,0.35982353040874765,76
+adversaire,spearman_items,Base,Final,0.38332872898923637,76
+adversaire,spearman_items,SFT,DPO,0.7238991690255908,76
+adversaire,spearman_items,SFT,Final,0.8148239906322775,76
+adversaire,spearman_items,DPO,Final,0.7287274478202924,76
+adversaire,minimum,Base,,0.5263157894736842,40
+adversaire,minimum,SFT,,0.17105263157894737,13
+adversaire,minimum,Ex æquo,,0.13157894736842105,10
+adversaire,minimum,DPO,,0.10526315789473684,8
+adversaire,minimum,Final,,0.06578947368421052,5
+adversaire,maximum,Base,,0.2894736842105263,22
+adversaire,maximum,SFT,,0.2631578947368421,20
+adversaire,maximum,Ex æquo,,0.21052631578947367,16
+adversaire,maximum,Final,,0.13157894736842105,10
+adversaire,maximum,DPO,,0.10526315789473684,8
+adversaire,inversion_adjacent,au_moins_une,,0.7105263157894737,54
+journaliste,spearman_items,Base,SFT,0.6529268123930917,72
+journaliste,spearman_items,Base,DPO,0.3100737899661947,72
+journaliste,spearman_items,Base,Final,0.2540814138005914,72
+journaliste,spearman_items,SFT,DPO,0.6302273754816349,72
+journaliste,spearman_items,SFT,Final,0.5295589373783594,72
+journaliste,spearman_items,DPO,Final,0.7372493385856621,72
+journaliste,minimum,Base,,0.4583333333333333,33
+journaliste,minimum,Ex æquo,,0.18055555555555555,13
+journaliste,minimum,SFT,,0.1527777777777778,11
+journaliste,minimum,DPO,,0.1111111111111111,8
+journaliste,minimum,Final,,0.09722222222222222,7
+journaliste,maximum,DPO,,0.3472222222222222,25
+journaliste,maximum,Base,,0.2916666666666667,21
+journaliste,maximum,Final,,0.16666666666666666,12
+journaliste,maximum,Ex æquo,,0.16666666666666666,12
+journaliste,maximum,SFT,,0.027777777777777776,2
+journaliste,inversion_adjacent,au_moins_une,,0.6805555555555556,49

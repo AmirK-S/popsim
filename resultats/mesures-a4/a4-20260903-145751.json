@@ -7,7 +7,7 @@
   "refroidissement": "passif, sans ventilateur"
  },
  "configuration": {
-  "modele": "/Users/amirkellousidhoum/Desktop/Code/Projets/popsim/data/modeles/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+  "modele": "~/Desktop/Code/Projets/popsim/data/modeles/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
   "parallele": 8,
   "contexte_par_slot": 16384,
   "cache_kv": "q8_0",

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "generated_from": [
+    "analyses/r1_oracle_camps.py",
+    "analyses/r4_oracle_socle.py",
+    "analyses/r7_checkpoints.py",
+    "analyses/r7_convertir_finale.py",
+    "resultats/a3-inference-locale.md",
+    "resultats/verif-fournisseurs-2026-09-09.md"
+  ],
+  "scope": "Registre declaratif de references trouvees localement. Un champ UNKNOWN_LOCAL n'est pas une valeur a deviner ni une preuve de licence.",
+  "models": [
+    {
+      "id": "qwen3-4b-instruct-2507-q4-k-m",
+      "upstream": "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF",
+      "artifact": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "license": "Apache-2.0",
+      "sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+      "bytes": 2497281120,
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; fetch from upstream and verify the recorded artifact hash."
+    },
+    {
+      "id": "qwen3-4b-base-q4-k-m",
+      "upstream": "https://huggingface.co/mradermacher/Qwen3-4B-Base-GGUF",
+      "artifact": "Qwen3-4B-Base.Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "license": "Apache-2.0",
+      "sha256": "a7eb1d92eaf34e116f8b522aeeaf4072e66d69b5b10676e0cb7cd9e11889bed6",
+      "bytes": 2497280736,
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; third-party conversion fidelity is not established by this hash."
+    },
+    {
+      "id": "qwen3-4b-q4-k-m",
+      "upstream": "https://huggingface.co/Qwen/Qwen3-4B-GGUF",
+      "artifact": "Qwen3-4B-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "license": "Apache-2.0",
+      "sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5",
+      "bytes": 2497280256,
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; fetch from upstream and verify the recorded artifact hash."
+    },
+    {
+      "id": "qwen3-30b-a3b-instruct-2507-q4-k-m",
+      "upstream": "UNKNOWN_LOCAL",
+      "artifact": "Qwen3-30B-A3B-Instruct-2507-Q4_K_M.gguf",
+      "quantization": "Q4_K_M",
+      "license": "Apache-2.0",
+      "sha256": "UNKNOWN_LOCAL",
+      "bytes": "UNKNOWN_LOCAL",
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; record upstream revision and artifact SHA-256 before a reproducible release."
+    },
+    {
+      "id": "gpt-oss-20b-mxfp4",
+      "upstream": "UNKNOWN_LOCAL",
+      "artifact": "gpt-oss-20b-MXFP4.gguf",
+      "quantization": "MXFP4",
+      "license": "Apache-2.0",
+      "sha256": "UNKNOWN_LOCAL",
+      "bytes": "UNKNOWN_LOCAL",
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; record upstream revision and artifact SHA-256 before a reproducible release."
+    },
+    {
+      "id": "olmo-3-7b-instruct-final-source",
+      "upstream": "https://huggingface.co/api/models/allenai/Olmo-3-7B-Instruct/revision/6e5971d9eba42665f5bd5a0fcf047f299ce1dccc?blobs=true",
+      "artifact": "three BF16 safetensors shards used only for a local R7 conversion",
+      "quantization": "source-BF16",
+      "license": "Apache-2.0",
+      "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+      "converter_commit": "c1d0e7a004015f23bc0233470b747b596f29b264",
+      "shards": [
+        {"name": "model-00001-of-00003.safetensors", "bytes": 4969984976, "sha256": "e7bd4c8ba52177a815aee5929cb458a116a65799688d3e51402500a1cb77023c"},
+        {"name": "model-00002-of-00003.safetensors", "bytes": 4981161496, "sha256": "ea92aa0499a2ca02400e5d87324009e172bdbfb9809f2ac501485d8224382328"},
+        {"name": "model-00003-of-00003.safetensors", "bytes": 4644917240, "sha256": "d50f95e4f2ec5fc4fbce6217cbf54fd1d700928b05e5550c8ee08bf4ba948925"}
+      ],
+      "publication_action": "Do not bundle converted or source weights; require a separate provenance record for every resulting GGUF."
+    },
+    {
+      "id": "olmo-3-r7-base-sft-dpo-gguf",
+      "upstream": "UNKNOWN_LOCAL",
+      "artifact": "Olmo-3-7B-{base,sft,dpo}-Q8_0.gguf",
+      "quantization": "Q8_0",
+      "license": "Apache-2.0",
+      "sha256": "UNKNOWN_LOCAL",
+      "revision": "UNKNOWN_LOCAL",
+      "publication_action": "Do not bundle; record release revision, upstream URL and SHA-256 before a reproducible release."
+    }
+  ],
+  "runtime_external": {
+    "llama_cpp": {"version": "UNKNOWN_LOCAL", "publication_action": "Pin executable version or source commit and command line."},
+    "tokenizer_assets": {"version": "UNKNOWN_LOCAL", "publication_action": "Pin tokenizer repository revision and tokenizer.json SHA-256."}
+  }
+}

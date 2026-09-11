@@ -1,0 +1,17 @@
+modele,cle_modele,identite,quantite,n_items,rho_spearman,p,p_holm
+Olmo-3-1025-7B,olmo3base,journaliste,log amplification de l'ecart entre camps,68,0.4039702245025122,0.0009995002498750624,0.0079960019990005
+Olmo-3-1025-7B,olmo3base,adversaire,log amplification de l'ecart entre camps,54,0.2755308207603563,0.04697651174412794,0.051974012993503245
+Olmo-3-7B-Instruct-DPO,olmo3dpo,journaliste,log amplification de l'ecart entre camps,66,0.2846913435533,0.015992003998001,0.051974012993503245
+Olmo-3-7B-Instruct-DPO,olmo3dpo,adversaire,log amplification de l'ecart entre camps,67,0.27974777054098793,0.02048975512243878,0.051974012993503245
+Olmo-3-7B-Instruct,olmo3rlvr,journaliste,log amplification de l'ecart entre camps,49,0.36976376393863103,0.012993503248375811,0.051974012993503245
+Olmo-3-7B-Instruct,olmo3rlvr,adversaire,log amplification de l'ecart entre camps,69,0.3659532494943972,0.0034982508745627187,0.020989505247376312
+Olmo-3-7B-Instruct-SFT,olmo3sft,journaliste,log amplification de l'ecart entre camps,51,0.4421214607663414,0.0009995002498750624,0.0079960019990005
+Olmo-3-7B-Instruct-SFT,olmo3sft,adversaire,log amplification de l'ecart entre camps,54,0.3435814368028148,0.009995002498750625,0.04997501249375313
+Olmo-3-1025-7B,olmo3base,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6857974067027619,0.0004997501249375312,0.00399800099950025
+Olmo-3-1025-7B,olmo3base,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.6659079307873128,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct-DPO,olmo3dpo,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,78,-0.4814128638808648,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct-DPO,olmo3dpo,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.4467098388133803,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct,olmo3rlvr,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,78,-0.5220459458586728,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct,olmo3rlvr,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.37483263239922704,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct-SFT,olmo3sft,journaliste,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.5038586083501203,0.0004997501249375312,0.00399800099950025
+Olmo-3-7B-Instruct-SFT,olmo3sft,adversaire,deficit d'unanimite 1 - GS decrit / GS reel,79,-0.26935998319031285,0.02048975512243878,0.02048975512243878

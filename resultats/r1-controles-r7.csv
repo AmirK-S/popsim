@@ -1,0 +1,16 @@
+critere,portee,valeur,seuil,verdict,detail
+1. taux de rejet de parse apres relance,olmo3base,0.03355704697986577,"> 0,25 : modele ecarte",passe,30 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,olmo3base,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 0 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,olmo3base,0.23404255319148937,"> 0,90 des items : le modele ignore le camp",passe,66 items identiques sur 282
+1. taux de rejet de parse apres relance,olmo3dpo,0.06823266219239374,"> 0,25 : modele ecarte",passe,61 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,olmo3dpo,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 0 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,olmo3dpo,0.13333333333333333,"> 0,90 des items : le modele ignore le camp",passe,36 items identiques sur 270
+1. taux de rejet de parse apres relance,olmo3rlvr,0.07606263982102908,"> 0,25 : modele ecarte",passe,68 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,olmo3rlvr,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 0 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,olmo3rlvr,0.21323529411764705,"> 0,90 des items : le modele ignore le camp",passe,58 items identiques sur 272
+1. taux de rejet de parse apres relance,olmo3sft,0.06375838926174497,"> 0,25 : modele ecarte",passe,57 rejets sur 894 cellules
+2. recopie du gabarit d'exemple de la relance,olmo3sft,0.0,"> 0,05 des cellules relancees",passe,"0 recopies sur 0 cellules relancees, retirees des mesures"
+3. distribution identique d'un camp a l'autre,olmo3sft,0.26666666666666666,"> 0,90 des items : le modele ignore le camp",passe,72 items identiques sur 270
+"4. plancher humain, facteur w2 sur w1",humains,1.008930474222693,"hors de [0,85 ; 1,15] : echelle non calibree",passe,"sur 147 items apparies, ecart signe"
+5. effectifs des camps contre a30-gss-par-camp.csv,humains,1052.0,effectif maximal par camp egal a 417 / 303 / 332,passe,"obtenus {'gauche': 417, 'centre': 303, 'droite': 332}, attendus {'gauche': 417, 'centre': 303, 'droite': 332}"
+6. estimateur par substitution contre estimateur sans biais (a30),humains,0.0029130124679936837,"informatif : l'ecart relatif moyen doit rester sous 0,01",passe,"ecart relatif moyen sur 447 couples (item, camp)"

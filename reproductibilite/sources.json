@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "generated_from": [
+    "data/PROVENANCE.md",
+    "data/gss-panel/PROVENANCE.md",
+    "data/sce-fed-ny/PROVENANCE.md",
+    "data/ahler-sood-pcomp/PROVENANCE.md",
+    "data/anes-codebooks/PROVENANCE.md",
+    "data/twin2k500/README.md"
+  ],
+  "scope": "Inventaire declaratif local. Il ne remplace ni une verification des droits aupres des sources ni un manifeste de fichiers distribues.",
+  "sources": [
+    {
+      "id": "stanford-osf-t6g7k",
+      "source_url": "https://osf.io/t6g7k/",
+      "local_path": "data/osf-t6g7k-stanford",
+      "contains": "Reponses individuelles GSS, BFI et jeux economiques, deux vagues et sorties d'agents.",
+      "license": "INDETERMINED_LOCALLY",
+      "redistribution": "DO_NOT_BUNDLE",
+      "publication_action": "Publier seulement code, empreintes et sorties agregees apres revue de divulgation; l'utilisateur obtient lui-meme l'archive si les conditions le permettent.",
+      "reason": "La provenance locale demande de verifier la licence OSF et les droits GSS sous-jacents avant tout usage publie."
+    },
+    {
+      "id": "twin-2k-500",
+      "source_url": "https://huggingface.co/datasets/LLM-Digital-Twin/Twin-2K-500",
+      "local_path": "data/twin2k500",
+      "license": "CC-BY-4.0",
+      "redistribution": "SOURCE_ONLY",
+      "publication_action": "Inclure un telechargeur a revision et hash explicites; ne pas emballer les fichiers locaux de personnes, personas texte ou exports Qualtrics.",
+      "reason": "La documentation locale indique CC BY 4.0, mais les fichiers comprennent reponses individuelles, pid et texte libre."
+    },
+    {
+      "id": "gss-panel",
+      "source_url": "https://gss.norc.org/us/en/gss/get-the-data/stata.html",
+      "local_path": "data/gss-panel",
+      "license": "NORC_TERMS",
+      "redistribution": "PROHIBITED",
+      "publication_action": "Exclure toutes les donnees; fournir un adaptateur, les noms, versions et SHA-256 des archives que le chercheur obtient sous ses propres droits.",
+      "archives": [
+        {"name": "GSS_2006_Panel_Stata.zip", "sha256": "e20538164d5082a266924e0fe697d08c81114eff4c057cafc2c83fc6c508b2f3"},
+        {"name": "GSS_2008_Panel_stata.zip", "sha256": "13fb3ca4f1a30ef923fd08ca1c6144c35b45101323161e6339af7dd75eefeaf3"},
+        {"name": "GSS_2010_Panel_stata.zip", "sha256": "ffe09fa4edaae23a169b0737a982df28fb6acc0ec19e15762a0019f5de3abbd7"},
+        {"name": "GSS_2020_panel_stata_1a.zip", "sha256": "d1ae45c793a4fc3f8bbf4af65b11762c8d814106cecd11f244a2831d2272dc6d"}
+      ]
+    },
+    {
+      "id": "sce-frbny",
+      "source_url": "https://www.newyorkfed.org/microeconomics/sce",
+      "local_path": "data/sce-fed-ny",
+      "license": "FRBNY_TERMS_SOURCE_NOTICE_NO_ENDORSEMENT_SAME_TERMS",
+      "redistribution": "PERMITTED_BY_LOCAL_PROVENANCE_BUT_SOURCE_ONLY",
+      "publication_action": "Preferer un script d'acquisition et l'attribution FRBNY; ne pas joindre les microdonnees ni les userid longitudinaux.",
+      "reason": "La provenance locale rapporte une autorisation de redistribution sous conditions, mais les fichiers comportent des identifiants stables."
+    },
+    {
+      "id": "ahler-sood-pcomp",
+      "source_url": "https://doi.org/10.7910/DVN/CLMQ8E",
+      "local_path": "data/ahler-sood-pcomp",
+      "license": "CC0-1.0",
+      "redistribution": "PERMITTED",
+      "publication_action": "Preferer le DOI et un adaptateur plutot qu'une copie locale; exclure les entrees ANES et IGS non presentes.",
+      "archive_sha256": "1092a8fdc388a499586e21413dea1d533b8183e05dd5ec77411ac5aafb3abea7"
+    },
+    {
+      "id": "anes-codebooks",
+      "source_url": "https://sda.berkeley.edu/archive.htm",
+      "local_path": "data/anes-codebooks",
+      "license": "DOCUMENTATION_ONLY_TERMS_UNVERIFIED_LOCALLY",
+      "redistribution": "DO_NOT_BUNDLE_MICRODATA",
+      "publication_action": "Distribuer seulement les adaptateurs et indiquer comment le chercheur obtient les donnees ANES sous ses propres droits.",
+      "reason": "Le dossier local contient des codebooks, pas de microdonnees; les conditions officielles ANES n'ont pas ete verifiees localement."
+    }
+  ]
+}

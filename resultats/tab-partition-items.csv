@@ -1,0 +1,109 @@
+item,colonne_catalogue,qid_parent,type,selecteur,n_modalites,famille,famille_analyse,experience,bras,plan,unite,bloc_B
+False Cons. self _1,QID287_1,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _2,QID287_2,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _3,QID287_3,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _4,QID287_4,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _5,QID287_5,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _6,QID287_6,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _7,QID287_7,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _8,QID287_10,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _9,QID287_11,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+False Cons. self _10,QID287_12,QID287,ligne_matrice,Likert,5,False consensus,False consensus,,,intra_sujets,U01,1
+Q158,QID158,QID158,MC,SAHR,6,Disease-loss,Disease,Disease,loss,inter_sujets,U02,1
+Q157,QID157,QID157,MC,SAHR,6,Disease - gain,Disease,Disease,gain,inter_sujets,U02,1
+Q160_1,QID160_1,QID160,ligne_matrice,Likert,6,Linda-conjunction,Linda,Linda,conjunction,inter_sujets,U03,2
+Q160_2,QID160_2,QID160,ligne_matrice,Likert,6,Linda-conjunction,Linda,Linda,conjunction,inter_sujets,U03,2
+Q160_3,QID160_3,QID160,ligne_matrice,Likert,6,Linda-conjunction,Linda,Linda,conjunction,inter_sujets,U03,2
+Q159_1,QID159_1,QID159,ligne_matrice,Likert,6,Linda -no conjunction,Linda,Linda,no conjunction,inter_sujets,U03,2
+Q159_2,QID159_2,QID159,ligne_matrice,Likert,6,Linda -no conjunction,Linda,Linda,no conjunction,inter_sujets,U03,2
+Q159_3,QID159_3,QID159,ligne_matrice,Likert,6,Linda -no conjunction,Linda,Linda,no conjunction,inter_sujets,U03,2
+Q162,QID162,QID162,MC,SAVR,7,Outcome bias - failure,Outcome bias,Outcome bias,failure,inter_sujets,U04,1
+Q161,QID161,QID161,MC,SAVR,7,Outcome bias - success,Outcome bias,Outcome bias,success,inter_sujets,U04,1
+Q163,QID163,QID163,MC,SAVR,2,Anchoring - African countries low,Anchoring African,Anchoring African,low,inter_sujets,U05,3
+Q165,QID165,QID165,MC,SAVR,2,Anchoring - African countries high,Anchoring African,Anchoring African,high,inter_sujets,U05,3
+Q167,QID167,QID167,MC,SAVR,2,Anchoring - redwood low,Anchoring redwood,Anchoring redwood,low,inter_sujets,U06,1
+Q169,QID169,QID169,MC,SAVR,2,Anchoring - redwood high,Anchoring redwood,Anchoring redwood,high,inter_sujets,U06,1
+Q171,QID171,QID171,MC,SAHR,5,Less is More Gamble A,Less is More + Proportion dominance,Less is More + Proportion dominance,A,inter_sujets,U07,2
+Q174,QID174,QID174,MC,SAHR,5,Proportion dominance 1A,Less is More + Proportion dominance,Less is More + Proportion dominance,A,inter_sujets,U07,2
+Q177,QID177,QID177,MC,SAHR,6,Proportion dominance 2A,Less is More + Proportion dominance,Less is More + Proportion dominance,A,inter_sujets,U07,2
+Q172,QID172,QID172,MC,SAHR,5,Less is More Gamble B,Less is More + Proportion dominance,Less is More + Proportion dominance,B,inter_sujets,U07,2
+Q175,QID175,QID175,MC,SAHR,5,Proportion dominance 1B,Less is More + Proportion dominance,Less is More + Proportion dominance,B,inter_sujets,U07,2
+Q178,QID178,QID178,MC,SAHR,6,Proportion dominance 2B,Less is More + Proportion dominance,Less is More + Proportion dominance,B,inter_sujets,U07,2
+Q173,QID173,QID173,MC,SAHR,5,Less is More Gamble C,Less is More + Proportion dominance,Less is More + Proportion dominance,C,inter_sujets,U07,2
+Q176,QID176,QID176,MC,SAHR,5,Proportion dominance 1C,Less is More + Proportion dominance,Less is More + Proportion dominance,C,inter_sujets,U07,2
+Q179,QID179,QID179,MC,SAHR,6,Proportion dominance 2C,Less is More + Proportion dominance,Less is More + Proportion dominance,C,inter_sujets,U07,2
+Q183,QID183,QID183,MC,SAHR,2,Absolute vs. relative - calculator,Absolute vs. relative,Absolute vs. relative,calculator,inter_sujets,U08,1
+Q184,QID184,QID184,MC,SAHR,2,Absolute vs. relative - jacket,Absolute vs. relative,Absolute vs. relative,jacket,inter_sujets,U08,1
+Q189,QID189,QID189,MC,SAVR,10,WTA/WTP Thaler problem - WTP certainty,WTA/WTP Thaler,WTA/WTP Thaler,WTP certainty,inter_sujets,U09,3
+Q190,QID190,QID190,MC,SAVR,10,WTA/WTP Thaler problem - WTA certainty,WTA/WTP Thaler,WTA/WTP Thaler,WTA certainty,inter_sujets,U09,3
+Q191,QID191,QID191,MC,SAVR,10,WTA/WTP Thaler - WTP noncertainty,WTA/WTP Thaler,WTA/WTP Thaler,WTP noncertainty,inter_sujets,U09,3
+Q192,QID192,QID192,MC,SAVR,2,Allais Form 1,Allais,Allais,Form 1,inter_sujets,U10,1
+Q193,QID193,QID193,MC,SAVR,2,Allais Form 2,Allais,Allais,Form 2,inter_sujets,U10,1
+Q194,QID194,QID194,MC,SAHR,6,Myside Ford,Myside,Myside,Ford,inter_sujets,U11,1
+Q195,QID195,QID195,MC,SAHR,6,Myside German,Myside,Myside,German,inter_sujets,U11,1
+Q198_1,QID198_1,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_2,QID198_2,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_3,QID198_3,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_4,QID198_4,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_5,QID198_5,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_6,QID198_6,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_7,QID198_7,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_8,QID198_8,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_9,QID198_9,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q198_10,QID198_10,QID198,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 1,Probability matching,Probability matching,Problem 1,inter_sujets,U12,3
+Q203_1,QID203_1,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+Q203_2,QID203_2,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+Q203_3,QID203_3,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+Q203_4,QID203_4,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+Q203_5,QID203_5,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+Q203_6,QID203_6,QID203,ligne_matrice,Likert,2,Probability matching vs. maximizing - Problem 2,Probability matching,Probability matching,Problem 2,inter_sujets,U12,3
+nonseparabilty bene _1,QID288_1,QID288,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparabilty bene _2,QID288_2,QID288,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparabilty bene _3,QID288_3,QID288,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparabilty bene _4,QID288_4,QID288,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparability ris _1,QID289_1,QID289,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparability ris _2,QID289_2,QID289,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparability ris _3,QID289_3,QID289,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+nonseparability ris _4,QID289_4,QID289,ligne_matrice,Likert,7,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U13,2
+Omission bias ,QID291,QID291,MC,SAVR,4,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U14,1
+Denominator neglect ,QID196,QID196,MC,SAVR,2,Non-experimental heuristics and biases,Non-experimental heuristics and biases,,,intra_sujets,U15,3
+1_Q295,QID9_1,QID9_1,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U16,2
+2_Q295,QID9_2,QID9_2,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U17,1
+3_Q295,QID9_3,QID9_3,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U18,3
+4_Q295,QID9_4,QID9_4,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U19,1
+5_Q295,QID9_5,QID9_5,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U20,1
+6_Q295,QID9_6,QID9_6,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U21,2
+7_Q295,QID9_7,QID9_7,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U22,3
+8_Q295,QID9_8,QID9_8,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U23,3
+9_Q295,QID9_9,QID9_9,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U24,2
+10_Q295,QID9_10,QID9_10,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U25,1
+11_Q295,QID9_11,QID9_11,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U26,1
+12_Q295,QID9_12,QID9_12,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U27,3
+13_Q295,QID9_13,QID9_13,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U28,3
+14_Q295,QID9_14,QID9_14,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U29,1
+15_Q295,QID9_15,QID9_15,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U30,2
+16_Q295,QID9_16,QID9_16,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U31,2
+17_Q295,QID9_17,QID9_17,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U32,2
+18_Q295,QID9_18,QID9_18,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U33,1
+19_Q295,QID9_19,QID9_19,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U34,3
+20_Q295,QID9_20,QID9_20,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U35,2
+21_Q295,QID9_21,QID9_21,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U36,3
+22_Q295,QID9_22,QID9_22,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U37,1
+23_Q295,QID9_23,QID9_23,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U38,1
+24_Q295,QID9_24,QID9_24,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U39,1
+25_Q295,QID9_25,QID9_25,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U40,3
+26_Q295,QID9_26,QID9_26,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U41,1
+27_Q295,QID9_27,QID9_27,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U42,3
+28_Q295,QID9_28,QID9_28,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U43,3
+29_Q295,QID9_29,QID9_29,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U44,2
+30_Q295,QID9_30,QID9_30,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U45,2
+31_Q295,QID9_31,QID9_31,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U46,3
+32_Q295,QID9_32,QID9_32,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U47,2
+33_Q295,QID9_33,QID9_33,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U48,2
+34_Q295,QID9_34,QID9_34,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U49,1
+35_Q295,QID9_35,QID9_35,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U50,3
+36_Q295,QID9_36,QID9_36,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U51,2
+37_Q295,QID9_37,QID9_37,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U52,3
+38_Q295,QID9_38,QID9_38,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U53,3
+39_Q295,QID9_39,QID9_39,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U54,1
+40_Q295,QID9_40,QID9_40,MC,SAVR,2,Product Preferences - Pricing,Product Preferences - Pricing,,,intra_sujets,U55,2

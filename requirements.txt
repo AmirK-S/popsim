@@ -1,0 +1,66 @@
+# Releve de l'environnement local observe le 2026-09-11 (macOS arm64, Python 3.13.14) ; ce n'est pas un lockfile resolu.
+# Portee : les paquets importes par le code, plus la cloture transitive telle qu'elle etait
+# installee ce jour-la. Aucun hash de roue, aucune resolution figee, aucune garantie
+# multiplateforme. Voir reproductibilite/ENVIRONNEMENT.md pour ce que ce releve ne garantit pas.
+
+# --- importes directement par le code ---
+matplotlib==3.11.1
+numpy==2.5.2
+openpyxl==3.1.5
+pandas==3.0.5
+pyreadstat==1.3.6
+scikit-learn==1.9.0
+scipy==1.18.1
+threadpoolctl==3.6.0
+
+# --- requis par le code sans import direct (moteur parquet de pandas) ---
+pyarrow==25.0.1
+
+# --- inference locale MLX, Apple Silicon uniquement ---
+mlx==0.32.2; sys_platform == 'darwin' and platform_machine == 'arm64'
+mlx-lm==0.31.3; sys_platform == 'darwin' and platform_machine == 'arm64'
+mlx-metal==0.32.2; sys_platform == 'darwin' and platform_machine == 'arm64'
+tokenizers==0.23.1
+
+# --- dependances transitives observees ---
+annotated-doc==0.0.5
+anyio==4.15.0
+certifi==2026.7.22
+click==8.5.0
+cloudpickle==3.1.2
+contourpy==1.3.3
+cycler==0.12.1
+et_xmlfile==2.0.0
+filelock==3.32.5
+fonttools==4.64.0
+fsspec==2026.7.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.29.0
+idna==3.19
+Jinja2==3.1.6
+joblib==1.6.0
+kiwisolver==1.5.1
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+narwhals==2.25.0
+packaging==26.3
+pillow==12.3.0
+protobuf==7.36.1
+Pygments==2.21.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+regex==2026.9.3
+rich==15.0.0
+safetensors==0.8.0
+sentencepiece==0.2.2
+shellingham==1.5.4
+six==1.17.0
+tqdm==4.70.0
+transformers==5.16.1
+typer==0.27.2
+typing_extensions==4.16.0
