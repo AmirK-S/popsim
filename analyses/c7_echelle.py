@@ -25,14 +25,18 @@ CE QUI EST NOUVEAU ICI :
      sur le GSS, un autre jeu). Meme esprit que a35 : le donneur est une personne
      OBSERVEE, jamais une valeur inventee.
   2. La courbe de top-1 par taille de pool sous-echantillonnee (N = 50 a 2058, 20
-     repetitions), pour le meilleur jumeau riche de C7, Demographics Only et ce PMM.
-  3. L'extrapolation par deux modeles simples declares au preenregistrement (loi
-     puissance, loi logarithmique), le modele de Pitman-Yor de Rocher/Hendrickx/de
-     Montjoye 2025 ayant ete juge hors de portee fiable dans le temps imparti (section 2
-     du preenregistrement) : SES DEUX PARAMETRES DEMANDENT DES FONCTIONS DIGAMMA INVERSES
-     ET DES RAPPORTS DE GAMMA QUE NOUS N'AVONS PAS PU VERIFIER CONTRE L'ARTICLE ORIGINAL
-     (paywall pendant la fenetre de calcul). L'extrapolation qui suit est DECLAREE
-     INDICATIVE, pas une preuve.
+     repetitions), pour le meilleur jumeau riche de C7, Demographics Only, ce PMM, et le
+     plafond humain (l'auto-attaque vagues 1-3 contre vague 4, meme pipeline).
+  3. Un DIAGNOSTIC de non-identifiabilite, pas une extrapolation : deux modeles simples
+     (loi puissance, loi log) ajustes sur les 6 points mesures, compares par CV LOO
+     DANS le domaine mesure, puis evalues cote a cote a environ 2x le plus grand N
+     mesure (~4000) pour montrer a quel point ils divergent deja a cette distance
+     modeste. AUCUNE valeur au-dela de ~4000 n'est calculee ni rapportee : un examen
+     critique independant (12 septembre 2026, addendum au preenregistrement) a juge
+     l'extrapolation a 10 000/100 000/1 000 000 indefendable, la loi log gagnante en CV
+     s'effondrant vers zero des N ~ 30 000. Le modele de Pitman-Yor de Rocher/Hendrickx/de
+     Montjoye 2025 n'a toujours pas ete implemente (formule non verifiable de facon fiable
+     dans le temps imparti) : limite assumee, pas un detail.
 
 Aucun appel de modele de langage. Lecture seule sur data/. Aucun script existant modifie.
 Usage : .venv/bin/python analyses/c7_echelle.py
@@ -66,10 +70,12 @@ N_REPETITIONS = 20
 N_TIRAGES_LIENS = 3     # reduit de 20 (C7) a 3 : le cout scale en N^2, 20 x N x config
 RICHE = "JSON Persona - GPT4.1"
 PMM_NOM = "PMM k=5 (demographies)"
+PLAFOND_NOM = "retest humain (plafond, vagues 1-3)"
 K_PMM = 5
 N_PLIS_PMM = 5
-N_EXTRAPOLATION = [10_000, 100_000, 1_000_000]
-N_BOOTSTRAP_EXTRAPOLATION = 500
+# Diagnostic de non-identifiabilite seulement (section 3), PAS une extrapolation :
+# le plafond fixe par le contre-examen du 12 septembre 2026, ~2x le plus grand N mesure.
+N_DIVERGENCE = 4000
 
 
 def graine_nom(nom):
@@ -208,52 +214,30 @@ MODELES = {"puissance": (ajuster_puissance, predire_puissance),
            "log": (ajuster_log, predire_log)}
 
 
-def extrapoler(df_config, graine):
-    """Ajuste puissance ET log sur les 6 points mesures (les deux sont gardes et
-    rapportes, pas seulement le gagnant), choisit le modele retenu par CV LOO, extrapole
-    a N_EXTRAPOLATION avec IC par reechantillonnage : a chaque tirage, chaque point
-    d'ancrage est perturbe dans sa propre bande de confiance (loi normale, ecart type
-    approx = (haut-bas)/(2*1.96)), les deux modeles sont reajustes, puis evalues aux N
-    d'extrapolation. Percentile 2,5-97,5 sur ces tirages = l'IC rapporte pour chacun.
+def diagnostic_divergence(df_config, n_verif=N_DIVERGENCE):
+    """PAS une extrapolation : un diagnostic de non-identifiabilite.
 
-    Le clip a 0 sur predire_log rend visible, plutot que masque, le mode d'echec connu
-    d'un modele lineaire en log(N) extrapole loin hors de son domaine ajuste : au-dela du
-    N ou a - b*log(N) croise zero, la prediction est nulle par construction, pas un signal
-    substantif. C'est precisement pourquoi l'extrapolation est declaree indicative.
+    Ajuste puissance et log sur les 6 points MESURES (50 a 2058), rapporte la qualite
+    d'ajustement DANS ce domaine par CV LOO, puis evalue les deux formes cote a cote a
+    n_verif (~2x le plus grand N mesure, jamais plus loin) pour exposer, sans la
+    dissimuler sous un choix de modele, l'ampleur de leur desaccord des qu'on sort, meme
+    un peu, du domaine mesure. Aucune valeur au-dela de n_verif n'est calculee ici.
     """
     n_vals = df_config["n_pool"].to_numpy(dtype=float)
     y_vals = df_config["top1"].to_numpy(dtype=float)
-    se = (df_config["top1_haut"] - df_config["top1_bas"]).to_numpy(dtype=float) / (2 * 1.96)
-    se = np.clip(se, 1e-5, None)
 
     err = {nom: cv_loo(n_vals, y_vals, aj, pr) for nom, (aj, pr) in MODELES.items()}
-    retenu = min(err, key=err.get)
-
-    rng = np.random.default_rng(graine)
-    tirages = {nom: {n: [] for n in N_EXTRAPOLATION} for nom in MODELES}
-    for _ in range(N_BOOTSTRAP_EXTRAPOLATION):
-        y_pert = np.clip(rng.normal(y_vals, se), 1e-6, 1.0)
-        for nom, (aj, pr) in MODELES.items():
-            try:
-                a, b = aj(n_vals, y_pert)
-            except Exception:
-                continue
-            for n in N_EXTRAPOLATION:
-                tirages[nom][n].append(float(np.clip(pr(n, a, b), 0.0, 1.0)))
-
     out = {"cv_erreur_puissance": err["puissance"], "cv_erreur_log": err["log"],
-           "modele_retenu": retenu}
+           "modele_gagnant_cv_intra_domaine": min(err, key=err.get),
+           "n_verif_divergence": n_verif}
+    preds = {}
     for nom, (aj, pr) in MODELES.items():
         a0, b0 = aj(n_vals, y_vals)
-        for n in N_EXTRAPOLATION:
-            vals = np.array(tirages[nom][n]) if tirages[nom][n] else np.array([pr(n, a0, b0)])
-            out[f"{nom}_pred_{n}"] = float(np.clip(pr(n, a0, b0), 0.0, 1.0))
-            out[f"{nom}_pred_{n}_bas"] = float(np.percentile(vals, 2.5))
-            out[f"{nom}_pred_{n}_haut"] = float(np.percentile(vals, 97.5))
-            if nom == retenu:
-                out[f"pred_{n}"] = out[f"{nom}_pred_{n}"]
-                out[f"pred_{n}_bas"] = out[f"{nom}_pred_{n}_bas"]
-                out[f"pred_{n}_haut"] = out[f"{nom}_pred_{n}_haut"]
+        preds[nom] = float(np.clip(pr(n_verif, a0, b0), 0.0, 1.0))
+        out[f"{nom}_pred_n_verif"] = preds[nom]
+    out["divergence_absolue_n_verif"] = abs(preds["puissance"] - preds["log"])
+    out["divergence_ratio_n_verif"] = (preds["puissance"] / preds["log"]
+                                        if preds["log"] > 1e-12 else float("inf"))
     return out
 
 
@@ -288,6 +272,7 @@ def main():
 
     items = items_communs(codes, [REF_V4, REF_V13])
     pool_v4 = codes[REF_V4][:, items]
+    pool_v13 = codes[REF_V13][:, items]
     print(f"{n_total} personnes, {len(items)} items communs", flush=True)
 
     print("\n--- construction du comparateur PMM k=5 (demographies) ---", flush=True)
@@ -297,42 +282,51 @@ def main():
         RICHE: codes[RICHE][:, items],
         DEMO: codes[DEMO][:, items],
         PMM_NOM: pmm,
+        # Plafond : la personne elle-meme, vue a travers ses reponses vagues 1-3, attaque
+        # le pool de vague 4. Meme pipeline, memes 60 items : la borne haute que le
+        # contre-examen du 11 septembre 2026 rapporte a 81,6 % sur le pool complet.
+        PLAFOND_NOM: pool_v13,
     }
 
-    print("\n--- courbe empirique, top-1 par taille de pool ---", flush=True)
+    print("\n--- courbe empirique, top-1 par taille de pool (resultat principal) ---",
+          flush=True)
     df = courbe(configs, pool_v4, rng_racine=1)
     T1.ecrire(df, "c7-echelle.csv")
 
-    print("\n--- extrapolation (modeles declares, pas le Pitman-Yor de l'article) ---",
-          flush=True)
-    lignes_extra = []
-    for nom in configs:
+    print("\n--- diagnostic de non-identifiabilite (PAS une extrapolation) ---", flush=True)
+    lignes_diag = []
+    for nom in [RICHE, DEMO, PMM_NOM]:
         sous = df[df.configuration == nom]
-        res = extrapoler(sous, graine=[GRAINE, graine_nom(nom)])
+        res = diagnostic_divergence(sous)
         res["configuration"] = nom
-        lignes_extra.append(res)
-        print(f"{nom} : modele retenu = {res['modele_retenu']} "
+        lignes_diag.append(res)
+        print(f"{nom} : gagnant CV intra-domaine = {res['modele_gagnant_cv_intra_domaine']} "
               f"(CV puissance={res['cv_erreur_puissance']:.6f}, "
-              f"CV log={res['cv_erreur_log']:.6f})", flush=True)
-        for n in N_EXTRAPOLATION:
-            print(f"    N={n} : top1 = {res[f'pred_{n}']*100:.3f} % "
-                  f"[{res[f'pred_{n}_bas']*100:.3f} ; {res[f'pred_{n}_haut']*100:.3f}]",
-                  flush=True)
-    df_extra = pd.DataFrame(lignes_extra)
-    T1.ecrire(df_extra, "c7-echelle-extrapolation.csv")
+              f"CV log={res['cv_erreur_log']:.6f}) ; a N={N_DIVERGENCE} : "
+              f"puissance={res['puissance_pred_n_verif']*100:.3f} %, "
+              f"log={res['log_pred_n_verif']*100:.3f} % "
+              f"(ratio {res['divergence_ratio_n_verif']:.2f})", flush=True)
+    df_diag = pd.DataFrame(lignes_diag)
+    T1.ecrire(df_diag, "c7-echelle-diagnostic.csv")
 
     try:
         figure(df, os.path.join(T1.SORTIE, "c7-echelle.png"))
     except Exception as e:
         print(f"figure non produite : {e}", flush=True)
 
-    print("\n--- rapport au comparateur demographique, a chaque N d'extrapolation ---",
-          flush=True)
-    riche_row = df_extra[df_extra.configuration == RICHE].iloc[0]
-    demo_row = df_extra[df_extra.configuration == DEMO].iloc[0]
-    for n in N_EXTRAPOLATION:
-        ratio = riche_row[f"pred_{n}"] / demo_row[f"pred_{n}"] if demo_row[f"pred_{n}"] > 0 else float("inf")
-        print(f"N={n} : ratio riche/demo = {ratio:.1f}", flush=True)
+    print("\n--- rapport riche/demo, sur la courbe MESUREE seulement ---", flush=True)
+    for n in N_VALEURS:
+        r = df[(df.configuration == RICHE) & (df.n_pool == n)].top1.iloc[0]
+        d = df[(df.configuration == DEMO) & (df.n_pool == n)].top1.iloc[0]
+        print(f"N={n} : ratio riche/demo = {r / d:.1f}", flush=True)
+
+    print("\n--- normalisation par le plafond humain (retest vagues 1-3) ---", flush=True)
+    for n in N_VALEURS:
+        p = df[(df.configuration == PLAFOND_NOM) & (df.n_pool == n)].top1.iloc[0]
+        for nom in [RICHE, DEMO, PMM_NOM]:
+            v = df[(df.configuration == nom) & (df.n_pool == n)].top1.iloc[0]
+            print(f"N={n}, {nom} : {v*100:.2f} % = {v / p * 100:.1f} % du plafond "
+                  f"({p*100:.1f} %)", flush=True)
 
 
 if __name__ == "__main__":

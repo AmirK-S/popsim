@@ -29,3 +29,19 @@ points d'ancrage.
 Le top-1 du jumeau riche décroît avec N mais reste **au moins 5 fois** celui de Demographics
 Only à N = 100 000 ; l'extrapolation au-delà de N = 2 058 est déclarée **indicative**, pas
 une preuve.
+
+## Addendum, 12 septembre 2026 (avant tout recalcul supplémentaire)
+Examen critique indépendant : les valeurs à 10 000/100 000/1 000 000 (section 2) sont jugées
+indéfendables (6 points mesurés, deux formes qui divergent d'ordres de grandeur hors
+domaine ; la loi log gagne la CV intra-domaine mais s'effondre à zéro dès N ≈ 30 000).
+**Portée corrigée : le résultat principal est la courbe mesurée N = 50 à 2 058** (rapport
+riche/démographie, croissant avec N). Aucune valeur au-delà d'environ 4 000 (2x le plus
+grand N mesuré) n'est plus calculée ni publiée ; puissance et log n'y sont évaluées côte à
+côte que pour **démontrer leur non-identifiabilité**, en limite déclarée, jamais en
+résultat. Ajout : normalisation par le plafond humain test-retest (81,6 % Twin, cf.
+`c7-contre-examen-2026-09-11.md` ; 96,8 % Stanford, cf. `c7-stanford-resultats.md`), et une
+courbe empirique de ce plafond par N dans ce même pipeline (auto-attaque vagues 1-3 contre
+vague 4). Ce qu'il faudrait pour extrapoler honnêtement : un pool réellement plus grand
+que 2 058, ou une source externe sur la distribution des profils en population. Le modèle
+de Pitman-Yor de Rocher/Hendrickx/de Montjoye reste non implémenté (formule non
+vérifiable de façon fiable dans le temps imparti) : limite assumée, pas un détail.
