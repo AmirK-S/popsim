@@ -291,6 +291,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--modele", default="oss20", help="cle du registre MODELES (r1)")
     ap.add_argument("--suffixe", default="", help="suffixe de la trace, pour un smoke test")
+    ap.add_argument("--dossier", default="",
+                    help="dossier de traces a utiliser au lieu de data/traces/memoire-long "
+                         "(ex. data/traces/memoire-long-api pour les runs API ; ne change "
+                         "aucun calcul, seulement l'emplacement lu)")
     ap.add_argument("--test", action="store_true",
                     help="ignore --modele : verifie le pipeline sur des donnees factices")
     args = ap.parse_args()
@@ -299,10 +303,11 @@ def main():
         executer_test()
         return
 
+    dossier = os.path.join(RACINE, args.dossier) if args.dossier else TRACES
     nom = f"ml-{args.modele}" + (("-" + args.suffixe) if args.suffixe else "")
-    chemin_trace = os.path.join(TRACES, nom + ".jsonl")
-    chemin_ech = os.path.join(TRACES, "ml-echantillon.csv")
-    chemin_items = os.path.join(TRACES, "ml-items.csv")
+    chemin_trace = os.path.join(dossier, nom + ".jsonl")
+    chemin_ech = os.path.join(dossier, "ml-echantillon.csv")
+    chemin_items = os.path.join(dossier, "ml-items.csv")
     for c in (chemin_trace, chemin_ech, chemin_items):
         if not os.path.exists(c):
             sys.exit(f"fichier introuvable : {c} (lancer memoire_long_gss.py d'abord)")
