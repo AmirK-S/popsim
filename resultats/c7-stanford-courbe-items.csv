@@ -1,0 +1,7 @@
+k_items,top1_moyen,top1_bas,top1_haut,n_tirages_items,condition
+10,0.052448,0.016086,0.174028,20,composite
+20,0.117262,0.038548,0.267731,20,composite
+40,0.220951,0.130756,0.316295,20,composite
+60,0.340347,0.235368,0.515071,20,composite
+100,0.498693,0.405713,0.594444,20,composite
+177,0.655038,,,1,composite

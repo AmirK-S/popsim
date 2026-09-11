@@ -286,6 +286,90 @@ def traiter_domaine(nom_domaine, seg):
     return pd.DataFrame(lignes)
 
 
+# ---------------------------------------------------------------------------
+# Controle demande par le coordinateur, 12 septembre 2026, apres le premier rapport :
+# l'ecart Stanford (65,7 %) / Twin (20,7 %) vient-il du nombre d'items (177 contre 60)
+# plutot que d'une difference de fuite ? Ajoute sans toucher a ce qui precede.
+# ---------------------------------------------------------------------------
+
+KS_COURBE = (10, 20, 40, 60, 100)
+N_TIRAGES_ITEMS = 20     # tirages d'items aleatoires par k, exige par le coordinateur
+N_TIRAGES_LIENS_COURBE = 10
+
+
+def courbe_items_gss(codes_gss, condition, ks=KS_COURBE, n_draws=N_TIRAGES_ITEMS,
+                      n_tirages_liens=N_TIRAGES_LIENS_COURBE, graine=GRAINE):
+    """Top-1 (bloc GSS, une condition donnee) en fonction du nombre d'items retenus,
+    tires au hasard sans remise parmi les 177, n_draws tirages independants par k.
+
+    IC = 2,5e et 97,5e centile des n_draws tirages d'items (pas un bootstrap sur les
+    personnes en plus : deja tres couteux en calcul, et c'est la dispersion entre jeux
+    d'items, pas l'incertitude d'echantillonnage de personnes, qui est demandee ici).
+    Le point k = 177 est le bloc entier : un seul tirage possible, pas d'IC.
+    """
+    pool = codes_gss[VAGUE1]
+    test = codes_gss[condition]
+    n, m_total = pool.shape
+    rng = np.random.default_rng([graine, zlib.crc32(("courbe|" + condition).encode())])
+    lignes = []
+    for k in ks:
+        valeurs = []
+        for _ in range(n_draws):
+            cols = rng.choice(m_total, size=k, replace=False)
+            accord = accord_categoriel(test[:, cols], pool[:, cols])
+            _, top1, _ = rangs_depuis_accord(accord, np.arange(n), rng, n_tirages_liens)
+            valeurs.append(float(top1.mean()))
+        valeurs = np.array(valeurs)
+        lignes.append({"k_items": k, "top1_moyen": float(valeurs.mean()),
+                       "top1_bas": float(np.percentile(valeurs, 2.5)),
+                       "top1_haut": float(np.percentile(valeurs, 97.5)),
+                       "n_tirages_items": n_draws})
+    accord_plein = accord_categoriel(test, pool)
+    _, top1_plein, _ = rangs_depuis_accord(accord_plein, np.arange(n), rng, n_tirages_liens)
+    lignes.append({"k_items": m_total, "top1_moyen": float(top1_plein.mean()),
+                   "top1_bas": np.nan, "top1_haut": np.nan, "n_tirages_items": 1})
+    df = pd.DataFrame(lignes)
+    df["condition"] = condition
+    return df
+
+
+def entropie_codes(col):
+    """Entropie de Shannon en bits (estimateur simple, non corrige), a partir d'une
+    colonne de codes entiers, -1 pour manquant. Invariante a tout recodage bijectif des
+    modalites, donc calculable indifferemment sur les codes ou sur le texte d'origine."""
+    vals = col[col >= 0]
+    if len(vals) == 0:
+        return np.nan
+    _, comptes = np.unique(vals, return_counts=True)
+    p = comptes / len(vals)
+    return float(-(p * np.log2(p)).sum())
+
+
+def comparaison_entropie_gss_twin(codes_gss):
+    """Entropie humaine mediane par item : bloc GSS Stanford (177 items) contre les 60
+    items communs de l'attaque C7 originale sur Twin-2K-500 (humains vague 4). Meme
+    estimateur des deux cotes (Shannon simple sur les codes, cf. entropie_codes), pour
+    que la comparaison ne soit pas polluee par un choix d'estimateur different.
+    """
+    import t1_commun as T1                              # import local, usage ponctuel
+    from c7_reidentification import items_communs, REF_V4, REF_V13  # noqa: E402
+
+    pool_gss = codes_gss[VAGUE1]
+    ent_gss = np.array([entropie_codes(pool_gss[:, j]) for j in range(pool_gss.shape[1])])
+
+    paq = T1.charger()
+    codes_twin = paq["codes"]
+    items60 = items_communs(codes_twin, [REF_V4, REF_V13])
+    ent_twin = np.array([entropie_codes(codes_twin[REF_V4][:, j]) for j in items60])
+
+    return pd.DataFrame([
+        {"jeu": "Stanford, bloc GSS", "n_items": int(pool_gss.shape[1]),
+         "entropie_mediane_bits": float(np.nanmedian(ent_gss))},
+        {"jeu": "Twin-2K-500, 60 items communs C7", "n_items": int(len(items60)),
+         "entropie_mediane_bits": float(np.nanmedian(ent_twin))},
+    ])
+
+
 def main():
     print(__doc__.split("=" * 75)[1], flush=True)
     demo = pd.read_csv(DEMO_CSV)
@@ -320,6 +404,31 @@ def main():
     print("\nmeilleur top-1 par bloc (hors v8, hors reference humaine) :", flush=True)
     print(par_bloc.to_string(), flush=True)
     ecrire(par_bloc.reset_index(), "c7-stanford-par-bloc.csv")
+
+    # --- controle coordinateur : courbe items, comparaison a k=60, entropie ---
+    # Rechargement independant du bloc GSS (aucune modification de traiter_domaine
+    # ci-dessus, qui garde ses resultats et son code intacts).
+    ordre_gss, items_gss, tables_gss, _ = charger_domaine("gss")
+    codes_gss = coder_categoriel_commun(tables_gss, items_gss)
+
+    courbe = courbe_items_gss(codes_gss, "composite")
+    ecrire(courbe, "c7-stanford-courbe-items.csv")
+    print("\ncourbe top-1 (condition composite, bloc GSS) selon le nombre d'items :",
+          flush=True)
+    print(courbe[["k_items", "top1_moyen", "top1_bas", "top1_haut"]].to_string(index=False),
+          flush=True)
+
+    k60 = courbe.loc[courbe.k_items == 60].iloc[0]
+    print(f"\na k = 60 items (comparable a Twin) : Stanford composite top1="
+          f"{k60.top1_moyen:.4f} [{k60.top1_bas:.4f};{k60.top1_haut:.4f}] "
+          f"contre Twin JSON Persona GPT4.1 = 0,2068 (resultats/c7-resultats.md). "
+          f"Questionnaires et populations different : comparaison a nombre d'items "
+          f"egal, pas une replique exacte.", flush=True)
+
+    ent = comparaison_entropie_gss_twin(codes_gss)
+    ecrire(ent, "c7-stanford-entropie.csv")
+    print("\nentropie humaine mediane par item (bits) :", flush=True)
+    print(ent.to_string(index=False), flush=True)
 
 
 if __name__ == "__main__":
