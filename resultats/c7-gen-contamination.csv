@@ -1,0 +1,7 @@
+modele,condition,verbatim_20plus
+deepseek-v4,fictif,0.0
+deepseek-v4,reel,0.25
+llama31-8b,fictif,0.0
+llama31-8b,reel,0.0
+qwen37-flash,fictif,0.0
+qwen37-flash,reel,0.5

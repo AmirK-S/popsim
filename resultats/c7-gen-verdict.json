@@ -1,0 +1,17 @@
+{
+ "pred1_r1_ge10pct_2sur3": false,
+ "r1_top1_par_modele": {
+  "llama31-8b": 0.0,
+  "qwen37-flash": 0.0022500000000000003,
+  "deepseek-v4": 0.00825
+ },
+ "pred2_r2_sous3pct_partout": true,
+ "r2_top1_par_modele": {
+  "llama31-8b": 0.0,
+  "qwen37-flash": 0.0,
+  "deepseek-v4": 0.005
+ },
+ "pred3_temp1_reduit_dun_tiers": true,
+ "top1_qwen_t0": 0.0022500000000000003,
+ "top1_qwen_t1": 0.0
+}
