@@ -24,12 +24,21 @@ Avec `--suffixe`, l'analyse porte sur les traces de test (`c5-<modele>-<suffixe>
 et ecrit dans `resultats/c5-resultats-<suffixe>.md`, jamais dans le rapport final : c'est
 la verification de l'etape 3 (20 personas, taux de parse et grammaire, aucune conclusion).
 
+`--dossier` fait porter la lecture (traces et personas) sur un autre repertoire que
+`data/traces/c5` (par exemple `data/traces/c5-api` pour l'extension a 4 modeles
+distants), SANS changer un seul calcul : memes fonctions de mesure, meme bootstrap, meme
+critere. Le nom du modele affiche vient du registre local (`c5_formulation.MODELES`) s'il
+l'a, sinon de `c5_api.API_MODELES`, sinon de la cle elle meme.
+
 Entree  : data/traces/c5/c5-<modele>.jsonl (ou -<suffixe>.jsonl), c5-personas*.csv.
+          Ou, avec --dossier, le meme schema sous ce repertoire.
 Sortie  : resultats/c5-resultats.md (ou -<suffixe>.md avec --suffixe).
 
 Usage :
   .venv/bin/python analyses/c5_analyse.py --suffixe smoke --modele oss20   # verification
   .venv/bin/python analyses/c5_analyse.py --modele oss20,q30              # rapport final
+  .venv/bin/python analyses/c5_analyse.py --dossier data/traces/c5-api \\
+      --modele gpt4o-mini,gemini-flash-lite,claude-haiku,llama-70b         # extension API
 """
 
 import argparse
@@ -55,12 +64,32 @@ SEUIL_COMPARATEUR_INSTRUMENT = 4.3
 SEUIL_COMPARATEUR_MISE_EN_GARDE = 7.0
 
 
-def lire_traces(cle, suffixe):
-    """Lit une trace : {(pid, forme): pct_too_much ou None si l'appel est rejete}."""
-    nom = f"c5-{cle}" + (f"-{suffixe}" if suffixe else "") + ".jsonl"
-    chemin = os.path.join(TRACES, nom)
-    if not os.path.exists(chemin):
-        sys.exit(f"trace introuvable : {chemin}")
+def nom_modele(cle):
+    """Nom affichable d'une cle : registre local, sinon registre API, sinon la cle."""
+    if cle in MODELES:
+        return MODELES[cle]["nom"]
+    try:
+        from c5_api import API_MODELES
+        if cle in API_MODELES:
+            return API_MODELES[cle]["nom"]
+    except ImportError:
+        pass
+    return cle
+
+
+def lire_traces(cle, suffixe, dossier=TRACES):
+    """Lit une trace : {(pid, forme): pct_too_much ou None si l'appel est rejete}.
+
+    Le nom de fichier suit `c5-<cle>[-<suffixe>].jsonl` (traces locales) ou
+    `c5-api-<cle>[-<suffixe>].jsonl` (traces distantes, ecrites par `c5_api.py`) : les
+    deux sont essayes dans ce repertoire, sans jamais changer le calcul qui suit.
+    """
+    suf = f"-{suffixe}" if suffixe else ""
+    candidats = [f"c5-{cle}{suf}.jsonl", f"c5-api-{cle}{suf}.jsonl"]
+    chemin = next((os.path.join(dossier, n) for n in candidats
+                   if os.path.exists(os.path.join(dossier, n))), None)
+    if chemin is None:
+        sys.exit(f"trace introuvable : {[os.path.join(dossier, n) for n in candidats]}")
     sortie = {}
     n_lignes = n_rejets = 0
     with open(chemin, encoding="utf-8") as fh:
@@ -174,10 +203,10 @@ def comparateurs(humain):
     return tout_zero_sauf_welfare, tout_zero
 
 
-def analyser_modele(cle, suffixe, humain):
-    trace, n_lignes, n_rejets, chemin = lire_traces(cle, suffixe)
+def analyser_modele(cle, suffixe, humain, dossier=TRACES):
+    trace, n_lignes, n_rejets, chemin = lire_traces(cle, suffixe, dossier)
     chemin_personas = os.path.join(
-        TRACES, f"c5-personas{'-' + suffixe if suffixe else ''}.csv")
+        dossier, f"c5-personas{'-' + suffixe if suffixe else ''}.csv")
     personas = pd.read_csv(chemin_personas).to_dict("records")
 
     effets = effets_par_persona(trace)
@@ -194,7 +223,7 @@ def analyser_modele(cle, suffixe, humain):
     welfare = tab.loc[tab["paire"] == "natfare", "effet_simule"].item()
 
     return {
-        "cle": cle, "nom": MODELES[cle]["nom"], "trace": chemin,
+        "cle": cle, "nom": nom_modele(cle), "trace": chemin,
         "n_lignes": n_lignes, "n_rejets": n_rejets,
         "taux_parse": 1 - n_rejets / n_lignes if n_lignes else float("nan"),
         "n_personas": len(pids), "tableau": tab, "mae": mae, "mae_ic95": mae_ic,
@@ -276,15 +305,23 @@ def main():
     ap.add_argument("--suffixe", default="",
                     help="suffixe des traces de test ; ecrit alors dans "
                          "resultats/c5-resultats-<suffixe>.md, jamais le rapport final")
+    ap.add_argument("--dossier", default=None,
+                    help="repertoire des traces et des personas ; par defaut data/traces/"
+                         "c5 (run local). Passer data/traces/c5-api pour l'extension a "
+                         "4 modeles distants, sans changer un seul calcul.")
     args = ap.parse_args()
 
+    dossier = args.dossier or TRACES
     cles = [c.strip() for c in args.modele.split(",") if c.strip()]
-    for c in cles:
-        if c not in MODELES:
-            sys.exit(f"modele inconnu : {c}")
+    if args.dossier is None:
+        # Validation stricte contre le registre local uniquement pour le run par defaut :
+        # un dossier distant peut porter des cles d'un autre registre (c5_api.API_MODELES).
+        for c in cles:
+            if c not in MODELES:
+                sys.exit(f"modele inconnu : {c}")
 
     humain = effet_humain_wave1()
-    resultats = [analyser_modele(c, args.suffixe, humain) for c in cles]
+    resultats = [analyser_modele(c, args.suffixe, humain, dossier) for c in cles]
 
     nom_rapport = "c5-resultats" + (f"-{args.suffixe}" if args.suffixe else "") + ".md"
     chemin = os.path.join(RESULTATS, nom_rapport)
