@@ -1,0 +1,4 @@
+donnees_fictives/
+resultats_artefact/
+__pycache__/
+*.pyc
