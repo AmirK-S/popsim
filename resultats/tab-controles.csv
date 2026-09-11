@@ -1,0 +1,260 @@
+analyse,controle,rotation,role,valeur,seuil,passe
+principal,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal,C1 couverture minimale d'un item,1,B,0.4873663751214772,0.25,vrai
+principal,C2 part des cellules humaines gardees,1,B,1.0,0.99,vrai
+principal,C3 part des personnes a moins de 10 cellules,1,B,0.0,0.01,vrai
+principal,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal,C1 couverture minimale d'un item,1,A,0.3163265306122449,0.25,vrai
+principal,C2 part des cellules humaines gardees,1,A,1.0,0.99,vrai
+principal,C4 unites indivisibles dans B,1,B,21,10,vrai
+principal,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal,C1 couverture minimale d'un item,2,B,0.3163265306122449,0.25,vrai
+principal,C2 part des cellules humaines gardees,2,B,1.0,0.99,vrai
+principal,C3 part des personnes a moins de 10 cellules,2,B,0.0,0.01,vrai
+principal,C3 au moins une cellule par personne,2,A,53,1,vrai
+principal,C1 couverture minimale d'un item,2,A,0.3270165208940719,0.25,vrai
+principal,C2 part des cellules humaines gardees,2,A,1.0,0.99,vrai
+principal,C4 unites indivisibles dans B,2,B,16,10,vrai
+principal,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal,C1 couverture minimale d'un item,3,B,0.3270165208940719,0.25,vrai
+principal,C2 part des cellules humaines gardees,3,B,1.0,0.99,vrai
+principal,C3 part des personnes a moins de 10 cellules,3,B,0.0,0.01,vrai
+principal,C3 au moins une cellule par personne,3,A,57,1,vrai
+principal,C1 couverture minimale d'un item,3,A,0.3163265306122449,0.25,vrai
+principal,C2 part des cellules humaines gardees,3,A,1.0,0.99,vrai
+principal,C4 unites indivisibles dans B,3,B,18,10,vrai
+principal,T chute A du temoin B0 mode,1,A,0.0003112118921642093,0.005,vrai
+principal,T chute A du temoin B0 mode,2,A,8.777157243011757e-05,0.005,vrai
+principal,T chute A du temoin B0 mode,3,A,0.0003670315243892164,0.005,vrai
+principal,T chute A du temoin B0 tirage,1,A,0.0015671903682107358,0.005,vrai
+principal,T chute A du temoin B0 tirage,2,A,0.0011045671874462815,0.005,vrai
+principal,T chute A du temoin B0 tirage,3,A,2.557413943116149e-06,0.005,vrai
+principal,R reproduction de l'exactitude de t1,,108 items,,1e-12,vrai
+S1,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1,C1 couverture minimale d'un item,1,B,0.465,0.25,vrai
+S1,C2 part des cellules humaines gardees,1,B,0.9985,0.99,vrai
+S1,C3 part des personnes a moins de 10 cellules,1,B,0.0,0.01,vrai
+S1,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1,C1 couverture minimale d'un item,1,A,0.311,0.25,vrai
+S1,C2 part des cellules humaines gardees,1,A,0.9979243542435424,0.99,vrai
+S1,C4 unites indivisibles dans B,1,B,21,10,vrai
+S1,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1,C1 couverture minimale d'un item,2,B,0.311,0.25,vrai
+S1,C2 part des cellules humaines gardees,2,B,0.9974814814814815,0.99,vrai
+S1,C3 part des personnes a moins de 10 cellules,2,B,0.0,0.01,vrai
+S1,C3 au moins une cellule par personne,2,A,26,1,vrai
+S1,C1 couverture minimale d'un item,2,A,0.319,0.25,vrai
+S1,C2 part des cellules humaines gardees,2,A,0.9984554441052479,0.99,vrai
+S1,C4 unites indivisibles dans B,2,B,16,10,vrai
+S1,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1,C1 couverture minimale d'un item,3,B,0.319,0.25,vrai
+S1,C2 part des cellules humaines gardees,3,B,0.9984020453819111,0.99,vrai
+S1,C3 part des personnes a moins de 10 cellules,3,B,0.001,0.01,vrai
+S1,C3 au moins une cellule par personne,3,A,30,1,vrai
+S1,C1 couverture minimale d'un item,3,A,0.311,0.25,vrai
+S1,C2 part des cellules humaines gardees,3,A,0.9980175438596491,0.99,vrai
+S1,C4 unites indivisibles dans B,3,B,18,10,vrai
+S1,T chute A du temoin B0 mode,1,A,0.00022041902473701747,0.005,vrai
+S1,T chute A du temoin B0 mode,2,A,7.434708108988719e-05,0.005,vrai
+S1,T chute A du temoin B0 mode,3,A,0.00027087711438100737,0.005,vrai
+S1,T chute A du temoin B0 tirage,1,A,0.0013517110891134165,0.005,vrai
+S1,T chute A du temoin B0 tirage,2,A,0.0009095079160054698,0.005,vrai
+S1,T chute A du temoin B0 tirage,3,A,6.415072852383741e-05,0.005,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Absolute vs. relative,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Allais,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,1,A,49,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,3,B,22,1,vrai
+principal sans Anchoring African,C3 au moins une cellule par personne,3,A,57,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Anchoring redwood,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Disease,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,1,B,20,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,2,A,43,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans False consensus,C3 au moins une cellule par personne,3,A,47,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,1,A,47,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,2,B,24,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,2,A,53,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Less is More + Proportion dominance,C3 au moins une cellule par personne,3,A,54,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,1,A,47,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,2,B,24,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,2,A,53,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Linda,C3 au moins une cellule par personne,3,A,54,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Myside,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,1,A,41,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,2,B,19,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,2,A,51,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,3,B,22,1,vrai
+principal sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,3,A,48,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,1,B,29,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,1,A,50,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,3,B,23,1,vrai
+principal sans Outcome bias,C3 au moins une cellule par personne,3,A,56,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,1,A,44,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,2,A,47,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,3,B,17,1,vrai
+principal sans Probability matching,C3 au moins une cellule par personne,3,A,57,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,1,B,17,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,1,A,23,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,2,B,14,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,2,A,26,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,3,B,9,1,vrai
+principal sans Product Preferences - Pricing,C3 au moins une cellule par personne,3,A,31,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,1,B,30,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,1,A,49,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,2,B,27,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,2,A,52,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,3,B,22,1,vrai
+principal sans WTA/WTP Thaler,C3 au moins une cellule par personne,3,A,57,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Absolute vs. relative,C3 au moins une cellule par personne,3,A,29,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Allais,C3 au moins une cellule par personne,3,A,29,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,1,A,22,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,3,B,8,1,vrai
+S1 sans Anchoring African,C3 au moins une cellule par personne,3,A,30,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Anchoring redwood,C3 au moins une cellule par personne,3,A,29,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Disease,C3 au moins une cellule par personne,3,A,29,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,1,B,6,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,2,A,16,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans False consensus,C3 au moins une cellule par personne,3,A,20,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,1,A,20,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,2,B,11,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,2,A,26,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Less is More + Proportion dominance,C3 au moins une cellule par personne,3,A,27,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,1,A,20,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,2,B,11,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,2,A,26,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Linda,C3 au moins une cellule par personne,3,A,27,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Myside,C3 au moins une cellule par personne,3,A,29,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,1,B,15,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,1,A,14,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,2,B,6,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,2,A,24,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,3,B,8,1,vrai
+S1 sans Non-experimental heuristics and biases,C3 au moins une cellule par personne,3,A,21,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,1,A,23,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,3,B,9,1,vrai
+S1 sans Outcome bias,C3 au moins une cellule par personne,3,A,30,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,1,A,17,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,2,A,19,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,3,B,3,1,vrai
+S1 sans Probability matching,C3 au moins une cellule par personne,3,A,30,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,1,A,20,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,2,B,11,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,2,A,24,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,3,B,8,1,vrai
+S1 sans Product Preferences - Pricing,C3 au moins une cellule par personne,3,A,28,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,1,B,16,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,1,A,22,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,2,B,14,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,2,A,25,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,3,B,8,1,vrai
+S1 sans WTA/WTP Thaler,C3 au moins une cellule par personne,3,A,30,1,vrai
+S2,C3 au moins une cellule par personne,1,B,30,1,vrai
+S2,C1 couverture minimale d'un item,1,B,0.4873663751214772,0.25,vrai
+S2,C2 part des cellules humaines gardees,1,B,1.0,0.99,vrai
+S2,C3 part des personnes a moins de 10 cellules,1,B,0.0,0.01,vrai
+S2,C3 au moins une cellule par personne,1,A,50,1,vrai
+S2,C1 couverture minimale d'un item,1,A,0.3163265306122449,0.25,vrai
+S2,C2 part des cellules humaines gardees,1,A,1.0,0.99,vrai
+S2,C4 unites indivisibles dans B,1,B,21,10,vrai
+S2,C3 au moins une cellule par personne,2,B,27,1,vrai
+S2,C1 couverture minimale d'un item,2,B,0.3163265306122449,0.25,vrai
+S2,C2 part des cellules humaines gardees,2,B,1.0,0.99,vrai
+S2,C3 part des personnes a moins de 10 cellules,2,B,0.0,0.01,vrai
+S2,C3 au moins une cellule par personne,2,A,53,1,vrai
+S2,C1 couverture minimale d'un item,2,A,0.3270165208940719,0.25,vrai
+S2,C2 part des cellules humaines gardees,2,A,1.0,0.99,vrai
+S2,C4 unites indivisibles dans B,2,B,16,10,vrai
+S2,C3 au moins une cellule par personne,3,B,23,1,vrai
+S2,C1 couverture minimale d'un item,3,B,0.3270165208940719,0.25,vrai
+S2,C2 part des cellules humaines gardees,3,B,1.0,0.99,vrai
+S2,C3 part des personnes a moins de 10 cellules,3,B,0.0,0.01,vrai
+S2,C3 au moins une cellule par personne,3,A,57,1,vrai
+S2,C1 couverture minimale d'un item,3,A,0.3163265306122449,0.25,vrai
+S2,C2 part des cellules humaines gardees,3,A,1.0,0.99,vrai
+S2,C4 unites indivisibles dans B,3,B,18,10,vrai
+S2,T chute A du temoin B0 mode,1,A,0.0003112118921642093,0.005,vrai
+S2,T chute A du temoin B0 mode,2,A,8.777157243011757e-05,0.005,vrai
+S2,T chute A du temoin B0 mode,3,A,0.0003670315243892164,0.005,vrai
+S2,T chute A du temoin B0 tirage,1,A,0.0015671903682107358,0.005,vrai
+S2,T chute A du temoin B0 tirage,2,A,0.0011045671874462815,0.005,vrai
+S2,T chute A du temoin B0 tirage,3,A,2.557413943116149e-06,0.005,vrai

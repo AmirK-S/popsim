@@ -1,0 +1,13 @@
+  pli 1/5, 29s
+  pli 2/5, 29s
+  pli 3/5, 28s
+  pli 4/5, 29s
+  pli 5/5, 29s
+  pli 1/5, 29s
+  pli 2/5, 28s
+  pli 3/5, 29s
+  pli 4/5, 28s
+  pli 5/5, 29s
+principal : {'statut': 'ferme', 'R1': False, 'R2': False, 'R3': False, 'R4_ferme': False, 'affaibli_sans': [], 'delta': 0.02661329732122164, 'ic_bas': 0.002610425311470005, 'ic_haut': 0.041220789103449784, 'perte_B_PMM': [0.3723820514600398, 0.38204177614608453, 0.41642762465004407], 'perte_B_c_diag': [0.3300346499143876, 0.3240698748635257, 0.32541795185983297]}
+S1 : {'statut': 'ferme', 'R1': False, 'R2': False, 'R3': False, 'R4_ferme': False, 'affaibli_sans': ['Product Preferences - Pricing'], 'delta': 0.020779064144457866, 'ic_bas': 0.00018375197261969283, 'ic_haut': 0.04113562481775596, 'perte_B_PMM': [0.3703249545421617, 0.3826841049382716, 0.41789691108112165], 'perte_B_c_diag': [0.31821834184535885, 0.3278160493827161, 0.32872601950977237]}
+lecture : ferme

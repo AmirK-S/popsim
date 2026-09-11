@@ -1,0 +1,150 @@
+analyse,rotation,cle,valeur
+S1,,statut,ferme
+S2,,delta,0.02661329732122164
+S2,1,c_diag,Text Persona - Gemini-Flash2.5
+S2,1,c_exa,JSON Persona - GPT4.1
+S2,1,delta_r,0.03127169235040961
+S2,2,c_diag,Text Persona - Gemini-Flash2.5
+S2,2,c_exa,JSON Persona - GPT4.1
+S2,2,delta_r,0.023189840310021748
+S2,3,c_diag,Text Persona - Gemini-Flash2.5
+S2,3,c_exa,JSON Persona - GPT4.1
+S2,3,delta_r,0.025378359303233566
+S3,,delta,0.0
+S3,1,c_diag,JSON Persona - GPT4.1
+S3,1,c_exa,JSON Persona - GPT4.1
+S3,1,delta_r,0.0
+S3,2,c_diag,JSON Persona - GPT4.1
+S3,2,c_exa,JSON Persona - GPT4.1
+S3,2,delta_r,0.0
+S3,3,c_diag,JSON Persona - GPT4.1
+S3,3,c_exa,JSON Persona - GPT4.1
+S3,3,delta_r,0.0
+S4,,delta,0.023380447954045442
+S4,1,c_diag,Text Persona - Gemini-Flash2.5
+S4,1,c_exa,JSON Persona - GPT4.1
+S4,1,delta_r,0.024084872044055627
+S4,2,c_diag,Text Persona - Gemini-Flash2.5
+S4,2,c_exa,JSON Persona - GPT4.1
+S4,2,delta_r,0.02067811251484719
+S4,3,c_diag,Text Persona - Gemini-Flash2.5
+S4,3,c_exa,JSON Persona - GPT4.1
+S4,3,delta_r,0.02537835930323351
+S5,,delta,0.02661329732122164
+S5,1,c_diag,Text Persona - Gemini-Flash2.5
+S5,1,c_exa,JSON Persona - GPT4.1
+S5,1,delta_r,0.03127169235040961
+S5,2,c_diag,Text Persona - Gemini-Flash2.5
+S5,2,c_exa,JSON Persona - GPT4.1
+S5,2,delta_r,0.023189840310021748
+S5,3,c_diag,Text Persona - Gemini-Flash2.5
+S5,3,c_exa,JSON Persona - GPT4.1
+S5,3,delta_r,0.025378359303233566
+S6,,perte_B_c_diag,0.3300346499143876;0.3240698748635257;0.32541795185983297
+S6,,perte_B_B0 mode_t1,0.35497420056457957;0.3547385091602778;0.37305108378755225
+S6,,perte_B_B0 mode_S6,0.3551199731593318;0.3545267489711934;0.37305108378755225
+S6,,perte_B_B0 tirage_t1,0.4135913276875376;0.41727615208340835;0.4482425130162486
+S6,,perte_B_B0 tirage_S6,0.417328775047434;0.41946574044079715;0.4473481594155951
+S6,,perte_B_B1 argmax_t1,0.3497418899532602;0.36560786572124443;0.38210494687868246
+S6,,perte_B_B1 argmax_S6,0.35204613818316444;0.36442788755713923;0.3828302887752755
+S6,,perte_B_B2 argmax_t1,0.34847708130871397;0.350391126468224;0.3716105719950736
+S6,,perte_B_B2 argmax_S6,0.34821307094266274;0.3501883645874575;0.37019744635834545
+S6,,perte_B_PMM k=10_t1,0.3723820514600398;0.38204177614608453;0.41642762465004407
+S6,,perte_B_PMM k=10_S6,0.3727685802212042;0.3842577595412063;0.41763105057988226
+S6,,R4_ferme_S6,faux
+S7,,Persona Summary - GPT4.1-mini | exa_A,0.5331342907533384;0.5629413348542708;0.46899561829744424
+S7,,Persona Summary - GPT4.1-mini | chute_A,0.15615040492387433;0.1674644881360119;0.11965074250251473
+S7,,Persona Summary - GPT4.1-mini | perte_B,0.3469997454764218;0.3473329014145341;0.36120774511783094
+S7,,Persona Summary - JSON Persona - GPT4.1-mini | exa_A,0.4810250872835907;0.5204850465272409;0.4230047908887866
+S7,,Persona Summary - JSON Persona - GPT4.1-mini | chute_A,0.11751539430587049;0.13753745002990075;0.09202649480844971
+S7,,Persona Summary - JSON Persona - GPT4.1-mini | perte_B,0.38597737054005277;0.4059754766103972;0.40987137896336356
+S8,1,delta_r,0.03127169235040961
+S8,1,c_diag,Text Persona - Gemini-Flash2.5
+S8,1,c_exa,JSON Persona - GPT4.1
+S8,1,part_coincidence_bootstrap,0.2765
+S8,1,meilleur_adversaire_par_exa_A,B2 argmax
+S8,1,perte_B_meilleur_adversaire,0.34847708130871397
+S8,1,perte_B_borne_B0 mode,0.35497420056457957
+S8,1,perte_B_borne_B0 tirage,0.4135913276875376
+S8,1,perte_B_borne_B1 argmax,0.3497418899532602
+S8,2,delta_r,0.023189840310021748
+S8,2,c_diag,Text Persona - Gemini-Flash2.5
+S8,2,c_exa,JSON Persona - GPT4.1
+S8,2,part_coincidence_bootstrap,0.0755
+S8,2,meilleur_adversaire_par_exa_A,B2 argmax
+S8,2,perte_B_meilleur_adversaire,0.350391126468224
+S8,2,perte_B_borne_B0 mode,0.3547385091602778
+S8,2,perte_B_borne_B0 tirage,0.41727615208340835
+S8,2,perte_B_borne_B1 argmax,0.36560786572124443
+S8,3,delta_r,0.025378359303233566
+S8,3,c_diag,Text Persona - Gemini-Flash2.5
+S8,3,c_exa,JSON Persona - GPT4.1
+S8,3,part_coincidence_bootstrap,0.001
+S8,3,meilleur_adversaire_par_exa_A,B2 argmax
+S8,3,perte_B_meilleur_adversaire,0.3716105719950736
+S8,3,perte_B_borne_B0 mode,0.37305108378755225
+S8,3,perte_B_borne_B0 tirage,0.4482425130162486
+S8,3,perte_B_borne_B1 argmax,0.38210494687868246
+L15,1,candidate_omise,Demographics Only - GPT4.1-mini
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,JSON Persona - GPT4.1
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,Text Persona (Default Temperature) - GPT4.1-mini
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,Text Persona (Reasoning) - GPT4.1-mini
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,Text Persona (Repeating Questions) - GPT4.1-mini
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,Text Persona - GPT4.1-mini
+L15,1,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,1,diagnostic_change,faux
+L15,1,candidate_omise,Text Persona - Gemini-Flash2.5
+L15,1,c_diag_sans_omise,JSON Persona - GPT4.1
+L15,1,diagnostic_change,vrai
+L15,2,candidate_omise,Demographics Only - GPT4.1-mini
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,JSON Persona - GPT4.1
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,Text Persona (Default Temperature) - GPT4.1-mini
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,Text Persona (Reasoning) - GPT4.1-mini
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,Text Persona (Repeating Questions) - GPT4.1-mini
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,Text Persona - GPT4.1-mini
+L15,2,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,2,diagnostic_change,faux
+L15,2,candidate_omise,Text Persona - Gemini-Flash2.5
+L15,2,c_diag_sans_omise,Text Persona (Reasoning) - GPT4.1-mini
+L15,2,diagnostic_change,vrai
+L15,3,candidate_omise,Demographics Only - GPT4.1-mini
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,JSON Persona - GPT4.1
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,Text Persona (Default Temperature) - GPT4.1-mini
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,Text Persona (Reasoning) - GPT4.1-mini
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,Text Persona (Repeating Questions) - GPT4.1-mini
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,Text Persona - GPT4.1-mini
+L15,3,c_diag_sans_omise,Text Persona - Gemini-Flash2.5
+L15,3,diagnostic_change,faux
+L15,3,candidate_omise,Text Persona - Gemini-Flash2.5
+L15,3,c_diag_sans_omise,Text Persona (Reasoning) - GPT4.1-mini
+L15,3,diagnostic_change,vrai
