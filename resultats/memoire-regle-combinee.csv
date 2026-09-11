@@ -1,0 +1,2 @@
+n_personnes,n_cellules,part_cellules_basculees,exactitude_persistance,exactitude_persistance_ic_bas,exactitude_persistance_ic_haut,exactitude_combinee,exactitude_combinee_ic_bas,exactitude_combinee_ic_haut,gain_combinee_moins_persistance
+1000,81879,0.3134136958194409,0.7060906948057499,0.6751024809355272,0.7366290000118171,0.612257111102969,0.5782446899252124,0.6454829860900982,-0.09383358370278094
