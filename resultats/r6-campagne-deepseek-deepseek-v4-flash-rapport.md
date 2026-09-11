@@ -8,8 +8,8 @@
 - Plancher machine A4 requis: **true**
 - État: **interrompu; reprise exacte requise**
 
-- f1: 240 réponses, 0 rejets de parse, 0 incidents de transport, 0.0038425464 USD annoncés.
+- f1: 445 réponses, 0 rejets de parse, 0 incidents de transport, 6 429 ambigus rapprochés non facturés puis rejoués, 0.0071484826 USD annoncés.
 
-Coût campagne annoncé cumulé: **0.0038425464 USD**. Aucun contenu brut, identifiant d'appel ou secret n'est publié.
+Coût campagne annoncé cumulé: **0.0071484826 USD**. Aucun contenu brut, identifiant d'appel ou secret n'est publié.
 
 Ce modèle reste descriptif; ses résultats ne deviennent pas confirmatoires.
