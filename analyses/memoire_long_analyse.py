@@ -38,6 +38,9 @@ from sklearn.metrics import roc_auc_score
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from memoire_long_gss import PANELS, TRACES, charger_panel_libelle  # noqa: E402
+from a5_agents_locaux_gss import canoniser, nomenclature  # noqa: E402
+
+SEUIL_IA_MANQUANTE = 0.05  # part max de cellules sans prediction IA exploitable, sinon abandon
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SORTIE = os.path.join(RACINE, "resultats")
@@ -67,10 +70,47 @@ def charger_trace(chemin):
     return pd.DataFrame(lignes)
 
 
+def construire_alias_etendu(table):
+    """Etend vers_canonique (a5, case-fold strict) d'un alias par item pour les vagues du
+    panel ou le libelle Stata omet un prefixe de politesse present dans la nomenclature
+    officielle (ex. colcom/y : options ["Yes, fired", "Not fired"], mais certaines vagues
+    du panel etiquettent la modalite juste "fired"/"FIRED", pas "yes, fired"). Sans cet
+    alias, ces cellules seraient perdues (verite non reconnue) alors que la modalite ne
+    fait aucun doute : meme variable, domaine binaire, meme option. Ne modifie ni la
+    nomenclature ni aucun calcul en aval, seulement la lecture de la verite."""
+    etendus = {}
+    for item, info in table.items():
+        etendu = dict(info["vers_canonique"])
+        for o in info["options"]:
+            o_l = o.lower().strip()
+            for prefixe in ("yes, ", "no, "):
+                if o_l.startswith(prefixe):
+                    etendu.setdefault(o_l[len(prefixe):], o)
+        etendus[item] = etendu
+    return etendus
+
+
+def canoniser_verite(item, valeur, table, alias_etendu):
+    """Ramene un libelle brut du panel a l'ecriture officielle de sa modalite (la meme
+    que celle ecrite dans reponse_modele par memoire_long_gss.py/parser_lettre), pour que
+    la comparaison verite == ia porte sur la meme casse et le meme libelle. Sans ceci,
+    l'IA n'est jamais reconnue egale a la verite (elle est deja canonique ; la verite
+    relue depuis le panel Stata ne l'est pas), ce qui degenere silencieusement en une
+    exactitude IA nulle."""
+    c = canoniser(item, valeur, table)
+    if c is not None:
+        return c
+    if valeur is None or (isinstance(valeur, float) and pd.isna(valeur)):
+        return None
+    return alias_etendu.get(item, {}).get(str(valeur).lower().strip())
+
+
 def charger_verite(echantillon, items_cibles):
     """Recharge, panel par panel, les reponses des personnes de l'echantillon aux items
     cibles, aux trois vagues. N'a besoin d'AUCUN item de contexte : plus rapide que la
     collecte, qui doit construire le profil complet."""
+    table = nomenclature()
+    alias_etendu = construire_alias_etendu(table)
     morceaux = []
     for nom_panel, sous in echantillon.groupby("panel"):
         table_p, _, _, _ = charger_panel_libelle(nom_panel, [], items_cibles)
@@ -86,6 +126,9 @@ def charger_verite(echantillon, items_cibles):
                 col = f"cible::{it}@{annee1 + h}"
                 base[f"verite_{h}"] = table_p[col].values if col in table_p.columns \
                     else None
+            for col in ["persistance"] + [f"verite_{h}" for h in HORIZONS]:
+                base[col] = base[col].map(
+                    lambda v: canoniser_verite(it, v, table, alias_etendu))
             morceaux.append(base)
     return pd.concat(morceaux, ignore_index=True)
 
@@ -330,8 +373,16 @@ def main():
 
     long_df = verite_longue.merge(trace, on=["panel", "ligne", "item", "horizon"],
                                   how="left")
+    part_ia = long_df["ia"].notna().mean()
     print(f"{len(long_df)} cellules attendues, {long_df['ia'].notna().sum()} avec une "
-          f"reponse IA exploitable ({long_df['ia'].notna().mean():.1%})")
+          f"reponse IA exploitable ({part_ia:.1%})")
+    if part_ia < 1 - SEUIL_IA_MANQUANTE:
+        sys.exit(
+            f"ECHEC : {1 - part_ia:.1%} des cellules n'ont pas de prediction IA "
+            f"exploitable apres jointure (seuil {SEUIL_IA_MANQUANTE:.0%}). Verifier la "
+            f"trace ({chemin_trace}), la cle de jointure (panel, ligne, item, horizon) "
+            f"et le format des reponses avant de continuer -- ne pas les compter comme "
+            f"fausses.")
 
     table = pd.DataFrame([l for h in HORIZONS for l in rapport_horizon(long_df, h)])
     os.makedirs(SORTIE, exist_ok=True)
