@@ -70,28 +70,36 @@ réponses détenues par l'attaquant.
 Carlini et al. (USENIX Security 2021, arXiv 2012.07805, https://arxiv.org/abs/2012.07805) :
 mémorisation et régurgitation de séquences d'entraînement. Staab, Vero, Balunović et Vechev (ICLR
 2024, arXiv 2310.07298, https://arxiv.org/abs/2310.07298) : inférence d'attributs personnels à
-partir de texte libre anodin. Ko, Jeong, Thakur, Kim et Jia (2026, *From Weak Cues to Real
-Identities: Inference-Driven De-Anonymization in LLM Agents*, arXiv 2603.18382,
-https://arxiv.org/abs/2603.18382) et Carlini et Tramèr (2026, *Large-scale online deanonymization
-with LLMs*, arXiv 2602.16800, https://arxiv.org/abs/2602.16800, 68 % de rappel à 90 % de
-précision) désanonymisent des auteurs de texte en ligne par inférence agentique.
-**Ce qui nous distingue :** ces trois registres partent de texte libre porteur d'indices
-sémantiques directs (un lieu, une habitude décrite en mots) ou de mémorisation de séquences
-d'entraînement. Notre canal est plus étroit et plus sec : un vecteur de réponses catégorielles à
-choix fermés (achète / n'achète pas), sans texte libre ni mémorisation, établi par ablation en H3
-(`c7-mecanisme-resultats.md`).
+partir de texte libre anodin. Ko, Jeong, Thakur, Kim et Jia (ICML 2026, *From Weak Cues to Real
+Identities: Evaluating Inference-Driven De-Anonymization in LLM Agents*, arXiv 2603.18382,
+https://arxiv.org/abs/2603.18382) désanonymisent des auteurs de texte en ligne par inférence
+agentique multi-indices : c'est le voisin le plus menaçant de cette section, sur le même objet
+(désanonymisation par agent LLM). Lermen, Paleka, Swanson, Aerni, Carlini et Tramèr (préprint 2026,
+sans lieu de publication confirmé, *Large-Scale Online Deanonymization with LLMs*, arXiv
+2602.16800, https://arxiv.org/abs/2602.16800, 68 % de rappel à 90 % de précision) démontrent la
+même attaque à grande échelle.
+**Ce qui nous distingue :** Ko et al. et Lermen et al., comme Carlini et Staab, partent de texte
+libre porteur d'indices sémantiques directs (un lieu, une habitude décrite en mots), agrégés par un
+agent qui raisonne sur ce texte. Notre canal est plus étroit et plus sec : un vecteur de réponses
+catégorielles à choix fermés (achète / n'achète pas), sans texte libre, sans raisonnement agentique
+et sans mémorisation, établi par ablation en H3 (`c7-mecanisme-resultats.md`).
 
 ## 4. Simulation de répondants et jumeaux
 
 Argyle et al. (*Political Analysis* 2023, arXiv 2209.06899) lancent l'usage de LLM comme
-substituts de panels. Park et al. (2024, arXiv 2411.10109) restreignent l'accès aux réponses
-individuelles de leurs 1 052 agents « pour raison de vie privée » — un risque anticipé jamais
-mesuré. Toubia et al. (2025, Twin-2K-500, arXiv 2505.17479) publient le panel de 2 058 jumeaux que
-nous attaquons, sans traiter vie privée ni liaison. Peng et al. (2509.19088) documentent des
-distorsions de fidélité de groupe sur ce même panel, sans lien avec la ré-identification. Bonagiri
-et al. (2026, *Cognitive Digital Twins: Ethical Risks and Governance*, arXiv 2606.23094,
-https://arxiv.org/abs/2606.23094) formulent un appel normatif à évaluer ces risques sans les
-mesurer : nous y répondons par une mesure chiffrée.
+substituts de panels. Park et al. (11 auteurs, préprint, titre courant depuis juin 2026 *LLM
+Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals* — la v1 de
+novembre 2024, arXiv 2411.10109, portait le titre *Generative Agent Simulations of 1,000 People*,
+encore le plus connu) restreignent l'accès aux réponses individuelles de leurs 1 052 agents « pour
+raison de vie privée » — un risque anticipé jamais mesuré. Toubia et al. (2025, Twin-2K-500, arXiv
+2505.17479) publient le panel de 2 058 jumeaux que nous attaquons, sans traiter vie privée ni
+liaison. Peng, Gui, Brucks, Merlau, Fan et al. (*Digital twins are funhouse mirrors: Five
+systematic distortions*, *Science Advances* 12(36), eaeh8260, 2 septembre 2026, doi
+10.1126/sciadv.aeh8260 — le titre du préprint arXiv différait) documentent des distorsions de
+fidélité de groupe sur ce même panel, sans lien avec la ré-identification. Bonagiri et al. (AIES
+2026, *Cognitive Digital Twins: Ethical Risks and Governance for AI Systems That Model the Mind*,
+arXiv 2606.23094, https://arxiv.org/abs/2606.23094) formulent un appel normatif à évaluer ces
+risques sans les mesurer : nous y répondons par une mesure chiffrée.
 **Ce qui nous distingue :** aucun de ces travaux, ni les cinq de la veille d'antériorité (Ahn et
 al. 2608.29455, Wang et al. 2609.07987, Chen et al. 2607.26348, Choi et al. 2606.28963,
 `veille-anteriorite-2026-09-11.md` §2), ne mesure de taux de ré-identification à partir de sorties
