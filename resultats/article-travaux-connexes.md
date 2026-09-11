@@ -78,11 +78,24 @@ agentique multi-indices : c'est le voisin le plus menaçant de cette section, su
 sans lieu de publication confirmé, *Large-Scale Online Deanonymization with LLMs*, arXiv
 2602.16800, https://arxiv.org/abs/2602.16800, 68 % de rappel à 90 % de précision) démontrent la
 même attaque à grande échelle.
+Sur le plan théorique, Yeom, Giacomelli, Fredrikson et Jha (CSF 2018, *Privacy Risk in Machine
+Learning: Analyzing the Connection to Overfitting*, arXiv 1709.01604 **[identifiant à confirmer
+avant dépôt]**) relient l'attaque d'appartenance au sur-apprentissage, et Feldman (STOC 2020, *Does
+Learning Require Memorization? A Short Tale about a Long Tail*, arXiv 1906.05271 **[identifiant à
+confirmer]**) montre que mémoriser les cas rares est nécessaire à la généralisation d'un modèle
+entraîné sur la population. Bun, Ullman et Vadhan (STOC 2014, codes de traçage, arXiv 1311.3158
+**[à confirmer]**) et Dwork, Smith, Steinke, Ullman et Vadhan (FOCS 2015, *Robust Traceability from
+Trace Amounts*, arXiv 1502.02486 **[à confirmer]**) sont le parent formel le plus proche de notre
+attaque 1-parmi-N : ils bornent le pire cas d'un adversaire optimal qui retrouve un individu dans
+des statistiques agrégées, mais en dimension très supérieure au nombre d'individus.
 **Ce qui nous distingue :** Ko et al. et Lermen et al., comme Carlini et Staab, partent de texte
 libre porteur d'indices sémantiques directs (un lieu, une habitude décrite en mots), agrégés par un
 agent qui raisonne sur ce texte. Notre canal est plus étroit et plus sec : un vecteur de réponses
 catégorielles à choix fermés (achète / n'achète pas), sans texte libre, sans raisonnement agentique
-et sans mémorisation, établi par ablation en H3 (`c7-mecanisme-resultats.md`).
+et sans mémorisation, établi par ablation en H3 (`c7-mecanisme-resultats.md`). À la différence de
+Yeom et Feldman, notre pipeline n'entraîne aucun modèle sur la population cible : la personne
+n'appartient à aucun jeu d'entraînement, et la fidélité individuelle vient du conditionnement par
+persona, pas d'un écart train/test.
 
 ## 4. Simulation de répondants et jumeaux
 
@@ -105,7 +118,32 @@ al. 2608.29455, Wang et al. 2609.07987, Chen et al. 2607.26348, Choi et al. 2606
 `veille-anteriorite-2026-09-11.md` §2), ne mesure de taux de ré-identification à partir de sorties
 de jumeaux. C'est le trou que nous comblons.
 
-## 5. Notre position
+## 5. Antériorité la plus proche et contradicteurs
+
+Ward, Lin, Wang et Cheng (2025, *Synth-MIA: A Testbed for Auditing Privacy Leakage in Tabular Data
+Synthesis*, arXiv 2509.18014, https://arxiv.org/abs/2509.18014) testent 13 attaques sur 9
+générateurs et 48 jeux tabulaires, et leur section 5.2.1 énonce en prose une relation proche de la
+nôtre entre qualité et fuite. Byun et al. (KDD Workshop 2025, arXiv 2507.17066,
+https://arxiv.org/abs/2507.17066) observent une frontière quasi monotone du même type, sans
+coefficient. Trois différences les séparent de notre thèse : leur qualité est **agrégée** (MMD,
+divergence de Jensen-Shannon, AUC en aval) et jamais une correspondance à la bonne personne ; leur
+risque est l'**appartenance** au jeu d'entraînement, pas l'identification 1-parmi-N dans un pool
+fermé ou ouvert ; et ils ne publient **aucun coefficient** pour cette relation — le seul chiffré
+dans Synth-MIA est DCR contre Max-AUC, r = 0,225, une corrélation faible entre deux métriques
+agrégées, pas entre fidélité individuelle et fuite individuelle.
+
+Trois contradicteurs soutiennent au contraire que fidélité et risque se séparent. Platzer et
+Reutterer (2021, arXiv 2104.00635, https://arxiv.org/abs/2104.00635) défendent la séparabilité.
+Adams et al. (iScience 2025 **[DOI à confirmer avant dépôt]**) concluent qu'un générateur
+synthétique sans garantie formelle conserve fidélité et utilité sans atteinte évidente à la vie
+privée. Un préprint 2026 (arXiv 2605.06835, https://arxiv.org/abs/2605.06835) observe au contraire
+un découplage où le risque croît quand la qualité sature. Notre réponse : les trois mesurent une
+fidélité **agrégée** (distributionnelle ou d'utilité aval), jamais la correspondance individuelle à
+la bonne personne, qui est précisément notre axe (`c7-compromis-resultats.md`). Une analyse de
+robustesse par retrait de famille de prédicteurs, destinée à écarter l'artefact d'un axe qui ne
+tiendrait que par construction de l'échantillon des 12 points, est en cours.
+
+## 6. Notre position
 
 La thèse n'est plus « les jumeaux LLM fuient, contrairement aux prédicteurs statistiques de même
 exactitude ». Sur 12 prédicteurs confondus — 8 jumeaux LLM et 4 repères statistiques
@@ -129,20 +167,29 @@ bon marché à partir d'un profil brut, n'identifient presque personne (0 % à 0
 partir d'un entretien seul, sans aucune réponse d'enquête, en identifient 44,7 % sur 1 052,
 contamination par recopie exclue par un test de symétrie (`c7-stanford-provenance-resultats.md`).
 Le risque documenté n'est donc pas une propriété générique de « donner un profil à un LLM » : il
-dépend de la recette. **Troisièmement**, une défense (D4, section 6) qui casse spécifiquement la
+dépend de la recette. **Troisièmement**, une défense (D4, section 7) qui casse spécifiquement la
 fidélité individuelle — donc, sur cet axe, l'identifiabilité — tout en préservant exactement les
 marges de groupe publiées.
 
-## 6. Défenses
+## 7. Défenses
 
-Réduire la fuite sans détruire l'utilité est testé, pas supposé (`c7-defense-resultats.md`) :
-mélanger les 40 réponses d'achat entre personnes du même segment démographique (D4) ramène le
-top-1 de 20,68 % à 0,13 %, pour 1,47 point de perte d'utilité, concentrée entièrement sur les
-corrélations entre items (4,4 points) — distribution par item et écarts entre groupes restent
-exacts par construction. Ce compromis se compare directement à la littérature du DCR (Yao et al.,
-Ganev et De Cristofaro) qui interroge le rapport risque/utilité des défenses par similarité : ici
-le coût mesuré (1,47 point) est inférieur à l'écart déjà présent entre jumeau non protégé et
-humains sur ce même indicateur (5,8 points).
+Notre défense D4 n'est pas un mécanisme neuf : mélanger les réponses entre unités d'un même
+segment est une variante du Post Randomisation Method (PRAM ; Gouweleeuw, Kooiman, Willenborg et de
+Wolf, *Journal of Official Statistics* 1998 **[URL stable à confirmer avant dépôt]**), qui perturbe
+les variables catégorielles par une matrice de transition connue en laissant les marges invariantes
+en espérance, et du data swapping, qui les préserve exactement aux agrégations hautes — la même
+famille que la tradition des données partiellement synthétiques de Reiter et Drechsler, prolongée
+par Drechsler (2024, arXiv 2409.04257, https://arxiv.org/abs/2409.04257) et Bowen et al. (arXiv
+2308.00872, https://arxiv.org/abs/2308.00872). Ce qui est neuf est l'application de ce mécanisme
+ancien à des jumeaux LLM, avec une courbe risque-utilité mesurée et non supposée
+(`c7-defense-resultats.md`) : mélanger les 40 réponses d'achat entre personnes du même segment
+démographique (D4) ramène le top-1 de 20,68 % à 0,13 %, pour 1,47 point de perte d'utilité,
+concentrée entièrement sur les corrélations entre items (4,4 points) — distribution par item et
+écarts entre groupes restent exacts par construction, comme le prédit le PRAM. Ce compromis se
+compare directement à la littérature du DCR (Yao et al., Ganev et De Cristofaro, section 1) qui
+interroge le rapport risque/utilité des défenses par similarité : ici le coût mesuré (1,47 point)
+est inférieur à l'écart déjà présent entre jumeau non protégé et humains sur ce même indicateur
+(5,8 points).
 
 ## Objections les plus probables
 
@@ -152,6 +199,7 @@ humains sur ce même indicateur (5,8 points).
 | « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
 | « Le persona contient déjà les réponses de la vague cible : fuite triviale. » | Audit de provenance : 0 colonne et 0 QID de vague 4 dans le contexte ; symétrie 37,7 % vs 37,9 % ; canal de randomisation écarté. | `c7-contre-examen-2026-09-11.md` §2 ; ablation H3 (`c7-mecanisme-resultats.md`). |
 | « Ce n'est pas une vraie ré-identification : il faut déjà tenir les réponses réelles de la cible. » | Assumé explicitement : c'est un résultat de linkability (au sens CAP/TCAP et RGPD/G29), pas une identification à partir d'informations publiques ; scénario de menace = détenteur de panel publiant des jumeaux sans clé. | Modèle de menace, `c7-contre-examen-2026-09-11.md` §4 ; brouillon de divulgation responsable. |
+| « Connu depuis 2018 : sur-apprentissage et attaques d'appartenance (Yeom et al.), mémorisation nécessaire à la généralisation (Feldman). » | Ces résultats portent sur un modèle **entraîné** sur la population, avec un écart train/test. Notre pipeline n'entraîne rien : la personne n'appartient à aucun jeu d'entraînement, et la fidélité individuelle vient du conditionnement par persona, pas du sur-ajustement. | Absence de tout entraînement dans le pipeline d'attaque (§3) ; ablation H3 qui localise la fuite dans le motif de réponses, pas dans un modèle appris sur les cibles (`c7-mecanisme-resultats.md`). |
 
 ## Note de méthode
 
