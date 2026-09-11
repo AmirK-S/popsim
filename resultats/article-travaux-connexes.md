@@ -12,22 +12,28 @@ par le coordinateur (URL fournies) ; aucune n'est inventée.
 
 Stadler, Oprisanu et Troncoso (USENIX Security 2022, *Synthetic Data – Anonymisation Groundhog
 Day*, https://arxiv.org/abs/2011.07018) montrent que des données tabulaires générées restent
-reliables à leurs sources. Giomi, Boenisch, Wehmeyer et Tasnádi (PoPETs 2023, *A Unified
-Framework for Quantifying Privacy Risk in Synthetic Data*, Anonymeter, arXiv 2211.10459,
-https://arxiv.org/abs/2211.10459) formalisent trois attaques (singling out, linkability,
-inference) et concluent, sur leurs jeux, à un risque de linkability faible. Cette conclusion est
-contestée : Annamalai, Gadotti et Rocher (USENIX Security 2024, *A Linear Reconstruction Approach
-for Attribute Inference Attacks against Synthetic Data*, https://arxiv.org/abs/2301.10053) et
-Ganev et De Cristofaro (IEEE S&P 2025, *The Inadequacy of Similarity-based Privacy Metrics*
-(ReconSyn), https://arxiv.org/abs/2312.05114 ; *Synthetic Data, Similarity-based Privacy Metrics,
-and Regulatory (Non-)Compliance*, https://arxiv.org/abs/2407.16929 ; *Rethinking Anonymity Claims
-in Synthetic Data Generation*, 2026, https://arxiv.org/abs/2601.22434) montrent que des attaques
-par reconstruction battent les métriques de distance-au-plus-proche-voisin (DCR). Yao, Guépin et
-de Montjoye (ESORICS 2025, *The DCR Delusion*, https://arxiv.org/abs/2505.01524) et Meeus, Guépin,
-Creţu et de Montjoye (ESORICS 2023, *Achilles' Heels*, https://arxiv.org/abs/2306.10308)
-généralisent la critique de la DCR. Le SoK 2026 *Reconstruction Attacks on Synthetic Tabular Data
-(Insights from Winning the NIST CRC)* (https://arxiv.org/abs/2606.08372) fait de ces attaques un
-standard émergent.
+reliables à leurs sources. Giomi, Boenisch, Wehmeyer et Tasnádi (*A Unified Framework for
+Quantifying Privacy Risk in Synthetic Data*, Anonymeter, PoPETs 2023, vol. 2023, n° 2, p. 312-328,
+doi 10.56553/popets-2023-0055, arXiv 2211.10459, https://arxiv.org/abs/2211.10459) formalisent
+trois attaques (singling out, linkability, inference) et concluent, sur leurs jeux, à un risque de
+linkability faible. Cette conclusion est contestée : Annamalai, Gadotti et Rocher (USENIX Security
+2024, *A Linear Reconstruction Approach for Attribute Inference Attacks against Synthetic Data*,
+https://arxiv.org/abs/2301.10053), Ganev et De Cristofaro (IEEE S&P 2025, *The Inadequacy of
+Similarity-based Privacy Metrics: Privacy Attacks against "Truly Anonymous" Synthetic Datasets*,
+https://arxiv.org/abs/2312.05114) et le même Ganev seul (atelier GenLaw @ ICML 2024, *Synthetic
+Data, Similarity-based Privacy Metrics, and Regulatory (Non-)Compliance*,
+https://arxiv.org/abs/2407.16929 ; puis Ganev et De Cristofaro à nouveau, 2026, préprint sans lieu
+de publication confirmé, *Rethinking Anonymity Claims in Synthetic Data Generation: A
+Model-Centric Privacy Attack Perspective*, https://arxiv.org/abs/2601.22434) montrent que des
+attaques par reconstruction battent les métriques de distance-au-plus-proche-voisin (DCR). Yao,
+Krčo, Ganev et de Montjoye (ESORICS 2025, *The DCR Delusion*, doi
+10.1007/978-3-032-07884-1_24, https://arxiv.org/abs/2505.01524) et Meeus, Guépin, Creţu et de
+Montjoye (*Achilles' Heels: Vulnerable Record Identification in Synthetic Data Publishing*,
+ESORICS 2023, doi 10.1007/978-3-031-51476-0_19, https://arxiv.org/abs/2306.10308) généralisent la
+critique de la DCR. Golob, Pentyala et De Cock (préprint 2026, *SoK: Reconstruction Attacks on
+Synthetic Tabular Data (Insights from Winning the NIST CRC)*, « SoK » faisant partie du titre et
+non d'un lieu de publication, https://arxiv.org/abs/2606.08372) font de ces attaques un standard
+émergent.
 **Argument 1 :** Anonymeter conclut à une linkability faible sur ses jeux tabulaires ; notre taux
 (20,7 %, 65,7 %) est un contre-exemple frontal, dans un régime — sorties catégorielles d'un LLM
 conditionné sur une personne — qu'ils n'ont pas testé.
@@ -38,15 +44,18 @@ métrique de similarité substituable à une attaque directe par appariement.
 
 ## 2. Ré-identification de données réelles
 
-Narayanan et Shmatikov (IEEE S&P 2008, https://arxiv.org/abs/cs/0610105) ré-identifient des
+Narayanan et Shmatikov (*Robust De-anonymization of Large Sparse Datasets*, IEEE S&P 2008, doi
+10.1109/SP.2008.33, p. 111-135 ; le préprint arXiv cs/0610105, https://arxiv.org/abs/cs/0610105,
+porte un titre distinct, *How To Break Anonymity of the Netflix Prize Dataset*) ré-identifient des
 utilisateurs Netflix. De Montjoye et al. (*Science* 2015, doi 10.1126/science.1256297) : quatre
 points spatio-temporels suffisent sur des métadonnées de carte bancaire. Rocher, Hendrickx et de
 Montjoye (*Nature Communications* 2019, doi 10.1038/s41467-019-10933-3) donnent un modèle pour
-estimer le risque sur un échantillon incomplet, prolongé par une loi d'échelle (*Nature
-Communications* 2025, *A scaling law to model the effectiveness of identification techniques*,
-https://www.nature.com/articles/s41467-024-55296-6). Taub et Elliot (PSD 2018, CAP et TCAP,
-probabilité d'attribution correcte, doi 10.1007/978-3-319-99771-1_9) fondent la mesure statistique
-du risque de divulgation sur données synthétiques sur le postulat que la génération synthétique
+estimer le risque sur un échantillon incomplet, prolongé par une loi d'échelle (*A scaling law to
+model the effectiveness of identification techniques*, *Nature Communications* 2025,
+https://www.nature.com/articles/s41467-024-55296-6). Taub, Elliot, Pampaka et Smith
+(*Differential Correct Attribution Probability for Synthetic Data: An Exploration*, PSD 2018, LNCS
+11126, p. 122-137) fondent la mesure statistique du risque de divulgation sur données synthétiques
+(CAP, TCAP, probabilité d'attribution correcte) sur le postulat que la génération synthétique
 rompt le lien entre identité et donnée.
 **Argument 2 :** CAP et TCAP postulent que le synthétique rompt ce lien ; c'est ce postulat que
 nous falsifions, sur des microdonnées d'enquête simulées par LLM plutôt que générées par un modèle
@@ -116,6 +125,12 @@ humains sur ce même indicateur (5,8 points).
 
 | Objection | Parade | Expérience à l'appui |
 |---|---|---|
-| « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev et De Cristofaro montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
+| « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
 | « Le persona contient déjà les réponses de la vague cible : fuite triviale. » | Audit de provenance : 0 colonne et 0 QID de vague 4 dans le contexte ; symétrie 37,7 % vs 37,9 % ; canal de randomisation écarté. | `c7-contre-examen-2026-09-11.md` §2 ; ablation H3 (`c7-mecanisme-resultats.md`). |
 | « Ce n'est pas une vraie ré-identification : il faut déjà tenir les réponses réelles de la cible. » | Assumé explicitement : c'est un résultat de linkability (au sens CAP/TCAP et RGPD/G29), pas une identification à partir d'informations publiques ; scénario de menace = détenteur de panel publiant des jumeaux sans clé. | Modèle de menace, `c7-contre-examen-2026-09-11.md` §4 ; brouillon de divulgation responsable. |
+
+## Note de méthode
+
+Toutes les références ci-dessus ont été vérifiées à la source (page arXiv, Crossref, actes
+officiels de la conférence citée) plutôt que reprises de mémoire. La bibliographie BibTeX
+correspondante vit dans `article/references.bib`.
