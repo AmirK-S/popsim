@@ -21,9 +21,10 @@ ORDRE, celui du prereg :
        degre 1 sur les seules candidates), c_diag = argmax residu, c_exa = argmax exa_A,
        perte_B (Q4) ;
   §1   Delta_r, Delta ;
-  §7   bootstrap conjoint personnes x unites, B = 1 000, P = 20, qui refait toute la
-       selection ; les multiplicites deviennent des lignes et des colonnes repetees, ce
-       qui laisse exactitude_codes inchangee ; permutation sur les identites distinctes ;
+  §7   bootstrap conjoint personnes x unites, B = 2 000 (L16, decision du 11 septembre
+       2026), P = 20, qui refait toute la selection ; les multiplicites deviennent des
+       lignes et des colonnes repetees, ce qui laisse exactitude_codes inchangee ;
+       permutation sur les identites distinctes ;
   §9   regle de chute R1 a R4, R3 par retrait de chacune des 14 familles ;
   §10  S1 a S8.
 
@@ -43,6 +44,9 @@ CONVENTIONS QUE LE PREREG NE FIXE PAS A LA LETTRE (declarees ; a trancher avant 
       donne pas de fichier propre.
   I7. S4 et S5 refont le choix avec la variante ; S7 et S8 sont mesurees sur le masque
       des 7 candidates.
+  I8. L15 (§12) : diagnostic de sensibilite descriptif (jackknife de la regression Q3),
+      calcule sur le seul principal, publie dans tab-secondaires.csv (analyse "L15"),
+      sans toucher a c_diag, c_exa ni a la regle de decision.
 
 Usage (reel, seulement apres depot OSF et creation de GO-TAB par le responsable) :
   .venv/bin/python analyses/tab_evaluer.py
@@ -90,8 +94,8 @@ assert GRAINE_ADVERSAIRES == C.GRAINE
 
 P_PERMUTATIONS = 200                 # §5 Q2
 P_PERMUTATIONS_BOOTSTRAP = 20        # §7, par replicat
-B_BOOTSTRAP = 1000                   # §7
-B_BOOTSTRAP_REDUIT = 500             # §7, regle de cout
+B_BOOTSTRAP = 2000                   # §7, L16 : 1000 -> 2000, decision du 11 sept. 2026
+B_BOOTSTRAP_REDUIT = 1000            # §7, regle de cout, L16 : 500 -> 1000
 N_REPLICATS_PROJECTION = 20          # §7, projection apres 20 replicats
 DUREE_MAX_PROJETEE_S = 6 * 3600      # §7, 6 heures sur 4 coeurs
 PERCENTILES_IC = (2.5, 97.5)         # §7
@@ -468,6 +472,23 @@ def selectionner(mes, candidates, r, variante=None):
     return i_diag, i_exa, critere
 
 
+def diagnostic_jackknife(mes, candidates, rotations):
+    """§12 L15, decision du 11 septembre 2026 : diagnostic de sensibilite descriptif. Pour
+    chaque rotation et chaque candidate retiree tour a tour de la regression chute~exa (Q3),
+    recalcule argmax du residu (Q3) sur les candidates restantes. Publie a cote du choix
+    retenu ; ne touche a c_diag, c_exa, ni a aucune quantite de la regle de decision (§9)."""
+    out = []
+    for r, x in enumerate(rotations):
+        for omise in candidates:
+            reste = [c for c in candidates if c != omise]
+            i_diag, _, _ = selectionner(mes, reste, r)
+            c_sans = reste[i_diag]
+            out.append({"rotation": r + 1, "candidate_omise": omise,
+                        "c_diag_sans_omise": c_sans,
+                        "diagnostic_change": c_sans != x["c_diag"]})
+    return out
+
+
 def perte_notee(mes, nom, r, variante=None):
     """§5 Q4, ou S4 : 1 - exactitude categorielle B."""
     v = variante or VARIANTE_PRINCIPALE
@@ -835,6 +856,11 @@ def ecrire_sorties(resultat, sortie):
             if k != "rotation":
                 secl.append({"analyse": "S8", "rotation": l["rotation"], "cle": k,
                              "valeur": v})
+    for l in p.get("jackknife_L15", []):                  # §12 L15, decision du 2026-09-11
+        for k, v in l.items():
+            if k != "rotation":
+                secl.append({"analyse": "L15", "rotation": l["rotation"], "cle": k,
+                             "valeur": v})
     return [_ecrire_csv(os.path.join(sortie, n), l) for n, l in (
         ("tab-controles.csv", ctrl), ("tab-rotations.csv", rot),
         ("tab-bootstrap.csv", boot), ("tab-familles.csv", fam),
@@ -878,6 +904,9 @@ def executer(chargeur=None, params=None, sortie=None, ecrire=True, horloge=time.
     principal = analyser_tournoi(d, struct, "principal", params.pid_max_principal,
                                  CANDIDATES_PRINCIPAL, params, decrits, avec_R=True,
                                  horloge=horloge)
+    if "mesures" in principal:                            # §12 L15, decision du 2026-09-11
+        principal["jackknife_L15"] = diagnostic_jackknife(
+            principal["mesures"], principal["candidates"], principal["rotations"])
     s1 = analyser_tournoi(d, struct, "S1", params.pid_max_s1, CANDIDATES_S1, params,
                           dict(d["adversaires"]), horloge=horloge)
     sec = secondaires(d, struct, principal, params, horloge) \

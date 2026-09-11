@@ -220,6 +220,46 @@ class UniversTests(unittest.TestCase):
         self.assertNotIn("Demographics Only - GPT4.1-mini", sec["S2"]["mesures"])
         self.assertEqual(len(sec["S2"]["rotations"]), 3)
 
+    def test_jackknife_L15_diagnostic_sensibilite_sans_regle(self):
+        # §12 L15, decision du 11 septembre 2026 : diagnostic de sensibilite descriptif,
+        # publie sans toucher a c_diag, c_exa ni a la regle de decision deja figee.
+        r = resultat("succes")
+        p = r["principal"]
+        jk = p["jackknife_L15"]
+        self.assertEqual(len(jk), 3 * len(p["candidates"]))
+        attendus = {(x["rotation"], c) for x in p["rotations"] for c in p["candidates"]}
+        vus = {(l["rotation"], l["candidate_omise"]) for l in jk}
+        self.assertEqual(vus, attendus)
+        for l in jk:
+            self.assertNotEqual(l["c_diag_sans_omise"], l["candidate_omise"])
+        # retirer la candidate choisie par le diagnostic change necessairement son choix
+        for x in p["rotations"]:
+            ligne = next(l for l in jk if l["rotation"] == x["rotation"]
+                         and l["candidate_omise"] == x["c_diag"])
+            self.assertTrue(ligne["diagnostic_change"])
+        # la regle de decision, deja figee, est inchangee
+        self.assertEqual(p["decision"]["statut"], "survit")
+        self.assertEqual([x["c_diag"] for x in p["rotations"]], [X, X, X])
+
+    def test_jackknife_L15_dans_tab_secondaires_sans_nouveau_fichier(self):
+        with tempfile.TemporaryDirectory() as t:
+            E.executer(chargeur=lambda: univers("succes"), params=PARAMS, sortie=t)
+            noms = sorted(os.listdir(t))
+            self.assertEqual(noms, ["tab-bootstrap.csv", "tab-controles.csv",
+                                    "tab-familles.csv", "tab-rotations.csv",
+                                    "tab-secondaires.csv"])
+            with open(os.path.join(t, "tab-secondaires.csv"), encoding="utf-8") as f:
+                contenu = f.read()
+            self.assertIn("L15", contenu)
+
+    def test_L16_B_bootstrap_augmente(self):
+        # §7, L16, decision du 11 septembre 2026 : B porte de 1000 a 2000, palier de la
+        # regle de cout de 500 a 1000 ; aucune regle de decision n'est modifiee.
+        self.assertEqual(E.B_BOOTSTRAP, 2000)
+        self.assertEqual(E.B_BOOTSTRAP_REDUIT, 1000)
+        self.assertEqual(E.Parametres().n_bootstrap, 2000)
+        self.assertEqual(E.Parametres().n_bootstrap_reduit, 1000)
+
 
 # ---------------------------------------------------------------------------
 # S1, controles bloquants
