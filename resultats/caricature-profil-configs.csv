@@ -1,0 +1,9 @@
+niveau,config,n_items_retenus,facteur_mediane,compression_mediane
+Demographics Only,Demographics Only - GPT4.1-mini,98,0.7366916836266766,0.6858773431704697
+JSON Persona,JSON Persona - GPT4.1,98,0.6759452402426709,0.776860771474225
+JSON Persona,JSON Persona - GPT4.1-mini,98,0.635864804557035,0.6978467054261647
+Text Persona,Text Persona (Default Temperature) - GPT4.1-mini,98,0.4797885458221382,0.7399182765864032
+Text Persona,Text Persona (Reasoning) - GPT4.1-mini,98,0.5777952559447552,0.820825787213388
+Text Persona,Text Persona (Repeating Questions) - GPT4.1-mini,98,0.7932363810476215,0.7516208825043388
+Text Persona,Text Persona - GPT4.1-mini,98,0.42503971394914214,0.6335677692762924
+Text Persona,Text Persona - Gemini-Flash2.5,98,0.4709383954154728,0.8913966974732224
