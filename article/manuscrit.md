@@ -69,7 +69,7 @@ right person among 2,148 in **0.14 %** [0.05 ; 0.27] of cases, against **0.10 %*
 for a demographic baseline recomputed on that same pool: the intervals overlap. The best of the
 three carries 0.094 bits of identity against a ceiling of 11.07, per-item accuracy of 47.2 % sits
 *below* the modal answer, and a nearest neighbour given the same eleven true answers identifies
-**3.6 times better** [c7-argyle-resultats.md]. Three years later, twins of the same kind of panel are
+**3.6 times better**. Three years later, twins of the same kind of panel are
 re-identified at 90.40 % in a closed pool and 60.17 % in an open world at 1 % false accusations.
 The risk was not measurable in the first published generation of twins; it is substantial in the
 current one.
@@ -94,7 +94,7 @@ Our central hypothesis was that a twin's fidelity to *its particular person* and
 identifiability are expressions of one underlying axis. We preregistered a self-refutation test
 in two parts. The first passed: the rank correlation between imitation quality and leakage
 survives measuring the two axes on completely disjoint item sets (Spearman 0.969, 95 % CI
-[0.937 ; 0.993], 50 stratified random A/B splits of 60 items) [c7-disjoint-resultats.md §1]. The
+[0.937 ; 0.993], 50 stratified random A/B splits of 60 items). The
 relation is not an artifact of recycled computation.
 
 The second part failed, and against us. We constructed a *marginal null*: 100 artificial
@@ -102,8 +102,7 @@ predictors matched to each person's own accuracy margin, with correct positions 
 without looking at the person — an object that is not structure-free, and that in fact leaks more
 than our own twin (31.6 % top-1 against 20.7 %). Adversarial review found a real defect in that
 first witness, since rebuilt without changing the verdict (§5.1). The rebuilt witness reaches mean
-Spearman **0.974**, 5th–95th percentiles [0.950 ; 0.993], against **0.965** observed over the 12 configurations
-[audit-renversement-2026-09-12.md]; the observed value does not exceed it. Each null is compared
+Spearman **0.974**, 5th–95th percentiles [0.950 ; 0.993], against **0.965** observed over the 12 configurations; the observed value does not exceed it. Each null is compared
 only against the observed value measured on its own plan. **Reproducing the coupling requires
 nothing more than a matched per-person accuracy and correct positions drawn at random —
 prediction (b) is refuted.**
@@ -130,7 +129,7 @@ no budget: **no experimental arm is interpretable until its candidate pipeline h
 beat the demographic baseline in top-1 against the real human answers** (§4.5). It stopped two of
 our own paid arms (§5.4), the Argyle replication (§5.8), and the `persona` condition of the Park
 archive — an agent built on a person's own self-description re-identifies her *less* well than
-demographics alone, 0.26 % [0.06 ; 0.52] against a baseline of 0.39 % [c7-loi-distance-resultats.md].
+demographics alone, 0.26 % [0.06 ; 0.52] against a baseline of 0.39 %.
 Any team measuring privacy on simulated respondents can run it before spending anything.
 
 **(3) A twin-to-twin linkage channel within a shared pipeline — governed by which element differs,
@@ -305,8 +304,7 @@ outside the panel.
 
 We state plainly what this is not. It does not show that a third party recovers a named person
 from public information. And on Twin-2K-500 itself the matching is trivial without any attack —
-`pid` equals `TWIN_ID`, and the twin files copy wave metadata line by line from the humans
-[c7-contre-examen-2026-09-11.md §4]. The result therefore documents a generic risk for anyone
+`pid` equals `TWIN_ID`, and the twin files copy wave metadata line by line from the humans. The result therefore documents a generic risk for anyone
 releasing "anonymous" twins without that key, a practice Twin-2K-500 does not follow. The
 objection "this is not real re-identification, the attacker already holds the true answers" is
 assumed, not rebutted; our answers are the explicit model above and the open-world measurement of
@@ -360,7 +358,7 @@ twin column is a GPT-3 (`davinci`) prediction produced while holding that item o
 the person's eleven other **true** answers, so these twins are *better* informed than our persona
 twins, not worse: that confound runs against us. Three twin versions of the same people exist
 (main decoding, temperature 0.01 and 1.0); they vary decoding, not epoch, and we never present
-them as survey waves [c7-argyle-resultats.md §2].
+them as survey waves.
 
 No new data was collected. The attack uses only already-published content.
 
@@ -374,14 +372,14 @@ donor fitted directly on the target block. Sequential CART and a 300-tree forest
 before that donor and abandoned at 0.45–0.53 accuracy: the retained comparator was not chosen to
 lose. On the Argyle archive the comparators are **B-demo**, a leave-one-out imputer on the four
 demographic items, and **B-oracle**, the same imputer given the person's eleven other true
-answers — the comparator matched to that archive's own conditioning [c7-argyle-resultats.md §5].
+answers — the comparator matched to that archive's own conditioning.
 
 ### 4.3 Metrics
 
 *Attacks.* Two matching rules are used throughout, and every rate is labelled with the one that
 produced it. The **naive** attack ranks candidates by Hamming-type agreement over common items.
 The **strong** attack (A-LLR) ranks them by a rarity-weighted log-likelihood whose parameters are
-estimated **out-of-fold over 5 folds** [c7-attaquant-fort-resultats.md]. A third variant (A-MI)
+estimated **out-of-fold over 5 folds**. A third variant (A-MI)
 scores higher still on the Park archive (93.25 %) but estimates its weights **in sample**, an
 advantage declared in the preregistration, so we never report it as our result. An **adaptive**
 attacker, used only against the defense (§6.1), additionally knows the mechanism and which items
@@ -409,12 +407,10 @@ as a limit rather than claim an unbroken chain. The plans are not yet third-part
 *Provenance.* On Twin-2K-500, the context contains 0 wave-4 columns and 0 wave-4 QIDs; maximum
 normalised mutual information between context and item is 0.16 against 0.31 for the retest on
 the same item. On cells where wave 4 differs from waves 1–3, the JSON 4.1 output equals wave 4
-in 37.7 % of cases and waves 1–3 in 37.9 % — symmetric, so no indication of copying
-[c7-contre-examen-2026-09-11.md §2]. On the Park archive, over 34,915 cells where the human
+in 37.7 % of cases and waves 1–3 in 37.9 % — symmetric, so no indication of copying. On the Park archive, over 34,915 cells where the human
 changed their mind, the composite follows wave 1 in 41.6 % and wave 2 in 43.2 %, and the
 4.3–4.9 point wave-1 bias of the other three conditions holds for the `demographic` condition
-too, so it is a shared calibration artifact, not item leakage
-[c7-stanford-provenance-resultats.md]. On the Argyle archive each twin column is generated with
+too, so it is a shared calibration artifact, not item leakage. On the Argyle archive each twin column is generated with
 its own item held out, so no tautology exists on either side; the same holds for B-demo and
 B-oracle, whose target item is removed from their context.
 
@@ -428,10 +424,10 @@ human answers**, on the pool and items actually attacked, with the baseline reco
 same rows rather than carried over as a constant. The check consumes no model call and no budget,
 and it must precede the first paid contrast; a pipeline that fails it yields twins whose contrasts
 oppose noise to noise and return chance whatever is manipulated. Applied since, it has excluded
-our own pipeline B [c7-reconciliation-facteurs-2026-09-12.md §7], all three GPT-3 twins of the
+our own pipeline B, all three GPT-3 twins of the
 Argyle archive (§5.8), and the Park archive's `persona` condition, whose agent — built on the
 person's own self-description — re-identifies her at 0.26 % [0.06 ; 0.52] against a demographic
-baseline of 0.39 % [c7-loi-distance-resultats.md §2]. Baselines are always taken at the pool size
+baseline of 0.39 %. Baselines are always taken at the pool size
 of the arm they judge, being strongly pool-dependent: 2.13 % at 2,058, 9.20 % at 200, 13.29 % at
 120.
 
@@ -442,13 +438,12 @@ of the arm they judge, being strongly pool-dependent: 2.13 % at 2,058, 9.20 % at
 ### 5.1 The coupling, and the null that absorbs it
 
 Across 12 heterogeneous methods, the ordering by imitation quality and the ordering by
-re-identification rate nearly coincide: Spearman 0.958 [0.930 ; 0.993], n = 12
-[c7-compromis-resultats.md §1], robust to restriction to LLMs over a narrow fidelity range
+re-identification rate nearly coincide: Spearman 0.958 [0.930 ; 0.993], n = 12, robust to restriction to LLMs over a narrow fidelity range
 (rho = 0.976) and to jackknife (0.958–0.986).
 
 The preregistered disjoint-item test measures fidelity on one half of the 60 items and leakage
 on the other, over 50 stratified random A/B splits: Spearman **0.969**, 95 % CI
-**[0.937 ; 0.993]**, with 100 % of splits above 0.7 [c7-disjoint-resultats.md §1]. Prediction
+**[0.937 ; 0.993]**, with 100 % of splits above 0.7. Prediction
 (a) confirmed — the relation is not an artifact of recycled computation.
 
 Prediction (b) was refuted, and the witness that refutes it has since been rebuilt to remove a
@@ -482,24 +477,24 @@ so the verdict concerns the order of magnitude, not the third decimal.
 
 At comparable marginal accuracy, no non-LLM predictor we tested exceeds 0.3 % top-1 where the
 twin reaches 20.7 % [19.0 ; 22.4] under the naive attack, and **23.23 % [21.5 ; 25.0]** under the
-strong one [c7-attaquant-fort-resultats.md] — **in a closed world, with the target always present
+strong one — **in a closed world, with the target always present
 in a pool of 2,058**. The comparator figures below are naive-attack rates, which makes the
 contrast conservative. JSON Persona GPT4.1 attains that rate at accuracy 0.590; the comparators,
 at accuracy 0.457–0.511: PMM k=10, 0.23 % [0.06 ; 0.42]; B2 argmax, 0.07 % [0 ; 0.19]; k=1 donor
-on context alone, 0.13 %; LR on context, 0.22 % [c7-contre-examen-2026-09-11.md §1]. Two
+on context alone, 0.13 %; LR on context, 0.22 %. Two
 individualised *generators* — sampled LR and Gaussian copula — give 0.25 % [0.11 ; 0.41] and
-0.22 % [0.11 ; 0.36] [c7-generateur-resultats.md], answering the objection that we compare an
+0.22 % [0.11 ; 0.36], answering the objection that we compare an
 individualised generator against predictors that regress to the mean.
 
 We then gave a comparator an explicit advantage: a k=1 nearest-neighbour donor fitted **directly
 on the target block's answers** — seeing what the LLM twin never sees. It reaches accuracy
 0.584 against the twin's 0.590, carries genuine individual signal (0.584 true against 0.442 under
 within-segment permutation), and despite that advantage obtains a top-1 of **0.00 % [0 ; 0.18]**
-(Clopper-Pearson, n = 2,058) [c7-synth-ajuste-resultats.md §1].
+(Clopper-Pearson, n = 2,058).
 
 **This claim does not generalise to every leakage metric, and top-10 runs the other way.** That
 same advantaged comparator reaches a top-10 of **53.2 % [51.0 ; 55.3]**, *above* the twin's
-42.7 % [c7-synth-ajuste-resultats.md §2]: the direction of the whole contrast depends on the
+42.7 %: the direction of the whole contrast depends on the
 choice of k, which no principle fixes at 1. We claim neither that all individualised prediction
 identifies nor strict accuracy equality — the generators plateau at 0.476. Neither synthpop/CART
 nor CTGAN was tested.
@@ -510,13 +505,12 @@ Removing the closed-world assumption gives the number we consider hardest to att
 a false-accusation rate of 1 %, the strong attack (A-LLR, parameters estimated out-of-fold over
 5 folds) recovers the right person **60.17 % [54.5 ; 64.4]** of the time on the Park archive and
 **4.28 % [3.3 ; 5.6]** on Twin-2K-500, under a person-level bootstrap that **re-estimates** its
-parameters in each resample while keeping every copy of a person in the same fold
-[c7-fort-monde-ouvert-ic-2026-09-12.md §2]. At FPR = 0.1 % these fall to **44.37 % [23.3 ; 53.8]**
+parameters in each resample while keeping every copy of a person in the same fold. At FPR = 0.1 % these fall to **44.37 % [23.3 ; 53.8]**
 (Park) and **1.01 % [0.05 ; 2.82]** (Twin) — intervals this wide because the threshold there rests
 on roughly **one** absolute false positive on Park and two on Twin, so we report them as very
 unstable estimates, not as measured rates. Statistical comparators stay indistinguishable from
 noise at both FPRs. The human ceiling at FPR = 1 % is 54.5 % [50.8 ; 57.5] and 90.7 %
-[88.2 ; 93.3] [c7-monde-ouvert-ic-2026-09-12.md §1].
+[88.2 ; 93.3].
 
 **These figures replace the ones we first published, and the correction runs in both directions.**
 The naive attack gave 3.04 % [2.0 ; 4.0] and 20.39 % [15.7 ; 24.5] at 1 % FPR. On the Park archive
@@ -547,13 +541,13 @@ data on the attacker's side. The measurements below share one team and, for Twin
 persona source per person: they gauge the channel within a pipeline, not the cross-organisation
 threat model T2 (§3).
 
-**Twin-2K-500, tabulated by common-item count** [c7-transfert-resultats.md]. 30 pairs sharing
+**Twin-2K-500, tabulated by common-item count**. 30 pairs sharing
 60 common items: mean top-1 **36.4 %**, maximum 83.58 %. 12 pairs sharing 19 common items: mean
 top-1 **0.45 %** (chance 0.05–0.10 %). Demographics Only against the rich twins gives 7.76 %. The
 anti-artifact control — a decoy from the same segment — gives 0.04 % on the 60-item pairs (factor
 ~900) and 0.10 % on the 19-item pairs.
 
-**Park archive replication** [c7-transfert-stanford-resultats.md]: 1,052 agents, 177 common
+**Park archive replication**: 1,052 agents, 177 common
 items. Interview→survey top-1 **11.9 % [10.1 ; 13.8]**; survey→interview **13.0 %
 [11.2 ; 14.9]**; top-10 45–46 %. Demographic bound 1.5–2.5 %, anti-artifact decoy control **at
 most 0.31 %**. **Preregistered prediction refuted**: we set a threshold of at least 20 % top-1
@@ -568,14 +562,13 @@ leakage crosses waves: that arm is infeasible, with 0 items in common.
 agreement between two twins of the same person over the 60 common items: the floor between
 *strangers* is **46.0 %**, the demographic-ideological segment adds **3.8 points**, and the
 person adds **17.4 points** — 82 % of the rise above the floor. A pure-population witness
-identifies the right person **0.07 %** of the time against **36.4 %** for the real attack
-[c7-temoin-prompt-resultats.md].
+identifies the right person **0.07 %** of the time against **36.4 %** for the real attack.
 
 **The cross-dataset anomaly, explained in part.** The Park archive shares 177 common items —
 roughly three times the 60 of Twin-2K-500 — and leaks roughly three times *less*. Item count is
 the wrong denominator: the 177 GSS items are strongly redundant (mean Cramér's V 0.1055 against
 0.0834), giving **≈ 9.0 effectively independent items against ≈ 10.1** on Twin — a real ratio of
-**0.89, not 2.95** [c7-anomalie-park-2026-09-12.md §4]. Pool size runs the wrong way too:
+**0.89, not 2.95**. Pool size runs the wrong way too:
 shrinking Twin's pool to 1,052 *raises* its top-1 (37.3 → 44.1 %), while Park already has the
 smaller pool. **A residue of roughly 3× remains unexplained** at comparable
 effective information, and we declare it: the remaining candidates — persona format and length,
@@ -591,8 +584,7 @@ Twin's.
 sharing nothing but the target person — `deepseek-v4-flash` structured JSON dossiers versus
 `qwen-2.5-72b` narrative biographies, different templates and output formats — matched head to
 head on the same 60 items (n = 142 of 200 planned, stopped by an OpenRouter transport error; an
-earlier stop at n = 82 was reconciled and confirmed unbilled)
-[c7-deux-organisations-resultats.md]. Preregistered rule: T2 survives if the top-1 CI excludes the
+earlier stop at n = 82 was reconciled and confirmed unbilled). Preregistered rule: T2 survives if the top-1 CI excludes the
 segment control *and* stays at least 2× the demographic baseline. Result: top-1 1.8 %
 [0.4 ; 3.6], against a demographic baseline of 9.2 % computed on the enclosing pool of 200 — the
 baseline matched to this arm's own pool of 142 was never computed and lies above that.
@@ -600,8 +592,7 @@ baseline matched to this arm's own pool of 142 was never computed and lies above
 **We no longer read this as a refutation of T2.** The witness is built on the pipeline of the
 paragraph below and shares its defect: neither arm produces twins that identify the real person
 better than chance (0.0 % and 0.8 % top-1 against 0.83 % expected on a pool of 120, where the
-Twin team's own twins reach 20.2–38.9 % on that same pool)
-[c7-reconciliation-facteurs-2026-09-12.md §3]. The comparison therefore opposes two noise
+Twin team's own twins reach 20.2–38.9 % on that same pool). The comparison therefore opposes two noise
 sources, and would have returned chance whether or not a cross-organisation channel exists: it
 measures our instrument, not the world. The 36.4 % figure above, being a same-pipeline
 measurement, is not evidence for T2 either, so the threat model stands open in both directions.
@@ -615,7 +606,7 @@ a *distance law* — leakage falling with the number of published descriptors th
 own measurements refute it: Spearman **−0.232** [−0.321 ; −0.187] over 15 pairs, and **+0.003**
 [−0.047 ; +0.068] once the individual fidelity of the two compared twins is controlled, against
 the −0.7 predicted. At a distance of one, rates span 17 % to 81 %: the spread *within* a distance
-level dwarfs the spread *between* levels [c7-loi-distance-resultats.md §3]. Counting changed
+level dwarfs the spread *between* levels. Counting changed
 components predicts nothing useful; naming them does. On the Park archive the same control leaves
 only three pairs, so no replication is possible. Two limits bound this: the distance weights are
 arbitrary, and we would not rescue them by refitting on the linkage rate, which would make the
@@ -624,9 +615,9 @@ configurations, two teams.
 
 **One-factor-at-a-time from our own pipeline: arithmetically sound, not interpretable.** Varying
 model, template and persona format one at a time from our baseline pipeline B gives 0.67 %, 0.83 %
-and 2.65 % (n = 120, chance 0.83 %) [c7-factoriel-resultats.md]. **The interpretation is not
+and 2.65 % (n = 120, chance 0.83 %). **The interpretation is not
 available to us**: pipeline B and all three derived conditions identify the real person at chance,
-so each contrast opposes two noise sources [c7-reconciliation-facteurs-2026-09-12.md §2–§3]. We
+so each contrast opposes two noise sources. We
 withdraw the reading we first gave these numbers — that changing any single component collapses
 the channel — and with it the refutation of the matching preregistered prediction: an arm that
 could test nothing refutes nothing. We also correct a comparison of our own: these twin-to-twin
@@ -639,11 +630,11 @@ What identifies is neither the frequency of departures from the modal answer nor
 diversity, but their **correctness** — and the whole response vector is required. Correctness of
 deviations: 68.5 % for the human retest (leakage 81.6 %), 50.3 % for JSON 4.1 (20.6 %), 43.3 %
 for Demographics Only (2.14 %), 39.1 % for PMM (0.22 %); PMM deviates and diversifies as much as
-the twin without leaking [c7-deviations-resultats.md].
+the twin without leaking.
 
 The ablation is the strongest evidence: permuting the order of each twin's 40 purchase answers
 drops closed-world top-1 from **33.1 % [31.2 ; 35.2] to 0.046 % [0 ; 0.11]**, below chance, and
-an oracle given only the count of "yes" answers gives 0.29 % [c7-mecanisme-resultats.md H3]. The
+an oracle given only the count of "yes" answers gives 0.29 %. The
 identifying quantity is the dependence structure between answers, carried by the conditioning —
 not any answer taken in isolation.
 
@@ -662,7 +653,7 @@ alone = 0.0 %" as a result: it is a floor of the method.
 *Limits.* The mechanism is established on Twin's purchase block alone, and is in apparent tension
 with the Park archive, where opinion items identify most. Two simple explanations are excluded: at
 20 items the Park archive gives 11.7 % against 0.24 % for Twin's 20 opinion items, **at lower
-per-item entropy** (1.30 against 2.10) [c7-stanford-resultats.md §6]. What remains is consistent
+per-item entropy** (1.30 against 2.10). What remains is consistent
 with the block effect, which we present as the **best-supported hypothesis, not a result**.
 
 ### 5.6 Bits of identity: the instrument transports, the rate does not
@@ -670,7 +661,7 @@ with the block effect, which we present as the **best-supported hypothesis, not 
 An LLM twin costs approximately 0.4 bits of identity per point of accuracy gained, against
 0.068 for the best useful statistical comparator. Twin JSON 4.1: **3.55 bits [3.39 ; 3.72]**
 against a ceiling of log2 N = 11.01. Park composite: **7.47 [7.27 ; 7.66]** against a ceiling
-of 10.04. PMM: 0.19 [0.16 ; 0.23]. B2: 0.08 [c7-bits-resultats.md §1–2].
+of 10.04. PMM: 0.19 [0.16 ; 0.23]. B2: 0.08.
 
 Transportability is the point. Bits normalised by human entropy give 0.0439 (Twin) against
 0.0327 (Park) — a factor of **1.34** — where top-1 varies by a factor of **3.2**. Demographics
@@ -692,7 +683,7 @@ archive, as preregistered.
 Our own twins, produced in a single call to cheap models from a raw profile, identify almost
 nobody: 0.00 % to **0.83 % [0 ; 2.15]** (deepseek-v4/R1) across 7 cells, against 2.13 % for the
 other team's Demographics Only. That interval **contains** 2.13 %, so no precise factor is
-established — only the order of magnitude, that no model reaches 1 % [c7-gen-resultats.md]. Any
+established — only the order of magnitude, that no model reaches 1 %. Any
 previously circulated "25× below" figure is withdrawn. Memorization is not the explanation here:
 llama31-8b, with a training cutoff preceding publication, copies nothing verbatim and leaks no
 more than the models that do copy — a control on our own twins, in a regime where none of them
@@ -702,13 +693,13 @@ identifies almost anyone, which we do not extend to the published twins of §5.2
 model reaches 1 %. (ii) Call granularity would explain the leakage — not confirmed
 (underpowered, especially at n = 10 for the per-item arm): single call 0.00 % [0 ; 8.8] and
 per-item call 0.00 % [0 ; 30.85], with top-10 running in the **opposite** direction to the
-prediction (7.5 % against 0 %) [c7-recette-resultats.md]. We therefore do not claim that leakage
+prediction (7.5 % against 0 %). We therefore do not claim that leakage
 comes from the call format, nor that the cause is identified. **It is not.**
 
 **We then paid to test the obvious explanation, and it failed.** Raising fidelity with a frontier
 model to see whether the leakage returns was run on `openai/gpt-4.1` (Twin's own model class)
 using Twin's per-item call recipe without modification: 30 persons × 60 items = 1,800 calls,
-100 % parse rate, 4.9949 USD of actual cost [c7-fort-resultats.md]. Accuracy reached **0.4722
+100 % parse rate, 4.9949 USD of actual cost. Accuracy reached **0.4722
 [0.4361 ; 0.5050]** against Twin's 0.574; fidelity **0.1714** against their 0.708; top-1 and
 top-10 **0.00 % [0 ; 11.57]** (Clopper-Pearson, n = 30). **One further preregistered prediction
 refuted**: accuracy > 0.55; top-1 > 5 % is **not refuted**, the exact interval containing the
@@ -732,15 +723,14 @@ decreasing concurrency without double billing.
 ### 5.8 A second dataset, and a third at the other end of the trajectory
 
 On the Park archive, the composite agent designates the right participant among 1,052 **in a
-closed world** in **90.40 % [88.6 ; 92.2]** of cases under the strong attack, top-10 97.8 %
-[c7-attaquant-fort-resultats.md], against a human retest ceiling of 96.8 %. **This figure
+closed world** in **90.40 % [88.6 ; 92.2]** of cases under the strong attack, top-10 97.8 %, against a human retest ceiling of 96.8 %. **This figure
 replaces the 65.51 % [62.7 ; 68.3] we first published**: a naive agreement attack understated
 this archive's leakage by 38 % in relative terms. An in-sample information-weighted variant
 reaches 93.25 %, which we do not claim as our result (§4.3).
 
 The remaining conditions are **naive-attack measurements**, the strong attack not having been
 re-run on them: interview-only **44.7 % [41.8 ; 47.5]**, survey-only 20.6 % [18.2 ; 23.0],
-demographic 2.26 % [c7-stanford-resultats.md]. The interview-only figure carries zero documentary
+demographic 2.26 %. The interview-only figure carries zero documentary
 exposure to the survey, so it is the cleanest demonstration that an agent built from a
 conversation alone identifies its person — but given what the strong attack did to the composite,
 **44.7 % must be read as a lower bound**.
@@ -761,7 +751,7 @@ per item: mean exact accuracy **47.2 %**, below the demographic imputer's 51.5 %
 modal answer on nine items of twelve. In bits, the best of the three carries **0.094**
 [0.074 ; 0.118] of an 11.07 ceiling — the level of Twin's *weakest* statistical comparator and
 nine times below Twin's demographics-only twin — while a nearest neighbour given exactly the same
-eleven true answers carries 0.342 [0.301 ; 0.389], **3.6 times more** [c7-argyle-resultats.md].
+eleven true answers carries 0.342 [0.301 ; 0.389], **3.6 times more**.
 
 **Two preregistered predictions were missed, and we count them as neither.** We had announced
 top-1 2.5 % [1.0 ; 6.0] and normalised bits [0.020 ; 0.070], derived from our measured item and
@@ -776,7 +766,7 @@ do not pretend to.** Both rows therefore sit outside Table 1's count, like the d
 
 From N = 50 to N = 2,058, the twin/demographic ratio grows from 2.8 to 9.7: top-1 falls from
 53.2 % [50.0 ; 56.3] to 20.7 % [20.7 ; 20.8], and the share of the human ceiling from 57.0 % to
-25.4 % [c7-echelle-resultats.md] — naive-attack rates, the scale study not having been re-run
+25.4 % — naive-attack rates, the scale study not having been re-run
 under the strong attack. **We extrapolate no value beyond N ≈ 4,000**: a power law and a
 logarithmic law fitted on the same 6 points already diverge at twice the range (18.1 % against
 13.9 %).
@@ -801,8 +791,7 @@ logarithmic law fitted on the same 6 points already diverge at twice the range (
 ## 6. Defense
 
 Shuffling the purchase answers between people of the same demographic segment (D4) brings
-closed-world top-1 from **20.7 % [19.0 ; 22.4]** to **0.13 % [0.01 ; 0.28]**
-[c7-defense-resultats.md], per-item distribution and between-segment differences being preserved
+closed-world top-1 from **20.7 % [19.0 ; 22.4]** to **0.13 % [0.01 ; 0.28]**, per-item distribution and between-segment differences being preserved
 **exactly, by construction**, as PRAM predicts.
 
 **The cost is not a single average.** Reported by component: 0.0 points on the per-item
@@ -827,7 +816,7 @@ Alternatives: D1 (k=10 aggregation) gives 0.55 % for 3.8 points across all three
 The defense figure above was measured against the naive attack, which §5.8 shows can badly
 understate leakage. We therefore re-ran it against the strong attack recalibrated on the
 *defended* outputs, then against an attacker who knows the mechanism and which items it leaves
-untouched [c7-attaquant-fort-resultats.md]. D4 holds. Top-1 goes from 0.13 % (naive) to **0.24 %** under the recalibrated strong attack, and
+untouched. D4 holds. Top-1 goes from 0.13 % (naive) to **0.24 %** under the recalibrated strong attack, and
 the **adaptive** attacker plateaus at **0.29 %** (strategy S1, leaving the 20 opinion items
 intact; segment-invariant strategy S3 alone 0.05 %). That is two orders of magnitude below the
 20.7 % undefended rate, and never above 1 %. **Attribute disclosure is not demonstrated either**:
@@ -847,7 +836,7 @@ perturbed by Laplace noise (L1 sensitivity 2, budget split over 60 items, basic 
 composition) followed by i.i.d. per-item sampling — degree-0 PrivBayes, no joint structure — the
 DP synthesiser at eps = 3 and eps = 10 loses **3.33** and **3.38** points on the **composite
 utility index**, within 5 points of D4's **1.47** on that same index, while its
-top-1 (**0.158 %**, **0.000 %**) is **not above** ours (0.13 %) [c7-dp-resultats.md]. The
+top-1 (**0.158 %**, **0.000 %**) is **not above** ours (0.13 %). The
 comparison runs on the aggregate index because that is the only scale on which the two
 mechanisms are commensurable; that index is not D4's cost, which falls entirely on inter-item
 correlations (§6). We do not claim our defense beats DP, on either axis.
@@ -871,7 +860,7 @@ correlations, between-segment differences and the `S_gra` covariate are not prot
 ### 6.3 What the defense costs a downstream analyst
 
 A defense is only usable if the analyses people actually run survive it. We measured three on the
-same 2,058 persons [c7-utilite-aval-resultats.md]. **Preserved exactly**: group comparisons are
+same 2,058 persons. **Preserved exactly**: group comparisons are
 **identical to 16 decimal places** between the raw and defended twin, and demographic regression
 coefficients keep their sign and significance. **Destroyed**: purchase-item coefficients
 significant in the raw twin become non-significant after D4, and on a PCA of the 40 purchase items
@@ -934,7 +923,7 @@ are reported in place and not counted in it: the distance law is **refuted** on 
 **An excess cost in bits per unit of fidelity, real but unexplained.** On equal samples,
 CV(bits/fidelity) = 0.436 against CV(bits/accuracy point) = 0.357 over the same 9 points. With so
 few points and no identified mechanism, the excess **must not be attributed to "LLMs" as a
-family** [c7-compromis-resultats.md §5].
+family**.
 
 **We did not reproduce the leakage with our own twins** (§5.7), including with a paid frontier
 model on Twin's own per-item recipe — an open limit, never a mechanism, and a narrower one than
@@ -942,8 +931,7 @@ before: neither the model nor the call granularity, leaving the persona's format
 
 **Rates do not predict across datasets.** The normal-maxima model lands close on Park k = 60
 (0.354 predicted, 0.340 observed) but fails both its controls (0.053 for 0.206 observed; 0.983
-for 0.656): an isolated success between two failures is a coincidence, not a law
-[c7-bits-resultats.md §3]. Only conditional information retains sign and order of magnitude
+for 0.656): an isolated success between two failures is a coincidence, not a law. Only conditional information retains sign and order of magnitude
 across datasets (r = 0.72 and 0.89). The twin-to-twin channel's cross-dataset rate is likewise
 only partly explained, a residue of roughly 3× surviving both controls (§5.4). And nothing we
 hold separates the trajectory of §5.8 from the protocols that differ along it (§1.1).
@@ -957,8 +945,7 @@ tests; of the 34 preregistered predictions underpinning those claims at the time
 data dredging. Of the 3 tests carrying a classical p-value, a Holm correction leaves the two
 smallest standing (0.002 and 0.008, adjusted to 0.006 and 0.016) and confirms the
 non-significance of the third; the intervals carrying the other claims must be read as
-measurements, each with its own margin, not as independent rejections of a common null
-[c7-multiplicite.md].
+measurements, each with its own margin, not as independent rejections of a common null.
 
 The full census covers 47 adjudicated tests across three families — the article's claims, the
 standalone controls, and the abandoned branches — with 25 confirmed and 15 refuted. It was
@@ -970,7 +957,7 @@ totals.
 A second pass extended the confirmatory family to 15 tests convertible to a p-value and applied
 both Holm and Benjamini-Hochberg. **Neither changes any verdict**, and the two agree on all 15:
 the p-values are bimodal — eight at or below 0.0025, seven already near 1 — so no claim here rests
-on a marginally significant result [c7-multiplicite-globale-2026-09-12.md §3]. It also flags three
+on a marginally significant result. It also flags three
 thresholds as fragile, which we name rather than let a reviewer find: the frontier twin's
 **fidelity > 0.10** bar, confirmed at 0.1714 but refuted had it been set at 0.18 — while our own
 weakest known twin sits at 0.177; the choice of k in top-k (§5.2); and the functional form of the
@@ -990,14 +977,14 @@ not find it.
 are American survey panels built on neighbouring instrument families, so we cannot say whether
 this channel is a property of that family — nor, as §1.1 states, separate the trajectory from the
 protocols that differ along it. The obstacle is not that the method is rare, but that the matched
-file — row-by-row, not by demographic cell — is almost never redistributed. We verified three
-such datasets at the source; we ran no systematic census, so no upper bound is established
-[pistes-jeux-apparies-2026-09-12.md]. **Not a count, a typology**: two teams withhold their file
-(editorial choice or silence); a third is barred by its source licence (SOEP); and one inverse
-case exists, synthetic outputs with no matched humans. **The risk is created faster than it
-becomes auditable.** The resource that would lift our limit is a matched individual dataset from a
-domain distinct from GSS and Big Five for which twins produced by a **third-party team** already
-exist for the same respondents, under a licence permitting local computation and publication of an
+file — row-by-row, not by demographic cell — is almost never redistributed. We verified three such
+datasets at the source; we ran no systematic census, so no upper bound is established. **Not a
+count, a typology**: two teams withhold their file (editorial choice or silence); a third is
+barred by its source licence (SOEP); and one inverse case exists, synthetic outputs with no
+matched humans. **The risk is created faster than it becomes auditable.** The resource that would
+lift our limit is a matched individual dataset from a domain distinct from GSS and Big Five for
+which twins produced by a **third-party team** already exist for the same respondents, under a
+licence permitting local computation and publication of an
 aggregate rate; and, for the trajectory of §5.8, several model generations over the same items and
 the same population.
 
@@ -1129,6 +1116,11 @@ start if a path to `data/` is detected.
 **No artifact figure is a result of this study.** The artifact's outputs (on fictional data:
 21.9 % before defense, 0.842 % after D4) illustrate the mechanics and must never be cited as
 study results.
+
+**Underlying analyses.** Every quantitative claim in this paper corresponds to a dated analysis
+script and result file under `resultats/` in this repository, organised to mirror the paper's own
+section numbering; individual file names are not cited in the text, to keep the manuscript
+readable.
 
 **Obtaining the real data.** Twin-2K-500: Hugging Face repository `LLM-Digital-Twin/Twin-2K-500`,
 CC BY 4.0. Argyle et al.: Harvard Dataverse `doi:10.7910/DVN/JPV20K`, CC0 1.0. Park replication
