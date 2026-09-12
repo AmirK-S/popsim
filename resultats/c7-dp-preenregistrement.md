@@ -27,4 +27,13 @@ restera pres du hasard (~0,05 %) partout. Donc DP dominee par D4, pas sur la fro
 Issue inverse : un epsilon a moins de 5 points de D4 avec top-1 non superieur au notre
 impliquerait de reconsiderer DP comme alternative serieuse a D4.
 
+**Qualification ajoutee le 12 septembre 2026, apres coup, sans toucher a la prediction
+ci-dessus** : le 1,47 cite comme perte de D4 est une moyenne de trois composantes d'erreur
+(distribution par item, ecarts de segment, correlations), dont deux sont nulles par
+construction pour la permutation intra-segment ; le cout reel de D4 ne porte que sur les
+correlations et vaut 4,4 points (`c7-defense-resultats.csv`, ligne `D4_melange`). Le seuil
+« 5 points de D4 » utilise ci-dessus reste le nombre preenregistre et n'est pas recalcule
+retroactivement ; le lecteur doit seulement savoir que ce seuil est lui-meme dilue par le
+meme facteur 3.
+
 Graine 20260912. Lecture seule sur `data/`, aucun appel de modele, aucun reseau.

@@ -39,21 +39,25 @@ défavorables :
    dépourvu de structure individuelle** — apparié sur l'exactitude, il fuit 31,15 % de
    top-1 et 4,63 bits, contre 20,73 % et 3,56 bits pour le jumeau réel et 0,049 % pour le
    hasard pur ; voir §1 de la lettre à Twin-2K-500.
-2. Le scénario « deux organisations indépendantes peuvent relier leurs jumeaux respectifs
-   de la même personne » — que nous nous apprêtions à présenter comme une menace établie
-   sur la base d'un chiffre de 36,4 % — **ne tient pas** une fois le pipeline réellement
-   rendu indépendant (modèle, gabarit et format de persona tous différents) : le top-1
-   tombe à **1,76 % [0,35 ; 3,63]** à n = 142 (sur 200 prévus), sous la baseline
-   démographique (9,2 %) et très sous le leurre de segment (25,5 %) — l'écart s'étant
-   creusé, pas resserré, entre le premier point de mesure (n = 82 : 3,66 %) et celui-ci
-   (n = 142 : 1,76 %). C'est ajouté à la lettre Twin-2K-500 comme une **réduction** de la
-   menace, énoncée directement. **Mesure arrêtée à n = 142 sur 200 prévus, par un second
-   incident de transport OpenRouter non rapproché — pas par choix** (un premier arrêt
-   similaire, à n = 82, a lui été rapproché et prouvé non facturé) : compléter jusqu'à
-   n = 200 suppose de rapprocher d'abord ce second incident, non fait à ce stade. Le
-   marqueur `[À METTRE À JOUR QUAND n=200]` est retiré de la lettre Twin-2K-500 ci-dessous
-   et remplacé par le chiffre n = 142, présenté sans détour comme un arrêt anticipé par une
-   limite de débit de l'API, pas comme l'échantillon complet initialement prévu.
+2. **Rétractation, pas réduction.** Le témoin « deux organisations indépendantes »
+   (top-1 = 1,76 % [0,35 ; 3,63] à n = 142), que nous nous apprêtions à ajouter à la lettre
+   Twin-2K-500 comme une **réduction** de la menace précédemment signalée, est lui-même
+   invalidé. Un arbitrage indépendant a établi que ce témoin ne prouve rien : les jumeaux
+   produits par ce pipeline (B↔C) ne réidentifient la vraie personne qu'au **taux du
+   hasard** (0,0 à 0,8 % contre 0,83 % attendu par hasard, même bassin de 120 personnes),
+   là où les jumeaux publiés par l'équipe Twin, sur le même bassin, atteignent 20 à 39 %.
+   Le dispositif ne transportait **aucune** information individuelle avant toute
+   manipulation ; son résultat de 1,76 % ne montre donc pas l'absence d'un canal
+   inter-organisations, il montre que ce témoin-là n'a jamais été capable d'en détecter un.
+   **Formulation exacte à retenir : la question « deux organisations indépendantes » n'a
+   pas été réfutée, elle n'a pas pu être testée — une limite de notre instrument, pas un
+   résultat sur le monde.** L'annonce de réduction de menace est retirée de la lettre
+   Twin-2K-500 ci-dessous, sans être remplacée par une annonce inverse : le risque n'a pas
+   augmenté non plus, il est simplement **non mesuré**. Ce qui reste réellement établi y
+   est dit à sa place : le canal existe et transporte une information individuelle mesurable
+   **en intra-équipe**, sur les jumeaux publiés par l'équipe Twin (36,4 % de top-1, apport
+   individuel +17,4 points au-delà du segment démographique, témoin de population pure à
+   0,07 %) ; nous ignorons ce qu'il devient entre deux organisations indépendantes.
 3. Deux prédictions préenregistrées avaient été comptées comme « réfutées » sur la base
    d'un intervalle de confiance bootstrap dégénéré ([0 % ; 0 %] pour 0 succès sur un petit
    n) : ce sont des artefacts arithmétiques, pas des intervalles de confiance. Corrigées en
@@ -102,26 +106,35 @@ jointly; opinion items carry no such signal. This assumes an attacker already ho
 answers to those same items, so it is a linkability finding, not identification from public
 information alone.
 
-**A reduction in scope we want to state directly — the most important update in this note.**
-An earlier version of this analysis also measured a broader, more concerning scenario:
-whether a twin produced by one organization could be linked to an independently produced
-twin of the *same* person made by a *different* organization, using a different model,
-prompt template, and persona format. We had a twin-to-twin matching figure of 36.4% that
-could be read as evidence for that scenario; it is not, and we do not want you to read it
-that way. That 36.4% is measured within a single pipeline, with both twins built from the
-same persona files. When we tested the actual cross-organization scenario directly — two
-twins built end-to-end independently, different model, template, and persona format —
-top-1 matching fell to **1.8% [95% CI 0.4-3.6%]** at n = 142, *below* a baseline that knows only
-the target's demographics (9.2% [5.5-13.4%]) and well below a same-segment decoy (25.5%
-[19.9-31.3%]). The gap widened, not narrowed, between our first checkpoint (n = 82: 3.7%) and
-this one (n = 142: 1.8%). We want to be transparent about why the sample stops at 142 of a
-planned 200: it is not a choice. A first run stopped at n = 82 on a transport-layer error from
-our API provider; we reconciled that incident (confirmed unbilled) and resumed, only to hit a
-second, distinct rate-limit error at n = 142 that we have not yet reconciled. Given that the
-signal moved further below the baseline, not toward it, between the two checkpoints we already
-have, we are reporting this now rather than delaying further. We will not make a
-cross-organization claim stronger than what this sample supports, and will share any update if
-we complete the remaining sample before publication.
+**A correction we owe you directly — not a reduction in risk.** An earlier draft of this
+letter reported a broader test: whether a twin produced by one organization could be linked
+to an independently produced twin of the *same* person made by a *different* organization,
+using a different model, prompt template, and persona format, and described that scenario as
+refuted — a twin-to-twin matching figure of 1.8% [95% CI 0.4-3.6%] at n = 142, at or below a
+demographics-only baseline (9.2%). An independent check has since shown that this test could
+not have detected a link even if one existed. Against the same 120-person pool, the twins
+produced by this specific pipeline re-identify the *real* person only at chance rate (0.0-0.8%,
+against 0.83% expected by chance), whereas twins your own team has published, on that same
+pool, re-identify the real person 20-39% of the time. The apparatus carried no individual-level
+information before any cross-organization manipulation was applied, so its 1.8% result cannot
+be read as evidence for or against a cross-organization link — it reflects a generator that was
+not, in fact, producing twins recognizable as anyone. We are withdrawing this claim entirely,
+not softening it: the cross-organization scenario was not refuted, it was not testable with
+this instrument. This is a limitation of our own test, not a finding about the world, and we
+did not want to leave you with an inaccurate account of what we know.
+
+To be clear about what we do and do not know: within a single, shared pipeline — both twins
+built from the same persona files, as in the headline figure above — the channel is real and
+carries measurable individual-level information. On the 60-item common block used for this
+comparison, twin-to-twin agreement between strangers is 46.0% [45.9-46.1%]; the
+demographic/ideological segment adds only +3.8 points [3.8-3.9]; the specific individual adds a
+further +17.4 points [17.2-17.6] beyond that; and a pure-population control (segment mode only,
+no individual information) succeeds only 0.07% [0.04-0.11%] of the time, against 36.4% for the
+real twin-to-twin match. What we do not know, and are not claiming in either direction, is what
+happens to that channel once two organizations build their twins entirely independently — we
+currently have no working measurement of that scenario. To be equally direct the other way: we
+are not saying the risk has grown, either. It has not increased; it is simply unmeasured, and
+we will not speculate about its size until we have an instrument capable of testing it.
 
 **A statistical error we found in our own work, and its correction.** Separately, we ran a
 control meant to test whether the rank correlation we observe, across twin configurations,
@@ -148,14 +161,19 @@ rather than weakening it.
 **What we have not shown.** To be explicit about scope: we have not shown that an attacker
 without prior access to a respondent's true answers to these items could identify them from
 twin outputs alone; we have not established that twin fidelity causally drives
-identifiability (see above); and our cross-organization estimate above is preliminary and
-will be updated.
+identifiability (see above); and, as described above, we currently have no working
+measurement of the cross-organization scenario at all — the test we ran could not
+distinguish a genuine absence of signal from an instrument unable to detect one, so we
+cannot bound that particular risk in either direction at this time.
 
 No individual respondent is named, listed, or singled out anywhere in our materials; we
 report only aggregate rates across the panel. We are also releasing a measured defense
 (within-segment shuffling of purchase responses) that cuts the twin-vs-human rate from
-20.7% to 0.13% at a cost of only 1.47 points of aggregate utility, so this work is intended
-as a constructive contribution, not merely a critique.
+20.7% to 0.13%. The real cost falls entirely on inter-item correlations (4.4 points); two of
+the three components (per-item distribution, group differences) are exactly preserved by
+construction, so the previously used three-way average (1.47 points) diluted that cost by a
+factor of three rather than measuring it. This work is intended as a constructive
+contribution, not merely a critique.
 
 **What we are distributing, and what we are not.** To be concrete about our own materials:
 we used the wave 1-4 response files and question catalog you released on Hugging Face
