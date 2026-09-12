@@ -2,10 +2,11 @@
 figures_article : les deux figures du manuscrit (article/manuscrit.md).
 
 Ne recalcule rien. Lit uniquement des CSV deja calcules dans resultats/ :
-  - c7-monde-ouvert.csv, c7-monde-ouvert-roc.csv       -> figure 1
+  - c7-monde-ouvert.csv, c7-monde-ouvert-roc.csv,
+    c7-attaquant-fort.csv                               -> figure 1
   - c7-compromis-robustesse-points.csv (13 points, dont le retest humain,
     superset de c7-compromis.csv), c7-disjoint-nul.csv,
-    c7-disjoint-resume.csv                              -> figure 2
+    c7-disjoint-resume.csv, c7-ic-manquants.csv          -> figure 2
 
 Aucun appel de modele, aucun reseau. Etiquettes/axes/legendes en anglais,
 lisibles en noir et blanc (formes + styles de trait distincts, la couleur est
@@ -15,6 +16,12 @@ un renfort optionnel jamais le seul signal). Sortie : article/figures/*.png
 Usage : .venv/bin/python analyses/figures_article.py
 
 Donnees manquantes signalees ici (ne pas inventer, ne pas combler) :
+  - Figure 1 : l'attaquant fort (A-LLR hors pli, analyses/c7_attaquant_fort.py) n'a
+    ete evalue qu'a deux seuils de FPR (0,1 % et 1 %), jamais sur une courbe ROC
+    complete, et c7-attaquant-fort.csv ne porte pas de colonnes _bas/_haut pour ces
+    deux taux (seul le top-1 en monde ferme a un IC bootstrap). L'attaque forte est
+    donc tracee comme deux points isoles, sans ligne qui relierait des seuils
+    intermediaires jamais mesures, et sans barre d'erreur.
   - Figure 2 : le "nul de marge" disponible (c7-disjoint-nul.csv) ne donne
     qu'une distribution de rho de Spearman simule (corr. globale
     fidelite~fuite), pas de valeurs de fuite simulees par predicteur/point.
@@ -65,8 +72,8 @@ def _floor_fpr(fpr):
 # ---------------------------------------------------------------------------
 
 STYLES_F1 = {
-    "meilleur": dict(ls="-", marker="o", lw=1.6, ms=3.2, color="black",
-                      label="Best twin/agent"),
+    "meilleur": dict(ls="--", marker="o", lw=1.3, ms=3.0, color="0.25",
+                      label="Naive attack (Hamming)"),
     "demo": dict(ls="--", marker="s", lw=1.1, ms=2.6, color="0.35",
                   label="Demographics Only"),
     "pmm": dict(ls=":", marker="^", lw=1.1, ms=2.6, color="0.4",
@@ -74,6 +81,13 @@ STYLES_F1 = {
     "humain": dict(ls="-.", marker="", lw=1.6, ms=0, color="0.1",
                      label="Human retest (ceiling)"),
 }
+
+# Attaquant fort (A-LLR, hors pli) : jamais evalue en courbe complete, seulement aux
+# deux seuils de FPR deja affiches en repere (0,1 % et 1 %). Trace en points isoles,
+# trait plein absent par construction (relier deux seuils mesures inventerait la forme
+# entre eux). Marqueur plein noir pour rester net en noir et blanc.
+STYLE_FORT = dict(marker="D", ms=4.6, color="black",
+                   label="Strong attack (A-LLR), 0.1%/1% FPR points only")
 
 PREDICTEUR_A_CLE = {
     ("Twin", "Meilleur jumeau (JSON Persona GPT4.1)"): "meilleur",
@@ -86,12 +100,19 @@ PREDICTEUR_A_CLE = {
     ("Stanford", "Retest humain (plafond)"): "humain",
 }
 
+# jeu de la figure -> jeu de c7-attaquant-fort.csv, et l'etiquette de l'attaque forte
+# retenue par le preenregistrement (A-LLR hors pli, pas A-MI qui est en echantillon).
+JEU_ATTAQUANT_FORT = {"Twin": "Twin", "Stanford": "Park GSS"}
+ATTAQUE_FORTE = "A-LLR (vraisemblance, hors pli)"
+
 
 def figure1():
     roc = pd.read_csv(os.path.join(RESULTATS, "c7-monde-ouvert-roc.csv"))
     resume = pd.read_csv(os.path.join(RESULTATS, "c7-monde-ouvert.csv"))
+    fort = pd.read_csv(os.path.join(RESULTATS, "c7-attaquant-fort.csv"))
+    fort = fort[fort["attaque"] == ATTAQUE_FORTE]
 
-    fig, axes = plt.subplots(2, 1, figsize=(3.4, 5.6), sharex=True)
+    fig, axes = plt.subplots(2, 1, figsize=(3.4, 6.3), sharex=True)
 
     for ax, jeu, titre in zip(axes, ["Twin", "Stanford"],
                                ["Twin-2K-500 (2,058 respondents)",
@@ -116,7 +137,9 @@ def figure1():
                      markerfacecolor=st["color"], markeredgecolor=st["color"])
 
         # lignes reperes FPR = 0.1% et 1%, TPR annote pour le meilleur jumeau/agent
+        # (attaque naive) et pour l'attaquant fort (A-LLR, hors pli)
         ligne_res = resume[resume["jeu"] == jeu]
+        ligne_fort = fort[fort["jeu"] == JEU_ATTAQUANT_FORT[jeu]]
         for fpr_repere, colonne in [(0.001, "tpr_fpr_0_1pct"), (0.01, "tpr_fpr_1pct")]:
             ax.axvline(fpr_repere, color="0.6", lw=0.7, ls=(0, (1, 1)), zorder=0)
             ligne_meilleur = ligne_res[ligne_res["predicteur"].isin(
@@ -124,8 +147,26 @@ def figure1():
             if not ligne_meilleur.empty:
                 tpr_val = float(ligne_meilleur[colonne].iloc[0])
                 ax.annotate(f"{tpr_val * 100:.1f}%", xy=(fpr_repere, tpr_val),
-                             xytext=(2, 4), textcoords="offset points", fontsize=6.3,
-                             color="black")
+                             xytext=(-3, 7), textcoords="offset points", fontsize=6.0,
+                             color="0.25", ha="right", clip_on=False)
+            if not ligne_fort.empty:
+                tpr_fort = float(ligne_fort[colonne].iloc[0])
+                ax.annotate(f"{tpr_fort * 100:.1f}%", xy=(fpr_repere, tpr_fort),
+                             xytext=(9, 1), textcoords="offset points", fontsize=6.0,
+                             color="black", fontweight="bold", ha="left", va="center",
+                             clip_on=False)
+
+        # attaquant fort : deux points mesures (0,1 % et 1 % de FPR), aucune ligne --
+        # relier deux seuils par un trait inventerait une forme de courbe jamais
+        # mesuree entre eux (cf. docstring du module). Pas de barre d'erreur : les
+        # colonnes tpr_fpr_*_bas/haut n'existent pas dans c7-attaquant-fort.csv.
+        if not ligne_fort.empty:
+            xf = [0.001, 0.01]
+            yf = [float(ligne_fort["tpr_fpr_0_1pct"].iloc[0]),
+                  float(ligne_fort["tpr_fpr_1pct"].iloc[0])]
+            ax.scatter(xf, yf, marker=STYLE_FORT["marker"], s=STYLE_FORT["ms"] ** 2,
+                       color=STYLE_FORT["color"], edgecolor="white", linewidth=0.5,
+                       label=STYLE_FORT["label"], zorder=4)
 
         ax.set_xscale("log")
         ax.set_xlim(FPR_FLOOR, 1.0)
@@ -135,11 +176,15 @@ def figure1():
         ax.set_ylabel("True positive rate")
 
     axes[-1].set_xlabel("False positive rate (log scale)")
+    fig.subplots_adjust(top=0.90, bottom=0.20, hspace=0.30, left=0.17, right=0.97)
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False,
-               bbox_to_anchor=(0.55, -0.02))
-    fig.suptitle("Open-world reidentification risk (ROC)", fontsize=9.5, y=0.995)
-    fig.tight_layout(rect=(0, 0.06, 1, 0.97))
+               bbox_to_anchor=(0.55, 0.045))
+    fig.suptitle("Open-world reidentification risk (ROC)", fontsize=9.5, y=0.965)
+    fig.text(0.5, 0.006,
+              "Strong attack (A-LLR, out-of-fold): 2 measured points per panel, no "
+              "full ROC and no bootstrap CI in the source CSV.",
+              fontsize=5.3, color="0.25", ha="center", va="bottom")
 
     chemin = os.path.join(FIGURES, "fig1-monde-ouvert.png")
     fig.savefig(chemin, dpi=300, bbox_inches="tight")
@@ -168,34 +213,50 @@ def figure2():
     points = pd.read_csv(os.path.join(RESULTATS, "c7-compromis-robustesse-points.csv"))
     nul = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-nul.csv"))
     resume = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-resume.csv"))
-    # IC bootstrap de la fuite (top-1), disponibles pour 8 des 13 points seulement
-    # (les 8 predicteurs LLM/demographiques). Trouvees dans c7-reidentification.csv,
-    # cible="humains vague 4" : le top1 de ce sous-ensemble correspond exactement
-    # (a 1e-12 pres) au fuite_top1 de c7-compromis-robustesse-points.csv pour ces 8
-    # configurations, confirmant qu'il s'agit bien de la meme statistique. Aucune IC
-    # equivalente n'existe pour les 4 temoins statistiques (B0/B1/B2/PMM k=10) ni pour
-    # le retest humain : on ne les invente pas, ces 5 points restent sans barre d'erreur.
+    # IC bootstrap de la fuite (top-1), 8 des 13 points depuis c7-reidentification.csv,
+    # cible="humains vague 4" (verifie a 1e-9 pres contre fuite_top1) ; les 5 manquants
+    # (les 4 temoins statistiques et le retest humain) et l'IC de fidelite pour les 13
+    # points (jamais calcule avant) viennent de c7-ic-manquants.csv (meme convention de
+    # bootstrap par personne, cf. analyses/c7_ic_manquants.py). Les deux axes ont
+    # desormais un IC pour les 13 points.
     reid = pd.read_csv(os.path.join(RESULTATS, "c7-reidentification.csv"))
     reid_cible = reid[reid["cible"] == "humains vague 4"].set_index("configuration")
-    ic_fuite = reid_cible[["top1", "top1_bas", "top1_haut"]]
+    ic_fuite = reid_cible[["top1", "top1_bas", "top1_haut"]].rename(
+        columns={"top1": "point_central", "top1_bas": "ic_bas", "top1_haut": "ic_haut"})
+
+    manquants = pd.read_csv(os.path.join(RESULTATS, "c7-ic-manquants.csv"))
+    ic_fuite_manquante = manquants[manquants["axe"] == "fuite_top1"].set_index(
+        "predicteur")[["point_central", "ic_bas", "ic_haut"]]
+    ic_fuite = pd.concat([ic_fuite, ic_fuite_manquante])
+    ic_fidelite = manquants[manquants["axe"] == "fidelite_plancher"].set_index(
+        "predicteur")[["point_central", "ic_bas", "ic_haut"]]
 
     fig, ax = plt.subplots(figsize=(3.4, 3.3))
 
     vus = set()
-    n_avec_ic = 0
+    n_avec_ic_y, n_avec_ic_x = 0, 0
     for _, r in points.iterrows():
         st = _style_point(r["groupe"], r["configuration"])
         lbl = st["label"] if st["label"] not in vus else None
         vus.add(st["label"])
         if r["configuration"] in ic_fuite.index:
             ligne_ic = ic_fuite.loc[r["configuration"]]
-            assert abs(ligne_ic["top1"] - r["fuite_top1"]) < 1e-9
-            bas = r["fuite_top1"] - float(ligne_ic["top1_bas"])
-            haut = float(ligne_ic["top1_haut"]) - r["fuite_top1"]
+            assert abs(ligne_ic["point_central"] - r["fuite_top1"]) < 1e-8
+            bas = r["fuite_top1"] - float(ligne_ic["ic_bas"])
+            haut = float(ligne_ic["ic_haut"]) - r["fuite_top1"]
             ax.errorbar(r["fidelite_plancher"], r["fuite_top1"],
                          yerr=[[bas], [haut]], fmt="none", ecolor=st["color"],
                          elinewidth=0.8, capsize=2, capthick=0.8, zorder=2)
-            n_avec_ic += 1
+            n_avec_ic_y += 1
+        if r["configuration"] in ic_fidelite.index:
+            ligne_ic = ic_fidelite.loc[r["configuration"]]
+            assert abs(ligne_ic["point_central"] - r["fidelite_plancher"]) < 1e-8
+            gauche = r["fidelite_plancher"] - float(ligne_ic["ic_bas"])
+            droite = float(ligne_ic["ic_haut"]) - r["fidelite_plancher"]
+            ax.errorbar(r["fidelite_plancher"], r["fuite_top1"],
+                         xerr=[[gauche], [droite]], fmt="none", ecolor=st["color"],
+                         elinewidth=0.8, capsize=2, capthick=0.8, zorder=2)
+            n_avec_ic_x += 1
         ax.scatter(r["fidelite_plancher"], r["fuite_top1"], marker=st["marker"],
                     s=42 if st["marker"] != "*" else 90, color=st["color"],
                     edgecolor="white", linewidth=0.4, label=lbl, zorder=3)
@@ -203,8 +264,8 @@ def figure2():
             ax.annotate("human retest", xy=(r["fidelite_plancher"], r["fuite_top1"]),
                          xytext=(-6, -10), textcoords="offset points", fontsize=6.3,
                          ha="right")
-    print(f"figure2 : IC bootstrap de la fuite tracees pour {n_avec_ic}/{len(points)} "
-          "points (les autres n'ont pas d'IC calculee dans les CSV)")
+    print(f"figure2 : IC bootstrap tracees pour {n_avec_ic_y}/{len(points)} points "
+          f"(fuite) et {n_avec_ic_x}/{len(points)} points (fidelite)")
 
     ax.set_xlabel("Imitation quality (fidelity, share of human floor)")
     ax.set_ylabel("Reidentification leakage (top-1 rate)")
@@ -234,8 +295,8 @@ def figure2():
         spine.set_linewidth(0.6)
 
     fig.text(0.01, 0.005,
-              "Error bars: 95% bootstrap CI (leakage), available for 8/13 predictors "
-              "(LLM twins + demographics only).",
+              "Error bars: 95% bootstrap CI, per-person resampling, both axes, "
+              "all 13 predictors.",
               fontsize=5.3, color="0.25", ha="left", va="bottom")
     fig.tight_layout(rect=(0, 0.035, 1, 1))
     chemin = os.path.join(FIGURES, "fig2-couplage.png")
