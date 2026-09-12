@@ -1,5 +1,13 @@
 # Article, colonne vertébrale : ce qu'on affirme, avec quel chiffre, avec quelle limite
 
+statut: courant
+mandat: tenir la source unique de vérité des revendications — valeur, intervalle, fichier source, formulation interdite, limite
+agent: document collectif, tenu en série par un agent à la fois (Méthode v2 §1.1)
+ecriture: resultats/article-synthese.md
+lecture_seule: tout le reste
+interdits: appel payant sans GO, réseau, commit sur master, arrière-plan
+cout_reel_usd: 0.00
+
 Squelette argumentatif, pas le manuscrit. Aucun chiffre sans source ni intervalle ; un chiffre manquant est écrit « à vérifier ». Lecteur visé : relecteur hostile de PoPETs. Bibliographie en cours dans `article/references.bib`, positionnement dans `resultats/positionnement-vie-privee-2026-09-12.md` (produits par d'autres agents, cités ici, jamais modifiés).
 
 ## 1. La thèse

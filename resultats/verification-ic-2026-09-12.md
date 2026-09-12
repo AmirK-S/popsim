@@ -1,5 +1,14 @@
 # Vérification des intervalles publiés — 12 septembre 2026
 
+statut: courant
+mandat: établir si les intervalles publiés sont ce qu'ils prétendent être, et si des valeurs parties dans des lettres sont fausses
+agent: Opus 5, Anthropic
+ecriture: resultats/verification-ic-2026-09-12.md
+lecture_seule: tout le reste
+interdits: appel payant sans GO, réseau, commit sur master, arrière-plan
+cecite: n'a pas eu accès à la boîte mail — la version réellement envoyée a été établie séparément
+cout_reel_usd: 0.00
+
 Agent de vérification, lecture seule sur tout le dépôt sauf ce fichier. Aucun appel de
 modèle, aucun réseau, aucun `git commit`. Tout recalculé en avant-plan avec `.venv`.
 **Je constate, je ne corrige pas.**
