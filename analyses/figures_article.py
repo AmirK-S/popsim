@@ -168,14 +168,34 @@ def figure2():
     points = pd.read_csv(os.path.join(RESULTATS, "c7-compromis-robustesse-points.csv"))
     nul = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-nul.csv"))
     resume = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-resume.csv"))
+    # IC bootstrap de la fuite (top-1), disponibles pour 8 des 13 points seulement
+    # (les 8 predicteurs LLM/demographiques). Trouvees dans c7-reidentification.csv,
+    # cible="humains vague 4" : le top1 de ce sous-ensemble correspond exactement
+    # (a 1e-12 pres) au fuite_top1 de c7-compromis-robustesse-points.csv pour ces 8
+    # configurations, confirmant qu'il s'agit bien de la meme statistique. Aucune IC
+    # equivalente n'existe pour les 4 temoins statistiques (B0/B1/B2/PMM k=10) ni pour
+    # le retest humain : on ne les invente pas, ces 5 points restent sans barre d'erreur.
+    reid = pd.read_csv(os.path.join(RESULTATS, "c7-reidentification.csv"))
+    reid_cible = reid[reid["cible"] == "humains vague 4"].set_index("configuration")
+    ic_fuite = reid_cible[["top1", "top1_bas", "top1_haut"]]
 
     fig, ax = plt.subplots(figsize=(3.4, 3.3))
 
     vus = set()
+    n_avec_ic = 0
     for _, r in points.iterrows():
         st = _style_point(r["groupe"], r["configuration"])
         lbl = st["label"] if st["label"] not in vus else None
         vus.add(st["label"])
+        if r["configuration"] in ic_fuite.index:
+            ligne_ic = ic_fuite.loc[r["configuration"]]
+            assert abs(ligne_ic["top1"] - r["fuite_top1"]) < 1e-9
+            bas = r["fuite_top1"] - float(ligne_ic["top1_bas"])
+            haut = float(ligne_ic["top1_haut"]) - r["fuite_top1"]
+            ax.errorbar(r["fidelite_plancher"], r["fuite_top1"],
+                         yerr=[[bas], [haut]], fmt="none", ecolor=st["color"],
+                         elinewidth=0.8, capsize=2, capthick=0.8, zorder=2)
+            n_avec_ic += 1
         ax.scatter(r["fidelite_plancher"], r["fuite_top1"], marker=st["marker"],
                     s=42 if st["marker"] != "*" else 90, color=st["color"],
                     edgecolor="white", linewidth=0.4, label=lbl, zorder=3)
@@ -183,6 +203,8 @@ def figure2():
             ax.annotate("human retest", xy=(r["fidelite_plancher"], r["fuite_top1"]),
                          xytext=(-6, -10), textcoords="offset points", fontsize=6.3,
                          ha="right")
+    print(f"figure2 : IC bootstrap de la fuite tracees pour {n_avec_ic}/{len(points)} "
+          "points (les autres n'ont pas d'IC calculee dans les CSV)")
 
     ax.set_xlabel("Imitation quality (fidelity, share of human floor)")
     ax.set_ylabel("Reidentification leakage (top-1 rate)")
@@ -211,7 +233,11 @@ def figure2():
     for spine in inset.spines.values():
         spine.set_linewidth(0.6)
 
-    fig.tight_layout()
+    fig.text(0.01, 0.005,
+              "Error bars: 95% bootstrap CI (leakage), available for 8/13 predictors "
+              "(LLM twins + demographics only).",
+              fontsize=5.3, color="0.25", ha="left", va="bottom")
+    fig.tight_layout(rect=(0, 0.035, 1, 1))
     chemin = os.path.join(FIGURES, "fig2-couplage.png")
     fig.savefig(chemin, dpi=300, bbox_inches="tight")
     plt.close(fig)
