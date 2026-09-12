@@ -4,9 +4,13 @@ Ce brouillon sert à préparer **deux** divulgations responsables — aux auteur
 Twin-2K-500, et à l'équipe Stanford de l'archive des 1 052 agents génératifs — si et quand
 le responsable du projet décide d'en envoyer une. Rien n'est envoyé par cet agent : les
 deux textes anglais ci-dessous ne sont que des projets de courriel, à relire, modifier et
-signer. Avant tout envoi, le responsable doit trancher, pour chaque lettre : (1) qui signe
-et avec quelle adresse, (2) si le code et le rapport (y compris la défense mesurée) sont
-réellement prêts à être partagés en pièce jointe ou par lien, (3) si le délai de 30 jours
+signer. **Tranché le 12 septembre 2026 et déjà appliqué aux deux textes : (1) signature —
+Amir KELLOU SIDHOUM, chercheur indépendant sans affiliation institutionnelle,
+`aboutdotblank@gmail.com` ; (2) partage du code — le dépôt public `github.com/AmirK-S/popsim`
+est cité tel quel dans les deux lettres, le rapport complet étant envoyé sur demande ; aucune
+pièce jointe n'est promise. Le répertoire `demandes/` n'est pas versionné et n'est donc pas
+exposé ; aucune des deux lettres ne cite de chemin de fichier interne.** Restent à trancher
+avant tout envoi : (3) si le délai de 30 jours
 est compatible avec l'échéance PoPETs 2027.3 (30 novembre 2026), (4) si les questions
 posées à chaque équipe doivent être reformulées, et (5) — spécifiquement pour Stanford —
 si le ton « votre avertissement était exact, voici son ampleur mesurée » est bien respecté
@@ -23,7 +27,8 @@ défavorables :
    réel : ses cellules *fausses* évitaient la vraie réponse de la personne (`c7_disjoint.py`
    ligne 133), ce qui gonflait sa fuite mesurée d'un facteur **~1,3** (41,2 % de top-1 au
    lieu de 31,6 % une fois les valeurs fausses tirées dans la marginale de population).
-   **Corrigé, ce témoin continue de reproduire le couplage** (rho 0,974–0,985) et le
+   **Corrigé, ce témoin continue de reproduire le couplage** (rho 0,974, 5ᵉ–95ᵉ centiles
+   [0,950 ; 0,993], sur les 12 configurations en items entiers — chiffres du manuscrit) et le
    prédicteur réel (rho 0,965) ne le dépasse pas : **la prédiction (b) reste réfutée**,
    comme l'affirmait l'analyse d'origine, et le titre de l'article **ne change pas**. Une
    version intermédiaire de cette correction avait, à tort, cru pouvoir annoncer l'inverse
@@ -36,9 +41,13 @@ défavorables :
    rétractation). **Cette annonce de renversement, et le chiffre 0,118–0,206 qui
    l'accompagnait, sont retirés des deux lettres ci-dessous.** Par ailleurs, une formulation
    de notre résumé était fausse et est ici corrigée : ce témoin corrigé **n'est pas
-   dépourvu de structure individuelle** — apparié sur l'exactitude, il fuit 31,15 % de
-   top-1 et 4,63 bits, contre 20,73 % et 3,56 bits pour le jumeau réel et 0,049 % pour le
-   hasard pur ; voir §1 de la lettre à Twin-2K-500.
+   dépourvu de structure individuelle** — apparié sur l'exactitude, il fuit **31,6 %** de
+   top-1, contre 20,7 % (3,55 bits) pour le jumeau réel et 0,049 % pour le hasard pur ; voir
+   §1 de la lettre à Twin-2K-500. *(Le couple 31,15 % / 4,63 bits qui figurait ici provient du
+   rapport `c7-nul-corrige-resultats.md`, rétracté, et décrit un **autre** témoin — celui à
+   cible de substitution. Le témoin dont parle la lettre est le témoin à exactitude-vérité
+   appariée, remplissage marginal, mesuré à 31,62 % dans `audit-renversement-2026-09-12.md`
+   et publié à 31,6 % par le manuscrit. Ne pas fusionner les deux.)*
 2. **Rétractation, pas réduction.** Le témoin « deux organisations indépendantes »
    (top-1 = 1,76 % [0,35 ; 3,63] à n = 142), que nous nous apprêtions à ajouter à la lettre
    Twin-2K-500 comme une **réduction** de la menace précédemment signalée, est lui-même
@@ -52,8 +61,8 @@ défavorables :
    **Formulation exacte à retenir : la question « deux organisations indépendantes » n'a
    pas été réfutée, elle n'a pas pu être testée — une limite de notre instrument, pas un
    résultat sur le monde.** L'annonce de réduction de menace est retirée de la lettre
-   Twin-2K-500 ci-dessous, sans être remplacée par une annonce inverse : le risque n'a pas
-   augmenté non plus, il est simplement **non mesuré**. Ce qui reste réellement établi y
+   Twin-2K-500 ci-dessous, sans être remplacée par une annonce inverse : nous n'avons aucune
+   preuve dans un sens ni dans l'autre, ce scénario est simplement **non mesuré**. Ce qui reste réellement établi y
    est dit à sa place : le canal existe et transporte une information individuelle mesurable
    **en intra-équipe**, sur les jumeaux publiés par l'équipe Twin (36,4 % de top-1, apport
    individuel +17,4 points au-delà du segment démographique, témoin de population pure à
@@ -88,19 +97,23 @@ défavorables :
 
 **Subject:** Responsible disclosure — re-identification signal in Twin-2K-500 purchase-intent items, and a correction on our end
 
+**To:** Olivier Toubia <ot2107@gsb.columbia.edu>, Tianyi Peng <tianyi.peng@columbia.edu>
+
 Dear Twin-2K-500 authors,
 
-My name is [Name], a researcher working on privacy properties of LLM-simulated survey twins.
+My name is Amir KELLOU SIDHOUM; I am an independent researcher, with no institutional
+affiliation, working on privacy properties of LLM-simulated survey twins.
 I am writing to disclose, ahead of any publication, a finding on your publicly released
 Twin-2K-500 dataset (CC BY 4.0), and to flag two corrections we made to our own analysis
-since we first drafted this note — one of which meaningfully reduces the risk we would
-otherwise have described.
+since we first drafted this note — one of which withdraws a claim we had been about to make
+to you, without replacing it with a claim in the opposite direction.
 
 **What we measured, and on what data.** Using only the simulated responses of an LLM twin
-conditioned on a persona, and matching them against the real respondents' answers to the 40
-purchase-intent items, we recover the correct respondent among 2,058 candidates in 20.7% of
-cases [95% CI 19.0-22.5%], versus 2.2% [1.6-2.8%] for a demographic-only twin and well under
-0.3% for standard statistical baselines (e.g. predictive mean matching, 0.21% [0.05-0.42%])
+conditioned on a persona, and matching them against the real respondents' answers to the
+60-item block common to wave 4 (the 40 purchase-intent items together with the 20 opinion
+items), we recover the correct respondent among 2,058 candidates in 20.7% of
+cases [95% CI 19.0-22.4%], versus 2.13% [1.6-2.8%] for a demographic-only twin and well under
+0.3% for standard statistical baselines (e.g. predictive mean matching, 0.23% [0.06-0.42%])
 at comparable accuracy. The signal is concentrated in the block of purchase items taken
 jointly; opinion items carry no such signal. This assumes an attacker already holds the true
 answers to those same items, so it is a linkability finding, not identification from public
@@ -110,12 +123,12 @@ information alone.
 letter reported a broader test: whether a twin produced by one organization could be linked
 to an independently produced twin of the *same* person made by a *different* organization,
 using a different model, prompt template, and persona format, and described that scenario as
-refuted — a twin-to-twin matching figure of 1.8% [95% CI 0.4-3.6%] at n = 142, at or below a
-demographics-only baseline (9.2%). An independent check has since shown that this test could
-not have detected a link even if one existed. Against the same 120-person pool, the twins
+refuted — a twin-to-twin matching figure of 1.8% [95% CI 0.4-3.6%] at n = 142, which we read
+at the time as no better than a demographics-only baseline. An independent check has since
+shown that this test could not have detected a link even if one existed. Against the same 120-person pool, the twins
 produced by this specific pipeline re-identify the *real* person only at chance rate (0.0-0.8%,
 against 0.83% expected by chance), whereas twins your own team has published, on that same
-pool, re-identify the real person 20-39% of the time. The apparatus carried no individual-level
+pool, re-identify the real person 20.2-38.9% of the time. The apparatus carried no individual-level
 information before any cross-organization manipulation was applied, so its 1.8% result cannot
 be read as evidence for or against a cross-organization link — it reflects a generator that was
 not, in fact, producing twins recognizable as anyone. We are withdrawing this claim entirely,
@@ -133,8 +146,9 @@ no individual information) succeeds only 0.07% [0.04-0.11%] of the time, against
 real twin-to-twin match. What we do not know, and are not claiming in either direction, is what
 happens to that channel once two organizations build their twins entirely independently — we
 currently have no working measurement of that scenario. To be equally direct the other way: we
-are not saying the risk has grown, either. It has not increased; it is simply unmeasured, and
-we will not speculate about its size until we have an instrument capable of testing it.
+are not saying the risk has grown, either. We have no evidence in either direction: the scenario
+is simply unmeasured, and we will not speculate about its size until we have an instrument
+capable of testing it.
 
 **A statistical error we found in our own work, and its correction.** Separately, we ran a
 control meant to test whether the rank correlation we observe, across twin configurations,
@@ -145,15 +159,15 @@ track per-person accuracy. We found a real flaw in that control: the cells it fi
 its measured leakage by a factor of about 1.3 (41.2% top-1 instead of 31.6% once wrong
 cells are instead drawn from the population marginal for that item). Corrected this way —
 per-person accuracy matched exactly to the ground truth, exact-answer positions placed at
-random — the control still reproduces the fidelity/leakage coupling we observe (rho =
-0.974-0.985 across two ways of drawing the wrong cells), and our real twins' rho (0.965
-[95% CI 0.937-0.993]) does not exceed it. Prediction (b) — that this coupling reflects
+random — the control still reproduces the fidelity/leakage coupling we observe (rho = 0.974,
+5th-95th percentiles [0.950 ; 0.993], over the 12 configurations measured on whole items),
+and our real twins' rho (0.965) does not exceed it. Prediction (b) — that this coupling reflects
 something beyond per-person accuracy — therefore remains refuted, exactly as in our
 original analysis; nothing here changes that conclusion. We also want to correct, on our
 own initiative, an overstatement in an earlier internal summary of this control: it is not
 devoid of individual structure, as we had briefly and incorrectly described it — matched to
-the same per-person accuracy as our real twins, it identifies the correct respondent 31.2%
-of the time (4.63 bits), somewhat more than our real twins (20.7%, 3.56 bits) and far above
+the same per-person accuracy as our real twins, it identifies the correct respondent 31.6%
+of the time, somewhat more than our real twins (20.7%, 3.55 bits of identity) and far above
 chance (0.049%). If anything, this makes it a stronger synthetic adversary at matched
 accuracy than our own twins, not an inert baseline — which reinforces the refutation above
 rather than weakening it.
@@ -180,13 +194,15 @@ we used the wave 1-4 response files and question catalog you released on Hugging
 (`LLM-Digital-Twin/Twin-2K-500`, CC BY 4.0) to compute the rates above. We do not
 redistribute those raw response files, the persona files, or any individual-level record
 anywhere in our repository or in the accompanying code artifact. That artifact ships only
-code, configuration, and documentation (nine files); its demonstration runs entirely on
+code, configuration, and documentation (eleven files); its demonstration runs entirely on
 data it generates at runtime, and every table we publish reports rates aggregated by
 condition, item, or replicate — never an individual row or identifier.
 
-**Proposed delay and concrete ask.** Before any public posting, we would like to share our
-code and full report with you for review and comment, and are happy to delay or adjust based
-on your feedback. We propose a 30-day window for your response, ahead of a submission
+**Proposed delay and concrete ask.** Before any public posting, we would like you to be able
+to check the work yourself. The code is already public and you can open it right now, at
+https://github.com/AmirK-S/popsim; we are glad to send you the full report on request, and
+are happy to delay or adjust based on your feedback. We propose a 30-day window for your
+response, ahead of a submission
 deadline we are targeting for November 30, 2026. Concretely, we would welcome: (1) whether
 you see any obstacle to us publishing this analysis; (2) whether the twin outputs you
 released were generated before or after the dataset's public release; and (3) any comments
@@ -195,7 +211,9 @@ on the proposed defense before we finalize it.
 Thank you for your time and for releasing this valuable dataset.
 
 Best regards,
-[Name]
+Amir KELLOU SIDHOUM
+Independent researcher (no institutional affiliation)
+aboutdotblank@gmail.com
 
 ---
 
@@ -205,27 +223,30 @@ Best regards,
 
 Dear Joon (now at Simile) and Michael,
 
-My name is [Name], a researcher working on privacy properties of LLM-simulated agents built
+My name is Amir KELLOU SIDHOUM; I am an independent researcher, with no institutional
+affiliation, working on privacy properties of LLM-simulated agents built
 from interview data. I am writing to disclose, ahead of any publication, a finding on the
 publicly released archive of your 1,052-agent generative-agent study.
 
 **What we measured, and on what data.** Using only the simulated responses of an LLM agent
 built from a participant's interview transcript alone, we recover the correct participant
-among 1,052 in 44.7% of cases; a composite agent (interview + survey + demographics) reaches
-65.7% under simple nearest-neighbor matching. Using a strengthened, information-weighted
+among 1,052 in 44.7% of cases [95% CI 41.8-47.5%]; a composite agent (interview + survey +
+demographics) reaches 65.51% [95% CI 62.7-68.3%] under simple nearest-neighbor matching.
+Using a strengthened, information-weighted
 matching rule (evidence weighted by each item's per-item reliability and rarity, with
 parameters estimated out-of-sample across five folds so the rule is never fit on the person
-it is tested against), the composite agent's closed-world top-1 rises to 90.4% [95% CI
-88.4-92.0%]. We tested for contamination via a symmetry check across conditions and found
-none for the composite agent (details in our enclosed report).
+it is tested against), the composite agent's closed-world top-1 rises to 90.40% [95% CI
+88.6-92.2%]. We did not re-run that strengthened rule on the interview-only condition, so the
+44.7% above should be read as a lower bound. We tested for contamination via a symmetry check
+across conditions and found none for the composite agent (details in our full report).
 
 In a more realistic open-world setting, where the true match may be absent from the
 candidate pool, at a fixed 1% false-accusation rate our strengthened matching rule recovers
-the right participant 60.2% of the time [95% CI 54.5-64.4%] — clearly higher than the 20.4%
+the right participant 60.17% of the time [95% CI 54.5-64.4%] — clearly higher than the 20.39%
 [95% CI 15.7-24.5%] we get from simple nearest-neighbor matching at the same false-accusation
 rate (the two intervals do not overlap; we want to flag that our earlier estimate used the
 simpler rule and understated this). At a stricter 0.1% false-accusation rate the rate is
-44.4% [95% CI 23.3-53.8%], but that threshold is set by only about 1 false positive out of
+44.37% [95% CI 23.3-53.8%], but that threshold is set by only about 1 false positive out of
 1,052 people, so we consider it unstable and would not want you to anchor on it.
 
 **An open question we investigated and want to share rather than withhold.** We noticed
@@ -261,9 +282,15 @@ demographic fields we used; we have not identified the full explanation for the 
 ~3x gap described above; and our open-world estimates at the 0.1% false-accusation
 threshold rest on very few absolute false positives and should be treated as unstable.
 
-We are also releasing a measured defense (within-segment response shuffling) that sharply
-reduces this identification risk at a small utility cost, and we see this as a constructive,
-collaborative contribution rather than an adversarial one.
+We are also releasing a measured defense (within-segment response shuffling). What we have
+measured of it, we measured on Twin-2K-500, where it cuts the twin-vs-human top-1 rate from
+20.7% to 0.13%; we have not run it on your archive, and we are making no claim about what it
+would do to the rates above. Its cost is also not small, and should be read component by
+component rather than averaged: per-item distributions and between-group differences are
+preserved exactly by construction, while inter-item correlations degrade by 4.4 points, and the
+gap between the defended twins and the real human correlations widens from 5.775 to 9.709, a
+68.1% worsening. We offer it as a constructive, collaborative contribution rather than an
+adversarial one.
 
 **What we are distributing, and what we are not.** To be concrete about our own materials:
 we used the replication package publicly posted at https://osf.io/t6g7k/ — individual
@@ -283,9 +310,11 @@ without asking: if you read the license status or the GSS terms differently, or 
 a license we should be citing that the API isn't surfacing, we would welcome your view
 before we finalize anything.
 
-**Proposed delay and concrete ask.** Before any public posting, we would like to share our
-code and full report with you for review and comment, and are happy to delay or adjust based
-on your feedback. We propose a 30-day window for your response. Concretely, we would
+**Proposed delay and concrete ask.** Before any public posting, we would like you to be able
+to check the work yourself. The code is already public and you can open it right now, at
+https://github.com/AmirK-S/popsim; we are glad to send you the full report on request, and
+are happy to delay or adjust based on your feedback. We propose a 30-day window for your
+response. Concretely, we would
 welcome: (1) your view on whether you see any obstacle to us publishing this analysis; (2)
 any insight you can share on why the residual ~3x gap above might exist (for instance,
 anything about the interview elicitation process that varies systematically from the
@@ -295,10 +324,45 @@ methodology or the proposed defense before anything goes public.
 Thank you for your time and for this valuable, carefully consented archive.
 
 Best regards,
-[Name]
+Amir KELLOU SIDHOUM
+Independent researcher (no institutional affiliation)
+aboutdotblank@gmail.com
 
 ---
 
-*(Champs [Name] à compléter par le responsable ; adresses des destinataires — Joon Sung
-Park, Michael Bernstein (msb@cs.stanford.edu) — et pièces jointes non incluses dans ce
-brouillon.)*
+*Destinataires et provenance des adresses (12 septembre 2026 ; adresses revérifiées le même
+jour sur pages institutionnelles actuelles — voir `resultats/verification-externe-lettres-2026-09-12.md`
+pour le détail complet).*
+
+* **Lettre 1, Twin-2K-500.** Ni l'article arXiv 2505.17479 (page de résumé et version HTML),
+  ni la fiche Hugging Face `LLM-Digital-Twin/Twin-2K-500`, ni le dépôt de code
+  `tianyipeng-lab/Digital-Twin-Simulation` ne publient d'adresse de contact.
+  **Olivier Toubia, `ot2107@gsb.columbia.edu`** — **confirmée à jour** : cette adresse figure
+  sur sa page facultaire actuelle `https://business.columbia.edu/faculty/people/olivier-toubia`
+  (consultée le 12/09/2026, bloc « Contact ») et sur un CV plus récent que celui d'origine
+  (`...CV-071524.pdf`, mis à jour 07/15/2024) — l'inquiétude initiale sur un CV vieux de trois
+  ans est levée.
+  **Tianyi Peng — attention, conflit non résolu.** Le CV (01/12/2025) et sa page personnelle
+  (`https://tianyipeng.github.io/`) indiquent tous deux `tianyi.peng@columbia.edu` comme
+  contact ; mais sa page facultaire actuelle `https://business.columbia.edu/faculty/people/tianyi-peng`
+  (consultée le 12/09/2026, bloc « Contact ») affiche une adresse différente :
+  `tp2845@columbia.edu`. Les deux adresses sont columbia.edu et toutes deux plausiblement
+  actives (alias personnel choisi par l'intéressé lui-même sur deux sources qu'il contrôle,
+  vs adresse d'annuaire institutionnel) ; **cet agent ne tranche pas entre les deux** — la
+  lettre garde `tianyi.peng@columbia.edu` (son choix affiché par l'intéressé sur son propre
+  CV et son propre site, la source la plus récente et la plus directement auto-déclarée), mais
+  le responsable devrait envisager de mettre `tp2845@columbia.edu` en copie, ou vérifier avant
+  envoi.
+* **Lettre 2, Stanford.** **Michael Bernstein, `msb@cs.stanford.edu`** — confirmée sur sa
+  propre page de laboratoire `https://hci.stanford.edu/msb/` (consultée le 12/09/2026).
+  **Joon Sung Park — aucune adresse confirmée.** Recherche sur son profil Stanford
+  (`https://profiles.stanford.edu/joon-sung-park`, pas d'e-mail affiché), son site personnel
+  (`https://www.joonsungpark.com/`, aucun e-mail), son CV personnel (aucun e-mail dans le
+  corps du texte), et le site de Simile (`https://simile.ai/` / `simile.com`, page d'accueil
+  sans page équipe ni contact visible) : **aucune de ces sources ne publie d'adresse pour
+  lui.** La lettre ne lui attribue déjà aucune adresse propre (elle l'adresse par le texte
+  « Dear Joon (now at Simile) and Michael » sans ligne **To:** distincte pour lui) — c'est la
+  bonne posture, à garder telle quelle plutôt que d'en inventer une ou d'en déduire une du
+  domaine simile.ai.
+* Pièces jointes : aucune. Les deux lettres renvoient au dépôt public
+  `https://github.com/AmirK-S/popsim` et proposent le rapport complet sur demande.
