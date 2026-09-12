@@ -110,8 +110,17 @@ def controle_retractation(constat: Constat, depuis: str, jusqu_a: str) -> None:
         if not touches_resultats:
             continue
         diff = git("show", "--format=", "-U0", sha)
+        fichier_courant = ""
         for l in diff.splitlines():
-            if not l.startswith("+") or l.startswith("+++"):
+            if l.startswith("+++"):
+                # « +++ b/chemin » : on suit le fichier d'ou vient chaque ligne ajoutee.
+                fichier_courant = l[6:].strip() if l.startswith("+++ b/") else ""
+                continue
+            if not l.startswith("+"):
+                continue
+            # Une retractation se declare dans de la prose, jamais dans une ligne de
+            # donnees : un identifiant de registre nommant un rapport n'invalide rien.
+            if not fichier_courant.endswith(".md"):
                 continue
             n = normalise(l[1:])
             if not any(m in n for m in MOTS_INVALIDATION):
