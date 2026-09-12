@@ -8,13 +8,23 @@ Deux controles :
       `interdits:`, `cout_reel_usd:` ; et si `statut: retracte` ou `retracte_par:`,
       alors `fait_foi:` est obligatoire. Fondement : v1 §2.7, v2 §1.4.
 
-  (b) RETRACTATION DANS LE MEME COMMIT — un commit qui ajoute, dans un fichier de
-      `resultats/`, une ligne declarant un AUTRE fichier de `resultats/` refute,
-      retracte ou perime, doit modifier ce fichier-la dans le MEME commit.
-      Fondement : G3.1 de la v1, « absente » au 12/09 ; v2 §2, « un commit qui ecrit
-      "refute" dans un audit sans modifier l'en-tete de l'audite echoue ». C'est le
-      controle qui ferme les 6 minutes pendant lesquelles des rapports faux etaient
-      publics sur GitHub (v1 §2.7).
+  (b) RETRACTATION DANS LE MEME COMMIT — un commit qui pose, dans un fichier de
+      `resultats/`, le MARQUEUR canonique de retractation nommant un fichier de
+      `resultats/`, doit poser l'en-tete de retractation dans ce fichier-la, dans le
+      MEME commit. Fondement : G3.1 de la v1, « absente » au 12/09 ; v2 §2, « un commit
+      qui declare un rapport invalide sans modifier l'en-tete de l'audite echoue ».
+      C'est le controle qui ferme les 6 minutes pendant lesquelles des rapports faux
+      etaient publics sur GitHub (v1 §2.7).
+
+      La porte NE DEVINE PLUS l'invalidation dans la prose. Elle l'a fait jusqu'au
+      12/09/2026 — un mot d'invalidation et un nom de fichier a proximite — et a
+      produit quatre faux positifs en une journee : un renvoi §N attribue au mauvais
+      fichier, un identifiant de registre CSV pris pour une declaration, un mot et un
+      nom de fichier distants de 360 caracteres dans un meme paragraphe, et la phrase
+      « ils ne sont pas invalides », lue comme une invalidation faute de savoir lire
+      une negation. Le raffinement du vocabulaire ne pouvait pas fermer cette classe
+      d'erreurs : tout document qui PARLE de retractation la declenchait. L'inference
+      est donc remplacee par une declaration explicite (voir MARQUEUR ci-dessous).
 
 PERIMETRE PAR DEFAUT : le diff (`--depuis`) ou des fichiers explicites. `--tous`
 existe et mesure la dette : au 12/09, aucun des 321 rapports de resultats/ ne porte
@@ -22,11 +32,33 @@ d'en-tete A2. Rendre (a) bloquant sur tout l'arbre aujourd'hui fermerait le depo
 il est bloquant sur les fichiers NOUVEAUX ou MODIFIES, ce qui est opposable sans
 etre ingerable.
 
+MARQUEUR — une retractation se DECLARE, elle ne se devine pas. Dans le rapport qui
+invalide, une ligne entiere, a la colonne 0, exactement de cette forme :
+
+    RETRACTE: resultats/<fichier>.md
+    INVALIDE: resultats/<fichier>.md      (synonyme strict, meme effet)
+
+Rien d'autre sur la ligne, un seul fichier par ligne, mot-cle en capitales, chemin
+complet depuis la racine du depot. Aucune phrase francaise ne peut prendre cette
+forme : c'est ce qui rend le faux positif impossible depuis la prose. Pour CITER le
+marqueur sans le declencher — documentation, rapport qui parle de retractations —
+il suffit de l'indenter ou de l'encadrer de backticks : la ligne ne commence alors
+plus par le mot-cle. Un marqueur mal forme, ou nommant un fichier inexistant, fait
+echouer la porte : une faute de frappe ne doit pas desarmer la regle en silence.
+
+CE QUE CE DISPOSITIF NE PEUT PLUS ATTRAPER, et c'est assume : une invalidation
+ecrite en prose SANS marqueur passe sans un mot. La regle n'est opposable qu'a qui
+pose le marqueur. On echange une detection large et bruyante (4 faux positifs en une
+journee, 4 PR bloquees a tort) contre une detection etroite et fiable. Le filet large
+reste disponible, mais jamais bloquant : `--indice-prose` le rejoue en simples notes,
+a l'usage d'un relecteur humain.
+
 Usage :
     entetes.py --depuis origin/master
     entetes.py --fichier resultats/x-resultats.md
     entetes.py --tous --mode avertissement      # mesure de la dette
     entetes.py --retractation --depuis origin/master   # controle (b)
+    entetes.py --retractation --depuis origin/master --indice-prose  # + notes
 """
 
 from __future__ import annotations
@@ -49,6 +81,15 @@ RE_PERIME = re.compile(r"^(perime_par|retracte_par)\s*:\s*(\S+)", re.I)
 RE_FAIT_FOI = re.compile(r"^fait_foi\s*:\s*(\S+)", re.I)
 FENETRE_ENTETE = 30
 
+# Le marqueur canonique : ligne entiere, colonne 0, mot-cle en capitales.
+# La porte ne reconnait que cela. La prose ne la declenche plus jamais.
+RE_MARQUEUR = re.compile(r"^(RETRACTE|INVALIDE)\s*:(.*)$")
+RE_CIBLE = re.compile(r"^resultats/[A-Za-z0-9._@+-]+\.md$")
+# Ce qui, ajoute dans le fichier vise, vaut pose de la retractation.
+RE_POSE = re.compile(r"^(statut\s*:\s*(retracte|perime)|retracte_par\s*:|perime_par\s*:)")
+
+# Filet large de l'ancienne porte : conserve UNIQUEMENT pour --indice-prose,
+# en notes non bloquantes. Ne rend jamais de verdict (4 faux positifs le 12/09).
 MOTS_INVALIDATION = ("refute", "refutee", "retracte", "retractee", "perime", "perimee",
                      "invalide", "invalidee", "abandonne", "abandonnee")
 RE_FICHIER_RESULTATS = re.compile(r"[\w./-]*?([\w.-]+\.md)")
@@ -103,42 +144,121 @@ def controle_entete(constat: Constat, chemin: Path) -> None:
                           f"declare est compare a git show --stat a chaque PR (v2 §1.4)")
 
 
-def controle_retractation(constat: Constat, depuis: str, jusqu_a: str) -> None:
+def ajouts_du_commit(sha: str) -> dict[str, list[tuple[int, str]]]:
+    """{chemin: [(no_ligne, texte)]} — les lignes AJOUTEES par un commit."""
+    diff = git("show", "--format=", "-U0", "-m", "--first-parent", sha)
+    out: dict[str, list[tuple[int, str]]] = {}
+    fichier, no = "", 0
+    for l in diff.splitlines():
+        if l.startswith("+++"):
+            # « +++ b/chemin » : on suit le fichier d'ou vient chaque ligne ajoutee.
+            fichier = l[6:].strip() if l.startswith("+++ b/") else ""
+        elif l.startswith("@@"):
+            m = re.match(r"^@@+ .*?\+(\d+)", l)
+            no = int(m.group(1)) if m else 0
+        elif l.startswith("+") and fichier:
+            out.setdefault(fichier, []).append((no, l[1:]))
+            no += 1
+    return out
+
+
+def existe_au_commit(sha: str, chemin: str) -> bool:
+    try:
+        git("cat-file", "-e", f"{sha}:{chemin}")
+        return True
+    except RuntimeError:
+        return False
+
+
+def controle_retractation(constat: Constat, depuis: str, jusqu_a: str,
+                          indice_prose: bool = False) -> None:
     for sha in commits(depuis, jusqu_a):
         touches = {c for _, c in fichiers_du_commit(sha)}
-        touches_resultats = {c for c in touches if c.startswith("resultats/")}
-        if not touches_resultats:
+        if not any(c.startswith("resultats/") for c in touches):
             continue
-        diff = git("show", "--format=", "-U0", sha)
-        fichier_courant = ""
-        for l in diff.splitlines():
-            if l.startswith("+++"):
-                # « +++ b/chemin » : on suit le fichier d'ou vient chaque ligne ajoutee.
-                fichier_courant = l[6:].strip() if l.startswith("+++ b/") else ""
+        ajouts = ajouts_du_commit(sha)
+        for source in sorted(ajouts):
+            # Le marqueur se pose dans un RAPPORT : un .md de resultats/. Nulle part
+            # ailleurs — ce qui met la documentation du marqueur hors d'atteinte.
+            if not (source.startswith("resultats/") and source.endswith(".md")):
                 continue
-            if not l.startswith("+"):
-                continue
-            # Une retractation se declare dans de la prose, jamais dans une ligne de
-            # donnees : un identifiant de registre nommant un rapport n'invalide rien.
-            if not fichier_courant.endswith(".md"):
-                continue
-            n = normalise(l[1:])
-            if not any(m in n for m in MOTS_INVALIDATION):
-                continue
-            for m in RE_FICHIER_RESULTATS.finditer(l[1:]):
-                nom = m.group(1)
-                candidat = f"resultats/{nom}"
-                if not (RACINE / candidat).exists():
+            for no, texte in ajouts[source]:
+                m = RE_MARQUEUR.match(texte.rstrip())
+                if not m:
                     continue
-                if candidat in touches:
+                mot, cible = m.group(1), m.group(2).strip()
+
+                # Un marqueur mal ecrit n'est jamais ignore en silence : sans cela,
+                # une faute de frappe desarmerait la regle sans que personne le sache.
+                if not RE_CIBLE.match(cible):
+                    constat.viole(
+                        source, no,
+                        f"marqueur « {mot}: » mal forme (« {cible[:60]} »)",
+                        "ecrire exactement « RETRACTE: resultats/<fichier>.md » : un seul "
+                        "fichier, chemin complet, rien d'autre sur la ligne "
+                        "(gabarits/entete.md). Pour citer le marqueur sans le declencher, "
+                        "l'indenter ou l'encadrer de backticks")
                     continue
-                constat.viole(
-                    candidat, 1,
-                    f"le commit {sha[:8]} declare ce rapport invalide "
-                    f"(« {l[1:].strip()[:90]} ») sans toucher au fichier lui-meme",
-                    "poser l'en-tete retracte_par:/fait_foi: DANS LE MEME COMMIT que "
-                    "l'invalidation (G3.1 de la v1 ; v2 §2, retractation sans effacement)",
-                )
+
+                if not existe_au_commit(sha, cible):
+                    constat.viole(
+                        source, no,
+                        f"le marqueur « {mot}: {cible} » nomme un fichier introuvable "
+                        f"au commit {sha[:8]}",
+                        "corriger le chemin : une retractation qui vise un fichier "
+                        "inexistant ne retracte rien")
+                    continue
+
+                if cible not in touches:
+                    constat.viole(
+                        cible, 1,
+                        f"le commit {sha[:8]} declare ce rapport invalide "
+                        f"(« {mot}: » dans {source}) sans toucher au fichier lui-meme",
+                        "poser l'en-tete retracte_par:/fait_foi: DANS LE MEME COMMIT que "
+                        "l'invalidation (G3.1 de la v1 ; v2 §2, retractation sans "
+                        "effacement)")
+                    continue
+
+                if not any(RE_POSE.match(normalise(t)) for _, t in ajouts.get(cible, [])):
+                    constat.viole(
+                        cible, 1,
+                        f"le commit {sha[:8]} declare ce rapport invalide "
+                        f"(« {mot}: » dans {source}) et le touche, mais sans y poser "
+                        f"l'en-tete de retractation",
+                        "ajouter « retracte_par: <fichier> » (ou « perime_par: ») et "
+                        "« fait_foi: <fichier> » dans l'en-tete du rapport vise : toucher "
+                        "le fichier ne retracte rien (v1 §2.7)")
+
+        if indice_prose:
+            indices_de_prose(constat, sha, ajouts, touches)
+
+
+def indices_de_prose(constat: Constat, sha: str, ajouts: dict[str, list[tuple[int, str]]],
+                     touches: set[str]) -> None:
+    """Le filet large d'avant le marqueur, en NOTES, jamais bloquant.
+
+    Il a produit quatre faux positifs en une journee ; il ne peut donc plus rendre
+    de verdict. Il reste utile a un relecteur humain qui veut savoir si un commit
+    a l'air d'invalider un rapport sans avoir pose le marqueur — c'est le seul
+    rattrapage possible du faux negatif que le marqueur laisse passer.
+    """
+    for source in sorted(ajouts):
+        if not (source.startswith("resultats/") and source.endswith(".md")):
+            continue
+        for no, texte in ajouts[source]:
+            if RE_MARQUEUR.match(texte.rstrip()):
+                continue
+            n = normalise(texte)
+            if not any(mot in n for mot in MOTS_INVALIDATION):
+                continue
+            for m in RE_FICHIER_RESULTATS.finditer(texte):
+                candidat = f"resultats/{m.group(1)}"
+                if candidat in touches or not existe_au_commit(sha, candidat):
+                    continue
+                constat.note(
+                    f"indice (NON bloquant, souvent faux) : {source}:{no} parle "
+                    f"d'invalidation pres de {candidat}, qui n'est pas touche par "
+                    f"{sha[:8]}. Si c'est une vraie retractation, poser le marqueur.")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -150,6 +270,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--tous", action="store_true")
     ap.add_argument("--retractation", action="store_true",
                     help="controle (b) seul, sur la plage de commits")
+    ap.add_argument("--indice-prose", action="store_true",
+                    help="ajoute les indices de prose en NOTES non bloquantes "
+                         "(l'ancien filet large, a l'usage d'un relecteur humain)")
     ap.add_argument("--racine", default="resultats")
     ap.add_argument("--mode", choices=("bloquant", "avertissement"), default="bloquant")
     a = ap.parse_args(argv)
@@ -162,7 +285,7 @@ def main(argv: list[str] | None = None) -> int:
         if not git_dispo():
             return abandon(NOM, "git indisponible")
         try:
-            controle_retractation(constat, a.depuis, a.jusqu_a)
+            controle_retractation(constat, a.depuis, a.jusqu_a, a.indice_prose)
         except RuntimeError as e:
             return abandon(NOM, str(e))
         return constat.conclure()
