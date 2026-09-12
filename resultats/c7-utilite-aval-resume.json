@@ -1,0 +1,23 @@
+{
+  "A_signe_diff_hum":-1,
+  "A_signe_brut":1,
+  "A_signe_D4":1,
+  "B_variables":[
+    "genre_H",
+    "age_65+",
+    "achat_1_Q295",
+    "achat_2_Q295"
+  ],
+  "B_pct_change_brut_vs_hum":50.0,
+  "B_pct_change_D4_vs_brut":50.0,
+  "B_pct_change_D4_vs_hum":100.0,
+  "C_pct_pc1_pc2_hum":15.0277638122,
+  "C_pct_pc1_pc2_brut":9.776122408,
+  "C_pct_pc1_pc2_D4":6.3113151633,
+  "C_ecart_points_brut_vs_hum":5.2516414042,
+  "C_ecart_points_D4_vs_brut":3.4648072447,
+  "C_ecart_points_D4_vs_hum":8.7164486489,
+  "C_pct_loadings_pc1_inversees_brut_vs_hum":0.0,
+  "C_pct_loadings_pc1_inversees_D4_vs_brut":45.0,
+  "C_pct_loadings_pc1_inversees_D4_vs_hum":45.0
+}
