@@ -12,6 +12,19 @@ cout_reel_usd: <valeur lue dans le grand livre, pas estimée>
 
 ---
 
+## Poser l'en-tête : l'outil, pas la main
+
+Pose cet en-tête avec l'outil, ne le tape pas à la main — un contrôle mécanique (porte P4,
+`outils/portes/entetes.py`) bloque toute PR qui en manque, et l'outil évite l'oubli comme le
+doublon :
+
+    python3 outils/entete.py --poser <fichier> --mandat "<mandat>" --agent "<modèle>, <fournisseur>" \
+        --ecriture "<fichiers>" --cout-reel-usd <valeur>
+
+Il refuse de s'exécuter si le fichier porte déjà un en-tête. Vérifier sans rien modifier :
+
+    python3 outils/entete.py --verifier <fichier>
+
 ## Déclarer qu'un rapport est invalidé : le marqueur de rétractation
 
 Un rapport qui en invalide un autre **le déclare**, il ne le laisse pas deviner. Dans le corps
