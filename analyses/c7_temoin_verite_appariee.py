@@ -91,31 +91,16 @@ for mode in ("marginal","uniforme"):
         print(f"{nom:50s} {np.mean(exa[nom]):7.4f} {np.mean(fidt[nom]):+9.5f} {100*np.mean(tab[nom]):8.3f}")
     print(flush=True)
 
-# --- angle 6 : d'ou vient c = 0.432 vs 0.409 ? decomposition sur les cellules FAUSSES ---
-print("=== ANGLE 6 : coincidence avec un candidat au hasard, cellules JUSTES vs FAUSSES ===")
-nom="JSON Persona - GPT4.1"; cv=couverts[nom]; x=pred[nom][cv]; y=y_ref[cv]
-def c_moyen(out,masque_sel):
-    """P(out[i,j] = reponse d'un candidat au hasard) moyenne sur les cellules selectionnees."""
-    tot=0.0;cnt=0
-    for j in range(out.shape[1]):
-        sel=masque_sel[:,j]&(out[:,j]>=0)
-        if sel.sum()==0: continue
-        v,c=np.unique(y_ref[:,j][y_ref[:,j]>=0],return_counts=True); p=c/c.sum()
-        pm=np.zeros(int(v.max())+1); pm[v]=p
-        tot+=pm[out[sel,j]].sum(); cnt+=sel.sum()
-    return tot/cnt,cnt
-juste=(x>=0)&(x==y); fauxc=(x>=0)&(x!=y)
-cj,nj=c_moyen(x,juste); cf,nf=c_moyen(x,fauxc)
-print(f"jumeau REEL   : cellules justes c={cj:.4f} (n={nj}) | cellules fausses c={cf:.4f} (n={nf}) | part fausses={nf/(nj+nf):.3f}")
-rng=np.random.default_rng([GRAINE,12345])
-out0=nul_exactitude_verite(x,y,rng,"uniforme")
-j0=(out0>=0)&(out0==y); f0=(out0>=0)&(out0!=y)
-c0j,n0j=c_moyen(out0,j0); c0f,n0f=c_moyen(out0,f0)
-print(f"nul uniforme  : cellules justes c={c0j:.4f} (n={n0j}) | cellules fausses c={c0f:.4f} (n={n0f})")
-out1=nul_exactitude_verite(x,y,np.random.default_rng([GRAINE,12346]),"marginal")
-j1=(out1>=0)&(out1==y); f1=(out1>=0)&(out1!=y)
-c1j,n1j=c_moyen(out1,j1); c1f,n1f=c_moyen(out1,f1)
-print(f"nul marginal  : cellules justes c={c1j:.4f} (n={n1j}) | cellules fausses c={c1f:.4f} (n={n1f})")
-print(f"\nLecture : si c_fausses(reel) > c_fausses(nul uniforme), les erreurs du jumeau reel "
-      f"tombent bien sur des reponses de population.")
+# --- angle 6 : SUPPRIME le 12 septembre 2026 (correctifs-artefact-2026-09-12.md, defaut 1).
+# Ce bloc plantait ici (IndexError : la table de frequences marginales par item etait
+# dimensionnee sur les seules valeurs observees de y_ref, trop petite pour les cellules
+# fabriquees par faux_uniforme). Il etait redondant avec analyses/c7_audit_decomposition.py,
+# qui calcule exactement la meme decomposition (meme configuration "JSON Persona - GPT4.1",
+# memes graines [GRAINE,12345]/[GRAINE,12346], meme fonction nul_exactitude_verite/nul) avec
+# une table dimensionnee en securite (K = max(k_items.max(), y_ref.max()+1)+2) qui ne plante
+# pas. Preuve de redondance : avant le plantage, la ligne "jumeau REEL" de ce bloc imprimait
+# justes c=0.4776 (n=72901) | fausses c=0.3660 (n=50579), des valeurs strictement identiques
+# a celles deja imprimees par c7_audit_decomposition.py. Le chiffre central de ce script
+# (rho 0.9741 marginal / 0.9815 uniforme / 0.9650 observe, imprime plus haut) n'est pas
+# affecte : ce calcul n'y touche pas.
 print(f"termine {time.time()-t0:.0f}s")

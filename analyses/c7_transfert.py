@@ -214,7 +214,18 @@ def main():
         mc = paires_riches.top1_controle.mean()
         meilleure = paires_riches.loc[paires_riches.top1.idxmax()]
         pire = paires_riches.loc[paires_riches.top1.idxmin()]
-        print(f"top1 moyen, paires riches (n={len(paires_riches)}) : {m:.4f}", flush=True)
+        # ATTENTION lecteur : l'agregat ci-dessous MELANGE deux regimes d'items (60 et 19
+        # items communs, perimetres tres inegaux). Ce n'est PAS le chiffre a citer : voir
+        # la ventilation par n_items juste en dessous, qui est celle retenue par l'article
+        # (resultats/article-synthese.md interdit explicitement de citer l'agregat mixte).
+        print(f"top1 moyen, paires riches (n={len(paires_riches)}) : {m:.4f} "
+              f"(AGREGAT MIXTE 60+19 items -- ne pas citer, voir ventilation ci-dessous)",
+              flush=True)
+        print("top1 moyen, paires riches, VENTILE PAR NOMBRE D'ITEMS COMMUNS "
+              "(chiffres a citer) :", flush=True)
+        for n_items, grp in paires_riches.groupby("n_items"):
+            print(f"  n_items={n_items:>3d} (n_paires={len(grp)}) : "
+                  f"top1 moyen={grp.top1.mean():.4f}", flush=True)
         print(f"top1 moyen, controle intra-segment (paires riches) : {mc:.4f}", flush=True)
         print(f"meilleure paire riche : {meilleure.config_x} -> {meilleure.config_y}, "
               f"top1={meilleure.top1:.4f}", flush=True)
