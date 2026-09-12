@@ -1,0 +1,2 @@
+synthetiseur,k,c_poids,exactitude_60,top1,top1_bas,top1_haut,top10,top10_bas,top10_haut,rang_median,top1_hasard,exactitude_vraie,exactitude_permutee,chute,chute_relative
+Donneur plus proche voisin (ajuste sur bloc cible),1,0.01,0.5842565597667638,0.0,0.0,0.0,0.5321185617103984,0.510345602526725,0.552770286686103,8.45,0.00048590864917395527,0.5842565597667638,0.4420880304502754,0.14216852931648843,0.24333236305167433
