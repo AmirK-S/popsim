@@ -28,6 +28,17 @@ jobs:
         with:
           python-version: '3.13'
 
+      # P6 (b) VERIFICATION CRYPTOGRAPHIQUE a besoin du binaire `ots` pour ne plus
+      # etre NON OPERATIONNEL (voir outils/portes/horodatage.py). Installation
+      # locale, sans reseau : quelques secondes, ~3 Mo de dependances (GitPython,
+      # pycryptodomex, python-bitcoinlib). `ots verify` lui-meme exige un acces
+      # reseau a un calendrier de preuve : on ne l'appelle donc PAS ici (pas de
+      # `--verifier` plus bas) — seule la PRESENCE du recu est bloquante en CI ;
+      # la verification cryptographique reste a lancer manuellement/hors CI tant
+      # qu'elle depend d'un serveur externe non maitrise.
+      - name: Installer opentimestamps-client (pour l'etat de P6)
+        run: pip install opentimestamps-client
+
       - name: Base de comparaison
         id: base
         run: |
@@ -73,8 +84,11 @@ jobs:
       - name: P5 — renvois §N.M resolus
         run: python outils/portes/renvois.py --depuis "${{ steps.base.outputs.ref }}"
 
-      # DETTE : 61 preenregistrements sans recu .ots, et le binaire `ots` n'est pas
-      # installe (volet verification cryptographique NON OPERATIONNEL).
+      # DETTE : preenregistrements encore sans recu .ots (voir le compte exact dans
+      # la note de sortie de cette etape). Le binaire `ots` EST installe depuis le
+      # 12/09 (etape ci-dessus) : la PRESENCE du recu est verifiee ci-dessous ; la
+      # VERIFICATION CRYPTOGRAPHIQUE (`ots verify`, reseau requis) n'est pas
+      # invoquee ici — voir le commentaire sur l'installation plus haut.
       - name: P6 — etat d'OpenTimestamps
         run: python outils/portes/horodatage.py --etat
 

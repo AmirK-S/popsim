@@ -81,8 +81,13 @@ def controle_presence(constat: Constat, preenreg: Path) -> Path | None:
     return recu
 
 
-def controle_verification(constat: Constat, recu: Path, binaire: str) -> None:
-    res = subprocess.run([binaire, "verify", str(recu)],
+def controle_verification(constat: Constat, preenreg: Path, recu: Path, binaire: str) -> None:
+    # `ots verify` sans `-f` suppose que le fichier horodate est a cote du recu,
+    # meme nom sans « .ots ». Ici le recu vit dans preuves/ et le fichier dans
+    # resultats/ : sans `-f`, la commande echoue TOUJOURS (« Could not open
+    # target »), y compris sur un recu parfaitement valide. Il faut pointer
+    # explicitement vers le fichier reellement horodate.
+    res = subprocess.run([binaire, "verify", "-f", str(preenreg), str(recu)],
                          capture_output=True, text=True, timeout=120)
     if res.returncode != 0:
         constat.viole(recu, 1,
@@ -126,6 +131,10 @@ def main(argv: list[str] | None = None) -> int:
     elif a.verifier:
         constat.note(f"ots present ({binaire}) ; `ots verify` exige un acces reseau a un "
                      f"calendrier — hors mandat local, a ne lancer qu'explicitement")
+    else:
+        constat.note(f"ots present ({binaire}) mais --verifier non demande sur cet appel : "
+                     f"le controle (b) VERIFICATION CRYPTOGRAPHIQUE est NON OPERATIONNEL "
+                     f"pour cette invocation (seule la presence du recu est controlee)")
 
     if a.tous:
         if not git_dispo():
@@ -141,7 +150,7 @@ def main(argv: list[str] | None = None) -> int:
         if recu is None:
             manquants += 1
         elif a.verifier and binaire:
-            controle_verification(constat, recu, binaire)
+            controle_verification(constat, c, recu, binaire)
 
     constat.note(f"{len(cibles)} preenregistrement(s) controle(s), "
                  f"{manquants} sans recu .ots")
