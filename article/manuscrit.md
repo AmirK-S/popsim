@@ -464,22 +464,28 @@ below the bar — the refutation we reported. Under the strong attack, Twin (4.2
 below, while the Park archive (60.17 %) passes the bar it had failed. We state both, in that
 order, rather than quietly reporting whichever version flatters the claim.
 
-> **Figure 1 — Open-world ROC curves (`article/figures/fig1-monde-ouvert.png`).**
+> **Figure 1 — Open-world detection, naive attack and strong attack
+> (`article/figures/fig1-monde-ouvert.png`).**
 > Two stacked panels, one per dataset (Twin-2K-500 above, titled "Twin-2K-500 (2,058
 > respondents)"; the Park archive below, titled "Park et al. (1,052 agents)"). Abscissa:
 > false-accusation rate (FPR) on
 > a **log scale**, spanning roughly 4·10⁻⁴ to 1. Ordinate: true-detection rate (TPR), 0 to 1.
-> In each panel: the best twin/agent of that dataset (filled circles, solid line), the
-> statistical comparators (Demographics Only, PMM k=10) flattened near zero, and the human
-> test-retest ceiling (dash-dotted) above. Dotted vertical reference lines at FPR = 0.1 % and
-> FPR = 1 %. **The delivered figure plots the naive attack**, whose annotated values are 0.9 %
-> and 3.0 % on Twin-2K-500 and 8.5 % and 20.4 % on the Park archive; the strong-attack rates of
-> §5.3 (1.01 % / 4.28 % and 44.37 % / 60.17 %) are **not yet drawn**. The figure must be
-> regenerated from the strong attack before submission, or explicitly labelled "naive attack" in
-> its axis title — see `[OPEN ITEMS]`. *What the reader should see at a glance*: at a tenable
-> false-accusation rate the risk is real and far above the comparators, and on the Park archive
-> it approaches the human ceiling. This figure depends on no causal reading of the
-> quality-leakage coupling.
+> Each panel overlays **two attacks** on the best twin/agent of that dataset: the naive
+> Hamming-agreement attack, drawn as a full ROC curve (dashed line) built from every threshold in
+> `resultats/c7-monde-ouvert-roc.csv`; and the strong A-LLR (likelihood-ratio) attack, drawn as
+> **isolated filled diamonds with no connecting line and no error bars**, because
+> `resultats/c7-attaquant-fort.csv` measures only **two thresholds**, FPR = 0.1 % and FPR = 1 %.
+> The naive curve reads 8.47 % and 20.39 % on the Park archive at those two thresholds and 3.04 %
+> on Twin-2K-500 at FPR = 1 %; the strong-attack points read 44.37 % and 60.17 % on Park and
+> 4.28 % on Twin at FPR = 1 %. Also shown: the statistical comparators (Demographics Only, PMM
+> k=10) flattened near zero, and the human test-retest ceiling (dash-dotted) above. Dotted
+> vertical reference lines at FPR = 0.1 % and FPR = 1 %. **A reader should not read a curve into
+> the diamonds**: with only two measured points, no shape, slope, or intermediate value for the
+> strong attack is known, and none is implied by the figure. *What the reader should see at a
+> glance*: at a tenable false-accusation rate the risk is real and far above the comparators
+> under both attacks, and the strong attack raises the Park archive close to the human ceiling —
+> a floor, not a full account of that attack's ROC. This figure depends on no causal reading of
+> the quality-leakage coupling.
 > Data: `resultats/c7-monde-ouvert-roc.csv`, `resultats/c7-attaquant-fort.csv`.
 
 ### 5.4 The twin-to-twin channel (T2), replicated — and an unexplained anomaly
@@ -668,13 +674,14 @@ form collapses to zero on the comparators. The Pitman-Yor model of Rocher et al.
 > linear). Ordinate: closed-world top-1 leakage, linear, 0 to ~0.85. Thirteen points: the LLM
 > twins (filled circles), the statistical reference points (grey diamonds), Demographics Only
 > broken out (triangle), and the human retest (star) at fidelity ≈ 1 / leakage 81.6 %.
-> **Inset**: the marginal null on a Spearman-rho axis — the 5th–95th percentile envelope of the
-> 100 predictors carrying no individual fingerprint (`c7-disjoint-nul.csv`) drawn as a grey
-> band, with the observed disjoint-item rho (0.969) plotted as a single point inside that band,
-> at its lower edge. *What the reader should see at a glance*: the points rise together from
-> left to right with no plateau at the top, **but the observed correlation sits inside the band
-> that a fingerprint-free null already produces.** An honest contribution — the coupling exists
-> and is measured — not a claim that it is individual-specific.
+> All thirteen points carry **error bars on both axes**, from a per-person bootstrap with 2,000
+> resamples. **Inset**: the marginal null on a Spearman-rho axis — the 5th–95th percentile
+> envelope of the 100 predictors carrying no individual fingerprint (`c7-disjoint-nul.csv`) drawn
+> as a grey band, with the observed disjoint-item rho (0.969) plotted as a single point inside
+> that band, at its lower edge. *What the reader should see at a glance*: the points rise
+> together from left to right with no plateau at the top, **but the observed correlation sits
+> inside the band that a fingerprint-free null already produces.** An honest contribution — the
+> coupling exists and is measured — not a claim that it is individual-specific.
 > Data: `resultats/c7-compromis.csv`, `resultats/c7-compromis-robustesse-points.csv`,
 > `resultats/c7-disjoint-nul.csv`.
 
@@ -1077,40 +1084,25 @@ responsible investigator, not on any agent.
 6. **Bibliographic verification 2 — ZAK-MIA (PoPETs 2024).** Content never verified; extraction
    failed during the prior-art scan. It is not currently cited; confirm it does not constitute
    closer prior art to §5.4 before submission.
-7. **Figure 1 plots a superseded attack — blocking.** The delivered
-   `article/figures/fig1-monde-ouvert.png` draws the **naive** attack, whose Park values (8.5 %
-   at FPR = 0.1 %, 20.4 % at 1 %) are no longer the figures §5.3 publishes (44.37 % and 60.17 %).
-   It must be regenerated from `resultats/c7-attaquant-fort.csv`, or its panels explicitly
-   labelled "naive attack" with the strong-attack points overlaid. Until then the abstract, §5.3
-   and Figure 1 disagree, which is the first thing a reviewer will notice. Figure generation is
-   owned by another agent (`analyses/figures_article.py`), not modified here.
-8. **Figures delivered; one reconciliation outstanding.** Both
-   `article/figures/fig1-monde-ouvert.png` and `article/figures/fig2-couplage.png` now exist,
-   and the captions in §5.3 and §5.9 have been rewritten to describe what was actually delivered
-   (Figure 1: two stacked panels on a log-scale FPR axis; Figure 2: linear axes with the
-   marginal null shown as an inset rho band rather than superimposed on the scatter). One item
-   remains: Figure 2 carries no per-point error bars and no chance line; if the 95 % bootstrap
-   intervals reported throughout §5 are wanted on the figure, `analyses/c7_compromis_figure.py`
-   must add them.
-9. **[decision] Recipe question: the paid run happened and did not settle it.** The authorised
+7. **[decision] Recipe question: the paid run happened and did not settle it.** The authorised
    top-up was spent — 4.9949 USD of 5.00 on `openai/gpt-4.1` with Twin's per-item recipe — and
    the leakage did not return (§5.7). It rules out the model and the call granularity, leaving
    the persona format and length. Decide: fund a further pass with a full-length persona **if**
    the Twin team supplies its pipeline, or publish the question as an assumed limit. The second
    reproducibility pass on regenerated twins (top-1 per pass, agreement on the designated
    identity) remains undone.
-10. **Positioning file not yet available.** `resultats/positionnement-vie-privee-2026-09-12.md`
+8. **Positioning file not yet available.** `resultats/positionnement-vie-privee-2026-09-12.md`
    did not exist when this manuscript was written. §8 must be re-read against it once delivered,
    as the ethics draft itself flags that dependency.
-11. **Two computable figures still unpublished**, local, no API calls: the size of rank-1 tie
+9. **Two computable figures still unpublished**, local, no API calls: the size of rank-1 tie
     classes per configuration (is top-1 a measurement or a tie-breaking convention?), and the
     Park k = 60 point written to a CSV rather than printed to screen only.
-12. **Two tests that would close objections O2 and O3** (§7.3), both local, no API calls: the
+10. **Two tests that would close objections O2 and O3** (§7.3), both local, no API calls: the
     copula-alone against margins-alone test, which would turn the block-effect hypothesis into a
     result (one day); and the "number of items held by the attacker" curve (1, 5, 10, 20, 40,
     60, crossed with recoding noise), which closes O3 (half a day).
-13. **External replication of the critical path.** Counter-examination, hostile review and
+11. **External replication of the critical path.** Counter-examination, hostile review and
     provenance audit are all internal to the agent apparatus: this is internal control, not
     independence.
-14. **Artifact re-read against final figures.** Verify that no artifact number can be read as a
+12. **Artifact re-read against final figures.** Verify that no artifact number can be read as a
     study result (§9 states this explicitly; confirm after the figures are final).
