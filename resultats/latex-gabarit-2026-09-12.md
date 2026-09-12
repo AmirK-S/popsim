@@ -1,5 +1,13 @@
 # Gabarit LaTeX PoPETs 2027 — mise en place et estimation de pages — 2026-09-12
 
+statut: courant
+mandat: mettre en place le gabarit LaTeX officiel PoPETs 2027, construire la chaîne de compilation et le mécanisme de transfert Markdown → LaTeX, et tenir la marge de pages du corps sous la limite de 12 pages jusqu'au PDF de soumission
+agent: document collectif, tenu en série par un agent à la fois (Méthode v2 §1.1)
+ecriture: article/latex/, resultats/latex-gabarit-2026-09-12.md
+lecture_seule: tout le reste, en particulier article/manuscrit.md et article/references.bib
+interdits: appel payant sans GO, réseau (lecture seule uniquement), commit sur master, arrière-plan
+cout_reel_usd: 0.00
+
 Portée : `article/latex/` (nouveau répertoire, écriture autorisée) et ce fichier. Aucune
 modification de `article/manuscrit.md` ni de `article/references.bib` (lecture seule). Recherche
 web en lecture seule uniquement ; aucun appel de modèle payant ; aucun calcul scientifique.

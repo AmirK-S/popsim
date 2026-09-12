@@ -109,6 +109,18 @@ un rapport dont on ne peut pas savoir ce qu'il a touché. Aucun contrôle mécan
 **Verdict : souhaitée.** Rien n'empêche un agent d'écrire hors de son périmètre ; le dépôt
 contient un cas où c'est arrivé (§2.2).
 
+**Mise à jour du 12/09, postérieure au constat ci-dessus.** Cinq agents d'affilée ont oublié de
+poser l'en-tête du gabarit A2 (`gabarits/entete.md`) sur un fichier de `resultats/` le même jour,
+et chaque oubli a bloqué une fusion (porte P4, `outils/portes/entetes.py`) puis coûté un agent de
+correction. Ce n'était pas un problème de discipline : poser l'en-tête à la main est un geste
+manuel, facile à oublier. `outils/entete.py` l'outille. **Ligne à copier dans tout mandat d'agent
+qui crée ou modifie un fichier sous `resultats/` :**
+
+> Avant de conclure, pose l'en-tête du gabarit A2 sur chaque fichier que tu crées ou modifies dans
+> `resultats/` : `python3 outils/entete.py --poser <fichier> --mandat "<mandat>" --agent "<modèle>,
+> <fournisseur>" --ecriture "<fichiers>" --cout-reel-usd <valeur>`. Vérifie avant de committer avec
+> `python3 outils/entete.py --verifier <fichier>` (code 0 = en-tête présent et complet).
+
 ### 2.2 Propriété exclusive des fichiers
 
 **Ce que c'est.** Un fichier, un agent. Les autres l'ont en lecture seule, et ne recopient pas
