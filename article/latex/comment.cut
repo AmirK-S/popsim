@@ -1,0 +1,9 @@
+
+Large-language-model-based agents were used throughout this project: they wrote the analysis code, ran the experiments, drafted this manuscript, and conducted adversarial review of both the code and the text. We state this in full rather than narrowly, because an account that understated that involvement would mislead a reader more than a plain one.
+
+The responsible investigator directed the work throughout: set the research questions and the falsifiable predictions in advance of each analysis, decided what to keep, discard, or redo, authorized all paid computation, and is responsible for the accuracy and integrity of the submission, including this section. No generative AI tool is listed as an author.
+
+Three checks bear on how much trust the model-produced outputs warrant. First, quantitative predictions were preregistered in writing, dated, before the corresponding analysis script was run; the repository holds several dozen such preregistrations, one per analysis. Second, the analysis pipeline fixes a random seed at every stochastic step, and independent reruns are checked to reproduce identical output before a result is reported. Third, the manuscript and code were subjected to adversarial review passes whose default posture is rejection; these passes are how two substantive defects were found and corrected before submission: a statistical control meant to carry only each person's accuracy margin that in fact copied their true individual answer with the complementary probability, and a bootstrap confidence interval reported as ``[0, 0]'' on a zero-event sample --- an artifact of the percentile method rather than a genuine null result, since replaced with an exact Clopper-Pearson interval.
+
+These checks reduce, but do not remove, the risk that a model-produced number or claim is wrong; the responsible investigator remains accountable for every figure and statement in this paper regardless of how it was produced.
+

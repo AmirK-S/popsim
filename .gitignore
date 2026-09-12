@@ -43,3 +43,20 @@ STRATEGIE-REFERENCE.md
 VEILLE.md
 resultats/veille-*.md
 data/
+
+# Artefacts de compilation LaTeX du run "main" (article/latex/), regeneres a
+# chaque compilation : jamais versionnes. Chemins exacts (pas de glob *.log)
+# pour ne pas toucher aux fichiers d'exemple du gabarit deja presents dans ce
+# dossier (article/latex/exemple-compile.log, exemple-gabarit-main.log), qui
+# ne sont pas des artefacts de notre compilation.
+article/latex/main.aux
+article/latex/main.bbl
+article/latex/main.blg
+article/latex/main.log
+article/latex/main.out
+
+# Copies de figures dans article/latex/figures/ : entierement derivees
+# (copiees depuis article/figures/, la source, par md2latex.py a chaque
+# execution -- voir sync_figures() dans md2latex.py). article/figures/
+# lui-meme n'est pas concerne par cette regle.
+article/latex/figures/
