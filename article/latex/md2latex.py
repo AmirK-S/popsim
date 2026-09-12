@@ -666,11 +666,79 @@ def sync_figures():
           % len(REFERENCED_FIGURES), file=sys.stderr)
 
 
+_TITLE_LINE_RE = re.compile(r"^\\title\[[^\n]*\]\{[^\n]*\}[ \t]*$", re.MULTILINE)
+
+
+def load_manuscript_title():
+    """Lit la premiere ligne non vide de article/manuscrit.md (le titre H1,
+    '# ...'), la convertit en LaTeX avec la meme fonction que le reste du
+    contenu genere (accents, %, deux-points, guillemets...), et en derive un
+    titre court pour l'en-tete de page acmart (\\title[court]{complet}).
+
+    Defaut corrige (meme famille que le mot "sixteen" fige dans la legende du
+    tableau, et que les figures non resynchronisees -- tous deux corriges par
+    l'audit du 12/09) : le titre etait recopie a la main dans main.tex, en
+    dehors des zones GENERATED, donc gele sur l'ancien titre a chaque
+    reecriture du manuscrit sans qu'aucune regeneration ne le rattrape. Il
+    derive maintenant de la meme source que le reste du document.
+
+    GARDE-FOU : comme _spell_number() et sync_figures(), on echoue bruyamment
+    (arret complet, aucun fichier touche) si la premiere ligne est absente,
+    n'est pas un titre H1, ou est vide -- plutot que de retomber en silence
+    sur un titre par defaut, ce qui est exactement le defaut ici corrige.
+
+    Titre court : tout ce qui precede le premier ':' du titre complet --
+    c'est la convention deja en usage dans ce document (l'ancien titre en dur
+    suivait exactement ce decoupage : "Linkability of LLM Digital Twins"
+    avant son ':'), rendue explicite et derivee ici plutot que recopiee a la
+    main. Si le titre complet ne contient pas de ':', aucun raccourci n'en
+    est tire par ressemblance ou troncature arbitraire (ce serait deviner) :
+    le titre court est alors identique au titre complet, et un avis est
+    imprime sur stderr pour signaler ce cas non ambigu mais moins courant.
+    """
+    text = open(MANUSCRIPT_PATH, encoding="utf-8").read()
+    first_nonempty = None
+    for line in text.split("\n"):
+        if line.strip() != "":
+            first_nonempty = line
+            break
+    if first_nonempty is None or not first_nonempty.startswith("# "):
+        sys.exit(
+            "ERREUR : titre introuvable -- la premiere ligne non vide de %s "
+            "devrait etre un titre H1 ('# ...'), trouve : %r. Arret plutot "
+            "que de retomber sur un titre par defaut." % (MANUSCRIPT_PATH, first_nonempty)
+        )
+    raw_title = first_nonempty[2:].strip()
+    if not raw_title:
+        sys.exit(
+            "ERREUR : titre H1 vide en tete de %s -- arret plutot que de "
+            "retomber sur un titre par defaut." % MANUSCRIPT_PATH
+        )
+    full_title = convert_inline(raw_title)
+    if not full_title.strip():
+        sys.exit(
+            "ERREUR : le titre converti est vide (source : %r) -- arret "
+            "plutot que d'ecrire un \\title{} vide dans main.tex." % raw_title
+        )
+    if ":" in full_title:
+        short_title = full_title.split(":", 1)[0].strip()
+    else:
+        short_title = full_title
+        print(
+            "AVIS : titre sans ':' -- aucun titre court distinct n'en est "
+            "derive, \\title[...] reprend le titre complet tel quel.",
+            file=sys.stderr,
+        )
+    return short_title, full_title
+
+
 def main():
     global BIB_KEYS
     BIB_KEYS = load_bib_keys(BIB_SRC_PATH)
 
     shutil.copyfile(BIB_SRC_PATH, BIB_DST_PATH)
+
+    short_title, full_title = load_manuscript_title()
 
     src = open(MANUSCRIPT_PATH, encoding="utf-8").read()
     lines = src.split("\n")
@@ -781,6 +849,25 @@ def main():
     backmatter_tex = "\n\n".join(backmatter_fragments)
 
     main_tex = open(MAIN_TEX_PATH, encoding="utf-8").read()
+
+    # Titre : pas une zone GENERATED (le \title acmart doit rester sur sa
+    # propre ligne, hors des trois zones marquees), donc substitution directe
+    # de la ligne \title[...]{...} plutot qu'un splice entre marqueurs.
+    # GARDE-FOU : si cette ligne n'existe plus (main.tex restructure), on
+    # echoue bruyamment plutot que d'inserer un \title a l'aveugle quelque
+    # part, ou de laisser silencieusement l'ancien titre en place.
+    if not _TITLE_LINE_RE.search(main_tex):
+        sys.exit(
+            "ERREUR : aucune ligne \\title[...]{...} trouvee dans %s -- "
+            "arret plutot que d'inserer le titre a l'aveugle ou de laisser "
+            "l'ancien titre en place sans le signaler." % MAIN_TEX_PATH
+        )
+    new_title_line = "\\title[%s]{%s}" % (short_title, full_title)
+    # repl est une fonction (pas une chaine) : re.sub n'interprete alors aucun
+    # \1 / \g<...> dans la valeur de retour, donc les backslashes LaTeX du
+    # titre converti (\%, \_, \S, etc.) passent tels quels, sans double
+    # echappement.
+    main_tex = _TITLE_LINE_RE.sub(lambda m: new_title_line, main_tex, count=1)
 
     def splice(text, begin_marker, end_marker, new_inner):
         i = text.index(begin_marker) + len(begin_marker)
