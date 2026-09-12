@@ -94,7 +94,8 @@ def figure1():
     fig, axes = plt.subplots(2, 1, figsize=(3.4, 5.6), sharex=True)
 
     for ax, jeu, titre in zip(axes, ["Twin", "Stanford"],
-                               ["Twin-2K-500", "Stanford (opinion surveys)"]):
+                               ["Twin-2K-500 (2,058 respondents)",
+                                "Park et al. (1,052 agents)"]):
         sous = roc[roc["jeu"] == jeu]
         for predicteur, groupe in sous.groupby("predicteur"):
             cle = PREDICTEUR_A_CLE.get((jeu, predicteur))
