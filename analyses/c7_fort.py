@@ -62,7 +62,8 @@ from c7_recette import SYSTEME_ITEM, construire_prompt_item, parser_item  # noqa
 from c7_reidentification import rangs_attaque, REF_V4, REF_V13, items_communs  # noqa: E402
 from c7_gen_analyse import construire_idx_mod, exactitude_propre     # noqa: E402
 from a2_commun import bootstrap_personnes                            # noqa: E402
-from t1_mesures import chute                                         # noqa: E402
+from t1_mesures import chute                                         # noqa: E402,F401
+from c7_courbe_gen import fidelite_condition, intervalle_prediction   # noqa: E402
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRACES = os.path.join(RACINE, "data", "traces", "c7-fort")
@@ -243,40 +244,50 @@ def analyse(n_declare):
     m_t10, b_t10, h_t10 = bootstrap_personnes(top10, 2000, [GRAINE, 4])
 
     # 3. fidelite : chute sous permutation intra-segment S_gra, normalisee au plancher
-    #    humain recalcule sur EXACTEMENT les memes personnes/items/segmentation.
-    y_ref_60 = paq["codes"][T1.REF][:, idx_codes]
-    y1 = y_ref_60[vrai_c]
-    s = paq["seg"]["S_gra"][vrai_c]
-    rng_f = np.random.default_rng([GRAINE, 5])
-    vraie, perms = chute(vec_c, y1, s, 200, rng_f)
-    chute_rel = (vraie - perms.mean()) / vraie if vraie else np.nan
+    #    humain sur EXACTEMENT le meme perimetre (personnes/items/segmentation) --
+    #    fonction reprise sans modification de c7_courbe_gen (memes graines/conventions
+    #    que la courbe de reference sur laquelle ce point sera place).
+    y_v4_full = paq["codes"][T1.REF][:, idx_codes]
+    y_planch_full = paq["codes"][T1.PLANCHER][:, idx_codes]
+    seg_full = paq["seg"]["S_gra"]
+    fidelite_plancher, exact_t1 = fidelite_condition(
+        vec_c, vrai_c, y_v4_full, y_planch_full, seg_full, f"c7-fort|{MODELE_CLE}")
 
-    cd_plancher = paq["codes"][T1.PLANCHER][:, idx_codes][vrai_c]
-    rng_p = np.random.default_rng([GRAINE, 6])
-    vraie_p, perms_p = chute(cd_plancher, y1, s, 200, rng_p)
-    chute_rel_p = (vraie_p - perms_p.mean()) / vraie_p if vraie_p else np.nan
-    fidelite_plancher = (chute_rel / chute_rel_p
-                         if chute_rel_p and abs(chute_rel_p) > 1e-12 else np.nan)
+    # 4. position sur la courbe fidelite -> fuite des 12 points de c7-compromis.csv,
+    #    meme fonction que c7_courbe_gen (intervalle de PREDICTION, pas de confiance).
+    ref = pd.read_csv(os.path.join(SORTIE, "c7-compromis.csv"))
+    ip = intervalle_prediction(ref.fidelite_plancher.values, ref.fuite_top1.values,
+                                fidelite_plancher)
+    dans_intervalle = bool(ip["ic_bas"] <= m_t1 <= ip["ic_haut"])
+    sous_borne_basse = bool(m_t1 < ip["ic_bas"])
 
     print(f"n_attaques={n} (declare n={n_declare}), taux_parse={taux_parse:.3f}",
           flush=True)
-    print(f"exactitude = {m_exa:.4f} [{b_exa:.4f} ; {h_exa:.4f}]", flush=True)
-    print(f"fidelite (chute relative) = {chute_rel:.4f}, plancher humain = "
-          f"{chute_rel_p:.4f}, part du plancher = {fidelite_plancher:.4f}", flush=True)
+    print(f"exactitude = {m_exa:.4f} [{b_exa:.4f} ; {h_exa:.4f}] "
+          f"(exactitude t1, reperage seul = {exact_t1:.4f})", flush=True)
+    print(f"fidelite (part du plancher humain) = {fidelite_plancher:.4f}", flush=True)
     print(f"top1 = {m_t1:.4f} [{b_t1:.4f} ; {h_t1:.4f}]  top10 = {m_t10:.4f} "
           f"[{b_t10:.4f} ; {h_t10:.4f}]  rang_median = {np.median(rang):.1f} / "
           f"{pool_v4.shape[0]}", flush=True)
+    print(f"courbe fidelite->fuite (12 points, pente={ip['pente']:.4f} "
+          f"r={ip['r']:.4f}) : fuite predite = {ip['y_predit']:.4f} "
+          f"IC95%=[{ip['ic_bas']:.4f} ; {ip['ic_haut']:.4f}], "
+          f"observe dans l'intervalle = {dans_intervalle}, "
+          f"sous la borne basse = {sous_borne_basse}", flush=True)
 
     df = pd.DataFrame([{
         "configuration": f"C7-fort ({MODELE}, item)", "n_attaques": n,
         "n_declare": n_declare, "n_pool": pool_v4.shape[0], "taux_parse_moyen": taux_parse,
         "exactitude": m_exa, "exactitude_bas": b_exa, "exactitude_haut": h_exa,
-        "fidelite_chute_relative": chute_rel,
-        "fidelite_chute_relative_plancher_humain": chute_rel_p,
+        "exactitude_t1_reperage": exact_t1,
         "fidelite_plancher": fidelite_plancher,
         "top1": m_t1, "top1_bas": b_t1, "top1_haut": h_t1,
         "top10": m_t10, "top10_bas": b_t10, "top10_haut": h_t10,
-        "rang_median": float(np.median(rang)), "top1_hasard": 1.0 / pool_v4.shape[0]}])
+        "rang_median": float(np.median(rang)), "top1_hasard": 1.0 / pool_v4.shape[0],
+        "courbe_pente": ip["pente"], "courbe_r": ip["r"],
+        "fuite_predite": ip["y_predit"], "fuite_predite_bas": ip["ic_bas"],
+        "fuite_predite_haut": ip["ic_haut"], "dans_intervalle": dans_intervalle,
+        "sous_borne_basse": sous_borne_basse}])
     chemin_csv = os.path.join(SORTIE, "c7-fort-reidentification.csv")
     df.to_csv(chemin_csv, index=False)
     print(f"\necrit : {chemin_csv}", flush=True)
