@@ -952,7 +952,8 @@ complete anonymity remains challenging. They named the risk, obtained an ethics 
 worked over more than six months, pseudonymised, restricted access to individual responses and
 planned a 25-year withdrawal. No public audit had measured the magnitude of that named risk;
 our figures (90.40 % for the composite agent among 1,052 in a closed world, 60.17 % in an open
-world at 1 % false accusations, and 44.7 % from the interview alone under a weaker attack) are,
+world at 1 % false accusations, and 44.7 % — a lower bound, the strong attack not re-run on the
+interview-only condition — from the interview alone) are,
 to our knowledge, its first quantification. We note for the disclosure letter that our own first
 measurement, 65.51 % closed-world and 20.39 % open-world, understated the magnitude of the risk
 they had named.
