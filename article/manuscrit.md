@@ -35,8 +35,8 @@ own paid experiments and the Argyle replication.
 We also report what we could not establish. We predicted, and preregistered, that the observed
 coupling between imitation quality and leakage reflects an individual fingerprint; a null carrying
 only a matched per-person accuracy margin — not a structure-free object, and one that in fact
-leaks more than our own twin (31.6 % against 20.7 %) — reaches a rank correlation at least as high
-as ours (0.974 [0.950 ; 0.993] against 0.965 observed). Fourteen preregistered predictions were
+leaks more than our own twin (31.6 % against 20.7 %) — reaches a rank correlation as high
+as ours (0.974, 5th–95th percentiles [0.950 ; 0.993], against 0.965 observed). Fourteen preregistered predictions were
 refuted, two are inconclusive for lack of power, and one could not be tested; our own twins failed
 to reproduce the leakage even with a paid frontier model. Finally, a 1998 mechanism (PRAM) applied
 to twins reduces closed-world top-1 from 20.7 % to 0.13 % at a measured cost of 4.4 points on
@@ -102,7 +102,7 @@ predictors matched to each person's own accuracy margin, with correct positions 
 without looking at the person — an object that is not structure-free, and that in fact leaks more
 than our own twin (31.6 % top-1 against 20.7 %). Adversarial review found a real defect in that
 first witness, since rebuilt without changing the verdict (§5.1). The rebuilt witness reaches mean
-Spearman **0.974** [0.950 ; 0.993] against **0.965** observed over the 12 configurations
+Spearman **0.974**, 5th–95th percentiles [0.950 ; 0.993], against **0.965** observed over the 12 configurations
 [audit-renversement-2026-09-12.md]; the observed value does not exceed it. Each null is compared
 only against the observed value measured on its own plan. **Reproducing the coupling requires
 nothing more than a matched per-person accuracy and correct positions drawn at random —
@@ -895,7 +895,7 @@ anything resting on the link between two answers of the same person becomes unus
 
 | # | Prediction (preregistered) | Outcome | Source |
 |---|---|---|---|
-| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho 0.974 [0.950 ; 0.993] against 0.965 observed over the 12 configurations; the original null carried a defect, since corrected with no change of verdict (§5.1) | `audit-renversement-2026-09-12.md` |
+| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho 0.974, 5th–95th percentiles [0.950 ; 0.993], against 0.965 observed over the 12 configurations; original null carried a defect, since corrected, verdict unchanged (§5.1) | `audit-renversement-2026-09-12.md` |
 | 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % | `c7-attaquant-fort-resultats.md` |
 | 3 | Twin-to-twin top-1 ≥ 20 % on the Park archive | **Refuted.** 11.9–13.0 % at 177 common items (failure criterion not met either) | `c7-transfert-stanford-resultats.md` |
 | 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
