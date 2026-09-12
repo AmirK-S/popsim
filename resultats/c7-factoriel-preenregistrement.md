@@ -1,5 +1,17 @@
 # Préenregistrement — plan factoriel un-facteur-à-la-fois (M / G / P)
 
+> **AVERTISSEMENT (12 septembre 2026) — rien à corriger dans ce texte, mais sa suite est
+> invalidée.** Ce fichier est commité avant le premier appel payant (commit `ff90409`) —
+> seul cas du dépôt à antériorité prouvée : la discipline annoncée ici a bien été tenue. Ses
+> prédictions chiffrées (§4) ont été réfutées par les mesures de
+> `resultats/c7-factoriel-resultats.md`, mais ces mesures se révèlent depuis non
+> interprétables : le pipeline testé (bras B et ses variantes M/G/P) ne transportait aucune
+> information individuelle avant toute manipulation — contre les humains réels, top-1 au
+> taux du hasard — voir `resultats/c7-reconciliation-facteurs-2026-09-12.md` §3 et §7. La
+> discipline du préenregistrement a donc été respectée, et elle n'a pas suffi : il manquait
+> un contrôle de validité du pipeline **avant** ce préenregistrement même, contrôle que la
+> réconciliation recommande désormais en §7.
+
 Écrit le 12 septembre 2026, **avant tout appel payant**, avant `analyses/c7_factoriel.py`.
 Question ouverte : l'expérience « deux organisations » (`c7-deux-organisations-resultats.md`)
 a fait varier **trois facteurs à la fois** — modèle, gabarit de prompt, format de persona —

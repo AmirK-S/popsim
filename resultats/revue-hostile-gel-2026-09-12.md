@@ -1,4 +1,28 @@
 # Revue hostile avant gel — PoPETs 2027.3
+
+> **NOTE D'ÉTAT (12 septembre 2026) — vérifiée point par point contre `article/manuscrit.md`
+> tel qu'il est aujourd'hui, pas rapportée sur la seule foi d'un autre audit.** La plupart des
+> constats ci-dessous sont **déjà traités** : **D1** (table 1 et §1.1 citent désormais le
+> témoin corrigé 0,974 [0,950 ; 0,993] contre 0,965, l'ancienne paire 0,984/0,969 étant
+> explicitement étiquetée comme périmée — l. 877 et alentours) ; **D2** (la figure 2 est
+> désormais appelée depuis §5.1, plus orpheline en fin de §5.9) ; **D3** (« composite utility
+> index » et « 1.47 is not D4's cost » sont déjà en place aux lignes citées par la revue —
+> confirmé indépendamment par `resultats/cout-d4-propagation-2026-09-12.md`, qui identifie ce
+> même constat D3 de la présente revue comme périmé et met en garde contre sa réouverture) ;
+> **D4** (« We do not claim a measured dissociation between memorization and
+> re-identification » remplace l'énoncé trop fort) ; **D5(b)** (titre devenu « No new harm on
+> Twin-2K-500 ») ; **D5(c)** (absence de licence OSF et conditions NORC nommées en §8) ;
+> **D5(d)** (la contradiction sur l'accès aux réponses Park est résolue en une phrase) ; **D6**
+> (clés bibliographiques alignées sur `references.bib` — `toubia2025twin2k500`,
+> `park2024agents`, `giomi2023unified` vérifiées directement dans le texte —, entrée AAPOR
+> ajoutée au `.bib`, `anon2026decoupling` identifié comme `shafieinejad2026diffusion`) ; **D7**
+> (la phrase de réconciliation entre 33,1 % et 20,7 % est désormais présente en §5.5). **Reste
+> ouvert, vérifié comme tel** : **D5(a)** — les lettres de divulgation ne sont toujours pas
+> parties (« the letters have not been sent », `article/manuscrit.md` l. 1045) ; et **D8** —
+> les trois graphies 20,68 % / 20,69 % / 20,7 % coexistent encore, non harmonisées. Ces deux
+> points restent valablement signalés. N'a pas été revérifié ligne à ligne : la légende gravée
+> dans l'image `fig2-couplage.png` elle-même (31,15 % contre 31,6 %), qui échappe à une lecture
+> du texte source.
 **Date** : 2026-09-12. **Objet** : `article/manuscrit.md` (1 087 lignes), contrôlé contre
 `resultats/article-synthese.md`. **Posture** : relecteur senior en vie privée, avis par défaut
 le rejet. Aucun appel d'API, aucune recherche web.

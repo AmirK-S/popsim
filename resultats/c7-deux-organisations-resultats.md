@@ -1,5 +1,17 @@
 # Résultats — témoin « deux organisations indépendantes » (B↔C)
 
+> **AVERTISSEMENT (12 septembre 2026) — conclusion de ce rapport invalidée.** Le témoin B↔C
+> ci-dessous utilise le même pipeline (organisations B et C régénérées pour cette famille
+> d'expériences) dont on a depuis établi qu'il ne transporte aucune information individuelle
+> avant toute manipulation : contre les humains réels, ces jumeaux réidentifient au taux du
+> hasard (0,0 à 0,8 % contre 0,83 % attendu) — voir
+> `resultats/c7-reconciliation-facteurs-2026-09-12.md` §3-4. Le verdict « A7 est détruite »
+> (§6 ci-dessous) n'est donc pas confirmé par ce témoin : la question qu'il devait trancher
+> **n'a pas pu être testée**, faute d'un pipeline capable de porter un signal à tester en
+> premier lieu — limite de l'instrument, pas résultat sur le monde. Restent exacts et
+> utilisables : les mesures brutes de top-1 (§5) et le coût réel mesuré (§4). C'est leur
+> interprétation comme preuve d'absence de canal inter-organisations qui tombe.
+
 Exécution de `analyses/c7_deux_organisations.py`, plan
 `resultats/c7-temoin-deux-organisations-plan.md`, préenregistrement
 `resultats/c7-deux-organisations-preenregistrement.md`. Sortie chiffrée :

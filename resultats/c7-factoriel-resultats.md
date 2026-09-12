@@ -1,5 +1,16 @@
 # Résultats — plan factoriel un-facteur-à-la-fois (M / G / P)
 
+> **AVERTISSEMENT (12 septembre 2026) — conclusion de ce rapport invalidée.** Les jumeaux M/G/P
+> régénérés pour cette expérience ne réidentifient la personne réelle qu'au taux du hasard
+> (top-1 de 0,0 à 0,8 % contre 0,83 % attendu par hasard), **avant même toute manipulation** —
+> voir `resultats/c7-reconciliation-facteurs-2026-09-12.md` §3-4. Leurs contrastes B↔M/G/P
+> comparent donc deux sources de bruit, pas deux jumeaux porteurs d'une personne : la
+> conclusion « changer un seul facteur effondre le canal » (§4 à 6 ci-dessous) n'est pas
+> réfutée, elle **n'a pas pu être testée** — limite de cet instrument, pas résultat sur le
+> monde. Restent exacts et utilisables : les mesures brutes de top-1 elles-mêmes (§3) et le
+> coût réel mesuré (§2). C'est leur interprétation comme preuve de fragilité du canal qui
+> tombe.
+
 Exécution de `analyses/c7_factoriel.py`, préenregistrement
 `resultats/c7-factoriel-preenregistrement.md` (commité seul, avant tout appel payant,
 commit `ff90409`). Sortie chiffrée : `resultats/c7-factoriel.csv`. Trace brute :
