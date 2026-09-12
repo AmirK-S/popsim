@@ -255,6 +255,26 @@ def _escape_texttt(raw, allow_breaks=False):
         # la ligne a l'endroit naturel du tiret plutot que de deborder.
         raw = raw.replace("-", r"-\allowbreak{}")
         raw = raw.replace("/", r"/\allowbreak{}")
+        # MEME CONSTAT, TROUVE PAR COMPILATION REELLE (2026-09-12, passage
+        # mise en page finale) : les points de coupure ci-dessus ne
+        # suffisaient pas pour un identifiant long depourvu de "-"/"/" dans
+        # son dernier segment (ex. "resultats/c7-preenregistrement.md" --
+        # apres coupure sur "/" et "-", il restait "preenregistrement.md"
+        # comme seul bloc insecable, encore assez large pour deborder en fin
+        # de colonne etroite). Overfull \hbox mesures : 32.65pt et 32.29pt
+        # (main.log, section Open Science) avant cette correction.
+        #
+        # Premier essai rejete apres verification visuelle : un point de
+        # coupure autorise APRES le point (".\allowbreak{}") deplacait bien
+        # le debordement, mais au prix d'une coupure ".md" -> "." en fin de
+        # ligne / "md" seul au debut de la suivante, qui separe l'extension
+        # de son point -- pire visuellement que le debordement d'origine.
+        # Coupure placee AVANT le point a la place : l'extension et son
+        # point ("."+"md") restent un seul bloc sur la ligne suivante,
+        # seul le nom de base peut se retrouver seul en fin de ligne
+        # precedente -- verifie par rendu d'image, voir resultats/latex-
+        # gabarit-2026-09-12.md.
+        raw = raw.replace(".", r"\allowbreak{}.")
     return raw
 
 
@@ -335,6 +355,14 @@ def _escape_latex_specials(text):
     # tard ($, \cite, etc.) ne sont pas encore inserees a ce stade (elles
     # restent dans des jetons proteges) -- donc aucun backslash "legitime"
     # n'existe encore dans le texte a ce point du pipeline.
+    #
+    # Espace insecable avant "%" : trouve par relecture des pages rendues
+    # (pas du log) que "20.7 %" utilise un espace normal, donc coupable en
+    # fin de ligne (le "%" isole en debut de ligne suivante). Corrige ici,
+    # pour TOUTE occurrence chiffre+espace+% du document (prose et
+    # tableaux passent tous deux par convert_inline) : mise en page
+    # seulement, la valeur numerique et le symbole restent inchanges.
+    text = re.sub(r"(\d) %", r"\1~%", text)
     text = text.replace("%", r"\%")
     text = text.replace("&", r"\&")
     text = text.replace("#", r"\#")
@@ -350,6 +378,20 @@ def convert_inline(raw):
     # insere ici ne contient aucun caractere que les etapes suivantes
     # (echappement %&#_ , symboles unicode, guillemets) ne modifient.
     raw = _convert_table_refs(raw)
+    # Intervalles "[a ; b]" : les deux espaces autour du ";" sont, avant
+    # cette etape, des espaces normaux -- une coupure de ligne peut donc
+    # tomber entre "19.0" et ";", ou entre ";" et "22.4", ce qui casse
+    # visuellement un intervalle de confiance en deux lignes (repere par
+    # relecture des pages rendues, pas par le log). 84 occurrences dans le
+    # manuscrit actuel, toutes de la forme exacte "[NUM ; NUM]" (verifie :
+    # aucune ne contient de gras/italique a l'interieur des crochets).
+    # Espaces rendus insecables des deux cotes du ";" ; aucun chiffre, aucun
+    # caractere du texte n'est modifie.
+    raw = re.sub(
+        r"\[(-?[0-9][0-9.,]*) ; (-?[0-9][0-9.,]*)\]",
+        r"[\1~;~\2]",
+        raw,
+    )
     text = _protect(raw, placeholders)
 
     # gras puis italique (markdown) -- apres protection du code/citations
@@ -815,10 +857,25 @@ def main():
             continue
         if number == "9":
             backmatter_fragments.append("\\begin{openscience}")
+            # \sloppypar : cette section contient plusieurs chemins de
+            # fichiers longs en \texttt (ex. "resultats/c7-argyle-
+            # preenregistrement.md") juxtaposes dans une seule phrase enu-
+            # merative. Meme avec les points de coupure de _escape_texttt
+            # ci-dessus, une ligne restait Overfull de 32.65pt (mesure par
+            # compilation reelle, verifiee par rendu d'image : le
+            # debordement mange le blanc inter-colonnes sans chevaucher le
+            # texte de la colonne voisine, mais reste plus large que
+            # souhaitable). \sloppypar assouplit localement la tolerance de
+            # justification (espaces inter-mots plus elastiques) au lieu de
+            # laisser une boite deborder -- mise en page seulement, aucun
+            # mot ni caractere du texte n'est modifie. Limite a cette seule
+            # section pour ne pas relacher la justification ailleurs.
+            backmatter_fragments.append("\\begin{sloppypar}")
             backmatter_fragments.extend(paragraphs_to_latex(direct_lines))
             for subtitle, body in subsecs:
                 backmatter_fragments.append("\\textbf{%s}" % convert_inline(subtitle))
                 backmatter_fragments.extend(paragraphs_to_latex(body))
+            backmatter_fragments.append("\\end{sloppypar}")
             backmatter_fragments.append("\\end{openscience}")
             continue
         if number == "10":

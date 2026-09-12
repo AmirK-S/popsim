@@ -782,3 +782,147 @@ rm -f main.aux main.bbl main.blg main.log main.out comment.cut
 Trancher les dix points du §11.8 (en particulier le placeholder `\Description{}`, les 4 entrées
 bibliographiques non citées, et l'auteur anonyme à lever) reste un choix éditorial, pas un défaut
 de la mécanique — celle-ci est maintenant éprouvée de bout en bout sur du contenu réel.
+
+---
+
+## 12. Manuscrit figé : compte de pages tranché, finitions de mise en page, contrôle d'anonymat sur le PDF (2026-09-12, suite)
+
+Mission distincte : le manuscrit est déclaré figé et vérifié trois fois ; il s'agit de produire le
+PDF de soumission, de trancher sans ambiguïté le compte de pages du corps, de soigner la mise en
+page (jamais le texte), et de refaire le contrôle d'anonymat directement sur le PDF plutôt que sur
+le Markdown. Cycle complet (`python3 md2latex.py` puis `pdflatex → bibtex → pdflatex → pdflatex`),
+sans erreur, sur l'état actuel de `article/manuscrit.md` (1195 lignes, arbre de travail propre,
+dernier commit `edbc445`).
+
+### 12.1 Le compte de pages, tranché par rendu, pas par recherche textuelle
+
+**12 pages, pas 11.** Méthode : `pdftotext -layout` a d'abord signalé « Ethical Considerations »
+en page 12 (recherche par page isolée, `-f N -l N`, pour éviter tout risque de mauvaise attribution
+de page par l'extracteur) — mais la leçon du §10 interdit de s'arrêter là. Page 12 rendue en image
+(`pdftoppm` 150 dpi) et regardée : elle contient la fin de §7.3, la totalité de §7.4 (deux
+paragraphes complets, dont un bloc en gras), remplissant toute la colonne de gauche et les deux
+tiers de la colonne de droite, avant que « Ethical Considerations » ne commence. Ce n'est donc pas
+une page où le corps déborde de deux lignes perdues : c'est une page dont l'essentiel du contenu
+est le corps.
+
+**Ce qui explique l'écart 11/12 rapporté par l'orchestrateur.** Le script du §11.9 (§3, commande
+finale) calcule le compte de pages du corps par `i - 1`, où `i` est la page où commence « Ethical
+Considerations » — une formule correcte **seulement si** cette section démarre en haut d'une page
+neuve. Ici, ce n'est pas le cas : elle démarre au milieu de la page 12. Appliquer `i - 1` avec
+i = 12 donne 11, un chiffre **faux** dans ce cas précis, puisqu'il prétend que la page 12 n'appartient
+pas au corps alors qu'elle en contient l'essentiel. Le compte juste est `i` lui-même dès que la page
+`i` contient du texte de corps réel (vérifié par rendu, pas supposé) : **12**. C'est un vice de la
+formule de raccourci, pas un vice de la mesure sous-jacente — les deux précédentes valeurs
+rapportées par l'orchestrateur (13 puis 12) reflètent, elles, deux états différents du manuscrit à
+deux moments différents (avant/après les corrections de placement des figures des §9-10), pas une
+erreur de méthode.
+
+**Règle PoPETs applicable, déjà établie au §8.1 et reconfirmée ici sans nouvelle recherche
+(aucune recherche web dans cette mission)** : la bibliographie, les annexes et les trois sections
+obligatoires (éthique, open science, AI use) sont hors limite ; le corps (résumé inclus, §1 à §7.5,
+figures et tableaux compris) ne doit pas dépasser 12 pages composées, sous peine de rejet de bureau
+automatique et sans appel. **Verdict : 12 pages sur 12, marge nulle** — exactement la situation
+déjà caractérisée au §10.3, inchangée par les finitions de mise en page de cette session (aucune
+n'a déplacé la frontière corps/annexe, voir §12.3).
+
+### 12.2 Vérifications par rendu réel (pas par comptage textuel)
+
+- **Citations** : `md2latex.py` rapporte 0 citation non résolue ; confirmé par recherche du jeton
+  `CITATION NON RESOLUE` sur le texte extrait du PDF final — 0 occurrence.
+- **Figures** : `pdfimages -list` sur le PDF final liste bien 2 images de taille non nulle
+  (Fig. 1 : 1350 × 1872 px, page 6 ; Fig. 2 : 1062 × 1005 px, page 9), et les deux pages ont été
+  rendues et regardées (`pdftoppm` 150 dpi) : légendes complètes, lisibles, chiffres et symboles
+  corrects. Les deux figures tombent dans la sous-section qui les discute (Fig. 1 en §5.2/§5.3,
+  Fig. 2 en §5.8/§5.9), pas dérivées en fin de section.
+- **Tableau** (Table 1, dix-sept lignes de prédictions, §7.1) : rendu et regardé en page 11 — tient
+  entièrement sur une page, en-têtes lisibles, colonne Source enveloppée proprement sur les traits
+  d'union, aucun débordement dans la marge des numéros de ligne (mode `review`).
+- **Renvois** : aucun `Rerun to get cross-references right` dans le journal final (3 passes
+  `pdflatex` suffisent, cycle stable) ; aucune étiquette `Undefined` trouvée par grep sur
+  `main.log`.
+- **15 pages au total**, inchangé par les finitions ci-dessous.
+
+### 12.3 Finitions de mise en page appliquées (dans `md2latex.py`, jamais dans le texte)
+
+Toutes vérifiées par recompilation complète et, pour les deux premières, par rendu d'image avant/
+après — aucune n'a déplacé la frontière du corps (toujours page 12) ni la position des figures
+(toujours pages 6 et 9).
+
+1. **Espace insécable avant `%`.** Le manuscrit écrit systématiquement « 20.7 % » avec un espace
+   normal, donc coupable en fin de ligne (le « % » pouvait atterrir seul en début de ligne
+   suivante). `_escape_latex_specials` insère maintenant un `~` (`re.sub(r"(\d) %", r"\1~%", text)`)
+   avant l'échappement du caractère — mise en page seulement, aucune valeur numérique changée.
+2. **Intervalles `[a ; b]` rendus insécables.** Même défaut potentiel autour du « ; » séparant les
+   deux bornes d'un intervalle de confiance (84 occurrences dans le manuscrit actuel, toutes de la
+   forme exacte `[NUM ; NUM]`, vérifié par grep avant d'écrire la regex). `convert_inline` applique
+   maintenant `[\1~;~\2]` sur ce motif, avant toute autre transformation — un intervalle ne peut
+   plus se couper entre ses deux bornes.
+3. **`Overfull \hbox` : de 9 à 7, les deux plus grosses éliminées.** Les neuf boîtes déjà signalées
+   par l'orchestrateur ont été mesurées une à une (`grep -n Overfull main.log` puis contexte). Sept
+   sont mineures (1.1 pt à 5.3 pt, moins de 0,1 mm à 0,7 mm — invisibles à l'œil, dans la tolérance
+   normale de justification à 9 pt sur deux colonnes) et laissées telles quelles : les réduire à zéro
+   exigerait de reformuler des phrases, hors de mon périmètre. Les deux grosses (32.65 pt et
+   32.29 pt, dans la section Open Science, sur l'énumération des cinq fichiers de préenregistrement
+   en `\texttt{}`) ont été corrigées en deux temps : (a) un point de coupure autorisé ajouté avant
+   chaque `.` à l'intérieur d'un `\texttt{}` (comme déjà fait pour `-` et `/` au §11.4) — premier
+   essai rejeté après rendu d'image, car il coupait `.md` en deux (`.` en fin de ligne, `md` seul au
+   début de la suivante) ; corrigé en plaçant la coupure **avant** le point plutôt qu'après, pour
+   que l'extension reste un seul bloc ; (b) la section Open Science entière enveloppée dans
+   `\begin{sloppypar}...\end{sloppypar}` (assouplissement local de la tolérance de justification,
+   aucun mot ni caractère modifié), qui a fait disparaître les deux dernières grosses boîtes. Résultat
+   final : 7 boîtes, toutes sous 5,3 pt, vérifiées par rendu d'image de la page concernée (aucune
+   ne mange l'espace inter-colonnes visible).
+4. **Liens et renvois** : `acmart.cls` fixe déjà `colorlinks` avec `linkcolor=ACMPurple`,
+   `citecolor=ACMPurple`, `urlcolor=ACMDarkBlue` — pas de soulignement, palette sobre imposée par le
+   gabarit. Non modifié (le gabarit est imposé, voir consigne de cadrage).
+5. **Veuves/orphelines et titres de section isolés** : recherché par lecture de page rendue sur les
+   15 pages du document (pas seulement les pages déjà citées ailleurs dans ce rapport) — aucun
+   titre de section ou sous-section trouvé seul en bas de colonne, aucune ligne isolée flagrante
+   repérée. `acmart`/`popets` héritent des réglages `\clubpenalty`/`\widowpenalty` standards d'ACM,
+   non modifiés.
+
+### 12.4 Contrôle d'anonymat, refait sur le PDF
+
+Page de titre rendue et regardée : **« Anonymous Author(s) »**, aucune affiliation, aucun ORCID ;
+en-tête courant **« Anon. »** sur toutes les pages impaires, nom du papier seul sur les pages
+paires — cohérent avec `\documentclass[sigconf,anonymous,review]{acmart}`, non modifié. Aucune URL
+personnelle ni identifiant nominatif trouvé dans le corps. Le seul lien de la page de titre est la
+licence CC BY générique et un DOI placeholder (`10.XXXXXXX.XXXXXXX`), tous deux non identifiants.
+**Anonymat du corps intact.**
+
+### 12.5 Deux problèmes de contenu trouvés en vérifiant le rendu, signalés et non corrigés
+
+Hors de mon périmètre d'écriture (`article/manuscrit.md` et `article/references.bib` sont en
+lecture seule) — signalés pour décision de l'orchestrateur, pas forcés.
+
+1. **48 renvois internes `[c7-xxx-resultats.md §N]` imprimés tels quels dans le corps du PDF**,
+   confirmé par rendu d'image (visibles pages 1, 6, 9, 12 entre autres, pas seulement par grep sur
+   le Markdown). Ce sont des noms de fichiers internes du dépôt (dont plusieurs datés
+   `2026-09-1x.md`), pas des citations académiques : un relecteur PoPETs sans accès au dépôt ne peut
+   rien en faire, et leur présence expose la mécanique de travail interne (dates, arborescence de
+   fichiers `resultats/`) dans un document qui doit rester anonyme et fini. Cela ne révèle aucune
+   identité, mais nuit à la présentation professionnelle attendue d'une soumission. Décision hors de
+   mon périmètre : les convertir en notes de bas de page génériques, les retirer, ou les assumer
+   comme choix éditorial délibéré (traçabilité interne).
+2. **13 entrées de `references.bib` portent un champ `note={}`, dont au moins 7 sont des notes de
+   vérification interne de l'auteur plutôt que des précisions bibliographiques usuelles** — certaines
+   rédigées en français dans un article en anglais (ex. `drechsler2024thirtyyears` : « L'identifiant
+   2409.04257 donné initialement désigne un autre article (Raab, 2024) ; corrigé ici en
+   2304.02107 » ; `hu2023microdata` : « Premier auteur Hu, non Bowen ; cité comme "Bowen et al."
+   dans resultats/article-travaux-connexes.md » ; `guepin2023synthetic`, `dwork2015robust`,
+   `shafieinejad2026diffusion`, `gouweleeuw1998pram`, `aapor2026responsibleai` de même nature).
+   Confirmé par rendu de page (page 14 et page 15 du PDF, section References) : ces notes
+   s'impriment mot pour mot dans la bibliographie soumise. Les 6 autres notes (`chen2026...`,
+   `park2024agents`, `zhang2024satml`, `das2024blind`, `bun2014fingerprinting`,
+   `peng2026funhouse`) sont des précisions bibliographiques usuelles (statut de préprint, titre de
+   version, venue secondaire) et ne posent pas ce problème. Décision hors de mon périmètre : retirer
+   ou déplacer hors du champ `note` les 7 annotations de vérification avant dépôt.
+
+### 12.6 PDF final
+
+`article/latex/main.pdf` — **15 pages au total, corps = 12 pages (marge nulle), 0 erreur de
+compilation, 0 citation non résolue, 2 figures à taille réelle et bien positionnées, anonymat
+intact**. Régénérable à l'identique par la marche à suivre du §11.9 (`python3 md2latex.py` puis le
+cycle de compilation en 4 commandes) ; les artefacts de compilation (`main.aux`, `.bbl`, `.blg`,
+`.log`, `.out`, `comment.cut`) sont actuellement présents dans `article/latex/` pour traçabilité et
+restent, comme déjà noté au §11.8 point 7, à purger juste avant tout dépôt effectif.
