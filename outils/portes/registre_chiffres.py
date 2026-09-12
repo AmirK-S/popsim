@@ -129,14 +129,18 @@ def controle_fichier(constat: Constat, chemin: Path, registre: dict[str, dict],
 
         # (b) renvois {{R:id}}
         for m in RE_RENVOI.finditer(brute):
-            ident = m.group(1)
+            # La grammaire du rendu (outils/rendu_registre.py) est « id » ou
+            # « id.champ » : on valide ici l'identifiant de base, le champ etant
+            # controle par le rendu, qui a son propre cas d'echec « champ inconnu ».
+            renvoi = m.group(1)
+            ident = renvoi.split(".", 1)[0]
             compteur["renvois"] += 1
             if ident not in registre:
-                constat.viole(chemin, i, f"renvoi {{{{R:{ident}}}}} absent du registre",
+                constat.viole(chemin, i, f"renvoi {{{{R:{renvoi}}}}} absent du registre",
                               "ajouter la grandeur dans resultats/registre-chiffres.csv "
                               "avec son script, son commit et son CSV source")
             elif (registre[ident].get("statut") or "").strip() == "retracte":
-                constat.viole(chemin, i, f"renvoi {{{{R:{ident}}}}} vers une ligne RETRACTEE",
+                constat.viole(chemin, i, f"renvoi {{{{R:{renvoi}}}}} vers une ligne RETRACTEE",
                               "citer l'id qui fait foi a la place")
 
         # (c) chiffres en dur
