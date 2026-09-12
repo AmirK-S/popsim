@@ -107,8 +107,10 @@ TOL_ECART_MAX_PREENREGISTRE = 0.08      # publie, non bloquant (cf. DEVIATION)
 
 CACHE = os.environ.get(
     "C7_NUL_CACHE",
-    "/private/tmp/claude-501/-Users-amirkellousidhoum-Desktop-Code-Projets-popsim/"
-    "ed6061e6-124c-4c1f-aeb8-1b15f57c239b/scratchpad/c7-nul-corrige-baselines-60.pkl")
+    # Portable par defaut (meme convention que c7_bits.CACHE_BASELINES) : un chemin de
+    # session propre a une machine cassait l'execution ailleurs (signale independamment par
+    # resultats/reproductibilite-chaine-2026-09-12.md et audit-renversement-2026-09-12.md).
+    "/tmp/c7-nul-corrige-baselines-60.pkl")
 
 # Les constructions, dans l'ordre du rapport. La cle dit comment la ligne est engendree.
 CONSTRUCTIONS = [
