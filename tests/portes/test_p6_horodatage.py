@@ -1,15 +1,19 @@
 """P6 vu echouer, et vu passer.
 
 Le controle de PRESENCE du recu est operationnel et teste ici dans les deux sens.
-Le controle de VERIFICATION cryptographique (`ots verify`) n'est PAS teste : le
-binaire `ots` est absent de la machine et sa verification exige un acces reseau a
-un calendrier, exclu du mandat. Un test qui passerait en sautant silencieusement
-serait precisement le controle qu'on n'a jamais vu echouer — il est donc marque
-`skip` avec son motif, et P6 se declare non operationnel sur ce volet.
+
+Le controle de VERIFICATION cryptographique (`ots verify`) est teste quand le
+binaire `ots` est present sur la machine (`test_verification_cryptographique`) ;
+sinon il est saute avec son motif explicite — un test qui passerait en sautant
+silencieusement serait precisement le controle qu'on n'a jamais vu echouer. Le
+test d'argument (`test_verifier_appelle_ots_avec_moins_f_sur_le_bon_fichier`) ne
+depend pas de la presence du vrai binaire : un faux `ots` sur le PATH suffit a
+verifier que P6 lui donne les bons arguments, sans reseau ni calendrier.
 """
 
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import sys
@@ -85,8 +89,51 @@ class TestP6(CasDePorte):
                      "binaire `ots` absent : le volet verification de P6 est NON "
                      "OPERATIONNEL, il n'est pas teste et ne doit pas etre presume actif")
     def test_verification_cryptographique(self):
-        self.fail("a ecrire le jour ou `ots` est installe : forger un recu invalide "
-                  "et verifier que `ots verify` fait sortir P6 en code 1")
+        """`ots verify` sur un recu force (pas un vrai fichier de timestamp) echoue
+        localement, sans reseau : c'est le format qui est rejete avant toute
+        consultation d'un calendrier. Verifie que P6 relaie cet echec en code 1."""
+        with tempfile.TemporaryDirectory() as t:
+            d, _ = self._depot(t)
+            (d / "preuves" / "c9-preenregistrement.md.ots").write_bytes(
+                b"ceci n'est pas un recu OpenTimestamps valide")
+            code, sortie = self._dans(
+                d, ["--verifier", "--fichier", "resultats/c9-preenregistrement.md"])
+            self.assertEchoue(code, sortie, "ots verify")
+
+    def test_verifier_appelle_ots_avec_moins_f_sur_le_bon_fichier(self):
+        """`ots verify` sans `-f` suppose le fichier horodate a cote du recu (meme
+        nom, sans « .ots ») : ici le recu vit dans preuves/ et le fichier reel dans
+        resultats/, dans un autre repertoire. Sans `-f`, `ots verify` echouerait
+        TOUJOURS avec « Could not open target », y compris sur un recu valide.
+        Ce test n'a pas besoin du vrai binaire `ots` : un faux `ots` sur le PATH
+        enregistre les arguments recus, pour verifier que P6 lui donne bien
+        `-f <chemin du fichier reel>` avant le chemin du recu."""
+        with tempfile.TemporaryDirectory() as t:
+            d, _ = self._depot(t)
+            (d / "preuves" / "c9-preenregistrement.md.ots").write_bytes(b"\x00OTS")
+            faux_bin = Path(t) / "faux-bin"
+            faux_bin.mkdir()
+            marqueur = Path(t) / "argv-recus.txt"
+            faux_ots = faux_bin / "ots"
+            faux_ots.write_text(
+                "#!/bin/sh\n"
+                "if [ \"$1\" = \"--version\" ]; then echo v0.0.0-faux; exit 0; fi\n"
+                f"echo \"$@\" > {marqueur}\n"
+                "exit 0\n",
+                encoding="utf-8")
+            faux_ots.chmod(0o755)
+            env = {**os.environ, "PATH": f"{faux_bin}:{os.environ['PATH']}"}
+            res = subprocess.run(
+                [sys.executable, str(d / "outils" / "portes" / "horodatage.py"),
+                 "--verifier", "--fichier", "resultats/c9-preenregistrement.md"],
+                capture_output=True, text=True, cwd=str(d), env=env)
+            self.assertEqual(res.returncode, 0, res.stdout + res.stderr)
+            self.assertTrue(marqueur.exists(), "le faux ots n'a pas ete appele pour verify")
+            argv = marqueur.read_text(encoding="utf-8").split()
+            self.assertIn("-f", argv)
+            chemin_donne = argv[argv.index("-f") + 1]
+            self.assertTrue(chemin_donne.endswith("resultats/c9-preenregistrement.md"),
+                            f"attendu le chemin du fichier reel apres -f, recu : {chemin_donne}")
 
     def test_etat_est_declare(self):
         code, sortie = lance("horodatage", ["--etat"])
