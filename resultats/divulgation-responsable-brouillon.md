@@ -6,7 +6,7 @@ le responsable du projet décide d'en envoyer une. Rien n'est envoyé par cet ag
 deux textes anglais ci-dessous ne sont que des projets de courriel, à relire, modifier et
 signer. **Tranché le 12 septembre 2026 et déjà appliqué aux deux textes : (1) signature —
 Amir KELLOU SIDHOUM, chercheur indépendant sans affiliation institutionnelle,
-`aboutdotblank@gmail.com` ; (2) partage du code — le dépôt public `github.com/AmirK-S/popsim`
+`amirksmain@gmail.com` ; (2) partage du code — le dépôt public `github.com/AmirK-S/popsim`
 est cité tel quel dans les deux lettres, le rapport complet étant envoyé sur demande ; aucune
 pièce jointe n'est promise. Le répertoire `demandes/` n'est pas versionné et n'est donc pas
 exposé ; aucune des deux lettres ne cite de chemin de fichier interne.** Restent à trancher
@@ -213,7 +213,7 @@ Thank you for your time and for releasing this valuable dataset.
 Best regards,
 Amir KELLOU SIDHOUM
 Independent researcher (no institutional affiliation)
-aboutdotblank@gmail.com
+amirksmain@gmail.com
 
 ---
 
@@ -326,7 +326,7 @@ Thank you for your time and for this valuable, carefully consented archive.
 Best regards,
 Amir KELLOU SIDHOUM
 Independent researcher (no institutional affiliation)
-aboutdotblank@gmail.com
+amirksmain@gmail.com
 
 ---
 
