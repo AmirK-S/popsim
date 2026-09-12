@@ -1,0 +1,24 @@
+# Exemptions de P3 — Methode v2 §1.2.
+#
+# Une exemption autorise UNE formulation normalement interdite, dans tous les
+# fichiers de sortie. Elle sert au seul cas legitime : le manuscrit CITE un
+# interdit pour le refuter explicitement.
+#
+# Format, une par ligne :   <formulation exacte> # <motif date et signe>
+#
+# Une exemption est un aveu ecrit, pas un contournement. Toute ligne ajoutee ici
+# est visible en revue de PR (CODEOWNERS couvre outils/portes/).
+#
+# --- Une exemption, au 12 septembre 2026 -----------------------------------
+#
+# Cas verifie a la main : dans article-synthese.md ligne 71-72, les guillemets
+# « deux organisations independantes » nomment le SCENARIO, ils ne citent pas la
+# formulation proscrite (qui est : presenter A7/T2 comme une menace etablie pour
+# ce scenario). L'extraction verbatim ne sait pas distinguer l'objet d'un
+# interdit de l'interdit lui-meme ; c'est la limite connue de P3.
+#
+# Les trois occurrences dans resultats/divulgation-responsable-brouillon.md
+# (l. 51, 61, 69) disent toutes le contraire de l'interdit — « la question n'a
+# pas pu etre tranchee », « nous ignorons ce qu'il devient ». Verifie ligne a
+# ligne le 12/09/2026 avant d'ecrire cette exemption.
+deux organisations indépendantes # 12/09/2026, socle v2 : nom de scenario, pas formulation proscrite ; 3 occurrences relues dans la lettre de divulgation, toutes en sens inverse de l'interdit

@@ -1,0 +1,82 @@
+# Les six portes de la Methode v2 §1.2. Toutes bloquantes, sauf celles marquees
+# « DETTE » ci-dessous, qui rapportent sans bloquer tant que la migration n'est
+# pas faite (l'etat exact est dans resultats/socle-v2-2026-09-12.md).
+name: portes
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  portes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # l'historique complet : P1 et P4 lisent les commits
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Base de comparaison
+        id: base
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            REF="${{ github.event.pull_request.base.sha }}"
+          else
+            REF="${{ github.event.before }}"
+          fi
+          # push d'une branche neuve : `before` vaut 000…0, on retombe sur le parent.
+          if [ -z "$REF" ] || ! git cat-file -e "$REF^{commit}" 2>/dev/null; then
+            REF="$(git rev-parse HEAD~1 2>/dev/null || git rev-parse HEAD)"
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+
+      # --- G0.5 : un controle qu'on n'a jamais vu echouer n'est pas un controle.
+      # Les tests tournent AVANT les portes : une porte dont le test d'echec ne
+      # passe plus n'a pas le droit de rendre un verdict.
+      - name: Tests des portes (chaque porte vue echouer)
+        run: python -m unittest discover -s tests/portes -t tests/portes -p "test_*.py" -v
+
+      - name: P1 — preenregistrement commis seul et PAP complet
+        run: python outils/portes/preenregistrement_seul.py --depuis "${{ steps.base.outputs.ref }}"
+
+      - name: P2 — integrite du registre de chiffres
+        run: python outils/portes/registre_chiffres.py --registre-seul
+
+      # DETTE : 340 valeurs en dur dans article/manuscrit.md au 12/09/2026.
+      # Mode avertissement jusqu'a la migration ; passer a --mode bloquant ensuite.
+      - name: P2 — chiffres en dur (avertissement, migration en cours)
+        run: python outils/portes/registre_chiffres.py --depuis "${{ steps.base.outputs.ref }}" --mode avertissement
+
+      - name: P3 — formulations INTERDITES hors du depot
+        run: python outils/portes/interdits.py
+
+      # DETTE : aucun des 321 rapports de resultats/ ne porte l'en-tete A2 au
+      # 12/09/2026. Bloquant sur les fichiers nouveaux ou modifies seulement.
+      - name: P4 — en-tete de statut sur les fichiers touches
+        run: python outils/portes/entetes.py --depuis "${{ steps.base.outputs.ref }}"
+
+      - name: P4 — retractation dans le commit qui invalide (G3.1)
+        run: python outils/portes/entetes.py --retractation --depuis "${{ steps.base.outputs.ref }}"
+
+      - name: P5 — renvois §N.M resolus
+        run: python outils/portes/renvois.py --depuis "${{ steps.base.outputs.ref }}"
+
+      # DETTE : 61 preenregistrements sans recu .ots, et le binaire `ots` n'est pas
+      # installe (volet verification cryptographique NON OPERATIONNEL).
+      - name: P6 — etat d'OpenTimestamps
+        run: python outils/portes/horodatage.py --etat
+
+      - name: P6 — recu .ots des preenregistrements touches
+        run: python outils/portes/horodatage.py --depuis "${{ steps.base.outputs.ref }}"

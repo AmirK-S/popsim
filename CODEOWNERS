@@ -1,0 +1,34 @@
+# CODEOWNERS — Methode v2 §1.1
+#
+# « Le manuscrit, la source de verite et le registre ne sont modifies que par un
+#   agent a la fois, en serie. »  (v2 §1.1, fonde sur le fait 5 et v1 §2.2 :
+#   9 commits, plusieurs auteurs simultanes)
+#
+# CE FICHIER NE DEVIENT OPPOSABLE QUE SI DEUX REGLAGES GITHUB SONT POSES A LA MAIN,
+# hors de portee d'un agent (sas humain, v2 §1.5) :
+#   1. protection de branche sur `master` : « Require review from Code Owners » ;
+#   2. « Require branches to be up to date before merging » ou une merge queue,
+#      pour que la CI passe sur l'ETAT FUSIONNE (v2 §1.1, ligne 3).
+# Sans (1), ce fichier est une declaration d'intention, pas une porte.
+#
+# Le depot est aujourd'hui un depot personnel (github.com/AmirK-S/popsim) : les
+# equipes d'organisation (@popsim/redaction) n'y existent pas. Le proprietaire est
+# donc nomme directement. Passer aux equipes le jour ou le depot rejoint une
+# organisation — c'est la forme que le §1.1 vise.
+
+# --- defaut : tout le depot ------------------------------------------------
+*                                   @AmirK-S
+
+# --- ecriture en serie, un agent a la fois (§1.1) --------------------------
+/article/manuscrit.md               @AmirK-S
+/resultats/article-synthese.md      @AmirK-S
+/resultats/registre-chiffres.csv    @AmirK-S
+/resultats/tableau-de-bord.csv      @AmirK-S
+
+# --- le socle se modifie sous revue, jamais par l'agent qu'il contraint ----
+/outils/portes/                     @AmirK-S
+/tests/portes/                      @AmirK-S
+/gabarits/                          @AmirK-S
+/.github/workflows/                 @AmirK-S
+/CODEOWNERS                         @AmirK-S
+/METHODE.md                         @AmirK-S
