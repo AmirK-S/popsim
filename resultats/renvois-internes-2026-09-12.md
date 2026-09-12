@@ -123,7 +123,7 @@ l'intérieur d'une pagination qui ne bouge pas.
 
 ## 6. Solde net en mots
 
-Corps du manuscrit (Résumé à la fin de §7.5, avant « Ethics Considerations ») :
+Corps du manuscrit (Résumé à la fin de §7.4, avant « Ethics Considerations ») :
 - avant : 11 577 mots
 - après : 11 503 mots
 - **solde net : −74 mots** (aucune phrase raccourcie sur le fond ; uniquement les 50 chemins de
