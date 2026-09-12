@@ -227,13 +227,17 @@ les marges de groupe publiées. **Cinquièmement**, le couplage qualité-fuite l
 distinguer d'un effet de qualité globale sans empreinte individuelle (ci-dessus).
 
 À cela s'ajoute une observation transversale, non comptée parmi les cinq apports : des pipelines
-réels se placent très différemment sur ces mesures selon leur soin de fabrication. Nos propres
+réels se placent très différemment sur ces mesures selon la fidélité qu'ils atteignent. Nos propres
 jumeaux, produits en un seul appel à des modèles bon marché à partir d'un profil brut,
 n'identifient presque personne (0 % à 0,83 %, mémorisation écartée par un contrôle verbatim,
 `c7-gen-resultats.md`), quand des agents Stanford construits à partir d'un entretien seul, sans
 aucune réponse d'enquête, en identifient 44,7 % sur 1 052, contamination par recopie exclue par un
 test de symétrie (`c7-stanford-provenance-resultats.md`). Le risque documenté n'est donc pas une
-propriété générique de « donner un profil à un LLM » : il dépend de la recette.
+propriété générique de « donner un profil à un LLM » : nos 7 jumeaux régénérés, testés
+spécifiquement sur ce point, atteignent une fidélité (0,05–0,18) de l'ordre des prédicteurs
+statistiques naïfs et tombent, sans exception, dans l'intervalle de prédiction de la courbe
+fidélité-fuite (`c7-courbe-gen-resultats.md`) : ce n'est pas la recette de fabrication qui décide
+de la fuite, c'est le niveau de fidélité qu'elle permet d'atteindre.
 
 ## 7. Défenses
 
