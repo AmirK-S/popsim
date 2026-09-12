@@ -97,7 +97,8 @@ préenregistrements selon le périmètre de comptage (§2.3), dont 35 pour le se
    ces huit cas le document périmé était lui-même un rapport d'audit.
 2. *L'orchestrateur ne voit que des conclusions.* Le coût de la journée lui a été annoncé
    « 0,32 $ » puis « 0,55 $ » alors qu'il s'agissait d'une seule ligne de dépense ; le total réel
-   est d'environ 10,51 USD (`cout-api-2026-09-12.md` §2, repris par `autopsie` §8.1). Une
+   est d'environ 10,51 USD (`cout-api-2026-09-12.md` §2, repris par
+   `autopsie-methode-2026-09-12.md` §8.1). Une
    conclusion courte est une compression, et une compression perd ce qu'elle ne sait pas être
    important.
 3. *L'agent ne peut pas être joint pendant son travail.* Voir §2.2.
@@ -485,9 +486,40 @@ documents faux étaient publics sur GitHub.
 **Comment on vérifie.** `git show --numstat` sur le commit de rétractation : une rétractation
 correcte n'a que des insertions.
 
-**Verdict : souhaitée.** La rétractation est une action volontaire que quelqu'un doit penser à
-faire, dans un commit séparé, plusieurs heures après. La porte G3.1 (hook `pre-commit` imposant
-l'en-tête dans le commit qui invalide) n'existe pas.
+**Le marqueur de rétractation (12/09/2026).** Un rapport qui en invalide un autre **le déclare
+explicitement**, par une ligne entière, à la colonne 0, dans le corps du rapport qui invalide :
+
+    RETRACTE: resultats/<fichier>.md
+    INVALIDE: resultats/<fichier>.md      (synonyme strict)
+
+Rien d'autre sur la ligne, un seul fichier, chemin complet, mot-clé en capitales. La porte P4
+(`outils/portes/entetes.py --retractation`) ne reconnaît **que** cette forme, et exige alors que
+le fichier nommé reçoive `retracte_par:`/`fait_foi:` **dans le même commit** — le toucher sans
+poser l'en-tête ne suffit pas. Un marqueur mal formé, ou nommant un fichier inexistant, fait
+échouer la porte : une faute de frappe ne doit pas désarmer la règle en silence. Forme complète
+dans `gabarits/entete.md` ; pour citer le marqueur sans le déclencher, l'indenter ou l'encadrer
+de backticks.
+
+**Pourquoi une déclaration et non une détection.** La porte a d'abord *deviné* l'invalidation
+dans la prose — un mot d'invalidation et un nom de fichier à proximité. En une journée, quatre
+faux positifs, quatre PR bloquées à tort : un renvoi `§N` attribué au mauvais fichier ; un
+identifiant de registre CSV pris pour une déclaration ; un mot et un nom de fichier distants de
+360 caractères dans le même paragraphe ; et, le plus net, la phrase « **ils ne sont pas
+invalidés** », lue comme une invalidation faute de savoir lire une négation. Les trois premiers
+ont été corrigés par raffinements successifs ; le quatrième montre que le raffinement ne suffira
+jamais, parce que tout document qui *parle* de rétractation déclenche une porte qui devine.
+
+**Ce que ça coûte, et c'est le vrai arbitrage.** La porte ne voit plus rien d'une invalidation
+écrite en prose sans marqueur : ce faux négatif est silencieux, et la règle n'est opposable qu'à
+qui pose le marqueur. On échange une détection large et bruyante contre une détection étroite et
+fiable — le pari étant qu'une porte qui crie à tort quatre fois par jour finit désarmée, donc
+qu'elle ne protège déjà plus rien. `--indice-prose` rejoue l'ancien filet large en **notes non
+bloquantes**, seul rattrapage possible de ce faux négatif, à l'usage d'un relecteur humain.
+
+**Verdict : opposable pour la moitié déclarée, souhaitée pour l'autre.** Poser le marqueur reste
+une action volontaire — ça, rien ne le force, et c'est le trou qui subsiste. Mais une fois le
+marqueur posé, la rétractation dans le même commit n'est plus négociable : la porte P4 tourne en
+CI sur chaque PR, et ses cas d'échec ont été vus en rouge (`tests/portes/test_p4_entetes.py`).
 
 ### 2.8 Traçabilité publique
 
@@ -629,7 +661,7 @@ pas interdite ».
 | **G0.5** | tout contrôle est montré en train d'échouer | **écrit, et appliqué pour la première fois 21 minutes après l'autopsie** — voir ci-dessous |
 | G1.1-G1.6 | registre de chiffres, un intervalle par grandeur, rejeu depuis un clone nu, interdits grep-és, renvois résolus | **aucun n'existe** : ni `resultats/registre-chiffres.csv`, ni `analyses/verifie_chiffres.py` |
 | G2.1-G2.5 | les cinq contrôles avant envoi d'un courriel | **pratiqués une fois à la main** (`aa97d1f`, dont G2.4 : « Lettres : signature alignee sur l'adresse d'envoi reelle », `8d43f1c` 17:55) ; aucun script |
-| G3.1-G3.4 | rétractation dans le commit qui invalide ; verrou sur le livrable ; durée déclarée de tout script long ; aucune baseline en paramètre | G3.4 appliqué dans un module ; G3.1, G3.2, G3.3 **absents** (`reproductibilite/USAGE.md` ne contient aucune durée) |
+| G3.1-G3.4 | rétractation dans le commit qui invalide ; verrou sur le livrable ; durée déclarée de tout script long ; aucune baseline en paramètre | G3.4 appliqué dans un module ; **G3.1 câblée** (porte P4 `--retractation`, sur déclaration par marqueur — §2.7) ; G3.2, G3.3 **absents** (`reproductibilite/USAGE.md` ne contient aucune durée) |
 
 **Le cas frais de G0.5, et il est daté à la minute.** L'autopsie est commise à 19:08 (`c012828`).
 À 19:29, `af2384f` applique sa porte la plus importante à un objet qui n'a rien à voir avec C7 —
@@ -747,13 +779,18 @@ C'est la section que je considère comme la plus utile de ce document, et elle e
 6. `analyses/verifier_paquet_public.py` — refus d'archiver `data/`, traces, ledger, `.env`.
 7. L'ordre des commits (`git log --diff-filter=A`) et l'état de poussée
    (`git log origin/master..master`) : des faits publics, non négociables.
+8. G3.1 — porte P4 `--retractation` : **une fois le marqueur `RETRACTE:` posé**, le commit qui
+   ne retracte pas le rapport visé échoue en CI. Opposable à la déclaration, pas au silence :
+   une invalidation écrite en prose sans marqueur reste invisible (§2.7).
 
 **Souhaité — rien n'empêche de ne pas le faire :** le respect du périmètre d'écriture d'un agent ;
 la propriété exclusive d'un livrable ; l'appel du contrôle d'interprétabilité avant un appel
 payant ; la revue adverse d'un résultat favorable ; le recalcul plutôt que la relecture ; la
-cécité de la seconde passe ; l'unicité de la source de vérité ; la pose du bandeau de
-rétractation ; la qualité du corps de commit ; le rejeu depuis un clone nu ; seize des vingt
-contrôles du protocole corrigé.
+cécité de la seconde passe ; l'unicité de la source de vérité ; **la pose du marqueur de
+rétractation** (et donc, par ricochet, celle du bandeau) ; la qualité du corps de commit ; le
+rejeu depuis un clone nu ; quinze des vingt contrôles du protocole corrigé — G3.1 quitte cette
+colonne pour moitié seulement : son déclenchement reste volontaire, ses conséquences ne le sont
+plus (§2.7).
 
 **Le fait qui doit gouverner la lecture de ce tableau.** L'autopsie l'établit et je n'y ajoute
 rien : les règles nommées et grep-ables ont tenu (les 32 interdits de `article-synthese.md` :
@@ -788,7 +825,8 @@ fabriquer une borne qui n'existe nulle part.
 **Elle ne protège pas contre l'écriture concurrente dans un livrable**, parce que la concurrence
 vit dans l'arbre de travail, où git ne la voit pas.
 
-**Elle ne remplace pas une réplication externe.** `revue-hostile-programme-2026-09-11.md` §8 le
+**Elle ne remplace pas une réplication externe.** `revue-hostile-programme-2026-09-11.md`
+(« Faiblesses majeures », point 8 — ce rapport n'a pas de sections numérotées) le
 dit contre son propre camp : « Les « revues adverses/indépendantes » sont produites par **le même
 dispositif d'agents** ; **elles ne valent pas réplication externe.** » Toute la construction de
 crédibilité repose sur des agents du même modèle ou de modèles voisins, lisant le même dépôt.
