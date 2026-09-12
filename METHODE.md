@@ -97,7 +97,8 @@ préenregistrements selon le périmètre de comptage (§2.3), dont 35 pour le se
    ces huit cas le document périmé était lui-même un rapport d'audit.
 2. *L'orchestrateur ne voit que des conclusions.* Le coût de la journée lui a été annoncé
    « 0,32 $ » puis « 0,55 $ » alors qu'il s'agissait d'une seule ligne de dépense ; le total réel
-   est d'environ 10,51 USD (`cout-api-2026-09-12.md` §2, repris par `autopsie` §8.1). Une
+   est d'environ 10,51 USD (`cout-api-2026-09-12.md` §2, repris par
+   `autopsie-methode-2026-09-12.md` §8.1). Une
    conclusion courte est une compression, et une compression perd ce qu'elle ne sait pas être
    important.
 3. *L'agent ne peut pas être joint pendant son travail.* Voir §2.2.
@@ -824,7 +825,8 @@ fabriquer une borne qui n'existe nulle part.
 **Elle ne protège pas contre l'écriture concurrente dans un livrable**, parce que la concurrence
 vit dans l'arbre de travail, où git ne la voit pas.
 
-**Elle ne remplace pas une réplication externe.** `revue-hostile-programme-2026-09-11.md` §8 le
+**Elle ne remplace pas une réplication externe.** `revue-hostile-programme-2026-09-11.md`
+(« Faiblesses majeures », point 8 — ce rapport n'a pas de sections numérotées) le
 dit contre son propre camp : « Les « revues adverses/indépendantes » sont produites par **le même
 dispositif d'agents** ; **elles ne valent pas réplication externe.** » Toute la construction de
 crédibilité repose sur des agents du même modèle ou de modèles voisins, lisant le même dépôt.
