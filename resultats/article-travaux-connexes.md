@@ -210,11 +210,14 @@ ouvert, avec leur plafond humain (retest à 81,6 % sur Twin, 96,8 % sur Stanford
 fausses accusations tenable de 1 %, le meilleur jumeau retrouve la bonne personne 3,04 % du temps
 sur Twin et 20,39 % sur Stanford, contre environ 0 % pour les mêmes repères statistiques, loin sous
 le plafond humain (54,5 % / 90,7 %) mais loin d'être nul (`c7-monde-ouvert-resultats.md`).
-**Deuxièmement**, un canal de fuite nouveau entre jeux de jumeaux : deux jumeaux de la même
-personne, produits par des pipelines différents, se désignent mutuellement sans qu'un attaquant
-détienne la moindre réponse humaine, dès qu'ils partagent assez d'items (36,4 % à 60 items communs
-contre 0,06 % de contrôle, `c7-transfert-resultats.md`) — un canal sans antériorité directe
-(section 1). **Troisièmement**, une mesure en bits transportable d'un jeu à l'autre alors que le
+**Deuxièmement**, un canal de fuite nouveau entre jeux de jumeaux, **désormais répliqué sur deux
+jeux indépendants** : deux jumeaux de la même personne, produits par des pipelines différents, se
+désignent mutuellement sans qu'un attaquant détienne la moindre réponse humaine, dès qu'ils
+partagent assez d'items (Twin : 36,4 % à 60 items communs contre 0,06 % de contrôle,
+`c7-transfert-resultats.md` ; Stanford : 11,9-13,0 % à 177 items communs contre au plus 0,31 % de
+contrôle, `c7-transfert-stanford-resultats.md`) — un canal sans antériorité directe (section 1,
+aucun précédent trouvé, et Anonymeter mesure une autre définition de la linkability), dont la
+réplication sur un second jeu, construit différemment, renforce la revendication de nouveauté. **Troisièmement**, une mesure en bits transportable d'un jeu à l'autre alors que le
 taux brut ne l'est pas (facteur 1,34 contre un facteur 3,2 sur le top-1, `c7-bits-resultats.md`),
 cadrée comme un instrument dérivé de la min-entropie de Rényi (section 2). **Quatrièmement**, une
 défense (D4, section 7), variante chiffrée d'un mécanisme ancien, qui ramène le top-1 de 20,68 % à
