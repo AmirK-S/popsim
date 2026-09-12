@@ -1,5 +1,14 @@
 # Second papier — cadrage, lieu, protocole de recensement, conflit d'intérêts (12 septembre 2026)
 
+statut: courant
+mandat: cadrer un éventuel second article sur l'auditabilité des jeux appariés, et dire franchement s'il mérite d'exister
+agent: Opus 5, Anthropic
+ecriture: resultats/papier2-cadrage-2026-09-12.md
+lecture_seule: tout le reste
+interdits: appel payant sans GO, réseau, commit sur master, arrière-plan
+cecite: n'a pas exécuté le protocole de recensement (§ 3) ; ne voit que les six rapports cités ci-dessous, aucune vérification nouvelle à la source
+cout_reel_usd: 0.00
+
 Écrit à partir de `resultats/chasse-jeux-apparies-2026-09-12.md`,
 `resultats/pistes-jeux-apparies-2026-09-12.md`, `resultats/inventaire-donnees-2026-09-12.md`,
 `resultats/troisieme-jeu-2026-09-12.md`, `resultats/positionnement-vie-privee-2026-09-12.md`,
