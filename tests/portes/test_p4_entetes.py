@@ -103,6 +103,22 @@ class TestP4(CasDePorte):
             self.assertEchoue(code, sortie, "sans toucher au fichier lui-meme")
             self.assertIn("c7-nul-corrige-resultats.md", sortie)
 
+    def test_passage_mot_d_invalidation_dans_une_ligne_de_donnees(self):
+        """Une retractation se declare dans de la prose, jamais dans une ligne de
+        donnees. Cas reel du 12/09 : un identifiant de registre nomme
+        « pmm-k10-top1-ferme-contre-examen » a fait croire a la porte qu'un CSV
+        declarait un rapport invalide, et a bloque une PR a tort."""
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            csv = d / "resultats" / "registre-chiffres.csv"
+            csv.write_text(
+                "id,grandeur\n"
+                "pmm-k10-contre-examen,\"PMM k=10 ; voir c7-nul-corrige-resultats.md refute\"\n",
+                encoding="utf-8")
+            commit(d, "Registre : une grandeur de plus")
+            code, sortie = self._dans(d, ["--retractation", "--depuis", base])
+            self.assertPasse(code, sortie)
+
     def test_passage_invalidation_et_retractation_dans_le_meme_commit(self):
         with tempfile.TemporaryDirectory() as t:
             d, base = self._depot(t)
