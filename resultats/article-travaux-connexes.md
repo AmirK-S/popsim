@@ -41,6 +41,18 @@ conditionné sur une personne — qu'ils n'ont pas testé.
 modèles génératifs classiques (GAN, copules, diffusion), évaluées par des métriques de similarité
 continue. Notre objet est un vecteur de réponses catégorielles d'un LLM à un questionnaire, sans
 métrique de similarité substituable à une attaque directe par appariement.
+**Sur le vocabulaire de « linkability » (précision contre une confusion possible, pertinente pour
+A7) :** Giomi et al. définissent formellement la linkability comme le lien entre deux
+enregistrements d'un **même** jeu original, l'attaquant détenant déjà les **valeurs réelles** d'une
+partie des attributs — un cadrage différent du nôtre, où deux générations indépendantes de jumeaux
+se désignent mutuellement sans qu'aucune valeur réelle soit détenue. Sous leur définition, ils
+concluent que la linkability est le risque le plus **faible** des trois qu'ils mesurent (devant
+singling out et inference) ; notre taux de liaison inter-jumeaux (A7, 36,4 % à 60 items communs,
+contrôle à 0,06 %) contredit cette conclusion dans un régime qu'ils n'ont pas testé. Guépin,
+Krawczyk et De Cristofaro (*Synthetic is all you need*, arXiv 2307.01701) suppriment l'hypothèse
+de données auxiliaires réelles mais restent sur l'appartenance au jeu d'entraînement d'un
+générateur unique : jamais l'appariement entre deux générations indépendantes du même panel. Ce
+canal n'a donc pas d'antériorité directe.
 
 ## 2. Ré-identification de données réelles
 
@@ -64,6 +76,14 @@ statistique classique.
 (notes, déplacements, achats réels). Chez nous, l'entrée de l'attaque n'est jamais une donnée
 réelle de la cible : c'est une sortie de modèle générée à partir d'un persona, comparée aux vraies
 réponses détenues par l'attaquant.
+**Cadrage théorique de notre mesure en bits (A4), à présenter comme un instrument dérivé plutôt
+qu'une découverte :** c'est un cas de fuite en min-entropie de Rényi au sens de Smith (*On the
+Foundations of Quantitative Information Flow*, FoSSaCS 2009) — la probabilité de deviner juste en
+un seul essai, ici log2 du rapport des probabilités de bonne devinette avant/après persona —, dans
+l'esprit du surprisal employé par Eckersley (*How Unique Is Your Web Browser?*, PETS 2010
+**[référence exacte à confirmer avant dépôt]**) pour les empreintes de navigateur. Elle répond au
+même problème de transportabilité que le κ de la loi d'échelle de Rocher, Hendrickx et de Montjoye
+(*Nat. Commun.* 2025, déjà cité ci-dessus) par une autre voie.
 
 ## 3. Vie privée et LLM
 
@@ -96,6 +116,17 @@ et sans mémorisation, établi par ablation en H3 (`c7-mecanisme-resultats.md`).
 Yeom et Feldman, notre pipeline n'entraîne aucun modèle sur la population cible : la personne
 n'appartient à aucun jeu d'entraînement, et la fidélité individuelle vient du conditionnement par
 persona, pas d'un écart train/test.
+**Sur la construction de témoins (nuls) pour juger une attaque, précédent méthodologique direct
+pour notre nul de marge (A1) :** Das, Zhang et Tramèr (*Blind Baselines Beat Membership Inference
+Attacks for Foundation Models*, arXiv 2406.16201) montrent que des témoins aveugles battent
+régulièrement l'état de l'art des attaques d'inférence d'appartenance sur modèles de fondation ;
+Duan et al. (COLM 2024, arXiv 2402.07841) et un position paper (IEEE SaTML 2025, arXiv 2409.19798)
+soutiennent qu'une attaque ne prouve rien tant que l'hypothèse nulle n'est pas correctement
+échantillonnée. Notre nul de marge (`c7-disjoint-resultats.md`) répond au même impératif pour le
+couplage qualité-fuite (A1, section 6) : nous construisons le témoin qui manquait — 100
+prédicteurs sans aucune empreinte individuelle — et il absorbe notre propre effet (rho nul 0,984
+contre 0,969 observé). C'est le résultat que cette littérature nous invite à produire, pas un aveu
+de faiblesse.
 
 ## 4. Simulation de répondants et jumeaux
 
@@ -139,37 +170,67 @@ synthétique sans garantie formelle conserve fidélité et utilité sans atteint
 privée. Un préprint 2026 (arXiv 2605.06835, https://arxiv.org/abs/2605.06835) observe au contraire
 un découplage où le risque croît quand la qualité sature. Notre réponse : les trois mesurent une
 fidélité **agrégée** (distributionnelle ou d'utilité aval), jamais la correspondance individuelle à
-la bonne personne, qui est précisément notre axe (`c7-compromis-resultats.md`). Une analyse de
-robustesse par retrait de famille de prédicteurs, destinée à écarter l'artefact d'un axe qui ne
-tiendrait que par construction de l'échantillon des 12 points, est en cours.
+la bonne personne (`c7-compromis-resultats.md`), et aucun ne teste si le couplage qu'ils observent
+(ou son absence) résiste à un nul construit sans aucune empreinte individuelle. Notre contribution
+sur ce terrain n'est donc pas la preuve d'un axe unique, mais cinq mesures indépendantes : des
+taux de liaison mesurés sur deux jeux et en monde ouvert, un canal de fuite nouveau entre jeux de
+jumeaux, une mesure en bits transportable, une défense chiffrée, et un couplage qualité-fuite
+documenté **mais non distinguable d'un effet de qualité globale**. Sur ce dernier point, l'analyse
+de robustesse annoncée — un test préenregistré sur items disjoints, destiné à écarter l'artefact
+d'un axe qui ne tiendrait que par construction de l'échantillon des 12 points — est faite : la
+corrélation résiste à la disjonction (rho 0,969, IC [0,937 ; 0,993]), mais un nul de marge sans
+aucune empreinte individuelle atteint un rho aussi élevé (0,984 en moyenne, 95e centile 1,000), si
+bien qu'elle ne réfute pas l'hypothèse d'un simple effet de qualité globale
+(`c7-disjoint-resultats.md`). **Réfuté par le test d'auto-réfutation préenregistré du 12/09**
+(prédiction principale).
 
 ## 6. Notre position
 
 La thèse n'est plus « les jumeaux LLM fuient, contrairement aux prédicteurs statistiques de même
-exactitude ». Sur 12 prédicteurs confondus — 8 jumeaux LLM et 4 repères statistiques
-(Demographics Only, B1, B2, PMM k=10) —, la correspondance individuelle à la bonne personne et le
-taux de ré-identification suivent le même ordre presque parfaitement : Spearman = 0,958, IC 95 %
-[0,930 ; 0,993] (`c7-compromis-resultats.md`). Le contraste à exactitude égale reste vrai (20,7 %
-contre 0,23 % pour PMM, `c7-contre-examen-2026-09-11.md` §1) mais l'exactitude brute n'est qu'un
-proxy bruité (r = 0,72) de cet axe ; la fidélité individuelle en est le bon prédicteur. **Aucun
-jumeau individuellement fidèle n'est non reliable à sa personne : fidélité et identifiabilité ne
-font qu'un, et nous le quantifions.**
+exactitude ». Elle n'est plus non plus « la fidélité d'un jumeau à sa personne et son
+identifiabilité sont un seul et même axe » : sur 12 prédicteurs confondus — 8 jumeaux LLM et 4
+repères statistiques (Demographics Only, B1, B2, PMM k=10) —, la qualité globale d'imitation et le
+taux de ré-identification suivent le même ordre presque parfaitement, y compris quand les deux
+sont mesurés sur des items disjoints : Spearman = 0,969, IC 95 % [0,937 ; 0,993], test
+préenregistré (`c7-disjoint-resultats.md`). Le contraste à exactitude égale reste vrai (20,7 %
+contre 0,23 % pour PMM, `c7-contre-examen-2026-09-11.md` §1). **Mais** un nul de marge — 100
+prédicteurs artificiels n'ayant qu'une marge d'exactitude conditionnelle variable par personne,
+aucune empreinte individuelle — atteint un rho aussi élevé (0,984 en moyenne, 95e centile 1,000) :
+l'observé (0,969) ne le dépasse pas. **Les jumeaux publiés sont reliables à leurs répondants, à des
+taux que nous mesurons en monde fermé et en monde ouvert ; la qualité d'imitation et la fuite
+montent ensemble ; mais nous ne pouvons pas montrer que ce couplage traduit une empreinte
+individuelle spécifique, puisqu'un axe de qualité globale sans empreinte le reproduit déjà.**
+**Réfuté par le test d'auto-réfutation préenregistré du 12/09** (prédiction principale) — dans
+l'esprit des témoins aveugles récemment exigés pour les attaques d'inférence sur modèles de
+fondation (Das, Zhang, Tramèr, arXiv 2406.16201 ; section 3), notre nul de marge est le témoin qui
+manquait à ce couplage, pas un aveu de faiblesse.
 
-Trois apports en découlent. **Premièrement**, la mesure de cet axe unique, avec son plafond humain
-(retest à 81,6 % sur Twin, 96,8 % sur Stanford) et sa version réaliste en monde ouvert : à un taux
-de fausses accusations tenable de 1 %, le meilleur jumeau retrouve la bonne personne 3,04 % du
-temps sur Twin et 20,39 % sur Stanford, contre environ 0 % pour les mêmes repères statistiques,
-loin sous le plafond humain (54,5 % / 90,7 %) mais loin d'être nul (`c7-monde-ouvert-resultats.md`).
-**Deuxièmement**, la démonstration que des pipelines réels se placent très différemment sur cet
-axe selon leur soin de fabrication : nos propres jumeaux, produits en un seul appel à des modèles
-bon marché à partir d'un profil brut, n'identifient presque personne (0 % à 0,83 %, mémorisation
-écartée par un contrôle verbatim, `c7-gen-resultats.md`), quand des agents Stanford construits à
-partir d'un entretien seul, sans aucune réponse d'enquête, en identifient 44,7 % sur 1 052,
-contamination par recopie exclue par un test de symétrie (`c7-stanford-provenance-resultats.md`).
-Le risque documenté n'est donc pas une propriété générique de « donner un profil à un LLM » : il
-dépend de la recette. **Troisièmement**, une défense (D4, section 7) qui casse spécifiquement la
-fidélité individuelle — donc, sur cet axe, l'identifiabilité — tout en préservant exactement les
-marges de groupe publiées.
+Cinq apports en découlent. **Premièrement**, des taux de liaison mesurés sur deux jeux et en monde
+ouvert, avec leur plafond humain (retest à 81,6 % sur Twin, 96,8 % sur Stanford) : à un taux de
+fausses accusations tenable de 1 %, le meilleur jumeau retrouve la bonne personne 3,04 % du temps
+sur Twin et 20,39 % sur Stanford, contre environ 0 % pour les mêmes repères statistiques, loin sous
+le plafond humain (54,5 % / 90,7 %) mais loin d'être nul (`c7-monde-ouvert-resultats.md`).
+**Deuxièmement**, un canal de fuite nouveau entre jeux de jumeaux : deux jumeaux de la même
+personne, produits par des pipelines différents, se désignent mutuellement sans qu'un attaquant
+détienne la moindre réponse humaine, dès qu'ils partagent assez d'items (36,4 % à 60 items communs
+contre 0,06 % de contrôle, `c7-transfert-resultats.md`) — un canal sans antériorité directe
+(section 1). **Troisièmement**, une mesure en bits transportable d'un jeu à l'autre alors que le
+taux brut ne l'est pas (facteur 1,34 contre un facteur 3,2 sur le top-1, `c7-bits-resultats.md`),
+cadrée comme un instrument dérivé de la min-entropie de Rényi (section 2). **Quatrièmement**, une
+défense (D4, section 7), variante chiffrée d'un mécanisme ancien, qui ramène le top-1 de 20,68 % à
+0,13 % pour un coût mesuré de 4,4 points sur les corrélations entre items, en préservant exactement
+les marges de groupe publiées. **Cinquièmement**, le couplage qualité-fuite lui-même, documenté sur
+12 méthodes hétérogènes et robuste à la disjonction des items, mais que nous ne pouvons pas
+distinguer d'un effet de qualité globale sans empreinte individuelle (ci-dessus).
+
+À cela s'ajoute une observation transversale, non comptée parmi les cinq apports : des pipelines
+réels se placent très différemment sur ces mesures selon leur soin de fabrication. Nos propres
+jumeaux, produits en un seul appel à des modèles bon marché à partir d'un profil brut,
+n'identifient presque personne (0 % à 0,83 %, mémorisation écartée par un contrôle verbatim,
+`c7-gen-resultats.md`), quand des agents Stanford construits à partir d'un entretien seul, sans
+aucune réponse d'enquête, en identifient 44,7 % sur 1 052, contamination par recopie exclue par un
+test de symétrie (`c7-stanford-provenance-resultats.md`). Le risque documenté n'est donc pas une
+propriété générique de « donner un profil à un LLM » : il dépend de la recette.
 
 ## 7. Défenses
 
@@ -195,7 +256,7 @@ est inférieur à l'écart déjà présent entre jumeau non protégé et humains
 
 | Objection | Parade | Expérience à l'appui |
 |---|---|---|
-| « Tautologie : bien sûr qu'un modèle fidèle à l'individu identifie. » | Rien ne prédisait ni la forme ni la force de cette relation avant de la mesurer sur 12 méthodes hétérogènes ; à exactitude marginale égale, deux prédicteurs peuvent fuir à deux ordres de grandeur d'écart (20,7 % contre 0,23 %) ; la relation tient à travers des familles de méthodes qui n'ont rien en commun (jumeaux LLM, imputation par plus proche voisin, régression, agents construits sur entretien seul). | Spearman 0,958 [0,930 ; 0,993] sur 12 prédicteurs (`c7-compromis-resultats.md`) ; réplication inter-recettes (`c7-gen-resultats.md`, `c7-stanford-provenance-resultats.md`). |
+| « Tautologie : bien sûr qu'un modèle fidèle à l'individu identifie. » | Objection non écartée sur le fond. Ce qui tient : rien ne prédisait ni la forme ni la force de cette relation avant de la mesurer sur 12 méthodes hétérogènes, et elle survit à la disjonction complète des items utilisés pour chaque axe ; à exactitude marginale égale, deux prédicteurs peuvent fuir à deux ordres de grandeur d'écart (20,7 % contre 0,23 %, A2). Ce qui ne tient plus : un nul de marge sans aucune empreinte individuelle — 100 prédicteurs n'ayant qu'une marge d'exactitude variable par personne — reproduit déjà la force du couplage observé (rho nul 0,984 en moyenne, 95e centile 1,000, contre 0,969 observé). Le couplage qualité-fuite est réel et n'est pas un artefact de calcul recyclé, mais il ne démontre aucune spécificité individuelle : un simple axe de qualité globale suffit, dans l'esprit des témoins aveugles récemment exigés pour les attaques d'inférence (Das, Zhang, Tramèr, arXiv 2406.16201). Test préenregistré, prédiction principale réfutée. | Spearman 0,969 [0,937 ; 0,993] sur items disjoints, nul de marge 0,984 (`c7-disjoint-resultats.md`) ; réplication inter-recettes (`c7-gen-resultats.md`, `c7-stanford-provenance-resultats.md`). **Réfuté par le test d'auto-réfutation préenregistré du 12/09.** |
 | « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
 | « Le persona contient déjà les réponses de la vague cible : fuite triviale. » | Audit de provenance : 0 colonne et 0 QID de vague 4 dans le contexte ; symétrie 37,7 % vs 37,9 % ; canal de randomisation écarté. | `c7-contre-examen-2026-09-11.md` §2 ; ablation H3 (`c7-mecanisme-resultats.md`). |
 | « Ce n'est pas une vraie ré-identification : il faut déjà tenir les réponses réelles de la cible. » | Assumé explicitement : c'est un résultat de linkability (au sens CAP/TCAP et RGPD/G29), pas une identification à partir d'informations publiques ; scénario de menace = détenteur de panel publiant des jumeaux sans clé. | Modèle de menace, `c7-contre-examen-2026-09-11.md` §4 ; brouillon de divulgation responsable. |
