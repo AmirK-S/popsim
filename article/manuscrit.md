@@ -322,7 +322,7 @@ All intervals are 95 % bootstrap confidence intervals unless stated.
 
 ### 4.4 Preregistration and self-refutation
 
-Attack, defense, mechanism, Stanford replication and the disjoint-item test were each
+Attack, defense, mechanism, Park et al. archive replication and the disjoint-item test were each
 preregistered before computation. We report every refuted prediction in Table 3. The
 preregistration plans are not yet third-party timestamped; see `[OPEN ITEMS]`.
 
@@ -428,8 +428,9 @@ the same FPR is 54.5 % and 90.7 % — so the twins reach 5.6 % and 22.5 % of hum
 quietly dropping the threshold.
 
 > **Figure 1 — Open-world ROC curves (`article/figures/fig1-monde-ouvert.png`).**
-> Two stacked panels, one per dataset (Twin-2K-500 above, the Park archive below — the
-> delivered figure titles the lower panel "Stanford"). Abscissa: false-accusation rate (FPR) on
+> Two stacked panels, one per dataset (Twin-2K-500 above, titled "Twin-2K-500 (2,058
+> respondents)"; the Park archive below, titled "Park et al. (1,052 agents)"). Abscissa:
+> false-accusation rate (FPR) on
 > a **log scale**, spanning roughly 4·10⁻⁴ to 1. Ordinate: true-detection rate (TPR), 0 to 1.
 > In each panel: the best twin/agent of that dataset (filled circles, solid line), the
 > statistical comparators (Demographics Only, PMM k=10) flattened near zero, and the human
@@ -847,16 +848,14 @@ responsible investigator, not on any agent.
 6. **Bibliographic verification 2 — ZAK-MIA (PoPETs 2024).** Content never verified; extraction
    failed during the prior-art scan. It is not currently cited; confirm it does not constitute
    closer prior art to §5.4 before submission.
-7. **Figures delivered; two reconciliations outstanding.** Both
+7. **Figures delivered; one reconciliation outstanding.** Both
    `article/figures/fig1-monde-ouvert.png` and `article/figures/fig2-couplage.png` now exist,
    and the captions in §5.3 and §5.9 have been rewritten to describe what was actually delivered
    (Figure 1: two stacked panels on a log-scale FPR axis; Figure 2: linear axes with the
-   marginal null shown as an inset rho band rather than superimposed on the scatter). Two items
-   remain. (a) **Naming mismatch**: Figure 1's lower panel is titled "Stanford (opinion
-   surveys)" while the manuscript consistently says "Park et al. archive" — a hostile reviewer
-   will notice. Relabel the figure (not this agent's file) or align the manuscript. (b) Figure 2
-   carries no per-point error bars and no chance line; if the 95 % bootstrap intervals reported
-   throughout §5 are wanted on the figure, `analyses/c7_compromis_figure.py` must add them.
+   marginal null shown as an inset rho band rather than superimposed on the scatter). One item
+   remains: Figure 2 carries no per-point error bars and no chance line; if the 95 % bootstrap
+   intervals reported throughout §5 are wanted on the figure, `analyses/c7_compromis_figure.py`
+   must add them.
 8. **[decision] Recipe question open for lack of an API key.** The OpenRouter key is blocked
    (HTTP 403 "Key limit exceeded", cumulative cap ~0.95 USD reached 12 September). Without a
    top-up, the "per-item call" arm stays at n = 10 and the second reproducibility pass on
