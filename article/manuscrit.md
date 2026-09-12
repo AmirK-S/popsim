@@ -468,7 +468,7 @@ not the third decimal.
 ### 5.2 Closed-world rates and the comparator question
 
 At comparable marginal accuracy, no non-LLM predictor we tested exceeds 0.3 % top-1 where the
-twin reaches 20.7 % [19.1 ; 22.5] under the naive attack, and **23.23 % [21.5 ; 25.0]** under the
+twin reaches 20.7 % [19.0 ; 22.4] under the naive attack, and **23.23 % [21.5 ; 25.0]** under the
 strong one [c7-attaquant-fort-resultats.md] — **in a closed world, with the target always present
 in a pool of 2,058**. The comparator figures below are naive-attack rates, which makes the
 contrast conservative. JSON Persona GPT4.1 attains that rate at accuracy 0.590. The comparators, at
