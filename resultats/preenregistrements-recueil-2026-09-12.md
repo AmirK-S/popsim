@@ -5,11 +5,21 @@
 - **Projet** : popsim — article C7 (« le jumeau ne prédit pas, mais retrouve-t-il la personne ? »), défense contre le reproche de dragage de données (p-hacking).
 - **Auteur** : Amir Kellou Sidhoum (auteur de tous les commits git cités ci-dessous ; assistance Claude Sonnet 5 / Claude Opus 5 co-autrice de plusieurs commits, voir les messages de commit).
 - **Date de rédaction de ce recueil** : 12 septembre 2026.
-- **Condensé du dépôt courant** (`git rev-parse HEAD`, mis à jour lors de la correction du
-  12 septembre 2026 en fin de matinée — voir §2.3, §3.3 et §4) :
-  `5c4cef48d40db4046cbb51b1bd02d1fea239573e` (le condensé initial de ce recueil,
-  `23eec0072a08569837a7cf10470d7ffc5ba1f712`, en est un ancêtre)
-- **Nombre de préenregistrements recensés** : **58** fichiers `*-preenregistrement.md` dans `resultats/` (hors `manifeste-preenregistrements.txt`, qui est un document récapitulatif antérieur, partiel, et non lui-même un préenregistrement).
+- **Condensé du dépôt courant** (`git rev-parse HEAD`, mis à jour lors de la troisième correction
+  du 12 septembre 2026, soir — voir §2.4, §3.3 et §4) :
+  `8df4e685925204416baa84245b8c8e6734695f84` (« T2 requalifiée en non testable : le compteur
+  tombe à 14 »). Les condensés précédents, `ee73f708456033d4f919206fa20ac47b348cb093` — condensé
+  de la seconde correction —, `5c4cef48d40db4046cbb51b1bd02d1fea239573e` — condensé de la
+  première correction, fin de matinée — et `23eec0072a08569837a7cf10470d7ffc5ba1f712` — condensé
+  initial —, en sont tous des ancêtres (`git merge-base --is-ancestor` vérifié pour chacun contre
+  le nouveau HEAD). Entre le condensé précédent et celui-ci, un arbitrage
+  (`resultats/c7-reconciliation-facteurs-2026-09-12.md`, commit `5f6da6e`) a établi que les
+  jumeaux des deux bras payés de la nuit — le témoin « deux organisations » et le plan factoriel —
+  retrouvent la bonne personne au taux du hasard, et qu'un contrôle de validité gratuit
+  (`analyses/c7_controle_interpretabilite.py`, commit `28405b2`) qui aurait dû être exigé avant
+  ces deux appels payés a été écrit et testé après coup. Voir §2.4 et §3.3, révisés en
+  conséquence.
+- **Nombre de préenregistrements recensés** : **59** fichiers `*-preenregistrement.md` dans `resultats/` (hors `manifeste-preenregistrements.txt`, qui est un document récapitulatif antérieur, partiel, et non lui-même un préenregistrement) — 58 lors de la première rédaction, +1 (`c7-factoriel-preenregistrement.md`, §2.4 et §3.3) constaté à la seconde correction. Ce compte de fichiers ne change pas à cette troisième correction : c'est le verdict de deux d'entre eux qui est révisé, pas leur existence ni leur antériorité.
 
 Ce recueil ne modifie aucun fichier existant. Il a été écrit en lecture seule sur tout le dépôt
 à l'exception de lui-même.
@@ -21,8 +31,10 @@ Ce recueil ne modifie aucun fichier existant. Il a été écrit en lecture seule
 Le dépôt contient deux familles de préenregistrements :
 
 - **Tier 1 — le chantier C7** (réidentification par jumeau, l'article en cours de rédaction dans
-  `article/manuscrit.md` et `resultats/article-synthese.md`) : 34 fichiers, traités en détail
-  ci-dessous (§3). Inclut, à la demande explicite, les deux préenregistrements du tournoi
+  `article/manuscrit.md` et `resultats/article-synthese.md`) : 35 fichiers (34 à la première
+  rédaction, +1 avec `c7-factoriel-preenregistrement.md` constaté à cette seconde correction),
+  traités en détail ci-dessous (§3). Inclut, à la demande explicite, les deux préenregistrements
+  du tournoi
   « Twin A→B » (`tab`, `tab2`), qui appartiennent à un chantier voisin mais dont le mémo de
   l'utilisateur signale qu'ils attendent aussi un dépôt OSF.
 - **Tier 2 — autres chantiers du dépôt** (oracle des camps R1-R7, mémoire à long terme,
@@ -30,19 +42,24 @@ Le dépôt contient deux familles de préenregistrements :
   fichiers, hors périmètre de l'argument anti-dragage de « notre article » C7. Listés au §6
   avec date et empreinte, sans analyse de verdict (ce n'est pas leur article qui est déposé ici).
 
-**Avertissement sur les fichiers en cours d'écriture.** Au moment de la rédaction, git status
-signale des modifications non commises sur `resultats/article-travaux-connexes.md` et
-`resultats/positionnement-vie-privee-2026-09-12.md`, et de nombreux fichiers non suivis, dont
-`article/manuscrit.md`-adjacents. Quatre agents écrivent en parallèle dans `article/manuscrit.md`,
-`resultats/article-synthese.md`, `analyses/figures_article.py`, `resultats/divulgation-responsable-brouillon.md`,
-et les fichiers `c7-deux-organisations-*`. Ce recueil n'a pas lu le contenu courant de
-`article/manuscrit.md` ni d'`article-synthese.md` pour en tirer des conclusions (ils peuvent
-changer sous nos pieds) ; il s'appuie sur les fichiers de résultats et de correction eux-mêmes,
-et sur deux rapports de correction datés du 12/09 (§4), ainsi que sur un audit adverse et sa
-réponse concédée, également du 12/09 (§3.3). Le cas `c7-deux-organisations-*` était, au moment où
-la rédaction de ce recueil a commencé, signalé comme non stabilisé ; il ne l'est plus au moment de
-cette correction (fichier de résultats complet, incident HTTP 429 rapproché et déclaré non
-facturé), mais reste non commis dans git — voir §2.3 et §3.3.
+**Avertissement sur les fichiers en cours d'écriture.** Au moment de la rédaction initiale, git
+status signalait des modifications non commises sur `resultats/article-travaux-connexes.md` et
+`resultats/positionnement-vie-privee-2026-09-12.md`, et de nombreux fichiers non suivis. Ce
+recueil n'a pas lu le contenu courant de `article/manuscrit.md` ni d'`article-synthese.md` pour en
+tirer des conclusions (ils peuvent changer sous nos pieds — au moment de cette seconde correction,
+`article/manuscrit.md` porte encore des modifications non commises et cinq agents travaillent en
+parallèle dessus ainsi que sur `resultats/article-synthese.md`, `resultats/moonshot-2026-09-12.md`,
+`resultats/reproductibilite-chaine-2026-09-12.md`, `resultats/troisieme-jeu-2026-09-12.md` et
+`demandes/`) ; il s'appuie sur les fichiers de résultats et de correction eux-mêmes, sur trois
+rapports de correction datés du 12/09 (§4 — les deux déjà lus à la première rédaction, plus
+`resultats/audit-chiffres-2026-09-12.md`, trouvé committé et plus complet à cette seconde
+correction), ainsi que sur un audit adverse et sa réponse concédée, également du 12/09 (§3.3). Le
+cas `c7-deux-organisations-*`, signalé non stabilisé à la première rédaction puis stabilisé mais
+non commis à la première correction, est désormais **entièrement commis dans git**, préenregistrement
+et résultat, chacun dans un commit séparé et dans le bon ordre — voir §2.3 et §3.3. Un cinquième
+préenregistrement C7, `c7-factoriel-preenregistrement.md`, est apparu depuis la première
+correction ; c'est le seul cas du dossier dont l'antériorité est prouvée, et non simplement
+déclarée, par l'historique git — voir §2.4 et §3.3.
 
 ---
 
@@ -80,7 +97,7 @@ ne restitue aucun ordre interne entre les fichiers qu'il contient. Rien n'indiqu
 « antériorité prouvable par git » ne tient pas, tel quel, pour ces trois tests. C'est une faiblesse
 réelle à ne pas dissimuler au moment du dépôt.
 
-### 2.3 Mise à jour du 12/09 (fin de matinée) : trois préenregistrements commis seuls, un reste non commis du tout
+### 2.3 Mise à jour du 12/09 (fin de matinée puis correction) : quatre préenregistrements commis seuls, leurs quatre résultats désormais commis aussi
 
 Depuis la première rédaction de ce recueil, le commit `5c4cef48d40db4046cbb51b1bd02d1fea239573e`
 (12/09 11:39:23+02:00, « Preenregistrements de la nuit : horodatage separe des resultats ») a
@@ -88,48 +105,122 @@ ajouté au dépôt, **seuls et séparément de leurs fichiers de résultats** :
 
 | Préenregistrement | Commis dans | Résultat correspondant |
 |---|---|---|
-| `c7-nul-corrige-preenregistrement.md` | `5c4cef4` | `c7-nul-corrige-resultats.md` — toujours non commis (`??`) |
-| `c7-tautologie-preenregistrement.md` | `5c4cef4` | `c7-tautologie-resultats.md` — toujours non commis (`??`) |
-| `c7-temoin-prompt-preenregistrement.md` | `5c4cef4` | `c7-temoin-prompt-resultats.md` — toujours non commis (`??`) |
+| `c7-nul-corrige-preenregistrement.md` | `5c4cef4` (12/09 11:39:23+02:00) | `c7-nul-corrige-resultats.md` |
+| `c7-tautologie-preenregistrement.md` | `5c4cef4` (12/09 11:39:23+02:00) | `c7-tautologie-resultats.md` |
+| `c7-temoin-prompt-preenregistrement.md` | `5c4cef4` (12/09 11:39:23+02:00) | `c7-temoin-prompt-resultats.md` |
 
 Le message de ce commit **déclare lui-même sa limite**, et ce recueil la reprend telle quelle :
 « les fichiers de résultats correspondants existaient déjà sur le disque au moment de ce commit.
 L'ordre des commits établit donc une antériorité faible, pas une preuve. » Autrement dit : le
-texte du préenregistrement est désormais horodaté par un commit git vérifiable et poussable, mais
-comme le calcul et sa sortie existaient déjà sur le disque avant ce commit, git ne peut pas, à lui
-seul, prouver que ce texte a été écrit avant l'exécution du calcul — seulement qu'il précède,
-dans l'historique versionné, la mise en git du résultat correspondant (laquelle reste elle-même à
-faire). C'est une amélioration réelle par rapport à « aucun horodatage du tout », mais ce n'est pas
-l'équivalent des 24 paires propres du §2.1.
+texte du préenregistrement est horodaté par un commit git vérifiable et poussable, mais comme le
+calcul et sa sortie existaient déjà sur le disque avant ce commit, git ne peut pas, à lui seul,
+prouver que ce texte a été écrit avant l'exécution du calcul.
 
-**Une quatrième paire, `c7-deux-organisations`, reste entièrement non commise** (statut `??` pour
-le préenregistrement et pour le résultat) :
+**Une quatrième paire, `c7-deux-organisations`, suit le même schéma, commise un peu plus tard et
+seule** : le commit `24cc79d867b7944536651c21114c7629b9f496fc` (12/09 12:46:10+02:00,
+« Preenregistrement du temoin deux organisations ») ajoute
+`c7-deux-organisations-preenregistrement.md` seul, avec la **même limite déclarée dans son propre
+message de commit**, mot pour mot : « les fichiers de résultats existaient déjà sur le disque.
+L'ordre des commits établit une antériorité faible, pas une preuve. » (Ce point corrige la
+première correction de ce recueil, qui affirmait que cette paire n'était « pas commise » : c'était
+vrai à la première rédaction, ce ne l'était déjà plus à la première correction pour le
+préenregistrement seul, et l'inspection git — pas la simple relecture du texte — était nécessaire
+pour s'en rendre compte.)
 
-| Préenregistrement | Résultat |
-|---|---|
-| `c7-deux-organisations-preenregistrement.md` | `c7-deux-organisations-resultats.md` |
+**Mise à jour vérifiée à cette seconde correction : les quatre fichiers de résultats, restés
+`??` à la première correction, sont maintenant eux aussi commis**, tous les quatre dans le même
+commit `09b18d7e61d1af7a07b2003ccd4103fb78b37f11` (12/09 13:25:16+02:00, « Nuit du 11-12/09 :
+temoin corrige, A7 detruite, article revise ») :
 
-Pour cette paire, git ne fournit toujours **aucun horodatage**. Contrairement à ce que signalait la
-première rédaction de ce recueil, le fichier de résultats n'est plus en cours d'écriture au moment
-où cette correction est rédigée : `c7-deux-organisations-resultats.md` documente désormais un run
-complet (n = 82 sur 200 personnes prévues, arrêté par un HTTP 429 dont l'identifiant de génération
-a été rapproché et déclaré non facturé dans `c7-deux-organisations-429-rapprochement.md` ; verdict
-A7 non confirmée — détail en §3.3). Le contenu n'est donc plus un instantané à revérifier après
-stabilisation, mais **la stabilisation du contenu n'inclut pas sa mise en git** : cette paire doit
-encore être commise (idéalement en séparant, comme pour les trois précédentes, le commit du
-préenregistrement de celui du résultat) avant tout dépôt tiers.
+| Préenregistrement | Commis dans (seul) | Résultat | Commis dans |
+|---|---|---|---|
+| `c7-nul-corrige-preenregistrement.md` | `5c4cef4` (11:39:23) | `c7-nul-corrige-resultats.md` | `09b18d7` (13:25:16) |
+| `c7-tautologie-preenregistrement.md` | `5c4cef4` (11:39:23) | `c7-tautologie-resultats.md` | `09b18d7` (13:25:16) |
+| `c7-temoin-prompt-preenregistrement.md` | `5c4cef4` (11:39:23) | `c7-temoin-prompt-resultats.md` | `09b18d7` (13:25:16) |
+| `c7-deux-organisations-preenregistrement.md` | `24cc79d` (12:46:10) | `c7-deux-organisations-resultats.md` (+ `c7-deux-organisations-429-rapprochement.md`, `.csv`, et le plan `c7-temoin-deux-organisations-plan.md`) | `09b18d7` (13:25:16) |
 
-### 2.4 Conclusion sur l'antériorité
+`24cc79d` est vérifié ancêtre de `09b18d7` (`git merge-base --is-ancestor` confirme). Pour les
+quatre paires, l'ordre git est donc désormais **complet et correct** (préenregistrement commis
+avant résultat, dans deux commits distincts), ce qui n'était vrai avant cette correction que pour
+le texte des préenregistrements, pas pour leurs résultats. Cela ne change pas la nature de la
+limite déclarée : les deux commits de préenregistrement (`5c4cef4`, `24cc79d`) disent eux-mêmes
+que le calcul existait déjà sur le disque au moment où le texte a été commis, donc git établit ici
+une **antériorité de mise en git, pas une antériorité de rédaction avant calcul**. C'est une
+amélioration réelle (plus aucune des quatre paires n'a de fichier non versionné), mais ce n'est
+toujours pas l'équivalent des 24 paires propres du §2.1, ni du cas §2.4 ci-dessous.
 
-Sur 28 paires Tier 1 vérifiables en principe par git : **24 sont propres** (ordre prouvé), **3
-sont indéterminées** (même commit, §2.2), **3 ont désormais un préenregistrement commis seul
-avant son résultat resté non commis — antériorité déclarée faible par le commit lui-même, pas une
-preuve** (§2.3), et **1 est encore totalement non vérifiable** (`c7-deux-organisations`, jamais
-commise, §2.3). Aucune inversion (résultat avant préenregistrement) n'a été trouvée nulle part.
-L'argument d'antériorité tient donc pleinement pour les 24 cas propres ; pour les 7 autres, il
-doit être soit réparé (commits séparés du préenregistrement puis du résultat — déjà fait pour 3
-d'entre eux dans la nuit du 11 au 12/09), soit explicitement reconnu comme une limite avant le
-dépôt.
+### 2.4 Un cinquième préenregistrement C7 : `c7-factoriel`, la seule antériorité prouvée par l'historique et non simplement déclarée
+
+Une expérience factorielle un-facteur-à-la-fois a été préenregistrée et exécutée depuis la
+première correction de ce recueil : `resultats/c7-factoriel-preenregistrement.md` /
+`resultats/c7-factoriel-resultats.md`. Elle se distingue de toutes les paires précédentes,
+propres ou faibles :
+
+- **Préenregistrement commis seul** dans le commit `ff90409501d998ab77a36b7f0fc7a117d0d39833`
+  (« C7 factoriel : préenregistrement, avant tout appel payant », 12/09 12:52:49+02:00). À ce
+  commit, `analyses/c7_factoriel.py` — le script qui effectue les appels payants — **n'existe pas
+  dans le dépôt** (`git show ff90409:analyses/c7_factoriel.py` échoue). `git log --follow
+  --diff-filter=A -- analyses/c7_factoriel.py` confirme que sa première apparition dans tout
+  l'historique du dépôt est le commit de résultats lui-même, quatre heures plus tard : le script
+  n'a en tout cas jamais été **commis** avant le préenregistrement (git ne peut, ici comme
+  ailleurs, rien affirmer sur une version non commise qui aurait existé sur le disque).
+- **Résultat et script commis ensemble, plus tard**, dans le commit
+  `ee73f708456033d4f919206fa20ac47b348cb093` (« C7 factoriel : aucun facteur isole ne porte le
+  canal inter-jumeaux », 12/09 16:46:27+02:00) — commit qui est aussi le `HEAD` courant de ce
+  dépôt. Deux commits séparent les deux (`git log ff90409..ee73f70` : `09b18d7`, puis `975e87f`,
+  puis `ee73f70` lui-même), soit environ 4 heures d'écart, sans qu'aucun de ces commits
+  intermédiaires ne touche `analyses/c7_factoriel.py` ou les fichiers `c7-factoriel-*`.
+- Le préenregistrement affirme lui-même, en dernière ligne : « Aucun appel n'a encore eu lieu au
+  moment où ce fichier est écrit et commité. » Le fichier de résultats confirme un coût total
+  mesuré de 0,5385601250 USD sur 360 appels, cohérent avec la projection de ≈0,60 USD écrite
+  **avant** le calcul dans le préenregistrement — la tenue de compte projetée correspond à la
+  tenue de compte réelle, ce qui n'aurait pas de sens à démontrer si le texte avait été écrit après
+  coup pour coller aux résultats.
+
+**C'est donc le seul cas du dossier où l'antériorité est prouvée par l'historique lui-même**
+(absence vérifiable du script producteur de résultats au moment du commit de préenregistrement),
+**et non simplement déclarée** par le texte du message de commit comme pour les quatre paires du
+§2.3, ni laissée indéterminée comme pour les trois paires du §2.2. Cela corrige directement la
+faiblesse que ce recueil avait lui-même identifiée dans ses deux versions précédentes. **Ce point
+reste vrai et reste le meilleur élément antériorité du dossier, indépendamment de ce qui suit** :
+la discipline de préenregistrement — écrire le texte, le seuil chiffré et la règle de décision,
+puis les commiter seuls, avant tout appel payant et avant même que le script producteur de
+résultats existe dans le dépôt — a été intégralement respectée ici. Ce qui a fait défaut n'est pas
+la discipline de préenregistrement, mais un contrôle de validité du pipeline en amont (voir
+paragraphe suivant) ; ce contrôle existe désormais et est écrit et testé
+(`analyses/c7_controle_interpretabilite.py`, commit `28405b2`).
+
+**Verdict corrigé (troisième correction de ce recueil, 12/09 soir) : ce test n'a rien réfuté, car
+il n'a rien testé.** Un arbitrage postérieur
+(`resultats/c7-reconciliation-facteurs-2026-09-12.md`, commit `5f6da6e`, à lire en entier) a établi
+que les cinq jumeaux produits par cette expérience (B, M, G, C, P) réidentifient la vraie personne,
+contre les 120 humains réels du même bassin, à un taux de **0,0 à 0,8 %** — au niveau du hasard
+(0,83 % attendu) et bien en dessous de Demographics Only (13,29 %), là où les jumeaux publiés par
+l'équipe Twin, sur ce même bassin, atteignent 20,2 à 38,9 %. Le préenregistrement avait projeté des
+top-1 d'environ 20 %, 15 % et 8 % pour les trois conditions à un facteur changé, et mesuré 0,67 %,
+0,83 % et 2,65 % — un résultat lu, à tort, comme la réfutation de ces trois prédictions précises.
+En réalité, un contraste entre deux jumeaux qui ne portent chacun aucune information individuelle
+sur la personne (apport individuel mesuré à peu près nul, §3.3) ne peut pas trancher laquelle des
+trois manipulations « porte le signal » : il n'y avait pas de signal à répartir entre les trois
+conditions. **La réfutation préenregistrée est donc retirée** : un bras qui ne pouvait rien tester
+ne réfute rien. Ce n'est pas une ligne de tableau à ajouter au compte du manuscrit (§4) — ni comme
+réfutation, ni comme non-conclusion — puisqu'aucune des trois prédictions comparatives n'a été mise
+à l'épreuve d'un pipeline capable de porter une personne. Détail complet en §3.3.
+
+### 2.5 Conclusion sur l'antériorité
+
+Sur 28 paires Tier 1 originales vérifiables en principe par git, plus la nouvelle paire
+`c7-factoriel` (29 au total) : **24 sont propres** (ordre prouvé par simple antériorité de
+commit, §2.1), **3 sont indéterminées** (même commit, §2.2), **4 ont un préenregistrement commis
+seul puis un résultat commis séparément plus tard — antériorité de mise en git complète, mais
+déclarée faible par les commits eux-mêmes car le calcul existait déjà sur le disque au moment du
+commit de préenregistrement** (§2.3, les quatre paires y sont désormais toutes entièrement
+commises), et **1 a une antériorité prouvée par l'historique, pas seulement déclarée**
+(`c7-factoriel`, §2.4). Aucune inversion (résultat avant préenregistrement) n'a été trouvée nulle
+part, dans aucune des 29 paires. L'argument d'antériorité tient donc pleinement pour les 24 cas
+propres et pour le cas prouvé de §2.4 (25 paires sur 29) ; pour les 4 paires de §2.3, il repose sur
+une déclaration du commit lui-même, pas sur une preuve indépendante ; pour les 3 paires de §2.2, il
+ne tient pas du tout et doit être reconnu comme une limite.
 
 ---
 
@@ -202,7 +293,8 @@ verdict.
 
 **`c7-nul-corrige-preenregistrement.md`** — commis seul le 12/09 dans
 `5c4cef48d40db4046cbb51b1bd02d1fea239573e` (voir §2.3) ; son résultat
-(`c7-nul-corrige-resultats.md`) reste non commis. SHA-256 du préenregistrement :
+(`c7-nul-corrige-resultats.md`) est désormais commis aussi, séparément et plus tard, dans
+`09b18d7` (12/09 13:25:16+02:00 — voir §2.3). SHA-256 du préenregistrement :
 `9e5e44822d940fb51019be83c59e1843f2d92e53f253c2a4a8e18fe75bf9d1b6`.
 Question : le « nul de marge » de `c7-disjoint` était-il défectueux (il recopiait en partie la
 cible au lieu de ne porter que la marge d'exactitude) ?
@@ -246,11 +338,13 @@ après vérification.
 
 **Verdict final : (b) reste réfutée**, comme dans `c7-disjoint-resultats.md` d'origine. Le nul de
 marge d'origine avait un défaut réel (ligne 133), depuis corrigé, sans conséquence sur l'issue.
-Ce préenregistrement est désormais commis seul (§2.3), avec la limite déclarée par le commit
-lui-même (antériorité faible, pas une preuve) ; son fichier de résultats reste non commis.
+Ce préenregistrement est commis seul (§2.3), avec la limite déclarée par le commit lui-même
+(antériorité faible, pas une preuve) ; son fichier de résultats est désormais commis aussi, dans
+`09b18d7` (13:25:16+02:00), séparément et après le préenregistrement.
 
 **`c7-tautologie-preenregistrement.md`** — commis seul le 12/09 dans `5c4cef4` (voir §2.3) ; son
-résultat (`c7-tautologie-resultats.md`) reste non commis. SHA-256 du préenregistrement :
+résultat (`c7-tautologie-resultats.md`) est désormais commis aussi, dans `09b18d7`
+(13:25:16+02:00). SHA-256 du préenregistrement :
 `1ab405560529134736f130d962b896bb4c55524c5e7236811bae883b51d159ac`.
 Question (l'objection la plus dangereuse contre l'article) : à exactitude par personne tenue
 identique au bit près, la fuite varie-t-elle encore selon la structure des erreurs ? **Verdict :
@@ -259,26 +353,92 @@ ni structure dominante. Résultat non anticipé : les quatre témoins construits
 (27,7-32,1 %) que le jumeau réel (20,7 %) à exactitude identique.
 
 **`c7-temoin-prompt-preenregistrement.md`** — commis seul le 12/09 dans `5c4cef4` (voir §2.3) ;
-son résultat (`c7-temoin-prompt-resultats.md`) reste non commis. SHA-256 du préenregistrement :
+son résultat (`c7-temoin-prompt-resultats.md`) est désormais commis aussi, dans `09b18d7`
+(13:25:16+02:00). SHA-256 du préenregistrement :
 `24f8a150849db4e24f5e32e24eb213720796d19821c6ee9a66720ddec76b3279`.
 Objection testée : le canal inter-jumeaux (A2/transfert) ne mesurerait-il que la stabilité du
 gabarit de prompt, pas la personne ? **Verdict : confirmée (A2 survit)** — top-1 mode-segment
 (0,07 %) très en dessous du seuil destructeur (12,13 %) ; apport individuel (17,38 pts) très
 au-dessus de l'apport de segment (3,83 pts).
 
-**`c7-deux-organisations-preenregistrement.md`** — **toujours non commis** (voir §2.3). Au moment
-de la première rédaction de ce recueil, un autre agent écrivait encore ce dossier ; ce n'est plus
-le cas au moment de cette correction (12/09, résultat désormais complet). SHA-256 du
-préenregistrement : `07e74fd088073f41195170eeb8c288a4848da73f50750aadd4d237a6edf47a79`.
+**`c7-deux-organisations-preenregistrement.md`** — commis seul dans `24cc79d` (12/09
+12:46:10+02:00, voir §2.3). Au moment de la première rédaction de ce recueil, un autre agent
+écrivait encore ce dossier et rien n'était commis ; à la première correction le préenregistrement
+seul était déjà commis (ce recueil l'avait manqué) ; à cette seconde correction, **son résultat est
+désormais commis aussi**, dans `09b18d7` (13:25:16+02:00), avec la même limite d'antériorité
+faible que les trois paires précédentes. SHA-256 du préenregistrement :
+`07e74fd088073f41195170eeb8c288a4848da73f50750aadd4d237a6edf47a79`.
 Question : le canal inter-jumeaux traverse-t-il deux organisations qui ne partagent ni modèle ni
-gabarit de prompt ? Résultat stabilisé (`c7-deux-organisations-resultats.md`, n = 82 sur 200
-personnes prévues, arrêt sur HTTP 429 rapproché et déclaré non facturé dans
-`c7-deux-organisations-429-rapprochement.md`) : **non confirmée** — top-1(B↔C) = 3,66 % [1,16 % ;
-6,98 %], **inférieur** à la baseline Demographics Only elle-même (9,20 %), IC ne recouvrant pas le
-leurre de segment (36,13 %). A7 (menace « deux organisations indépendantes ») est détruite dans
-cette configuration testée. Reste à commettre dans git avant tout dépôt (§2.3) ; l'échantillon
-prévu de 200 n'a pas été complété (arrêt à 82), ce que le fichier de résultats juge lui-même sans
-incidence sur le sens du verdict compte tenu de l'écart mesuré (§8 du fichier de résultats).
+gabarit de prompt ? Résultat final (`c7-deux-organisations-resultats.md`, n = 142 sur 200
+personnes prévues — un second arrêt, non rapproché cette fois, a suivi le premier arrêt à n = 82
+rapproché et déclaré non facturé dans `c7-deux-organisations-429-rapprochement.md`) : top-1(B↔C) =
+**1,76 % [0,35 ; 3,63]**, **inférieur** à la baseline Demographics Only (9,20 % [5,47 ; 13,40]),
+IC ne recouvrant pas le leurre de segment (25,5 % [19,9 ; 31,3]). L'écart s'est creusé, pas
+resserré, entre n = 82 (3,66 %) et n = 142 (1,76 %).
+
+**Verdict corrigé (troisième correction de ce recueil, 12/09 soir) : ni soutenue ni réfutée — non
+testée.** Le verdict publié d'abord dans `resultats/article-synthese.md` (« A7, menace « deux
+organisations indépendantes », réfutée / détruite ») a été retiré par l'arbitrage
+(`resultats/c7-reconciliation-facteurs-2026-09-12.md`, commit `5f6da6e`, à lire en entier) : les
+jumeaux B et C, testés séparément contre les 120 humains réels du même bassin, ne réidentifient la
+vraie personne qu'à **0,79 % et 0,29 %** — au niveau du hasard (0,83 %), très en dessous de
+Demographics Only (13,29 %) et sans commune mesure avec les jumeaux publiés par l'équipe Twin sur
+ce même bassin (20,2–38,9 %). Le contraste B↔C (1,76 %) n'oppose donc pas deux jumeaux porteurs
+d'une personne dont on mesurerait le transfert entre deux organisations : il oppose deux
+générateurs qui ne portent, chacun séparément, quasiment aucune information individuelle. Un
+contraste entre deux bruits vaut le hasard quel que soit son résultat chiffré — ce n'est ni une
+confirmation ni une réfutation de la menace testée, c'est une limite de cet instrument précis. Dans
+le manuscrit (`article/manuscrit.md`, ligne 315, table §7.1 ligne 17), cette entrée est désormais
+comptée **« non testable avec cet instrument »**, ni parmi les réfutations ni parmi les
+non-conclusions (§4). Cette expérience sert malgré tout de point de départ chiffré au cinquième
+préenregistrement, `c7-factoriel` (ci-dessous), qui cherche lequel des trois facteurs changés
+simultanément (modèle, gabarit, persona) porte l'effondrement mesuré ici — effondrement dont on
+sait maintenant qu'il préexistait, au niveau du hasard, dans le pipeline B lui-même.
+
+**`c7-factoriel-preenregistrement.md`** — commis seul, **avant tout appel payant et avant même
+l'existence du script d'analyse**, dans `ff90409` (12/09 12:52:49+02:00) ; son résultat
+(`c7-factoriel-resultats.md`, avec le script `analyses/c7_factoriel.py` et
+`resultats/c7-factoriel.csv`) est commis plus tard, seul lui aussi, dans `ee73f70` (12/09
+16:46:27+02:00 — commit `HEAD` courant). Voir §2.4 pour le détail de la vérification
+d'antériorité — c'est le seul cas du dossier où elle est prouvée, pas seulement déclarée.
+Question : parmi les trois facteurs changés simultanément dans `c7-deux-organisations` (modèle,
+gabarit de prompt, format de persona), lequel porte l'effondrement du canal inter-jumeaux mesuré
+là-bas (1,76 %, contre 36,4 % en intra-équipe) ? Trois attaques symétriques B↔X à un seul facteur
+changé par rapport au pipeline B (deepseek-v4-flash, persona JSON, gabarit système/utilisateur),
+n = 120 personnes, 360 appels, 0 échec, 0 HTTP 429, coût réel 0,5386 USD (projection
+préenregistrée : ≈0,60 USD). Prédictions préenregistrées : modèle seul ≈ 20 % [8 ; 35], gabarit
+seul ≈ 15 % [5 ; 30], persona seule ≈ 8 % [2 ; 20] — la persona pressentie comme le facteur le
+plus dégradant. Mesuré : modèle seul **0,67 % [0,00 ; 1,75]**, gabarit seul **0,83 % [0,00 ;
+2,08]**, persona seule **2,65 % [0,50 ; 5,13]**, tous sous la baseline Demographics Only recalculée
+sur ce pool de 120 (13,29 % [7,46 ; 19,29]) et dans la même fourchette que la configuration « tout
+différent » (1,76 % [0,35 ; 3,63]). Règle de décision préenregistrée (bas_X > 3,63 % ET
+top1_X ≥ 2×13,29 % = 26,58 % pour qu'un facteur « porte le signal seul ») : remplie par **aucun**
+des trois. **Verdict publié d'abord : prédiction réfutée** — les trois valeurs sont bien plus
+basses que prévu (aucune n'atteint le bas de son propre intervalle prédit) et **dans l'ordre
+inverse** de celui prédit (c'est la persona, censée être le facteur le plus dégradant, qui préserve
+le *plus* de signal ; c'est le modèle, censé protéger l'essentiel du canal, qui en préserve le
+*moins*).
+
+**Verdict corrigé (troisième correction de ce recueil, 12/09 soir) : réfutation retirée — ce test
+n'a rien testé.** L'arbitrage (`resultats/c7-reconciliation-facteurs-2026-09-12.md`, §3, commis
+dans `5f6da6e`) montre que les cinq jumeaux produits par cette expérience (B, M, G, C, P), testés
+contre les 120 humains réels du même bassin, réidentifient la vraie personne à **0,0 à 0,8 %**,
+au niveau du hasard (0,83 %) et loin en dessous de Demographics Only (13,29 %) — contre 20,2 à
+38,9 % pour les jumeaux publiés par l'équipe Twin sur ce même bassin. La décomposition de l'accord
+confirme un apport individuel proche de zéro (par exemple B↔M : −0,0 point). Les trois contrastes
+préenregistrés (modèle seul, gabarit seul, persona seule) comparent donc chacun deux sources de
+bruit, pas deux jumeaux porteurs d'une personne : un contraste entre deux bruits produit
+nécessairement une valeur proche du hasard, quelle que soit la variable manipulée, et cela ne dit
+rien sur laquelle des trois manipulations « porte le signal », puisqu'il n'y avait pas de signal à
+répartir. **La réfutation préenregistrée est retirée** : un bras qui ne pouvait rien tester ne
+réfute rien. Ce qui reste acquis et vaut d'être souligné : la discipline de préenregistrement elle-
+même (texte, seuils, règle de décision commis seuls, avant tout appel payant, §2.4) a été
+intégralement respectée ; elle n'a simplement pas suffi, faute d'un contrôle de validité du
+pipeline en amont — contrôle qui n'existait pas au moment de l'expérience et qui existe désormais,
+écrit et testé, dans `analyses/c7_controle_interpretabilite.py` (commit `28405b2`). Conclusion
+correcte à retenir : **aucun des trois facteurs pris isolément, ni les trois ensemble, n'a jamais
+été mis à l'épreuve d'un pipeline capable de porter une personne** — la question posée par ce
+préenregistrement reste ouverte, elle n'a pas reçu de réponse dans un sens ou dans l'autre.
 
 ### 3.4 Générateurs, synthétiseur ajusté, spécificité LLM (A2)
 
@@ -436,54 +596,123 @@ fichier `tab2-resultats*` n'existe dans le dépôt.
 
 ## 4. Le compte des verdicts contesté (A9 et multiplicité)
 
-Les deux rapports demandés ont été lus intégralement :
+Trois rapports ont été lus intégralement (les deux premiers dès la première rédaction, le
+troisième trouvé committé à cette seconde correction) :
 
 - `resultats/c7-a9-correction-2026-09-12.md`
 - `resultats/c7-multiplicite-globale-2026-09-12.md`
+- `resultats/audit-chiffres-2026-09-12.md` (committé dans `09b18d7`, 12/09 13:25:16+02:00 — postérieur
+  aux deux précédents, il en tire les conséquences et **recompte le tableau du manuscrit ligne à
+  ligne**, ce qu'aucun des deux premiers ne faisait explicitement)
 
-**Constat : les deux rapports ne se contredisent pas sur le fond, mais aucun n'a encore été
-appliqué au manuscrit.** Les deux documents identifient **exactement les deux mêmes cas** à
-requalifier de « réfutée » à « non concluante » :
+Les deux premiers rapports identifient **exactement les deux mêmes cas** à requalifier de
+« réfutée » à « non concluante », tous deux causés par le même artefact (un IC bootstrap
+percentile sur zéro succès ne peut rendre que « [0 ; 0] », alors que l'IC exact Clopper-Pearson
+contient le seuil préenregistré) :
 
-1. **A9, top-1 du modèle fort > 5 %** (`c7-fort-resultats.md`) : IC bootstrap dégénéré [0 % ; 0 %]
-   sur 0/30, artefact de rééchantillonnage ; IC exact Clopper-Pearson [0 % ; 11,57 %], qui contient
-   le seuil de 5 %.
+1. **A9, top-1 du modèle fort > 5 %** (`c7-fort-resultats.md`) : IC exact Clopper-Pearson
+   [0 % ; 11,57 %] à n = 30, qui contient le seuil de 5 %.
 2. **A9, recette/granularité de l'appel ≥ 5×** (`c7-recette-resultats.md`) : même défaut, n = 10,
    IC exact [0 % ; 30,85 %].
 
-`c7-a9-correction-2026-09-12.md` chiffre explicitement les trois états du compte : le tableau 3 du
-manuscrit affiche actuellement **16 réfutations** (titre « The sixteen refuted preregistered
-predictions ») ; en appliquant seule la correction A9 (cas 1), le compte tomberait à **15** ; en
-appliquant aussi la correction recette (cas 2), il tomberait à **14**.
-`c7-multiplicite-globale-2026-09-12.md` ne redonne pas ce chiffre de départ explicitement, mais
-dit la même chose en substance (« diminue d'au moins un [cas 1] ... un second cas voisin [cas 2]
-devrait recevoir la même requalification »), sans jamais énoncer un total final différent.
-**Aucune contradiction numérique trouvée entre les deux rapports** — mais **aucun des deux ne
-modifie lui-même `article/manuscrit.md`** (qui reste, à la date de ce recueil et sous réserve
-qu'il soit en cours d'édition ailleurs, la source du chiffre 16 non corrigé). Le nombre correct à
-publier, si les deux corrections sont retenues, est **14 réfutations**, pas 15, ni 16.
+**Ce que `c7-a9-correction-2026-09-12.md` et `c7-multiplicite-globale-2026-09-12.md`, à eux
+seuls, ne disaient pas** (ce recueil le signalait comme une limite à sa première rédaction) :
+qu'un troisième mouvement, indépendant des deux requalifications, s'est produit la même nuit.
+`resultats/audit-chiffres-2026-09-12.md` (§1.2) reconstitue les trois mouvements et **recompte
+mécaniquement le tableau du manuscrit** (17 lignes au total) :
 
-**Attention à ne pas confondre deux comptages différents** : les « 21 lignes » / « 15 tests
-convertibles en p » de `c7-multiplicite-globale.csv` sont le dénombrement de la famille
-confirmatoire élargie pour la correction Holm/BH — une unité d'analyse différente du « 16/15/14
-réfutations » du tableau 3 de l'article. Ce recueil les distingue explicitement pour éviter que
-le lecteur du dépôt OSF ne les mélange.
+| étape | compte de réfutations | cause |
+|---|---|---|
+| départ | 16 | tableau à 16 lignes, toutes « Refuted » |
+| −2 | 14 | les deux cas ci-dessus (A9 modèle fort, A9 recette) requalifiés « non concluant » |
+| +1 | **15** | ajout d'une **17ᵉ ligne** : le témoin « deux organisations » (`c7-deux-organisations-resultats.md`, appelé T2 dans le manuscrit), testé et **réfutée** |
 
-### Mon propre compte, au niveau des préenregistrements du Tier 1 (§3, 34 fichiers)
+À l'étape `09b18d7` (13:25:16+02:00), le compte s'établissait donc à **17 lignes, 15 « Refuted »,
+2 « inconclusive »** — c'était la valeur committée et vérifiée à cette date-là, et la seconde
+correction de ce recueil l'avait reprise telle quelle.
+
+**Troisième correction de ce recueil (12/09 soir) : un quatrième mouvement, postérieur aux trois
+ci-dessus, change le compte une nouvelle fois — de 15 à 14, pas à 16.** L'arbitrage
+(`resultats/c7-reconciliation-facteurs-2026-09-12.md`, commis dans `5f6da6e`) et le commit qui en
+tire la conséquence sur le manuscrit (`8df4e68`, « T2 requalifiée en non testable : le compteur
+tombe à 14 », désormais `HEAD`) établissent que le témoin « deux organisations » — la 17ᵉ ligne
+ajoutée à l'étape précédente, notée T2 — ne pouvait pas être tranché « réfutée » : ses deux
+jumeaux réidentifient la vraie personne au taux du hasard (0,79 % et 0,29 %, contre 0,83 % attendu),
+donc son contraste B↔C oppose deux bruits, pas deux jumeaux porteurs d'une personne. La ligne 17
+passe donc de « Refuted » à une troisième catégorie, **« non testable »**, distincte de
+« inconclusive » (qui, elle, désigne un test valide mais sous-puissant, pas un test qui n'a rien pu
+mesurer). Corrélativement, la réfutation préenregistrée du cinquième préenregistrement,
+`c7-factoriel` (§2.4, §3.3), est **retirée** plutôt qu'ajoutée comme 18ᵉ ligne : ses cinq jumeaux
+subissent le même défaut (0,0 à 0,8 % de réidentification réelle), donc ses trois contrastes à un
+facteur ne tranchent rien non plus — ce test ne devient pas une ligne du tableau, ni comme
+réfutation ni comme non-conclusion, puisqu'il n'a jamais mis à l'épreuve un pipeline capable de
+porter une personne.
+
+**Mise à jour de la table des mouvements** (complète les trois lignes déjà connues d'une
+quatrième) :
+
+| étape | compte de réfutations | cause |
+|---|---|---|
+| départ | 16 | tableau à 16 lignes, toutes « Refuted » |
+| −2 | 14 | les deux cas A9 (modèle fort, recette) requalifiés « non concluant » |
+| +1 | 15 | ajout d'une 17ᵉ ligne : le témoin « deux organisations » (T2), d'abord compté « réfutée » |
+| −1, catégorie changée | **14** | T2 requalifiée « non testable » (ni réfutée ni non concluante) ; le cinquième préenregistrement `c7-factoriel` n'ajoute **aucune** ligne (réfutation retirée, pas de test valide) |
+
+**Recompte ligne à ligne effectué par moi-même, indépendamment du commit `8df4e68`**, sur la table
+actuelle du manuscrit (`article/manuscrit.md`, §7.1, lignes 907–923, 17 lignes) : Refuted aux
+lignes 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15 (**14**) ; « Not confirmed — inconclusive »
+à la ligne 9 et « Not refuted — inconclusive » à la ligne 16 (**2**) ; « Not testable with this
+instrument — counted as neither » à la ligne 17, T2 (**1**). 14 + 2 + 1 = **17**, le compte exact
+de lignes du tableau. **Je ne trouve aucun désaccord avec le chiffre 14/2/1** annoncé par la
+consigne de cette correction — au contraire, mon recomptage indépendant le confirme très
+exactement, terme à terme, y compris sur l'identité des deux lignes non concluantes et de la ligne
+non testable. Le texte du manuscrit (ligne 932) l'énonce lui-même dans les mêmes termes :
+« Seventeen rows, fourteen refutations, two inconclusive, one untestable. »
+
+**Ce qui reste vrai et mérite d'être mis en valeur, malgré ce recul du compte** : la discipline de
+préenregistrement du bras factoriel n'a jamais été en cause. Son texte a été commis seul
+(`ff90409`), avant tout appel payant et avant même que le script producteur de résultats existe
+dans le dépôt (§2.4) — c'est le seul cas de tout ce recueil où l'antériorité est **prouvée** par
+l'historique, et non simplement déclarée par un message de commit. Ce qui a manqué n'est pas la
+rigueur du préenregistrement, mais un contrôle de validité du pipeline en amont (vérifier qu'un
+jumeau réidentifie mieux que le hasard avant de lui faire porter un contraste) — contrôle qui
+n'existait pas cette nuit-là et qui existe désormais, écrit et testé :
+`analyses/c7_controle_interpretabilite.py` (commit `28405b2`).
+
+**Attention à ne pas confondre deux comptages différents**, point que `audit-chiffres-2026-09-12.md`
+faisait déjà (son §1.2, « piège à ne pas confondre ») et qui reste valable après cette troisième
+correction : le manuscrit cite par ailleurs « 25 confirmed and 15 refuted » en §7.3 (ligne 978),
+qui est le recensement de `c7-multiplicite.md` sur 47 tests convertibles en p pour Holm/BH — un
+objet différent du tableau principal, dont le compte de réfutations est désormais 14, pas 15. La
+coïncidence numérique qui existait à l'étape précédente (15 et 15) a donc disparu avec cette
+correction ; ce recueil les distingue explicitement pour éviter que le lecteur du dépôt OSF ne les
+mélange.
+
+### Mon propre compte, au niveau des préenregistrements du Tier 1 (§3, 35 fichiers)
 
 | Catégorie | Nombre de fichiers | Détail |
 |---|---|---|
 | Confirmée (toutes prédictions) | 12 | c7 (base), c7-generateur, c7-synth-ajuste (top-1), c7-stanford, c7-stanford-provenance, c7-defense, c7-courbe-gen, c7-bits, c7-temoin-prompt, b123, c7-utilite-aval (majoritaire), tab-diagnostic (au sens : hypothèse principale nettement invalidée, donc « réfutée » — voir ligne dédiée) |
-| Réfutée (toutes prédictions) | 4 | c7-dp, c7-monde-ouvert, tab (tournoi A→B), c7-deux-organisations (stabilisé le 12/09, non encore commis dans git — §2.3) |
+| Réfutée (toutes prédictions) | 3 | c7-dp, c7-monde-ouvert, tab (tournoi A→B) |
 | Mixte (au moins une confirmée et une réfutée/non concluante) | 12 | a1-controle, c7-compromis, c7-disjoint (verdict (a) confirmée / (b) réfutée — réaffirmé le 12/09 après qu'une tentative de renversement du (b) a été rejetée par un audit adverse et concédée par son auteur, voir §3.3), c7-fort, c7-gen, c7-mecanisme, c7-transfert, c7-transfert-stanford, c7-attaquant-fort, c7-tautologie, c5 (deux modèles, deux issues distinctes), c7-recette (avant correction) |
 | Requalifiée réfutée→non concluante (correction du 12/09, artefact d'IC bootstrap dégénéré sur zéro succès — sans rapport avec le témoin de marge de c7-disjoint) | 2 | c7-fort (prédiction top-1), c7-recette |
+| Non testable (troisième correction, 12/09 soir — contraste entre deux jumeaux qui réidentifient au taux du hasard, donc entre deux bruits ; ni soutenue ni réfutée, §3.3) | 2 | c7-deux-organisations (§2.3, entièrement commis ; verdict retiré du manuscrit — table §7.1, ligne 17, « not testable ») ; **c7-factoriel** (§2.4 — antériorité prouvée, pas seulement déclarée ; réfutation retirée, aucune ligne de tableau) |
 | Descriptif (pas de seuil binaire préenregistré) | 1 | c7-echelle |
 | Sans résultat à ce jour | 1 | tab2 |
 
+Total : 12+3+12+2+2+1+1 = 33 sur 35 fichiers Tier 1 (les 2 fichiers manquants,
+`c7-compromis-bits-preenregistrement.md` et `c7-compromis-robustesse-preenregistrement.md`, n'ont
+pas de verdict de catégorie propre : ce sont des contrôles de robustesse dont le résultat est
+publié **dans** `c7-compromis-resultats.md`, §3.2). Le total de fichiers ne change pas par
+rapport à la seconde correction (toujours 33 sur 35) : seule la catégorie de deux d'entre eux a
+changé, de « réfutée » à « non testable ».
+
 Ce tableau porte sur des **fichiers**, souvent multi-prédictions ; il ne doit pas être additionné
-naïvement avec le « 16/14 » du tableau 3 de l'article, qui compte des **lignes de revendication**,
-pas des fichiers. Les deux comptages sont cohérents entre eux sur le fond (aucune divergence de
-verdict trouvée), seulement sur l'unité de dénombrement.
+naïvement avec le tableau du manuscrit (§7.1, 17 lignes, **14 réfutées, 2 non concluantes, 1 non
+testable** après cette troisième correction), qui compte des **lignes de revendication**, pas des
+fichiers (par exemple, `c7-attaquant-fort` est un seul fichier « mixte » ici mais fournit plusieurs
+lignes au tableau du manuscrit). Les deux comptages restent cohérents entre eux sur le fond (aucune
+divergence de verdict trouvée), seulement sur l'unité de dénombrement.
 
 ---
 
@@ -499,10 +728,11 @@ verdict trouvée), seulement sur l'unité de dénombrement.
 | c7-compromis-bits-preenregistrement.md | 2026-09-12 00:45:58+02:00 | 3b53c72f… | OK |
 | c7-compromis-robustesse-preenregistrement.md | 2026-09-12 01:12:03+02:00 | 5b062fb6… | OK |
 | c7-disjoint-preenregistrement.md | 2026-09-12 01:44:59+02:00 | 865d3d31… | OK |
-| c7-nul-corrige-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 9e5e4482… | **antériorité faible (résultat non commis)** |
-| c7-tautologie-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 1ab40556… | **antériorité faible (résultat non commis)** |
-| c7-temoin-prompt-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 24f8a150… | **antériorité faible (résultat non commis)** |
-| c7-deux-organisations-preenregistrement.md | **jamais commis** | 07e74fd0… | **non vérifiable ; désormais stabilisé (§3.3) mais non commis** |
+| c7-nul-corrige-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 9e5e4482… | **antériorité faible** (déclarée par le commit ; résultat commis séparément dans `09b18d7`, 13:25:16) |
+| c7-tautologie-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 1ab40556… | **antériorité faible** (déclarée par le commit ; résultat commis séparément dans `09b18d7`, 13:25:16) |
+| c7-temoin-prompt-preenregistrement.md | 2026-09-12 11:39:23+02:00 (commis seul, `5c4cef4`) | 24f8a150… | **antériorité faible** (déclarée par le commit ; résultat commis séparément dans `09b18d7`, 13:25:16) |
+| c7-deux-organisations-preenregistrement.md | 2026-09-12 12:46:10+02:00 (commis seul, `24cc79d`) | 07e74fd0… | **antériorité faible** (déclarée par le commit ; résultat commis séparément dans `09b18d7`, 13:25:16) |
+| c7-factoriel-preenregistrement.md | 2026-09-12 12:52:49+02:00 (commis seul, `ff90409`) | 6588f6bf… | **antériorité prouvée**, pas seulement déclarée (script d'analyse absent du dépôt au moment de ce commit ; résultat commis dans `ee73f70`, 16:46:27, `HEAD` courant) |
 | c7-generateur-preenregistrement.md | 2026-09-12 01:01:51+02:00 | 105947cf… | OK |
 | c7-synth-ajuste-preenregistrement.md | 2026-09-12 01:43:20+02:00 | ce7ea52a… | OK |
 | c7-mecanisme-preenregistrement.md | 2026-09-11 22:29:58+02:00 | b3b676e7… | OK |
@@ -568,42 +798,46 @@ synthétique (I1, I3, I3b), la croyance de second ordre (S1), la mesure de perso
 
 ## 7. Marche à suivre pour l'utilisateur
 
-1. **Avant tout dépôt**, régulariser les sept cas signalés au §2.2-2.3. Mise à jour du 12/09 :
-   les préenregistrements de trois des quatre paires (`c7-tautologie`, `c7-temoin-prompt`,
-   `c7-nul-corrige`) ont été commis seuls, avant leurs résultats, dans `5c4cef4` — une antériorité
-   que le commit lui-même déclare faible, tant que les fichiers de résultats correspondants
-   restent non commis. **Reste à faire** : commiter les trois fichiers de résultats
-   correspondants (`c7-tautologie-resultats.md`, `c7-temoin-prompt-resultats.md`,
-   `c7-nul-corrige-resultats.md`), et commiter la paire `c7-deux-organisations` — désormais
-   stabilisée (§2.3, §3.3) mais encore entièrement non versionnée — en séparant si possible le
-   commit du préenregistrement de celui du résultat. Pour les trois paires commises ensemble
-   (`c7-dp`, `c7-utilite-aval`, `c7-attaquant-fort`), reconnaître explicitement dans l'article que
-   leur antériorité n'est pas prouvable par l'historique git seul, ou, si le calendrier le permet,
-   republier un préenregistrement identique dans un commit séparé et daté avant de relancer le
-   calcul source.
-2. **Déposer ce recueil** (`resultats/preenregistrements-recueil-2026-09-12.md`), ou une version
-   à jour une fois le point 1 traité, auprès d'un tiers horodateur indépendant : OSF (Open
-   Science Framework, dépôt de préenregistrement avec horodatage public), ou à défaut un service
-   d'horodatage de document (ex. OriginStamp, ou une ancre sur une blockchain publique) qui
-   accepte un fichier texte et retourne un certificat vérifiable par un tiers. L'utilisateur doit
-   effectuer ce dépôt lui-même.
-3. **Alternative ou complément déjà présente dans le dépôt** : l'historique git public
-   lui-même (commit `5c4cef48d40db4046cbb51b1bd02d1fea239573e`, qui inclut le commit
-   `23eec0072a08569837a7cf10470d7ffc5ba1f712` cité à la première rédaction de ce recueil, et leurs
-   parents) constitue, comme `tab-preenregistrement.md` le revendique explicitement pour lui-même,
-   un horodatage tiers si le dépôt est poussé vers une plateforme d'hébergement (GitHub,
-   GitLab...) avant tout calcul ultérieur — mais seulement pour les commits déjà poussés, pour les
-   24 paires « OK » du §2.1, et, avec la limite de « faible antériorité » déclarée par leur propre
-   message de commit, pour les trois préenregistrements commis seuls dans `5c4cef4` (§2.3) ; ceci
-   ne répare ni les trois paires commises ensemble (point 1), ni `c7-deux-organisations`, encore
-   totalement non commise.
+1. **Ce qui restait à faire au point 1 de la version précédente de ce recueil est fait** : les
+   quatre fichiers de résultats (`c7-tautologie-resultats.md`, `c7-temoin-prompt-resultats.md`,
+   `c7-nul-corrige-resultats.md`, `c7-deux-organisations-resultats.md`) sont désormais tous commis,
+   chacun séparément de son préenregistrement et après lui (§2.3). Il ne reste **qu'une seule
+   catégorie de cas non réparable rétroactivement** : les **trois paires commises dans le même
+   commit que leur résultat** (`c7-dp`, `c7-utilite-aval`, `c7-attaquant-fort`, §2.2). Pour
+   celles-ci, reconnaître explicitement dans l'article que leur antériorité n'est pas prouvable
+   par l'historique git seul — l'historique ne peut pas être réécrit après coup sans perdre sa
+   valeur probante, donc republier un préenregistrement identique dans un nouveau commit séparé ne
+   répare rien pour ces trois-là (le calcul, lui, a déjà eu lieu). C'est une limite à assumer, pas
+   à corriger.
+2. **Un nouveau cas, `c7-factoriel` (§2.4), montre à quoi ressemble la version réparée de ce
+   problème pour toute future expérience** : préenregistrement commis seul, dans un commit qui ne
+   contient ni script d'analyse ni résultat, suivi d'un commit de résultats distinct plusieurs
+   heures plus tard. C'est la pratique à reproduire systématiquement pour tout test encore à
+   venir, plutôt qu'une correction à appliquer aux trois cas déjà figés du point 1.
+3. **Déposer ce recueil** (`resultats/preenregistrements-recueil-2026-09-12.md`) auprès d'un tiers
+   horodateur indépendant : OSF (Open Science Framework, dépôt de préenregistrement avec
+   horodatage public), ou à défaut un service d'horodatage de document (ex. OriginStamp, ou une
+   ancre sur une blockchain publique) qui accepte un fichier texte et retourne un certificat
+   vérifiable par un tiers. L'utilisateur doit effectuer ce dépôt lui-même.
+4. **Alternative ou complément déjà présent dans le dépôt** : l'historique git public lui-même
+   (commit `ee73f708456033d4f919206fa20ac47b348cb093`, `HEAD` courant, qui inclut tous les commits
+   cités dans ce recueil et leurs parents) constitue, comme `tab-preenregistrement.md` le
+   revendique explicitement pour lui-même, un horodatage tiers si le dépôt est poussé vers une
+   plateforme d'hébergement (GitHub, GitLab...) avant tout calcul ultérieur — pleinement pour les
+   24 paires « OK » du §2.1 et pour `c7-factoriel` (§2.4, antériorité prouvée) ; avec la limite de
+   « faible antériorité » déclarée par leur propre message de commit, pour les quatre
+   préenregistrements du §2.3 (leurs résultats sont désormais commis aussi, mais la déclaration de
+   faiblesse reste valable) ; pas du tout pour les trois paires commises ensemble du §2.2.
 
 **Ce que ce dépôt prouve, une fois déposé** : que le texte exact de chaque préenregistrement
 (question, seuil chiffré, règle de décision) existait, sous cette forme précise, à une date
-antérieure vérifiable par un tiers indépendant de l'auteur — pour les 24 paires en ordre normal
-et, une fois régularisées, pour les 4 paires restantes (3 dont le préenregistrement est déjà
-commis seul dans `5c4cef4`, 1 — `c7-deux-organisations` — encore non commise du tout). Cela répond
-directement à l'objection « vous avez choisi vos seuils après avoir vu vos résultats ».
+antérieure vérifiable par un tiers indépendant de l'auteur — pleinement pour les 24 paires en
+ordre normal (§2.1) et pour `c7-factoriel` (§2.4, la seule antériorité **prouvée** et non
+simplement déclarée par l'historique) ; avec la réserve déclarée par les commits eux-mêmes, pour
+les 4 paires du §2.3 (préenregistrement commis avant résultat, mais calcul déjà présent sur le
+disque au moment du commit de préenregistrement). Soit 25 paires sur 29 pleinement ou
+suffisamment établies. Cela répond directement à l'objection « vous avez choisi vos seuils après
+avoir vu vos résultats ».
 
 **Ce que ce dépôt ne prouve pas** : (a) que les calculs eux-mêmes sont corrects. Une correction
 publiée le 12/09 montre qu'un bug de méthode — IC bootstrap dégénéré sur zéro succès — a déjà
@@ -613,8 +847,8 @@ d'abord publié un verdict inversé qui ne tenait pas ; un audit adverse l'a dé
 publication dans l'article, et l'auteur du renversement l'a concédé sans réserve (§3.3). C'est une
 preuve de rigueur du processus de relecture interne — une révision qui arrangeait l'article a été
 rejetée après vérification — pas une garantie d'absence d'autres bugs non détectés ; (b) que les
-trois paires du §2.2 (`c7-dp`,
-`c7-utilite-aval`, `c7-attaquant-fort`) respectent l'antériorité — cela reste à démontrer
-autrement, ou à accepter comme une limite déclarée ; (c) que les Tier 2 (24 fichiers, §6),
-non analysés ici, respectent les mêmes garanties — un recueil séparé serait nécessaire pour eux
-si un dépôt distinct les concernant est un jour envisagé.
+trois paires du §2.2 (`c7-dp`, `c7-utilite-aval`, `c7-attaquant-fort`) respectent l'antériorité —
+cela reste à démontrer autrement, ou à accepter comme une limite déclarée, et rien ne peut plus le
+réparer rétroactivement pour ces trois-là précisément ; (c) que les Tier 2 (24 fichiers, §6), non
+analysés ici, respectent les mêmes garanties — un recueil séparé serait nécessaire pour eux si un
+dépôt distinct les concernant est un jour envisagé.
