@@ -990,15 +990,14 @@ not find it.
 are American survey panels built on neighbouring instrument families, so we cannot say whether
 this channel is a property of that family — nor, as §1.1 states, separate the trajectory from the
 protocols that differ along it. The obstacle is not that the method is rare, but that the matched
-file is almost never redistributed. Combining individual human-to-twin matching, closed-choice
-answers and public redistribution without an application, we count **four to eight such datasets
-in the world** [pistes-jeux-apparies-2026-09-12.md]: papers that publish per-respondent
-correlations routinely withhold the respondent-level file, by editorial choice, by silence, or
-because the underlying human panel is itself access-controlled (SOEP, GSS). **The risk is
-therefore being created faster than it becomes auditable**, which we report as a finding in its
-own right. The resource that would lift our limit is a matched individual dataset from a domain
-distinct from GSS and Big Five for which twins produced by a **third-party team** already exist
-for the same respondents, under a licence permitting local computation and publication of an
+file — row-by-row, not by demographic cell — is almost never redistributed. We verified three
+such datasets at the source; we ran no systematic census, so no upper bound is established
+[pistes-jeux-apparies-2026-09-12.md]. **Not a count, a typology**: two teams withhold their file
+(editorial choice or silence); a third is barred by its source licence (SOEP); and one inverse
+case exists, synthetic outputs with no matched humans. **The risk is created faster than it
+becomes auditable.** The resource that would lift our limit is a matched individual dataset from a
+domain distinct from GSS and Big Five for which twins produced by a **third-party team** already
+exist for the same respondents, under a licence permitting local computation and publication of an
 aggregate rate; and, for the trajectory of §5.8, several model generations over the same items and
 the same population.
 
