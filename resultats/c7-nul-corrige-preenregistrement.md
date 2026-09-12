@@ -1,5 +1,15 @@
 # C7, nul de marge corrigé : préenregistrement
 
+> ## AVERTISSEMENT DE RÉTRACTATION — 12 septembre 2026
+> Le résultat annoncé dans `c7-nul-corrige-resultats.md` (issue B, prédiction (b)
+> « confirmée ») a été réfuté et retiré par son propre auteur — voir
+> `resultats/c7-nul-corrige-reponse-audit.md` et `resultats/audit-renversement-2026-09-12.md`.
+> Point jugé le plus grave par cet auteur lui-même : l'objection qui a détruit le résultat
+> figurait déjà ci-dessous, à la **section 8** (« Réserve déclarée d'avance »), écrite
+> **avant tout calcul** — et le résultat a été publié malgré elle. Ce préenregistrement est
+> conservé tel quel pour la trace ; ses prédictions et sa règle de décision (§7) ne
+> valident rien.
+
 Écrit le 12 septembre 2026, **avant** `analyses/c7_nul_corrige.py` et avant tout calcul.
 Aucun chiffre de ce document n'a été regardé dans une sortie de ce nouveau script : les
 seules valeurs citées comme existantes sont celles déjà publiées de `c7-disjoint-resultats.md`.

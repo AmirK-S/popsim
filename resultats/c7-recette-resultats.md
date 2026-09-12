@@ -16,10 +16,24 @@ les 30 suivantes a 0/60 (aucun cout facture).
 | Appel par item (1 appel/question) | 10 (9 complets) | 0,00 % | [0 ; 0] | 0,00 % | 834,8 |
 | Demographics Only (repere, n=40) | 40 | 5,88 % | [0 ; 13,37] | 14,62 % | 243,4 |
 Reperes : hasard = 0,0486 % ; JSON Persona GPT4.1 (Twin) = 20,68 %.
+
+**Correction du 12/09 (`c7-a9-correction-2026-09-12.md`) :** les deux « [0 ; 0] »
+ci-dessus sont un artefact du bootstrap par percentile (0 succes sur tous les tirages ne
+peut rendre que 0), pas un intervalle de confiance. Les IC exacts (Clopper-Pearson) sont
+**[0 ; 8,81 %]** pour l'appel unique (n=40) et **[0 ; 30,85 %]** pour l'appel par item
+(n=10) — cette derniere borne est large au point de ne plus permettre de trancher le
+facteur preenregistre (voir Verdict ci-dessous).
 ## Verdict sur la prediction preenregistree
 **Rejetee.** Predit : item >= 5x unique en top-1. Les deux sont a 0,00 % (facteur non
 calculable sur un plancher nul) et le top-10 va dans le sens INVERSE (0 % vs 7,5 %). Sur
 n=10, la puissance est faible, mais rien ne va dans le sens de la prediction.
+
+**Correction du 12/09 : non concluante, pas rejetee.** Le facteur preenregistre (item
+>= 5x unique) portait sur un ratio ; a n=10 sur le bras « appel par item », l'IC exact a
+95 % ([0 ; 30,85 %]) est trop large pour confirmer OU exclure ce facteur — sous-puissant,
+pas contraire a la prediction. Seul le bras « appel unique » (n=40, IC [0 ; 8,81 %]) reste
+clairement en dessous de tout facteur x5 plausible contre 20,68 % ; le top-10 continue
+d'aller dans le sens inverse (0 % vs 7,5 %) et n'est pas concerne par cette correction.
 ## Conclusion pour l'article
 A modele egal (GPT4.1-mini, classe Twin) et memes personnes/items, ni l'appel unique ni
 l'appel par item (prompt proche du leur) ne reproduisent leur fuite (20,7 %) : la

@@ -41,18 +41,38 @@ conditionné sur une personne — qu'ils n'ont pas testé.
 modèles génératifs classiques (GAN, copules, diffusion), évaluées par des métriques de similarité
 continue. Notre objet est un vecteur de réponses catégorielles d'un LLM à un questionnaire, sans
 métrique de similarité substituable à une attaque directe par appariement.
-**Sur le vocabulaire de « linkability » (précision contre une confusion possible, pertinente pour
-A7) :** Giomi et al. définissent formellement la linkability comme le lien entre deux
-enregistrements d'un **même** jeu original, l'attaquant détenant déjà les **valeurs réelles** d'une
-partie des attributs — un cadrage différent du nôtre, où deux générations indépendantes de jumeaux
-se désignent mutuellement sans qu'aucune valeur réelle soit détenue. Sous leur définition, ils
-concluent que la linkability est le risque le plus **faible** des trois qu'ils mesurent (devant
-singling out et inference) ; notre taux de liaison inter-jumeaux (A7, 36,4 % à 60 items communs,
-contrôle à 0,06 %) contredit cette conclusion dans un régime qu'ils n'ont pas testé. Guépin,
-Krawczyk et De Cristofaro (*Synthetic is all you need*, arXiv 2307.01701) suppriment l'hypothèse
-de données auxiliaires réelles mais restent sur l'appartenance au jeu d'entraînement d'un
-générateur unique : jamais l'appariement entre deux générations indépendantes du même panel. Ce
-canal n'a donc pas d'antériorité directe.
+**Sur le vocabulaire de « linkability » — contradiction mesurée, mais bornée au pipeline partagé
+(pertinente pour A7) :** Giomi et al. définissent formellement la linkability, section 5.2, p. 319 :
+« Given two disjoint sets of original attributes, use the synthetic dataset to determine whether or
+not they belong to the same individual. » L'attaquant tient les **valeurs réelles** des deux
+ensembles d'attributs (T[:,A], T[:,B], p. 319), extraits d'un **seul** jeu original réel ; le
+synthétique ne sert que d'intermédiaire entre deux vues d'attributs de ce même jeu. Notre scénario
+diffère : nous relions **deux sorties synthétiques indépendantes** de la même personne, sans
+qu'aucune valeur réelle soit détenue par l'attaquant. Sur ce point nous ne les contredisons pas —
+les objets attaqués ne sont pas les mêmes. En revanche, leur résumé (p. 312) conclut : « we observe
+that synthetic data exhibits the lowest vulnerability against linkability » — confirmé section 6.1,
+p. 320-321 : « the risk to linkability is comparably low over all datasets evaluated. » **Nous
+contredisons cette conclusion générale, mais seulement dans le régime où les deux sorties viennent
+d'un pipeline partagé** (A7, 36,4 % de top-1 à 60 items communs, contrôle à 0,06 %, même équipe,
+mêmes fichiers de persona) : la linkability n'y est pas un risque négligeable, dans un régime qu'ils
+n'ont pas testé. Un témoin construit ensuite avec deux organisations réellement indépendantes
+(modèle, gabarit de prompt et format de persona tous distincts, `c7-deux-organisations-resultats.md`)
+montre que ce signal **ne survit pas** au changement de pipeline : top-1 = 1,76 % [0,35 ; 3,63] sur
+142 personnes, sous la baseline démographique seule (9,2 %) et loin du leurre de segment (25,5 %) —
+un résultat négatif que nous obtenons et rapportons nous-mêmes. Dans ce second régime, nous ne
+contredisons plus Anonymeter, nous le corroborons. Guan, Guépin, Cretu et de Montjoye (*A Zero
+Auxiliary Knowledge Membership Inference Attack on Aggregate Location Data*, ZAK-MIA, PoPETs
+2024(4):80-101, DOI 10.56553/popets-2024-0108) sont hors de ce débat : leur attaque porte sur
+l'**appartenance** (déterminer si un individu a contribué à l'agrégat publié), jamais sur la liaison
+entre deux sorties, et l'objet attaqué est un agrégat de comptages de localisation, pas un
+enregistrement tabulaire synthétique individuel. Guépin, Krawczyk et De Cristofaro (*Synthetic is
+all you need*, arXiv 2307.01701) suppriment l'hypothèse de données auxiliaires réelles mais restent
+eux aussi sur l'appartenance au jeu d'entraînement d'un générateur unique : jamais l'appariement
+entre deux générations indépendantes du même panel. Notre canal de liaison inter-jumeaux n'a donc
+pas d'antériorité qui teste le même scénario ; ce que nous revendiquons est une contradiction
+mesurée, mais désormais explicitement bornée au régime pipeline-partagé, de la conclusion générale
+d'Anonymeter — pas un vide bibliographique, et pas davantage une menace générique valable pour deux
+publieurs quelconques.
 
 ## 2. Ré-identification de données réelles
 
@@ -167,8 +187,35 @@ Trois contradicteurs soutiennent au contraire que fidélité et risque se sépar
 Reutterer (2021, arXiv 2104.00635, https://arxiv.org/abs/2104.00635) défendent la séparabilité.
 Adams et al. (iScience 2025 **[DOI à confirmer avant dépôt]**) concluent qu'un générateur
 synthétique sans garantie formelle conserve fidélité et utilité sans atteinte évidente à la vie
-privée. Un préprint 2026 (arXiv 2605.06835, https://arxiv.org/abs/2605.06835) observe au contraire
-un découplage où le risque croît quand la qualité sature. Notre réponse : les trois mesurent une
+privée. Shafieinejad, Emerson, Zamanlooy, Bassak, Tavakoli, Kodeiri, Lotif et He (préprint 2026, arXiv
+2605.06835, https://arxiv.org/abs/2605.06835, *On Privacy Leakage in Tabular Diffusion Models*)
+observent, sur des modèles de diffusion tabulaire (ClavaDDPM) attaqués par inférence d'appartenance
+(MIA), qu'en poussant l'entraînement d'un même modèle plus loin, la qualité synthétique plafonne
+(rendements décroissants) alors que le risque MIA continue de croître sans plafond visible : «
+increasing training iterations improves quality with diminishing returns while privacy risk
+continues to scale » (annexe F, premier paragraphe, p. 19, texte intégral lu), confirmé par « the
+observed changes in MIA success are generally not tied to precipitous falloffs in synthetic
+quality » (même paragraphe) et « synthetic data quality does vary with training configuration
+changes, but it does not sharply degrade in any of the scenarios » (annexe F.1, p. 20). Notre
+lecture antérieure de ce travail (« un découplage où le risque croît quand la qualité sature ») est
+une paraphrase fidèle de cette conclusion, ni exagérée ni inventée. **Nuance nécessaire** : leur «
+qualité » est une batterie de métriques agrégées (alpha-précision/bêta-rappel, KS, TVD, écarts de
+corrélation/information mutuelle, efficacité en apprentissage automatique) et leur « risque » est le
+succès d'une attaque d'appartenance (MIA) sur le jeu d'entraînement — pas une ré-identification
+1-parmi-N — et le levier qui fait varier les deux est le temps/volume d'entraînement d'**un seul**
+modèle, non une comparaison entre méthodes hétérogènes. Ce n'est donc ni « ces deux grandeurs ne
+varient jamais ensemble » (elles montent ensemble tant que l'entraînement reste modéré) ni «
+améliorer l'une n'aggrave jamais l'autre » (au contraire, passé un certain point l'entraînement
+aggrave le risque sans plus améliorer la qualité) : la formulation exacte est que la qualité
+plafonne pendant que le risque, lui, continue de monter. **Rapport à notre propre couplage
+qualité-fuite (A1)** : voisin par le thème, mais pas une antériorité directe sur notre contribution
+— leur découplage oppose qualité agrégée et risque MIA *au sein d'un seul modèle entraîné plus
+longtemps* ; le nôtre oppose fidélité individuelle et fuite individuelle *entre 12 méthodes
+hétérogènes*, sans qu'on puisse l'exclure d'un simple effet de qualité globale
+(`c7-disjoint-resultats.md`). Les deux mécanismes ne sont pas interchangeables : eux montrent que la
+qualité agrégée et le risque MIA peuvent diverger dans le temps ; nous montrons qu'à travers des
+méthodes différentes, qualité agrégée et fuite individuelle montent ensemble sans qu'on puisse
+exclure un axe de qualité globale sans empreinte individuelle. Notre réponse : les trois mesurent une
 fidélité **agrégée** (distributionnelle ou d'utilité aval), jamais la correspondance individuelle à
 la bonne personne (`c7-compromis-resultats.md`), et aucun ne teste si le couplage qu'ils observent
 (ou son absence) résiste à un nul construit sans aucune empreinte individuelle. Notre contribution
@@ -210,14 +257,26 @@ ouvert, avec leur plafond humain (retest à 81,6 % sur Twin, 96,8 % sur Stanford
 fausses accusations tenable de 1 %, le meilleur jumeau retrouve la bonne personne 3,04 % du temps
 sur Twin et 20,39 % sur Stanford, contre environ 0 % pour les mêmes repères statistiques, loin sous
 le plafond humain (54,5 % / 90,7 %) mais loin d'être nul (`c7-monde-ouvert-resultats.md`).
-**Deuxièmement**, un canal de fuite nouveau entre jeux de jumeaux, **désormais répliqué sur deux
-jeux indépendants** : deux jumeaux de la même personne, produits par des pipelines différents, se
-désignent mutuellement sans qu'un attaquant détienne la moindre réponse humaine, dès qu'ils
-partagent assez d'items (Twin : 36,4 % à 60 items communs contre 0,06 % de contrôle,
-`c7-transfert-resultats.md` ; Stanford : 11,9-13,0 % à 177 items communs contre au plus 0,31 % de
-contrôle, `c7-transfert-stanford-resultats.md`) — un canal sans antériorité directe (section 1,
-aucun précédent trouvé, et Anonymeter mesure une autre définition de la linkability), dont la
-réplication sur un second jeu, construit différemment, renforce la revendication de nouveauté. **Troisièmement**, une mesure en bits transportable d'un jeu à l'autre alors que le
+**Deuxièmement**, un canal de fuite entre jeux de jumeaux, **mesuré aux deux bouts** : sous pipeline
+partagé (même équipe, mêmes fichiers de persona), deux jumeaux de la même personne se désignent
+mutuellement sans qu'un attaquant détienne la moindre réponse humaine, dès qu'ils partagent assez
+d'items (Twin : 36,4 % à 60 items communs contre 0,06 % de contrôle, `c7-transfert-resultats.md` ;
+Stanford : 11,9-13,0 % à 177 items communs contre au plus 0,31 % de contrôle,
+`c7-transfert-stanford-resultats.md` ; décomposition sur Twin : 82 % de l'écart au plancher revient à
+l'individu, 18 % au segment démographique-idéologique, `c7-temoin-prompt-resultats.md`). Sous
+pipeline réellement indépendant — deux organisations dont le modèle, le gabarit de prompt et le
+format de persona diffèrent tous les trois — ce canal **disparaît** : top-1 = 1,76 % [0,35 ; 3,63]
+sur 142 personnes, sous la baseline démographique seule (9,2 %),
+`c7-deux-organisations-resultats.md`, un résultat négatif obtenu et rapporté par nous-mêmes plutôt
+que trouvé par un relecteur. Le canal n'a pas d'antériorité qui teste le même scénario ; nos taux
+contredisent la conclusion générale d'Anonymeter selon laquelle la linkability est le risque le plus
+faible des trois qu'il mesure (section 1), mais **seulement dans le régime pipeline-partagé** — sans
+contredire ni sa mesure dans son propre cadre tabulaire, ni sa conclusion dans le régime de
+pipelines génuinement indépendants, où notre propre témoin la corrobore. ZAK-MIA (Guan et al.,
+PoPETs 2024) est une attaque d'appartenance sur des agrégats de localisation, sans rapport avec la
+liaison. La réplication sur un second jeu construit différemment renforce la revendication de
+nouveauté du régime pipeline-partagé ; la borne négative sous pipeline indépendant en précise
+honnêtement l'étendue. **Troisièmement**, une mesure en bits transportable d'un jeu à l'autre alors que le
 taux brut ne l'est pas (facteur 1,34 contre un facteur 3,2 sur le top-1, `c7-bits-resultats.md`),
 cadrée comme un instrument dérivé de la min-entropie de Rényi (section 2). **Quatrièmement**, une
 défense (D4, section 7), variante chiffrée d'un mécanisme ancien, qui ramène le top-1 de 20,68 % à
@@ -264,7 +323,8 @@ est inférieur à l'écart déjà présent entre jumeau non protégé et humains
 | Objection | Parade | Expérience à l'appui |
 |---|---|---|
 | « Tautologie : bien sûr qu'un modèle fidèle à l'individu identifie. » | Objection non écartée sur le fond. Ce qui tient : rien ne prédisait ni la forme ni la force de cette relation avant de la mesurer sur 12 méthodes hétérogènes, et elle survit à la disjonction complète des items utilisés pour chaque axe ; à exactitude marginale égale, deux prédicteurs peuvent fuir à deux ordres de grandeur d'écart (20,7 % contre 0,23 %, A2). Ce qui ne tient plus : un nul de marge sans aucune empreinte individuelle — 100 prédicteurs n'ayant qu'une marge d'exactitude variable par personne — reproduit déjà la force du couplage observé (rho nul 0,984 en moyenne, 95e centile 1,000, contre 0,969 observé). Le couplage qualité-fuite est réel et n'est pas un artefact de calcul recyclé, mais il ne démontre aucune spécificité individuelle : un simple axe de qualité globale suffit, dans l'esprit des témoins aveugles récemment exigés pour les attaques d'inférence (Das, Zhang, Tramèr, arXiv 2406.16201). Test préenregistré, prédiction principale réfutée. | Spearman 0,969 [0,937 ; 0,993] sur items disjoints, nul de marge 0,984 (`c7-disjoint-resultats.md`) ; réplication inter-recettes (`c7-gen-resultats.md`, `c7-stanford-provenance-resultats.md`). **Réfuté par le test d'auto-réfutation préenregistré du 12/09.** |
-| « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique ; Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. Notre taux est un contre-exemple frontal à la conclusion de linkability faible, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
+| « Connu depuis Stadler 2022 / linkability faible selon Anonymeter. » | Stadler et Anonymeter portent sur le tabulaire génératif générique, avec un attaquant détenant des valeurs réelles sur un seul jeu (Anonymeter, section 5.2, p. 319) : scénario différent du nôtre, que nous ne contredisons pas. Leur conclusion générale — « synthetic data exhibits the lowest vulnerability against linkability » (résumé, p. 312 ; confirmé section 6.1, p. 320-321) — est contredite par notre taux **uniquement dans le régime pipeline-partagé** (36,4 %, `c7-temoin-prompt-resultats.md`) ; un témoin à deux organisations réellement indépendantes montre que ce signal disparaît sous pipeline indépendant (1,76 %, sous la baseline démographique de 9,2 %, `c7-deux-organisations-resultats.md`) — dans ce régime, nous corroborons Anonymeter plutôt que de le contredire. Annamalai et al. et Ganev (seul ou avec De Cristofaro) montrent déjà que la DCR sous-estime le risque, mais aucun ne teste des jumeaux LLM catégoriels. ZAK-MIA (Guan et al., PoPETs 2024) est une attaque d'appartenance sur des agrégats de localisation, sans rapport avec la liaison. Notre contre-exemple à la conclusion générale de linkability faible tient donc, mais borné au pipeline partagé, avec un écart de deux ordres de grandeur face à des prédicteurs non-LLM de même exactitude dans ce régime. | PMM/B2/donneur k=1 tous < 0,3 % à exactitude comparable (`c7-contre-examen-2026-09-11.md` §1). |
+| « Votre canal inter-jumeaux (A7) n'est qu'un artefact de pipeline partagé, pas un risque de liaison réel. » | Admis et quantifié, pas nié : témoin à deux organisations réellement indépendantes (modèle, gabarit de prompt et format de persona tous distincts) — top-1 = 1,76 % [0,35 ; 3,63] sur n = 142, sous la baseline démographique (9,2 %), signal qui s'affaiblit (pas se renforce) entre n = 82 (3,66 %) et n = 142. A7 ne tient que sous pipeline partagé, où l'apport individuel (17,4 pts) domine largement l'apport de segment (3,8 pts). C'est un résultat négatif obtenu par nous-mêmes, écrit comme limite plutôt que découvert par un relecteur. | `c7-deux-organisations-resultats.md` ; `c7-temoin-prompt-resultats.md`. |
 | « Le persona contient déjà les réponses de la vague cible : fuite triviale. » | Audit de provenance : 0 colonne et 0 QID de vague 4 dans le contexte ; symétrie 37,7 % vs 37,9 % ; canal de randomisation écarté. | `c7-contre-examen-2026-09-11.md` §2 ; ablation H3 (`c7-mecanisme-resultats.md`). |
 | « Ce n'est pas une vraie ré-identification : il faut déjà tenir les réponses réelles de la cible. » | Assumé explicitement : c'est un résultat de linkability (au sens CAP/TCAP et RGPD/G29), pas une identification à partir d'informations publiques ; scénario de menace = détenteur de panel publiant des jumeaux sans clé. | Modèle de menace, `c7-contre-examen-2026-09-11.md` §4 ; brouillon de divulgation responsable. |
 | « Connu depuis 2018 : sur-apprentissage et attaques d'appartenance (Yeom et al.), mémorisation nécessaire à la généralisation (Feldman). » | Ces résultats portent sur un modèle **entraîné** sur la population, avec un écart train/test. Notre pipeline n'entraîne rien : la personne n'appartient à aucun jeu d'entraînement, et la fidélité individuelle vient du conditionnement par persona, pas du sur-ajustement. | Absence de tout entraînement dans le pipeline d'attaque (§3) ; ablation H3 qui localise la fuite dans le motif de réponses, pas dans un modèle appris sur les cibles (`c7-mecanisme-resultats.md`). |

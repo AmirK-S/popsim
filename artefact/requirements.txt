@@ -1,0 +1,22 @@
+# Dependances necessaires a l'execution de artefact/run.sh (et donc de la
+# cascade d'imports reellement empruntee : generer_donnees.py, attaque.py,
+# defense.py, tableau_final.py, et les modules de analyses/ qu'ils
+# importent -- t1_commun, c7_reidentification, c7_defense, c7_mecanisme,
+# a2_commun, a2_baselines_gss/twin, a25_*, a28_a44_commun, etc.).
+#
+# Volontairement plus restreint que le requirements.txt de la racine du
+# depot (qui couvre tout le projet, y compris matplotlib, pyreadstat,
+# openpyxl, pyarrow, mlx*, transformers -- aucun de ces paquets n'est
+# importe par la chaine que run.sh emprunte reellement). Versions alignees
+# sur celles verifiees dans .venv/ le 2026-09-11 (memes chiffres que le
+# requirements.txt racine), pour rester reproductible sans imposer
+# l'installation de paquets non necessaires a cet artefact.
+#
+# Installation (hors ligne une fois le venv pret et ces paquets deja en
+# cache local ; l'installation initiale necessite le reseau, voir README) :
+#   .venv/bin/python -m pip install -r artefact/requirements.txt
+
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.0

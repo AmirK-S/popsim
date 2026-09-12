@@ -1,9 +1,11 @@
 % article/references.bib
-% 45 entrées. 27 proviennent d'une vérification à la source antérieure (agent disparu avant
-% d'écrire le fichier ; ses vérifications sont reprises telles quelles ici) ; 18 ont été
-% vérifiées à la source dans cette passe (voir article/references-verification.md pour le détail
-% et les corrections apportées à plusieurs attributions d'auteurs/identifiants erronés dans
-% resultats/article-travaux-connexes.md).
+% 47 entrées au 12/09/2026 (46 + l'entrée AAPOR ajoutée ce jour, Bloc D). Répartition exacte de
+% l'état de vérification : 27 (Bloc A) reprises d'une vérification antérieure sans nouvelle
+% vérification à la source ; 18 (Bloc B) vérifiées à la source dans la passe de la nuit du
+% 11-12/09 ; 1 (Bloc C, guan2024zakmia) vérifiée à la source dans une passe complémentaire du
+% 12/09 ; 1 (Bloc D, aapor2026responsibleai) vérifiée à la source (PDF intégral + métadonnées) le
+% 12/09. Le compte « toutes les 47 entrées vérifiées à la source » serait faux : voir le détail
+% entrée par entrée, et l'état exact de chaque bloc, dans article/references-verification.md.
 
 % =====================================================================
 % Bloc A — 27 entrées reprises telles quelles (vérification à la source antérieure)
@@ -78,3 +80,18 @@
 @inproceedings{dwork2015robust, author={Dwork, Cynthia and Smith, Adam and Steinke, Thomas and Ullman, Jonathan and Vadhan, Salil}, title={Robust Traceability from Trace Amounts}, booktitle={{IEEE} 56th Annual Symposium on Foundations of Computer Science ({FOCS} 2015)}, year={2015}, pages={650--669}, doi={10.1109/FOCS.2015.46}, note={L'identifiant {1502.02486} donn{\'e} initialement d{\'e}signe un article sans rapport (Klebanov et Rachev) ; aucun pr{\'e}print arXiv retrouv{\'e} pour cet article, cit{\'e} ici via les actes {FOCS}}}
 
 @inproceedings{guepin2023synthetic, author={Gu{\'e}pin, Florent and Meeus, Matthieu and Cretu, Ana-Maria and de Montjoye, Yves-Alexandre}, title={Synthetic is all you need: Removing the Auxiliary Data Assumption for Membership Inference Attacks against Synthetic Data}, booktitle={Data Privacy Management ({DPM}) Workshop @ {ESORICS} 2023}, year={2023}, eprint={2307.01701}, archivePrefix={arXiv}, note={Cit{\'e} dans le manuscrit et resultats/article-travaux-connexes.md avec des coauteurs erron{\'e}s (Krawczyk, De Cristofaro) ; coauteurs r{\'e}els {\'e}tablis ici (Meeus, Cretu, de Montjoye)}}
+
+% =====================================================================
+% Bloc C — vérification complémentaire du 12/09/2026 (portée d'Anonymeter et de ZAK-MIA face à
+% A7 ; voir resultats/anteriorite-anonymeter-zak-2026-09-12.md, PDF lus intégralement à la source)
+% =====================================================================
+
+@article{guan2024zakmia, author={Guan, Vincent and Gu{\'e}pin, Florent and Cretu, Ana-Maria and de Montjoye, Yves-Alexandre}, title={A Zero Auxiliary Knowledge Membership Inference Attack on Aggregate Location Data}, journal={Proceedings on Privacy Enhancing Technologies}, volume={2024}, number={4}, pages={80--101}, year={2024}, doi={10.56553/popets-2024-0108}}
+
+% =====================================================================
+% Bloc D — ajout du 12/09/2026 : source AAPOR citée deux fois en prose dans le manuscrit
+% (introduction et §8) sans clé ni entrée bibliographique. Vérifiée à la source (PDF intégral
+% et métadonnées PDF) ; voir article/references-verification.md.
+% =====================================================================
+
+@techreport{aapor2026responsibleai, author={Rothschild, David M. and Marlar, Jenny and Amaya, Ashley and Barari, Soubhik and Buskirk, Trent and Cobb, Curtiss and Gennai, Jen and Hillygus, D. Sunshine and Korlakai Vinayak, Ramya and Krupenkin, Masha and Lee, Sunghee and Steiger, Darby and Webb, Brock}, title={Responsible {AI} Integration in Survey Research}, institution={American Association for Public Opinion Research ({AAPOR})}, year={2026}, month={may}, url={https://aapor.org/wp-content/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf}, note={{AAPOR} Task Force on Responsible {AI} Integration in Survey Research ; commissioned, reviewed and accepted by the {AAPOR} Executive Council ; {PDF} creation date confirmed 8 May 2026 via document metadata, matching the manuscript's citation}}

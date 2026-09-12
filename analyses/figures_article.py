@@ -3,10 +3,13 @@ figures_article : les deux figures du manuscrit (article/manuscrit.md).
 
 Ne recalcule rien. Lit uniquement des CSV deja calcules dans resultats/ :
   - c7-monde-ouvert.csv, c7-monde-ouvert-roc.csv,
-    c7-attaquant-fort.csv                               -> figure 1
+    c7-attaquant-fort.csv, c7-monde-ouvert-ic.csv,
+    c7-fort-monde-ouvert-ic.csv                          -> figure 1
   - c7-compromis-robustesse-points.csv (13 points, dont le retest humain,
-    superset de c7-compromis.csv), c7-disjoint-nul.csv,
-    c7-disjoint-resume.csv, c7-ic-manquants.csv          -> figure 2
+    superset de c7-compromis.csv), c7-nul-corrige.csv (point reel),
+    c7-reidentification.csv, c7-ic-manquants.csv         -> figure 2
+    (bande du temoin corrige : constantes chiffrees, cf. docstring figure 2
+    ci-dessous -- aucun CSV de replicats verse au depot pour ce temoin)
 
 Aucun appel de modele, aucun reseau. Etiquettes/axes/legendes en anglais,
 lisibles en noir et blanc (formes + styles de trait distincts, la couleur est
@@ -18,18 +21,61 @@ Usage : .venv/bin/python analyses/figures_article.py
 Donnees manquantes signalees ici (ne pas inventer, ne pas combler) :
   - Figure 1 : l'attaquant fort (A-LLR hors pli, analyses/c7_attaquant_fort.py) n'a
     ete evalue qu'a deux seuils de FPR (0,1 % et 1 %), jamais sur une courbe ROC
-    complete, et c7-attaquant-fort.csv ne porte pas de colonnes _bas/_haut pour ces
-    deux taux (seul le top-1 en monde ferme a un IC bootstrap). L'attaque forte est
-    donc tracee comme deux points isoles, sans ligne qui relierait des seuils
-    intermediaires jamais mesures, et sans barre d'erreur.
-  - Figure 2 : le "nul de marge" disponible (c7-disjoint-nul.csv) ne donne
-    qu'une distribution de rho de Spearman simule (corr. globale
-    fidelite~fuite), pas de valeurs de fuite simulees par predicteur/point.
-    Impossible donc de tracer une bande spatiale (x,y) superposee au nuage
-    sans inventer des points. A la place : un encart montre la distribution
-    des rho nuls (bande 5e-95e centile) contre le rho observe correspondant
-    (meme test, items disjoints), ce qui est la comparaison decisive du
-    controle sans invention de donnees.
+    complete : trace donc comme deux points isoles, sans ligne qui relierait des
+    seuils intermediaires jamais mesures (regle non negociable, cf. figure). Les IC
+    a 95 % (bootstrap (B), parametres re-estimes par pli pour l'attaque forte,
+    cf. resultats/c7-fort-monde-ouvert-ic-2026-09-12.md ; seuil rejoue pour la
+    naive, cf. resultats/c7-monde-ouvert-ic-2026-09-12.md) sont lus dans
+    c7-fort-monde-ouvert-ic.csv / c7-monde-ouvert-ic.csv et affiches en barres
+    d'erreur, seulement aux deux seuils reperes. A FPR = 0,1 %, le seuil ne repose
+    que sur ~1-2 faux positifs absolus (marqueur evide) contre ~11-21 a 1 %
+    (marqueur plein) : instabilite rendue visible, pas une mesure de meme qualite.
+    Sur Twin, les IC de l'attaque forte et de la naive se chevauchent largement aux
+    deux FPR (gain non etabli) ; sur Park ils ne se chevauchent pas (gain net).
+  - Figure 2 : nul de marge, VERSION CORRIGEE le 12/09 (revue hostile
+    resultats/revue-hostile-gel-2026-09-12.md, D1/D2 ; audit adverse
+    resultats/audit-renversement-2026-09-12.md). Historique : la bande
+    provenait de c7-disjoint-nul.csv / c7-disjoint-resume.csv (items
+    disjoints, analyses/c7_disjoint.py::construire_nul), avec un defaut reel
+    ligne 133 (les cellules fausses evitent la vraie modalite de la
+    personne) qui gonflait la fuite du nul d'un facteur ~1,3 (top-1 41,2 %
+    contre 31,6 % une fois les fausses valeurs retirees dans la marginale de
+    population). Un renversement tente dans la nuit du 11 au 12/09
+    (c7-nul-corrige.csv, 5 temoins qui apparient l'exactitude contre une
+    CIBLE DE SUBSTITUTION) a ete audite et retire : ces 5 temoins detruisent
+    l'exactitude contre la verite (0,41-0,44 contre 0,53 pour le reel) et ne
+    prouvent rien. L'audit a construit, lui, le temoin qui manquait --
+    exactitude EXACTE contre la verite par personne, positions tirees au
+    hasard, cellules fausses tirees dans la marginale de population de
+    l'item (script scratchpad audit_contre_nul.py, non verse au depot ; run
+    en avant-plan le 12/09 pour cette figure, 20 replicats x 12
+    configurations, ~130 s, meme graine que l'audit -> rho moyen 0,9741,
+    mediane 0,9720, p5 0,9500, p95 0,9934, reproduit a l'identique les
+    chiffres de resultats/audit-renversement-2026-09-12.md §1.3). C'est ce
+    temoin, et non plus le nul d'origine ni les 5 temoins retires, qui est
+    desormais publie ici et dans le texte du §5.1 (rho 0,974 [0,950 ; 0,993]
+    contre 0,965 observe). Ni ce temoin ni le reel n'ont de CSV de replicats
+    verse au depot : la bande [BANDE_P5, BANDE_P95] et le point rho_obs
+    ci-dessous sont donc des CONSTANTES chiffrees dans ce fichier, sourcees
+    au run ci-dessus et a resultats/audit-renversement-2026-09-12.md (bande)
+    et a c7-nul-corrige.csv, ligne rho_resume/reel (point, 0,965034965...,
+    memes 12 configurations/memes items que le temoin, "items entiers" et
+    non disjoints -- d'ou l'ecart avec le 0,969 historique sur items
+    disjoints, note heritee D7 de l'audit). Le point continue de tomber DANS
+    la bande : la prediction (b) reste refutee, le verdict visuel ne change
+    pas. Ce temoin n'est pas non plus depourvu de structure individuelle
+    (31,6 % de top-1 une fois apparie sur l'exactitude, contre 20,73 % /
+    3,56 bits pour le jumeau reel et 0,049 % pour le hasard pur) ; AUCUNE
+    source ne donne de bits pour la mesure a 31,6 % (le 4,63 bits qui
+    circulait est celui de l'ancienne mesure a 31,15 %, abandonnee -- cf.
+    resultats/audit-chiffres-2026-09-12.md) : ce chiffre de bits est donc
+    volontairement absent de la legende. Toute formulation "aucune structure
+    individuelle" serait fausse et n'est plus utilisee. Pas de bande
+    spatiale (x,y) : on ne dispose que d'une distribution de rho global, pas
+    d'une fuite simulee par predicteur/point.
+    A CORRIGER COTE MANUSCRIT, PAS ICI (signale, non traite par ce script) :
+    §5.1 n'appelle jamais "Figure 2" -- la figure reste orpheline tant que
+    le texte ne la cite pas explicitement (revue hostile D2).
 """
 
 import os
@@ -61,6 +107,18 @@ plt.rcParams.update({
 FPR_FLOOR = 4e-4  # plancher d'affichage log pour les points fpr=0 (rendu seulement,
                     # aucune valeur numerique n'est modifiee dans les CSV sources)
 
+# Figure 2, encart : temoin de marge CORRIGE (exactitude exacte contre la verite par
+# personne, positions au hasard, cellules fausses tirees dans la marginale de population
+# de l'item). Aucun CSV de replicats n'est verse au depot pour ce temoin -- seules des
+# statistiques agregees existent, sourcees a resultats/audit-renversement-2026-09-12.md
+# §1.3 et reproduites a l'identique le 12/09 en avant-plan (scratchpad audit_contre_nul.py,
+# 20 replicats x 12 configurations, meme graine : rho moyen 0.9741, mediane 0.9720,
+# p5 0.9500, p95 0.9934, min 0.9301, max 1.0000). D'ou des CONSTANTES, pas une colonne
+# de CSV chargee dynamiquement.
+NUL_CORRIGE_P5 = 0.9500
+NUL_CORRIGE_P95 = 0.9934
+NUL_CORRIGE_MOYEN = 0.9741
+
 
 def _floor_fpr(fpr):
     fpr = np.asarray(fpr, dtype=float)
@@ -85,9 +143,27 @@ STYLES_F1 = {
 # Attaquant fort (A-LLR, hors pli) : jamais evalue en courbe complete, seulement aux
 # deux seuils de FPR deja affiches en repere (0,1 % et 1 %). Trace en points isoles,
 # trait plein absent par construction (relier deux seuils mesures inventerait la forme
-# entre eux). Marqueur plein noir pour rester net en noir et blanc.
-STYLE_FORT = dict(marker="D", ms=4.6, color="black",
-                   label="Strong attack (A-LLR), 0.1%/1% FPR points only")
+# entre eux). Marqueur plein noir pour rester net en noir et blanc ; evide (blanc) a
+# FPR = 0,1 % pour signaler un seuil cale sur ~1-2 faux positifs seulement (cf. legende).
+STYLE_FORT = dict(marker="D", ms=4.8, color="black",
+                   label="Strong attack (A-LLR), 0.1%/1% FPR only (95% CI)")
+
+# Reperes FPR = 0,1 % et 1 % : colonnes du point et de l'IC bootstrap a lire dans
+# c7-monde-ouvert-ic.csv (naive, seuil rejoue) et c7-fort-monde-ouvert-ic.csv (fort,
+# bootstrap (B) re-estime -- celui recommande par le rapport, cf. docstring). evide=True
+# marque le seuil FPR=0,1 % (~1-2 FP absolus), le plus instable des deux.
+REPERES_F1 = [
+    (0.001, dict(naif_pt="tpr_0_1pct", naif_bas="tpr_0_1pct_ic_bas_seuil_rejoue",
+                 naif_haut="tpr_0_1pct_ic_haut_seuil_rejoue",
+                 fort_pt="tpr_0_1pct_fort", fort_bas="tpr_0_1pct_fort_ic_bas_reestime",
+                 fort_haut="tpr_0_1pct_fort_ic_haut_reestime", evide=True)),
+    (0.01, dict(naif_pt="tpr_1pct", naif_bas="tpr_1pct_ic_bas_seuil_rejoue",
+                naif_haut="tpr_1pct_ic_haut_seuil_rejoue",
+                fort_pt="tpr_1pct_fort", fort_bas="tpr_1pct_fort_ic_bas_reestime",
+                fort_haut="tpr_1pct_fort_ic_haut_reestime", evide=False)),
+]
+
+NOMS_MEILLEUR = ["Meilleur jumeau (JSON Persona GPT4.1)", "Meilleur agent (composite)"]
 
 PREDICTEUR_A_CLE = {
     ("Twin", "Meilleur jumeau (JSON Persona GPT4.1)"): "meilleur",
@@ -100,17 +176,13 @@ PREDICTEUR_A_CLE = {
     ("Stanford", "Retest humain (plafond)"): "humain",
 }
 
-# jeu de la figure -> jeu de c7-attaquant-fort.csv, et l'etiquette de l'attaque forte
-# retenue par le preenregistrement (A-LLR hors pli, pas A-MI qui est en echantillon).
-JEU_ATTAQUANT_FORT = {"Twin": "Twin", "Stanford": "Park GSS"}
-ATTAQUE_FORTE = "A-LLR (vraisemblance, hors pli)"
-
 
 def figure1():
     roc = pd.read_csv(os.path.join(RESULTATS, "c7-monde-ouvert-roc.csv"))
-    resume = pd.read_csv(os.path.join(RESULTATS, "c7-monde-ouvert.csv"))
-    fort = pd.read_csv(os.path.join(RESULTATS, "c7-attaquant-fort.csv"))
-    fort = fort[fort["attaque"] == ATTAQUE_FORTE]
+    # Points + IC a 95 % lus dans les CSV dedies (cf. docstring) : source de verite
+    # pour les deux seuils reperes (0,1 % et 1 %), naive et forte.
+    ic_naif = pd.read_csv(os.path.join(RESULTATS, "c7-monde-ouvert-ic.csv"))
+    ic_fort = pd.read_csv(os.path.join(RESULTATS, "c7-fort-monde-ouvert-ic.csv"))
 
     fig, axes = plt.subplots(2, 1, figsize=(3.4, 6.3), sharex=True)
 
@@ -136,37 +208,64 @@ def figure1():
                      ms=st["ms"], color=st["color"], label=st["label"],
                      markerfacecolor=st["color"], markeredgecolor=st["color"])
 
-        # lignes reperes FPR = 0.1% et 1%, TPR annote pour le meilleur jumeau/agent
-        # (attaque naive) et pour l'attaquant fort (A-LLR, hors pli)
-        ligne_res = resume[resume["jeu"] == jeu]
-        ligne_fort = fort[fort["jeu"] == JEU_ATTAQUANT_FORT[jeu]]
-        for fpr_repere, colonne in [(0.001, "tpr_fpr_0_1pct"), (0.01, "tpr_fpr_1pct")]:
+        # reperes FPR = 0,1 % et 1 % : point + IC a 95 % (bootstrap), pour le meilleur
+        # jumeau/agent (attaque naive, seuil rejoue) et pour l'attaquant fort (A-LLR,
+        # hors pli, bootstrap (B) re-estime). Deux points mesures pour l'attaquant
+        # fort, aucune ligne entre eux -- relier deux seuils inventerait une forme de
+        # courbe jamais mesuree (cf. docstring du module). Marqueur evide (blanc) a
+        # FPR = 0,1 % : seuil cale sur ~1-2 faux positifs absolus seulement, contre
+        # ~11-21 a FPR = 1 % (marqueur plein) -- instabilite rendue visible, pas une
+        # mesure de meme qualite.
+        ligne_naif_jeu = ic_naif[(ic_naif["jeu"] == jeu) &
+                                  (ic_naif["predicteur"].isin(NOMS_MEILLEUR))]
+        ligne_fort_jeu = ic_fort[ic_fort["jeu"] == jeu]
+        st_meilleur = STYLES_F1["meilleur"]
+        xf, yf = [], []
+        for fpr_repere, cols in REPERES_F1:
             ax.axvline(fpr_repere, color="0.6", lw=0.7, ls=(0, (1, 1)), zorder=0)
-            ligne_meilleur = ligne_res[ligne_res["predicteur"].isin(
-                ["Meilleur jumeau (JSON Persona GPT4.1)", "Meilleur agent (composite)"])]
-            if not ligne_meilleur.empty:
-                tpr_val = float(ligne_meilleur[colonne].iloc[0])
-                ax.annotate(f"{tpr_val * 100:.1f}%", xy=(fpr_repere, tpr_val),
+            face_naif = "white" if cols["evide"] else st_meilleur["color"]
+            face_fort = "white" if cols["evide"] else STYLE_FORT["color"]
+
+            if not ligne_naif_jeu.empty:
+                r = ligne_naif_jeu.iloc[0]
+                y = float(r[cols["naif_pt"]])
+                lo = float(r[cols["naif_bas"]])
+                hi = float(r[cols["naif_haut"]])
+                ax.errorbar([fpr_repere], [y], yerr=[[max(y - lo, 0)], [max(hi - y, 0)]],
+                             fmt=st_meilleur["marker"], ms=st_meilleur["ms"] + 1.2,
+                             color=st_meilleur["color"], markerfacecolor=face_naif,
+                             markeredgecolor=st_meilleur["color"], mew=0.8,
+                             elinewidth=0.9, capsize=2.2, zorder=4)
+                ax.annotate(f"{y * 100:.1f}%", xy=(fpr_repere, y),
                              xytext=(-3, 7), textcoords="offset points", fontsize=6.0,
                              color="0.25", ha="right", clip_on=False)
-            if not ligne_fort.empty:
-                tpr_fort = float(ligne_fort[colonne].iloc[0])
-                ax.annotate(f"{tpr_fort * 100:.1f}%", xy=(fpr_repere, tpr_fort),
+
+            if not ligne_fort_jeu.empty:
+                r = ligne_fort_jeu.iloc[0]
+                y = float(r[cols["fort_pt"]])
+                lo = float(r[cols["fort_bas"]])
+                hi = float(r[cols["fort_haut"]])
+                xf.append(fpr_repere)
+                yf.append(y)
+                ax.errorbar([fpr_repere], [y], yerr=[[max(y - lo, 0)], [max(hi - y, 0)]],
+                             fmt="none", ecolor=STYLE_FORT["color"], elinewidth=0.9,
+                             capsize=2.2, zorder=4)
+                ax.scatter([fpr_repere], [y], marker=STYLE_FORT["marker"],
+                           s=STYLE_FORT["ms"] ** 2, color=STYLE_FORT["color"],
+                           facecolor=face_fort, edgecolor=STYLE_FORT["color"],
+                           linewidth=0.8, zorder=5)
+                ax.annotate(f"{y * 100:.1f}%", xy=(fpr_repere, y),
                              xytext=(9, 1), textcoords="offset points", fontsize=6.0,
                              color="black", fontweight="bold", ha="left", va="center",
                              clip_on=False)
 
-        # attaquant fort : deux points mesures (0,1 % et 1 % de FPR), aucune ligne --
-        # relier deux seuils par un trait inventerait une forme de courbe jamais
-        # mesuree entre eux (cf. docstring du module). Pas de barre d'erreur : les
-        # colonnes tpr_fpr_*_bas/haut n'existent pas dans c7-attaquant-fort.csv.
-        if not ligne_fort.empty:
-            xf = [0.001, 0.01]
-            yf = [float(ligne_fort["tpr_fpr_0_1pct"].iloc[0]),
-                  float(ligne_fort["tpr_fpr_1pct"].iloc[0])]
-            ax.scatter(xf, yf, marker=STYLE_FORT["marker"], s=STYLE_FORT["ms"] ** 2,
-                       color=STYLE_FORT["color"], edgecolor="white", linewidth=0.5,
-                       label=STYLE_FORT["label"], zorder=4)
+        # entree de legende unique pour l'attaquant fort (les scatter ci-dessus ont
+        # deja trace les deux points ; celui-ci ne sert qu'a fabriquer le pictogramme
+        # de legende, hors axes)
+        if xf:
+            ax.scatter([], [], marker=STYLE_FORT["marker"], s=STYLE_FORT["ms"] ** 2,
+                       color=STYLE_FORT["color"], edgecolor=STYLE_FORT["color"],
+                       linewidth=0.8, label=STYLE_FORT["label"])
 
         ax.set_xscale("log")
         ax.set_xlim(FPR_FLOOR, 1.0)
@@ -182,9 +281,13 @@ def figure1():
                bbox_to_anchor=(0.55, 0.045))
     fig.suptitle("Open-world reidentification risk (ROC)", fontsize=9.5, y=0.965)
     fig.text(0.5, 0.006,
-              "Strong attack (A-LLR, out-of-fold): 2 measured points per panel, no "
-              "full ROC and no bootstrap CI in the source CSV.",
-              fontsize=5.3, color="0.25", ha="center", va="bottom")
+              "Error bars: 95% bootstrap CI (naive: threshold re-drawn each trial; "
+              "strong attack: A-LLR re-fit per fold, n=300).\n"
+              "Open marker = FPR 0.1% (~1-2 abs. FP, n=2058/1052); filled = FPR 1% "
+              "(~11-21 FP). No interpolation between points.\n"
+              "Twin: strong-vs-naive 95% CIs overlap widely at both FPR (gain not "
+              "established). Park: no overlap (gain robust).",
+              fontsize=4.8, color="0.25", ha="center", va="bottom", linespacing=1.3)
 
     chemin = os.path.join(FIGURES, "fig1-monde-ouvert.png")
     fig.savefig(chemin, dpi=300, bbox_inches="tight")
@@ -211,8 +314,6 @@ def _style_point(groupe, nom):
 
 def figure2():
     points = pd.read_csv(os.path.join(RESULTATS, "c7-compromis-robustesse-points.csv"))
-    nul = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-nul.csv"))
-    resume = pd.read_csv(os.path.join(RESULTATS, "c7-disjoint-resume.csv"))
     # IC bootstrap de la fuite (top-1), 8 des 13 points depuis c7-reidentification.csv,
     # cible="humains vague 4" (verifie a 1e-9 pres contre fuite_top1) ; les 5 manquants
     # (les 4 temoins statistiques et le retest humain) et l'IC de fidelite pour les 13
@@ -273,32 +374,56 @@ def figure2():
     ax.grid(True, color="0.88", lw=0.5, zorder=0)
     ax.legend(loc="upper left", frameon=False, fontsize=6.6)
 
-    # encart : rho observe (items disjoints) contre bande du nul de marge (5e-95e centile)
-    rho_obs = float(resume["rho_disjoint_moyen"].iloc[0])
-    bas5, haut95 = np.percentile(nul["rho_nul"], [5, 95])
+    # encart : rho observe contre la bande du temoin de marge CORRIGE (5e-95e centile).
+    # Temoin corrige = exactitude EXACTE contre la verite par personne (et donc par
+    # configuration), positions tirees au hasard, cellules fausses tirees dans la
+    # marginale de population de l'item -- pas le nul d'origine (defaut ligne 133 de
+    # analyses/c7_disjoint.py) ni les 5 temoins a cible de substitution retires apres
+    # audit (cf. docstring du module et resultats/audit-renversement-2026-09-12.md).
+    # Bande [NUL_CORRIGE_P5, NUL_CORRIGE_P95] : constantes chiffrees (voir module,
+    # pas de CSV de replicats verse au depot). Point = rho reel sur les memes 12
+    # configurations/items que le temoin ("items entiers"), lu dans c7-nul-corrige.csv
+    # (ligne rho_resume/reel) -- distinct du 0,969 historique sur items disjoints. La
+    # bande recouvre toujours le point observe : la prediction (b) reste refutee.
+    nul_corrige = pd.read_csv(os.path.join(RESULTATS, "c7-nul-corrige.csv"))
+    ligne_reelle = nul_corrige[(nul_corrige["type"] == "rho_resume")
+                                & (nul_corrige["construction"] == "reel")].iloc[0]
+    rho_obs = float(ligne_reelle["rho_moyen"])
+    bas5, haut95 = NUL_CORRIGE_P5, NUL_CORRIGE_P95
+    assert abs(rho_obs - 0.9650) < 1e-3 and bas5 < rho_obs < haut95
+
     # position en fraction des axes principaux (pas de la figure) pour rester ancree
     # dans une zone du nuage sans point : fidelite 0.5-0.88, fuite ~0.25-0.53, vide
     # (LLM max fuite 0.21, humain a fuite 0.82 hors de cette zone).
     inset = ax.inset_axes([0.50, 0.30, 0.38, 0.32])
     inset.set_facecolor("white")
     inset.set_zorder(5)
-    inset.axhspan(bas5, haut95, color="0.75", zorder=1)
-    inset.scatter([0.5], [rho_obs], marker="o", color="black", s=22, zorder=3)
+    inset.axhspan(bas5, haut95, color="0.75", zorder=1,
+                   label="corrected margin null, 5th-95th pct (truth-matched accuracy)")
+    inset.scatter([0.5], [rho_obs], marker="o", color="black", s=22, zorder=3,
+                   label="observed rho")
     inset.set_xlim(0, 1)
     inset.set_xticks([])
     inset.set_ylim(min(bas5, rho_obs) - 0.01, max(haut95, rho_obs) + 0.01)
     inset.set_ylabel("Spearman rho", fontsize=6.0, labelpad=1)
-    inset.set_title("Margin-null band\n(disjoint items, 5th-95th pct)", fontsize=5.8,
-                      pad=2)
+    inset.set_title("Corrected margin-null band\n(truth-matched accuracy, 5th-95th pct)",
+                      fontsize=5.8, pad=2)
     inset.tick_params(labelsize=5.6)
     for spine in inset.spines.values():
         spine.set_linewidth(0.6)
 
     fig.text(0.01, 0.005,
-              "Error bars: 95% bootstrap CI, per-person resampling, both axes, "
-              "all 13 predictors.",
-              fontsize=5.3, color="0.25", ha="left", va="bottom")
-    fig.tight_layout(rect=(0, 0.035, 1, 1))
+              "Error bars: 95% bootstrap CI, per-person resampling, both axes, all 13 "
+              "predictors. Inset: CORRECTED margin null (audit-renversement-2026-09-12.md) "
+              "-- truth-matched per-person accuracy, false cells from the population "
+              "marginal, not the original disjoint-item null (c7_disjoint.py l.133 "
+              "inflated its leakage ~1.3x, 41.2% vs 31.6% top-1) nor the 5 withdrawn "
+              "substitute-target witnesses. Band [0.950, 0.993] still covers the observed "
+              "rho=0.965 (12 configs, vs. the historical 0.969 on disjoint items): "
+              "verdict unchanged. Leaks 31.6% top-1 (no bits reported for this figure) "
+              "vs 20.73% / 3.56 bits for the real twin and 0.049% for chance.",
+              fontsize=4.7, color="0.25", ha="left", va="bottom", wrap=True)
+    fig.tight_layout(rect=(0, 0.145, 1, 1))
     chemin = os.path.join(FIGURES, "fig2-couplage.png")
     fig.savefig(chemin, dpi=300, bbox_inches="tight")
     plt.close(fig)

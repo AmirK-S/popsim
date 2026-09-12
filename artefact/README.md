@@ -6,12 +6,27 @@ reelle**. Il accompagne l'article sur le risque de vie privee des jumeaux numeri
 (`resultats/c7-resultats.md`, `resultats/c7-defense-resultats.md`).
 
 ```
-.venv/bin/python -m venv .venv   # si besoin, ou utilisez votre propre python3.10+
+python3 -m venv .venv                                    # si besoin, sinon utilisez le .venv existant du depot
+.venv/bin/python -m pip install -r artefact/requirements.txt   # etape reseau, une seule fois (voir note ci-dessous)
 ./artefact/run.sh
 ```
 
-Duree mesuree localement : **environ 25 secondes** (bien sous la barre des 5 minutes),
-sur un Mac portable, sans GPU, sans reseau, sans appel de modele de langage.
+L'installation des dependances (`pip install`, deuxieme ligne) est la **seule** etape qui
+a besoin du reseau (acces a PyPI) : ne la confondez pas avec `./artefact/run.sh`
+lui-meme, qui, lui, ne fait strictement aucun appel reseau (verifie : aucun `requests`,
+`urllib`, `socket` appele dans toute la cascade d'imports empruntee). Un venv fraichement
+cree ne contient aucun paquet -- sans cette deuxieme ligne, `generer_donnees.py` s'arrete
+immediatement sur `ModuleNotFoundError: No module named 'numpy'`. `artefact/requirements.txt`
+liste uniquement les quatre paquets reellement importes par la cascade de `run.sh` (numpy,
+pandas, scipy, scikit-learn) ; le `requirements.txt` de la racine du depot fonctionne aussi
+(sur-ensemble) mais installe beaucoup de paquets non nécessaires ici (matplotlib, mlx, etc.).
+
+Duree mesuree localement : **environ 25 secondes** sur un cache de paquets deja chaud
+(bien sous la barre des 5 minutes) ; le tout premier lancement sur un venv qui vient d'etre
+peuple est plus lent (compilation bytecode/lecture disque initiale des paquets, de l'ordre
+de 20 secondes de plus) -- les executions suivantes retombent a quelques secondes.
+Mesures sur un Mac portable, sans GPU, sans reseau (pour `run.sh` lui-meme, voir ci-dessus),
+sans appel de modele de langage.
 
 ## Ce que l'artefact demontre
 
@@ -48,12 +63,43 @@ sur un Mac portable, sans GPU, sans reseau, sans appel de modele de langage.
   force du mecanisme reel (bloc Product Preferences - Pricing) : c'est un cadran de
   demonstration, documente et modifiable dans `config.py`.
 
+## Provenance des donnees (pour le relecteur)
+
+Cet artefact ne telecharge, ne lit et ne redistribue aucune donnee reelle. La demonstration
+ci-dessus tourne integralement sur `donnees_fictives/`, un jeu **entierement synthetique**
+genere a l'execution par `generer_donnees.py` a graine fixe (detail dans "Le jeu de donnees
+fictif" ci-dessous) -- rien n'est distribue avec ce depot, rien n'est telecharge par
+`run.sh`. Le garde-fou `garde.py` (suite de tests dans `test_garde.py`) refuse de demarrer
+si un chemin resolu -- argument, variable d'environnement, lien symbolique suivi -- mene
+reellement sous `data/` : les scripts de cet artefact ne peuvent pas lire le vrai jeu de
+donnees, meme par erreur.
+
+Les chiffres reels cites par l'article (`resultats/c7-resultats.md`,
+`resultats/c7-defense-resultats.md`) proviennent de deux jeux externes, non redistribues
+ici, chacun avec ses propres conditions d'usage (detail complet dans
+`data/PROVENANCE.md`) :
+
+- **Twin-2K-500** (Hugging Face `LLM-Digital-Twin/Twin-2K-500`), licence **CC BY 4.0** --
+  voir "Obtenir les vraies donnees" ci-dessous.
+- **Archive de replication Stanford** (`https://osf.io/t6g7k/`, agents generatifs, Park et
+  al.), qui contient des reponses individuelles reelles au General Social Survey (GSS), au
+  BFI-44 et a des jeux economiques. Ce noeud OSF ne declare **aucune licence**
+  (`node_license: null` a l'interrogation de l'API OSF) : l'acces public n'emporte donc pas
+  de droit de redistribution des reponses individuelles. Les conditions d'usage du GSS
+  (NORC) interdisent par ailleurs sa reproduction sous toute forme sans accord ecrit
+  prealable. En consequence, ni ce depot ni cet artefact ne redistribuent les reponses
+  individuelles de cette archive : `data/` n'est pas versionne, et les tables publiees dans
+  `resultats/` ne rapportent que des taux agreges par condition, item ou replicat --
+  jamais une ligne ni un identifiant individuel.
+
 ## Contenu
 
 | fichier | role |
 |---|---|
 | `config.py` | tous les parametres du jeu fictif et de la demonstration (N, items, `SIGNAL_INDIVIDUEL`, graine). |
-| `garde.py` | garde-fou commun : refuse de demarrer si un chemin vers `data/` est detecte (argv, variables d'environnement). |
+| `requirements.txt` | les quatre paquets necessaires a `run.sh` (numpy, pandas, scipy, scikit-learn), a installer avant la premiere execution. |
+| `garde.py` | garde-fou commun : refuse de demarrer si un chemin resolu (argv, variable d'environnement quelconque, lien symbolique suivi) mene reellement sous `data/`. Voir `test_garde.py`. |
+| `test_garde.py` | suite de tests du garde-fou (un test par contournement connu, plus des controles negatifs), executable avec `.venv/bin/python artefact/test_garde.py`. |
 | `generer_donnees.py` | genere `donnees_fictives/` a graine fixe : personnes, segments, items opinion/achat/contexte, retest, deux jumeaux simules. |
 | `attaque.py` | importe la logique de `analyses/c7_reidentification.py`, calcule top-1/top-10/rang median et les comparateurs. |
 | `defense.py` | importe `defense_d4` et `mesurer_utilite` de `analyses/c7_defense.py`, mesure risque et utilite avant/apres. |
@@ -115,8 +161,15 @@ reelle, aucune personne reelle** : tout est tire par `numpy.random.default_rng`.
 
 Mesure sur la machine ayant produit cet artefact :
 
-- Python **3.13.14** (`.venv/bin/python`, aucune dependance reseau)
-- numpy **2.5.2**, pandas **3.0.5**, scikit-learn **1.9.0**
+- Python **>= 3.13** (`.venv/bin/python`, mesure sur 3.13.14) -- alignee sur
+  `requires-python = ">=3.13"` du `pyproject.toml` a la racine du depot, qui gouverne le
+  `.venv/` partage utilise par `run.sh`. Le code de `artefact/` lui-meme n'utilise aucune
+  construction syntaxique propre a 3.11+ (verifie), mais les versions exactes de numpy
+  (2.5.2) et scipy (1.18.1) listees dans `artefact/requirements.txt` exigent deja Python
+  >= 3.12 (`Requires-Python` de leurs metadonnees) ; s'aligner sur le plancher >=3.13 du
+  depot evite d'introduire un deuxieme chiffre a retenir pour la meme installation.
+- numpy **2.5.2**, pandas **3.0.5**, scipy **1.18.1**, scikit-learn **1.9.0** (voir
+  `artefact/requirements.txt`)
 
 `analyses/c7_reidentification.py` et `analyses/c7_defense.py` importent aussi, en
 cascade, `t1_commun`, `a2_commun`, `a6_double_distorsion_hors_gss`, `i3b_twin`,
