@@ -1,0 +1,2 @@
+rho_disjoint_moyen,rho_disjoint_median,rho_disjoint_ic_bas,rho_disjoint_ic_haut,part_rho_superieur_07,nul_moyenne,nul_95e_centile,rho_observe_depasse_nul_95,humain_fidelite_brute,humain_fuite_brute,meilleur_predicteur,meilleur_fidelite_brute,meilleur_fuite_brute
+0.9692887199307759,0.9720279720279721,0.9370629370629372,0.9930069930069931,1.0,0.9843529476790952,1.0,False,0.3033807499190152,0.5197764820213799,JSON Persona - GPT4.1,0.15412666018788465,0.06676708778749595
