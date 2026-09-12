@@ -310,13 +310,14 @@ par Drechsler (2024, arXiv 2409.04257, https://arxiv.org/abs/2409.04257) et Bowe
 2308.00872, https://arxiv.org/abs/2308.00872). Ce qui est neuf est l'application de ce mécanisme
 ancien à des jumeaux LLM, avec une courbe risque-utilité mesurée et non supposée
 (`c7-defense-resultats.md`) : mélanger les 40 réponses d'achat entre personnes du même segment
-démographique (D4) ramène le top-1 de 20,68 % à 0,13 %, pour 1,47 point de perte d'utilité,
-concentrée entièrement sur les corrélations entre items (4,4 points) — distribution par item et
-écarts entre groupes restent exacts par construction, comme le prédit le PRAM. Ce compromis se
-compare directement à la littérature du DCR (Yao et al., Ganev et De Cristofaro, section 1) qui
-interroge le rapport risque/utilité des défenses par similarité : ici le coût mesuré (1,47 point)
-est inférieur à l'écart déjà présent entre jumeau non protégé et humains sur ce même indicateur
-(5,8 points).
+démographique (D4) ramène le top-1 de 20,68 % à 0,13 % ; le coût ne se lit pas dans la moyenne des
+trois erreurs (1,47 point, qui divise par trois un effet ne portant que sur une seule composante)
+mais par composante : distribution par item et écarts entre groupes restent exacts par
+construction (0,0 point), corrélations entre items −4,4 points, comme le prédit le PRAM. Ce
+compromis se compare directement à la littérature du DCR (Yao et al., Ganev et De Cristofaro,
+section 1) qui interroge le rapport risque/utilité des défenses par similarité : ici le coût
+mesuré (4,4 points, sur les corrélations — seule composante affectée) est inférieur à l'écart déjà
+présent entre jumeau non protégé et humains sur ce même indicateur (5,8 points).
 
 ## Objections les plus probables
 
