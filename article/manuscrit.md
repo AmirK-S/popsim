@@ -23,21 +23,23 @@ We report a twin-to-twin channel:
 within one pipeline, two twins of the same person built from the same persona source designate
 each other with no real human answer held by the attacker — 36.4 % top-1 at 60 common items on
 Twin-2K-500 and 11.9–13.0 % at 177 common items on the Park archive, against anti-artifact controls
-of 0.06 % and at most 0.31 %. Tested instead across genuinely independent pipelines, that threat model is refuted: top-1 falls
-to 1.8 % [0.4 ; 3.6] at n = 142, below a 9.2 % demographic baseline. We do not claim
+of 0.06 % and at most 0.31 %. Across genuinely independent pipelines we could not test that
+threat model at all: the twins our own pipeline builds designate the right human only at chance
+(0.0–0.8 % top-1 against 0.83 % expected), so that arm contrasts two noise sources and bounds our
+instrument rather than the world. We do not claim
 an absence of prior work: in a regime it does not evaluate, we contradict Anonymeter's conclusion
 that linkability is the weakest of the three risks it measures — it links two attribute partitions
 of one real dataset with the attacker holding real values, where our attacker holds none.
 We also report what we could not establish. We predicted, and preregistered, that the observed
 coupling between imitation quality and leakage reflects an individual fingerprint; a null carrying
 only a matched per-person accuracy margin — an object that is not structure-free, and that in fact
-leaks more than our own twin (31.6 % top-1 against 20.73 %) — reaches a rank correlation at least
-as high as ours (0.974 [0.950 ; 0.993] against 0.965 observed). Fifteen preregistered predictions were refuted and two are inconclusive for lack
-of power; our own twins failed to reproduce the leakage even with a paid frontier model on the
+leaks more than our own twin (31.6 % top-1 against 20.7 %) — reaches a rank correlation at least
+as high as ours (0.974 [0.950 ; 0.993] against 0.965 observed). Fourteen preregistered predictions were refuted, two
+are inconclusive for lack of power, and one could not be tested; our own twins failed to reproduce the leakage even with a paid frontier model on the
 per-item recipe; and the twin-to-twin channel's cross-dataset behaviour is explained only in part,
 by item redundancy rather than item count. Following Das, Zhang and Tramèr, we built the control
 this literature was missing, and it absorbs our own effect. Finally, a 1998 mechanism (PRAM)
-applied to twins reduces closed-world top-1 from 20.68 % to 0.13 % at a measured cost of 4.4
+applied to twins reduces closed-world top-1 from 20.7 % to 0.13 % at a measured cost of 4.4
 points on inter-item correlations, and holds at 0.29 % against an adaptive attacker who knows
 the mechanism — while differential privacy, contrary to our own preregistered prediction, is
 not dominated by it on aggregate utility.
@@ -75,7 +77,7 @@ of recycled computation.
 The second part failed, and it failed against us. We constructed a *marginal null*: 100
 artificial predictors matched to each person's own accuracy margin, with correct positions
 drawn at random without looking at the person — an object that is not structure-free, and
-that in fact leaks more than our own twin (31.6 % top-1 against 20.73 %). Adversarial review
+that in fact leaks more than our own twin (31.6 % top-1 against 20.7 %). Adversarial review
 later found a real defect in that first witness, which has since been rebuilt without changing
 the verdict (§5.1). The rebuilt witness reaches mean Spearman **0.974**, 5th–95th percentiles
 **[0.950 ; 0.993]**, against **0.965** observed over the 12 configurations
@@ -101,8 +103,8 @@ not depend on the coupling being individual-specific at all.
 
 We order these from the least expected to the most.
 
-**(1) A twin-to-twin linkage channel within a shared pipeline — and, tested separately, refuted
-once the pipeline is genuinely independent.**
+**(1) A twin-to-twin linkage channel within a shared pipeline — and a cross-pipeline test our own
+instrument turned out to be unable to carry.**
 Two twins of the same person, sharing their persona source and differing only in model or output
 format, designate each other when they share enough items — while the attacker holds no real
 human answer of any kind. On Twin-2K-500: 36.4 % mean top-1 over 30 pairs sharing 60 common
@@ -112,8 +114,10 @@ survey→interview at 177 common items, against a control of at most 0.31 %. We 
 single number for this channel without its common-item count (§5.4). Anonymeter's contrary
 conclusion [giomi2023unified] is reached under a different definition — two records of the
 *same* real dataset, the attacker holding *real* attribute values — in a regime it did not test.
-Built end-to-end independently instead (T2, §3), top-1 falls to **1.8 % [0.4 ; 3.6]** at n = 142,
-below a 9.2 % demographic baseline: the 36.4 % figure is not evidence for that scenario (§5.4).
+Built end-to-end independently instead (T2, §3), top-1 falls to 1.8 % [0.4 ; 3.6] at n = 142 —
+but that arm is **not interpretable**, its own twins identifying the real person only at chance,
+so it bounds our pipeline and not the scenario (§5.4). The 36.4 % figure is not evidence for T2
+either, and T2 remains untested.
 
 **(2) The leakage is localised in the pattern of answers, not in memorised content.** An
 ablation destroys the signal by permuting the order of a twin's answers while leaving their
@@ -156,7 +160,8 @@ route (§5.6).
 
 ### 1.3 Negative results, stated in front
 
-Fifteen preregistered predictions were refuted and two are inconclusive (Table 1, §7.1). Our own
+Fourteen preregistered predictions were refuted, two are inconclusive, and one could not be
+tested at all (Table 1, §7.1). Our own
 twins identify almost nobody, and the constructive demonstration meant to close that gap — raise
 fidelity with a frontier model and watch the leakage return — **failed**: `openai/gpt-4.1` on
 Twin's per-item recipe left fidelity at 0.1714 against their 0.708 (§5.7). We still do not know
@@ -285,9 +290,9 @@ therefore documents a generic risk for anyone releasing "anonymous" twins withou
 practice Twin-2K-500 does not follow.
 
 The objection "this is not real re-identification, the attacker already holds the true answers"
-is assumed, not rebutted. Our answers to it are three: the explicit model above, the open-world
-measurement of §5.3 which gives the honest number, and T2, which removes the assumption
-entirely.
+is assumed, not rebutted. Our answers to it are two: the explicit model above, and the open-world
+measurement of §5.3 which gives the honest number. A third, T2, would remove the assumption
+entirely — but we did not manage to test it (§5.4), and we therefore do not count it.
 
 ### T2 — Two organisations publish twins of the same cohort; attacker holds nothing real
 
@@ -298,13 +303,16 @@ attribute values in hand [giomi2023unified], and Guépin et al. remove the real-
 assumption but target membership in a single generator's training set, never matching between two
 independent generations [guepin2023synthetic].
 
-**Tested directly, and refuted.** §5.4's 36.4 % twin-to-twin top-1 is a same-team,
+**We tried to test it directly, and could not.** §5.4's 36.4 % twin-to-twin top-1 is a same-team,
 same-persona-file measurement — only the model or output format varies — and does not speak to T2
 as stated. Built as T2 actually describes, two pipelines sharing nothing but the target person
-give top-1 **1.8 % [0.4 ; 3.6]** (n = 142/200, stopped by an OpenRouter transport error), below
-both the 9.2 % demographic baseline and the 25.5 % segment decoy, and lower than at n = 82
-(3.7 %). T2 is not supported once the pipeline is genuinely independent; the 36.4 % figure is not
-evidence for it (§5.4).
+give top-1 1.8 % [0.4 ; 3.6] (n = 142/200, stopped by an OpenRouter transport error). **That
+number does not establish the absence of a cross-organisation channel.** Both pipelines fail a
+control we should have run before spending anything: their twins designate the right human at
+chance (0.0–0.8 % top-1 against 0.83 % expected in a pool of 120, where the Twin team's own twins
+reach 20.2–38.9 % on that same pool) [c7-reconciliation-facteurs-2026-09-12.md §3]. A contrast
+between two twins that carry no individual information returns chance whichever factor is varied.
+**T2 is therefore neither supported nor refuted: it was not tested** (§5.4).
 
 ### T3 — Pre-publication self-audit
 
@@ -395,6 +403,17 @@ follows wave 1 in 41.6 % and wave 2 in 43.2 % — a difference of −1.6 points,
 *Empty-run validation.* Uniform ranks yield 0.00 bits; the B0 mode baseline yields
 −0.004 [−0.003 ; 0.002] bits.
 
+*Fidelity precondition, adopted after it cost us an experiment.* We state as a rule the control
+whose absence invalidated two of our own arms (§5.4): **no experimental arm built on a
+regenerated pipeline is interpretable until that pipeline has been shown to beat the demographic
+baseline in top-1 against the real human answers.** The check consumes no model call and no
+budget, since it re-uses answers already held, and it must precede the first paid contrast. A
+pipeline that fails it yields twins whose contrasts oppose noise to noise and return chance
+whatever is manipulated. Our own pipeline B would not have passed
+[c7-reconciliation-facteurs-2026-09-12.md §7]. Baselines in this paper are always taken at the
+pool size of the arm they judge, that baseline being strongly pool-dependent: 2.13 % at 2,058,
+9.20 % at 200, 13.29 % at 120.
+
 ---
 
 ## 5. Results
@@ -424,7 +443,7 @@ reproducing the correlation between imitation quality and re-identifiability req
 more than a matched per-person accuracy and correct positions drawn at random.
 
 This witness is not an information-free object, and we do not describe it as one: at matched
-accuracy it leaks **more** than our twin (31.6 % top-1 against 20.73 %). Five further witnesses,
+accuracy it leaks **more** than our twin (31.6 % top-1 against 20.7 %). Five further witnesses,
 which match that accuracy against a *surrogate* target rather than against the person, fall to
 chance on both axes (top-1 0.040–0.063 % against 0.049 %, 0.00 bits, accuracy against the truth
 0.41–0.44 against 0.53); the observed rho exceeds them, but that margin bears on nothing, their
@@ -513,12 +532,13 @@ Park (60.17 %) passes the bar it had failed. We state both, in that order.
 > depends on no causal reading of the quality-leakage coupling.
 > Data: `resultats/c7-monde-ouvert-roc.csv`, `resultats/c7-attaquant-fort.csv`.
 
-### 5.4 The twin-to-twin channel within one pipeline — and T2 itself, refuted
+### 5.4 The twin-to-twin channel within one pipeline — and why our T2 test does not count
 
 Two twins of the same person designate each other when they share enough items, with no real
 data on the attacker's side. The measurements immediately below share one team and, for
 Twin-2K-500, one persona source per person: they gauge the channel within a pipeline, not the
-cross-organisation threat model T2 (§3), tested at the end of this section and refuted.
+cross-organisation threat model T2 (§3), whose test at the end of this section turned out not to
+be interpretable.
 
 **Twin-2K-500, tabulated by common-item count** [c7-transfert-resultats.md]. 30 pairs sharing
 60 common items: mean top-1 **36.4 %**, maximum 83.58 %. 12 pairs sharing 19 common items: mean
@@ -564,16 +584,43 @@ and the different generating pipelines — are not testable on the material we h
 shared-item count, not an aberrant configuration. On the Park archive the item-rate relation does
 not follow Twin's.
 
-**T2 itself: two genuinely independent pipelines, tested and refuted.** Two pipelines
+**T2 itself: two genuinely independent pipelines, and a test that does not count.** Two pipelines
 sharing nothing but the target person — `deepseek-v4-flash` structured JSON dossiers versus
 `qwen-2.5-72b` narrative biographies, different templates, different output formats — matched
 head to head on the same 60 items (n = 142 of 200 planned, stopped by a second OpenRouter
 transport error; a first such stop, at n = 82, was reconciled and confirmed unbilled)
 [c7-deux-organisations-resultats.md]. Preregistered rule: T2 survives if the top-1 CI excludes the
-segment control *and* stays at least 2× the demographic baseline. Result: top-1 **1.8 %
-[0.4 ; 3.6]**, below the baseline alone (9.2 %, let alone 2×) and the segment decoy (25.5 %
-[19.9 ; 31.3]) — lower still than at n = 82 (3.7 %). **T2 is refuted**; the 36.4 % figure
-above is a same-pipeline measurement, not evidence for it.
+segment control *and* stays at least 2× the demographic baseline. Result: top-1 1.8 %
+[0.4 ; 3.6], against a demographic baseline of 9.2 % computed on the enclosing pool of 200; the
+baseline matched to this arm's own pool of 142 was never computed and lies above 9.2 %, the same
+baseline reaching 13.29 % at a pool of 120.
+
+**We no longer read this as a refutation of T2.** The witness is built on the pipeline of the
+paragraph below and shares its defect: neither arm produces twins that identify the real person
+better than chance (0.0 % and 0.8 % top-1 against 0.83 % expected on a pool of 120, where the
+Twin team's own twins reach 20.2–38.9 % on that same pool)
+[c7-reconciliation-facteurs-2026-09-12.md §3]. The comparison therefore opposes two noise
+sources, and would have returned chance whether or not a cross-organisation channel exists. It
+measures our instrument, not the world: the honest statement is that **T2 could not be tested
+here**, not that it was disproved. The 36.4 % figure above remains a same-pipeline measurement
+and is not evidence for T2 either, so the threat model stands open in both directions.
+
+**One-factor-at-a-time: arithmetically sound, not interpretable.** T2 changed model, template and
+persona format together; a follow-up varies them one at a time from our own baseline pipeline B —
+not from the 36.4 % intra-team configuration, which is not ours [c7-factoriel-resultats.md]:
+model alone 0.67 % [0.00 ; 1.75], prompt template alone 0.83 % [0.00 ; 2.08], persona format
+alone 2.65 % [0.50 ; 5.13] (n = 120, 360 calls, 0 failures; cost \$0.54; chance is 0.83 % on this
+pool). The arithmetic is reproducible and correct [c7-reconciliation-facteurs-2026-09-12.md §2].
+**The interpretation is not available to us**: pipeline B and all three derived conditions
+identify the real person at chance (§3 of that note), so each contrast opposes two noise sources,
+and no such arm can show that a factor destroys a channel it never carried. We therefore withdraw
+the reading we first gave these numbers — that changing any single component collapses the
+channel — and with it the refutation of the matching preregistered prediction (model ≈ 20 %,
+template ≈ 15 %, persona ≈ 8 %): an arm that could test nothing refutes nothing. We also correct
+a comparison of our own. These twin-to-twin rates were set against 13.29 % [7.46 ; 19.29], which
+is a *twin-to-human* baseline on the same pool of 120; the homogeneous twin-to-twin baseline on
+that pool is 23.69–34.42 %, so the mismatch flattered these three conditions rather than
+penalising them.
 
 ### 5.5 Mechanism: being right while deviating — and three refuted hypotheses
 
@@ -744,7 +791,7 @@ same 6 points already diverge at twice the range (18.1 % against 13.9 %).
 ## 6. Defense
 
 Shuffling the purchase answers between people of the same demographic segment (D4) brings
-closed-world top-1 from **20.68 % [19.04 ; 22.41]** to **0.13 % [0.01 ; 0.28]**
+closed-world top-1 from **20.7 % [19.0 ; 22.4]** to **0.13 % [0.01 ; 0.28]**
 [c7-defense-resultats.md]. Per-item distribution and between-segment differences are preserved
 **exactly, by construction**, as PRAM predicts.
 
@@ -752,15 +799,16 @@ closed-world top-1 from **20.68 % [19.04 ; 22.41]** to **0.13 % [0.01 ; 0.28]**
 distribution, 0.0 points on group differences, and **4.4 points on inter-item correlations**.
 We therefore withdraw the summary that presented D4's cost *as* a single mean of 1.47 points:
 that figure is the unweighted mean of the three components (`utilite_globale` in
-`c7-defense-courbe.csv`), and quoting it alone divides by three an effect that falls entirely on
-one of them. The quantity itself is not withdrawn, only its name and its use: it is a
+`c7-defense-resultats.csv`, carried as `perte_utilite_points` in `c7-defense-courbe.csv`), two of
+which are zero by construction, so quoting it alone divides by three an effect that falls
+entirely on the third. The quantity itself is not withdrawn, only its name and its use: it is a
 **composite utility index**, and it is the one form in which the comparison with differential
 privacy can be made at all, since the DP mechanism's loss is measured on that same index
 (§6.2). Wherever it appears below it is named as the index, never as the cost of the defense.
 
 **The cost is worse than that summary suggests.** On that same indicator measured against the
-real human answers, `erreur_correlations_hum` rises from **5.78 to 9.71** after D4, a
-degradation of 68 %. The defended twin moves *away* from the humans on correlations; it does not
+real human answers, `erreur_correlations_hum` rises from **5.775 to 9.709** after D4, a
+degradation of **68.1 %**. The defended twin moves *away* from the humans on correlations; it does not
 move closer. Any framing in which the defense's cost is absorbed by an error already present
 compares an increment to a level, and is incorrect.
 
@@ -778,7 +826,7 @@ against an attacker who knows the defense mechanism and knows which items it lea
 D4 holds. Top-1 goes from 0.13 % (naive) to **0.24 %** under the recalibrated strong attack, and
 the **adaptive** attacker plateaus at **0.29 %** (strategy S1, leaving the 20 opinion items
 intact; S1+S3 identical; segment-invariant strategy S3 alone 0.05 %). That is two orders of
-magnitude below the 20.69 % undefended rate, and never above 1 %. **Attribute disclosure is not
+magnitude below the 20.7 % undefended rate, and never above 1 %. **Attribute disclosure is not
 demonstrated either**: the best strategy names the correct `S_gra` segment in **7.7 %** of cases,
 against 6.8 % at chance and **12.6 %** for the trivial rule of always answering the most frequent
 segment (40 segments) — the attack does worse than not attacking.
@@ -796,9 +844,12 @@ perturbed by Laplace noise (L1 sensitivity 2, budget split equally over 60 items
 sequential composition) followed by i.i.d. per-item sampling — degree-0 PrivBayes, no joint
 structure — the DP synthesiser at eps = 3 and eps = 10 loses **3.33** and **3.38** points on the
 **composite utility index**, within 5 points of D4's **1.47** on that same index, while its
-top-1 (**0.158 %**, **0.000 %**) is **not above** ours (0.126 %) [c7-dp-resultats.md]. The
+top-1 (**0.158 %**, **0.000 %**) is **not above** ours (0.13 %) [c7-dp-resultats.md]. The
 comparison runs on the aggregate index because that is the only scale on which the two
-mechanisms are commensurable; 1.47 is not D4's cost, which falls on a single component (§6).
+mechanisms are commensurable. We keep it here for that reason alone, and name what it is: 1.47 is
+the unweighted mean of three components of which **two are zero by construction** (0.0
+distribution, 0.0 group differences, 4.4 correlations), so it divides by three an effect borne
+entirely by the third. It is not D4's cost (§6).
 We do not claim our defense beats DP, on either axis.
 
 The utility floor is architectural, not budgetary: the non-private control (eps = ∞) still loses
@@ -849,7 +900,7 @@ mechanism in the PRAM and data-swapping tradition).
 
 ## 7. Discussion and Limitations
 
-### 7.1 The fifteen refuted preregistered predictions, and two inconclusive
+### 7.1 The fourteen refuted preregistered predictions, two inconclusive, and one untestable
 
 | # | Prediction (preregistered) | Outcome | Source |
 |---|---|---|---|
@@ -864,18 +915,21 @@ mechanism in the PRAM and data-swapping tradition).
 | 9 | Call granularity explains the leakage | **Not confirmed — inconclusive (underpowered at n = 10).** 0.00 % both arms (95 % CI [0 ; 8.8] at n=40, [0 ; 30.85] at n=10); top-10 runs opposite (7.5 % vs 0 %) | `c7-recette-resultats.md` |
 | 10 | Cost per unit of individual fidelity is roughly constant | **Refuted at equal sample.** CV 0.436 vs 0.357 on the same 9 points | `c7-compromis-resultats.md` §5 |
 | 11 | Per-item entropy correlates with identifying power consistently | **Refuted.** Opposite sign by dataset: r = −0.81 (Twin), +0.57 (Park) | `c7-bits-resultats.md` §3 |
-| 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.69 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
+| 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.7 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
 | 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, in the defense's favour.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
-| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Refuted.** eps = 3/10 lose 3.33/3.38 points on the composite utility index against D4's 1.47 on that same index (not D4's per-component cost, §6), top-1 0.158 % [0.012 ; 0.340] / 0.000 % [0 ; 0.18] against 0.126 % [0.012 ; 0.284] | `c7-dp-resultats.md` |
+| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Refuted.** eps = 3/10 lose 3.33/3.38 points on the composite utility index against D4's 1.47 on that same index — a mean diluted by two components that are zero by construction, never D4's cost (§6) — top-1 0.158 % [0.012 ; 0.340] / 0.000 % [0 ; 0.18] against 0.13 % [0.01 ; 0.28] | `c7-dp-resultats.md` |
 | 15 | A frontier model on Twin's per-item recipe reaches accuracy > 0.55 | **Refuted.** 0.4722 [0.4361 ; 0.5050] | `c7-fort-resultats.md` |
 | 16 | That same twin reaches top-1 > 5 % | **Not refuted — inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30); the preregistered 5 % threshold lies inside the interval | `c7-fort-resultats.md` |
-| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Refuted.** 1.8 % [0.4 ; 3.6] at n = 142/200 (API transport error); below the baseline alone (9.2 %), let alone 2×, and below the segment control (25.5 %) | `c7-deux-organisations-resultats.md` |
+| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable with this instrument — counted as neither.** 1.8 % [0.4 ; 3.6] at n = 142/200 (API transport error), but both arms' twins identify the real person at chance, so the contrast opposes two noise sources and decides nothing in either direction (§3, §5.4) | `c7-deux-organisations-resultats.md`, `c7-reconciliation-facteurs-2026-09-12.md` |
 
 Rows 9 and 16 were listed as refutations until adversarial review found that a percentile
 bootstrap on a zero-event sample can only return "[0 ; 0]" — an arithmetic property of the
 resampling, not a confidence interval. Recomputed exactly, neither is refuted: both are
 inconclusive for lack of power, and we report the reclassification rather than keep two
-refutations we are not entitled to.
+refutations we are not entitled to. Row 17 left the refutation count later still, and for a
+different reason: its arithmetic is exact, but the pipeline that produced it carries no
+individual information, so the arm decides nothing about the threat model it was built to test
+(§5.4). Seventeen rows, fourteen refutations, two inconclusive, one untestable.
 
 Three further preregistered outcomes were partial rather than refuted, and we count them as
 neither confirmations nor refutations: D4 erases two publishable inter-item effects while leaving
@@ -1058,7 +1112,7 @@ inter-person specificity; publish aggregates or calibrated noise. (b) Break the 
 alignment in public files. (c) Publish regenerated twins without copying wave metadata
 (`StartDate`/`EndDate`/`Duration`/`RecordedDate`). (d) Document a minimal linkage test before
 any twin release. (e) Within-segment shuffling (§6), with its real cost stated: 4.4 points on
-inter-item correlations, a 68 % worsening of the gap to human correlations (5.78 → 9.71), and the
+inter-item correlations, a 68.1 % worsening of the gap to human correlations (5.775 → 9.709), and the
 loss of every inter-item analysis downstream (§6.3) — it holds at 0.29 % against an attacker who
 knows the mechanism, but only for a split that shuffles the informative block (§6.1).
 (f) Differential privacy where the published object can be a population statistic rather than a
