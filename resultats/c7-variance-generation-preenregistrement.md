@@ -6,7 +6,7 @@ agent: Claude Opus 5, Anthropic — sous-agent variance de génération
 ecriture: analyses/c7_variance_generation.py, resultats/c7-variance-generation-preenregistrement.md, resultats/c7-variance-generation-resultats.md, resultats/c7-variance-generation.csv
 lecture_seule: tout le reste
 interdits: appel payant, réseau, recherche web, commit sur master, fusion, arrière-plan, régénération de jumeaux, article/manuscrit.md
-cecite: je n'ai pas lu article/manuscrit.md ni resultats/article-synthese.md au-delà des lignes citant « 20,7 % » ; je n'ai pas relancé c7_reidentification.py (je réutilise son CSV de sortie tel quel) ; je n'ai pas ouvert les invites réellement envoyées à l'équipe amont — elles ne sont pas observables localement (twin-ab-audit-provenance-2026-09-11.md §6.1), donc je ne peux pas vérifier que deux bras nommés différemment diffèrent bien par ce que leur nom annonce
+cecite: je n'ai pas lu article/manuscrit.md ni resultats/article-synthese.md au-delà des lignes citant « 20,7 % » ; je n'ai pas relancé c7_reidentification.py (je réutilise son CSV de sortie tel quel) ; je n'ai pas ouvert les invites réellement envoyées à l'équipe amont — elles ne sont pas observables localement (twin-ab-audit-provenance-2026-09-11.md §2.4, reserve R1 ; renvoi corrige le 13/09/2026, il portait « §6.1 », section inexistante — seule modification du fichier depuis son commit), donc je ne peux pas vérifier que deux bras nommés différemment diffèrent bien par ce que leur nom annonce
 cout_reel_usd: 0.00
 
 ---

@@ -48,7 +48,14 @@ ALIAS = {
 RE_FICHIER = re.compile(r"`([\w./-]+\.md)`|\b([\w-]+\.md)\b")
 RE_ALIAS = re.compile(r"\b(" + "|".join(ALIAS) + r")\b", re.I)
 RE_SECTION = re.compile(r"§\s*(\d+(?:\.\d+)*)(\s*bis)?")
-RE_TITRE = re.compile(r"^#{1,6}\s+(\d+(?:\.\d+)*)(\s*bis)?\b")
+# « ## 8. … » et « ## §8 — … » sont tous deux des titres de section 8
+# (le second est la forme de resultats/audit-comparaison-dp-2026-09-13.md).
+RE_TITRE = re.compile(r"^#{1,6}\s+§?\s*(\d+(?:\.\d+)*)(\s*bis)?\b")
+# Un renvoi SUIVI de son fichier ne vaut que s'il y est lie : « le §8 de `x.md` »,
+# « les §2.1 et §8 dans `x.md` ». Sinon le fichier nomme plus loin n'est pas sa cible.
+RE_LIEN_SUIVANT = re.compile(
+    r"^(?:\s*(?:,|et|and)?\s*§\s*\d+(?:\.\d+)*(?:\s*bis)?)*"
+    r"\s+(?:de|du|des|dans|of|in)\s+(?:(?:le|la|les)\s+|l')?$", re.I)
 
 _cache: dict[str, set[str] | None] = {}
 
@@ -80,29 +87,47 @@ def sections_de(chemin: Path) -> set[str] | None:
     return secs
 
 
-def resout_cible_fichier(phrase: str, courant: Path) -> tuple[Path, str] | None:
-    m = RE_FICHIER.search(phrase)
-    if m:
-        nom = m.group(1) or m.group(2)
-        if "/" in nom:
-            for racine in (courant.parent, RACINE):
-                p = racine / nom
-                if p.exists():
-                    return p, nom
-            return None
-        # Un nom nu est cherche d'abord a cote du fichier qui le cite, puis dans
-        # les repertoires ou le depot range ses documents.
+def resout_nom(nom: str, courant: Path) -> Path | None:
+    if "/" in nom:
         for racine in (courant.parent, RACINE):
-            for base in ("", "resultats/", "article/", "analyses/", "protocoles/"):
-                p = racine / (base + nom)
-                if p.exists():
-                    return p, nom
+            p = racine / nom
+            if p.exists():
+                return p
         return None
-    m = RE_ALIAS.search(phrase)
-    if m:
+    # Un nom nu est cherche d'abord a cote du fichier qui le cite, puis dans
+    # les repertoires ou le depot range ses documents.
+    for racine in (courant.parent, RACINE):
+        for base in ("", "resultats/", "article/", "analyses/", "protocoles/"):
+            p = racine / (base + nom)
+            if p.exists():
+                return p
+    return None
+
+
+def mentions(phrase: str, courant: Path) -> list[tuple[int, int, Path | None, str]]:
+    """Fichiers et alias nommes dans la phrase : (debut, fin, chemin ou None, nom)."""
+    out = []
+    for m in RE_FICHIER.finditer(phrase):
+        nom = m.group(1) or m.group(2)
+        out.append((m.start(), m.end(), resout_nom(nom, courant), nom))
+    for m in RE_ALIAS.finditer(phrase):
+        # « manuscrit » dans « article/manuscrit.md » n'est pas une seconde mention.
+        if any(d <= m.start() < f for d, f, _, _ in out):
+            continue
         p = RACINE / ALIAS[m.group(1).lower()]
-        if p.exists():
-            return p, m.group(1)
+        out.append((m.start(), m.end(), p if p.exists() else None, m.group(1)))
+    return sorted(out)
+
+
+def cible_du_renvoi(r: re.Match, phrase: str, ments: list) -> tuple | None:
+    """Un renvoi va au fichier nomme le plus pres AVANT lui ; a defaut, au fichier
+    nomme apres lui seulement s'il y est lie (« le §8 de `x.md` »)."""
+    avant = [x for x in ments if x[1] <= r.start()]
+    if avant:
+        return avant[-1]
+    apres = [x for x in ments if x[0] >= r.end()]
+    if apres and RE_LIEN_SUIVANT.match(phrase[r.end():apres[0][0]]):
+        return apres[0]
     return None
 
 
@@ -117,16 +142,20 @@ def controle(constat: Constat, chemin: Path, internes: bool) -> int:
             renvois = list(RE_SECTION.finditer(phrase))
             if not renvois:
                 continue
-            cible = resout_cible_fichier(phrase, chemin)
-            if cible is None:
-                if not internes:
-                    continue
-                cible = (chemin, chemin.name)
-            fichier, nom = cible
-            secs = sections_de(fichier)
-            if secs is None:
-                continue
+            ments = mentions(phrase, chemin)
             for r in renvois:
+                cible = cible_du_renvoi(r, phrase, ments)
+                if cible is None:
+                    if not internes:
+                        continue
+                    fichier, nom = chemin, chemin.name
+                else:
+                    _, _, fichier, nom = cible
+                    if fichier is None:      # fichier nomme mais introuvable : non resolu
+                        continue
+                secs = sections_de(fichier)
+                if secs is None:
+                    continue
                 ref = r.group(1) + (" bis" if r.group(2) else "")
                 verifies += 1
                 if ref not in secs and r.group(1) not in secs:
