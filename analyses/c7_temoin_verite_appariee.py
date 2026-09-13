@@ -122,7 +122,12 @@ if SORTIE_CSV:
             commun=dict(variante=mode,remplissage_cellules_fausses=
                         "marginale de population par item, valeur de la personne exclue" if mode=="marginal"
                         else "uniforme sur les modalites, valeur de la personne exclue",
-                        fait_foi_tableau1="oui" if (mode=="marginal" and N_REP==20) else "non",
+                        # Corrige le 13 septembre 2026 (correction-t1b-2026-09-13.md) : le
+                        # preenregistrement resultats/c7-nul-corrige-preenregistrement.md §5
+                        # prescrit 100 replicats. Le chiffre publie venait d'un run arrete a 20.
+                        # Fait foi desormais : la serie marginale a 100 replicats, celle du
+                        # preenregistrement. La serie a 20 est conservee, marquee "non".
+                        fait_foi_tableau1="oui" if (mode=="marginal" and N_REP==100) else "non",
                         n_replicats=N_REP,graine=GRAINE,n_permutations=N_PERM,n_tirages_top1=N_TIR,
                         n_points_spearman=len(noms_12),rho_reel_observe=f"{RHO_REEL:.4f}",
                         nature_des_bornes="centiles 5-95 de la loi nulle (PAS un intervalle de confiance)",
