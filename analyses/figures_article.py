@@ -47,18 +47,25 @@ Donnees manquantes signalees ici (ne pas inventer, ne pas combler) :
     prouvent rien. L'audit a construit, lui, le temoin qui manquait --
     exactitude EXACTE contre la verite par personne, positions tirees au
     hasard, cellules fausses tirees dans la marginale de population de
-    l'item (script scratchpad audit_contre_nul.py, non verse au depot ; run
-    en avant-plan le 12/09 pour cette figure, 20 replicats x 12
-    configurations, ~130 s, meme graine que l'audit -> rho moyen 0,9741,
-    mediane 0,9720, p5 0,9500, p95 0,9934, reproduit a l'identique les
-    chiffres de resultats/audit-renversement-2026-09-12.md §1.3). C'est ce
-    temoin, et non plus le nul d'origine ni les 5 temoins retires, qui est
-    desormais publie ici et dans le texte du §5.1 (rho 0,974 [0,950 ; 0,993]
-    contre 0,965 observe). Ni ce temoin ni le reel n'ont de CSV de replicats
-    verse au depot : la bande [BANDE_P5, BANDE_P95] et le point rho_obs
-    ci-dessous sont donc des CONSTANTES chiffrees dans ce fichier, sourcees
-    au run ci-dessus et a resultats/audit-renversement-2026-09-12.md (bande)
-    et a c7-nul-corrige.csv, ligne rho_resume/reel (point, 0,965034965...,
+    l'item (script desormais verse au depot :
+    analyses/c7_temoin_verite_appariee.py). C'est ce temoin, et non plus le
+    nul d'origine ni les 5 temoins retires, qui est publie ici et dans le
+    texte du §5.1.
+    BANDE CORRIGEE le 13/09 (resultats/correction-t1b-2026-09-13.md) : la
+    figure portait la bande d'un run arrete a 20 replicats (rho moyen
+    0,9741, p5 0,9500, p95 0,9934) alors que le preenregistrement
+    resultats/c7-nul-corrige-preenregistrement.md §5 prescrit 100
+    replicats. Aux 100 replicats prescrits : rho moyen 0,9799 -> 0,980,
+    mediane 0,9816, p5 0,9510, p95 0,9930, soit [0,951 ; 0,993] contre
+    0,965 observe. La serie a 20 est un prefixe bit-exact de celle a 100
+    (arret premature, pas divergence) et le verdict est le meme : le point
+    observe reste DANS la bande, la prediction (b) reste refutee.
+    Les replicats ont maintenant un CSV au depot,
+    resultats/c7-nul-corrige-marginal.csv (filtre variante=marginal,
+    n_replicats=100, ligne=agregat) : la bande n'est plus une constante
+    recopiee, elle est lue dans ce fichier. Ne jamais lire la variante
+    `uniforme`, qui est un AUTRE temoin. Seul le point rho_obs reste lu
+    ailleurs -- c7-nul-corrige.csv, ligne rho_resume/reel (0,965034965...,
     memes 12 configurations/memes items que le temoin, "items entiers" et
     non disjoints -- d'ou l'ecart avec le 0,969 historique sur items
     disjoints, note heritee D7 de l'audit). Le point continue de tomber DANS
@@ -109,15 +116,43 @@ FPR_FLOOR = 4e-4  # plancher d'affichage log pour les points fpr=0 (rendu seulem
 
 # Figure 2, encart : temoin de marge CORRIGE (exactitude exacte contre la verite par
 # personne, positions au hasard, cellules fausses tirees dans la marginale de population
-# de l'item). Aucun CSV de replicats n'est verse au depot pour ce temoin -- seules des
-# statistiques agregees existent, sourcees a resultats/audit-renversement-2026-09-12.md
-# §1.3 et reproduites a l'identique le 12/09 en avant-plan (scratchpad audit_contre_nul.py,
-# 20 replicats x 12 configurations, meme graine : rho moyen 0.9741, mediane 0.9720,
-# p5 0.9500, p95 0.9934, min 0.9301, max 1.0000). D'ou des CONSTANTES, pas une colonne
-# de CSV chargee dynamiquement.
-NUL_CORRIGE_P5 = 0.9500
-NUL_CORRIGE_P95 = 0.9934
-NUL_CORRIGE_MOYEN = 0.9741
+# de l'item).
+#
+# CORRIGE le 13/09/2026 (resultats/correction-t1b-2026-09-13.md). Deux defauts ici :
+#  1. les replicats ONT desormais un CSV au depot, resultats/c7-nul-corrige-marginal.csv
+#     (commit 0e6585a) : la bande n'est plus une constante recopiee a la main, elle est
+#     LUE dans ce CSV. C'etait le seul motif invoque pour la coder en dur.
+#  2. les valeurs codees ici (p5 0.9500, p95 0.9934, moyenne 0.9741) etaient celles d'un
+#     run arrete a 20 replicats, alors que resultats/c7-nul-corrige-preenregistrement.md
+#     §5 prescrit 100 replicats. On lit donc la ligne n_replicats=100.
+# Filtre exact : variante=marginal, n_replicats=100, ligne=agregat (fait_foi_tableau1=oui).
+# Ne JAMAIS lire la variante `uniforme` : c'est un autre temoin, pas une variante de
+# graphie du meme. Valeurs attendues : moyenne 0.9798947065, p5 0.9510489510,
+# p95 0.9930069930 -- soit 0,980 et [0,951 ; 0,993] a la graphie publiee.
+NUL_CORRIGE_CSV = os.path.join(RESULTATS, "c7-nul-corrige-marginal.csv")
+NUL_CORRIGE_NREP = 100
+
+
+def _bande_nul_corrige():
+    """Bande de la figure 2 : centiles 5-95 de la LOI NULLE (pas un IC), lus au CSV."""
+    t = pd.read_csv(NUL_CORRIGE_CSV)
+    t = t[(t["ligne"] == "agregat") & (t["variante"] == "marginal")
+          & (t["n_replicats"] == NUL_CORRIGE_NREP)]
+    if len(t) != 1:
+        raise SystemExit(
+            f"figure 2 : {len(t)} ligne(s) agregat marginal n_replicats="
+            f"{NUL_CORRIGE_NREP} dans {NUL_CORRIGE_CSV}, il en faut exactement une")
+    r = t.iloc[0]
+    if str(r["fait_foi_tableau1"]).strip() != "oui":
+        raise SystemExit(
+            "figure 2 : la ligne lue ne porte pas fait_foi_tableau1=oui — le CSV et la "
+            "decision du 13/09 (n=100 fait foi) ont diverge, ne rien publier")
+    return (float(r["rho_nul_centile5_loi_nulle"]),
+            float(r["rho_nul_centile95_loi_nulle"]),
+            float(r["rho_nul_moyen"]))
+
+
+NUL_CORRIGE_P5, NUL_CORRIGE_P95, NUL_CORRIGE_MOYEN = _bande_nul_corrige()
 
 
 def _floor_fpr(fpr):
@@ -406,8 +441,11 @@ def figure2():
     # marginale de population de l'item -- pas le nul d'origine (defaut ligne 133 de
     # analyses/c7_disjoint.py) ni les 5 temoins a cible de substitution retires apres
     # audit (cf. docstring du module et resultats/audit-renversement-2026-09-12.md).
-    # Bande [NUL_CORRIGE_P5, NUL_CORRIGE_P95] : constantes chiffrees (voir module,
-    # pas de CSV de replicats verse au depot). Point = rho reel sur les memes 12
+    # Bande [NUL_CORRIGE_P5, NUL_CORRIGE_P95] : LUE le 13/09 dans
+    # resultats/c7-nul-corrige-marginal.csv (variante=marginal, n_replicats=100,
+    # ligne=agregat), aux 100 replicats prescrits par le preenregistrement §5 —
+    # elle valait auparavant les constantes d'un run arrete a 20 replicats.
+    # Point = rho reel sur les memes 12
     # configurations/items que le temoin ("items entiers"), lu dans c7-nul-corrige.csv
     # (ligne rho_resume/reel) -- distinct du 0,969 historique sur items disjoints. La
     # bande recouvre toujours le point observe : la prediction (b) reste refutee.
@@ -444,7 +482,9 @@ def figure2():
               "-- truth-matched per-person accuracy, false cells from the population "
               "marginal, not the original disjoint-item null (c7_disjoint.py l.133 "
               "inflated its leakage ~1.3x, 41.2% vs 31.6% top-1) nor the 5 withdrawn "
-              "substitute-target witnesses. Band [0.950, 0.993] still covers the observed "
+              f"substitute-target witnesses. Band [{bas5:.3f}, {haut95:.3f}] "
+              f"(mean rho {NUL_CORRIGE_MOYEN:.3f}, {NUL_CORRIGE_NREP} replicates as "
+              "preregistered) still covers the observed "
               "rho=0.965 (12 configs, vs. the historical 0.969 on disjoint items): "
               "verdict unchanged. Leaks 31.6% top-1 (no bits reported for this figure) "
               "vs 20.73% / 3.56 bits for the real twin and 0.049% for chance.",

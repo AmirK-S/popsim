@@ -11,6 +11,19 @@ cout_reel_usd: 0.00
 
 ---
 
+> **DÉPASSÉ SUR UN POINT, le 13/09/2026 — voir `resultats/correction-t1b-2026-09-13.md`.**
+> La réserve posée au §4 de ce rapport a été tranchée, et **dans l'autre sens** que ce que le §4,
+> le §5 et le §6 affirment ici : **c'est la série à 100 réplicats qui fait foi** — celle du
+> préenregistrement (`c7-nul-corrige-preenregistrement.md` §5) —, soit **rho moyen 0,980, bande
+> [0,951 ; 0,993]**, et non la série à 20 réplicats (0,974 ; [0,950 ; 0,993]).
+> Motif : un résultat qui contredit son propre préenregistrement n'est pas publiable, même quand
+> il arrange moins. Le CSV a été régénéré en conséquence — `fait_foi_tableau1=oui` est passé de la
+> ligne `marginal`/`n_replicats=20` à la ligne `marginal`/`n_replicats=100` —, et le registre
+> retrace `rho-nul-marge-appariee-12conf` au profit de `rho-nul-marge-appariee-12conf-n100`.
+> **Tout le reste de ce rapport tient**, et son constat central a été revérifié indépendamment :
+> la série à 20 est bien un préfixe bit-exact de la série à 100, et la réfutation de la prédiction
+> (b) tient dans les deux cas.
+
 ## 1. Ce qui était cassé, et ce qui ne l'était pas
 
 Le défaut D8 (`resultats/relecture-fond-2026-09-13.md`) est un défaut de **reproductibilité**,
