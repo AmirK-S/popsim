@@ -1,11 +1,15 @@
 % article/references.bib
-% 47 entrées au 12/09/2026 (46 + l'entrée AAPOR ajoutée ce jour, Bloc D). Répartition exacte de
-% l'état de vérification : 27 (Bloc A) reprises d'une vérification antérieure sans nouvelle
-% vérification à la source ; 18 (Bloc B) vérifiées à la source dans la passe de la nuit du
-% 11-12/09 ; 1 (Bloc C, guan2024zakmia) vérifiée à la source dans une passe complémentaire du
-% 12/09 ; 1 (Bloc D, aapor2026responsibleai) vérifiée à la source (PDF intégral + métadonnées) le
-% 12/09. Le compte « toutes les 47 entrées vérifiées à la source » serait faux : voir le détail
-% entrée par entrée, et l'état exact de chaque bloc, dans article/references-verification.md.
+% 50 entrées au 13/09/2026 (47 + 3 entrées Bloc E ajoutées ce jour : jordon2022synthetic,
+% carlini2023quantifying, houssiau2022tapas — antériorités identifiées par la relecture
+% positionnement du 13/09). Répartition exacte de l'état de vérification : 27 (Bloc A) reprises
+% d'une vérification antérieure sans nouvelle vérification à la source ; 18 (Bloc B) vérifiées à
+% la source dans la passe de la nuit du 11-12/09 ; 1 (Bloc C, guan2024zakmia) vérifiée à la
+% source dans une passe complémentaire du 12/09 ; 1 (Bloc D, aapor2026responsibleai) vérifiée à
+% la source (PDF intégral + métadonnées) le 12/09 ; 3 (Bloc E) vérifiées à la source le 13/09,
+% dont une (jordon2022synthetic) au texte intégral et deux (carlini2023quantifying,
+% houssiau2022tapas) aux métadonnées primaires (page d'abstract arXiv + confirmation de venue).
+% Le compte « toutes les 50 entrées vérifiées à la source » serait faux : voir le détail entrée
+% par entrée, et l'état exact de chaque bloc, dans article/references-verification.md.
 
 % =====================================================================
 % Bloc A — 27 entrées reprises telles quelles (vérification à la source antérieure)
@@ -55,7 +59,7 @@
 
 @article{adams2025fidelity, author={Adams, Tim and Birkenbihl, Colin and Otte, Karen and Ng, Hwei Geok and Rieling, Jonas Adrian and N{\"a}her, Anatol-Fiete and Sax, Ulrich and Prasser, Fabian and Fr{\"o}hlich, Holger}, title={On the Fidelity versus Privacy and Utility Trade-Off of Synthetic Patient Data}, journal={iScience}, year={2025}, doi={10.1016/j.isci.2025.112382}}
 
-@article{gouweleeuw1998pram, author={Gouweleeuw, J. M. and Kooiman, P. and Willenborg, L. C. R. J. and de Wolf, P.-P.}, title={Post Randomisation for Statistical Disclosure Control: Theory and Implementation}, journal={Journal of Official Statistics}, volume={14}, number={4}, pages={463--478}, year={1998}}
+@article{gouweleeuw1998pram, author={Gouweleeuw, J. M. and Kooiman, P. and Willenborg, L. C. R. J. and de Wolf, P.-P.}, title={Post Randomisation for Statistical Disclosure Control: Theory and Implementation}, journal={Journal of Official Statistics}, volume={14}, number={4}, pages={463--478}, year={1998}, url={https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/post-randomisation-for-statistical-disclosure-control-theory-and-implementation.pdf}}
 
 @article{drechsler2024thirtyyears, author={Drechsler, J{\"o}rg and Haensch, Anna-Carolina}, title={30 Years of Synthetic Data}, journal={Statistical Science}, year={2024}, eprint={2304.02107}, archivePrefix={arXiv}}
 
@@ -95,3 +99,17 @@
 % =====================================================================
 
 @techreport{aapor2026responsibleai, author={Rothschild, David M. and Marlar, Jenny and Amaya, Ashley and Barari, Soubhik and Buskirk, Trent and Cobb, Curtiss and Gennai, Jen and Hillygus, D. Sunshine and Korlakai Vinayak, Ramya and Krupenkin, Masha and Lee, Sunghee and Steiger, Darby and Webb, Brock}, title={Responsible {AI} Integration in Survey Research}, institution={American Association for Public Opinion Research ({AAPOR})}, year={2026}, month={may}, url={https://aapor.org/wp-content/uploads/2026/05/Responsible-AI-Integration-In-Survey-Research.pdf}}
+
+% =====================================================================
+% Bloc E — ajout du 13/09/2026 (T2, antériorités identifiées par la relecture positionnement
+% du 13/09 : resultats/relecture-positionnement-2026-09-13.md, D2/D3/D1). Les trois entrées ont
+% été vérifiées à la source dans cette passe (texte intégral pour jordon2022synthetic ; page
+% d'abstract arXiv + confirmation dblp/ICLR pour carlini2023quantifying ; page d'abstract arXiv +
+% confirmation NeurIPS pour houssiau2022tapas). Voir article/references-verification.md.
+% =====================================================================
+
+@techreport{jordon2022synthetic, author={Jordon, James and Szpruch, Lukasz and Houssiau, Florimond and Bottarelli, Mirko and Cherubin, Giovanni and Maple, Carsten and Cohen, Samuel N. and Weller, Adrian}, title={Synthetic Data -- what, why and how?}, institution={The Royal Society}, year={2022}, eprint={2205.03257}, archivePrefix={arXiv}, url={https://royalsociety.org/-/media/policy/projects/privacy-enhancing-technologies/Synthetic_Data_Survey-24.pdf}}
+
+@inproceedings{carlini2023quantifying, author={Carlini, Nicholas and Ippolito, Daphne and Jagielski, Matthew and Lee, Katherine and Tram{\`e}r, Florian and Zhang, Chiyuan}, title={Quantifying Memorization Across Neural Language Models}, booktitle={The Eleventh International Conference on Learning Representations ({ICLR} 2023)}, year={2023}, eprint={2202.07646}, archivePrefix={arXiv}}
+
+@inproceedings{houssiau2022tapas, author={Houssiau, Florimond and Jordon, James and Cohen, Samuel N. and Daniel, Owen and Elliott, Andrew and Geddes, James and Mole, Callum and Rangel Smith, Camila and Szpruch, Lukasz}, title={{TAPAS}: a Toolbox for Adversarial Privacy Auditing of Synthetic Data}, booktitle={{NeurIPS} 2022 Workshop on Synthetic Data for Empowering {ML} Research ({SyntheticData4ML})}, year={2022}, eprint={2211.06550}, archivePrefix={arXiv}}

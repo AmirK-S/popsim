@@ -1,0 +1,78 @@
+mesure,condition,n_qid,n_items,couv_libelles,couv_prose,n_distinctifs,distinctifs_dans_libelles,distinctifs_dans_prose,n_distinctifs_total,marques_phrase_trouvees,categories_phrase_trouvees,produits_phrase_trouves,marques_jeton_naif_trouvees,n_attaques,n_pool,exactitude,top1,top1_bas,top1_haut,top10,top10_bas,top10_haut,rang_median,top1_hasard,bloc_items,accord_retest,accord_hasard,kappa_retest,n_modalites,entropie_bits,taux_modal,gain_normalise,plafond_retest,fraction,controle_statut,controle_detail
+famille_persona,Personality,49.0,338.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+famille_persona,Economic preferences,36.0,194.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+famille_persona,Cognitive tests,69.0,68.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+famille_persona,Forward Flow,1.0,20.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+famille_persona,Demographics,14.0,14.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+famille_persona,Economic preferences - intro,2.0,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+persona_consommation,alimentaire,1.0,1.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+persona_consommation,depense,4.0,4.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+persona_consommation,menage_revenu,5.0,5.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+persona_consommation,preferences_economiques,38.0,194.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+recouvrement_semantique,achat,,40.0,0.20378915202444614,0.6786911291323057,4.275,10.0,77.0,171.0,1.0,3.0,0.0,32.0,,,,,,,,,,,,,,,,,,,,,,,
+recouvrement_semantique,heuristiques,,20.0,0.12375,0.6808333333333334,2.6,20.0,36.0,52.0,-1.0,-1.0,-1.0,-1.0,,,,,,,,,,,,,,,,,,,,,,,
+reidentification,S1 servi : persona consommation (argmax),,60.0,,,,,,,,,,,2058.0,2058.0,0.4627470035633301,0.0012876579203109815,0.00012147716229348882,0.0028668610301263364,0.009596695821185617,0.005903182701652089,0.013751214771622935,807.275,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,"S2 selection par item (25 col. hors pli, argmax)",,60.0,,,,,,,,,,,2058.0,2058.0,0.4493521218011014,0.0001457725947521866,0.0,0.0004373177842565597,0.003012633624878523,0.0009961127308066083,0.0058309037900874635,995.375,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,"S2s selection par item (25 col. hors pli, tirage)",,60.0,,,,,,,,,,,2058.0,2058.0,0.4330255911888565,0.000826044703595724,0.0,0.0021392128279883317,0.006243926141885324,0.003255587949465501,0.009596695821185617,1031.05,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,T+ temoin positif : v1-3 aux items attaques (argmax),,60.0,,,,,,,,,,,2058.0,2058.0,0.7278263686426951,0.7401846452866861,0.722445335276968,0.7582604470359572,0.8861273080660836,0.8728620019436345,0.8995626822157434,1.0,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,"S3 jumeau, motif detruit / niveau conserve",,60.0,,,,,,,,,,,2058.0,2058.0,0.4567622287010042,0.0021379980563654036,0.00048590864917395527,0.0041545189504373185,0.014504373177842566,0.009693270165208942,0.019339771622934886,767.85,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,LLM JSON Persona - GPT4.1 (persona individuelle),,60.0,,,,,,,,,,,2058.0,2058.0,0.5903871072238419,0.20682701652089405,0.19037840136054418,0.2227648202137998,0.42643343051506316,0.4055612244897959,0.446577380952381,19.825000000000003,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,LLM Demographics Only - GPT4.1-mini (segment seul),,60.0,,,,,,,,,,,2058.0,2058.0,0.4942095885973437,0.021865889212827987,0.016010689990281827,0.0282555879494655,0.09404761904761905,0.08223943148688047,0.10590379008746355,303.7,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,Retest humain v1-3 aux items attaques,,60.0,,,,,,,,,,,2058.0,2058.0,0.7446631033365727,0.8164965986394558,0.7996841593780369,0.8324605199222547,0.9163994169096209,0.9049301506316813,0.9275996112730807,1.0,0.00048590864917395527,tous,,,,,,,,,,,
+reidentification,S1 servi : persona consommation (argmax),,40.0,,,,,,,,,,,2058.0,2058.0,0.5328838678328475,0.0007531584062196307,0.0,0.0019922254616132166,0.007094266277939748,0.0039115646258503405,0.010617103984450925,882.625,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,"S2 selection par item (25 col. hors pli, argmax)",,40.0,,,,,,,,,,,2058.0,2058.0,0.5095116618075802,0.0,0.0,0.0,0.003425655976676385,0.0014820213799805635,0.005880102040816323,1021.925,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,"S2s selection par item (25 col. hors pli, tirage)",,40.0,,,,,,,,,,,2058.0,2058.0,0.5043124392614189,0.0008017492711370262,0.0,0.002065719144800774,0.006827016520894073,0.0037414965986394557,0.010205903790087453,1004.8,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,T+ temoin positif : v1-3 aux items attaques (argmax),,40.0,,,,,,,,,,,2058.0,2058.0,0.8353862973760933,0.726287657920311,0.7066326530612245,0.7454573615160349,0.8521865889212827,0.8378759718172983,0.866622934888241,1.0,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,"S3 jumeau, motif detruit / niveau conserve",,40.0,,,,,,,,,,,2058.0,2058.0,0.5161443148688046,0.0012633624878522838,0.00019193391642371248,0.0027235179786200066,0.008989310009718173,0.005490767735665696,0.013120140913508258,974.2,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,LLM JSON Persona - GPT4.1 (persona individuelle),,40.0,,,,,,,,,,,2058.0,2058.0,0.7165816326530612,0.33158406219630715,0.31289905247813415,0.35058430515063166,0.5506559766763849,0.5301712827988339,0.5715500485908649,6.15,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,LLM Demographics Only - GPT4.1-mini (segment seul),,40.0,,,,,,,,,,,2058.0,2058.0,0.5883746355685131,0.05947521865889213,0.0506304664723032,0.06943816812439262,0.1522837706511176,0.13743865403304178,0.16729895529640426,220.275,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,Retest humain v1-3 aux items attaques,,40.0,,,,,,,,,,,2058.0,2058.0,0.8389091350826045,0.7466715257531584,0.7286686103012633,0.7646525753158405,0.8655247813411079,0.8515779883381925,0.8796671525753157,1.0,0.00048590864917395527,items d'achat,,,,,,,,,,,
+reidentification,S1 servi : persona consommation (argmax),,20.0,,,,,,,,,,,2058.0,2058.0,0.32247327502429546,4.859086491739553e-05,0.0,0.00014577259475218661,0.00663265306122449,0.0037651846452866856,0.009839650145772596,866.35,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,"S2 selection par item (25 col. hors pli, argmax)",,20.0,,,,,,,,,,,2058.0,2058.0,0.32903304178814385,0.0004373177842565597,0.0,0.001020408163265306,0.005587949465500486,0.002914844509232264,0.008673469387755102,1011.75,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,"S2s selection par item (25 col. hors pli, tirage)",,20.0,,,,,,,,,,,2058.0,2058.0,0.29045189504373176,0.00017006802721088434,0.0,0.00038872691933916425,0.004713313896987366,0.002332361516034986,0.007628765792031098,1035.025,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,T+ temoin positif : v1-3 aux items attaques (argmax),,20.0,,,,,,,,,,,2058.0,2058.0,0.5127065111758989,0.04839650145772594,0.04047436831875608,0.05680332847424684,0.18360058309037902,0.1688022351797862,0.19956450437317785,93.75,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,"S3 jumeau, motif detruit / niveau conserve",,20.0,,,,,,,,,,,2058.0,2058.0,0.3379980563654033,0.0024052478134110786,0.0006802721088435375,0.004567541302235179,0.012730806608357629,0.008575072886297375,0.01725097181729834,668.125,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,LLM JSON Persona - GPT4.1 (persona individuelle),,20.0,,,,,,,,,,,2058.0,2058.0,0.3379980563654033,0.002380952380952381,0.0006802721088435374,0.0044703595724003885,0.013192419825072887,0.008965014577259475,0.017833454810495624,660.275,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,LLM Demographics Only - GPT4.1-mini (segment seul),,20.0,,,,,,,,,,,2058.0,2058.0,0.30587949465500486,7.28862973760933e-05,0.0,0.00021865889212827985,0.004421768707482993,0.0020894071914480078,0.007193270165208931,935.6,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+reidentification,Retest humain v1-3 aux items attaques,,20.0,,,,,,,,,,,2058.0,2058.0,0.5561710398445092,0.1556608357628766,0.14139516520894072,0.17009414480077742,0.38005344995140916,0.3598554421768707,0.3997436831875607,25.625,0.00048590864917395527,items d'heuristiques,,,,,,,,,,,
+stabilite_retest,achat,,40.0,,,,,,,,,,,,,,,,,,,,,,,0.8389091350826046,0.5083822193322699,0.6723250292577696,2.0,0.9895698735081876,0.5590136054421769,,,,,
+stabilite_retest,heuristiques,,20.0,,,,,,,,,,,,,,,,,,,,,,,0.5561710398445092,0.27724918094407,0.38896031549207355,5.6,2.0642546594726534,0.37900874635568516,,,,,
+gain_normalise,S1 servi : persona consommation (argmax),,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,-0.059927857471498355,,,,
+gain_normalise,S1 servi : persona consommation (argmax),,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.09580246119438962,,,,
+gain_normalise,"S2 selection par item (25 col. hors pli, argmax)",,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,-0.11262167175473739,,,,
+gain_normalise,"S2 selection par item (25 col. hors pli, argmax)",,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.08498292915303679,,,,
+gain_normalise,"S2s selection par item (25 col. hors pli, tirage)",,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,-0.12461953518740132,,,,
+gain_normalise,"S2s selection par item (25 col. hors pli, tirage)",,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.15156447504000242,,,,
+gain_normalise,T+ temoin positif : v1-3 aux items attaques (argmax),,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,0.6266007697513442,,,,
+gain_normalise,T+ temoin positif : v1-3 aux items attaques (argmax),,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,0.21580817386337645,,,,
+gain_normalise,"S3 jumeau, motif detruit / niveau conserve",,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,-0.09781800593356627,,,,
+gain_normalise,"S3 jumeau, motif detruit / niveau conserve",,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.07727189690659787,,,,
+gain_normalise,LLM JSON Persona - GPT4.1 (persona individuelle),,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,0.35705090055824223,,,,
+gain_normalise,LLM JSON Persona - GPT4.1 (persona individuelle),,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.07727189690659787,,,,
+gain_normalise,LLM Demographics Only - GPT4.1-mini (segment seul),,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,0.06523086063548199,,,,
+gain_normalise,LLM Demographics Only - GPT4.1-mini (segment seul),,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,-0.12523134346668607,,,,
+gain_normalise,Retest humain v1-3 aux items attaques,,40.0,,,,,,,,,,,,,,,,,,,,,,achat,,,,,,,0.634555936955036,,,,
+gain_normalise,Retest humain v1-3 aux items attaques,,20.0,,,,,,,,,,,,,,,,,,,,,,heuristiques,,,,,,,0.2869847526976577,,,,
+fraction_plafond,items d'achat,,,,,,,,,,,,,,,,0.33158406219630715,,,,,,,,,,,,,,,,0.7466715257531584,0.444082907623727,,
+fraction_plafond,items d'heuristiques,,,,,,,,,,,,,,,,0.002380952380952381,,,,,,,,,,,,,,,,0.1556608357628766,0.015295770251287654,,
+controle_interpretabilite,S1 servi : persona consommation (argmax),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,echoue,"'S1 servi : persona consommation (argmax)' NE PASSE PAS le controle de fidelite prealable.
+  bassin reellement attaque : 2058 personnes, 60 items
+  top-1 candidat            : 0.14 % [0.01 ; 0.30]
+  baseline Demographics Only (meme bassin, recalculee ici) : 2.15 % [1.59 ; 2.79]
+  hasard (1 / bassin)"
+controle_interpretabilite,"S2 selection par item (25 col. hors pli, argmax)",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,echoue,"'S2 selection par item (25 col. hors pli, argmax)' NE PASSE PAS le controle de fidelite prealable.
+  bassin reellement attaque : 2058 personnes, 60 items
+  top-1 candidat            : 0.01 % [0.00 ; 0.04]
+  baseline Demographics Only (meme bassin, recalculee ici) : 2.15 % [1.59 ; 2.79]
+  hasard (1 /"
+controle_interpretabilite,"S2s selection par item (25 col. hors pli, tirage)",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,echoue,"'S2s selection par item (25 col. hors pli, tirage)' NE PASSE PAS le controle de fidelite prealable.
+  bassin reellement attaque : 2058 personnes, 60 items
+  top-1 candidat            : 0.09 % [0.00 ; 0.22]
+  baseline Demographics Only (meme bassin, recalculee ici) : 2.15 % [1.59 ; 2.79]
+  hasard (1 "
+controle_interpretabilite,T+ temoin positif : v1-3 aux items attaques (argmax),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,passe,"{""candidat"": ""T+ temoin positif : v1-3 aux items attaques (argmax)"", ""bassin"": 2058, ""n_items"": 60, ""candidat_top1"": 0.739796, ""baseline_top1"": 0.021526, ""hasard"": 0.000486, ""passe"": true}"
+controle_interpretabilite,"S3 jumeau, motif detruit / niveau conserve",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,echoue,"'S3 jumeau, motif detruit / niveau conserve' NE PASSE PAS le controle de fidelite prealable.
+  bassin reellement attaque : 2058 personnes, 60 items
+  top-1 candidat            : 0.21 % [0.05 ; 0.41]
+  baseline Demographics Only (meme bassin, recalculee ici) : 2.15 % [1.59 ; 2.79]
+  hasard (1 / bassi"
