@@ -1,6 +1,7 @@
 # Relecture hostile du manuscrit d'après-nuit — un relecteur PoPETs qui veut rejeter — 13 septembre 2026
 
-statut: avis de relecture, non mesuré
+statut: courant
+note_statut: avis de relecture, non mesuré — valeur d'origine de la ligne « statut: », déplacée ici à l'intégration du 13/09 pour rendre l'en-tête conforme au gabarit A2 (porte P4) ; aucun mot du corps n'est modifié
 fait_foi: article/manuscrit.md à integration/nuit-2026-09-13 (8892e5c) ; resultats/registre-chiffres.csv pour les valeurs canoniques
 
 mandat: relire le manuscrit entier en adversaire compétent, attaquer ce qu'il affirme au-delà de ses données, sa cohérence interne après sept passes, ce qui reste de la contribution, la dépendance à un seul jeu, le trou mécanistique déclaré, la forme ; rendre un avis tranché
@@ -8,6 +9,7 @@ agent: relecture / post-nuit, 13/09
 ecriture: resultats/relecture-post-nuit-2026-09-13.md
 lecture_seule: tout le reste, article/manuscrit.md compris
 interdits: appel payant, réseau, recherche web, commit sur master, fusion, écriture hors du fichier du mandat
+cout_reel_usd: 0.00
 
 ---
 

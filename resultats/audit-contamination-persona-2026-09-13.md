@@ -1,12 +1,38 @@
-# C7, audit : la persona contient-elle déjà, en langage naturel, les réponses d'achat de la vague 4 ? (13 septembre 2026)
+# C7, audit : la persona contient-elle déjà, en langage naturel, les réponses d'achat de la vague 4 ? (13 septembre 2026) — PHRASE FINALE REMPLACÉE le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+amende_par: resultats/audit-modalites-familles-2026-09-13.md
+fait_foi: resultats/audit-modalites-familles-2026-09-13.md (§7, phrase de remplacement) ; resultats/c7-audit-contamination.csv (pour les chiffres de ce rapport)
+note_statut: en-tete et bandeau d'amendement poses a l'integration du 13/09 par Claude Opus 5, sous-agent integration seconde vague ; le corps d'origine est conserve mot pour mot
 mandat: Tester l'hypothese de contamination semantique : la persona des vagues 1-3, qui est de la prose, contient-elle deja en langage naturel les reponses d'achat de la vague 4 ? (1) Etablir le contenu reel de la persona depuis le catalogue et les donnees. (2) Mesurer le recouvrement semantique item par item, cote achats et cote heuristiques. (3) Un comparateur classique servi explicitement des predicteurs apparentes monte-t-il vers les 33,2 % du jumeau ? (4) Departager avec l'explication alternative innocente : la stabilite test-retest humaine des 40 items d'achat contre celle des 20 items d'heuristiques. Aucun appel payant, aucun reseau, aucun arriere-plan, aucune donnee individuelle imprimee.
 agent: Claude Opus 5, Anthropic
 ecriture: analyses/c7_audit_contamination.py, resultats/audit-contamination-persona-2026-09-13.md, resultats/c7-audit-contamination.csv
 lecture_seule: tout le reste du depot, notamment analyses/c7_reidentification.py, analyses/c7_controle_interpretabilite.py, analyses/c7_audit_comparateur_conditionne.py (branche agent/audit/comparateur-conditionne), analyses/c7_controle_generateur.py (branche agent/mesures/controle-generateur)
 interdits: appel payant, reseau, recherche web, arriere-plan, fusion sur master, ecriture dans article/manuscrit.md et resultats/article-synthese.md, impression de tout pid, extrait de persona, reponse ou appariement individuel
 cout_reel_usd: 0.00
+
+---
+
+> ## AMENDÉ, le 13/09/2026 — la dernière phrase du §5 est remplacée ; tous les faits tiennent
+>
+> **État : AMENDÉ** (la formulation change, le fait tient). Fait foi :
+> `resultats/audit-modalites-familles-2026-09-13.md`, §7.
+>
+> **La phrase remplacée** est la dernière de *La phrase exacte que l'article doit écrire sur la
+> concentration de l'effet* (§5) : « Le mécanisme de cette concentration reste inexpliqué. »
+> Elle laissait croire que rien n'est exclu. **Elle ne doit plus être publiée.** À écrire à la
+> place, mot pour mot (`audit-modalites-familles-2026-09-13.md` §7) :
+>
+> « Le mécanisme de cette concentration reste ouvert, mais il est borné : ni la contamination
+> sémantique, ni la fuite du seul niveau de dépense, ni le bruit de réponse des items
+> d'heuristiques, ni le nombre de modalités, ni l'entropie, ni la position dans le
+> questionnaire n'en rendent compte. »
+>
+> Trois de ces six éliminations viennent de ce rapport-ci, les trois autres de
+> `audit-modalites-familles`. **Ce qui tient entièrement** : E1 (contamination sémantique)
+> réfutée, E2 (prévisibilité différentielle) réelle mais insuffisante, la réfutation de P6, et
+> tous les chiffres du §5 avec leurs limites. **Interdit** : présenter la concentration comme
+> *expliquée* par le nombre de modalités ou par la famille d'items.
 
 ---
 

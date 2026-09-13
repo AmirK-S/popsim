@@ -1,6 +1,9 @@
-# Audit — Park à armement égal : que reste-t-il au jumeau quand le comparateur démographique porte la même arme ?
+# Audit — Park à armement égal : que reste-t-il au jumeau quand le comparateur démographique porte la même arme ? — §4 AMENDÉ le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+amende_par: resultats/audit-twin-comparateur-2026-09-13.md
+fait_foi: resultats/audit-twin-comparateur-2026-09-13.md (§4.3) ; resultats/c7-park-armement-egal.csv (pour les chiffres de ce rapport)
+note_statut: en-tete et bandeau d'amendement poses a l'integration du 13/09 par Claude Opus 5, sous-agent integration seconde vague, a la demande explicite du §4.3 de l'audit amendant ; le corps d'origine est conserve mot pour mot
 mandat: Reproduire independamment les 85,17 % et 29,09 % du volet T1a §1g, produire le tableau a armement egal (jumeau et comparateur demographique, attaque naive et A-LLR, monde ferme et monde ouvert, Park et Twin, bassin strictement constant), trancher ce qui reste au jumeau sur Park, tester l'explication par le nombre d'items, et nommer ce que le comparateur demographique exploite reellement.
 agent: audit / Park armement egal, 13/09
 ecriture: analyses/c7_park_armement_egal.py, resultats/audit-park-armement-egal-2026-09-13.md, resultats/c7-park-armement-egal.csv
@@ -10,6 +13,29 @@ cecite: Aucune verification reseau. Les valeurs 85,17 % / 29,09 % / 90,40 % / 60
 cout_reel_usd: 0.00
 
 ---
+
+> ## AMENDÉ, le 13/09/2026 — l'attribution du §4 est trop étroite ; la chute de Park tient
+>
+> **État : AMENDÉ** (la formulation change, le fait tient). Fait foi :
+> `resultats/audit-twin-comparateur-2026-09-13.md`, §4.3.
+>
+> **La phrase amendée** (§4) : « Sur Twin, 60 items ne suffisent pas : c'est l'unique raison
+> pour laquelle la phrase du manuscrit y survit. » **« L'unique raison » est faux.** À armement
+> **et** à nombre d'items égaux (k = 60), le comparateur démographique armé atteint **22,7424 %**
+> sur Park (`c7-park-armement-egal.csv`, volet 4) et **0,7775 %** sur Twin
+> (`c7-audit-twin-comparateur.csv`, volet 5) — un facteur 29 que le nombre d'items ne peut pas
+> expliquer, puisqu'il est tenu constant. Le nombre d'items est **une** des deux raisons ;
+> l'autre est la **teneur démographique des items attaqués** : les quatorze attributs de Twin
+> déplacent la part de réponse majoritaire d'au plus +1,32 point, contre +4,91 points sur Park
+> (`audit-twin-comparateur-2026-09-13.md` §4.2).
+>
+> **Ce qui tient entièrement** — et que l'audit amendant reproduit ou confirme : les 85,17 %
+> du comparateur armé sur Park, les 98,86 % d'unicité de son bloc de onze attributs, le
+> rapport de 1,06× en monde fermé, et la requalification de Park (§6.2, §6.3).
+>
+> **Interdit à partir d'ici** : attribuer la survie de Twin au seul nombre d'items ; et écrire
+> que Twin est dépourvu de bloc de quasi-identifiants — il en a un, **plus** identifiant que
+> celui de Park (99,71 % contre 98,86 %, `c7-audit-twin-comparateur.csv`).
 
 > ## AVERTISSEMENT — POST HOC, NON PRÉENREGISTRÉ AU SENS DE C7
 >

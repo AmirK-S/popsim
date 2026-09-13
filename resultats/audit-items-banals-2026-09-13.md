@@ -1,13 +1,49 @@
-# Audit de l'affirmation « les 45 items les plus banals donnent 30,25 % » (13 septembre 2026)
+# Audit de l'affirmation « les 45 items les plus banals donnent 30,25 % » (13 septembre 2026) — CLAUSE CAUSALE RÉFUTÉE le 13 septembre 2026
 
-statut: courant
-note_statut: section 0 = preenregistrement, ecrite et commitee SEULE avant tout calcul, non modifiee depuis
+statut: provisoire
+amende_par: resultats/audit-modalites-familles-2026-09-13.md
+fait_foi: resultats/audit-modalites-familles-2026-09-13.md (§6 et §7) ; resultats/c7-audit-modalites-familles.csv
+note_statut: section 0 = preenregistrement, ecrite et commitee SEULE avant tout calcul, non modifiee depuis ; le bandeau d'amendement ci-dessous est pose AVANT la section 0 et ne la modifie pas
 mandat: attaquer l'affirmation D4 de la branche agent/mesures/attaquant-imparfait — selection post hoc, balayage cache, mecanisme, baseline, dependance a l'attaquant, controle d'interpretabilite
-agent: Opus 5, Anthropic
-ecriture: resultats/audit-items-banals-2026-09-13.md, analyses/c7_audit_items_banals.py, resultats/c7-audit-items-banals.csv
+agent: Opus 5, Anthropic ; amendement pose par Claude Opus 5, sous-agent integration seconde vague (13/09)
+ecriture: resultats/audit-items-banals-2026-09-13.md (en-tete et bandeau d'amendement seulement a l'integration ; le corps d'origine est conserve mot pour mot), analyses/c7_audit_items_banals.py, resultats/c7-audit-items-banals.csv
 lecture_seule: tout le reste, y compris article/manuscrit.md et la branche auditee
 interdits: appel paye, reseau, recherche web, commit sur master, fusion, arriere-plan
 cout_reel_usd: 0.0
+
+---
+
+> ## AMENDÉ, le 13/09/2026 — la clause causale du §4 est RÉFUTÉE ; le fait descriptif tient
+>
+> **État : AMENDÉ** (la formulation change, le fait tient). Fait foi :
+> `resultats/audit-modalites-familles-2026-09-13.md`, §6 et §7. Aucun marqueur `RETRACTE:`
+> n'est posé : le rapport n'est pas faux, une de ses explications l'est.
+>
+> **La clause réfutée.** Le §4 écrit : « un questionnaire binaire se ré-identifie mieux qu'un
+> questionnaire mixte, *parce que le jumeau reproduit mal les items à 5 et 7 modalités* ». La
+> partie après « parce que » est **réfutée par manipulation** : ramenés à deux modalités par
+> dichotomisation, les 20 items d'heuristiques ré-identifient **0,16 % [0,02 ; 0,33]**
+> (`c7-audit-modalites-familles.csv`, registre `heuristiques-binarises-top1`), contre 0,23 %
+> [0,05 ; 0,45] à leur grain natif — ramener ces items à deux modalités ne répare rien. À
+> nombre d'items, nombre de modalités et entropie appariés, 20 items d'achat donnent **11,37 %**
+> (registre `achat20-apparie-top1`) ; et les 40 items d'achat recomposés en 20 items à quatre
+> modalités, à information conservée, donnent encore **27,3 %** (registre
+> `achat-composites-4modalites-top1`). Le nombre de modalités a un effet réel mais de second
+> ordre, et il ne rend pas compte de la concentration.
+>
+> **La même lecture causale est portée par la phrase prête à publier du §8** (« les items à
+> nombreuses modalités, que le jumeau reproduit mal, entrent dans l'appariement comme du
+> bruit ») : elle tombe avec le §4 et **ne doit pas être reprise telle quelle**.
+>
+> **Ce qui tient entièrement.** Le fait descriptif du §4 (le balayage par nombre de modalités
+> restitue le gain) ; tout le reste du §8 (items binaires et non banals, pic à k = 40, baseline
+> démographique qui monte, multiplicateur imputable au jumeau qui **baisse**) ; et les
+> interdictions I1 à I4 de `resultats/marqueurs-canoniques-2026-09-13.md`, que cet amendement ne
+> lève pas.
+>
+> **Interdit à partir d'ici** (`audit-modalites-familles-2026-09-13.md` §7) : écrire que la
+> concentration **s'explique** par le nombre de modalités ou par la famille d'items — la
+> première est réfutée, la seconde est le nom du résidu et non un mécanisme.
 
 ---
 

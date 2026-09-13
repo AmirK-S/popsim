@@ -1,6 +1,9 @@
-# Variance de génération du chiffre de titre — résultats
+# Variance de génération du chiffre de titre — résultats — L'ÉCHEC DE LA FAMILLE B BORNÉ le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+borne_par: resultats/c7-pilote-regeneration-resultats.md
+fait_foi: resultats/c7-variance-generation.csv (pour les chiffres de ce rapport) ; resultats/c7-pilote-regeneration-resultats.md §2.4 (pour la portée de l'échec de la famille B)
+note_statut: en-tete et bandeau de bornage poses a l'integration du 13/09 par Claude Opus 5, sous-agent integration seconde vague ; le corps d'origine est conserve mot pour mot
 mandat: Établir si le taux de ré-identification publié pour Twin-2K-500 (20,7 %) est un tirage unique d'un procédé de génération dont la variabilité n'est pas bornée par nos intervalles bootstrap sur les personnes, et appliquer les seuils S1 et S2 fixés au préenregistrement.
 agent: Claude Opus 5, Anthropic — sous-agent variance de génération
 ecriture: analyses/c7_variance_generation.py, resultats/c7-variance-generation-preenregistrement.md, resultats/c7-variance-generation-resultats.md, resultats/c7-variance-generation.csv
@@ -8,6 +11,32 @@ lecture_seule: tout le reste
 interdits: appel payant, réseau, recherche web, commit sur master, fusion, arrière-plan, régénération de jumeaux, article/manuscrit.md
 cecite: je n'ai pas lu article/manuscrit.md ni resultats/article-synthese.md au-delà des lignes citant « 20,7 % » ; je n'ai pas relancé c7_reidentification.py (je réutilise son CSV tel quel, après avoir vérifié son protocole dans le code) ; je n'ai pas ouvert les invites réellement envoyées par l'équipe amont — elles ne sont pas observables localement, donc je ne peux pas vérifier que deux bras nommés différemment diffèrent bien par ce que leur nom annonce ; je n'ai pas mesuré la variabilité de re-génération à condition constante, parce qu'aucun réplicat n'existe sur disque
 cout_reel_usd: 0.00
+
+> ## BORNÉ, le 13/09/2026 — l'échec de la famille B ne dit rien de la reproductibilité du bras de titre
+>
+> **État : BORNÉ** (le fait tient dans un périmètre plus étroit, et le périmètre est nommé).
+> Fait foi : `resultats/c7-pilote-regeneration-resultats.md`, §2.4.
+>
+> **L'inférence bornée** (§9) : « l'échec complet de la famille B — sept bras dont pas un ne
+> dépasse le hasard — montre que reproduire un pipeline de génération qui porte réellement la
+> personne n'est pas acquis ». Le **fait** tient : ces bras échouent au contrôle
+> d'interprétabilité. Sa **portée** est retirée. La famille B n'a jamais tenté de reproduire le
+> pipeline amont et ne le pouvait pas : ses propres invites (`CONSIGNE`, `analyses/c7_gen.py`
+> l. 216-224), trois modèles ouverts distincts, une persona **tronquée à 8 000 caractères** et
+> une sortie en texte brut, là où le pipeline amont envoie **44 348 jetons** en un seul appel.
+> Elle était **une autre expérience**, pas une régénération manquée du bras de titre : son échec
+> ne peut servir d'argument ni pour ni contre la reproductibilité de ce bras.
+>
+> **Ce qui tient entièrement** : S1 (étendue **5,3513 fois** la largeur de l'intervalle
+> publié), S2 (**99,07 %** de la variabilité imputable au bras, **0,93 %** aux personnes), R2
+> (le bras de titre est le maximum des huit, et le plus fidèle), et le fait qu'**aucun
+> réplicat** du bras de titre n'existe. La recommandation du §9 — conditionner toute dépense au
+> passage préalable du contrôle d'interprétabilité — tient aussi, pour une raison désormais plus
+> forte : la configuration du bras de titre n'est pas reconstituable depuis les sources
+> publiques (`c7-pilote-regeneration-resultats.md` §2).
+>
+> **Compte non réconcilié, signalé sans être tranché** : le préambule ci-dessous parle de
+> « cinq jumeaux régénérés » sur un bassin de 120, le §9 et le pilote de « sept bras ».
 
 Contrôle préalable exécuté avant toute interprétation, comme le mandat l'exige :
 `analyses/c7_controle_interpretabilite.py`. Verdict sur le bassin de 120 personnes —
