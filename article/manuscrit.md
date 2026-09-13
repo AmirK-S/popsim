@@ -935,33 +935,35 @@ the same person becomes unusable.
 
 ### 7.1 The thirteen refuted preregistered predictions, one withdrawn, two inconclusive, and one untestable
 
-| # | Prediction (preregistered) | Outcome | Source |
-|---|---|---|---|
-| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho {{R:rho-nul-marge-appariee-12conf-n100}} {{R:rho-nul-marge-appariee-12conf-n100.ic}} vs 0.965 observed, 12 configurations, 100 replicates as preregistered; the original null's defect is corrected, verdict unchanged (§5.1) | `c7-nul-corrige-marginal.csv` |
-| 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % — but that attack also takes Park's demographic comparator to 29.09 % (§5.8). Half refuted, half confirmed, one row | `c7-attaquant-fort-resultats.md` |
-| 3 | Twin-to-twin top-1 ≥ 20 % on the Park archive | **Refuted.** 11.9–13.0 % at 177 common items (failure criterion not met either) | `c7-transfert-stanford-resultats.md` |
-| 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
-| 5 | H1: per-item entropy drives identification | **Refuted.** Opinion items 2.10 bits, identify 46× less | `c7-mecanisme-resultats.md` |
-| 6 | H4: twins are more stereotyped than humans | **Refuted.** 36.2 % [35.6 ; 36.8] vs 37.5 % [36.9 ; 38.1] | `c7-mecanisme-resultats.md` |
-| 7 | Deviations alone carry ≥ 80 % of the leakage | **Refuted.** 0.68 % in the mixed condition | `c7-deviations-resultats.md` |
-| 8 | R1 ≥ 10 % on ≥ 2 of 3 of our own models | **Refuted.** No model reaches 1 % | `c7-gen-resultats.md` |
-| 9 | Call granularity explains the leakage | **Inconclusive, underpowered.** 0.00 % both arms ([0 ; 8.8] at n=40, [0 ; 30.85] at n=10); top-10 runs opposite | `c7-recette-resultats.md` |
-| 10 | Cost per unit of individual fidelity is roughly constant | **Refuted at equal sample.** CV 0.436 vs 0.357 on the same 9 points | `c7-compromis-resultats.md` §5 |
-| 11 | Per-item entropy correlates with identifying power consistently | **Refuted.** Opposite sign by dataset: r = −0.81 (Twin), +0.57 (Park) | `c7-bits-resultats.md` §3 |
-| 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.7 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
-| 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, for the defense.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
-| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same (§6.2) | `audit-comparaison-dp-2026-09-13.md` |
-| 15 | A frontier model on Twin's per-item recipe reaches accuracy > 0.55 | **Refuted.** 0.4722 [0.4361 ; 0.5050] | `c7-fort-resultats.md` |
-| 16 | That same twin reaches top-1 > 5 % | **Inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30); the 5 % threshold lies inside it | `c7-fort-resultats.md` |
-| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable — counted as neither.** 1.8 % [0.4 ; 3.6] at n = 142/200, but both arms' twins identify the real person at chance: the contrast decides nothing (§5.4) | `c7-deux-organisations-resultats.md` |
+Seventeen predictions were registered before computation; **thirteen are refuted.** Table 1, in
+the appendix, gives each as written, with its verdict and source file. Eleven of the thirteen are
+also stated where they were measured — the headline open-world rates (§5.3), the quality-leakage
+coupling that motivated this work (§5.1), the twin-to-twin channel on the Park archive and on the
+nineteen-common-item pairs (§5.4), the three mechanism hypotheses (§5.5), our own twins and the
+paid frontier model (§5.7), and the attacker model (§5.3, §6.1) — so this count can be read
+without turning to the table. The other two belong here: **per-item entropy does not rank items
+with a consistent sign across the two datasets**, and **the cost per unit of individual fidelity,
+which we predicted roughly constant, is not** (§7.2).
 
-Four rows left the refutation count after they were first written: rows 9 and 16, once a
-percentile bootstrap on a zero-event sample was recognised as unable to return anything but
-"[0 ; 0]"; row 17, whose arithmetic is exact but whose pipeline carries no individual information
-(§5.4); and row 14, when the comparison behind its verdict was retracted (§6.2). **Seventeen rows,
-thirteen refutations, one withdrawn, two inconclusive, one untestable.** Three further outcomes
-were partial and count as neither (§6.3, §5.7); one held outright, P2 (§6.1); three verdicts
-reached after this table closed are reported in place, not counted in it (§5.4, §5.8).
+**Two of the thirteen went in our favour, and we mark them rather than bank them**: a stronger
+attacker gains less than the 20 % relative we predicted on Twin-2K-500, and an adaptive attacker
+knowing the mechanism fails to break the defense. A prediction refuted in the direction one hoped
+for is worth less than one refuted against.
+
+**Four verdicts left the count after they were written, each costing us a refutation.** That call
+granularity explains the leakage, and that the frontier twin identifies more than 5 % of its
+cohort, were first recorded as refuted on zero-event samples; a percentile bootstrap there returns
+nothing but "[0 ; 0]", and the exact intervals contain the thresholds they were said to exclude:
+**inconclusive and underpowered** (§5.7). That two organisations' independent pipelines leak into
+one another is arithmetically answered (§5.4), but twins on both arms identify the real person at
+chance, so the contrast decides nothing: **not testable, counted as neither.** That our defense
+dominates differential privacy at a moderate budget is **withdrawn, not decided** — the comparison
+behind it was retracted (§6.2).
+
+**Seventeen predictions: thirteen refutations, one withdrawn, two inconclusive, one untestable.**
+Three further outcomes were partial and count as neither (§6.3, §5.7); one held outright, P2
+(§6.1); three verdicts reached after this census closed are reported in place, not counted in it
+(§5.4, §5.8).
 
 ### 7.2 What we do not know
 
@@ -1351,6 +1353,30 @@ and Benjamini-Hochberg: the p-values are bimodal, eight at or below 0.0025 and s
 standalone controls, the abandoned branches — with 25 confirmed and 15 refuted. It was written
 over the 15 `c7-*` sub-studies existing at the time and excludes the verdicts added since, which
 is why Table 1 and the census do not carry the same totals.
+## The seventeen preregistered predictions, one by one
+
+| # | Prediction (preregistered) | Outcome | Source |
+|---|---|---|---|
+| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho {{R:rho-nul-marge-appariee-12conf-n100}} {{R:rho-nul-marge-appariee-12conf-n100.ic}} vs 0.965 observed, 12 configurations, 100 replicates as preregistered; the original null's defect is corrected, verdict unchanged (§5.1) | `c7-nul-corrige-marginal.csv` |
+| 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % — but that attack also takes Park's demographic comparator to 29.09 % (§5.8). Half refuted, half confirmed, one row | `c7-attaquant-fort-resultats.md` |
+| 3 | Twin-to-twin top-1 ≥ 20 % on the Park archive | **Refuted.** 11.9–13.0 % at 177 common items (failure criterion not met either) | `c7-transfert-stanford-resultats.md` |
+| 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
+| 5 | H1: per-item entropy drives identification | **Refuted.** Opinion items 2.10 bits, identify 46× less | `c7-mecanisme-resultats.md` |
+| 6 | H4: twins are more stereotyped than humans | **Refuted.** 36.2 % [35.6 ; 36.8] vs 37.5 % [36.9 ; 38.1] | `c7-mecanisme-resultats.md` |
+| 7 | Deviations alone carry ≥ 80 % of the leakage | **Refuted.** 0.68 % in the mixed condition | `c7-deviations-resultats.md` |
+| 8 | R1 ≥ 10 % on ≥ 2 of 3 of our own models | **Refuted.** No model reaches 1 % | `c7-gen-resultats.md` |
+| 9 | Call granularity explains the leakage | **Inconclusive, underpowered.** 0.00 % both arms ([0 ; 8.8] at n=40, [0 ; 30.85] at n=10); top-10 runs opposite | `c7-recette-resultats.md` |
+| 10 | Cost per unit of individual fidelity is roughly constant | **Refuted at equal sample.** CV 0.436 vs 0.357 on the same 9 points | `c7-compromis-resultats.md` §5 |
+| 11 | Per-item entropy correlates with identifying power consistently | **Refuted.** Opposite sign by dataset: r = −0.81 (Twin), +0.57 (Park) | `c7-bits-resultats.md` §3 |
+| 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.7 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
+| 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, for the defense.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
+| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same (§6.2) | `audit-comparaison-dp-2026-09-13.md` |
+| 15 | A frontier model on Twin's per-item recipe reaches accuracy > 0.55 | **Refuted.** 0.4722 [0.4361 ; 0.5050] | `c7-fort-resultats.md` |
+| 16 | That same twin reaches top-1 > 5 % | **Inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30); the 5 % threshold lies inside it | `c7-fort-resultats.md` |
+| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable — counted as neither.** 1.8 % [0.4 ; 3.6] at n = 142/200, but both arms' twins identify the real person at chance: the contrast decides nothing (§5.4) | `c7-deux-organisations-resultats.md` |
+
+---
+
 ---
 
 ## References
