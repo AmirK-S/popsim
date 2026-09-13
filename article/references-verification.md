@@ -1,5 +1,15 @@
 # Vérification de `article/references.bib`
 
+**Mise à jour du 13/09/2026 (tâche T2, agent bibliographie/antériorités) : 50 entrées au
+total**, pas 47. Trois entrées ont été ajoutées (Bloc E : `jordon2022synthetic`,
+`carlini2023quantifying`, `houssiau2022tapas`), toutes trois vérifiées à la source dans cette
+passe. **L'état réel de vérification passe de 20/47 à 23/50** — voir la section
+« Passe du 13/09/2026 » tout en bas de ce fichier pour le détail entrée par entrée et pour la
+vérification indépendante, à la source, des trois antériorités reprochées par
+`resultats/relecture-positionnement-2026-09-13.md` (F2/F3/D1). **Toute occurrence de « 47
+entrées, 20 auditables » ailleurs dans le dépôt (y compris la phrase que T5 doit déplacer dans
+Open Science, R7 du plan de révision) doit être mise à jour vers 50/23.**
+
 **Mise à jour du 12/09/2026 (passe post-revue-hostile) : 47 entrées au total**, pas 45. Le
 document ci-dessous datait d'avant l'ajout de `guan2024zakmia` (Bloc C, 12/09) et de
 `aapor2026responsibleai` (Bloc D, 12/09) ; les deux sections qui suivent immédiatement ce
@@ -334,3 +344,157 @@ commentaire `%`, clés extraites par expression régulière) :
 d'antériorité » mentionnée en section 4 de `article-travaux-connexes.md`, évoquée en prose dans
 le manuscrit sans clé formelle — ligne « nor the five surveyed in our prior-art scan »). Elles
 restent utiles si une citation formelle leur est ajoutée plus tard.
+
+---
+
+## Passe du 13/09/2026 — tâche T2, agent bibliographie/antériorités (branche `agent/biblio/anteriorites`)
+
+**En-tête A2.** Mandat : vérifier à la source trois antériorités reprochées par
+`resultats/relecture-positionnement-2026-09-13.md` (reprises dans `resultats/plan-revision-2026-09-13.md`,
+tâche T2), créer les entrées bibliographiques manquantes qui en découlent, et mettre à jour l'état
+de vérification. Écriture strictement limitée à `article/references.bib`,
+`article/references-verification.md` et `resultats/anteriorites-2026-09-13.md` ; `article/manuscrit.md`
+non touché. Aucun appel de modèle payant ; vérifications faites par lecture directe des PDF/pages
+sources (WebFetch, recherche web, et relecture des extractions texte intégral déjà présentes dans le
+scratchpad de cette session pour Narayanan-Shmatikov 2008 et Anonymeter 2023, produites par un agent
+antérieur de cette même session à partir des PDF originaux).
+
+### Les trois antériorités : vérifiées indépendamment, toutes trois tiennent
+
+**1. Narayanan & Shmatikov, *Robust De-anonymization of Large Sparse Datasets* (IEEE S&P 2008,
+doi 10.1109/SP.2008.33 ; préprint arXiv:cs/0610105, texte intégral relu ligne à ligne dans cette
+passe) — la pondération par rareté et le critère de monde ouvert par excentricité. `[TIENT]`**
+
+Relu directement dans le texte intégral (v2 du préprint, 22 nov. 2007 ; le titre affiché sur cette
+version du préprint est « Robust De-anonymization of Large Datasets (How to Break Anonymity of the
+Netflix Prize Dataset) », légèrement différent du titre imprimé de la version IEEE S&P 2008 —
+« Large **Sparse** Datasets » — ce qui est normal pour un préprint/version publiée, sans incidence
+sur le contenu technique, identique). Citations exactes retrouvées à la source (§4 et §5) :
+
+> « Score(aux,r′) = Σ_{i∈supp(aux)} wt(i)·Sim(aux_i,r′_i) where wt(i) = 1/log|supp(i)|. »
+
+> « If (max−max2)/σ < φ, where φ is a fixed parameter called the eccentricity, then there is no
+> match; otherwise, the matching set consists of the record with the highest score. »
+
+> « The eccentricity parameter was set to φ = 1.5 [...] (A constant value of the eccentricity does
+> not always give the equal error rate, but it is a close enough approximation.) »
+
+Ces trois phrases confirment, mot pour mot, les citations du rapport de relecture positionnement
+(F2). **Verdict : tient sans réserve.** La pondération par rareté (wt(i)=1/log|supp(i)|) et le
+critère de monde ouvert par excentricité calibrée sur le taux d'égale erreur sont bien de
+Narayanan-Shmatikov 2008, et l'entrée `narayanan2008robust` du .bib (déjà présente, Bloc A) est
+correctement identifiée quant au fond (auteurs, algorithme) même si sa vérification à la source
+remonte à une passe antérieure non auditée.
+
+**2. Giomi, Boenisch, Wehmeyer, Tasnádi, *A Unified Framework for Quantifying Privacy Risk in
+Synthetic Data* — Anonymeter (PoPETs 2023(2):312–328) — la logique de contrôle main/naive/control
+comme dispositif d'interprétabilité. `[TIENT]`**
+
+Relu directement dans le texte intégral (extraction du PDF officiel, §4.2 « Framework
+Architecture », p. 315). Citation exacte retrouvée :
+
+> « the attack phase consists of executing three different attacks. First, the "main" privacy
+> attack in which the attacker uses the synthetic dataset X_syn to deduce private information of
+> records in the training set X_train. Second, a "naive" attack is carried out based on random
+> guessing, to provide a baseline against which the strength of the "main" attack can be compared.
+> Finally, to distinguish the concrete privacy risks of the original data records [...] from
+> general risks intrinsic to the whole population [...] a third "control" attack is conducted on a
+> set of control records from X_control. »
+
+**Verdict : tient.** C'est bien, mot pour mot, le triptyque main/naive/control que le manuscrit
+revendique comme contribution (2) sans l'attribuer. La nuance déjà notée par le rapport de
+relecture reste correcte et doit être conservée dans la reformulation : le contrôle du manuscrit
+n'est pas identique (c'est un seuil d'arrêt **avant dépense**, adossé à une baseline démographique
+contre les humains réels, non une soustraction a posteriori comme chez Anonymeter) — mais la
+**logique** (une exécution factice pour distinguer signal réel et risque générique de population)
+est bien celle de Giomi et al., déjà citée ailleurs dans le manuscrit sans être créditée ici.
+
+**3. Jordon, Szpruch, Houssiau, Bottarelli, Cherubin, Maple, Cohen, Weller, *Synthetic Data —
+what, why and how?* (Royal Society, 2022, arXiv:2205.03257) — le scénario « deux organisations »
+comme problème ouvert, qui infirme « no direct precedent ». `[TIENT]`**
+
+Relu directement dans le texte intégral (§2.1.2 « Data Linking »). Citations exactes retrouvées :
+
+> « If these datasets were synthesised independently, the 1-1 match between datasets will be
+> broken; if, in the future, someone wished to pull together these synthetic datasets to
+> investigate the correlations between, say, genetic data and lab test results, they would not be
+> able to do so effectively. »
+
+> « In these situations, there is a need to be able to link two independently generated synthetic
+> datasets (given access to real data) in a minimally privacy-leaking way. »
+
+**Verdict : tient.** Le scénario exact du canal jumeau-à-jumeau de l'article — lier deux jeux
+synthétiques générés indépendamment, avec accès aux données réelles pour l'attaquant — est nommé
+comme problème ouvert par Jordon et al. 2022. La phrase « This threat model has no direct
+precedent in the synthetic-data literature » est donc fausse telle qu'écrite. Comme le note déjà
+le rapport de relecture, c'est un atout et non une charge : Jordon et al. posent le problème sans
+le mesurer ; le manuscrit le mesure. Le passage doit être requalifié, pas supprimé.
+
+### Discipline appliquée : aucune référence n'a été ajoutée sur la seule foi d'un résumé
+
+Conformément à la règle du projet (« ne pas citer ce qu'on n'a pas lu »), les trois travaux de 2026
+relevés par la relecture positionnement comme voisinage manquant (Li 2601.05918 ; Li, Wen & Li
+2605.30848 ; Xiang et al. 2608.03700) **n'ont pas été ajoutés** au .bib dans cette passe : le
+rapport source les a lui-même typés `[PROBABLE sur la portée exacte]`, n'ayant lu que leurs résumés,
+et le plan de révision les place explicitement sous une décision du responsable non tranchée (D5).
+Cette passe ne les a pas relus intégralement non plus ; ils restent donc hors bibliographie tant
+qu'un agent ne les aura pas lus en entier.
+
+### Entrées créées (Bloc E) — métadonnées vérifiées à la source
+
+| Clé | Vérifié via | Ce qui a été lu | État |
+|---|---|---|---|
+| `jordon2022synthetic` | arXiv:2205.03257 (texte intégral, §2.1.2) + page d'abstract arXiv + PDF royalsociety.org (métadonnées, url) | Texte intégral (relu pour la citation exacte ci-dessus) | Vérifié à la source — équivalent Bloc B |
+| `carlini2023quantifying` | arXiv:2202.07646 (page d'abstract, résumé intégral lu) + recherche web croisée (dblp/conf/iclr, page ICLR 2023 poster/oral) pour confirmer la venue | Résumé intégral + métadonnées de venue (pas le corps de l'article) | Vérifié à la source pour le titre/auteurs/venue/résultat annoncé dans le résumé ; **pas lu intégralement** — ne pas lui attribuer d'affirmation au-delà de ce que dit son résumé |
+| `houssiau2022tapas` | arXiv:2211.06550 (page d'abstract, résumé intégral lu) + recherche web croisée (ML Anthology, dépôt GitHub alan-turing-institute/tapas) pour confirmer la venue | Résumé intégral + métadonnées de venue | Vérifié à la source pour le titre/auteurs/venue ; **pas lu intégralement** |
+
+**Nuance nécessaire pour l'agent qui rédigera la prose de citation (T3, §2.1 et §2.3 du
+manuscrit).** `carlini2023quantifying` et `houssiau2022tapas` ont été vérifiés dans leurs
+métadonnées et leur résumé (documents rédigés par leurs propres auteurs, donc une source primaire,
+mais partielle) — pas dans leur corps intégral. Cela suffit pour les citer comme antécédent
+factuel de mémorisation log-linéaire (Carlini) ou comme cadre standard d'audit de la vie privée des
+données synthétiques (TAPAS), formulations qui ne dépassent pas ce que dit leur résumé. **Ne pas
+leur attribuer une comparaison ou un chiffre précis qui ne figure pas dans le résumé cité
+ci-dessus**, faute de lecture intégrale dans cette passe.
+
+### Correction apportée à `gouweleeuw1998pram` (R8/T2 point 2)
+
+URL du texte intégral ajoutée en champ `url=` : le PDF a été récupéré et lu (2 premières pages) pour
+confirmer, à la source, le titre exact, les auteurs, la revue (*Journal of Official Statistics*,
+vol. 14, n° 4, 1998, p. 463–478) et la description du PRAM (« the score on one or more categorical
+variables is changed [...] according to a predetermined probability mechanism », « the probability
+mechanism [...] is known by the analyst ») — cohérent avec la caractérisation du §2.6 du manuscrit
+(« perturbs categorical variables through a known transition matrix leaving margins invariant in
+expectation »). Aucune note interne en français n'a été trouvée dans le `.bib` actuel de ce
+dépôt — elle avait déjà été retirée avant cette passe ; seul l'ajout de l'`url=` restait à faire.
+
+### Validité syntaxique du .bib après cette passe
+
+Vérification mécanique (accolades hors commentaires `%`, clés extraites par expression régulière,
+recomptées) puis compilation `bibtex` réelle sur un fichier `.aux` citant `*` (style `plain`) :
+
+- **444 accolades ouvrantes, 444 fermantes** — équilibrées.
+- **50 clés au total, aucun doublon** (vérifié par script).
+- `bibtex` ne rapporte **aucune erreur** sur les 50 entrées ; seuls les 12 avertissements
+  préexistants « empty journal » (entrées `@article` arXiv-only, non touchées par cette passe)
+  subsistent — inchangés par rapport à avant cette passe.
+- **Compte final : 50 entrées** dans `article/references.bib` (47 avant cette passe + 3 nouvelles :
+  `jordon2022synthetic`, `carlini2023quantifying`, `houssiau2022tapas`).
+
+### État réel de la vérification des références après cette passe
+
+| Bloc | Entrées | État |
+|---|---|---|
+| A | 27 | Non auditables dans le dépôt (vérification antérieure sans trace) — inchangé |
+| B | 18 | Vérifiées à la source (passe du 11-12/09) — inchangé |
+| C | 1 | Vérifiée à la source (passe du 12/09) — inchangé |
+| D | 1 | Vérifiée à la source (passe du 12/09) — inchangé |
+| **E (nouveau)** | **3** | **Vérifiées à la source dans cette passe (13/09) : 1 en texte intégral, 2 en métadonnées + résumé** |
+| **Total** | **50** | **23 entrées portent une trace de vérification auditable (Bloc B+C+D+E = 18+1+1+3), sur 50 — soit 27 non auditables (Bloc A), inchangé en valeur absolue mais passé de 27/47 à 27/50 en proportion.** |
+
+**Formulation à substituer partout où « 47 entrées, 20 auditables » apparaît** (y compris dans la
+phrase que la tâche T5 doit déplacer vers Open Science, cf. R7 du plan de révision) :
+
+> Of the 50 entries in `article/references.bib`, 23 were checked directly against their primary
+> source in this project; the remaining 27 carry over an earlier verification whose working notes
+> were lost before this project's records began and could not be re-audited here.
