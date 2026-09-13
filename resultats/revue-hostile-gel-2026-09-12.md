@@ -1,4 +1,38 @@
-# Revue hostile avant gel — PoPETs 2027.3
+# Revue hostile avant gel — PoPETs 2027.3 — UNE CONSIGNE BORNÉE le 13 septembre 2026
+
+statut: provisoire
+borne_par: resultats/correction-t1b-2026-09-13.md
+fait_foi: resultats/correction-t1b-2026-09-13.md (pour la consigne D1 et le couple de chiffres du témoin corrigé)
+mandat: relecture hostile de article/manuscrit.md avant gel, posture relecteur senior en vie privee, avis par defaut le rejet (mandat d'origine du 12/09, reconstitue depuis le corps du rapport)
+agent: relecteur hostile avant gel, 12/09 ; en-tete A2 et bornage poses le 13/09 par Claude Opus 5, sous-agent marqueurs canoniques
+ecriture: resultats/revue-hostile-gel-2026-09-12.md (en-tete et bandeau seulement ; le corps d'origine est conserve mot pour mot)
+lecture_seule: tout le reste
+interdits: appel payant, reseau, recherche web, commit sur master, arriere-plan, toute modification de article/manuscrit.md
+cout_reel_usd: 0.00
+
+> ## BORNÉ, le 13/09/2026 — la consigne D1 prescrit un chiffre qui ne fait plus foi
+>
+> **État : BORNÉ** (le défaut D1 est réel et tient ; le chiffre de remplacement qu'il
+> prescrit est périmé). Fait foi : `resultats/correction-t1b-2026-09-13.md`.
+>
+> Le §D1 ci-dessous conclut « **Ce qu'il faut faire.** Remplacer l. 76 et la ligne 1 du
+> tableau 1 par “0.974 [0.950 ; 0.993] against 0.965 observed” ». **Cette consigne ne
+> doit plus être exécutée telle quelle.** Le 0,974 est la moyenne d'un run **arrêté à
+> 20 réplicats**, alors que `resultats/c7-nul-corrige-preenregistrement.md` §5 en
+> prescrivait **100**. Aux 100 prescrits, la série qui fait foi vaut **rho moyen 0,9799,
+> bande [0,9510 ; 0,9930]** (`resultats/c7-nul-corrige-marginal.csv`, ligne `marginal` /
+> `n_replicats = 100`, seule ligne portant `fait_foi_tableau1= oui`).
+>
+> **Ce qui tient intégralement :** le défaut D1 lui-même — le manuscrit porte bien deux
+> paires de chiffres pour la même démonstration, et l'introduction et le tableau 1 citent
+> bien le témoin d'origine (0,984 / 0,969). Le geste à faire est le même ; **seul le
+> couple à écrire change**. Et le verdict ne bouge dans aucun des deux cas : la
+> prédiction (b) reste réfutée (0,9650 sous le 95ᵉ centile, 0,9934 à n = 20 comme 0,9930
+> à n = 100).
+>
+> **Interdit à partir d'ici :** écrire « 0.974 [0.950 ; 0.993] » dans le manuscrit, le
+> résumé, le tableau 1, la légende de la figure 2 ou la lettre de divulgation, au motif
+> de cette consigne.
 
 > **NOTE D'ÉTAT (12 septembre 2026) — vérifiée point par point contre `article/manuscrit.md`
 > tel qu'il est aujourd'hui, pas rapportée sur la seule foi d'un autre audit.** La plupart des

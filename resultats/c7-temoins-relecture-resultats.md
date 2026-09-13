@@ -1,13 +1,46 @@
-# C7 — Témoins de relecture : mes chiffres, mes intervalles, mes écarts
+# C7 — Témoins de relecture : mes chiffres, mes intervalles, mes écarts — UN CHIFFRE BORNÉ le 13 septembre 2026
 
-statut: courant
-fait_foi: resultats/c7-temoins-relecture.csv
+statut: provisoire
+borne_par: resultats/c7-residu-trajectoire-resultats.md
+fait_foi: resultats/c7-temoins-relecture.csv (pour les chiffres de ce rapport) ; resultats/c7-residu-trajectoire-resultats.md (pour le contraste 2023 -> aujourd'hui, desormais interdit de publication chiffree)
+
+
 mandat: T1a : reimplementer independamment les deux temoins de la relecture hostile du 13/09 (items apparies sur Twin, attaquant fort sur Argyle), appliquer le controle d'interpretabilite, rapporter mes propres chiffres avec IC bootstrap sur les personnes, et les declarer post-hoc et non preenregistres
 agent: mesures / temoins de relecture (T1a), 13/09
 ecriture: analyses/c7_temoins_relecture.py, resultats/c7-temoins-relecture-preenregistrement.md, resultats/c7-temoins-relecture-resultats.md, resultats/c7-temoins-relecture.csv
 lecture_seule: tout le reste
 interdits: appel payant, reseau, recherche web, commit sur master, fusion, ecriture hors des quatre fichiers du mandat
 cout_reel_usd: 0.00
+
+> ## BORNÉ, le 13/09/2026 — le contraste « 8,9× » ne doit plus être publié comme un facteur
+>
+> **État : BORNÉ** (le fait tient dans un périmètre plus étroit, et le périmètre est nommé).
+> Fait foi : `resultats/c7-residu-trajectoire-resultats.md`, §9 et §10.
+>
+> Le tableau du §« Le rapport à la baseline, à nombre d'items apparié » publie
+> **8,9×** (`c7-temoins-relecture.csv`, ligne `synthese`, colonne
+> `contraste_twin_sur_argyle` = 8,878207) comme contraste 2023 → aujourd'hui à items
+> appariés, et conclut qu'« il ne s'annule pas ».
+>
+> Ce qui est établi ensuite, et qui borne ce chiffre : **apparier le nombre brut d'items
+> n'apparie rien.** À nombre d'items égal, les douze items Twin portent encore 46 %
+> d'information indépendante de plus que les douze items ANES. Une fois cet excédent
+> retiré, le contraste tombe de 9,6× à **2,53×** (`c7-residu-trajectoire.csv`, régime
+> `M2 items effectifs = 4.31`, `rapport jumeau/demo` = 2,5293) — et son dénominateur
+> (0,135 %, Argyle) **échoue son propre contrôle d'interprétabilité** et n'est pas
+> estimable, ce qui rend le rapport indéfini, pas seulement petit.
+>
+> **Interdit à partir d'ici :** toute formulation portant un **facteur chiffré** entre les
+> deux époques — « 150× », « 15× », « 10× », « 8,9× », et **y compris le 2,5×** du rapport
+> qui borne celui-ci. Ce qui peut être publié est une **direction, pas une amplitude** :
+> la formulation exacte est celle du §10 de `c7-residu-trajectoire-resultats.md`.
+>
+> **Ce qui tient sans réserve dans ce rapport** : les taux et intervalles du témoin T1
+> (1,2193 % [1,1118 ; 1,3301] à k = 12), le témoin T2 sur Argyle, le contrôle
+> d'interprétabilité, et surtout le constat que **le nombre d'items gonfle tout ce qui
+> attaque**, baseline démographique comprise (facteur 7,41 de 12 à 60 items,
+> `c7-temoins-relecture.csv`, `facteur_12_vers_60_items`) — constat repris et confirmé
+> indépendamment par le rapport qui borne celui-ci.
 
 > **POST HOC, NON PRÉENREGISTRÉ.** Les deux témoins de ce fichier ont été conçus après
 > avoir vu les résultats qu'ils mesurent, en réponse à la relecture hostile du

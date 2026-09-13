@@ -1,6 +1,8 @@
-# C7, équité du risque : la moyenne cache une minorité identifiée à coup sûr (13 septembre 2026)
+# C7, équité du risque : la moyenne cache une minorité identifiée à coup sûr (13 septembre 2026) — UNE AFFIRMATION AMENDÉE le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+amende_par: resultats/audit-predictibilite-2026-09-13.md
+fait_foi: resultats/audit-predictibilite-2026-09-13.md
 mandat: Mesurer si le risque de ré-identification est réparti uniformément entre les personnes ou concentré sur une minorité, caractériser les plus exposés, et déterminer si la défense D4 (mélange intra-segment) réduit l'inégalité ou seulement le taux moyen. Aucun appel payant, aucun réseau, aucun arrière-plan, aucune donnée individuelle imprimée.
 agent: Claude Opus 5, Anthropic
 ecriture: analyses/c7_equite_risque.py, resultats/c7-equite-risque-preenregistrement.md, resultats/c7-equite-risque-resultats.md, resultats/c7-equite-risque.csv
@@ -18,6 +20,48 @@ bassin exactement attaqué, baseline recalculée dessus) : `JSON Persona - GPT4.
 top-1 **20,69 % [19,00 ; 22,40]** contre baseline Demographics Only **2,15 %
 [1,59 ; 2,79]** sur les 2 058 personnes. Le jumeau porte bien une personne ; ce qui suit
 est interprétable.
+
+---
+
+## 0 bis. Une affirmation de ce rapport est AMENDÉE — et elle n'est PAS retirée
+
+Rien n'est effacé. Une seule des affirmations de ce rapport change de statut, et il faut
+dire exactement laquelle, parce que la nuance a déjà été déformée une fois dans le sens
+du retrait.
+
+**État : AMENDÉ — « affaiblie et renommée », pas retirée.** Fait foi :
+`resultats/audit-predictibilite-2026-09-13.md`, §1 et §7, dont le verdict est mot pour
+mot : « l'affirmation ne doit pas être retirée, elle doit être affaiblie et renommée ».
+
+**Ce qui est interdit :** la phrase **« la fuite suit la prédictibilité, non la rareté »**
+(§3 et §7 ci-dessous). L'audit établit qu'elle **oppose deux choses qui ne sont pas
+opposables** : sous un modèle de population, « prédictible » et « typique » sont la même
+variable (ρ = −0,702 entre prédictibilité hors pli et rareté moyenne,
+`c7-audit-predictibilite.csv`). L'opposition est mal posée, donc la phrase doit
+disparaître.
+
+**Ce qui TIENT, et qui a résisté au test le plus dangereux — la moitié « rareté ».** Le
+signe négatif de la corrélation risque ↔ atypicité survit :
+
+- à une autre définition de la rareté (ρ = −0,213 avec la rareté moyenne `−log q_j`,
+  `c7-audit-predictibilite.csv`) ;
+- **au changement d'attaquant pour A-LLR pondéré par la rareté**, c'est-à-dire à
+  l'attaquant construit pour exploiter la rareté : ρ = −0,185 [−0,228 ; −0,138] sur
+  l'atypicité, et **plus fort encore** sur la rareté moyenne, −0,237 [−0,275 ; −0,198].
+  La prédiction P6 de l'auditeur, qui annonçait l'inversion du signe, est **réfutée**.
+
+Autrement dit : le contre-intuitif tient — les plus exposés ne sont pas les plus
+atypiques — et c'est la seconde moitié, celle qui revendiquait la « prédictibilité »
+contre la « rareté », qui tombe. Toute note qui présenterait cette affirmation comme
+*retirée* est fausse et doit être corrigée vers ce paragraphe.
+
+**La formulation de remplacement** est celle du §8 de l'audit, à reprendre in extenso.
+
+**Le reste de ce rapport n'est pas touché** : la forme quasi binaire du risque, la
+concentration, le Gini, l'effet de D4 et la réplication sur Park sont hors du périmètre
+de cet audit.
+
+---
 
 ## 0. La mesure, et le piège du bassin
 

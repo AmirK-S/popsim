@@ -1,6 +1,8 @@
 # C7 — Le nul corrigé à remplissage marginal : les réplicats, enfin en CSV
 
-statut: courant
+statut: provisoire
+borne_par: resultats/correction-t1b-2026-09-13.md
+fait_foi: resultats/correction-t1b-2026-09-13.md (pour la série qui fait foi au tableau 1 : n = 100, rho 0,980) ; resultats/c7-nul-corrige-marginal.csv (pour les réplicats eux-mêmes, inchangés à la décimale)
 mandat: émettre en CSV les réplicats du nul corrigé à remplissage marginal (tableau 1, rho 0,974 [0,950 ; 0,993]), qui n'existaient dans aucun fichier du dépôt — défaut D8, tâche T1b
 agent: Claude Opus 5, Anthropic
 ecriture: resultats/c7-nul-corrige-marginal.csv, resultats/c7-nul-corrige-marginal.md, analyses/c7_temoin_verite_appariee.py

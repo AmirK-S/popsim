@@ -1,6 +1,7 @@
 # Audit de l'affirmation « les 45 items les plus banals donnent 30,25 % » (13 septembre 2026)
 
-statut: courant (section 0 = preenregistrement, ecrite et commitee SEULE avant tout calcul, non modifiee depuis)
+statut: courant
+note_statut: section 0 = preenregistrement, ecrite et commitee SEULE avant tout calcul, non modifiee depuis
 mandat: attaquer l'affirmation D4 de la branche agent/mesures/attaquant-imparfait — selection post hoc, balayage cache, mecanisme, baseline, dependance a l'attaquant, controle d'interpretabilite
 agent: Opus 5, Anthropic
 ecriture: resultats/audit-items-banals-2026-09-13.md, analyses/c7_audit_items_banals.py, resultats/c7-audit-items-banals.csv
