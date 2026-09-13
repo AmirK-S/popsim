@@ -64,7 +64,16 @@ def nul_exactitude_verite(x,y,rng,mode):
     faux=faux_marginal(y,rng) if mode=="marginal" else faux_uniforme(y,rng)
     return np.where(masque,np.where(correct,y,faux),-1).astype(x.dtype)
 
-for mode in ("marginal","uniforme"):
+# --- SORTIE CSV ajoutee le 13 septembre 2026 (plan-revision-2026-09-13.md, tache T1b ;
+# relecture-fond-2026-09-13.md, defaut D8). AUCUNE ligne de calcul n'a ete modifiee : on
+# accumule ci-dessous les valeurs deja calculees et on les ecrit apres coup. MODES restreint
+# la liste des variantes parcourues, ce qui ne change aucun resultat -- la graine de chaque
+# replicat est [GRAINE,999,r,graine_nom(nom),0|1], independante de l'ordre d'iteration.
+MODES=tuple(m for m in os.environ.get("MODES","marginal,uniforme").split(",") if m)
+SORTIE_CSV=os.environ.get("C7_MARGINAL_CSV")
+RESUME={}
+
+for mode in MODES:
     rhos=np.empty(N_REP); tab={n:[] for n in noms_12}; fidt={n:[] for n in noms_12}; exa={n:[] for n in noms_12}
     for r in range(N_REP):
         fid,fui={},{}
@@ -90,6 +99,43 @@ for mode in ("marginal","uniforme"):
     for nom in sorted(noms_12,key=lambda n:-np.mean(tab[n])):
         print(f"{nom:50s} {np.mean(exa[nom]):7.4f} {np.mean(fidt[nom]):+9.5f} {100*np.mean(tab[nom]):8.3f}")
     print(flush=True)
+    RESUME[mode]=rhos.copy()
+
+# --- Ecriture CSV (ajout du 13 septembre 2026). Rien au-dessus n'a change.
+# Les bornes ecrites sont les 5e et 95e CENTILES DE LA LOI NULLE des rho, PAS un intervalle
+# de confiance : les noms de colonnes le disent en toutes lettres (correction deja appliquee
+# au manuscrit). La colonne `variante` separe les deux remplissages, qui sont deux temoins
+# distincts et ne doivent jamais etre substitues l'un a l'autre.
+if SORTIE_CSV:
+    import csv as _csv
+    RHO_REEL=0.9650
+    COLS=["ligne","variante","remplissage_cellules_fausses","fait_foi_tableau1","n_replicats",
+          "graine","n_permutations","n_tirages_top1","n_points_spearman","replicat","rho_nul",
+          "rho_nul_moyen","rho_nul_median","rho_nul_centile5_loi_nulle","rho_nul_centile95_loi_nulle",
+          "rho_nul_min","rho_nul_max","rho_reel_observe","rho_reel_depasse_centile95_loi_nulle",
+          "nature_des_bornes","script","cache"]
+    _neuf=not os.path.exists(SORTIE_CSV)
+    with open(SORTIE_CSV,"a",newline="") as _f:
+        w=_csv.DictWriter(_f,fieldnames=COLS)
+        if _neuf: w.writeheader()
+        for mode,rs in RESUME.items():
+            commun=dict(variante=mode,remplissage_cellules_fausses=
+                        "marginale de population par item, valeur de la personne exclue" if mode=="marginal"
+                        else "uniforme sur les modalites, valeur de la personne exclue",
+                        fait_foi_tableau1="oui" if (mode=="marginal" and N_REP==20) else "non",
+                        n_replicats=N_REP,graine=GRAINE,n_permutations=N_PERM,n_tirages_top1=N_TIR,
+                        n_points_spearman=len(noms_12),rho_reel_observe=f"{RHO_REEL:.4f}",
+                        nature_des_bornes="centiles 5-95 de la loi nulle (PAS un intervalle de confiance)",
+                        script="analyses/c7_temoin_verite_appariee.py",cache=CACHE)
+            for i,v in enumerate(rs):
+                w.writerow(dict(commun,ligne="replicat",replicat=i,rho_nul=f"{v:.10f}"))
+            w.writerow(dict(commun,ligne="agregat",replicat="",rho_nul="",
+                rho_nul_moyen=f"{rs.mean():.10f}",rho_nul_median=f"{np.median(rs):.10f}",
+                rho_nul_centile5_loi_nulle=f"{np.percentile(rs,5):.10f}",
+                rho_nul_centile95_loi_nulle=f"{np.percentile(rs,95):.10f}",
+                rho_nul_min=f"{rs.min():.10f}",rho_nul_max=f"{rs.max():.10f}",
+                rho_reel_depasse_centile95_loi_nulle=str(bool(RHO_REEL>np.percentile(rs,95))).lower()))
+    print(f"CSV ecrit : {SORTIE_CSV} ({'cree' if _neuf else 'complete'})",flush=True)
 
 # --- angle 6 : SUPPRIME le 12 septembre 2026 (correctifs-artefact-2026-09-12.md, defaut 1).
 # Ce bloc plantait ici (IndexError : la table de frequences marginales par item etait
