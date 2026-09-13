@@ -5,16 +5,59 @@ md2latex.py -- convertisseur Markdown -> LaTeX pour le gabarit PoPETs 2027.
 
 CE QUE FAIT CE SCRIPT
 ----------------------
-Lit `article/manuscrit.md` (lecture seule) et regenere trois zones marquees
+Lit `article/manuscrit.md` (lecture seule) et regenere quatre zones marquees
 de `article/latex/main.tex` :
 
     % === GENERATED:ABSTRACT BEGIN ... END ===
     % === GENERATED:BODY BEGIN ... END ===       (sections 1-7, figures, tableaux)
+    % === GENERATED:APPENDIX BEGIN ... END ===   (annexes, apres \\appendix)
     % === GENERATED:BACKMATTER BEGIN ... END ===  (ethics / openscience / ai)
 
 Tout le reste de main.tex (preambule, metadonnees ACM, titre, \\maketitle,
 \\appendix, \\begin{acks}, bibliographie) est laisse tel quel : ce script ne
 touche jamais a ces parties a la main.
+
+ZONE ANNEXE -- LE MARQUEUR, ET POURQUOI CELUI-LA
+------------------------------------------------
+L'appel a communications PoPETs 2027 exclut du decompte des 12 pages du corps
+« any clearly-marked appendices », au meme titre que la bibliographie, les
+remerciements et les trois sections obligatoires. Jusqu'ici ce script n'avait
+pas de zone annexe : une section « Appendix » ecrite dans le manuscrit tombait
+dans BODY, donc DANS le decompte -- exactement l'inverse du but (constat de
+`resultats/decision-pagination-2026-09-13.md` §2, qui renvoyait l'ouverture de
+cette zone au present script).
+
+MARQUEUR : le titre de niveau 2 NON NUMEROTE `## Appendix`.
+
+    ## 10. AI Use
+    ...
+    ## Appendix              <-- marqueur : n'emet rien lui-meme
+    ## Threshold census ...  <-- devient \\section{} sous \\appendix  -> « A »
+    ## Secondary tables ...  <-- -> « B »
+    ## References            <-- toujours remplace par la bibliographie auto
+
+Ce choix n'est pas arbitraire : le fichier source utilise DEJA le titre de
+niveau 2 non numerote comme sentinelle de structure -- `## Abstract` et
+`## References` sont, avant cette modification, les deux seuls `##` sans
+numero du manuscrit, et tous deux sont reconnus par leur intitule et traites a
+part (resume d'un cote, bibliographie automatique de l'autre). `## Appendix`
+est la troisieme sentinelle de la meme famille, reconnue de la meme facon.
+Aucune convention nouvelle n'est introduite, et une section d'annexe reste un
+`##` ordinaire -- ce que `\\appendix` renumerote en lettres (A, B, C...) sans
+que le Markdown ait a porter la lettre.
+
+Deux garde-fous, dans l'esprit du reste du script (echouer bruyamment plutot
+que deviner) :
+  - les sections OBLIGATOIRES gardent la priorite sur le marqueur. `Abstract`,
+    `References` et les sections numerotees 8, 9, 10 (ethics / open science /
+    AI use) partent dans leur zone propre meme si elles suivent `## Appendix`.
+    Un marqueur mal place ne peut donc pas faire disparaitre en silence une
+    section que le gabarit exige ;
+  - un marqueur present mais suivi d'aucune section produit une zone annexe
+    vide : c'est signale sur stderr, pas devine.
+
+L'absence de marqueur est un cas normal (manuscrit sans annexe) : la zone est
+alors emise vide, sans avis.
 
 Il copie aussi article/references.bib vers article/latex/references.bib
 (source figee, jamais modifiee -- seule la copie locale est (re)ecrite), et
@@ -291,11 +334,36 @@ _UNICODE_MATH_MAP = [
 ]
 
 
+_EXPOSANTS_UNICODE = {
+    "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4",
+    "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9",
+    "⁻": "-", "⁺": "+",
+}
+_EXPOSANTS_RE = re.compile("[%s]+" % "".join(_EXPOSANTS_UNICODE))
+
+
 def _convert_unicode_math(text):
     # Cas particulier repere manuellement (une seule occurrence dans la
     # legende de la Figure 1) : "4·10⁻⁴" en exposant unicode. Traite avant
     # la regle generale du middot pour eviter un $4$\cdot$10⁻⁴$ mal forme.
     text = text.replace("4\u00b710\u207b\u2074", r"$4\cdot10^{-4}$")
+
+    # Exposants unicode, regle GENERALE (posee apres le cas particulier
+    # ci-dessus, qui reste prioritaire).
+    #
+    # BUG TROUVE PAR COMPILATION REELLE (pas suppose) : le manuscrit porte
+    # "p < 10\u207b\u2074" (bloc du \u00a75.1). U+207B et U+2074 n'etaient dans aucune
+    # table, donc recopies tels quels dans le .tex ; pdflatex s'arretait
+    # alors net -- "Unicode character (U+207B) not set up for use with LaTeX
+    # ... Fatal error occurred, no output PDF file produced". Le diagnostic
+    # SPECIAL_CHARS_SEEN les signalait bien en fin d'execution, mais sans
+    # bloquer : le defaut ne se decouvrait qu'a la compilation suivante.
+    # Traduits ici en exposant mathematique reel. Aucun chiffre n'est
+    # modifie, seule la notation change.
+    def _repl_exposant(m):
+        return "$^{%s}$" % "".join(_EXPOSANTS_UNICODE[c] for c in m.group(0))
+
+    text = re.sub(_EXPOSANTS_RE, _repl_exposant, text)
 
     # Signe moins unicode (U+2212), utilise dans le manuscrit pour les
     # nombres negatifs ("−0.133") : le mettre en mode mathematique pour
@@ -815,20 +883,30 @@ def load_manuscript_title():
     return short_title, full_title
 
 
-def main():
-    global BIB_KEYS
-    BIB_KEYS = load_bib_keys(BIB_SRC_PATH)
+# ---------------------------------------------------------------------------
+# MARQUEUR DE ZONE ANNEXE. Voir l'en-tete du module pour la justification du
+# choix : c'est le titre de niveau 2 NON NUMEROTE `## Appendix`, troisieme
+# sentinelle de la meme famille que `## Abstract` et `## References`, qui sont
+# deja reconnus par leur intitule et traites a part. Le marqueur n'emet rien :
+# il dit seulement « a partir d'ici, on n'est plus dans le corps ».
+# ---------------------------------------------------------------------------
+APPENDIX_MARKER = "Appendix"
 
-    shutil.copyfile(BIB_SRC_PATH, BIB_DST_PATH)
+# Titres et numeros que le marqueur NE peut PAS capturer : ce sont les zones
+# imposees par le gabarit PoPETs. Elles partent dans leur zone propre ou
+# qu'elles se trouvent dans le fichier source, y compris apres le marqueur --
+# un marqueur mal place ne doit jamais faire disparaitre en silence une
+# section que le venue exige.
+ZONES_RESERVEES_PAR_TITRE = {"Abstract", "References"}
+ZONES_RESERVEES_PAR_NUMERO = {"8", "9", "10"}
 
-    short_title, full_title = load_manuscript_title()
 
-    src = open(MANUSCRIPT_PATH, encoding="utf-8").read()
+def parse_sections(src):
+    """Decoupe le manuscrit Markdown en sections de niveau 2, chacune portant
+    ses sous-sections de niveau 3. Tout ce qui precede le premier '## ' (titre
+    H1, ligne italique de metadonnees, '---') est ignore."""
     lines = src.split("\n")
-
-    # Repere le premier '## ' : tout ce qui precede (titre H1, ligne
-    # italique de metadonnees, '---') est ignore.
-    sections = []  # liste de dicts {level:2, title, number, body_lines:[...]}
+    sections = []  # liste de dicts {title_raw, title, number, items:[...]}
     cur = None
     started = False
     for line in lines:
@@ -861,14 +939,53 @@ def main():
             if not cur["items"] or cur["items"][-1][0] != "para":
                 cur["items"].append(("para", None, []))
             cur["items"][-1][2].append(line)
+    return sections
 
+
+def route_sections(sections):
+    """Aiguille chaque section vers l'une des QUATRE zones generees et renvoie
+    (abstract, body, appendix, backmatter), chacune une liste de fragments
+    LaTeX.
+
+    C'est ici, et nulle part ailleurs, que se decide ce qui compte dans les 12
+    pages du corps : `body` seul est compte, `appendix` est emis apres
+    \\appendix et en est exclu au titre des « clearly-marked appendices » de
+    l'appel PoPETs 2027.
+
+    Fonction pure (aucune lecture ni ecriture de fichier) : c'est ce qui rend
+    la frontiere corps / annexe testable sans compiler, voir
+    tests/latex/test_md2latex_annexe.py."""
     body_fragments = []
+    appendix_fragments = []
     backmatter_fragments = []
     abstract_fragments = []
+    marker_seen = False
+    sections_after_marker = 0
 
     for sec in sections:
         title = sec["title"]
         number = sec["number"]
+
+        # --- le marqueur lui-meme : bascule l'aiguillage, n'emet rien ---
+        if not marker_seen and number is None and title == APPENDIX_MARKER:
+            marker_seen = True
+            continue
+
+        # GARDE-FOU : une section imposee par le gabarit rencontree APRES le
+        # marqueur part quand meme dans sa zone propre (les tests par titre /
+        # par numero ci-dessous ont la priorite sur l'aiguillage annexe), mais
+        # cela signale presque surement un marqueur mal place -- on le dit.
+        # `References` est exclu de cet avis : la bibliographie ferme
+        # legitimement le fichier source, donc apres les annexes, et elle est
+        # de toute facon remplacee par la bibliographie automatique -- rien
+        # ne peut s'y perdre.
+        if marker_seen and (title in ZONES_RESERVEES_PAR_TITRE - {"References"}
+                            or number in ZONES_RESERVEES_PAR_NUMERO):
+            print(
+                "AVIS : section reservee au gabarit (%r) rencontree APRES le "
+                "marqueur d'annexe -- elle part dans sa zone propre, pas en "
+                "annexe. Verifier la place du marqueur '## %s'."
+                % (sec["title_raw"], APPENDIX_MARKER), file=sys.stderr)
 
         # rassemble le contenu direct (avant toute sous-section) + les
         # sous-sections, dans l'ordre
@@ -928,12 +1045,66 @@ def main():
             backmatter_fragments.append("\\end{ai}")
             continue
 
-        # sections normales 1-7 : \section + \subsection
-        body_fragments.append("\\section{%s}" % convert_inline(title))
-        body_fragments.extend(paragraphs_to_latex(direct_lines))
+        # --- ANNEXE ou CORPS ---
+        # Meme rendu (\section + \subsection) dans les deux cas ; seule la
+        # zone de destination change. Sous \appendix, LaTeX renumerote ces
+        # \section en lettres (A, B, C...) tout seul : le Markdown n'a pas a
+        # porter la lettre, et l'ordre des sections d'annexe dans le fichier
+        # source suffit a fixer leur lettre.
+        cible = appendix_fragments if marker_seen else body_fragments
+        if marker_seen:
+            sections_after_marker += 1
+        cible.append("\\section{%s}" % convert_inline(title))
+        cible.extend(paragraphs_to_latex(direct_lines))
         for subtitle, body in subsecs:
-            body_fragments.append("\\subsection{%s}" % convert_inline(subtitle))
-            body_fragments.extend(paragraphs_to_latex(body))
+            cible.append("\\subsection{%s}" % convert_inline(subtitle))
+            cible.extend(paragraphs_to_latex(body))
+
+    # GARDE-FOU : un marqueur pose mais suivi d'aucune section est presque
+    # surement une erreur de redaction (marqueur place en dernier, ou section
+    # d'annexe supprimee sans retirer le marqueur). On le signale plutot que
+    # de rendre une zone annexe vide en silence -- sans echouer pour autant :
+    # une zone annexe vide ne casse rien a la compilation, contrairement a une
+    # figure manquante.
+    if marker_seen and sections_after_marker == 0:
+        print(
+            "AVIS : marqueur d'annexe '## %s' trouve, mais aucune section ne "
+            "le suit -- la zone GENERATED:APPENDIX est emise vide. Verifier "
+            "que le marqueur n'est pas place apres la derniere annexe."
+            % APPENDIX_MARKER, file=sys.stderr)
+
+    return abstract_fragments, body_fragments, appendix_fragments, backmatter_fragments
+
+
+def _splice(text, begin_marker, end_marker, new_inner, path):
+    """Remplace le contenu entre deux marqueurs GENERATED. Echoue bruyamment
+    si l'un des deux manque, plutot que d'ecrire main.tex sans la zone (une
+    zone absente ne se verrait qu'au PDF -- ou, pour l'annexe, pas du tout :
+    le document compilerait sans ses annexes, en silence)."""
+    try:
+        i = text.index(begin_marker) + len(begin_marker)
+        j = text.index(end_marker, i)
+    except ValueError:
+        sys.exit(
+            "ERREUR : zone generee introuvable dans %s -- marqueur manquant :\n"
+            "  %s\n  %s\n"
+            "Arret plutot que d'ecrire un main.tex ampute de cette zone."
+            % (path, begin_marker, end_marker))
+    return text[:i] + "\n" + new_inner + "\n" + text[j:]
+
+
+def main():
+    global BIB_KEYS
+    BIB_KEYS = load_bib_keys(BIB_SRC_PATH)
+
+    shutil.copyfile(BIB_SRC_PATH, BIB_DST_PATH)
+
+    short_title, full_title = load_manuscript_title()
+
+    src = open(MANUSCRIPT_PATH, encoding="utf-8").read()
+    sections = parse_sections(src)
+    (abstract_fragments, body_fragments,
+     appendix_fragments, backmatter_fragments) = route_sections(sections)
 
     # A ce point, le parcours des sections a rempli REFERENCED_FIGURES via
     # chaque appel a render_figure_block() -- on synchronise maintenant les
@@ -944,6 +1115,7 @@ def main():
 
     abstract_tex = "\n\n".join(abstract_fragments)
     body_tex = "\n\n".join(body_fragments)
+    appendix_tex = "\n\n".join(appendix_fragments)
     backmatter_tex = "\n\n".join(backmatter_fragments)
 
     main_tex = open(MAIN_TEX_PATH, encoding="utf-8").read()
@@ -967,29 +1139,19 @@ def main():
     # echappement.
     main_tex = _TITLE_LINE_RE.sub(lambda m: new_title_line, main_tex, count=1)
 
-    def splice(text, begin_marker, end_marker, new_inner):
-        i = text.index(begin_marker) + len(begin_marker)
-        j = text.index(end_marker, i)
-        return text[:i] + "\n" + new_inner + "\n" + text[j:]
+    def splice(text, zone, new_inner):
+        return _splice(
+            text,
+            "%% === GENERATED:%s BEGIN (auto -- regenerated by md2latex.py, do not hand-edit) ===" % zone,
+            "%% === GENERATED:%s END ===" % zone,
+            new_inner,
+            MAIN_TEX_PATH,
+        )
 
-    main_tex = splice(
-        main_tex,
-        "% === GENERATED:ABSTRACT BEGIN (auto -- regenerated by md2latex.py, do not hand-edit) ===",
-        "% === GENERATED:ABSTRACT END ===",
-        abstract_tex,
-    )
-    main_tex = splice(
-        main_tex,
-        "% === GENERATED:BODY BEGIN (auto -- regenerated by md2latex.py, do not hand-edit) ===",
-        "% === GENERATED:BODY END ===",
-        body_tex,
-    )
-    main_tex = splice(
-        main_tex,
-        "% === GENERATED:BACKMATTER BEGIN (auto -- regenerated by md2latex.py, do not hand-edit) ===",
-        "% === GENERATED:BACKMATTER END ===",
-        backmatter_tex,
-    )
+    main_tex = splice(main_tex, "ABSTRACT", abstract_tex)
+    main_tex = splice(main_tex, "BODY", body_tex)
+    main_tex = splice(main_tex, "APPENDIX", appendix_tex)
+    main_tex = splice(main_tex, "BACKMATTER", backmatter_tex)
 
     open(MAIN_TEX_PATH, "w", encoding="utf-8").write(main_tex)
 
@@ -1020,6 +1182,20 @@ def main():
             "que chaque renvoi cible bien le bon tableau, et adapter "
             "_convert_table_refs() pour distinguer les cibles."
             % (PREDICTIONS_TABLE_RENDER_COUNT, OTHER_TABLE_RENDER_COUNT), file=sys.stderr)
+    # Frontiere corps / annexe : c'est le chiffre qui decide du respect de la
+    # limite de 12 pages, donc il est imprime a chaque execution plutot que
+    # d'etre a retrouver dans le .tex.
+    n_annexes = sum(1 for f in appendix_fragments if f.startswith("\\section{"))
+    if n_annexes:
+        print(
+            "Zone annexe : %d section(s) emise(s) apres \\appendix, HORS du "
+            "decompte des 12 pages du corps (marqueur '## %s')."
+            % (n_annexes, APPENDIX_MARKER), file=sys.stderr)
+    else:
+        print(
+            "Zone annexe : vide (aucun marqueur '## %s' dans le manuscrit) -- "
+            "tout le contenu hors sections obligatoires compte dans le corps."
+            % APPENDIX_MARKER, file=sys.stderr)
     print("main.tex regenere : %s" % MAIN_TEX_PATH, file=sys.stderr)
 
 
