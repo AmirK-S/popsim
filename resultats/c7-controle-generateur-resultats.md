@@ -1,12 +1,77 @@
-# C7, controle generateur banal : resultats (13 septembre 2026)
+# C7, controle generateur banal : resultats (13 septembre 2026) — RAPPORT BORNÉ le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+borne_par: resultats/audit-comparateur-conditionne-2026-09-13.md
+fait_foi: resultats/audit-comparateur-conditionne-2026-09-13.md
 mandat: Un generateur synthetique banal, sans IA, ajuste sur les memes humains, fuit-il autant qu'un jumeau LLM ?
-agent: Opus 5, Anthropic
-ecriture: analyses/c7_controle_generateur.py, resultats/c7-controle-generateur-preenregistrement.md, resultats/c7-controle-generateur-resultats.md, resultats/c7-controle-generateur.csv
+agent: Opus 5, Anthropic ; bornage et correction d'arrondi poses par Claude Opus 5, sous-agent marqueurs canoniques (13/09)
+ecriture: analyses/c7_controle_generateur.py, resultats/c7-controle-generateur-preenregistrement.md, resultats/c7-controle-generateur-resultats.md (en-tete, section 0 et la valeur d'un arrondi au §3 ; le corps d'origine est conserve mot pour mot par ailleurs), resultats/c7-controle-generateur.csv
 lecture_seule: tout le reste
 interdits: appel payant sans GO, reseau, commit sur master, arriere-plan
 cout_reel_usd: 0
+
+---
+
+## 0. Ce rapport est BORNÉ sur deux points, et un arrondi franchi y est corrigé
+
+Rien n'est effacé, et rien ici n'est retiré : le verdict de ce rapport tient dans un
+périmètre plus étroit que celui qu'il s'est donné. Les deux bornes sont nommées.
+
+### Borne 1 — « aucun générateur classique » vaut : aucun générateur conditionné sur le SEGMENT
+
+Fait foi : `resultats/audit-comparateur-conditionne-2026-09-13.md`, §2 et §5.
+
+Les quatre générateurs G0-G3 de ce rapport ne sont conditionnés que sur la cellule
+démographique, alors que le jumeau LLM est construit à partir des réponses passées de la
+personne. À **information d'entrée strictement égale** (les 550 colonnes informatives
+des vagues 1-3 dont la persona est faite), le meilleur comparateur classique conditionné
+sur l'individu atteint **0,4543 % [0,1992 ; 0,7581]**
+(`c7-audit-comparateur-conditionne.csv`, ligne `K2a modele conditionnel persona
+(argmax)`, `bloc_items = tous`) — soit **trois fois** le plafond publié ici.
+
+La conclusion n'est pas renversée, elle est renforcée par une autre voie : un jumeau LLM
+**Demographics Only**, qui n'a jamais vu l'individu, atteint encore **2,1453 %**
+(même CSV), soit 4,7 fois ce meilleur comparateur classique pourtant nourri de la
+persona complète. L'écart n'est donc pas imputable à l'entrée.
+
+**Interdit à partir d'ici :** la formulation « aucun générateur synthétique classique
+ajusté sur les mêmes répondants » **sans** la qualification du conditionnement. La phrase
+du §3 ci-dessous est **remplacée** par celle du §5 de l'audit.
+
+### Borne 2 — « la fidélité est la fuite » n'est établi que sur Twin ; sur GSS le CSV inverse le verdict
+
+Fait foi : `resultats/c7-controle-generateur.csv` lui-même, lignes `table = verdict`.
+
+| jeu | `eps_etoile_fuite` | `eps_etoile_exactitude` | `lecture_memorisation` (colonne du CSV) |
+|---|---|---|---|
+| Twin | 0,714076 | 0,719728 | SE COMPORTE COMME UN COPIEUR : fuite = ce qu'implique son exactitude |
+| Stanford (GSS) | 0,735202 | 0,569910 | **GENERALISE : fuit MOINS qu'un copieur de meme exactitude** |
+
+Le §2 de ce rapport le dit déjà (« GSS, resultat different et il faut le dire »), mais la
+**phrase destinée au manuscrit**, au §3, ne le dit pas : elle généralise le mécanisme
+« copieur » à partir du seul Twin-2K-500. Sur GSS l'agent composite fuit **nettement
+moins** qu'un copieur de même exactitude (65,55 % contre ~99,5 % à eps = 0,570). La
+prédiction préenregistrée de ce rapport est d'ailleurs **réfutée sur Twin et confirmée
+sur GSS**.
+
+**Interdit à partir d'ici :** toute phrase du type « la fidélité est la fuite », « la
+fuite est exactement celle d'un copieur de même exactitude » ou « ce n'est pas une
+mémorisation propre aux modèles de langage », écrite **sans** la restriction à
+Twin-2K-500 et **sans** le contre-exemple GSS. Le fait tient sur un jeu, pas sur deux.
+
+### La borne franchie, corrigée au §3
+
+Le §3 publiait « ne depasse 0,15 % (Twin-2K-500) », dans la phrase explicitement destinée
+au manuscrit. Le CSV porte **0,0015354713** pour `meilleur_classique_top1` (Twin), soit
+**0,1535 %** : la borne annoncée était **franchie**, l'arrondi allait dans le sens qui
+nous arrange. La valeur du CSV est rétablie au §3 (et « 2,3 % » y devient « 2,27 % »,
+valeur exacte de `meilleur_classique_top1` pour Stanford, 0,0226616). Le §1 de ce même
+rapport écrivait déjà la borne juste, « 0,16 % », et le §2 le chiffre exact, « 0,154 % » :
+seule la phrase destinée au manuscrit était fausse.
+
+---
+
+*Corps d'origine, conservé sans retouche à l'exception de l'arrondi nommé ci-dessus.*
 
 Preenregistre dans `c7-controle-generateur-preenregistrement.md`, ecrit avant la premiere
 ligne de code et avant tout calcul. Calcule par `analyses/c7_controle_generateur.py`, donnees
@@ -128,7 +193,7 @@ pas dans celle que j'avais annoncee) **et confirmee sur GSS**. Je la rapporte te
 
 > Aucun generateur synthetique classique ajuste sur les memes repondants -- marginales
 > independantes, marginales par cellule demographique, arbre de Chow-Liu global ou par cellule
-> -- ne depasse 0,15 % (Twin-2K-500) et 2,3 % (Park et al.) de re-identification au rang 1 sur
+> -- ne depasse 0,1535 % (Twin-2K-500) et 2,27 % (Park et al.) de re-identification au rang 1 sur
 > un bassin strictement identique, contre 20,7 % et 65,6 % pour les jumeaux produits par un
 > modele de langage : ce que nous mesurons n'est pas la fuite generique des donnees
 > synthetiques. Ce n'est pas non plus une memorisation propre aux modeles de langage. Un

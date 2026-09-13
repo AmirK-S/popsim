@@ -1,6 +1,8 @@
-# C7 — T1a §1c à §1g : résultats des cinq volets manquants
+# C7 — T1a §1c à §1g : résultats des cinq volets manquants — UN ÉNONCÉ BORNÉ le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+borne_par: resultats/c7-residu-trajectoire-resultats.md
+fait_foi: resultats/c7-residu-trajectoire-resultats.md (pour le §2 « la dégénérescence frappe exactement le bout gauche » seulement ; le reste de ce rapport n'est pas visé)
 mandat: Produire les cinq volets manquants de la tache T1a du plan de revision du 13/09 (§1c a §1g), avec bassin strictement constant entre conditions et baseline recalculee dans chaque condition de comparaison, et livrer la fiche de report des chiffres qui debloquent R1 geste 4, R9, R10, R12 et R15.
 agent: mesures / T1a complements (§1c-§1g), 13/09
 ecriture: analyses/c7_t1a_complements.py, resultats/c7-t1a-complements-preenregistrement.md, resultats/c7-t1a-complements-resultats.md, resultats/c7-t1a-complements.csv
@@ -8,6 +10,32 @@ lecture_seule: tout le reste du depot
 interdits: appel de modele payant, reseau, recherche web, arriere-plan, commit sur master, fusion, modification d'un script existant, toute ecriture dans article/
 cecite: Aucune verification reseau. Les valeurs annoncees par le plan de revision et par les rapports de relecture n'ont servi qu'a la verification de raccordement ; aucune n'a ete recopiee. Le statut des annexes dans le decompte des 12 pages PoPETs 2027 n'est pas verifie et ne l'est pas ici.
 cout_reel_usd: 0.00
+
+> ## BORNÉ, le 13/09/2026 — « la dégénérescence frappe exactement le bout gauche » vaut à items BRUTS, pas à information appariée
+>
+> **État : BORNÉ.** Fait foi : `resultats/c7-residu-trajectoire-resultats.md`, §7.
+>
+> Le §2 ci-dessous (§1c bis, « Twin à 60 items : la métrique y est saine ») conclut que la
+> classe d'ex æquo médiane vaut 1 à 60 items, que le contraste entre conventions de
+> départage n'y vaut qu'un facteur **1,32**, contre un facteur **13** à 12 items sur
+> Argyle, et que **« la dégénérescence frappe exactement le bout gauche de la trajectoire
+> — c'est vérifié, pas supposé »**.
+>
+> C'est vrai, et c'est vrai **à 60 items bruts seulement**. Une fois l'information
+> effective appariée entre les deux bouts, le bout **droit** dégénère aussi, et plus fort
+> que le gauche : à M2 la classe d'ex æquo de tête compte 11,5 candidats en médiane, et le
+> taux publié de 0,341 % est un point à l'intérieur d'une plage de **facteur 130** fixée
+> par la seule convention de départage (0,032 % à 4,193 % selon la convention ;
+> `c7-residu-trajectoire-resultats.md` §7).
+>
+> **Interdit à partir d'ici :** présenter la dégénérescence des ex æquo comme une
+> propriété **asymétrique** de la trajectoire, ou comme un argument qui disqualifie le
+> bout gauche sans toucher le bout droit. À information appariée, les deux bouts en
+> dépendent, et c'est le *rapport à la baseline* qui résiste (2,53 en espérance), pas le
+> taux nu.
+>
+> **Le reste de ce rapport n'est pas visé** : §1c, §1d, §1e, §1f, §1g et la fiche de
+> report du §7 ne sont pas touchés par ce bornage.
 
 ---
 

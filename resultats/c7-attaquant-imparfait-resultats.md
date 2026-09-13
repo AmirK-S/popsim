@@ -1,12 +1,62 @@
-# C7 attaquant imparfait : résultats (13 septembre 2026)
+# C7 attaquant imparfait : résultats (13 septembre 2026) — RAPPORT AMENDÉ le 13 septembre 2026
 
-statut: courant
+statut: provisoire
+amende_par: resultats/audit-items-banals-2026-09-13.md
+fait_foi: resultats/audit-items-banals-2026-09-13.md
 mandat: mesurer la reidentification C7 quand les donnees auxiliaires de l'attaquant se degradent (partielles, bruitees, items banals) et en situer le point de rupture
-agent: Opus 5, Anthropic
-ecriture: analyses/c7_attaquant_imparfait.py, resultats/c7-attaquant-imparfait-preenregistrement.md, resultats/c7-attaquant-imparfait-resultats.md, resultats/c7-attaquant-imparfait.csv
+agent: Opus 5, Anthropic ; amendement pose par Claude Opus 5, sous-agent marqueurs canoniques (13/09)
+ecriture: analyses/c7_attaquant_imparfait.py, resultats/c7-attaquant-imparfait-preenregistrement.md, resultats/c7-attaquant-imparfait-resultats.md (en-tete et section 0 seulement pour l'amendement ; le corps d'origine est conserve mot pour mot), resultats/c7-attaquant-imparfait.csv
 lecture_seule: tout le reste
 interdits: appel payant sans GO, reseau, commit sur master, arriere-plan
 cout_reel_usd: 0.0
+
+---
+
+## 0. Ce rapport est AMENDÉ, et trois de ses formulations sont interdites à la publication
+
+Rien n'est effacé : le corps d'origine reste ci-dessous mot pour mot. Ce qui est retiré,
+c'est l'autorité de trois formulations — pas celle du résultat.
+
+**État : AMENDÉ** (la formulation change, le fait tient). Fait foi :
+`resultats/audit-items-banals-2026-09-13.md`, §8, qui conclut « à affaiblir et à
+reformuler. Ni publiable tel quel, ni à retirer. »
+
+**Ce qui tient, et qui a résisté aux deux angles d'attaque de l'audit.** Un attaquant
+restreint à un sous-ensemble d'items ré-identifie à un taux plus élevé qu'avec les
+60 items. La sélection post hoc n'explique rien (hors pli : 35,65 % contre 25,24 % à
+60 items, `c7-audit-items-banals.csv`, volet V1), et l'effet survit à l'attaquant fort
+A-LLR (31,49 % contre 23,28 %, volet V4).
+
+**Ce qui est interdit à partir d'ici** (§8 de l'audit, *La formulation exacte que
+l'article doit employer*) :
+
+1. **Les mots « banals » et « ordinaires »** pour désigner ces items. Ce sont des items
+   **binaires** : les 45 retenus sont 41 items à deux modalités plus 4 autres, et aucun
+   item de Twin n'est banal (fréquence modale maximale 0,621). Écrire « items à deux
+   modalités ».
+2. **« 30,25 % sur 45 items » cité sans son balayage et sans sa baseline.** La courbe
+   culmine à k = 40 (36,37 % [33,54 ; 39,19], `c7-audit-items-banals.csv`, volet V2), pas
+   à 45 ; 45 est un reste de la grille 0,75 des volets précédents. Et la baseline
+   démographique monte avec le candidat : 2,089 % → 5,073 % sous Hamming, 0,826 % →
+   4,033 % sous A-LLR (volet V4).
+3. **Toute phrase du type « une base commerciale ordinaire suffit ».** Rien ici ne
+   l'établit : ce qui est testé est une propriété du **questionnaire Twin**, pas de ce que
+   détient une base commerciale. Cela vise nommément la §7 ci-dessous (« ceux que détient
+   n'importe quelle base commerciale ») et le point 3 de la §3.
+
+**Ce qui est retourné, et c'est le point le plus important.** L'inférence « donc notre
+20,57 % sous-estime le risque » est **fausse** : sur les items binaires le multiplicateur
+de risque imputable au jumeau **tombe** de ×9,87 à ×5,96 sous Hamming et de ×28,18 à
+×7,81 sous A-LLR (volet V4). Un questionnaire binaire est plus facile à ré-identifier
+**pour tout le monde**, baseline démographique comprise. Toute lecture de ce rapport
+comme une aggravation de la menace est interdite.
+
+**La formulation de remplacement** est celle du §8 de l'audit, à reprendre in extenso.
+
+---
+
+*Corps d'origine, conservé sans retouche. Les formulations visées ci-dessus restent
+lisibles ci-dessous, et restent interdites à la publication.*
 
 Préenregistrement `resultats/c7-attaquant-imparfait-preenregistrement.md`, écrit et **commité seul
 avant** le script et avant le moindre chiffre. Script `analyses/c7_attaquant_imparfait.py`, données

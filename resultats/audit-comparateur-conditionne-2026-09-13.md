@@ -7,6 +7,7 @@ ecriture: analyses/c7_audit_comparateur_conditionne.py, resultats/audit-comparat
 lecture_seule: tout le reste du dépôt, notamment analyses/c7_reidentification.py, analyses/c7_controle_interpretabilite.py, analyses/c7_controle_generateur.py (branche `agent/mesures/controle-generateur`), analyses/c7_audit_predictibilite.py (branche `agent/audit/predictibilite`)
 interdits: appel payant, réseau, recherche web, arrière-plan, fusion sur master, écriture dans article/manuscrit.md, impression de tout identifiant / réponse / combinaison individuelle
 cout_reel_usd: 0.00
+correction_posterieure: resultats/marqueurs-canoniques-2026-09-13.md — deux arrondis favorables rectifies le 13/09 par le sous-agent marqueurs canoniques, valeurs du CSV retablies : « 0,15 % » -> « 0,1535 % » (§2, ligne de rappel G1, et §2 texte) et « 4,8 fois » -> « 4,7 fois » (§2 ; 0,0214529 / 0,0045432 = 4,72, le 4,8 venait d'une division de deux valeurs deja arrondies). Le mandat, le blockquote du §0.1 et la prediction preenregistree P2 gardent « 0,15 % » : ce sont des CITATIONS de l'affirmation auditee et d'un preenregistrement, elles ne se corrigent pas apres coup.
 
 ---
 
@@ -151,10 +152,10 @@ Hasard top-1 = **0,049 %**.
 | **K10** vote modal des 10 voisins | persona individuelle | 0,486 | **0,16 %** [0,02 ; 0,32] | 1,1 % | 687,9 |
 | **K2s** modèle conditionnel (tirage) | persona individuelle | 0,467 | **0,12 %** [0,02 ; 0,24] | 1,6 % | 620,7 |
 | **K1** plus proche voisin | persona individuelle | 0,460 | **0,00 %** [0,00 ; 0,00] | 1,4 % | 745,9 |
-| *(rappel)* G1 marginales par segment | segment seul | 0,444 | 0,15 % | 1,0 % | 898,2 |
+| *(rappel)* G1 marginales par segment | segment seul | 0,444 | 0,1535 % | 1,0 % | 898,2 |
 
 **P2 est tenue, de justesse et sans importance** : le meilleur comparateur conditionné sur
-l'individu passe de 0,15 % (segment) à **0,45 %**, un facteur 3. L'information individuelle
+l'individu passe de 0,1535 % (segment) à **0,45 %**, un facteur 3. L'information individuelle
 vaut effectivement mieux que l'information de groupe — et c'est tout ce qu'elle vaut ici.
 
 **P3 est tenue : issue (a).** Le meilleur comparateur équitable reste **45 fois** sous le
@@ -163,7 +164,7 @@ du critère de réfutation préenregistré. Les IC ne se chevauchent pas, d'aucu
 
 **Le résultat qui tranche vraiment n'était pas prévu.** Le jumeau LLM **Demographics Only**,
 qui n'a **jamais vu l'individu** — exactement le régime d'information de G0-G3 —, atteint
-**2,15 %**, soit **4,8 fois** le meilleur générateur classique **nourri de la persona
+**2,15 %**, soit **4,7 fois** le meilleur générateur classique **nourri de la persona
 complète** de la personne. L'objection supposait que l'écart venait de l'inégalité d'entrée ;
 on peut **retirer toute l'information individuelle au LLM** et il continue de dominer
 largement des générateurs classiques qui, eux, la possèdent. L'écart n'est donc pas
