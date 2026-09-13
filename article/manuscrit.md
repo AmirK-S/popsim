@@ -427,15 +427,11 @@ as a limit rather than claim an unbroken chain. The plans are not yet third-part
 
 ### 4.5 Validity controls
 
-*Provenance.* On Twin-2K-500, the context contains 0 wave-4 columns and 0 wave-4 QIDs; maximum
-normalised mutual information between context and item is 0.16 against 0.31 for the retest on
-the same item. On cells where wave 4 differs from waves 1–3, the JSON 4.1 output equals wave 4
-in 37.7 % of cases and waves 1–3 in 37.9 % — symmetric, so no indication of copying. On the Park archive, over 34,915 cells where the human
-changed their mind, the composite follows wave 1 in 41.6 % and wave 2 in 43.2 %, and the
-4.3–4.9 point wave-1 bias of the other three conditions holds for the `demographic` condition
-too, so it is a shared calibration artifact, not item leakage. On the Argyle archive each twin column is generated with
-its own item held out, so no tautology exists on either side; the same holds for B-demo and
-B-oracle, whose target item is removed from their context.
+*Provenance.* On all three archives we verified that the attacker's context cannot contain the
+attacked answers and that no twin copies an earlier wave: symmetric wave-following on
+Twin-2K-500, whose context carries no wave-4 column; on the Park archive a wave-1 bias shared by
+the `demographic` condition, hence a calibration artifact and not item leakage; and on the Argyle
+archive item-by-item hold-out, for the twins as for B-demo and B-oracle. Counts and rates: Open Science.
 
 *Empty-run validation.* Uniform ranks yield 0.00 bits; the B0 mode baseline yields
 −0.004 [−0.003 ; 0.002] bits.
@@ -468,10 +464,9 @@ above 0.7 — prediction (a) confirmed, the relation is not an artifact of recyc
 **0.965**, fidelity on Figure 2's axis (`fidelite_plancher`), the value the null below is
 compared against. Both intervals resample **people within each configuration** and hold the 12
 configurations fixed; they are conditional on this set of methods and do not generalise.
-Resampling the **configurations** — the unit the claim is about — gives **[0.749 ; 1.000]** for
-the first, with 13.9 % of draws at exactly 1.000, and a Fisher-z approximation gives
-[0.848 ; 0.989]; a permutation test rejects independence at p < 10⁻⁴. These witnesses are
-post-hoc.
+Resampling the **configurations** — the unit the claim is about — widens that interval
+substantially without changing its sign, and a permutation test rejects independence; these
+witnesses are post-hoc, and both intervals are reported in full in Open Science.
 
 Prediction (b) was refuted, and the witness that refutes it has since been rebuilt to remove a
 real defect without changing the verdict: its *wrong* cells avoided the person's true answer
@@ -503,11 +498,10 @@ paragraph) where the
 twin reaches {{R:twin-top1-ferme-json41-naif}} % {{R:twin-top1-ferme-json41-naif.ic}} under the naive attack and **{{R:twin-top1-ferme-json41-fort}} % {{R:twin-top1-ferme-json41-fort.ic}}** under the
 strong one — **in a closed world, with the target always present in a pool of 2,058**. The
 comparator figures are naive-attack rates, which makes the contrast conservative. JSON Persona
-GPT4.1 attains that rate at accuracy 0.590; the comparators, at accuracy 0.457–0.511: PMM k=10,
-{{R:pmm-k10-top1-ferme-contre-examen}} % {{R:pmm-k10-top1-ferme-contre-examen.ic}}; B2 argmax, 0.07 % [0 ; 0.19]; k=1 donor on context alone, 0.13 %; LR on
-context, 0.22 %. Two individualised *generators* — sampled LR and Gaussian copula — give 0.25 %
-[0.11 ; 0.41] and 0.22 % [0.11 ; 0.36], answering the objection that we oppose an individualised
-generator to predictors that regress to the mean.
+GPT4.1 attains that rate at accuracy 0.590; the six comparators, at accuracy 0.457–0.511, all sit
+at or below **0.25 %** top-1 — among them two individualised *generators*, sampled LR and
+Gaussian copula, which answers the objection that we oppose an individualised generator to
+predictors that regress to the mean. Each rate with its interval: Open Science.
 
 **At strictly equal input information the gap holds, and that is the form of the claim we
 defend.** Given the 634 wave-1–3 columns the persona is made of — from which the 60 attacked
@@ -536,13 +530,11 @@ a false-accusation rate of 1 %, the strong attack (A-LLR, parameters estimated o
 5 folds) recovers the right person **{{R:park-tpr-fpr1-fort-ouvert}} % {{R:park-tpr-fpr1-fort-ouvert.ic}}** of the time on the Park archive and
 **{{R:twin-tpr-fpr1-fort-ouvert}} % {{R:twin-tpr-fpr1-fort-ouvert.ic}}** on Twin-2K-500, under a person-level bootstrap that **re-estimates** its
 parameters in each resample, every copy of a person staying in one fold. At FPR = 0.1 % the
-quantity is **not identified by the data**: the threshold rests on a single absolute false
-positive on Park and two on Twin, and on Park 538 distinct thresholds sit within 1.5 false
-positives of the target with TPRs spanning 0.10 % to 50.95 %. The conservative step-function
-value — the largest TPR whose FPR stays at or below the target — is **50.19 %** on Park and
-**1.26 %** on Twin, but **we report no point estimate at this FPR**. At FPR = 1 % the same
-construction is stable (10 and 20 absolute false positives, spans of 0.38 and 0.05 point), and
-**the headline figures are the ones at 1 % FPR.** The human
+quantity is **not identified by the data** — the threshold there rests on one absolute false
+positive on Park and two on Twin, and hundreds of admissible thresholds span almost the whole
+range of attainable detection rates — so **we report no point estimate at that FPR**. At
+FPR = 1 % the same construction is stable, and **the headline figures are the ones at 1 % FPR**;
+the threshold census establishing both statements is in Open Science. The human
 ceiling at FPR = 1 % is {{R:plafond-humain-twin-tpr-fpr1}} % {{R:plafond-humain-twin-tpr-fpr1.ic}} and {{R:plafond-humain-park-tpr-fpr1}} % {{R:plafond-humain-park-tpr-fpr1.ic}}.
 
 **Statistical comparators stay indistinguishable from noise at both FPRs on Twin-2K-500 — and
@@ -583,33 +575,32 @@ source per person: they gauge the channel inside a pipeline, not T2 (§3).
 configuration, not the pair, as elsewhere in this paper: the 30 pairs come from 6 configurations.
 Individual pairs run from **11.9 %** to **83.6 %** (SD 18.6 points), so the mean should not be
 read as a typical value. 12 pairs sharing 19 common items: mean top-1 **0.45 %** (chance
-0.05–0.10 %). Demographics Only against the rich twins gives 7.76 %. The anti-artifact control, a
-decoy from the same segment, gives 0.04 % on the 60-item pairs and 0.10 % on the 19-item pairs.
+0.05–0.10 %). The anti-artifact control, a decoy from the same segment, stays at or below
+**0.10 %** on both item regimes (Open Science).
 
-**Park archive replication**: 1,052 agents, 177 common items. Interview→survey top-1 **11.9 %
-[10.1 ; 13.8]**; survey→interview **13.0 %**; top-10 45–46 %. Demographic bound
-1.5–2.5 %, decoy control **at most 0.31 %**. **Preregistered prediction refuted**: we set a
-threshold of at least 20 % top-1 there and 11.9–13.0 % does not reach it, though the preregistered
-*failure* criterion is not met either, at 5–8× the demographic bound.
+**Park archive replication**: 1,052 agents, 177 common items, top-1 **11.9 % [10.1 ; 13.8]** and
+**13.0 %** in the two directions, against a decoy control **at most 0.31 %**. **Preregistered
+prediction refuted**: we set a threshold of at least 20 % top-1 there and 11.9–13.0 % does not
+reach it, though the preregistered *failure* criterion is not met either, at 5–8× the demographic
+bound (Open Science).
 
 **We never report a single figure for this channel without its common-item count**; a previously
 circulated average of 26.11 % pooled the two item regimes and is withdrawn. Nor do we claim
 leakage crosses waves: that arm is infeasible, with 0 items in common.
 
 **The channel is not an artifact of a shared prompt template or of demographics.** Decomposing
-agreement between two twins of one person over the 60 common items: the floor between *strangers*
-is **46.0 %**, the demographic-ideological segment adds **3.8 points**, the person adds **17.4**
-— 82 % of the rise above the floor. A pure-population witness identifies the right person
-**0.07 %** of the time against **36.4 %** for the real attack.
+agreement between two twins of one person over the 60 common items, the person contributes
+**82 %** of the rise above the floor between *strangers*, the demographic-ideological segment the
+rest; a pure-population witness identifies the right person **0.07 %** of the time against
+**36.4 %** for the real attack (Open Science).
 
 **The cross-dataset anomaly, explained in part.** Park shares three times Twin's items and leaks
-roughly three times *less*. Item count is the wrong denominator: the 177 GSS items are strongly
-redundant, giving **≈ 9.0 effectively independent items against ≈ 10.1** on Twin, a real ratio of
-**0.89, not 2.95**. Pool size runs the wrong way too: shrinking Twin's pool to 1,052 *raises* its
-top-1 (37.3 → 44.1 %). **A residue of roughly 3× remains unexplained**, the remaining candidates
-— persona format and length, and the generating pipelines — not testable on what we hold. The
-same denominator places the third dataset far below both, at **4.31** effective items for 12 raw
-ones (§5.8).
+roughly three times *less*, and neither item count nor pool size accounts for it: the 177 GSS
+items are strongly redundant, giving **≈ 9.0 effectively independent items against ≈ 10.1** on
+Twin, and shrinking Twin's pool to Park's *raises* its top-1 rather than lowering it.
+**A residue of roughly 3× remains unexplained**, the remaining candidates — persona format and
+length, and the generating pipelines — not testable on what we hold. The same denominator places
+the third dataset far below both (§5.8; Open Science).
 
 *Limits.* The 12 low pairs are exactly those at 19 common items, so the effect follows the
 shared-item count rather than an aberrant configuration. On Park the item-rate relation does not
@@ -619,11 +610,11 @@ follow Twin's.
 sharing nothing but the target person — `deepseek-v4-flash` JSON dossiers against `qwen-2.5-72b`
 narrative biographies — were matched on the same 60 items (n = 142 of 200 planned, stopped by a
 transport error), giving top-1 {{R:deux-organisations-BC-top1}} % {{R:deux-organisations-BC-top1.ic}} against a demographic baseline of 9.2 %.
-**We no longer read this as a refutation.** Neither arm produces
-twins that identify the real person better than chance (0.0 % and 0.8 % top-1 against 0.83 %
-expected on a pool of 120, where the Twin team's own twins reach 20.2–38.9 % on that pool), so
-the comparison opposes two noise sources: it measures our instrument, not the world. The 36.4 %
-above, a same-pipeline measurement, is not evidence for T2 either, so T2 stands open both ways.
+**We no longer read this as a refutation.** Neither arm produces twins that identify the real
+person better than chance on that pool, where the Twin team's own twins reach 20.2–38.9 %
+(Open Science), so the comparison opposes two noise sources: it measures our instrument, not the
+world. The 36.4 % above, a same-pipeline measurement, is not evidence for T2 either, so T2 stands
+open both ways.
 
 **Which element differs, not how many — and a preregistered law our own measurements refute.**
 Among the six Twin-2K-500 configurations that pass the interpretability control (2,058 people, 60
@@ -634,9 +625,9 @@ own measurements refute it: Spearman **−0.232** [−0.321 ; −0.187] over 15 
 [−0.047 ; +0.068] once the two twins' individual fidelity is controlled, against the −0.7
 predicted. At a distance of one, rates span 17 % to 81 %: the spread *within* a level dwarfs the
 spread *between* levels. Counting changed components predicts nothing useful; naming them does.
-On Park the same control leaves three pairs, so no replication is possible. Two limits: the
-distance weights are arbitrary, and refitting them on the linkage rate would make the measure
-circular; and the independent unit is the configuration — 18 pairs, 9 configurations, two teams.
+On Park the same control leaves three pairs, so no replication is possible. Two limits bound this
+verdict — arbitrary distance weights, and a small number of independent configurations — and are
+stated in Open Science.
 
 **One-factor-at-a-time from our own pipeline is arithmetically sound but not interpretable.**
 Pipeline B and all three conditions derived from it identify the real person at chance, so each
@@ -660,25 +651,23 @@ headline 20.7 % because it attacks the **40 purchase items alone** where the hea
 **60**: the 20 opinion items identify 46× less and dilute a naive Hamming rule rather than help
 it. That is a change of attack surface, not a discrepancy.
 
-**Three preregistered hypotheses refuted.** H1 (entropy): opinion items carry 2.10 bits against
-0.99 for purchase items and identify 46× less — top-1 0.24 % [0.07 ; 0.46] against 11.0 %
-[9.9 ; 12.3] for the purchase subset matched to them on entropy, a 20-item comparison. H4
-(stereotypy): 36.2 % [35.6 ; 36.8] against 37.5 % [36.9 ; 38.1] in humans. And "deviations alone
-carry ≥ 80 % of the leakage": 0.68 % in the mixed condition. We do not present "wrong deviations
-alone = 0.0 %" as a result: it is a floor of the method.
+**Three preregistered hypotheses refuted** — H1 (per-item entropy drives identification), H4
+(twins are more stereotyped than humans) and "deviations alone carry ≥ 80 % of the leakage":
+Table 1, rows 5–7, with each comparison and its interval in Open Science. We do not present
+"wrong deviations alone = 0.0 %" as a result: it is a floor of the method.
 
 **The effect is concentrated, and three convenient explanations are now excluded.** The gap is
 carried entirely by the 40 purchase items: the twin re-identifies **33.2 %** [31.3 ; 35.1] of
 people there, against **0.08 %** [0.00 ; 0.20] for the best classical comparator explicitly fed
 the persona columns bearing on consumption and price; on the 20 heuristics-and-biases items the
-twin (0.24 %) does not exceed that comparator. This concentration is **not a content effect**:
-the persona names none of the 40 brands and none of the 40 products, and its vocabulary overlaps
-the purchase block *less* (5.8 % of its distinctive tokens) than the heuristics block (38 %). Nor
-is it explained by instability of the heuristics items, which remain reliable in humans (median
-test-retest kappa 0.365, no item below 0.25, against 0.672 on the purchase items): against the
-ceiling the human retest sets, the twin recovers 44 % of the available identity information on
-the purchase items and 1.5 % on the heuristics items. **The mechanism of this concentration
-remains unexplained**, and we propose none. *(Post-hoc, not preregistered.)*
+twin (0.24 %) does not exceed that comparator. This concentration is **not a content effect** —
+the persona names none of the 40 brands and none of the 40 products, and overlaps the purchase
+block's vocabulary *less* than the heuristics block's — and it is **not explained by instability
+of the heuristics items**, which remain reliable in humans; against the ceiling the human retest
+sets, the twin recovers **44 %** of the available identity information on the purchase items and
+**1.5 %** on the heuristics items. Token overlaps and test-retest kappas: Open Science. **The
+mechanism of this concentration remains unexplained**, and we propose none. *(Post-hoc, not
+preregistered.)*
 
 *Limits.* The mechanism is established on Twin's purchase block alone and is in apparent tension
 with the Park archive, where opinion items identify most: at 20 items Park gives 11.7 % against
@@ -716,11 +705,10 @@ cutoff preceding publication, copies nothing verbatim and leaks no more than the
 copy — a control on our own twins, in a regime where none identifies almost anyone, which we do
 not extend to the published twins of §5.2–§5.4 (§1.3).
 
-**Two further preregistered predictions refuted.** (i) R1 ≥ 10 % on at least 2 of 3 models — no
-model reaches 1 %. (ii) Call granularity would explain the leakage — not confirmed and
-underpowered (n = 10 on the per-item arm): single call 0.00 % [0 ; 8.8] and per-item call 0.00 %
-[0 ; 30.85], top-10 running **opposite** to the prediction (7.5 % against 0 %). We claim neither
-that leakage comes from the call format nor that the cause is identified. **It is not.**
+**Two further preregistered predictions refuted** (Table 1, rows 8–9): R1 ≥ 10 % on at least 2 of
+3 models, where no model reaches 1 %; and call granularity as the explanation, which is not
+confirmed and is underpowered, with top-10 running **opposite** to the prediction. We claim
+neither that leakage comes from the call format nor that the cause is identified. **It is not.**
 
 **We then paid to test the obvious explanation, and it failed.** `openai/gpt-4.1` (Twin's own
 model class) on Twin's per-item recipe without modification, 30 persons × 60 items = 1,800 calls,
@@ -767,37 +755,34 @@ without declaring the number **and** the identity of the items, and the tie-brea
 *(Post-hoc, not preregistered; audit of 13 September 2026.)*
 
 The remaining conditions are **naive-attack measurements**, the strong attack not having been
-re-run on them: interview-only **44.7 % [41.8 ; 47.5]**, survey-only 20.6 % [18.2 ; 23.0],
-demographic 2.26 %. The interview-only figure carries zero documentary exposure to the survey, so
-it is the cleanest demonstration that an agent built from a conversation alone identifies its
-person — and given what the strong attack did to the composite, **it is a lower bound**.
+re-run on them; the highest, interview-only at **44.7 % [41.8 ; 47.5]**, carries zero documentary
+exposure to the survey, so it is the cleanest demonstration that an agent built from a
+conversation alone identifies its person — and given what the strong attack did to the composite,
+**it is a lower bound**. The other two conditions: Open Science.
 
-We do not compare the Park and Twin rates as measurements of the same thing: item count (177
-against 60), per-item entropy (1.30 against 0.99) and human ceilings (96.8 against 81.6) all
-differ. Equalised at k = 60, Park gives 34.0 % [23.5 ; 51.5] against Twin's 20.7 %, on 20 draws
-of a naive attack.
+We do not compare the Park and Twin rates as measurements of the same thing: item count, per-item
+entropy and human ceilings all differ. Equalised at k = 60, Park gives 34.0 % [23.5 ; 51.5]
+against Twin's 20.7 %, on 20 draws of a naive attack.
 
 **The third dataset, and the analysis that stops before it starts.** On the Argyle archive the
 interpretability control **fails for all three GPT-3 twins**, and the preregistered decision rule
 halts the analysis there: top-1 0.14 % [0.05 ; 0.27], 0.11 % [0.04 ; 0.20] and 0.09 %
 [0.02 ; 0.22] against a demographic baseline of **0.10 %** [0.02 ; 0.23] recomputed on that same
 pool of 2,148, all intervals overlapping. No contrast is interpreted, and the anchor-pool draws
-were never computed: they would have interpreted noise. The verdict rests on no choice of items —
-dropping age gives 0.08–0.13 %, the eight attitude items alone 0.09–0.11 %. The reason is visible
-per item: mean exact accuracy **47.2 %**, below the demographic imputer's 51.5 % and below the
-modal answer on nine items of twelve. In bits, the best of the three carries **0.094**
-[0.074 ; 0.118] of an 11.07 ceiling — the level of Twin's *weakest* statistical comparator — while
-a nearest neighbour given exactly the same eleven true answers carries 0.342 [0.301 ; 0.389],
-**3.6 times more**. In top-1 the two are level: 0.140 % [0.075 ; 0.218] for that neighbour
-against 0.135 % [0.045 ; 0.269] for the twin, a paired difference of −0.005 points
-[−0.131 ; +0.137]. Both sit at the noise level of this corpus.
+were never computed: they would have interpreted noise. The verdict rests on no choice of items,
+dropping age or keeping only the eight attitude items leaving it unchanged (Open Science). The
+reason is visible per item: mean exact accuracy **47.2 %**, below the demographic imputer's
+51.5 % and below the modal answer on nine items of twelve. In bits, the best of the three carries
+**0.094** [0.074 ; 0.118] of an 11.07 ceiling — the level of Twin's *weakest* statistical
+comparator — while a nearest neighbour given exactly the same eleven true answers carries
+**3.6 times more**; in top-1 the two are level, on a paired difference whose interval spans zero.
+Both sit at the noise level of this corpus.
 
-**Below 1 %, the rate is fixed by the tie-breaking convention, not by the data.** Ties resolved in
-the attacker's favour give 0.61 % [0.33 ; 0.98], the uniform-draw expectation we report gives
-0.135 % [0.045 ; 0.269], and ties resolved against the attacker give 0.047 % [0.000 ; 0.140] —
-exactly chance for a pool of 2,148; the leading tie class holds 13 people, median 3 candidates.
-At **matched effective information both ends of the trajectory depend on this convention**, which
-is why §1.1 reports a ratio to baseline and not a bare rate.
+**Below 1 %, the rate is fixed by the tie-breaking convention, not by the data**: across the three
+conventions the same twin ranges from exactly chance to more than four times the value we report,
+and at **matched effective information both ends of the trajectory depend on that choice**. This
+is why §1.1 reports a ratio to baseline and not a bare rate. The three conventions, their rates
+and their intervals: Open Science.
 
 Nor does the verdict rest on a weak attacker. Re-running the A-LLR attack that carries this
 paper's headline figures takes the best of the three to **{{R:temoin-argyle-fort-top1-principale}} %** and its baseline to **{{R:temoin-argyle-fort-top1-bdemo}} %**
@@ -818,13 +803,12 @@ reached after the census of §7.1 was closed.
 
 ### 5.9 Scale
 
-From N = 50 to N = 2,058, the twin/demographic ratio grows from 2.8 to 9.7: top-1 falls from
-53.2 % [50.0 ; 56.3] to 20.7 %, and the share of the human ceiling from 57.0 % to
-25.4 % — naive-attack rates, the scale study not having been re-run
-under the strong attack. The intervals here are **not** the person-level bootstrap of §4.3: they
-span the sub-pool draws, and at N = 2,058 no sub-pool is left to draw, so that row carries none. **We extrapolate no value beyond N ≈ 4,000**: a power law and a
-logarithmic law fitted on the same 6 points already diverge at twice the range (18.1 % against
-13.9 %).
+From N = 50 to N = 2,058, the twin/demographic ratio grows from **2.8 to 9.7** while top-1 falls
+from 53.2 % [50.0 ; 56.3] to 20.7 % — naive-attack rates, the scale study not having been re-run
+under the strong attack, and on intervals that span the sub-pool draws rather than the persons of
+§4.3. **We extrapolate no value beyond N ≈ 4,000**: a power law and a logarithmic law fitted on
+the same 6 points already diverge at twice the range. The six pools, their rates and the two
+fits: Open Science.
 
 > **Figure 2 — Imitation quality against leakage, with its control
 > (`article/figures/fig2-couplage.png`).**
@@ -900,17 +884,12 @@ the twin, charging it the gap between those two references, worth
 **{{R:dp-zcdp-ecart-humains-jumeau-distribution}} points** of distribution error on its own.
 
 Corrected on both counts, over these 2,058 people and ten replicates, a synthetic generator with
-independent per-item marginals costs **{{R:dp-zcdp-distribution-eps10}} to
-{{R:dp-zcdp-distribution-eps3}}** points of distribution error and **{{R:dp-zcdp-groupes-eps3}} to
-{{R:dp-zcdp-groupes-eps10}}** points on between-segment differences — whether noised at eps = 3,
-at eps = 10, or **not noised at all**: the same generator with no privacy costs
-{{R:dp-zcdp-distribution-epsinf}} and {{R:dp-zcdp-groupes-epsinf}} points. What we measured
-is the cost of the independent-per-item architecture; the marginal contribution of the privacy
-budget is **at most {{R:dp-zcdp-contribution-budget-eps3}} point** at eps = 3 and indistinguishable
-from zero at eps = 10 ({{R:dp-zcdp-contribution-budget-eps10}}). On
-correlations the DP generator scores **{{R:dp-zcdp-correlations-eps10}} to
-{{R:dp-zcdp-correlations-eps3}}** where the amplitude to be preserved is
-**{{R:dp-zcdp-plancher-correlations}}**: it preserves none of it. D4 for its part carries **no
+independent per-item marginals costs the same on distribution error and on between-segment
+differences whether noised at eps = 3, at eps = 10, or **not noised at all**. What we measured is
+therefore the cost of the independent-per-item architecture; the marginal contribution of the
+privacy budget is **at most {{R:dp-zcdp-contribution-budget-eps3}} point** at eps = 3 and
+indistinguishable from zero at eps = 10. On correlations the DP generator preserves **none** of
+the amplitude to be preserved. Every figure, budget by budget, is in Open Science. D4 for its part carries **no
 formal guarantee**: it republishes each item's within-segment histogram exactly
 (**{{R:defense-d4-republication-multiensemble}} %** of segment × item pairs), so an adversary
 who knows a segment's other members recovers the target's 40 answers, and its zero distribution
@@ -941,8 +920,8 @@ non-significant after D4, and on a PCA of the 40 purchase items **45 % of the fi
 loadings are inverted** relative to humans, against **0 %** for the raw twin.
 
 **The honest comparison.** The unprotected twin was already wrong — it inverts the sign of the
-male-female gap (+0.010 against −0.047 in humans) and loses 5.3 points of PC1+PC2 variance — and
-D4 adds **3.5 points**, less than the error already present; but the axis inversion is **D4's own
+male-female gap and loses PC1+PC2 variance (Open Science) — and D4 adds **3.5 points**, less than
+the error already present; but the axis inversion is **D4's own
 doing**, changing *which* items compose the structure more than its strength. With a D4-defended
 twin, group comparisons are unchanged *because they are republished unchanged*, predominantly
 demographic regressions remain reliable, and anything resting on the link between two answers of
@@ -958,8 +937,8 @@ the same person becomes unusable.
 
 | # | Prediction (preregistered) | Outcome | Source |
 |---|---|---|---|
-| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho {{R:rho-nul-marge-appariee-12conf-n100}}, 5th–95th percentiles {{R:rho-nul-marge-appariee-12conf-n100.ic}}, against 0.965 observed over the 12 configurations (100 replicates, as preregistered); original null carried a defect, since corrected, verdict unchanged (§5.1) | `c7-nul-corrige-marginal.csv` |
-| 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % — though the same attack takes Park's own demographic comparator to 29.09 % (§5.8): one half refuted, the other confirmed, counted here as a single row | `c7-attaquant-fort-resultats.md` |
+| 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho {{R:rho-nul-marge-appariee-12conf-n100}} {{R:rho-nul-marge-appariee-12conf-n100.ic}} vs 0.965 observed, 12 configurations, 100 replicates as preregistered; the original null's defect is corrected, verdict unchanged (§5.1) | `c7-nul-corrige-marginal.csv` |
+| 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % — but that attack also takes Park's demographic comparator to 29.09 % (§5.8). Half refuted, half confirmed, one row | `c7-attaquant-fort-resultats.md` |
 | 3 | Twin-to-twin top-1 ≥ 20 % on the Park archive | **Refuted.** 11.9–13.0 % at 177 common items (failure criterion not met either) | `c7-transfert-stanford-resultats.md` |
 | 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
 | 5 | H1: per-item entropy drives identification | **Refuted.** Opinion items 2.10 bits, identify 46× less | `c7-mecanisme-resultats.md` |
@@ -970,11 +949,11 @@ the same person becomes unusable.
 | 10 | Cost per unit of individual fidelity is roughly constant | **Refuted at equal sample.** CV 0.436 vs 0.357 on the same 9 points | `c7-compromis-resultats.md` §5 |
 | 11 | Per-item entropy correlates with identifying power consistently | **Refuted.** Opposite sign by dataset: r = −0.81 (Twin), +0.57 (Park) | `c7-bits-resultats.md` §3 |
 | 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.7 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
-| 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, in the defense's favour.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
-| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison behind this verdict is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same. No verdict (§6.2) | `audit-comparaison-dp-2026-09-13.md` |
+| 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, for the defense.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
+| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same (§6.2) | `audit-comparaison-dp-2026-09-13.md` |
 | 15 | A frontier model on Twin's per-item recipe reaches accuracy > 0.55 | **Refuted.** 0.4722 [0.4361 ; 0.5050] | `c7-fort-resultats.md` |
-| 16 | That same twin reaches top-1 > 5 % | **Inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30), the 5 % threshold lying inside the interval | `c7-fort-resultats.md` |
-| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable with this instrument — counted as neither.** 1.8 % [0.4 ; 3.6] at n = 142/200, but both arms' twins identify the real person at chance, so the contrast decides nothing either way (§5.4) | `c7-deux-organisations-resultats.md` |
+| 16 | That same twin reaches top-1 > 5 % | **Inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30); the 5 % threshold lies inside it | `c7-fort-resultats.md` |
+| 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable — counted as neither.** 1.8 % [0.4 ; 3.6] at n = 142/200, but both arms' twins identify the real person at chance: the contrast decides nothing (§5.4) | `c7-deux-organisations-resultats.md` |
 
 Four rows left the refutation count after they were first written: rows 9 and 16, once a
 percentile bootstrap on a zero-event sample was recognised as unable to return anything but
@@ -1020,21 +999,17 @@ tests; of the 34 preregistered predictions underpinning those claims at the time
 data dredging. **That rate controls the auxiliary family, not the headline**: the preregistered
 predictions concern mechanism, defense, recipe and distance law, while none of 20.7 %, 90.40 %
 and 60.17 % is a preregistered threshold — each is descriptive, chosen among competing metrics
-(top-1 or top-10, naive or strong, closed or open world, the choice of k). Of the 3 tests carrying a classical p-value, a Holm correction leaves the two
-smallest standing (0.002 and 0.008, adjusted to 0.006 and 0.016) and confirms the
-non-significance of the third; the intervals carrying the other claims must be read as
-measurements, each with its own margin, not as independent rejections of a common null.
+(top-1 or top-10, naive or strong, closed or open world, the choice of k).
 
-The full census covers 47 adjudicated tests across three families — the article's claims, the
-standalone controls, the abandoned branches — with 25 confirmed and 15 refuted. It was written
-over the 15 `c7-*` sub-studies existing at the time and excludes the verdicts added since, which
-is why Table 1 and the census do not carry the same totals.
+Holm and Benjamini-Hochberg were both applied to the 15 tests convertible to a p-value.
+**Neither changes any verdict**, and the two agree on all 15: the p-values are bimodal, so no
+claim here rests on a marginally significant result. The intervals carrying the other claims must
+be read as measurements, each with its own margin, not as independent rejections of a common
+null. The adjusted p-values, the full 47-test census across three families, and why it and
+Table 1 do not carry the same totals: Open Science.
 
-A second pass extended the confirmatory family to 15 tests convertible to a p-value and applied
-both Holm and Benjamini-Hochberg. **Neither changes any verdict**, and the two agree on all 15:
-the p-values are bimodal — eight at or below 0.0025, seven already near 1 — so no claim here rests
-on a marginally significant result. It also flags three
-thresholds as fragile, which we name rather than let a reviewer find: the frontier twin's
+Three thresholds are fragile, and we name them rather than let a reviewer find them: the frontier
+twin's
 **fidelity > 0.10** bar, confirmed at 0.1714 but refuted had it been set at 0.18 — while our own
 weakest known twin sits at 0.177; the choice of k in top-k (§5.2); and the functional form of the
 scale law beyond the measured range (§5.9). A common bootstrap across analyses reusing the same
@@ -1225,6 +1200,104 @@ across the repository's other analyses, and correlations, between-segment differ
 corrected here; the corrected design — refitting on the twin, a composed Gaussian mechanism under
 zCDP, and at least ten seeds with intervals — is specified in
 `resultats/audit-comparaison-dp-2026-09-13.md` §9 and has not been run.
+
+**Provenance controls (§4.5).** On Twin-2K-500, the context contains 0 wave-4 columns and 0
+wave-4 QIDs; maximum normalised mutual information between context and item is 0.16 against 0.31
+for the retest on the same item. On cells where wave 4 differs from waves 1–3, the JSON 4.1 output
+equals wave 4 in 37.7 % of cases and waves 1–3 in 37.9 % — symmetric, so no indication of copying.
+On the Park archive, over 34,915 cells where the human changed their mind, the composite follows
+wave 1 in 41.6 % and wave 2 in 43.2 %, and the 4.3–4.9 point wave-1 bias of the other three
+conditions holds for the `demographic` condition too, so it is a shared calibration artifact, not
+item leakage. On the Argyle archive each twin column is generated with its own item held out, so
+no tautology exists on either side; the same holds for B-demo and B-oracle, whose target item is
+removed from their context.
+
+**Rank correlations, the configuration-level resampling (§5.1).** Resampling the **configurations**
+— the unit the claim is about — gives **[0.749 ; 1.000]** for the first correlation, with 13.9 % of
+draws at exactly 1.000, and a Fisher-z approximation gives [0.848 ; 0.989]; a permutation test
+rejects independence at p < 10⁻⁴. These witnesses are post-hoc.
+
+**Closed-world comparators (§5.2).** The six comparators of §5.2, in order: PMM k=10,
+{{R:pmm-k10-top1-ferme-contre-examen}} % {{R:pmm-k10-top1-ferme-contre-examen.ic}}; B2 argmax,
+0.07 % [0 ; 0.19]; k=1 donor on context alone, 0.13 %; LR on context, 0.22 %. The two
+individualised *generators*, sampled LR and Gaussian copula, give 0.25 % [0.11 ; 0.41] and 0.22 %
+[0.11 ; 0.36].
+
+**Threshold census at FPR = 0.1 % (§5.3).** The threshold rests on a single absolute false
+positive on Park and two on Twin, and on Park **538 distinct thresholds** sit within 1.5 false
+positives of the target with TPRs spanning **0.10 % to 50.95 %**. The conservative step-function
+value — the largest TPR whose FPR stays at or below the target — is **50.19 %** on Park and
+**1.26 %** on Twin; we report no point estimate at this FPR. At FPR = 1 % the same construction is
+stable: 10 and 20 absolute false positives, spans of 0.38 and 0.05 point.
+
+**Twin-to-twin channel, secondary tables (§5.4).** Demographics Only against the rich twins gives
+7.76 %. The anti-artifact decoy control gives 0.04 % on the 60-item pairs and 0.10 % on the
+19-item pairs. On the Park archive, top-10 is 45–46 % and the demographic bound 1.5–2.5 %.
+Decomposing agreement over the 60 common items: the floor between *strangers* is **46.0 %**, the
+demographic-ideological segment adds **3.8 points**, the person adds **17.4**. On the cross-dataset
+anomaly, the 177 GSS items give a real ratio of effective items of **0.89, not 2.95**, and
+shrinking Twin's pool to 1,052 moves top-1 from 37.3 % to 44.1 %; the same denominator places the
+Argyle archive at **4.31** effective items for 12 raw ones. In the T2 arm the two pipelines' own
+twins reach 0.0 % and 0.8 % top-1 against 0.83 % expected on a pool of 120. Two limits bound the
+distance-law verdict: the distance weights are arbitrary, and refitting them on the linkage rate
+would make the measure circular; and the independent unit is the configuration — 18 pairs, 9
+configurations, two teams.
+
+**Mechanism, the three refuted hypotheses and the concentration controls (§5.5).** H1 (entropy):
+opinion items carry 2.10 bits against 0.99 for purchase items and identify 46× less — top-1
+0.24 % [0.07 ; 0.46] against 11.0 % [9.9 ; 12.3] for the purchase subset matched to them on
+entropy, a 20-item comparison. H4 (stereotypy): 36.2 % [35.6 ; 36.8] against 37.5 %
+[36.9 ; 38.1] in humans. "Deviations alone carry ≥ 80 % of the leakage": 0.68 % in the mixed
+condition. On the concentration, the persona's vocabulary overlaps the purchase block *less*
+(5.8 % of its distinctive tokens) than the heuristics block (38 %), and the heuristics items remain
+reliable in humans (median test-retest kappa 0.365, no item below 0.25, against 0.672 on the
+purchase items).
+
+**Recipe arm, the top-10 reversal (§5.7).** On the call-granularity arm, top-10 runs **opposite**
+to the prediction: 7.5 % for the single call against 0 % for the per-item call, where top-1 is
+zero on both arms (Table 1, row 9).
+
+**What separates the Park and Twin rates (§5.8).** The two archives differ in item count (177
+against 60), in per-item entropy (1.30 against 0.99) and in human ceiling (96.8 against 81.6),
+which is why we do not read their rates as measurements of the same thing.
+
+**Scale, the six pools (§5.9).** The share of the human ceiling falls from 57.0 % to 25.4 % between
+N = 50 and N = 2,058. The intervals are **not** the person-level bootstrap of §4.3: they span the
+sub-pool draws, and at N = 2,058 no sub-pool is left to draw, so that row carries none. A power law
+and a logarithmic law fitted on the same 6 points diverge at twice the range: 18.1 % against
+13.9 %.
+
+**Tie-breaking conventions and item-choice robustness on the Argyle archive (§5.8).** Ties resolved
+in the attacker's favour give 0.61 % [0.33 ; 0.98], the uniform-draw expectation we report gives
+0.135 % [0.045 ; 0.269], and ties resolved against the attacker give 0.047 % [0.000 ; 0.140] —
+exactly chance for a pool of 2,148; the leading tie class holds 13 people, median 3 candidates.
+Dropping age gives 0.08–0.13 % and the eight attitude items alone 0.09–0.11 %. The nearest
+neighbour given the same eleven true answers carries 0.342 [0.301 ; 0.389] bits and a top-1 of
+0.140 % [0.075 ; 0.218], against 0.135 % [0.045 ; 0.269] for the twin — a paired difference of
+−0.005 points [−0.131 ; +0.137]. On the Park archive the two conditions not cited in §5.8 are
+survey-only, 20.6 % [18.2 ; 23.0], and demographic, 2.26 %, both naive-attack measurements.
+
+**Differential-privacy costs, budget by budget (§6.2).** The generator costs
+**{{R:dp-zcdp-distribution-eps10}} to {{R:dp-zcdp-distribution-eps3}}** points of distribution
+error and **{{R:dp-zcdp-groupes-eps3}} to {{R:dp-zcdp-groupes-eps10}}** points on between-segment
+differences; with no privacy at all it costs {{R:dp-zcdp-distribution-epsinf}} and
+{{R:dp-zcdp-groupes-epsinf}} points. The marginal contribution of the budget at eps = 10 is
+{{R:dp-zcdp-contribution-budget-eps10}}. On correlations the DP generator scores
+**{{R:dp-zcdp-correlations-eps10}} to {{R:dp-zcdp-correlations-eps3}}** where the amplitude to be
+preserved is **{{R:dp-zcdp-plancher-correlations}}**.
+
+**Analyst cost, the raw twin's own error (§6.3).** The unprotected twin inverts the sign of the
+male-female gap (+0.010 against −0.047 in humans) and loses 5.3 points of PC1+PC2 variance.
+
+**Multiplicity, the adjusted p-values and the full census (§7.3).** Of the 3 tests carrying a
+classical p-value in the first pass, a Holm correction leaves the two smallest standing (0.002 and
+0.008, adjusted to 0.006 and 0.016) and confirms the non-significance of the third. The second
+pass extended the confirmatory family to 15 tests convertible to a p-value and applied both Holm
+and Benjamini-Hochberg: the p-values are bimodal, eight at or below 0.0025 and seven already near
+1. The full census covers 47 adjudicated tests across three families — the article's claims, the
+standalone controls, the abandoned branches — with 25 confirmed and 15 refuted. It was written
+over the 15 `c7-*` sub-studies existing at the time and excludes the verdicts added since, which
+is why Table 1 and the census do not carry the same totals.
 
 **Obtaining the real data.** Twin-2K-500: Hugging Face repository `LLM-Digital-Twin/Twin-2K-500`,
 CC BY 4.0. Argyle et al.: Harvard Dataverse `doi:10.7910/DVN/JPV20K`, CC0 1.0. Park replication
