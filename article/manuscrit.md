@@ -25,8 +25,9 @@ it comes within a ratio of **1.06×** of the agent (§5.8). **The three datasets
 "the risk grew with model capability" is confounded with "the protocols differ"; we state that
 confound in front rather than resolve it.**
 Inside a shared pipeline we report a twin-to-twin channel: two twins of the same person designate
-each other with no real human answer held by the attacker — 36.4 % [24.7 ; 56.5] top-1, clustered
-by configuration, at 60 common items. The "distance law" we preregistered — leakage falling with
+each other with no real human answer held by the attacker — at 60 common items, 30 ordered pairs
+of **six** configurations running from 11.9 % to 83.6 % top-1, mean 36.4 % [24.7 ; 56.5] on those
+six units. The "distance law" we preregistered — leakage falling with
 the number of differing elements — is refuted by our own measurements, and we claim no converse
 law; whether the channel survives between *independently built* pipelines is untested.
 Our control is not new — it is the pre-spend, gating form of Anonymeter's control baseline — and
@@ -102,8 +103,8 @@ confound would need the same items, the same population and several generations 
 individually matched twins; no such resource is public (§7.4). We state the trajectory as a
 measured contrast between three published corpora, never as a causal effect of model capability.
 
-One reading must be excluded. The Argyle result is **not a refutation of our scaling law**: it is
-out of domain. That law predicts the leakage of a twin that carries a person, and our
+One reading must be excluded. The Argyle result is **not a refutation of the scale trend we
+report**: it is out of domain. That trend is measured on twins that carry a person (§5.9), and our
 interpretability control (§4.5) establishes that these twins carry none we can demonstrate.
 Taking 0.14 % for a refutation would commit, in reverse, the exact error the control exists to
 prevent — concluding from a measurement taken on noise (§5.8).
@@ -228,10 +229,9 @@ Yao et al. [yao2025dcr] and Meeus et al. [meeus2023achilles] generalise the crit
 Pentyala and De Cock make these attacks an emerging standard [golob2026sok]. Houssiau et al.'s
 TAPAS formalises attacker knowledge and the baselines an audit must beat [houssiau2022tapas].
 
-*What distinguishes us.* This corpus concerns tabular microdata from classical generative
-models, evaluated by continuous similarity metrics. Our object is a vector of categorical answers
-produced by an LLM conditioned on a person, where no similarity metric substitutes for a direct
-matching attack.
+*What distinguishes us.* That corpus is tabular microdata from classical generators, judged by
+continuous similarity metrics. Ours is a categorical answer vector produced by an LLM conditioned
+on a person, where no similarity metric replaces a direct matching attack.
 
 ### 2.2 Re-identification of real data
 
@@ -243,9 +243,9 @@ of disclosure risk on synthetic data (CAP, TCAP) on the premise that synthetic g
 the link between identity and datum [taub2018differential].
 
 *What distinguishes us.* These works re-identify from genuine auxiliary data. Our attack's input
-is never a real datum of the target: it is a model output generated from a persona, compared
-against real answers the attacker separately holds. We falsify precisely the CAP/TCAP premise, on
-LLM-simulated survey microdata.
+is never a real datum of the target but a model output generated from a persona, matched against
+real answers the attacker separately holds. That falsifies the CAP/TCAP premise, on LLM-simulated
+survey microdata.
 
 ### 2.3 Privacy and LLMs
 
@@ -264,9 +264,9 @@ the number of individuals.
 
 *What distinguishes us.* Those works all start from free text bearing direct semantic cues,
 aggregated by an agent reasoning over it. Our channel is narrower and drier: closed-choice
-categorical answers, no free text, no agentic reasoning, and a mechanism localised in the
-dependence structure rather than in memorised content (§5.5). Unlike Yeom and Feldman, our
-pipeline trains no model on the target population.
+categorical answers, no free text, no agentic reasoning, a mechanism localised in the dependence
+structure rather than in memorised content (§5.5). Unlike Yeom and Feldman, our pipeline trains no
+model on the target population.
 
 ### 2.4 Respondent simulation and twins
 
@@ -548,14 +548,14 @@ donor's accuracy and its within-segment permutation witness: the appendix.
 
 Removing the closed-world assumption gives the number we consider hardest to attack in review. At
 a false-accusation rate of 1 %, the strong attack (A-LLR, parameters estimated out-of-fold over
-5 folds) recovers the right person **{{R:park-tpr-fpr1-fort-ouvert}} % {{R:park-tpr-fpr1-fort-ouvert.ic}}** of the time on the Park archive and
-**{{R:twin-tpr-fpr1-fort-ouvert}} % {{R:twin-tpr-fpr1-fort-ouvert.ic}}** on Twin-2K-500, under a person-level bootstrap that **re-estimates** its
+5 folds) recovers the right person **{{R:twin-tpr-fpr1-fort-ouvert}} % {{R:twin-tpr-fpr1-fort-ouvert.ic}}** of the time on Twin-2K-500, the dataset that carries the
+claim, and **{{R:park-tpr-fpr1-fort-ouvert}} % {{R:park-tpr-fpr1-fort-ouvert.ic}}** on the Park archive, under a person-level bootstrap that **re-estimates** its
 parameters in each resample, every copy of a person staying in one fold. At FPR = 0.1 % the
 quantity is **not identified by the data** — the threshold there rests on one or two absolute
 false positives, and hundreds of admissible thresholds span almost the whole range of attainable
 detection rates — so **we report no point estimate at that FPR**. At FPR = 1 % the same
 construction is stable, and **the headline figures are the ones at 1 % FPR**; the threshold census
-establishing both statements is in the appendix. The human ceiling at FPR = 1 % is {{R:plafond-humain-twin-tpr-fpr1}} % {{R:plafond-humain-twin-tpr-fpr1.ic}} and {{R:plafond-humain-park-tpr-fpr1}} % {{R:plafond-humain-park-tpr-fpr1.ic}}.
+establishing both statements is in the appendix. The human ceiling at FPR = 1 % is {{R:plafond-humain-twin-tpr-fpr1}} % {{R:plafond-humain-twin-tpr-fpr1.ic}} on Twin and {{R:plafond-humain-park-tpr-fpr1}} % {{R:plafond-humain-park-tpr-fpr1.ic}} on Park.
 
 **Statistical comparators stay indistinguishable from noise at both FPRs on Twin-2K-500 — and
 only there.** Replayed under the same strong attack as the target, Twin's demographic comparator
@@ -588,12 +588,14 @@ Two twins of the same person designate each other when they share enough items, 
 on the attacker's side. The measurements below share one team and, for Twin-2K-500, one persona
 source per person: they gauge the channel inside a pipeline, not T2 (§3).
 
-**Twin-2K-500, tabulated by common-item count**. 30 pairs sharing 60 common items: mean top-1
-**36.4 %**, 95 % CI **[24.7 ; 56.5]** clustered by configuration — the independent unit is the
-configuration, not the pair, as elsewhere in this paper. Individual pairs run from **11.9 %** to
-**83.6 %**, so the mean should not be read as a typical value. 12 pairs sharing 19 common items:
-mean top-1 **0.45 %**. The anti-artifact control, a decoy from the same segment, stays at or below
-**0.10 %** on both item regimes (the appendix).
+**Twin-2K-500, tabulated by common-item count**. At 60 common items the channel is large and its
+size badly determined: **six** configurations give **30** ordered pairs running from **11.9 %** to
+**83.6 %** top-1, mean **36.4 %**, 95 % CI **[24.7 ; 56.5]** clustered by configuration — the
+independent unit is the configuration, not the pair, as elsewhere here, so the interval rests on
+**six** units and spans a factor above two. **We never give that mean without its range and its
+six units, and never as a typical value.** 12 pairs sharing 19 common items: mean top-1
+**0.45 %**. The anti-artifact control, a decoy from the same segment, stays at or below **0.10 %**
+on both item regimes (the appendix).
 
 **Park archive replication**: 1,052 agents, 177 common items, top-1 **11.9 % [10.1 ; 13.8]** and
 **13.0 %** in the two directions, against a decoy control **at most 0.31 %**. **Preregistered
@@ -680,9 +682,12 @@ against the demographic baseline recomputed on those same 20 columns (0.00 %) it
 **the two statements name different comparators**. This concentration is **not a content effect** —
 the persona names none of the 40 brands and none of the 40 products, and overlaps the purchase
 block's vocabulary *less* than the heuristics block's — and it is **not explained by instability
-of the heuristics items**, which remain reliable in humans; against the ceiling the human retest
-sets, the twin recovers **44 %** of the available identity information on the purchase items and
-**1.5 %** on the heuristics items. Token overlaps and test-retest kappas: the appendix.
+of the heuristics items**, which remain reliable in humans: normalised by the top-1 a human
+answering the same items twice achieves, the twin reaches **44 %** of that rate on the purchase
+items and **1.5 %** of it on the heuristics items. **That pair is a ratio between two
+re-identification rates, not a decomposition of identity information**: it shows the block gap
+survives dividing by the human ceiling, and names no quantity the twin carries — the mechanism
+below stays a named residue. Token overlaps and test-retest kappas: the appendix.
 
 **The mechanism is open, but bounded — six explanations are excluded by matched tests rather than
 by argument.** Item family and modality count cover almost the same partition of the 60 items
@@ -753,9 +758,9 @@ than informative.** Neither the model nor the call granularity: what remains imp
 about 44,348 input tokens, sent whole in a single call — against our **8,000-character truncation**,
 a ratio above fifteen in the information supplied. **Our locally regenerated arms were therefore
 never an attempt to reproduce the upstream pipeline; they were a different experiment**, with their
-own prompts, three distinct open models and a plain-text output format. That they fail the
-interpretability control says nothing about the reproducibility of the published arm, and **we do
-not present that failure as a property of the procedure.**
+own prompts, three distinct open models and a plain-text output. Their failing the interpretability
+control says nothing about the reproducibility of the published arm, and **we do not present it as
+a property of the procedure.**
 
 *Limits.* n = 40 persons for the recipe arm, truncated to n = 10 on the per-item arm, and n = 30
 on the paid frontier-model arm; a floor effect is not excluded. Transport failures and retries:
@@ -841,20 +846,22 @@ post-hoc, and the three conventions with their intervals are in the appendix.
 
 **Two preregistered predictions were missed, and we count them as neither.** We had announced
 top-1 2.5 % [1.0 ; 6.0] and normalised bits [0.020 ; 0.070] from our measured item and pool
-curves; the observations, 0.14 % and 0.0044, fall far outside both. Neither our scaling law nor
-the transportability claim is refuted by this, because neither is testable here: both presuppose
-a twin that carries individual information. **We cannot distinguish "our law overstates leakage
-at a low effective item count" from "this twin is at the noise level", and we do not pretend
-to.** Both rows sit outside Table 1's count, like the distance law of §5.4 — three verdicts
+curves; the observations, 0.14 % and 0.0044, fall far outside both. Neither the scale trend of
+§5.9 nor the transportability claim is refuted by this, because neither is testable here: both
+presuppose a twin that carries individual information. **We cannot distinguish "the trend
+overstates leakage at a low effective item count" from "this twin is at the noise level", and we
+do not pretend to.** Both rows sit outside Table 1's count, like the distance law of §5.4 — three verdicts
 reached after the census of §7.1 was closed.
 
-### 5.9 Scale
+### 5.9 Scale: an observation on six pools, and no law
 
 From N = 50 to N = 2,058, the twin/demographic ratio grows from **2.8 to 9.7** while top-1 falls
 from 53.2 % to 20.7 % — naive-attack rates, the scale study not having been re-run under the
 strong attack, and on intervals that span the sub-pool draws rather than the persons of §4.3.
-**We extrapolate no value beyond N ≈ 4,000**: a power law and a logarithmic law fitted on the same
-6 points already diverge at twice the range. The six pools, their rates and the two fits: the
+**Six points do not carry a law: this is a measured trend, and we extrapolate to no pool size at
+all** — not even the N ≈ 4,000 an earlier draft allowed itself. The power law and the logarithmic
+law we fitted are reported only as the reason for that refusal: on those same 6 points they
+already diverge at twice the measured range. The six pools, their rates and the two fits: the
 appendix.
 
 > **Figure 2 — Imitation quality against leakage, with its control
@@ -877,20 +884,21 @@ closed-world top-1 from **{{R:twin-top1-ferme-json41-naif-ref-defense}} % {{R:tw
 attack, and to **{{R:defense-d4-top1-adaptatif-s1}} % {{R:defense-d4-top1-adaptatif-s1.ic}}** against the best attacker we measured
 (§6.1) — the figure we report as the defense's rate. Per-item distribution and between-segment
 differences are preserved **exactly, by construction**, as PRAM predicts, and that exactness is
-also the mechanism's central limitation: shuffling item by item within a segment leaves the
-within-segment multiset of each item identical, so D4 republishes each item's within-segment
-histogram without noise, and an adversary who knows a segment's other members recovers the
-target's 40 answers by difference. **D4 offers no formal privacy guarantee.**
+also the mechanism's central limitation: shuffling item by item within a segment leaves each
+item's within-segment multiset identical, so D4 republishes that histogram without noise, and an
+adversary who knows a segment's other members recovers the target's 40 answers by difference.
+**D4 offers no formal privacy guarantee.**
 
 **The cost is not a single average.** By component: **0.0 points on the per-item distribution and
 0.0 on group differences — which is that republication, not a cost avoided** — and **{{R:defense-d4-cout-correlations}} points on
 inter-item correlations** — a **single permutation draw, not a ten-seed average**, the highest of
 ten, kept as published and marked provisional. The ten-draw mean also exceeds the
-{{R:dp-zcdp-plancher-correlations}} points of amplitude there was to destroy, so the component is destroyed in full
-either way. We therefore withdraw the summary that presented D4's
-cost *as* a single mean of 1.47 points: two of the three components are zero by construction, so
-that mean divides by three an effect falling entirely on the third. And that cost is worse than
-the summary suggested: against the real human answers `erreur_correlations_hum` rises by a degradation of **{{R:defense-d4-aggravation-ecart-humain}} %** — the defended twin moves *away* from the humans on
+{{R:dp-zcdp-plancher-correlations}} points of amplitude there was to destroy, so the component is
+destroyed in full either way. We therefore withdraw the summary presenting D4's cost *as* a single
+mean of 1.47 points: two of the three components are zero by construction, so that mean divides by
+three an effect falling entirely on the third. And the cost is worse than that summary suggested:
+against the real human answers `erreur_correlations_hum` degrades by
+**{{R:defense-d4-aggravation-ecart-humain}} %** — the defended twin moves *away* from the humans on
 correlations, so no framing in which the cost is absorbed by an error already present is correct.
 
 Alternatives: D1 (k=10 aggregation) gives 0.55 % for 3.8 points across all three components; D2
@@ -968,12 +976,12 @@ carrying no guarantee, against the particular attack we built.
 **What survives is architectural, and a theoretical point.** The floor is not budgetary: the
 non-private control pays the same price, so a per-item independent synthesiser cannot carry this
 questionnaire's joint structure at any epsilon. And DP protects an individual's *membership*
-behind a published statistic, whereas our attack assumes the person is already known — her profile
-being the twin's input — and asks whether **the output conditioned on her** can be linked back:
-record linkage, not membership. The DP generator escapes it only by **never conditioning on an
-individual**, that is, by refusing the twin's task (its individual fidelity stays at most 0.2
-points at every budget, including infinite). A panel holder who needs population statistics should
-use DP; one who needs a per-person twin cannot get one here at any epsilon.
+behind a published statistic, where our attack assumes the person already known — her profile
+being the twin's input — and asks whether **the output conditioned on her** links back: record
+linkage, not membership. The DP generator escapes it only by **never conditioning on an
+individual**, that is by refusing the twin's task (its individual fidelity stays at most 0.2 points
+at every budget, including infinite). A panel holder who needs population statistics should use DP;
+one who needs a per-person twin cannot get one here at any epsilon.
 
 ### 6.3 What the defense costs a downstream analyst
 
@@ -987,9 +995,9 @@ share of its loadings **inverted** relative to humans, against none for the raw 
 appendix). **The honest comparison.** The unprotected twin was already wrong — it inverts the sign
 of the male-female gap and loses PC1+PC2 variance (the appendix) — and D4 adds **3.5 points**,
 less than the error already present; but the axis inversion is **D4's own doing**, changing *which*
-items compose the structure more than its strength. With a D4-defended twin, group comparisons are
-unchanged *because they are republished unchanged*, predominantly demographic regressions remain
-reliable, and anything resting on the link between two answers of the same person becomes unusable.
+items compose the structure more than its strength. Under D4, group comparisons are unchanged
+*because they are republished unchanged*, predominantly demographic regressions remain reliable,
+and anything resting on the link between two answers of the same person becomes unusable.
 
 *Limits.* Tested on a single block, of a single twin, of a single dataset.
 
@@ -1000,11 +1008,11 @@ reliable, and anything resting on the link between two answers of the same perso
 ### 7.1 The thirteen refuted preregistered predictions, one withdrawn, two inconclusive, and one untestable
 
 Seventeen predictions were registered before computation; **thirteen are refuted.** Table 1, in
-the appendix, gives each as written, with its verdict and source file. Eleven of the thirteen are
-also stated where they were measured (§5.1, §5.3, §5.4, §5.5, §5.7, §6.1), so this count can be
-read without turning to the table. The other two belong here: **per-item entropy does not rank
-items with a consistent sign across the two datasets**, and **the cost per unit of individual
-fidelity, which we predicted roughly constant, is not** (§7.2).
+the appendix, gives each as written with its verdict and source. Eleven are also stated where they
+were measured (§5.1, §5.3, §5.4, §5.5, §5.7, §6.1), so this count reads without the table. The
+other two belong here: **per-item entropy does not rank items with a consistent sign across the
+two datasets**, and **the cost per unit of individual fidelity, predicted roughly constant, is
+not** (§7.2).
 
 **Two of the thirteen went in our favour, and we mark them rather than bank them**: a stronger
 attacker gains less than the 20 % relative we predicted on Twin-2K-500, and an adaptive attacker
@@ -1020,9 +1028,9 @@ twins on both arms identify the real person at chance, so the contrast decides n
 testable, counted as neither.** That our defense dominates differential privacy at a moderate
 budget is **withdrawn, not decided** — the comparison behind it was retracted (§6.2).
 
-**Seventeen predictions: thirteen refutations, one withdrawn, two inconclusive, one untestable.**
-Three further outcomes were partial and count as neither (§5.7, §6.3); one held outright, P2
-(§6.1); three verdicts reached after this census closed are reported in place (§5.4, §5.8).
+**The census: thirteen refutations, one withdrawn, two inconclusive, one untestable.** Three
+further outcomes were partial and count as neither (§5.7, §6.3); one held outright, P2 (§6.1);
+three verdicts reached after it closed are reported in place (§5.4, §5.8).
 
 ### 7.2 What we do not know
 
@@ -1070,8 +1078,9 @@ Table 1 do not carry the same totals: the appendix.
 Three thresholds are fragile, and we name them rather than let a reviewer find them: the frontier
 twin's
 **fidelity > 0.10** bar, confirmed at 0.1714 but refuted had it been set at 0.18 — while our own
-weakest known twin sits at 0.177; the choice of k in top-k (§5.2); and the functional form of the
-scale law beyond the measured range (§5.9). A common bootstrap across analyses reusing the same
+weakest known twin sits at 0.177; the choice of k in top-k (§5.2); and the functional form fitted
+to the six scale points, which is why §5.9 extrapolates beyond them to nothing at all. A common
+bootstrap across analyses reusing the same
 2,058 people was abandoned for cost, so the intervals of §5.1–§5.3 on Twin carry no simultaneous
 coverage.
 
@@ -1081,10 +1090,10 @@ coverage.
 reproducible as things stand.** The twins we attack were produced **once**, by the upstream team,
 and **no replicate of that condition exists**. Worse for us, **the condition itself is not
 identified**: the upstream repository publishes thirteen sets of outputs and one configuration
-file, which describes a different arm (§4.1), so we can state neither model setting, temperature
-nor prompt behind the rate we report. **Re-running the headline arm is therefore not something we
-can price, only something the upstream prompt would unblock**; a paid pilot of ours stopped at
-that obstacle (the appendix). The published interval [18.96 ; 22.43] is a bootstrap over *people*.
+file describing a different arm (§4.1), so we can state neither model setting, temperature nor
+prompt behind the rate we report. **Re-running the headline arm is therefore not something we can
+price, only something the upstream prompt would unblock**; a paid pilot stopped there (the
+appendix). The published interval [18.96 ; 22.43] is a bootstrap over *people*.
 At strictly constant basin, items, attack and tie-breaking convention, the seven twin
 configurations available at full sample span **2.13 %** to **20.68 %**, a range of
 {{R:variance-etendue-bras}} points against {{R:variance-largeur-ic-titre}} points of interval
@@ -1101,16 +1110,16 @@ generation variability is small: we did not measure it, and the decomposition ab
 Three datasets, one language, one questionnaire format, categorical closed-choice answers only.
 The mechanism analysis and the defense both rest on a single block of a single dataset, and we
 make no claim about conversational agents or panels outside the three studied here. Two further
-limits we state with the resource that would lift them, because we looked and did not find it.
+limits, each stated with the resource that would lift it.
 
 **Generality beyond American attitude instruments, and the audit bottleneck.** All three datasets
 are American survey panels built on neighbouring instrument families, so we cannot say whether
 this channel is a property of that family — nor, as §1.1 states, separate the trajectory from the
 protocols that differ along it. The obstacle is that the matched file — row-by-row, not by
 demographic cell — is almost never redistributed: we verified three such datasets at the source and
-ran no systematic census, so no upper bound is established, and **on a typology of four cases and
-on no rate, the risk appears to be created faster than it becomes auditable.** The four cases, and
-the resource that would lift this limit: the appendix.
+ran no census, so no upper bound is established, and **on a typology of four cases and on no rate,
+the risk appears to be created faster than it becomes auditable.** The four cases, and the
+resource that would lift this: the appendix.
 
 **Free-text outputs.** We measure nothing about free text, because **none of the three archives
 publishes twin text** (the appendix, with the resource that would lift this). Every rate here
