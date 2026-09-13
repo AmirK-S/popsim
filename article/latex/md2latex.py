@@ -309,6 +309,21 @@ def _convert_unicode_math(text):
     text = text.replace("\u2014", "---")  # em dash —
     text = text.replace("\u2013", "--")   # en dash –
 
+    # Cas particulier : §8 et §9 renvoient a Ethical Considerations et Open
+    # Science, deux sections du gabarit PoPETs (popets.sty, \specialcomment
+    # ethics/openscience) rendues avec \section* -- donc SANS numero visible,
+    # par convention du venue (a l'instar des Acknowledgments ACM). On ne
+    # renumerote pas le gabarit standard PoPETs pour ces sections obligatoires
+    # (ca romprait la convention du venue et le style vendu tel quel) ; a la
+    # place, tout renvoi numerique "§8"/"§9" du manuscrit est traduit ici en
+    # le nom de la section cible, en reutilisant \ethicsname/\osname deja
+    # definis dans popets.sty -- si l'intitule change un jour, le renvoi
+    # suit AVANT la regle generale "§N" -> "\S\,N" ci-dessous (qui,
+    # sinon, consommerait "§8"/"§9" en premier) ; cette regle generale
+    # reste inchangee pour toutes les autres sections (numerotees, elles).
+    text = re.sub(r"\u00a7\s*8\b", r"\\ethicsname{}", text)
+    text = re.sub(r"\u00a7\s*9\b", r"\\osname{}", text)
+
     # signe section : "§5.3" -> "\S\,5.3"
     text = re.sub(r"\u00a7\s*(\d)", r"\\S\\,\1", text)
     text = text.replace("\u00a7", r"\S{}")
@@ -557,11 +572,37 @@ def render_figure_block(quote_lines):
             "usage des blockquotes (ex. une citation)." % full_text[:120]
         )
     fig_no = int(m.group(1))
-    caption_latex = convert_inline(full_text)
     if fig_no not in FIGURE_FILES:
         raise ValueError("Figure %d citee dans le manuscrit mais aucun fichier connu pour ce numero "
                           "(FIGURE_FILES ne connait que %s) -- ajouter l'entree manquante." % (fig_no, list(FIGURE_FILES)))
     path = FIGURE_FILES[fig_no]
+
+    # CORRECTIF (relecture de rendu 2026-09-13, defaut 1) : le gabarit LaTeX
+    # (\caption{...} dans un environnement figure) prefixe deja
+    # automatiquement "Figure N : " au rendu -- si le texte de legende du
+    # manuscrit commence LUI AUSSI par "**Figure N -- ...**", le rendu
+    # affiche "Figure 1 : Figure 1 -- ..." en double. On retire ici ce
+    # prefixe repete de la legende avant conversion (pas dans le manuscrit :
+    # c'est un defaut du gabarit, pas du texte), en gardant le marqueur
+    # gras '**' d'ouverture pour ne pas perdre la mise en gras du titre de
+    # legende qui suit.
+    full_text = re.sub(
+        r"^\*\*Figure \d+\s*[—–-]+\s*", "**", full_text, count=1,
+    )
+
+    # CORRECTIF (relecture de rendu 2026-09-13, defaut 3) : une legende ne
+    # doit jamais citer le chemin de son propre fichier image -- c'est un
+    # detail de fabrication interne au depot, pas une information pour le
+    # lecteur. Retire tout renvoi entre parentheses au nom de base du
+    # fichier de LA figure courante (ex. "(`article/figures/fig2-
+    # couplage.png`)"), ou qu'il apparaisse dans la legende, sans toucher a
+    # aucun autre mot du texte.
+    basename = os.path.basename(path)
+    full_text = re.sub(
+        r"\s*\(`[^`]*%s`\)" % re.escape(basename), "", full_text,
+    )
+
+    caption_latex = convert_inline(full_text)
     REFERENCED_FIGURES.add(path)
     label = FIGURE_LABELS[fig_no]
     out = []

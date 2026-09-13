@@ -236,9 +236,26 @@ def figure1():
                              color=st_meilleur["color"], markerfacecolor=face_naif,
                              markeredgecolor=st_meilleur["color"], mew=0.8,
                              elinewidth=0.9, capsize=2.2, zorder=4)
+                # CORRECTIF (relecture de rendu 2026-09-13, defaut 2) : sur le
+                # panneau Twin, les quatre reperes (naif/fort x 0,1 %/1 %)
+                # tombent tous a moins de 0,05 en TPR -- l'ancien decalage
+                # oblique ("au-dessus a gauche" pour le naif, "a droite, meme
+                # hauteur" pour le fort) faisait se chevaucher le naif d'un
+                # repere et le fort du repere voisin, les deux etiquettes
+                # visant le meme espace etroit entre les deux reperes.
+                # Desormais : le naif reste au-dessus de SON marqueur (centre
+                # dessus, sans reach lateral vers le repere voisin) ; le fort
+                # (ci-dessous) passe en diagonale bas-droite, qui degage a la
+                # fois le naif du meme repere (au-dessus) et l'erreur-bar
+                # verticale du fort lui-meme (cf. commentaire plus bas -- sur
+                # Park, cette barre est large et une etiquette juste EN
+                # DESSOUS la traverserait). Aucune donnee/valeur affichee
+                # n'est modifiee, seul l'emplacement du texte change ; verifie
+                # par rendu d'image sur les deux panneaux (Twin serre, Park
+                # large, IC etroites et larges).
                 ax.annotate(f"{y * 100:.1f}%", xy=(fpr_repere, y),
-                             xytext=(-3, 7), textcoords="offset points", fontsize=6.0,
-                             color="0.25", ha="right", clip_on=False)
+                             xytext=(0, 9), textcoords="offset points", fontsize=6.0,
+                             color="0.25", ha="center", va="bottom", clip_on=False)
 
             if not ligne_fort_jeu.empty:
                 r = ligne_fort_jeu.iloc[0]
@@ -254,9 +271,18 @@ def figure1():
                            s=STYLE_FORT["ms"] ** 2, color=STYLE_FORT["color"],
                            facecolor=face_fort, edgecolor=STYLE_FORT["color"],
                            linewidth=0.8, zorder=5)
+                # CORRECTIF (relecture de rendu 2026-09-13, defaut 2) : decalage
+                # diagonal bas-droite (pas juste "en dessous") -- sur le
+                # panneau Park, l'IC bootstrap du repere 0,1 % est large
+                # (0,233-0,538, soit ~0,30 de TPR) : une etiquette placee
+                # directement sous le marqueur retombait en plein sur la
+                # barre d'erreur verticale. Le decalage horizontal degage la
+                # barre d'erreur ; le decalage vertical (sous le marqueur, pas
+                # a cote) degage l'etiquette naive du meme repere, restee
+                # au-dessus. Verifie par rendu d'image sur les deux panneaux.
                 ax.annotate(f"{y * 100:.1f}%", xy=(fpr_repere, y),
-                             xytext=(9, 1), textcoords="offset points", fontsize=6.0,
-                             color="black", fontweight="bold", ha="left", va="center",
+                             xytext=(7, -9), textcoords="offset points", fontsize=6.0,
+                             color="black", fontweight="bold", ha="left", va="top",
                              clip_on=False)
 
         # entree de legende unique pour l'attaquant fort (les scatter ci-dessus ont
