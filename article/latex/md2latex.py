@@ -105,6 +105,115 @@ BIB_DST_PATH = os.path.join(HERE, "references.bib")
 FIGURES_SRC_DIR = os.path.normpath(os.path.join(HERE, "..", "figures"))
 MAIN_TEX_PATH = os.path.join(HERE, "main.tex")
 
+RACINE = os.path.normpath(os.path.join(HERE, "..", ".."))
+REGISTRE_PATH = os.path.join(RACINE, "resultats", "registre-chiffres.csv")
+
+# Motif des renvois du §1.3, recopie ici pour le GARDE-FOU DE SORTIE ci-dessous.
+# Il doit rester identique a RE_RENVOI de outils/rendu_registre.py : si les deux
+# divergeaient, le garde-fou laisserait passer la forme que l'autre reconnait.
+RE_RENVOI_SORTIE = re.compile(r"\{\{R:[A-Za-z0-9_.\-]+\}\}")
+
+
+# ---------------------------------------------------------------------------
+# RENDU DU REGISTRE -- la moitie manquante de la chaine, jusqu'au 13/09/2026.
+#
+# Le §1.3 de la Methode v2 impose que le manuscrit ne tape aucune valeur : il
+# cite `{{R:id}}`, et `outils/rendu_registre.py` substitue depuis
+# `resultats/registre-chiffres.csv`. Ce convertisseur ne l'appelait pas. La
+# consequence etait un PDF deposable portant 51 marqueurs `{{R:...}}` litteraux,
+# resume compris, a la place de ses chiffres -- trouve le 13/09/2026 par la
+# premiere relecture qui ait ouvert le PDF compile
+# (`resultats/relecture-post-nuit-2026-09-13.md` G1).
+#
+# LE TROU ETAIT DELIBERE, ET SA RAISON EST CONSERVEE ICI. L'agent d'integration
+# avait juge qu'un echec bruyant vaut mieux qu'un chiffre retracte qui a l'air
+# juste. Cette propriete n'est pas perdue : le rendu ci-dessous ARRETE la
+# conversion (code 1) des qu'un renvoi ne se resout pas, et `rendu_registre.py`
+# traite comme un echec l'id absent, la ligne `retracte`, le champ vide, le
+# champ `ABSENT` et le registre malforme. Rien n'est substitue au jugé, rien
+# n'est rendu partiellement, et main.tex reste INTACT dans tous ces cas.
+#
+# Deux verrous, pas un :
+#   (1) ENTREE  -- `rendu_registre.rend()` refuse de rendre le manuscrit ;
+#   (2) SORTIE  -- `verifie_aucun_renvoi_residuel()` refuse d'ECRIRE main.tex
+#       s'il y subsiste un `{{R:...}}`, d'ou qu'il vienne (zone hors GENERATED
+#       editee a la main, marqueur reintroduit par une conversion, bloc de code
+#       recopie). C'est le controle que la relecture demandait : le PDF ne peut
+#       plus sortir avec des accolades.
+# ---------------------------------------------------------------------------
+
+def _charge_rendu_registre():
+    """Importe outils/rendu_registre.py. Un import impossible est un code 2."""
+    sys.path.insert(0, os.path.join(RACINE, "outils"))
+    try:
+        import rendu_registre  # noqa: E402
+    except Exception as e:  # pragma: no cover - depend de l'arborescence
+        sys.exit(
+            "ERREUR : impossible de charger outils/rendu_registre.py (%s). "
+            "La chaine de rendu du §1.3 ne peut pas s'executer ; main.tex n'est "
+            "PAS regenere. Un main.tex perime vaut mieux qu'un main.tex dont "
+            "les chiffres ne sont pas gouvernes par le registre." % e)
+    return rendu_registre
+
+
+def read_manuscript_rendered():
+    """Lit le manuscrit et resout ses `{{R:id}}` depuis le registre.
+
+    Rend le texte substitue. N'ecrit rien. Sort en 1 des qu'un renvoi pose
+    probleme -- et alors main.tex n'a pas ete touche, puisque cette fonction est
+    appelee avant toute ecriture.
+    """
+    rr = _charge_rendu_registre()
+
+    try:
+        registre = rr.charge(rr.Path(REGISTRE_PATH))
+    except FileNotFoundError:
+        sys.exit(
+            "ERREUR : registre absent : %s -- le manuscrit cite des {{R:id}} "
+            "qu'aucun registre ne peut resoudre ; main.tex n'est pas regenere."
+            % REGISTRE_PATH)
+    except rr.Probleme as e:
+        sys.exit(
+            "ERREUR : registre malforme -- %s\nmain.tex n'est pas regenere : un "
+            "registre qu'on ne sait pas lire ne peut pas gouverner les chiffres "
+            "d'un PDF deposable." % e)
+
+    source = open(MANUSCRIPT_PATH, encoding="utf-8").read()
+    texte, ennuis, compte = rr.rend(source, registre, "article/manuscrit.md")
+
+    if ennuis:
+        for e in ennuis:
+            print("[rendu_registre] %s" % e, file=sys.stderr)
+        sys.exit(
+            "ERREUR : %d renvoi(s) {{R:id}} non resolu(s) sur %d dans "
+            "article/manuscrit.md.\nmain.tex n'est PAS regenere et le PDF n'est "
+            "PAS produit. Corriger le renvoi ou le registre -- ne jamais "
+            "substituer une valeur a la place d'une ligne retractee, ni laisser "
+            "le marqueur partir au PDF." % (len(ennuis), compte))
+
+    print("=== md2latex.py : rendu du registre (§1.3) ===", file=sys.stderr)
+    print("%d renvoi(s) {{R:id}} resolu(s) depuis %d grandeur(s) du registre."
+          % (compte, len(registre)), file=sys.stderr)
+    return texte
+
+
+def verifie_aucun_renvoi_residuel(main_tex):
+    """Garde-fou de sortie : refuse d'ecrire un main.tex portant un {{R:...}}."""
+    restants = RE_RENVOI_SORTIE.findall(main_tex)
+    if restants:
+        uniques = sorted(set(restants))
+        for m in uniques:
+            print("  - %s" % m, file=sys.stderr)
+        sys.exit(
+            "ERREUR : %d marqueur(s) {{R:...}} subsistent dans le main.tex qui "
+            "allait etre ecrit (%d distinct(s), listes ci-dessus).\nmain.tex "
+            "n'est PAS ecrit. Un PDF qui affiche des accolades a la place de ses "
+            "chiffres est le defaut G1 de "
+            "resultats/relecture-post-nuit-2026-09-13.md ; cette porte existe "
+            "pour qu'il ne puisse pas se reproduire."
+            % (len(restants), len(uniques)))
+
+
 # ---------------------------------------------------------------------------
 # Table de correspondance clef-provisoire -> clef-finale du .bib.
 # Source : article/references-verification.md, section "Controle croise avec
@@ -1101,7 +1210,9 @@ def main():
 
     short_title, full_title = load_manuscript_title()
 
-    src = open(MANUSCRIPT_PATH, encoding="utf-8").read()
+    # Le manuscrit est lu A TRAVERS le rendu du registre : ce qui entre dans la
+    # conversion ne porte plus aucun {{R:id}}, ou bien rien n'entre du tout.
+    src = read_manuscript_rendered()
     sections = parse_sections(src)
     (abstract_fragments, body_fragments,
      appendix_fragments, backmatter_fragments) = route_sections(sections)
@@ -1152,6 +1263,9 @@ def main():
     main_tex = splice(main_tex, "BODY", body_tex)
     main_tex = splice(main_tex, "APPENDIX", appendix_tex)
     main_tex = splice(main_tex, "BACKMATTER", backmatter_tex)
+
+    # Dernier verrou avant l'ecriture : aucun {{R:...}} ne part au PDF.
+    verifie_aucun_renvoi_residuel(main_tex)
 
     open(MAIN_TEX_PATH, "w", encoding="utf-8").write(main_tex)
 
