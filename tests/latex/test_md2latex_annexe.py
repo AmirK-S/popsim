@@ -125,9 +125,38 @@ BLOC_SANS_MARQUEUR = """## Threshold census
 """
 
 
+# Depuis le 13/09/2026, md2latex.py lit le manuscrit A TRAVERS
+# outils/rendu_registre.py (§1.3). Un depot jetable doit donc porter la machine
+# du registre, sinon le convertisseur s'arrete -- ce qui est le comportement
+# voulu, et ce que teste test_md2latex_registre.py.
+REGISTRE_MINIMAL = (
+    "id,grandeur,valeur,ic_bas,ic_haut,methode_ic,n_replicats,graine,script,"
+    "commit,csv_source,statut\n"
+    "temoin-ok,\"Grandeur de controle\",42.0,41.0,43.0,bootstrap,10,1,"
+    "analyses/temoin.py,abcdef0,resultats/temoin.csv,courant\n"
+    "temoin-retracte,\"Grandeur de controle RETRACTEE, remplacee par "
+    "temoin-ok\",13.0,12.0,14.0,bootstrap,10,1,analyses/temoin.py,abcdef0,"
+    "resultats/temoin.csv,retracte\n"
+)
+
+
+def installe_machine_registre(racine: Path) -> None:
+    """Recopie outils/rendu_registre.py, ses portes, et un registre minimal."""
+    (racine / "outils" / "portes").mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(RACINE / "outils" / "rendu_registre.py",
+                    racine / "outils" / "rendu_registre.py")
+    for nom in ("registre_chiffres.py", "commun.py"):
+        shutil.copyfile(RACINE / "outils" / "portes" / nom,
+                        racine / "outils" / "portes" / nom)
+    (racine / "resultats").mkdir(parents=True, exist_ok=True)
+    (racine / "resultats" / "registre-chiffres.csv").write_text(
+        REGISTRE_MINIMAL, encoding="utf-8")
+
+
 def zones_generees(tmp: Path, annexe_bloc: str) -> dict[str, str]:
     """Fabrique une arborescence article/ jetable, lance le convertisseur, et
     renvoie le contenu de chaque zone GENERATED de main.tex."""
+    installe_machine_registre(tmp)
     art = tmp / "article"
     (art / "latex").mkdir(parents=True)
     (art / "figures").mkdir()
