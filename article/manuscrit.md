@@ -2,6 +2,8 @@
 
 *Submission draft, PoPETs. Body target: 12 pages. Bibliography: `article/references.bib`.*
 
+<!-- A RAFRAICHIR AU GEL DU MANUSCRIT : au §8 (Ethics Considerations), paragraphe « Responsible disclosure, and its actual state », le statut des reponses est date du 13 septembre 2026 (lettres envoyees le 12 septembre 2026 a six groupes, aucune reponse, fenetre close le 12 octobre 2026). Il aura change d'ici l'echeance PoPETs : reverifier les reponses recues, puis mettre a jour la date et l'etat. Commentaire place ici et non au §8 parce que md2latex.py n'ignore que ce qui precede le premier titre de niveau 2 ; ailleurs il serait imprime dans le PDF. Source : resultats/point-2026-09-13.md, decision 6. -->
+
 ---
 
 ## Abstract
@@ -1177,12 +1179,17 @@ analysis. This provides a first measured figure for that risk on public datasets
 reproducible method — attack plus interpretability control — for testing it *before* publication.
 
 **Responsible disclosure, and its actual state.** Letters to the Twin-2K-500 authors and to Park
-et al. are drafted, with a 30-day response window and an offer to share code and report in
-advance. The tone toward Park et al. is fixed: *your warning was accurate, here is its measured
-magnitude*. **As of this submission the letters have not been sent and the 30-day window has not
-opened.** Sending them is on the critical path and is to happen before any preprint posting or
-code release. We write this plainly rather than imply a consultation that has not taken place:
-the committee should know the window was still closed when this manuscript was filed.
+et al., with a 30-day response window and an offer to share code and report in advance, were
+sent on 12 September 2026 in two waves to six research groups in all: at Columbia University,
+Stanford University and Centerdata, then, later the same day, at the University at Buffalo, the
+University of Southern California and the Technical University of Munich. The 30-day window
+opened by the first wave closes on 12 October 2026. The tone toward Park et al. is fixed: *your
+warning was accurate, here is its measured magnitude*. **As of 13 September 2026, none of the
+six groups has replied.** Sending the letters was on the critical path, ahead of any preprint
+posting or code release. We write this plainly rather than imply a consultation that has produced
+answers: the committee should know the window was open, and unanswered, when this manuscript was
+drafted.
+
 
 **The Park et al. case.** Their supplementary material already warned participants that their
 information might be "inadvertently shared" and acknowledged that complete anonymity remains
