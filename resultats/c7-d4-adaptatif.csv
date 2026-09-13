@@ -1,0 +1,11 @@
+publication,colonnes_attaquees,n_colonnes,n,n_pool,top1,top1_bas,top1_haut,controle_interpretabilite,replicat_permutation_d4
+jumeau non protege,60 items,60,2058,2058,0.2063896987366375,0.18959973275024297,0.22191569484936832,passe,"publie (graine c7_defense 20260911, 104)"
+jumeau non protege,40 items d'achat,40,2058,2058,0.3307580174927114,0.31243743926141887,0.34985665694849366,passe,"publie (graine c7_defense 20260911, 104)"
+jumeau non protege,20 items d'opinion,20,2058,2058,0.0025996112730806605,0.0008011418853255586,0.004835398445092319,passe,"publie (graine c7_defense 20260911, 104)"
+D4 (publie),60 items,60,2058,2058,0.0013848396501457726,9.718172983479106e-05,0.003061224489795918,passe,"publie (graine c7_defense 20260911, 104)"
+D4 (publie),40 items d'achat,40,2058,2058,0.00048590864917395527,0.0,0.0014577259475218659,passe,"publie (graine c7_defense 20260911, 104)"
+D4 (publie),20 items d'opinion,20,2058,2058,0.002453838678328474,0.0007282555879494655,0.004713313896987366,passe,"publie (graine c7_defense 20260911, 104)"
+D4 (10 replicats de permutation),60 items,60,2058,2058,0.0009572400388726919,0.0,0.0018707482993197278,passe,"moyenne sur 10 tirages ; bornes = etendue, PAS un IC ; ecart-type 0.0575 pt"
+D4 (10 replicats de permutation),40 items d'achat,40,2058,2058,0.0005272108843537415,0.0,0.000923226433430515,passe,"moyenne sur 10 tirages ; bornes = etendue, PAS un IC ; ecart-type 0.0273 pt"
+D4 (10 replicats de permutation),20 items d'opinion,20,2058,2058,0.002572886297376093,0.002478134110787172,0.0027210884353741495,passe,"moyenne sur 10 tirages ; bornes = etendue, PAS un IC ; ecart-type 0.0091 pt"
+D4 (publie),INVARIANT — multiensemble,40,2058,2058,,,,sans objet,"1560/1560 couples segment x item conserves a l'identique ; 207/82280 cellules (0.25 %) lisibles dans la sortie seule ; un adversaire connaissant les |g|-1 autres membres d'un segment reconstitue les 40 reponses de la cible avec certitude, par construction (taille mediane de segment 23)"
