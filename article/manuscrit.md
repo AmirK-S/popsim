@@ -1,4 +1,4 @@
-# Linkability of LLM Digital Twins: From Chance in 2023 to 60 % in an Open World, and the Control That Says When Not to Measure
+# Linkability of LLM Digital Twins: Recent Twins Re-identify the People They Were Built From, Where 2023 Twins Stay at Their Demographic Baseline and Classical Generators Do Not
 
 *Submission draft, PoPETs. Body target: 12 pages. Bibliography: `article/references.bib`.*
 
@@ -40,19 +40,20 @@ We also report what we could not establish. We preregistered that the observed c
 imitation quality and leakage reflects an individual fingerprint; a null carrying only a matched
 per-person accuracy margin — which in fact leaks more than our own twin (31.6 % against 20.7 %) —
 reaches a rank correlation as high as ours ({{R:rho-nul-marge-appariee-12conf-n100}}, 5th–95th percentiles {{R:rho-nul-marge-appariee-12conf-n100.ic}}, against
-0.965 observed). Thirteen preregistered predictions were refuted, one is withdrawn, two are
-inconclusive and one untestable; our own twins failed to reproduce the leakage even with a paid
+0.965 observed). Of the thirteen refutations in our table of preregistered predictions, none
+third-party timestamped, nine rest on a plan git history shows committed before its first result,
+three on a plan committed with its results, and one refutes a subgroup defined after them; one
+prediction is withdrawn, two are inconclusive and one untestable; our own twins failed to reproduce the leakage even with a paid
 frontier model; and the mechanism concentrating the effect on one item block stays open, though
 six candidate explanations are now excluded. **The headline rate also rests on a single generation
 that is not ours and whose parameters its authors have not published**: across seven
 configurations {{R:variance-part-generation}} % of the observed variability is attributable to the
 generation configuration and {{R:variance-part-personnes}} % to the people, so it must be read as
 the rate of the most faithful configuration we hold, not of an LLM twin in general.
-Finally, a 1998 mechanism (PRAM) applied to twins brings closed-world top-1 to **0.29 %**
-[0.10 ; 0.53] against the best attacker we measured — one who knows the mechanism and attacks the
-block it leaves untouched — at a measured cost of 4.4 points on inter-item correlations. It
-carries **no formal guarantee**: it republishes each item's within-segment histogram exactly, so
-its zero distribution and group errors are that republication, not a cost avoided.
+Finally, permuting a twin's answers within a demographic segment does not protect against an
+adaptive attacker, whereas aggregating a segment's twins by groups of k bounds top-1 by 1/k
+against any attacker, at a cost we state (§6); we withdraw our preregistered comparison with
+differential privacy.
 
 ---
 
@@ -185,15 +186,11 @@ the object, the pool, the human ceiling, and out-of-fold estimation of the weigh
 our own published Park figure upward — and raises that archive's demographic comparator further
 still, which is why Park no longer carries this paper's claim (§5.8).
 
-**(6) Twenty-six defenses, each measured against an adaptive attacker written before the
-measurement, and one of them bounded.** Permutation — the family our variant of the 1998 Post
-Randomisation Method [gouweleeuw1998pram] belongs to — is a dead end even in its most favourable
-case; within-segment aggregation by the mode holds adaptive top-1 under a combinatorial 1/k that
-binds any attacker, at a cost in between-segment statistics that we publish beside it (§6.1).
-Every rate we report other than that bound, our PRAM variant's included, is the rate of an attack
-we built: it offers **no formal guarantee** and republishes the within-segment item histogram
-exactly (§6). We preregistered a comparison with differential privacy and **withdraw it**; we
-claim no superiority over differential privacy in either direction (§6.2).
+**(6) Consequences for publication, developed in a companion paper.** Permutation does not
+protect, even in its most favourable case; within-segment aggregation by the mode bounds top-1
+by 1/k against any attacker, at a cost in between-segment statistics that we publish beside it;
+our variant of the 1998 Post Randomisation Method carries **no formal guarantee**; and we
+withdraw our preregistered comparison with differential privacy (§6).
 
 **(7) A bits-of-identity instrument that transports across datasets where the raw rate does
 not.** A derived instrument, not a discovery: a case of Rényi min-entropy leakage
@@ -203,8 +200,10 @@ route (§5.6).
 
 ### 1.4 Negative results, stated in front
 
-Thirteen preregistered predictions were refuted and one is withdrawn, two are inconclusive, and
-one could not be tested at all (Table 1, §7.1); three later verdicts — the distance law (§5.4) and the third
+Table 1 lists thirteen refuted predictions, one withdrawn, two inconclusive and one that could not
+be tested at all (§7.1); only nine of the thirteen refutations rest on a preregistration that git
+history shows committed before the first result, none is third-party timestamped, and one (row 4)
+refutes a subgroup defined after the results; three later verdicts — the distance law (§5.4) and the third
 dataset's two predictions (§5.8) — sit outside that table for the reasons given there. Our own
 twins identify almost nobody, and the constructive demonstration meant to close that gap — raise
 fidelity with a frontier model and watch the leakage return — **failed**: `openai/gpt-4.1` on
@@ -302,15 +301,6 @@ observing decoupling as quality saturates within a single tabular diffusion mode
 the coupling they observe survives a null matched on per-person accuracy. Ours does not (§5.1).
 Their decoupling also unfolds over training time within one model, where ours is cross-sectional
 across twelve heterogeneous methods against 1-in-N re-identification.
-
-### 2.6 Defenses
-
-Our D4 is not new. Shuffling answers between units of the same segment is a variant of the
-Post Randomisation Method [gouweleeuw1998pram], which perturbs categorical variables through a
-known transition matrix leaving margins invariant in expectation, and of data swapping — the same
-family as the partially synthetic data tradition of Reiter and Drechsler, extended by Drechsler
-[drechsler2024thirtyyears] and Bowen et al. [hu2023microdata]. What is new is the application to
-LLM twins with a measured risk-utility curve (§6).
 
 ---
 
@@ -411,7 +401,7 @@ The **strong** attack (A-LLR) instantiates the Narayanan–Shmatikov rarity-weig
 log-likelihood [narayanan2008robust], whose parameters we estimate **out-of-fold over 5 folds**.
 A third variant (A-MI) scores higher still on the Park archive but estimates its weights **in
 sample**, an advantage declared in the preregistration, so we never report it as our result. An
-**adaptive** attacker, used only against the defense (§6.1), additionally knows the mechanism and
+**adaptive** attacker, used only against the defense (§6), additionally knows the mechanism and
 which items it leaves untouched.
 
 *Closed-world top-1 and top-10*: rank of the true target among all N candidates by the rule
@@ -429,11 +419,14 @@ appear.
 ### 4.4 Preregistration and self-refutation
 
 Attack, defense, mechanism, the two archive replications, the disjoint-item test and the
-distance law were each preregistered before computation, and we report every refuted prediction
-in Table 1. A census found **no inversion** between a plan and its result across the 28
+distance law were each preregistered according to our records, and we report every refuted
+prediction in Table 1. A census found **no inversion** between a plan and its result across the 28
 verifiable pairs; for the large majority the ordering is provable from version-control history,
 while a small number were committed alongside their results or left unversioned; we state this
-as a limit rather than claim an unbroken chain. The plans are not yet third-party timestamped.
+as a limit rather than claim an unbroken chain. The plans are not yet third-party timestamped. A
+later audit comparing each prediction's text with its committed plan finds a plan committed strictly
+before the first result for eleven of Table 1's seventeen rows, five committed with or after their
+results, and one prediction refuted only on a subgroup defined after them (§7.1).
 
 ### 4.5 Validity controls
 
@@ -879,146 +872,55 @@ appendix.
 
 ---
 
-## 6. Defense
+## 6. Consequences for Publication
 
-Shuffling the purchase answers between people of the same demographic segment (D4) brings
-closed-world top-1 from **{{R:twin-top1-ferme-json41-naif-ref-defense}} % {{R:twin-top1-ferme-json41-naif-ref-defense.ic}}** to **{{R:twin-d4-top1-residuel}} %** against the naive, non-adaptive
-attack, and to **{{R:defense-d4-top1-adaptatif-s1}} % {{R:defense-d4-top1-adaptatif-s1.ic}}** against the best attacker we measured
-(§6.1) — the figure we report as the defense's rate. Per-item distribution and between-segment
-differences are preserved **exactly, by construction**, as PRAM predicts, and that exactness is
-also the mechanism's central limitation: shuffling item by item within a segment leaves each
-item's within-segment multiset identical, so D4 republishes that histogram without noise, and an
-adversary who knows a segment's other members recovers the target's 40 answers by difference.
-**D4 offers no formal privacy guarantee.**
-
-**The cost is not a single average.** By component: **0.0 points on the per-item distribution and
-0.0 on group differences — which is that republication, not a cost avoided** — and **{{R:defense-d4-cout-correlations}} points on
-inter-item correlations** — a **single permutation draw, not a ten-seed average**, the highest of
-ten, kept as published and marked provisional. The ten-draw mean also exceeds the
-{{R:dp-zcdp-plancher-correlations}} points of amplitude there was to destroy, so the component is
-destroyed in full either way. We therefore withdraw the summary presenting D4's cost *as* a single
-mean of 1.47 points: two of the three components are zero by construction, so that mean divides by
-three an effect falling entirely on the third. And the cost is worse than that summary suggested:
-against the real human answers `erreur_correlations_hum` degrades by
-**{{R:defense-d4-aggravation-ecart-humain}} %** — the defended twin moves *away* from the humans on
-correlations, so no framing in which the cost is absorbed by an error already present is correct.
-
-Alternatives: D1 (k=10 aggregation) gives 0.55 % for 3.8 points across all three components; D2
-(noise) never descends below 1 %.
-
-### 6.1 The defense against a strong, then an adaptive attacker
-
-The figure above was measured against the naive attack, which §5.8 shows can badly understate
-leakage. We re-ran it against the strong attack recalibrated on the *defended* outputs, then
-against an attacker who knows the mechanism and which items it leaves untouched. D4 holds: top-1
-goes from 0.13 % (naive) to **0.24 %** under the recalibrated strong attack, and the **adaptive**
-attacker plateaus at **{{R:defense-d4-top1-adaptatif-s1}} %** (strategy S1, leaving the 20 opinion
-items intact) — two orders of magnitude below the 20.7 % undefended rate, and never above 1 %.
-**Attribute disclosure is not demonstrated either**: the best strategy names the correct `S_gra`
-segment in **7.7 %** of cases, against **12.6 %** for always answering the most frequent segment —
-the attack does worse than not attacking.
-
-**A reservation that bounds the guarantee.** This residue comes *entirely* from the 20 opinion
-items D4 does not permute: the guarantee holds for this split, not for a design leaving a more
-informative block untouched. On those 20 items alone the defended and the **undefended** twin are
-indistinguishable — {{R:defense-d4-top1-opinion-naif}} % {{R:defense-d4-top1-opinion-naif.ic}} against 0.260 %, on intervals that almost
-coincide — so the residue is not a residue of the defense but the part of the publication it never
-touches. None of these rates is a bound on the defense; they are the rates of the attacks we
-built.
-
-**Shuffling is a dead end, shown at the case most favourable to it; aggregation is the lever, and
-it carries a bound.** We preregistered twenty-six defense candidates, each with its adaptive
-attacker written before measurement. A **joint** permutation of whole rows within a segment — the
-best case for the family D4 belongs to — costs
-{{R:defense-permutation-jointe-cout-utilite}} points on all three utility components at once and
-leaves adaptive top-1 at {{R:defense-permutation-jointe-top1-adaptatif}} %
-{{R:defense-permutation-jointe-top1-adaptatif.ic}}, the undefended level: a permutation hides the
-**index**, never the **content**, and our attacker never used the index. The one candidate that
-passes and carries a guarantee is **within-segment aggregation by the mode over k people**:
-adaptive top-1 {{R:defense-mode-k5-top1-adaptatif}} % {{R:defense-mode-k5-top1-adaptatif.ic}} at
-k = 5 and {{R:defense-mode-k10-top1-adaptatif}} % {{R:defense-mode-k10-top1-adaptatif.ic}} at
-k = 10, under the combinatorial bound **top-1 ≤ 1/k, against any attacker, with no assumption** —
-the k published rows of a group being identical, at most one of its k members can rank first.
-**The price is announced with it**: {{R:defense-mode-k5-cout-groupes}} and
+Defenses are developed in a companion paper; we state here only what a panel holder needs, and
+what we withdraw. **Permuting answers does not protect.** A joint permutation of whole rows
+within a demographic segment — the case most favourable to the family of the Post Randomisation
+Method [gouweleeuw1998pram] — costs {{R:defense-permutation-jointe-cout-utilite}} points of
+utility and leaves top-1 against an adaptive attacker at
+{{R:defense-permutation-jointe-top1-adaptatif}} % {{R:defense-permutation-jointe-top1-adaptatif.ic}},
+the undefended level: a permutation hides the index, never the content. Our item-wise variant,
+D4, stays at 0.24 % under the strong attack recalibrated on its outputs and at
+{{R:defense-d4-top1-adaptatif-s1}} % {{R:defense-d4-top1-adaptatif-s1.ic}} against an adaptive
+attacker, but it offers **no formal guarantee**: it republishes each item's within-segment
+histogram exactly ({{R:defense-d4-republication-multiensemble}} % of segment × item pairs), so
+its zero distribution and group costs are that republication, not a cost avoided, and we
+withdraw the summary that gave its cost as a single mean of 1.47 points. **Aggregating by the
+mode over k people of the same segment protects, with a bound**: adaptive top-1 falls to
+{{R:defense-mode-k5-top1-adaptatif}} % {{R:defense-mode-k5-top1-adaptatif.ic}} at k = 5 and
+{{R:defense-mode-k10-top1-adaptatif}} % {{R:defense-mode-k10-top1-adaptatif.ic}} at k = 10, under
+top-1 ≤ 1/k against any attacker — a bound on re-identification, not on privacy, since the
+published mode is itself disclosed. The price is {{R:defense-mode-k5-cout-groupes}} and
 {{R:defense-mode-k10-cout-groupes}} points of error on between-segment differences, where the
-whole gap between the twin and the humans on that component is 2.17 points; the aggregation
-destroys the group statistics it was meant to save. **Guaranteed and observed must not be run
-together.** Only top-1 ≤ 1/k is a bound, and it bounds **re-identification, not privacy**:
-publishing a group's mode discloses that mode, which 1/k does not cover. Every other rate here,
-D4's included, is the rate of an attack we built against a mechanism we built, and the best
-attacker measured is not the best attacker possible. **We claim no superiority of any empirical
-mechanism over differential privacy, in either direction** (§6.2). *(Preregistered before
-measurement; audit of 13 September 2026.)*
-
-### 6.2 Differential privacy: a comparison we withdraw
-
-We preregistered that at a moderate budget differential privacy would be dominated by D4, and
-reported that prediction as refuted. **We withdraw the comparison and its verdict: we did not
-compare the cost of differential privacy to D4's.** Our reference implementation was too weak on
-two counts: it used the Laplace mechanism under basic sequential composition, where the Gaussian
-mechanism composed under zCDP (delta = 1e-6) injects **{{R:dp-zcdp-rapport-bruit-eps3}} times less
-noise** at the same eps = 3; and it fitted the generator on the humans while scoring it against
-the twin, charging it the gap between those two references, worth
-**{{R:dp-zcdp-ecart-humains-jumeau-distribution}} points** of distribution error on its own.
-
-Corrected on both counts, over these 2,058 people and ten replicates, a synthetic generator with
-independent per-item marginals costs the same on distribution error and on between-segment
-differences whether noised at eps = 3, at eps = 10, or **not noised at all**. What we measured is
-therefore the cost of the independent-per-item architecture; the marginal contribution of the
-privacy budget is **at most {{R:dp-zcdp-contribution-budget-eps3}} point** at eps = 3 and
-indistinguishable from zero at eps = 10. On correlations the DP generator preserves **none** of
-the amplitude to be preserved. Every figure, budget by budget, is in the appendix. D4 for its part
-carries **no formal guarantee** — it republishes each item's within-segment histogram exactly
-(**{{R:defense-d4-republication-multiensemble}} %** of segment × item pairs, §6) — and its zero
-distribution and group errors are that republication, not an advantage. **We set no top-1 rate of the two
-mechanisms against each other**: ours measures one fixed attacker, and the DP generator's is at
-chance. **We claim no superiority of D4 over differential privacy** — only a different trade-off,
-carrying no guarantee, against the particular attack we built.
-
-**What survives is architectural, and a theoretical point.** The floor is not budgetary: the
-non-private control pays the same price, so a per-item independent synthesiser cannot carry this
-questionnaire's joint structure at any epsilon. And DP protects an individual's *membership*
-behind a published statistic, where our attack assumes the person already known — her profile
-being the twin's input — and asks whether **the output conditioned on her** links back: record
-linkage, not membership. The DP generator escapes it only by **never conditioning on an
-individual**, that is by refusing the twin's task (its individual fidelity stays at most 0.2 points
-at every budget, including infinite). A panel holder who needs population statistics should use DP;
-one who needs a per-person twin cannot get one here at any epsilon.
-
-### 6.3 What the defense costs a downstream analyst
-
-A defense is usable only if the analyses people actually run survive it. We measured three on the
-same 2,058 persons. **Identical — and that identity is the artifact, not a utility preserved**:
-group comparisons are the exact republication of the within-segment histogram that makes D4's
-distribution and group costs zero (§6). Demographic regression coefficients keep their sign and
-significance. **Destroyed**: purchase-item coefficients significant in the raw twin become
-non-significant after D4, and the first principal component of the 40 purchase items has a large
-share of its loadings **inverted** relative to humans, against none for the raw twin (the
-appendix). **The honest comparison.** The unprotected twin was already wrong — it inverts the sign
-of the male-female gap and loses PC1+PC2 variance (the appendix) — and D4 adds **3.5 points**,
-less than the error already present; but the axis inversion is **D4's own doing**, changing *which*
-items compose the structure more than its strength. Under D4, group comparisons are unchanged
-*because they are republished unchanged*, predominantly demographic regressions remain reliable,
-and anything resting on the link between two answers of the same person becomes unusable.
-
-*Limits.* Tested on a single block, of a single twin, of a single dataset.
+whole gap between the twin and the humans on that component is 2.17 points. **We withdraw the
+comparison with differential privacy that we preregistered and first reported** (Table 1, row
+14): our reference generator was fitted on the humans but scored against the twin, and we claim
+no superiority of any mechanism over differential privacy, in either direction.
 
 ---
 
 ## 7. Discussion and Limitations
 
-### 7.1 The thirteen refuted preregistered predictions, one withdrawn, two inconclusive, and one untestable
+### 7.1 The seventeen predictions of Table 1, and what their precedence shows
 
-Seventeen predictions were registered before computation; **thirteen are refuted.** Table 1, in
-the appendix, gives each as written with its verdict and source. Eleven are also stated where they
-were measured (§5.1, §5.3, §5.4, §5.5, §5.7, §6.1), so this count reads without the table. The
+Table 1 lists seventeen predictions; no third-party timestamp exists for any of them. For eleven
+(nine refuted, both inconclusive), git history shows the preregistration committed strictly before
+the first result; five (rows 1, 12, 13, 14, 17) were written before computation according to our
+records but committed with, or after the on-disk existence of, their results. **Thirteen are
+recorded as refuted, and only nine of those refutations rest on a precedence git history shows**:
+rows 1, 12 and 13 are among the five above, and **row 4 is not a preregistered refutation** — the
+preregistered prediction was confirmed, and the refuted subgroup was defined after the results.
+Table 1, in the appendix, gives each as written with its verdict, source and precedence. Eleven are also stated where they
+were measured (§5.1, §5.3, §5.4, §5.5, §5.7, §6), so this count reads without the table. The
 other two belong here: **per-item entropy does not rank items with a consistent sign across the
 two datasets**, and **the cost per unit of individual fidelity, predicted roughly constant, is
 not** (§7.2).
 
 **Two of the thirteen went in our favour, and we mark them rather than bank them**: a stronger
 attacker gains less than the 20 % relative we predicted on Twin-2K-500, and an adaptive attacker
-knowing the mechanism fails to break the defense. A prediction refuted in the direction one hoped
+knowing the mechanism fails to break the defense; both (rows 12 and 13) are among those whose
+precedence git history does not show. A prediction refuted in the direction one hoped
 for is worth less than one refuted against.
 
 **Four verdicts left the count after they were written, each costing us a refutation.** That call
@@ -1028,10 +930,11 @@ the thresholds they were said to exclude: **inconclusive and underpowered** (§5
 organisations' independent pipelines leak into one another is arithmetically answered (§5.4), but
 twins on both arms identify the real person at chance, so the contrast decides nothing: **not
 testable, counted as neither.** That our defense dominates differential privacy at a moderate
-budget is **withdrawn, not decided** — the comparison behind it was retracted (§6.2).
+budget is **withdrawn, not decided** — the comparison behind it was retracted (§6).
 
-**The census: thirteen refutations, one withdrawn, two inconclusive, one untestable.** Three
-further outcomes were partial and count as neither (§5.7, §6.3); one held outright, P2 (§6.1);
+**The census: thirteen recorded refutations — nine with precedence shown, three without, one on a
+post-hoc subgroup — one withdrawn, two inconclusive, one untestable.** Three
+further outcomes were partial and count as neither (§5.7, §6); one held outright, P2 (§6);
 three verdicts reached after it closed are reported in place (§5.4, §5.8).
 
 ### 7.2 What we do not know
@@ -1223,13 +1126,13 @@ whether the first can be interpreted at all. (e) Within-segment shuffling (§6),
 cost stated: {{R:defense-d4-cout-correlations}} points on inter-item correlations — a single permutation draw, and above the
 {{R:dp-zcdp-plancher-correlations}} points of amplitude there was to destroy, so the component is destroyed in full (§6) —
 a {{R:defense-d4-aggravation-ecart-humain}} % worsening of the gap to human
-correlations (5.775 → 9.709), and the loss of every inter-item analysis downstream (§6.3) — and
+correlations (5.775 → 9.709), and the loss of every inter-item analysis downstream (§6) — and
 with what it does not provide: **no formal guarantee**, and exact republication of each item's
 within-segment histogram, so an adversary who knows a segment's other members recovers the
 target's answers. It holds at 0.29 % against an attacker who knows the mechanism, but only for a
-split that shuffles the informative block (§6.1). (f) Differential privacy where the published
+split that shuffles the informative block (§6). (f) Differential privacy where the published
 object can be a population statistic rather than a per-person twin; we make no claim about its
-cost relative to (e), having withdrawn the comparison we preregistered (§6.2).
+cost relative to (e), having withdrawn the comparison we preregistered (§6).
 
 **Public interest.** The AAPOR report of 8 May 2026 [aapor2026responsibleai] ranks synthetic
 response generation as the most risky of the core tasks it evaluates and names re-identification
@@ -1287,18 +1190,18 @@ under one dollar on input sizing alone, and its ledger, projection and stopping 
 published in full. Its recommendation stands unchanged in this paper: the release that would lift
 the limit is the upstream team's prompt and configuration, not a larger budget of ours.
 
-**Differential-privacy implementation (§6.2).** The synthesiser was written by hand rather than
+**Differential-privacy implementation (§6).** The synthesiser was written by hand rather than
 with a reference library, and is not full PrivBayes: per-item marginals perturbed by Laplace noise
 (L1 sensitivity 2, budget split over 60 items, basic sequential composition) then sampled i.i.d.
 per item, that is degree-0 PrivBayes with no joint structure. It was fitted on the human answers
 and scored against the twin. Epsilon covers only the published histograms, with no composition
 across the repository's other analyses, and correlations, between-segment differences and the
-`S_gra` covariate are not protected. These are reasons the comparison of §6.2 is withdrawn rather than
+`S_gra` covariate are not protected. These are reasons the comparison of §6 is withdrawn rather than
 corrected here; the corrected design — refitting on the twin, a composed Gaussian mechanism under
 zCDP, and at least ten seeds with intervals — is specified in
 `resultats/audit-comparaison-dp-2026-09-13.md`, section 9, and **has since been run**
 (`analyses/c7_dp_zcdp.py`, `resultats/c7-dp-zcdp.csv`, ten replicates per budget): it is that run,
-not the one described in this paragraph, that supplies every figure of §6.2. The withdrawal stands
+not the one described in this paragraph, that supplies every differential-privacy figure of the companion paper (§6). The withdrawal stands
 regardless, and for a reason the rerun does not lift: what the corrected run measures is the cost
 of our own reference implementation's independence assumption, which is not a ranking of the two
 mechanisms in either direction.
@@ -1414,10 +1317,6 @@ other two plans are quoted in §5.1 itself.
 per-item mutual information reaches 58.7 bits against a ceiling of 10.04 on the Park archive,
 which is why it is unusable as a total.
 
-**Defense, secondary values (§6, §6.1).** D4 leaves the within-segment multiset of each item
-identical on 1,560 of 1,560 segment × item pairs. Against the adaptive attacker, segment-invariant
-strategy S3 alone gives 0.05 %; naming the correct `S_gra` segment is at 6.8 % by chance.
-
 **The twin-to-twin channel, further values (§5.4).** Individual pairs at 60 common items have an
 SD of 18.6 points; chance at 19 common items is 0.05–0.10 %. The preregistered *failure* criterion
 on the Park replication is not met either, the rate sitting at 5–8× the demographic bound. The 177
@@ -1441,7 +1340,8 @@ items, {{R:twin-top1-achat40-ablation-avant}} % {{R:twin-top1-achat40-ablation-a
 the registry carries one identifier per run.
 
 **Three counts, and what each counts (§7.1, §7.3).** **17** preregistered predictions, the unit of
-Table 1 and §7.1, of which thirteen are refuted; **34** adjudicated tests bearing on this
+Table 1 and §7.1, of which thirteen are recorded as refuted, nine with a precedence git history
+shows (§7.1); **34** adjudicated tests bearing on this
 article's claims, of which 11 are refuted and 3 inconclusive; **47** adjudicated tests across
 three families, of which those 34 are the first family. A preregistered prediction is written
 before computation to be able to fail; an adjudicated test is any verdict the census could settle.
@@ -1523,9 +1423,9 @@ participants against 0.39 % for demographics alone on the same pool.
 block reaches accuracy 0.584 against the twin's 0.590, and carries genuine individual signal:
 0.584 true against 0.442 under within-segment permutation.
 
-## Detail behind the five audits of 13 September 2026
+## Detail behind the four audits of 13 September 2026
 
-Each of the five audits below is published with its preregistration, its script and its result CSV;
+Each of the four audits below (a fifth, on the defense candidates, moved to the companion paper) is published with its preregistration, its script and its result CSV;
 this section gives the reasoning and the reservations, and the named files carry the tables.
 
 **Three levels of signal, one run (§5.2)** — `resultats/c7-decomposition-signal.csv`. All
@@ -1542,18 +1442,6 @@ configuration's outputs, not its prompt template, so we cannot assert that the f
 Demographics questions are exactly those passed to it. The weaker claim suffices — whatever its
 prompt, this twin discriminates *inside* both of the repository's segmentations, so its input is
 strictly finer than a demographic segment.
-
-**The twenty-six defense candidates (§6.1)** — `resultats/c7-defense-adaptative.csv`, with
-`resultats/c7-defense-adaptative-preenregistrement.md` committed before any measurement. Each
-candidate was published with its adaptive attacker *before* measurement, and each is scored against
-the same preregistered protection criterion, the lower bound of the demographic baseline. Against
-the joint whole-row permutation the naive Hamming attacker and a recalibrated A-LLR both return
-near-zero, which is precisely why neither is the rate to publish: only the content-linking attacker,
-which never consults the index, reveals that the published tables are identical **as sets** to the
-undefended ones. Mode aggregation also costs distribution error and correlation error beside the
-between-segment figures quoted in §6.1, and both costs grow with k. The bound top-1 ≤ 1/k follows
-from the mode being a symmetric function of the group's multiset: the k published rows are
-identical, so any attacker assigns the same ranking of humans to all k members.
 
 **Arming Twin's comparator (§5.8)** — `resultats/c7-audit-twin-comparateur.csv`. The fourteen
 Demographics questions are QID11–QID24, none of them re-asked in wave 4. Restricted to the eleven
@@ -1600,24 +1488,6 @@ would have produced an interval on a pipeline of our own invention wearing the a
 measurement of theirs. The pilot's full cost accounting is published with it, reconciled by two
 independent methods. The cheapest way to lift this limit is not money: it is the upstream prompt.
 
-## Costs of the defense
-
-**Differential-privacy costs, budget by budget (§6.2).** The generator costs
-**{{R:dp-zcdp-distribution-eps10}} to {{R:dp-zcdp-distribution-eps3}}** points of distribution
-error and **{{R:dp-zcdp-groupes-eps3}} to {{R:dp-zcdp-groupes-eps10}}** points on between-segment
-differences; with no privacy at all it costs {{R:dp-zcdp-distribution-epsinf}} and
-{{R:dp-zcdp-groupes-epsinf}} points. The marginal contribution of the budget at eps = 10 is
-{{R:dp-zcdp-contribution-budget-eps10}}. On correlations the DP generator scores
-**{{R:dp-zcdp-correlations-eps10}} to {{R:dp-zcdp-correlations-eps3}}** where the amplitude to be
-preserved is **{{R:dp-zcdp-plancher-correlations}}**.
-
-**Analyst cost, the raw twin's own error (§6.3).** The unprotected twin inverts the sign of the
-male-female gap (+0.010 against −0.047 in humans) and loses 5.3 points of PC1+PC2 variance. Group
-comparisons match to 16 decimal places between the raw and the defended twin, which is the same
-exact republication of the within-segment histogram that makes D4's distribution and group costs
-zero; on a PCA of the 40 purchase items, 45 % of the first component's loadings are inverted
-relative to humans after D4, against 0 % for the raw twin.
-
 ## Multiplicity: adjusted p-values and the full census
 
 **Multiplicity, the adjusted p-values and the full census (§7.3).** Of the 3 tests carrying a
@@ -1636,12 +1506,19 @@ and the census do not carry the same totals.
 
 ## The seventeen preregistered predictions, one by one
 
+**Precedence, read from git history; none is third-party timestamped**
+(`resultats/audit-anteriorite-predictions-2026-09-13.md`). *Shown* — plan committed strictly before
+the first result — for rows 2, 3, 5–11, 15 and 16. *Not shown* — plan committed with, or after the
+on-disk existence of, its results — for rows 1, 12, 13, 14 and 17. *Posterior* for row 4: the
+preregistered prediction, on the rich pairs, was confirmed, and the 19-item subgroup it is refuted on
+was defined after the results.
+
 | # | Prediction (preregistered) | Outcome | Source |
 |---|---|---|---|
 | 1 | The quality-leakage coupling exceeds a null matched on accuracy alone | **Refuted.** Null rho {{R:rho-nul-marge-appariee-12conf-n100}} {{R:rho-nul-marge-appariee-12conf-n100.ic}} vs 0.965 observed, 12 configurations, 100 replicates as preregistered; the original null's defect is corrected, verdict unchanged (§5.1) | `c7-nul-corrige-marginal.csv` |
 | 2 | Open-world > 5 % (Twin) and > 30 % (Park) at FPR = 1 % | **Refuted as first measured** (3.04 % and 20.39 %). Under the strong attack Twin still fails at 4.28 %, Park **passes** at 60.17 % — but that attack also takes Park's demographic comparator to 29.09 % (§5.8). Half refuted, half confirmed, one row | `c7-attaquant-fort-resultats.md` |
 | 3 | Twin-to-twin top-1 ≥ 20 % on the Park archive | **Refuted.** 11.9–13.0 % at 177 common items (failure criterion not met either) | `c7-transfert-stanford-resultats.md` |
-| 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
+| 4 | The twin-to-twin channel leaks on the 19-common-item pairs | **Refuted on a subgroup defined after the results; the preregistered prediction was confirmed.** 0.45 % mean top-1, at chance (0.05–0.10 %) | `c7-transfert-resultats.md` |
 | 5 | H1: per-item entropy drives identification | **Refuted.** Opinion items 2.10 bits, identify 46× less | `c7-mecanisme-resultats.md` |
 | 6 | H4: twins are more stereotyped than humans | **Refuted.** 36.2 % [35.6 ; 36.8] vs 37.5 % [36.9 ; 38.1] | `c7-mecanisme-resultats.md` |
 | 7 | Deviations alone carry ≥ 80 % of the leakage | **Refuted.** 0.68 % in the mixed condition | `c7-deviations-resultats.md` |
@@ -1651,7 +1528,7 @@ and the census do not carry the same totals.
 | 11 | Per-item entropy correlates with identifying power consistently | **Refuted.** Opposite sign by dataset: r = −0.81 (Twin), +0.57 (Park) | `c7-bits-resultats.md` §3 |
 | 12 | P1: a stronger attacker gains ≥ 20 % relative over the naive attack | **Refuted on Twin** (+12.2 %, 20.7 → 23.23 %); held on Park (+38.0 %, 65.51 → 90.40 %) | `c7-attaquant-fort-resultats.md` |
 | 13 | P3: an adaptive attacker knowing the mechanism breaks the defense | **Refuted, for the defense.** Plateaus at 0.29 %, never above 1 % | `c7-attaquant-fort-resultats.md` |
-| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same (§6.2) | `audit-comparaison-dp-2026-09-13.md` |
+| 14 | At a moderate budget, DP is dominated by our defense on the aggregate table | **Withdrawn, not decided.** The comparison is retracted: the DP generator was fitted on the humans and scored against the twin, and at eps = ∞ — no privacy — the cost was already the same (§6) | `audit-comparaison-dp-2026-09-13.md` |
 | 15 | A frontier model on Twin's per-item recipe reaches accuracy > 0.55 | **Refuted.** 0.4722 [0.4361 ; 0.5050] | `c7-fort-resultats.md` |
 | 16 | That same twin reaches top-1 > 5 % | **Inconclusive.** 0.00 % [0 ; 11.57] (Clopper-Pearson, n = 30); the 5 % threshold lies inside it | `c7-fort-resultats.md` |
 | 17 | T2, independent pipelines: top-1 CI excludes the segment control and stays ≥ 2× the demographic baseline | **Not testable — counted as neither.** {{R:deux-organisations-BC-top1}} % {{R:deux-organisations-BC-top1.ic}} at n = 142/200, but both arms' twins identify the real person at chance: the contrast decides nothing (§5.4) | `c7-deux-organisations-resultats.md` |
@@ -1671,6 +1548,6 @@ first appearance: `toubia2025twin2k500`, `park2024agents`, `bonagiri2026cognitiv
 `demontjoye2015unique`, `rocher2019estimating`, `taub2018differential`, `carlini2021extracting`,
 `staab2024beyond`, `ko2026weakcues`, `lermen2026deanonymization`, `yeom2018privacy`,
 `feldman2020memorization`, `bun2014fingerprinting`, `dwork2015robust`, `argyle2023outofone`,
-`peng2026funhouse`, `guepin2023synthetic`, `shafieinejad2026diffusion`, `drechsler2024thirtyyears`,
-`hu2023microdata`, `aapor2026responsibleai`.
+`peng2026funhouse`, `guepin2023synthetic`, `shafieinejad2026diffusion`,
+`aapor2026responsibleai`.
 

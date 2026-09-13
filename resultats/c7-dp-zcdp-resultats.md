@@ -9,7 +9,7 @@ interdits: appel paye, reseau, commit sur master, arriere-plan, toute modificati
 cecite: n'a pas vu les scripts jetables de l'audit (hors depot, non conserves) ; n'a pas relu le manuscrit ni la synthese
 cout_reel_usd: 0.00
 
-Les cinq grandeurs que la passe T5 a refusé d'écrire au §6.2 du manuscrit — 0,9-1,0 ;
+Les cinq grandeurs que la passe T5 a refusé d'écrire au §6.2 de `article/defense/manuscrit.md` (section sortie du manuscrit à la scission du 13/09/2026) — 0,9-1,0 ;
 2,7-2,9 ; 0,1-0,3 ; 4,50-4,55 ; 0,09 % — venaient de scripts jetables hors dépôt
 (`resultats/audit-comparaison-dp-2026-09-13.md`, §Traçabilité) et n'existaient dans aucun
 CSV. **Le refus était juste.** Ce rapport les reconstruit dans le dépôt, à graine fixée,

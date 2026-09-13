@@ -463,7 +463,7 @@ URL du texte intégral ajoutée en champ `url=` : le PDF a été récupéré et 
 confirmer, à la source, le titre exact, les auteurs, la revue (*Journal of Official Statistics*,
 vol. 14, n° 4, 1998, p. 463–478) et la description du PRAM (« the score on one or more categorical
 variables is changed [...] according to a predetermined probability mechanism », « the probability
-mechanism [...] is known by the analyst ») — cohérent avec la caractérisation du §2.6 du manuscrit
+mechanism [...] is known by the analyst ») — cohérent avec la caractérisation du §2.6 de `article/defense/manuscrit.md` (section sortie du manuscrit à la scission du 13/09/2026)
 (« perturbs categorical variables through a known transition matrix leaving margins invariant in
 expectation »). Aucune note interne en français n'a été trouvée dans le `.bib` actuel de ce
 dépôt — elle avait déjà été retirée avant cette passe ; seul l'ajout de l'`url=` restait à faire.
