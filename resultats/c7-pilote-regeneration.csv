@@ -1,0 +1,19 @@
+grandeur,valeur,unite,source
+n_personnes_appelees,5,personnes,etape0.jsonl
+appels_par_personne,1,appels,run_LLM_simulations.py amont (un prompt par pid)
+caracteres_entree_moyens,162182.0,caracteres,mesure
+jetons_entree_moyens,44348.0,jetons,usage.prompt_tokens OpenRouter
+jetons_entree_min,44168,jetons,mesure
+jetons_entree_max,44540,jetons,mesure
+jetons_sortie_moyens,1249.2,jetons,usage.completion_tokens OpenRouter
+prix_entree_par_million,2.0,USD,"GET /models, openai/gpt-4.1"
+prix_sortie_par_million,8.0,USD,"GET /models, openai/gpt-4.1"
+cout_projete_par_personne,0.113091,USD,projection avant appel
+cout_constate_par_personne,0.0986896000,USD,"usage.cost OpenRouter, moyenne de 5"
+cout_constate_par_personne_min,0.0974560000,USD,usage.cost
+cout_constate_par_personne_max,0.1017480000,USD,usage.cost
+cout_constate_total_etape0,0.4934480000,USD,"usage.cost, somme"
+extrapolation_150_personnes,14.8034400000,USD,cout constate x 150
+extrapolation_2058_personnes,203.1031968000,USD,"cout constate x 2058 (UN bras, UN replicat)"
+extrapolation_2058_deux_replicats,406.2063936000,USD,deux executions d un bras complet
+plafond_mandat,60.0,USD,mandat §3
