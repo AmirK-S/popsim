@@ -49,6 +49,13 @@ REGISTRE = RACINE / "resultats" / "registre-chiffres.csv"
 
 COLONNES = ["id", "grandeur", "valeur", "ic_bas", "ic_haut", "methode_ic",
             "n_replicats", "graine", "script", "commit", "csv_source", "statut"]
+# Colonnes qui peuvent SUIVRE les douze du §1.3, jamais s'intercaler. Elles sont
+# declarees ici pour que la migration du registre (P9,
+# outils/portes/conformite_preenregistrement.py --procedure-migration) n'ait pas
+# a casser P2 au meme commit : l'en-tete est controle comme PREFIXE + options,
+# et non plus par egalite stricte. Toute colonne hors de cette liste reste
+# refusee : la tolerance est nommee, pas generale.
+COLONNES_OPTIONNELLES = ["preenregistrement", "n_replicats_prescrit"]
 STATUTS = {"courant", "retracte", "provisoire"}
 OBLIGATOIRES = ("id", "grandeur", "valeur", "script", "csv_source")
 
@@ -68,10 +75,14 @@ def charge_registre(constat: Constat, chemin: Path = REGISTRE) -> dict[str, dict
     with chemin.open(encoding="utf-8", newline="") as f:
         lecteur = csv.DictReader(f)
         entete = [c.strip() for c in (lecteur.fieldnames or [])]
-        if entete != COLONNES:
+        surplus = entete[len(COLONNES):]
+        if entete[:len(COLONNES)] != COLONNES or \
+                any(c not in COLONNES_OPTIONNELLES for c in surplus):
             constat.viole(chemin, 1,
                           f"en-tete {entete} au lieu des colonnes du §1.3",
-                          f"retablir exactement : {','.join(COLONNES)}")
+                          f"retablir exactement : {','.join(COLONNES)}"
+                          f" — suivi au plus, et dans cet ordre de liberte, de "
+                          f"{COLONNES_OPTIONNELLES}")
             return {}
         registre: dict[str, dict] = {}
         for n, ligne in enumerate(lecteur, start=2):
