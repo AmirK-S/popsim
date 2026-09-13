@@ -8,14 +8,14 @@
 
 Published LLM "digital twins" — per-respondent simulated answer vectors released alongside
 survey panels — are linkable to the humans they were built from, and that risk has a
-trajectory. Measured on three datasets and three generations of models, re-identification was
-indistinguishable from chance with the twins of 2023 and reaches 60 % in an open world today.
+trajectory. Measured on three datasets and three generations of models, re-identification did not
+beat a demographic baseline with the twins of 2023 and reaches 60 % in an open world today.
 On the GPT-3 twins Argyle et al. released in 2023, the strongest twin designates the right
 respondent among 2,148 in **0.14 %** [0.05 ; 0.27] of cases against 0.10 % [0.02 ; 0.23] for a
 demographic baseline recomputed on that same pool — intervals that overlap — the best of the
 three carrying 0.094 bits of identity against a ceiling of 11.07, at a per-item accuracy of
 47.2 %, *below* the modal answer; a nearest neighbour holding the same eleven true answers
-identifies 3.6 times better.
+carries 3.6 times more identity bits.
 On twins built with recent models that attack reaches **20.7 %** [19.0 ; 22.4] on Twin-2K-500
 (2,058 respondents) and, in a rarity-weighted variant, **90.40 %** [88.6 ; 92.2] on the Park et
 al. archive (1,052 participants) in a closed pool, and in an open world at 1 % false accusations,
@@ -29,9 +29,10 @@ Twin-2K-500 and 11.9–13.0 % at 177 common items on the Park archive, against a
 controls of 0.06 % and at most 0.31 %. What governs that channel is *which* pipeline element
 differs, not how many: at a single element changed, rates run from 17.2 % (model) to 81.4 %
 (decoding), and the "distance law" we preregistered is refuted by our own measurements.
-We contribute a control that costs nothing: no experimental arm is interpretable until its
-candidate pipeline beats a demographic baseline against the real humans. It stopped two of our
-own paid experiments and the Argyle replication.
+Our control is not new — it is the pre-spend, gating form of Anonymeter's control baseline — and
+it costs nothing: no experimental arm is interpretable until its candidate pipeline beats a
+demographic baseline against the real humans. It stopped two of our own paid experiments and the
+Argyle replication.
 We also report what we could not establish. We predicted, and preregistered, that the observed
 coupling between imitation quality and leakage reflects an individual fingerprint; a null carrying
 only a matched per-person accuracy margin — not a structure-free object, and one that in fact
@@ -68,8 +69,8 @@ Argyle et al. published in 2023 GPT-3 twins of ANES respondents, 12 matched item
 right person among 2,148 in **0.14 %** [0.05 ; 0.27] of cases, against **0.10 %** [0.02 ; 0.23]
 for a demographic baseline recomputed on that same pool: the intervals overlap. The best of the
 three carries 0.094 bits of identity against a ceiling of 11.07, per-item accuracy of 47.2 % sits
-*below* the modal answer, and a nearest neighbour given the same eleven true answers identifies
-**3.6 times better**. Three years later, twins of the same kind of panel are
+*below* the modal answer, and a nearest neighbour given the same eleven true answers carries
+**3.6 times more identity bits**. Three years later, twins of the same kind of panel are
 re-identified at 90.40 % in a closed pool and 60.17 % in an open world at 1 % false accusations.
 The risk was not measurable in the first published generation of twins; it is substantial in the
 current one.
@@ -77,8 +78,8 @@ current one.
 **The confound, stated before the claim rather than after it.** The three datasets differ in
 team, protocol, item count (12 against 60 and 177), pool and questionnaire. "The risk grew with
 model capability" is therefore confounded with "the protocols differ", and nothing we measure
-separates them. Lifting the confound would require the same items put to the same population by
-several generations of models, with individually matched twins released for each; no such
+separates them. Lifting it would require the same items, the same population and several
+generations of models, with individually matched twins for each; no such
 resource is public (§7.4). We state the trajectory as a measured contrast between three published
 corpora, never as a causal effect of model capability.
 
@@ -120,58 +121,62 @@ measurements that do not depend on the coupling being individual-specific at all
 ### 1.3 Contributions
 
 **(1) A trajectory measured across three generations of published twins.** The same attack, under
-the same control, on twins released in 2023, 2025 and 2026: chance-level then, 60.17 % in an open
-world now (§5.8) — with the protocol confound of §1.1, which forbids reading it as an effect of
-model capability alone.
+the same control, on twins released in 2023, 2025 and 2026: below the demographic baseline then,
+60.17 % in an open world now (§5.8), with the protocol confound of §1.1 forbidding any reading of
+it as an effect of model capability alone.
 
-**(2) An interpretability control, and what it cost us.** A test that consumes no model call and
-no budget: **no experimental arm is interpretable until its candidate pipeline has been shown to
-beat the demographic baseline in top-1 against the real human answers** (§4.5). It stopped two of
-our own paid arms (§5.4), the Argyle replication (§5.8), and the `persona` condition of the Park
-archive — an agent built on a person's own self-description re-identifies her *less* well than
-demographics alone, 0.26 % [0.06 ; 0.52] against a baseline of 0.39 %.
-Any team measuring privacy on simulated respondents can run it before spending anything.
+**(2) A pre-spend stop rule, and what it cost us.** The discipline is not ours: Anonymeter builds
+a control baseline into its risk estimate [giomi2023unified], and blind baselines demand the same
+of membership attacks [das2024blind, zhang2024satml]. What is ours is the gating form, consuming
+no model call and applied before the first paid arm: **no experimental arm is interpretable until
+its candidate pipeline has been shown to beat the demographic baseline in top-1 against the real
+human answers** (§4.5). It stopped two of our own paid arms (§5.4), the Argyle replication
+(§5.8), and the `persona` condition of the Park archive — an agent built on a person's own
+self-description re-identifies her *less* well than demographics alone, 0.26 % [0.06 ; 0.52]
+against a baseline of 0.39 %.
 
-**(3) A twin-to-twin linkage channel within a shared pipeline — governed by which element differs,
-not how many — and a cross-pipeline test our own instrument could not carry.**
+**(3) A twin-to-twin linkage channel within a shared pipeline, governed by which element differs,
+not how many.**
 Two twins of the same person, sharing their persona source and differing only in model or output
-format, designate each other when they share enough items — while the attacker holds no real
+format, designate each other while the attacker holds no real
 human answer of any kind. On Twin-2K-500: 36.4 % mean top-1 over 30 pairs sharing 60 common
 items, against an anti-artifact control of 0.04 %. On the Park archive: 11.9 % [10.1 ; 13.8] and
 13.0 % [11.2 ; 14.9] in the two directions at 177 common items, against a control of at most
-0.31 %. We never report a single number for this channel without its common-item count. At one
+0.31 %; no number for this channel is reported without its common-item count. At one
 pipeline element changed, the rate runs from 17.2 % (model) to 81.4 % (decoding), and the
 *distance law* we preregistered — leakage falling with the number of differing components — is
-refuted by our own measurements (§5.4). Anonymeter's contrary conclusion [giomi2023unified] is
-reached in a regime it did not test (§2.1). Built end-to-end independently instead (T2, §3),
+refuted by our own measurements (§5.4). Anonymeter's low linkability figure is not a
+counter-result: it is an excess over a control, measured on aggregate tabular releases whose
+records stand in no one-to-one relation to individuals, where a twin release is one record per
+person by construction [giomi2023unified] (§2.1). Built end-to-end independently instead (T2, §3),
 top-1 falls to 1.8 % [0.4 ; 3.6] — but that arm is **not interpretable**, its own twins
 identifying the real person only at chance, so T2 remains untested.
 
 **(4) The leakage is localised in the pattern of answers, not in memorised content.** An
 ablation destroys the signal by permuting the order of a twin's answers while leaving their
 content untouched — 33.1 % to 0.046 % top-1 (§5.5): what identifies is the dependence structure
-between answers, not any answer's content, which is what a regurgitation account would require.
+between answers, not any answer's content.
 The pipeline also trains nothing on the target population, so no train/test gap exists to exploit,
-unlike Yeom et al. [yeom2018privacy] and Feldman [feldman2020memorization]. We state the limit
-plainly: our training-cutoff control lives in a regime where none of our twins identifies almost
+unlike Yeom et al. [yeom2018privacy] and Feldman [feldman2020memorization]. Our training-cutoff
+control lives in a regime where none of our twins identifies almost
 anyone (§5.7), so **we do not claim a measured dissociation between memorization and
-re-identification.** The narrower claim we do make — a structural mechanism, localised by
+re-identification.** That narrower claim — a structural mechanism, localised by
 ablation — is what separates our channel from the memorization [carlini2021extracting] and
 free-text inference literatures [staab2024beyond, ko2026weakcues, lermen2026deanonymization].
 
-**(5) Open-world rates with their human ceiling, and an attack strong enough to falsify our own
-first measurement.** Closed-world 1-in-N rates assume the target is in the pool; the defensible
-measurement drops that assumption and reports true detections against false accusations (§5.3,
-Figure 1). A rarity-weighted likelihood attack with out-of-fold parameters raises the Park
-archive's closed-world top-1 from 65.51 % to 90.40 % and triples its open-world rate at 1 % false
-accusations — a correction of our own published figure (§5.3, §5.8).
+**(5) The Narayanan–Shmatikov attack, instantiated on twins, with its human ceiling.** Both moves
+are theirs [narayanan2008robust]: the rarity-weighted likelihood score, and the out-of-sample
+criterion that drops the closed-world assumption that the target is in the pool and reports true
+detections against false accusations (§5.3, Figure 1). New here are the object, the pool, the
+human ceiling, and out-of-fold estimation of the weights. So instantiated, the attack raises the
+Park archive's closed-world top-1 from 65.51 % to 90.40 % and triples its open-world rate at 1 %
+false accusations — a correction of our own published figure (§5.3, §5.8).
 
 **(6) A defense measured with its real cost, and held against an adaptive attacker.** Not a new
 mechanism — a variant of the 1998 Post Randomisation Method [gouweleeuw1998pram] — but applied to
-LLM twins with a risk-utility curve that is measured rather than assumed, reported with the cost
-component a single average would hide, and tested against an attacker who knows how the defense
-works (§6). Against our own preregistered prediction, differential privacy is *not* dominated by
-it on aggregate utility (§6.2).
+LLM twins with a risk-utility curve that is measured rather than assumed, and tested against an
+attacker who knows how the defense works (§6). Against our own preregistered prediction,
+differential privacy is *not* dominated by it on aggregate utility (§6.2).
 
 **(7) A bits-of-identity instrument that transports across datasets where the raw rate does
 not.** A derived instrument, not a discovery: a case of Rényi min-entropy leakage
@@ -204,7 +209,8 @@ inference — and conclude, on their datasets, that linkability is the weakest r
 [annamalai2024linear] and Ganev and De Cristofaro [ganev2025inadequacy, ganev2026rethinking,
 ganev2024regulatory] show reconstruction attacks defeating distance-to-closest-record metrics;
 Yao et al. [yao2025dcr] and Meeus et al. [meeus2023achilles] generalise the critique; Golob,
-Pentyala and De Cock make these attacks an emerging standard [golob2026sok].
+Pentyala and De Cock make these attacks an emerging standard [golob2026sok]. Houssiau et al.'s
+TAPAS formalises attacker knowledge and the baselines an audit must beat [houssiau2022tapas].
 
 *What distinguishes us.* This corpus concerns tabular microdata from classical generative
 models, evaluated by continuous similarity metrics. Our object is a vector of categorical answers
@@ -228,7 +234,9 @@ LLM-simulated survey microdata.
 ### 2.3 Privacy and LLMs
 
 Carlini et al. document memorization and regurgitation of training sequences
-[carlini2021extracting]. Staab et al. infer personal attributes from innocuous free text
+[carlini2021extracting], and show memorization growing near log-linearly with model scale
+[carlini2023quantifying] — the leakage-versus-capability precedent closest to our own
+trajectory. Staab et al. infer personal attributes from innocuous free text
 [staab2024beyond]. Ko et al. de-anonymise online authors by multi-cue agentic inference
 [ko2026weakcues] — the closest threatening neighbour — and Lermen et al. demonstrate the same
 attack at scale [lermen2026deanonymization]. Theoretically, Yeom et al. connect membership
@@ -313,8 +321,9 @@ assumed, not rebutted; our answers are the explicit model above and the open-wor
 ### T2 — Two organisations publish twins of the same cohort; attacker holds nothing real
 
 If several organisations each publish their own twins of the same panel with sufficient item
-overlap, a third party cross-references them holding no human answer at all. This threat model
-has no direct precedent in the synthetic-data literature: Anonymeter's linkability presumes real
+overlap, a third party cross-references them holding no human answer at all. This threat model is
+named as an open problem by Jordon et al. [jordon2022synthetic] and covered by the A29WP
+linkability definition, but never measured: Anonymeter's linkability presumes real
 attribute values in hand [giomi2023unified], and Guépin et al. remove the real-auxiliary-data
 assumption but target membership in a single generator's training set, never matching between two
 independent generations [guepin2023synthetic].
@@ -378,8 +387,9 @@ answers — the comparator matched to that archive's own conditioning.
 
 *Attacks.* Two matching rules are used throughout, and every rate is labelled with the one that
 produced it. The **naive** attack ranks candidates by Hamming-type agreement over common items.
-The **strong** attack (A-LLR) ranks them by a rarity-weighted log-likelihood whose parameters are
-estimated **out-of-fold over 5 folds**. A third variant (A-MI)
+The **strong** attack (A-LLR) instantiates the Narayanan–Shmatikov rarity-weighted
+log-likelihood [narayanan2008robust], whose parameters we estimate **out-of-fold over 5 folds**.
+A third variant (A-MI)
 scores higher still on the Park archive (93.25 %) but estimates its weights **in sample**, an
 advantage declared in the preregistration, so we never report it as our result. An **adaptive**
 attacker, used only against the defense (§6.1), additionally knows the mechanism and which items
@@ -391,7 +401,11 @@ to accuse (§5.3). *Bits of identity*: log2 of the ratio of correct one-shot gue
 before and after conditioning on the persona — a Rényi min-entropy leakage quantity
 [smith2009foundations]. *Imitation quality*: the share of the human test-retest floor attained.
 
-All intervals are 95 % bootstrap confidence intervals unless stated.
+Unless stated, intervals are 95 % bootstrap confidence intervals resampling persons, not methods:
+an interval on a quantity computed across the twelve methods is conditional on those twelve and
+does not generalise beyond them. Intervals that resample something else — sub-pool or
+tie-breaking draws, nulls — are not confidence intervals on the rate, and are labelled where they
+appear.
 
 ### 4.4 Preregistration and self-refutation
 
@@ -399,7 +413,7 @@ Attack, defense, mechanism, the two archive replications, the disjoint-item test
 distance law were each preregistered before computation, and we report every refuted prediction
 in Table 1. A census found **no inversion** between a plan and its result across the 28
 verifiable pairs; for the large majority the ordering is provable from version-control history,
-while a small number were committed alongside their results or left unversioned, which we state
+while a small number were committed alongside their results or left unversioned; we state this
 as a limit rather than claim an unbroken chain. The plans are not yet third-party timestamped.
 
 ### 4.5 Validity controls
@@ -428,8 +442,7 @@ our own pipeline B, all three GPT-3 twins of the
 Argyle archive (§5.8), and the Park archive's `persona` condition, whose agent — built on the
 person's own self-description — re-identifies her at 0.26 % [0.06 ; 0.52] against a demographic
 baseline of 0.39 %. Baselines are always taken at the pool size
-of the arm they judge, being strongly pool-dependent: 2.13 % at 2,058, 9.20 % at 200, 13.29 % at
-120.
+of the arm they judge, being strongly pool-dependent (§5.4).
 
 ---
 
