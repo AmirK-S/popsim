@@ -78,15 +78,45 @@ CLES_A2 = ("mandat", "agent", "ecriture", "lecture_seule", "interdits", "cout_re
 STATUTS_SIMPLES = {"courant", "provisoire"}
 RE_STATUT = re.compile(r"^statut\s*:\s*(.+?)\s*$", re.I)
 RE_PERIME = re.compile(r"^(perime_par|retracte_par)\s*:\s*(\S+)", re.I)
+# Les deux etats intermediaires du §0 de marqueurs-canoniques-2026-09-13.md.
+# Comme la retractation, ils exigent « fait_foi: » : un rapport amende ou borne
+# doit dire quel document fait foi a sa place, sinon l'amendement n'est opposable
+# a personne. Declaratif : la cle est lue, aucune prose n'est interpretee.
+RE_AMENDE_BORNE = re.compile(r"^(amende_par|borne_par)\s*:\s*(\S+)", re.I)
 RE_FAIT_FOI = re.compile(r"^fait_foi\s*:\s*(\S+)", re.I)
 FENETRE_ENTETE = 30
 
 # Le marqueur canonique : ligne entiere, colonne 0, mot-cle en capitales.
 # La porte ne reconnait que cela. La prose ne la declenche plus jamais.
-RE_MARQUEUR = re.compile(r"^(RETRACTE|INVALIDE)\s*:(.*)$")
+#
+# TROIS ETATS, un marqueur chacun (recommandation (a) de
+# resultats/marqueurs-canoniques-2026-09-13.md §6.2) :
+#   RETRACTE:/INVALIDE:  l'affirmation est FAUSSE      -> retracte_par: / perime_par:
+#   AMENDE:              la formulation change, le fait TIENT -> amende_par:
+#   BORNE:               le fait tient dans un perimetre PLUS ETROIT -> borne_par:
+# AMENDE: et BORNE: sont calques sur RETRACTE: a l'identique : meme forme de
+# ligne, meme exigence de commit unique, meme refus du marqueur mal forme. Seule
+# la cle d'en-tete exigee dans le fichier vise change. Aucune prose n'est lue,
+# donc le faux positif reste impossible — au 13/09, ZERO ligne du depot commence
+# par AMENDE: ou BORNE: : l'extension n'ajoute pas un signalement.
+RE_MARQUEUR = re.compile(r"^(RETRACTE|INVALIDE|AMENDE|BORNE)\s*:(.*)$")
 RE_CIBLE = re.compile(r"^resultats/[A-Za-z0-9._@+-]+\.md$")
-# Ce qui, ajoute dans le fichier vise, vaut pose de la retractation.
+# Ce qui, ajoute dans le fichier vise, vaut pose de l'etat — par marqueur.
 RE_POSE = re.compile(r"^(statut\s*:\s*(retracte|perime)|retracte_par\s*:|perime_par\s*:)")
+RE_POSE_AMENDE = re.compile(r"^amende_par\s*:")
+RE_POSE_BORNE = re.compile(r"^borne_par\s*:")
+
+# marqueur -> (regex de pose, cle a ecrire, adjectif, nom de l'etat, verbe)
+_RETRACTE = (RE_POSE, "« retracte_par: <fichier> » (ou « perime_par: »)",
+             "invalide", "retractation", "retracte")
+ETATS = {
+    "RETRACTE": _RETRACTE,
+    "INVALIDE": _RETRACTE,
+    "AMENDE": (RE_POSE_AMENDE, "« amende_par: <fichier> »",
+               "amende", "amendement", "amende"),
+    "BORNE": (RE_POSE_BORNE, "« borne_par: <fichier> »",
+              "borne", "bornage", "borne"),
+}
 
 # Filet large de l'ancienne porte : conserve UNIQUEMENT pour --indice-prose,
 # en notes non bloquantes. Ne rend jamais de verdict (4 faux positifs le 12/09).
@@ -105,6 +135,8 @@ def controle_entete(constat: Constat, chemin: Path) -> None:
     statut = None
     ligne_statut = 0
     perime = None
+    amende = None
+    ligne_amende = 0
     fait_foi = False
     for i, l in enumerate(src, start=1):
         n = norm[i - 1]
@@ -114,6 +146,9 @@ def controle_entete(constat: Constat, chemin: Path) -> None:
         m = RE_PERIME.match(n)
         if m:
             perime = m.group(1)
+        m = RE_AMENDE_BORNE.match(n)
+        if m and amende is None:
+            amende, ligne_amende = m.group(1), i
         if RE_FAIT_FOI.match(n):
             fait_foi = True
 
@@ -136,6 +171,13 @@ def controle_entete(constat: Constat, chemin: Path) -> None:
                       "rapport retracte sans ligne « fait_foi: »",
                       "nommer le document qui fait foi a la place ; la retractation "
                       "n'efface rien mais elle doit dire ce qui remplace (v1 §2.7)")
+
+    if amende and not fait_foi:
+        constat.viole(chemin, ligne_amende,
+                      f"rapport porteur de « {amende}: » sans ligne « fait_foi: »",
+                      "nommer le document qui fait foi pour l'affirmation amendee ou "
+                      "bornee : un amendement qui ne dit pas ou lire la version qui "
+                      "tient n'est opposable a personne (gabarits/entete.md)")
 
     for cle in CLES_A2:
         if not any(n.startswith(cle + ":") for n in norm):
@@ -194,7 +236,7 @@ def controle_retractation(constat: Constat, depuis: str, jusqu_a: str,
                     constat.viole(
                         source, no,
                         f"marqueur « {mot}: » mal forme (« {cible[:60]} »)",
-                        "ecrire exactement « RETRACTE: resultats/<fichier>.md » : un seul "
+                        f"ecrire exactement « {mot}: resultats/<fichier>.md » : un seul "
                         "fichier, chemin complet, rien d'autre sur la ligne "
                         "(gabarits/entete.md). Pour citer le marqueur sans le declencher, "
                         "l'indenter ou l'encadrer de backticks")
@@ -209,25 +251,26 @@ def controle_retractation(constat: Constat, depuis: str, jusqu_a: str,
                         "inexistant ne retracte rien")
                     continue
 
+                re_pose, cle, adjectif, nom_etat, verbe = ETATS[mot]
+
                 if cible not in touches:
                     constat.viole(
                         cible, 1,
-                        f"le commit {sha[:8]} declare ce rapport invalide "
+                        f"le commit {sha[:8]} declare ce rapport {adjectif} "
                         f"(« {mot}: » dans {source}) sans toucher au fichier lui-meme",
-                        "poser l'en-tete retracte_par:/fait_foi: DANS LE MEME COMMIT que "
-                        "l'invalidation (G3.1 de la v1 ; v2 §2, retractation sans "
-                        "effacement)")
+                        f"poser {cle} et « fait_foi: <fichier> » DANS LE MEME COMMIT "
+                        f"que le marqueur (G3.1 de la v1 ; v2 §2, retractation sans "
+                        f"effacement)")
                     continue
 
-                if not any(RE_POSE.match(normalise(t)) for _, t in ajouts.get(cible, [])):
+                if not any(re_pose.match(normalise(t)) for _, t in ajouts.get(cible, [])):
                     constat.viole(
                         cible, 1,
-                        f"le commit {sha[:8]} declare ce rapport invalide "
+                        f"le commit {sha[:8]} declare ce rapport {adjectif} "
                         f"(« {mot}: » dans {source}) et le touche, mais sans y poser "
-                        f"l'en-tete de retractation",
-                        "ajouter « retracte_par: <fichier> » (ou « perime_par: ») et "
-                        "« fait_foi: <fichier> » dans l'en-tete du rapport vise : toucher "
-                        "le fichier ne retracte rien (v1 §2.7)")
+                        f"l'en-tete de {nom_etat}",
+                        f"ajouter {cle} et « fait_foi: <fichier> » dans l'en-tete du "
+                        f"rapport vise : toucher le fichier ne {verbe} rien (v1 §2.7)")
 
         if indice_prose:
             indices_de_prose(constat, sha, ajouts, touches)

@@ -264,6 +264,128 @@ class TestP4(CasDePorte):
             code, sortie = self._dans(d, ["--retractation", "--depuis", base])
             self.assertPasse(code, sortie)
 
+    # --- extension du 13/09 : les marqueurs AMENDE: et BORNE: ---------------
+    # Recommandation (a) de resultats/marqueurs-canoniques-2026-09-13.md §6.2.
+    # La nuit du 12 au 13 a produit une dizaine d'affirmations amendees ou
+    # bornees, vivantes dans des rapports que RIEN ne marquait mecaniquement :
+    # seul RETRACTE: existait, et aucune de ces affirmations n'etait fausse au
+    # point de le meriter. Meme forme, meme discipline, deux etats de plus.
+
+    def _pose(self, d: Path, nom: str, cle: str) -> Path:
+        p = d / "resultats" / nom
+        p.write_text(p.read_text(encoding="utf-8").replace(
+            "statut: courant",
+            f"statut: provisoire\n{cle}: resultats/audit.md\n"
+            f"fait_foi: resultats/audit.md"), encoding="utf-8")
+        return p
+
+    def test_echec_amende_sans_toucher_l_audite(self):
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nAMENDE: resultats/c7-nul-corrige-resultats.md\n")
+            commit(d, "Audit : formulation amendee")
+            code, sortie = self._dans(d, ["--retractation", "--depuis", base])
+            self.assertEchoue(code, sortie, "sans toucher au fichier lui-meme")
+            self.assertIn("amende", sortie)
+
+    def test_echec_borne_touche_sans_entete(self):
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nBORNE: resultats/c7-nul-corrige-resultats.md\n")
+            self._ajoute(d, "c7-nul-corrige-resultats.md", "\nNote de bas de page.\n")
+            commit(d, "Audit : bornage, en-tete oubliee")
+            code, sortie = self._dans(d, ["--retractation", "--depuis", base])
+            self.assertEchoue(code, sortie, "sans y poser l'en-tete de bornage")
+            self.assertIn("borne_par:", sortie)
+
+    def test_echec_amende_pose_la_mauvaise_cle(self):
+        """`retracte_par:` ne vaut pas amendement : trois etats, trois cles.
+
+        Sans cette distinction, le seul RETRACTE: du depot (celui de la DP)
+        cesserait d'etre lisible comme le cas grave qu'il est.
+        """
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nAMENDE: resultats/c7-nul-corrige-resultats.md\n")
+            self._retracte(d, "c7-nul-corrige-resultats.md")
+            commit(d, "Audit : amendement marque comme retractation")
+            code, sortie = self._dans(d, ["--retractation", "--depuis", base])
+            self.assertEchoue(code, sortie, "amende_par:")
+
+    def test_echec_marqueur_amende_mal_forme(self):
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md", "\nAMENDE: le §7, un peu\n")
+            commit(d, "Audit : marqueur bavard")
+            code, sortie = self._dans(d, ["--retractation", "--depuis", base])
+            self.assertEchoue(code, sortie, "mal forme")
+            self.assertIn("AMENDE: resultats/", sortie)
+
+    def test_passage_amende_pose_dans_le_meme_commit(self):
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nAMENDE: resultats/c7-nul-corrige-resultats.md\n")
+            self._pose(d, "c7-nul-corrige-resultats.md", "amende_par")
+            commit(d, "Audit : amendement + en-tete")
+            self.assertPasse(*self._dans(d, ["--retractation", "--depuis", base]))
+
+    def test_passage_borne_pose_dans_le_meme_commit(self):
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nBORNE: resultats/c7-nul-corrige-resultats.md\n")
+            self._pose(d, "c7-nul-corrige-resultats.md", "borne_par")
+            commit(d, "Audit : bornage + en-tete")
+            self.assertPasse(*self._dans(d, ["--retractation", "--depuis", base]))
+
+    def test_passage_prose_qui_parle_d_amendement(self):
+        """Aucune prose ne declenche l'extension, pas plus que RETRACTE:."""
+        with tempfile.TemporaryDirectory() as t:
+            d, base = self._depot(t)
+            self._ajoute(d, "audit.md",
+                         "\nL'affirmation de c7-nul-corrige-resultats.md est amendee "
+                         "et bornee a Twin ; elle n'est pas retiree.\n")
+            commit(d, "Audit : prose seule")
+            self.assertPasse(*self._dans(d, ["--retractation", "--depuis", base]))
+
+    # --- (a) en-tete : amende_par:/borne_par: exigent fait_foi: -------------
+
+    def test_echec_amende_par_sans_fait_foi(self):
+        with tempfile.TemporaryDirectory() as t:
+            p = self._fichier(Path(t), ENTETE_OK.replace(
+                "statut: courant",
+                "statut: provisoire\namende_par: resultats/audit.md"))
+            code, sortie = lance("entetes", ["--fichier", str(p)])
+            self.assertEchoue(code, sortie, "fait_foi")
+
+    def test_passage_borne_par_avec_fait_foi(self):
+        with tempfile.TemporaryDirectory() as t:
+            p = self._fichier(Path(t), ENTETE_OK.replace(
+                "statut: courant",
+                "statut: provisoire\nborne_par: resultats/audit.md\n"
+                "fait_foi: resultats/audit.md"))
+            self.assertPasse(*lance("entetes", ["--fichier", str(p)]))
+
+    # --- mesure du bruit : l'extension n'ajoute aucun signalement -----------
+
+    def test_passage_depot_reel_inchange_par_l_extension(self):
+        """Au 13/09, aucune ligne du depot ne commence par AMENDE: ou BORNE:.
+
+        Les neuf rapports amendes cette nuit portent la CLE d'en-tete mais pas le
+        marqueur : l'extension est donc a cout de bruit nul sur l'existant, et
+        bloquante sur ce qui vient. C'est exactement le contraire d'une porte de
+        prose, qui aurait eu a arbitrer ces neuf rapports.
+        """
+        code, sortie = lance("entetes", ["--tous", "--mode", "avertissement"])
+        self.assertEqual(code, 0, sortie)
+        for mot in ("AMENDE:", "BORNE:"):
+            trouves = [l for l in sortie.splitlines() if f"marqueur « {mot}" in l]
+            self.assertEqual(trouves, [], f"{mot} a produit un signalement")
+
 
 if __name__ == "__main__":
     unittest.main()
