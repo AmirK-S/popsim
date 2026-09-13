@@ -1,4 +1,41 @@
-# Audit adverse du renversement C7 (nul de marge corrigé) — 12 septembre 2026
+# Audit adverse du renversement C7 (nul de marge corrigé) — 12 septembre 2026 — UN CHIFFRE BORNÉ le 13 septembre 2026
+
+statut: provisoire
+borne_par: resultats/correction-t1b-2026-09-13.md
+fait_foi: resultats/c7-nul-corrige-marginal.csv (ligne `marginal` / `n_replicats = 100`, seule ligne `fait_foi_tableau1 = oui`), via resultats/correction-t1b-2026-09-13.md
+mandat: audit adverse du renversement C7 (nul de marge corrige) ; hypothese de travail : le resultat est faux, et il est faux parce qu'il nous arrange (mandat d'origine du 12/09, reconstitue depuis le corps du rapport)
+agent: auditeur adverse, 12/09 ; en-tete A2 et bornage poses le 13/09 par Claude Opus 5, sous-agent marqueurs canoniques
+ecriture: resultats/audit-renversement-2026-09-12.md (en-tete et bandeau seulement ; le corps d'origine est conserve mot pour mot)
+lecture_seule: tout le depot sauf ce fichier
+interdits: appel payant, reseau, recherche web, commit sur master, arriere-plan, toute modification de article/manuscrit.md
+cout_reel_usd: 0.00
+
+> ## BORNÉ, le 13/09/2026 — ce rapport ne porte que la série à 20 réplicats
+>
+> **État : BORNÉ** (l'audit tient en entier ; le couple de chiffres qu'il publie comme
+> témoin principal n'est plus celui qui fait foi). Fait foi :
+> `resultats/correction-t1b-2026-09-13.md`.
+>
+> C'est ce rapport que le tableau 1 du manuscrit cite en colonne `Source` pour « **rho
+> 0,974 [0,950 ; 0,993]** contre 0,965 observé » (§Synthèse l. 16, tableau du §2 l. 101,
+> ligne 1 du tableau des défauts l. 369). **Ce couple vient d'un run arrêté à
+> 20 réplicats**, alors que `resultats/c7-nul-corrige-preenregistrement.md` §5 en
+> prescrivait **100**.
+>
+> Aux 100 prescrits : **rho moyen 0,9799**, p5 **0,9510**, p95 **0,9930**
+> (`resultats/c7-nul-corrige-marginal.csv`, agrégat `marginal` / `n_replicats = 100`). La
+> série à 20 en est un **préfixe bit-exact** — même graine par réplicat, vérifié
+> indépendamment —, ce n'est donc pas une divergence de calcul mais un arrêt prématuré.
+>
+> **Ce qui tient intégralement, et c'est presque tout** : le défaut réel de la ligne 133,
+> la réfutation de la prédiction (b) — 0,9650 reste sous le 95ᵉ centile dans les deux
+> séries, 0,9934 à n = 20 comme 0,9930 à n = 100 —, le retrait point par point du §3, et
+> le verdict « FATAL » de la ligne 1. Seule la **valeur publiée du témoin** est bornée.
+>
+> **Interdit à partir d'ici :** citer ce rapport comme source de « 0,974 [0,950 ; 0,993] »
+> dans le manuscrit, le résumé, le tableau 1, la légende de la figure 2 ou la lettre de
+> divulgation. La source primaire est désormais le CSV, et la valeur **0,980
+> [0,951 ; 0,993]**.
 
 Auditeur adverse. Je n'ai pas produit ce résultat et je n'ai aucun intérêt à ce qu'il tienne.
 Hypothèse de travail : le résultat est faux, et il est faux parce qu'il nous arrange.

@@ -3,7 +3,7 @@
 statut: courant
 mandat: Recenser les couples rapport-audité / audit-qui-l'amende produits dans la nuit, poser sur chaque affirmation amendée le marqueur canonique de la discipline du dépôt, rétablir les valeurs des CSV là où un arrondi favorable a franchi une borne, et publier la liste opposable des formulations désormais interdites avec le rapport qui les interdit. Aucun calcul nouveau, aucun appel payant, aucun réseau.
 agent: Claude Opus 5, Anthropic — sous-agent marqueurs canoniques
-ecriture: resultats/marqueurs-canoniques-2026-09-13.md ; et, dans les rapports amendés, l'en-tête et une section d'amendement seulement — resultats/c7-attaquant-imparfait-resultats.md, resultats/c7-equite-risque-resultats.md, resultats/c7-controle-generateur-resultats.md (plus un arrondi au §3), resultats/c7-temoins-relecture-resultats.md, resultats/c7-t1a-complements-resultats.md, resultats/c7-nul-corrige-marginal.md, resultats/revue-hostile-gel-2026-09-12.md, resultats/audit-comparateur-conditionne-2026-09-13.md (deux arrondis et une ligne de traçabilité), resultats/audit-items-banals-2026-09-13.md (ligne « statut: » rendue conforme au gabarit A2)
+ecriture: resultats/marqueurs-canoniques-2026-09-13.md ; et, dans les rapports amendés, l'en-tête et une section d'amendement seulement — resultats/c7-attaquant-imparfait-resultats.md, resultats/c7-equite-risque-resultats.md, resultats/c7-controle-generateur-resultats.md (plus un arrondi au §3), resultats/c7-temoins-relecture-resultats.md, resultats/c7-t1a-complements-resultats.md, resultats/c7-nul-corrige-marginal.md, resultats/revue-hostile-gel-2026-09-12.md, resultats/audit-renversement-2026-09-12.md, resultats/audit-comparateur-conditionne-2026-09-13.md (deux arrondis et une ligne de traçabilité), resultats/audit-items-banals-2026-09-13.md (ligne « statut: » rendue conforme au gabarit A2)
 lecture_seule: tout le reste
 interdits: appel payant, réseau, recherche web, commit sur master, fusion, arrière-plan, tout calcul de résultat nouveau ; **article/manuscrit.md**, **resultats/article-synthese.md**, et tout fichier des branches `agent/audit/contamination-persona`, `agent/correction/dp-chiffres-opposables`, `agent/audit/park-armement-egal`, `agent/synthese/etat-2026-09-13` — notamment `resultats/registre-chiffres.csv`, `resultats/c7-dp-resultats.md`, `resultats/retractation-dp-d4-2026-09-13.md`, `resultats/cout-defense-synthese-2026-09-13.md`, `resultats/c7-dp-courbe-combinee.csv`
 cecite: je n'ai pas lu article/manuscrit.md ni resultats/article-synthese.md (propriété d'autres agents) ; je n'ai pas rejoué un seul script ; les branches `agent/audit/contamination-persona` et `agent/audit/park-armement-egal` n'étaient pas poussées et je ne les ai pas ouvertes, leurs éventuels couples ne sont donc pas recensés ici
@@ -44,8 +44,8 @@ nuit n'est fausse au point d'invalider un rapport entier : les audits concluent 
 l'affaiblissement ou au rétrécissement. Un marqueur de trop décrédibiliserait les autres. Le
 seul `RETRACTE:` du dépôt reste celui de la DP.
 
-`outils/portes/entetes.py --depuis origin/master` : **OK, aucune violation**, 17 fichiers
-contrôlés. Il échouait avant cette branche, sur la ligne `statut:` de
+`outils/portes/entetes.py --depuis origin/master` : **OK, aucune violation**, 19 fichiers
+contrôlés (contrôle (b), « rétractation dans le même commit », OK également). Il échouait avant cette branche, sur la ligne `statut:` de
 `audit-items-banals-2026-09-13.md` (parenthèse explicative dans la valeur) — rendue conforme.
 
 ---
@@ -63,14 +63,29 @@ contrôlés. Il échouait avant cette branche, sur la ligne `statut:` de
 | `c7-t1a-complements-resultats.md` | `c7-residu-trajectoire-resultats.md` | **borné** | oui, bandeau |
 | `c7-nul-corrige-marginal.md` (série à 20 réplicats) | `correction-t1b-2026-09-13.md` | **borné** (fichier) / **rétracté** (la désignation « la série à 20 fait foi ») | en-tête posé ; le bandeau de prose existait déjà, il ne portait pas le `statut:` |
 
-### 1.2 Le couple que le mandat n'avait pas listé, et c'est le plus dangereux
+### 1.2 Les deux couples que le mandat n'avait pas listés, et ce sont les plus dangereux
+
+Tous deux sont sur `master` — donc déjà fusionnés, déjà lus, déjà cités —, tous deux
+tiennent au même chiffre, et tous deux échappaient à la liste parce qu'ils datent du **12**
+et non du 13.
 
 | rapport | amendé par | état | pourquoi il est dangereux |
 |---|---|---|---|
-| `revue-hostile-gel-2026-09-12.md` | `correction-t1b-2026-09-13.md` | **borné** | son défaut D1 ne se contente pas de citer un chiffre périmé : il **prescrit de l'écrire dans le manuscrit** (« Remplacer l. 76 et la ligne 1 du tableau 1 par “0.974 [0.950 ; 0.993]” »). C'est une consigne exécutable par un autre agent, sur un fichier que je n'ai pas le droit de toucher. Elle est désormais bornée à sa source. |
+| `audit-renversement-2026-09-12.md` | `correction-t1b-2026-09-13.md` | **borné** | c'est la **source primaire** : le tableau 1 du manuscrit le cite en colonne `Source` pour « rho 0,974 [0,950 ; 0,993] ». Il publie ce couple comme témoin principal en trois endroits (l. 16, l. 101, l. 369) et **ne porte que la série à 20 réplicats**. Tant qu'il n'est pas marqué, la chaîne manuscrit → source mène à un chiffre hors protocole. |
+| `revue-hostile-gel-2026-09-12.md` | `correction-t1b-2026-09-13.md` | **borné** | son défaut D1 ne se contente pas de citer le chiffre périmé : il **prescrit de l'écrire dans le manuscrit** (« Remplacer l. 76 et la ligne 1 du tableau 1 par “0.974 [0.950 ; 0.993]” »). C'est une consigne exécutable par un autre agent, sur un fichier que je n'ai pas le droit de toucher. |
 
-Ce fichier n'avait **aucun en-tête A2** : il en porte un maintenant, reconstitué depuis son
-propre corps, avec la mention explicite de qui l'a posé.
+Ni l'un ni l'autre n'avait **d'en-tête A2** : ils en portent un maintenant, reconstitué
+depuis leur propre corps, avec la mention explicite de qui l'a posé. Dans les deux cas le
+corps est conservé mot pour mot, et dans les deux cas l'essentiel du rapport tient — le
+défaut réel de la ligne 133, la réfutation de la prédiction (b), le défaut D1 lui-même :
+**seule la valeur du témoin est bornée**.
+
+**Comment ils ont été trouvés, et ce que ça dit.** Par le filet de prose non bloquant de
+P4 (`--indice-prose`), qui a produit **dix notes sur ce seul commit, dont neuf fausses**.
+La dixième — `correction-t1b:189` près de `audit-renversement-2026-09-12.md` — était vraie,
+et de là `revue-hostile-gel` a suivi. C'est exactement l'usage pour lequel ce filet a été
+conservé après avoir été désarmé : **utile à qui décide, inutilisable comme verdict**. Le
+§6.2 en tire la conséquence.
 
 ### 1.3 Les couples cherchés et NON trouvés
 
@@ -103,6 +118,7 @@ Aucun chiffre de ce tableau qui ne soit lu dans un CSV nommé.
 | 8 | contraste 2023 → aujourd'hui à items appariés = **8,9×** | **borné**, et toute publication chiffrée interdite | `c7-residu-trajectoire-resultats.md` §9, §10 | 8,878207 (`c7-temoins-relecture.csv`, `contraste_twin_sur_argyle`) ; à information effective appariée, **2,5293** (`c7-residu-trajectoire.csv`, M2, `rapport jumeau/demo`), dénominateur non estimable |
 | 9 | « la dégénérescence des ex æquo frappe **exactement** le bout gauche » | **borné** aux items bruts | `c7-residu-trajectoire-resultats.md` §7 | à M2, plage de **facteur 130** sur le bout droit (0,032 % à 4,193 % selon la convention), classe de tête à 11,5 candidats en médiane |
 | 10 | nul de marge appariée : « rho moyen **0,974**, bande [0,950 ; 0,993] » | **rétracté** comme chiffre faisant foi | `correction-t1b-2026-09-13.md` | `c7-nul-corrige-marginal.csv`, agrégat `marginal` / `n_replicats = 100`, seule ligne `fait_foi_tableau1 = oui` : **0,9798947065**, p5 **0,9510489510**, p95 **0,9930069930** |
+| 10 bis | même couple publié comme **témoin principal** par la source que cite le tableau 1 | **borné** | `correction-t1b-2026-09-13.md` | `audit-renversement-2026-09-12.md` l. 16, 101, 369 : 0,9741 / p5 0,9500 / p95 0,9934, série à 20 seulement |
 | 11 | consigne D1 : « écrire 0.974 [0.950 ; 0.993] au tableau 1 » | **borné** (le défaut tient, le chiffre prescrit est périmé) | `correction-t1b-2026-09-13.md` | idem ligne 10 ; le verdict (b) reste réfuté dans les deux séries (0,9650 sous p95) |
 | 12 | « *Statistical comparators stay indistinguishable from noise at both FPRs* » | **réfuté sur Park**, **non rattaché** — voir §5 | `c7-t1a-complements-resultats.md` §1g | sous A-LLR sur Park : **85,17 %** top-1 monde fermé et **29,09 %** de TPR à 1 % de FPR, contre 2,24 % et 0,00 % sous l'attaque naïve. Sur Twin la phrase tient (0,0000 % et 0,0486 %). |
 
@@ -125,6 +141,7 @@ repose sur personne d'anonyme.
 | I8 | **tout facteur chiffré** entre les deux époques : « 150× », « 15× », « 10× », « 8,9× », **et y compris « 2,5× »** | `c7-residu-trajectoire-resultats.md` §10 | une **direction, pas une amplitude** : la formulation in extenso du §10 |
 | I9 | présenter la dégénérescence des ex æquo comme **asymétrique** entre les deux bouts | `c7-residu-trajectoire-resultats.md` §7 | à information appariée, les deux bouts en dépendent ; publier le rapport à la baseline, pas le taux nu |
 | I10 | **« 0.974 [0.950 ; 0.993] »** comme témoin faisant foi (manuscrit, résumé, tableau 1, légende de la figure 2, lettre de divulgation) | `correction-t1b-2026-09-13.md` | **0,980 [0,951 ; 0,993]**, n = 100, la série du préenregistrement |
+| I10 bis | citer **`audit-renversement-2026-09-12.md`** comme *source* du témoin principal | idem | la source primaire est `c7-nul-corrige-marginal.csv`, ligne `marginal` / `n_replicats = 100` |
 | I11 | **« ne dépasse 0,15 % »** pour le plafond des générateurs classiques sur Twin | ce document, §4 | **0,1535 %**, valeur du CSV — ou « 0,16 % », borne que le §1 du même rapport écrivait déjà juste |
 | I12 | *(rappel, déjà en vigueur)* toute revendication de supériorité de D4 sur la confidentialité différentielle | `audit-comparaison-dp-2026-09-13.md`, via `retractation-dp-d4-2026-09-13.md` | rien : aucune supériorité n'est revendiquée, dans aucun sens |
 
@@ -246,7 +263,11 @@ publie une formulation figurant dans une **liste d'interdits déclarée**.
 
 ### 6.2 Pourquoi elle est dangereuse, et pourquoi je ne l'implémente pas
 
-**Parce qu'elle cherche des motifs de prose, et que ce projet a déjà payé ce prix.** La porte
+**Parce qu'elle cherche des motifs de prose, et que ce projet a déjà payé ce prix — deux
+fois, dont une mesurée aujourd'hui.** Le filet de prose conservé en notes a produit, sur le
+seul commit de cette branche, **dix notes dont neuf fausses** (§1.2) : un taux de faux
+positifs de 90 % sur un commit soigné, par un agent qui savait ce qu'il cherchait. Avant
+cela, la porte
 P4 a fait exactement cela jusqu'au 12/09 — un mot d'invalidation et un nom de fichier à
 proximité — et a produit **quatre faux positifs en une seule journée** : un renvoi §N attribué
 au mauvais fichier, un identifiant de registre CSV pris pour une déclaration, un mot et un nom
